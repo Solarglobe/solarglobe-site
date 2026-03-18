@@ -32,3 +32,10 @@
 /faq.html /faq/ 301
 /blog.html /blog/ 301
 /contact.html /contact/ 301
+
+# URLs sans slash → dossiers (slash final)
+/produits /produits/ 301
+/faq /faq/ 301
+/blog /blog/ 301
+/contact /contact/ 301
+/qui-sommes-nous /qui-sommes-nous/ 301
