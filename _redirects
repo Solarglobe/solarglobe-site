@@ -4,6 +4,9 @@
 # Assets et components servis nativement
 # ============================================
 
+# Force serve qui-sommes-nous (écrase redirections externes)
+/qui-sommes-nous/ /qui-sommes-nous/index.html 200
+
 # Étude gratuite - placeholders et anciennes URLs
 /etude-gratuite.html /etude-gratuite/ 301
 /etude-solaire-gratuite/ /etude-gratuite/ 301
