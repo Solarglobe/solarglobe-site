@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Présentations SolarGlobe</title>
+
+  <meta name="robots" content="noindex, nofollow" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#C39847'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
+  <link rel="stylesheet" href="/assets/css/header-common.css" />
+  <link rel="stylesheet" href="/assets/css/footer-common.css" />
+</head>
+
+<body class="bg-black text-white antialiased overflow-hidden">
+
+  <div id="header-placeholder"></div>
+  <script src="/assets/js/header.js"></script>
+
+<!-- ======================================================
+PROTECTION SIMPLE (TOKEN + MOT DE PASSE)
+====================================================== -->
+<script>
+(function () {
+  const REQUIRED_TOKEN = 'SG-HUB-2026';
+  const REQUIRED_PASSWORD = '@Solarglobe2025';
+
+  const params = new URLSearchParams(window.location.search);
+  const token = params.get('token');
+
+  if (token !== REQUIRED_TOKEN) {
+    document.body.innerHTML = `
+      <div class="min-h-screen flex items-center justify-center bg-black text-white px-6">
+        <div class="max-w-md w-full text-center">
+          <h1 class="text-2xl font-semibold mb-4">Acc&egrave;s restreint</h1>
+          <p class="text-neutral-400 mb-6">
+            Cette page est r&eacute;serv&eacute;e.
+          </p>
+          <input id="passwordInput"
+                 type="password"
+                 placeholder="Mot de passe"
+                 class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3
+                        text-white placeholder-neutral-500 mb-4 focus:outline-none focus:border-gold" />
+          <button onclick="checkPassword()"
+                  class="w-full bg-gold text-black font-semibold py-3 rounded-xl hover:scale-[1.02] transition">
+            Acc&eacute;der
+          </button>
+        </div>
+      </div>
+    `;
+
+    window.checkPassword = function () {
+      const input = document.getElementById('passwordInput').value;
+      if (input === REQUIRED_PASSWORD) {
+        window.location.href = window.location.pathname + '?token=' + REQUIRED_TOKEN;
+      } else {
+        alert('Mot de passe incorrect');
+      }
+    };
+
+    throw new Error('Access blocked');
+  }
+})();
+</script>
+
+<!-- ======================================================
+FOND PREMIUM
+====================================================== -->
+<div class="absolute inset-0 pointer-events-none">
+  <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px]
+              bg-gold/10 blur-[120px] rounded-full"></div>
+  <div class="absolute bottom-0 right-0 w-[400px] h-[400px]
+              bg-gold/5 blur-[120px] rounded-full"></div>
+</div>
+
+<!-- ======================================================
+CONTENU PAGE (HUB)
+====================================================== -->
+<main class="relative min-h-screen flex items-center justify-center px-6">
+
+  <section class="w-full max-w-6xl text-center">
+
+    <h1 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+      Pr&eacute;sentations <span class="text-gold">SolarGlobe</span>
+    </h1>
+
+    <p class="text-neutral-400 max-w-2xl mx-auto mb-20 text-sm md:text-base">
+      Acc&eacute;dez aux pr&eacute;sentations con&ccedil;ues pour accompagner
+      chaque profil dans un projet solaire clair et structur&eacute;.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      <a href="/proprietaires"
+         class="group relative bg-gradient-to-br from-neutral-900 to-neutral-950
+                border border-neutral-800 rounded-2xl p-10 text-left
+                hover:border-gold transition-all duration-300">
+
+        <h2 class="text-xl font-semibold mb-3 group-hover:text-gold transition">
+          Propri&eacute;taires / Acheteurs
+        </h2>
+
+        <p class="text-neutral-400 text-sm leading-relaxed">
+          Comprendre comment le solaire peut r&eacute;duire les charges,
+          valoriser une maison et apporter une vraie s&eacute;r&eacute;nit&eacute;
+          &eacute;nerg&eacute;tique.
+        </p>
+      </a>
+
+      <a href="/partenaires"
+         class="group relative bg-gradient-to-br from-neutral-900 to-neutral-950
+                border border-neutral-800 rounded-2xl p-10 text-left
+                hover:border-gold transition-all duration-300">
+
+        <h2 class="text-xl font-semibold mb-3 group-hover:text-gold transition">
+          Agents immobiliers
+        </h2>
+
+        <p class="text-neutral-400 text-sm leading-relaxed">
+          Acc&eacute;der &agrave; un outil &eacute;nergie con&ccedil;u pour
+          faciliter les ventes et cr&eacute;er de la valeur imm&eacute;diate.
+        </p>
+      </a>
+
+    </div>
+
+  </section>
+</main>
+
+
+<div id="footer-placeholder"></div>
+<script src="/assets/js/footer.js"></script>
+
+</body>
+</html>

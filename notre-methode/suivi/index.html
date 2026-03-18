@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suivi et monitoring de votre installation solaire | Solarglobe</title>
+  <meta name="description" content="Découvrez le suivi et monitoring de votre installation photovoltaïque : application solaire, production en temps réel, alertes et maintenance. Solarglobe vous accompagne après la mise en service." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.solarglobe.fr/notre-methode/suivi/" />
+  <meta property="og:title" content="Suivi et monitoring de votre installation solaire | Solarglobe" />
+  <meta property="og:description" content="Découvrez le suivi et monitoring de votre installation photovoltaïque : application solaire, production en temps réel, alertes et maintenance. Solarglobe vous accompagne après la mise en service." />
+  <meta property="og:image" content="https://www.solarglobe.fr/assets/images/og-image.jpg" />
+  <meta property="og:url" content="https://www.solarglobe.fr/notre-methode/suivi/" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
+  <link rel="stylesheet" href="/assets/css/header-common.css" />
+  <link rel="stylesheet" href="/assets/css/footer-common.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold: '#C39847', noir: '#0D0D0D' },
+          fontFamily: { montserrat: ['Montserrat', 'sans-serif'] },
+          boxShadow: {
+            'gold/20': '0 0 24px rgba(195, 152, 71, 0.2)',
+            'gold/30': '0 0 40px rgba(195, 152, 71, 0.3)',
+            'gold/40': '0 0 40px rgba(195, 152, 71, 0.4)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}</style>
+  <style>
+  .sg-reveal{opacity:0;transform:translateY(40px);transition:opacity 1.2s cubic-bezier(0.22,1,0.36,1),transform 1.2s cubic-bezier(0.22,1,0.36,1)}
+  .sg-reveal.visible{opacity:1;transform:translateY(0)}
+  @media (prefers-reduced-motion:reduce){.sg-reveal{opacity:1;transform:none}}
+  .hero-method{margin-top:0;min-height:55vh;display:flex;align-items:center;justify-content:center;padding:3rem 1.5rem}
+  .hero-method::before{content:"";position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(195,152,71,0.18) 0%,transparent 70%);filter:blur(80px);pointer-events:none}
+  .sg-glass{background:rgba(26,26,26,0.6);backdrop-filter:blur(12px);border:1px solid rgba(195,152,71,0.2)}
+  .sg-card-suivi{background:rgba(0,0,0,0.6);backdrop-filter:blur(12px);border:1px solid rgba(195,152,71,0.4);transition:transform 0.8s,box-shadow 0.6s,border-color 0.5s}
+  .sg-card-suivi:hover{transform:scale(1.02);box-shadow:0 0 48px rgba(195,152,71,0.2);border-color:rgba(195,152,71,0.7)!important}
+  .sg-card-suivi.sg-bad{border-left:3px solid rgba(220,80,80,0.6)}
+  .sg-card-suivi.sg-bad h3{color:#e07a7a}
+  .sg-card-suivi.sg-good{border-left:3px solid rgba(72,187,120,0.6)}
+  .sg-card-suivi.sg-good h3{color:#68d391}
+  .sg-cta-mid{text-align:center;padding:4rem 1.5rem;background:linear-gradient(180deg,rgba(10,10,10,0.98),rgba(0,0,0,0.95));border-top:1px solid rgba(195,152,71,0.2);border-bottom:1px solid rgba(195,152,71,0.2)}
+  .sg-cta-mid h2{font-size:1.75rem;font-weight:700;color:#fff;margin-bottom:1.5rem}
+  .sg-cta-mid .btn-gold{display:inline-block;background:#C39847;color:#000;font-weight:700;padding:1rem 2rem;border-radius:16px;text-decoration:none;transition:transform 0.3s,box-shadow 0.3s}
+  .sg-cta-mid .btn-gold:hover{transform:scale(1.05);box-shadow:0 0 32px rgba(195,152,71,0.4)}
+  @keyframes scan-move{0%{left:-100px;opacity:0}35%{opacity:0.9}60%{opacity:0.9}100%{left:100%;opacity:0}}
+  .scan-gold{pointer-events:none;position:absolute;top:0;left:0;width:100%;height:100%}
+  .scan-gold.active::before{content:"";display:block;position:absolute;top:0;left:-100px;width:80px;height:100%;background:linear-gradient(90deg,transparent,#fffbe655 60%,transparent);border-radius:30px;opacity:0.7;animation:scan-move 2.7s linear infinite}
+  .halo-gold{background:radial-gradient(circle at 50% 50%,rgba(195,152,71,0.15) 0%,transparent 70%)}
+  </style>
+</head>
+<body class="bg-noir text-white">
+
+<div id="header-placeholder"></div>
+<script src="/assets/js/header.js"></script>
+
+<main>
+
+<!-- HERO -->
+<section class="hero-method relative bg-black overflow-hidden">
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+    <p class="sg-reveal text-gold uppercase tracking-widest text-sm mb-4">&#201;TAPE 7 &mdash; NOTRE M&eacute;THODE</p>
+    <h1 class="sg-reveal text-4xl md:text-5xl font-bold text-white mb-6">
+      Gardez le contr&ocirc;le total sur votre &eacute;nergie
+    </h1>
+    <p class="sg-reveal text-lg text-gray-300 mb-4">
+      Avec Solarglobe, vous pilotez votre consommation.
+    </p>
+    <p class="sg-reveal text-gold font-semibold mb-6">
+      Vous ne subissez plus. Vous pilotez.
+    </p>
+    <div class="sg-reveal flex flex-col md:flex-row justify-center gap-4 text-sm text-gray-300 mb-8">
+      <span>&#10003; Suivi en temps r&eacute;el</span>
+      <span>&#10003; Alertes intelligentes</span>
+      <span>&#10003; Optimisation continue</span>
+    </div>
+    <a href="/etude-gratuite/" class="sg-reveal inline-block border-2 border-gold text-gold px-8 py-4 rounded-xl hover:bg-gold hover:text-black transition font-semibold">
+      Obtenir mon étude solaire gratuite
+    </a>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- BLOC SIGNATURE — VOTRE ÉNERGIE, SOUS CONTRÔLE -->
+<section class="relative bg-[#0a0a0a] py-20 md:py-28 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white mb-12">
+      Votre &eacute;nergie, sous contr&ocirc;le
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="sg-reveal sg-card-suivi rounded-2xl p-6 backdrop-blur-sm">
+        <h3 class="text-lg font-bold text-gold mb-3">Production</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Suivez en temps r&eacute;el ce que vous produisez.</p>
+      </div>
+      <div class="sg-reveal sg-card-suivi rounded-2xl p-6 backdrop-blur-sm">
+        <h3 class="text-lg font-bold text-gold mb-3">Consommation</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Comprenez comment vous utilisez votre &eacute;nergie.</p>
+      </div>
+      <div class="sg-reveal sg-card-suivi rounded-2xl p-6 backdrop-blur-sm">
+        <h3 class="text-lg font-bold text-gold mb-3">&Eacute;conomies</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Visualisez vos gains et votre rentabilit&eacute;.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- 2 — BLOC VIDÉO (BOOSTÉ) -->
+<section id="suivi-monitoring"
+         class="relative bg-black pt-24 pb-28 px-4 md:px-0 overflow-hidden gsap-bloc8"
+         aria-labelledby="monitoring-title">
+
+  <div class="max-w-6xl mx-auto px-6">
+    <p class="sg-reveal text-center text-xl md:text-2xl text-gold font-semibold mb-12">
+      Voici ce que vous voyez r&eacute;ellement.
+    </p>
+  </div>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+
+    <!-- VISUEL MONITORING -->
+    <div class="bloc8-visuel relative flex justify-center items-center opacity-0">
+
+      <!-- Halo doré -->
+      <div class="halo-gold absolute inset-0 pointer-events-none z-10" aria-hidden="true"></div>
+      <div class="scan-gold absolute top-1/2 left-0 w-full pointer-events-none z-30" aria-hidden="true"></div>
+
+      <video
+        src="/assets/videos/monitoring-solarglobe.mp4"
+        autoplay muted loop playsinline
+        preload="none"
+        poster="/assets/images/posters/monitoring-solarglobe.jpg"
+        class="w-full max-w-[360px] rounded-2xl shadow-2xl shadow-gold/30 bg-black object-cover relative z-20"
+        width="720" height="1280"
+        aria-label="Aper&ccedil;u du suivi en temps r&eacute;el de la production solaire">
+      </video>
+
+      <!-- Badges -->
+      <span class="absolute top-5 left-5 bg-gold/90 text-black px-4 py-1 rounded-xl text-sm font-bold shadow-xl z-30">
+        Suivi en temps r&eacute;el
+      </span>
+
+      <span class="absolute top-5 right-5 flex items-center gap-1 z-30" aria-live="polite">
+        <span class="w-3 h-3 rounded-full bg-green-400 animate-pulse"></span>
+        <span class="text-xs font-bold text-green-400">LIVE</span>
+      </span>
+
+    </div>
+
+    <!-- CONTENU -->
+    <div class="bloc8-content">
+
+      <div class="rounded-2xl bg-[#191919] p-8 md:p-10 shadow-2xl shadow-gold/30 opacity-0">
+
+        <!-- TITRE -->
+        <h2 id="monitoring-title"
+            class="text-2xl md:text-3xl text-gold font-extrabold mb-6 tracking-tight drop-shadow-lg text-center md:text-left">
+          Apr&egrave;s la mise en service, gardez le contr&ocirc;le
+        </h2>
+
+        <!-- TEXTE -->
+        <p class="max-w-xl mb-8 text-base md:text-lg text-neutral-200 leading-relaxed">
+          Une fois votre installation officiellement mise en service,
+          vous suivez <span class="text-gold font-semibold">en temps r&eacute;el</span>
+          la production solaire, la consommation du foyer,
+          l&rsquo;&eacute;tat de la batterie et vos &eacute;conomies.
+          <br class="hidden sm:block">
+          Depuis <b>votre smartphone ou votre ordinateur</b>,
+          vous pilotez votre &eacute;nergie simplement, en toute autonomie.
+        </p>
+
+        <!-- FONCTIONNALITÉS -->
+        <ul class="space-y-4 mb-10" role="list">
+
+          <li class="flex items-center gap-3 opacity-0 feature8">
+            <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="7" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 3v4M8 3v4M3 11h18" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span class="text-neutral-100">
+              Pilotage complet depuis l&rsquo;application (mobile &amp; web)
+            </span>
+          </li>
+
+          <li class="flex items-center gap-3 opacity-0 feature8">
+            <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 20v-6M8 12l4-4 4 4" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span class="text-neutral-100">
+              Alertes intelligentes &amp; recommandations pour optimiser l&rsquo;autoconsommation
+            </span>
+          </li>
+
+          <li class="flex items-center gap-3 opacity-0 feature8">
+            <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 16v-1a4 4 0 0 1 8 0v1" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span class="text-neutral-100">
+              Partage s&eacute;curis&eacute; des donn&eacute;es avec nos experts pour un suivi professionnel
+            </span>
+          </li>
+
+        </ul>
+
+        <!-- CTA -->
+        <a href="/etude-gratuite/"
+           class="inline-block px-8 py-4 bg-gold text-black text-lg font-bold rounded-2xl shadow-2xl shadow-gold/40 hover:bg-yellow-400 transition duration-200 opacity-0 bloc8-cta">
+          Obtenir mon &eacute;tude solaire gratuite
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 mt-12">
+    <p class="sg-reveal text-center text-xl md:text-2xl text-gold font-semibold">
+      Tout est automatis&eacute;. Vous n&rsquo;avez rien &agrave; faire.
+    </p>
+  </div>
+
+  <!-- Halo de fond -->
+  <div class="absolute bottom-[-70px] right-[-70px] w-[220px] h-[220px] rounded-full bg-gold/10 blur-2xl pointer-events-none"
+       aria-hidden="true"></div>
+
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- AVANT / APRÈS SUIVI -->
+<section class="relative bg-[#0a0a0a] py-20 md:py-28 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white text-center mb-12">
+      Sans suivi vs avec Solarglobe
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="sg-reveal sg-card-suivi sg-bad rounded-2xl p-6">
+        <h3 class="text-lg font-bold mb-3">Sans suivi</h3>
+        <ul class="text-neutral-300 text-sm space-y-2 list-disc list-inside">
+          <li>Production inconnue</li>
+          <li>Aucune alerte</li>
+          <li>Perte d&rsquo;&eacute;nergie</li>
+        </ul>
+      </div>
+      <div class="sg-reveal sg-card-suivi sg-good rounded-2xl p-6">
+        <h3 class="text-lg font-bold mb-3">Avec Solarglobe</h3>
+        <ul class="text-neutral-300 text-sm space-y-2 list-disc list-inside">
+          <li>Suivi en temps r&eacute;el</li>
+          <li>Alertes automatiques</li>
+          <li>Optimisation continue</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- 4 — SECTION APPLICATION -->
+<section class="relative bg-[#0a0a0a] py-20 md:py-28 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <div class="sg-reveal">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Une application qui vous fait gagner de l&rsquo;argent
+      </h2>
+      <p class="text-gold font-semibold text-lg mb-6">
+        Chaque donn&eacute;e vous aide &agrave; optimiser votre consommation et r&eacute;duire vos factures.
+      </p>
+      <p class="text-neutral-200 leading-relaxed text-base md:text-lg mb-6">
+        L&rsquo;<strong class="text-gold">application mobile</strong> et web Solarglobe vous permet de consulter
+        le <strong class="text-gold">suivi production</strong> de votre installation &agrave; tout moment. Visualisez
+        la production instantan&eacute;e, l&rsquo;&eacute;nergie produite aujourd&rsquo;hui, la production mensuelle
+        et votre taux d&rsquo;autoconsommation.
+      </p>
+      <p class="text-neutral-200 leading-relaxed text-base md:text-lg mb-6">
+        L&rsquo;<strong class="text-gold">historique</strong> des performances vous aide &agrave; comprendre vos
+        habitudes de consommation. Les <strong class="text-gold">alertes</strong> vous notifient en cas d&rsquo;anomalie
+        ou de baisse de production, pour une r&eacute;action rapide et un maintien optimal de votre installation.
+        D&eacute;couvrez <a href="/notre-methode/installation/" class="text-gold hover:underline">comment se d&eacute;roule l&rsquo;installation</a> et notre <a href="/notre-methode/" class="text-gold hover:underline">m&eacute;thode d&rsquo;accompagnement</a>.
+      </p>
+    </div>
+    <div class="sg-reveal flex justify-center">
+      <div class="sg-glass rounded-2xl p-8 border border-gold/20 max-w-sm">
+        <div class="space-y-4 text-center">
+          <div class="text-gold font-bold text-lg">Application solaire</div>
+          <ul class="text-neutral-300 text-sm space-y-2 text-left">
+            <li class="flex items-center gap-2"><span class="text-gold">●</span> Production instantan&eacute;e</li>
+            <li class="flex items-center gap-2"><span class="text-gold">●</span> &Eacute;nergie produite aujourd&rsquo;hui</li>
+            <li class="flex items-center gap-2"><span class="text-gold">●</span> Production mensuelle</li>
+            <li class="flex items-center gap-2"><span class="text-gold">●</span> Taux d&rsquo;autoconsommation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- 5 — POURQUOI C'EST IMPORTANT -->
+<section class="relative bg-black py-20 md:py-28 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white text-center mb-12">
+      Pourquoi le suivi est essentiel
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="sg-reveal sg-card-suivi rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-gold mb-3">D&eacute;tection rapide</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Une anomalie = r&eacute;action imm&eacute;diate.</p>
+      </div>
+      <div class="sg-reveal sg-card-suivi rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-gold mb-3">Optimisation</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Maximisez votre autoconsommation.</p>
+      </div>
+      <div class="sg-reveal sg-card-suivi rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-gold mb-3">Rentabilit&eacute;</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Suivez vos &eacute;conomies en temps r&eacute;el.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- 6 — SOLARNEXT -->
+<section class="relative bg-[#0a0a0a] py-20 md:py-28 overflow-hidden text-center">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white mb-6">
+      Une technologie au service de votre &eacute;nergie
+    </h2>
+    <p class="sg-reveal text-lg text-neutral-300 leading-relaxed">
+      Notre syst&egrave;me analyse vos donn&eacute;es pour optimiser votre installation en continu.
+    </p>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- 7 — SECTION PERFORMANCE (CARDS) -->
+<section class="relative bg-black py-20 md:py-28 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white text-center mb-14">
+      Une visibilit&eacute; compl&egrave;te sur votre production d&rsquo;&eacute;nergie
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="sg-reveal sg-glass rounded-2xl p-6 border border-gold/20 hover:border-gold/40 transition">
+        <div class="text-gold font-bold text-lg mb-3">Production solaire</div>
+        <p class="text-neutral-300 text-sm leading-relaxed">Visualisez l&rsquo;&eacute;lectricit&eacute; produite chaque jour par votre installation.</p>
+      </div>
+      <div class="sg-reveal sg-glass rounded-2xl p-6 border border-gold/20 hover:border-gold/40 transition">
+        <div class="text-gold font-bold text-lg mb-3">Autoconsommation</div>
+        <p class="text-neutral-300 text-sm leading-relaxed">Comprenez comment votre maison utilise l&rsquo;&eacute;nergie solaire produite.</p>
+      </div>
+      <div class="sg-reveal sg-glass rounded-2xl p-6 border border-gold/20 hover:border-gold/40 transition">
+        <div class="text-gold font-bold text-lg mb-3">Historique</div>
+        <p class="text-neutral-300 text-sm leading-relaxed">Consultez les performances sur plusieurs ann&eacute;es.</p>
+      </div>
+      <div class="sg-reveal sg-glass rounded-2xl p-6 border border-gold/20 hover:border-gold/40 transition">
+        <div class="text-gold font-bold text-lg mb-3">Alertes</div>
+        <p class="text-neutral-300 text-sm leading-relaxed">Recevez des notifications si une anomalie est d&eacute;tect&eacute;e.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- 8 — SECTION MAINTENANCE -->
+<section class="relative bg-[#0a0a0a] py-20 md:py-28 overflow-hidden">
+  <div class="max-w-4xl mx-auto px-6">
+    <p class="sg-reveal text-xl md:text-2xl font-bold text-gold text-center mb-8">
+      Une installation bien suivie est une installation rentable.
+    </p>
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white text-center mb-12">
+      Une installation solaire con&ccedil;ue pour durer
+    </h2>
+    <div class="sg-reveal space-y-6 text-neutral-200 leading-relaxed text-base md:text-lg">
+      <p>
+        Les panneaux photovolta&iuml;ques sont con&ccedil;us pour une <strong class="text-gold">dur&eacute;e de vie de 30&nbsp;ans et plus</strong>.
+        La <strong class="text-gold">maintenance panneaux solaires</strong> reste minimale : les modules n&rsquo;ont pas de pi&egrave;ces
+        m&eacute;caniques et r&eacute;sistent aux intemp&eacute;ries. Les <strong class="text-gold">micro-onduleurs</strong> ou onduleurs
+        centralis&eacute;s sont &eacute;galement con&ccedil;us pour la long&eacute;vit&eacute;.
+      </p>
+      <p>
+        Un <strong class="text-gold">nettoyage &eacute;ventuel</strong> des panneaux peut &ecirc;tre n&eacute;cessaire en cas de poussi&egrave;re
+        ou de d&eacute;p&ocirc;ts. Des <strong class="text-gold">v&eacute;rifications p&eacute;riodiques</strong> des connexions et du bon
+        fonctionnement de l&rsquo;onduleur assurent la <strong class="text-gold">fiabilit&eacute;</strong> de votre installation.
+        Solarglobe vous accompagne pour un contr&ocirc;le r&eacute;gulier de votre production &eacute;nergie solaire maison.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- 7 — SECTION PERFORMANCE LONG TERME -->
+<section class="relative bg-black py-20 md:py-28 overflow-hidden">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white text-center mb-12">
+      Une production solaire stable pendant des d&eacute;cennies
+    </h2>
+    <div class="sg-reveal space-y-6 text-neutral-200 leading-relaxed text-base md:text-lg">
+      <p>
+        La <strong class="text-gold">garantie panneaux</strong> constructeur couvre g&eacute;n&eacute;ralement 25&nbsp;ans de production.
+        Le <strong class="text-gold">rendement</strong> reste &eacute;lev&eacute; sur toute la dur&eacute;e de vie de l&rsquo;installation.
+        Une <strong class="text-gold">installation solaire</strong> bien dimensionn&eacute;e et correctement suivie garantit une
+        <strong class="text-gold">fiabilit&eacute;</strong> optimale et une production &eacute;nerg&eacute;tique pr&eacute;visible.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- CTA INTERMÉDIAIRE -->
+<section class="sg-cta-mid relative py-20 md:py-28 overflow-hidden">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white mb-8">
+      Envie de suivre votre production en temps r&eacute;el ?
+    </h2>
+    <a href="/etude-gratuite/" class="sg-reveal btn-gold inline-block px-8 py-4 rounded-xl font-semibold">
+      D&eacute;marrer mon projet
+    </a>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- FIN IMPACT -->
+<section class="relative bg-black py-20 md:py-28 overflow-hidden">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <p class="sg-reveal text-2xl md:text-3xl font-bold text-white leading-relaxed">
+      L&rsquo;&eacute;nergie solaire ne se produit pas seulement.
+    </p>
+    <p class="sg-reveal text-2xl md:text-3xl font-bold text-gold mt-4 leading-relaxed">
+      Elle se pilote.
+    </p>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- CTA FINAL -->
+<section class="relative bg-[#0a0a0a] py-24 md:py-32 overflow-hidden">
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gold/15 blur-[120px]"></div>
+  </div>
+  <div class="relative max-w-4xl mx-auto px-6 text-center">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white mb-6">Passez &agrave; l&rsquo;&eacute;nergie solaire en toute confiance</h2>
+    <p class="sg-reveal text-gray-300 text-base md:text-lg mb-8">
+      De l&rsquo;&eacute;tude solaire &agrave; l&rsquo;installation et au suivi,
+      <span class="text-gold font-semibold">Solarglobe</span> vous accompagne &agrave; chaque &eacute;tape de votre projet photovolta&iuml;que.
+    </p>
+    <a href="/etude-gratuite/" class="sg-reveal inline-block bg-gold text-black font-bold py-4 px-10 rounded-2xl shadow-xl hover:scale-105 transition text-lg">
+      Obtenir mon &eacute;tude solaire gratuite
+    </a>
+    <p class="sg-reveal text-xs text-neutral-400 mt-8">Sans engagement &ndash; R&eacute;ponse sous 24&nbsp;h</p>
+  </div>
+</section>
+
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="/assets/js/footer.js"></script>
+
+<!-- SCRIPT — SUIVI & MONITORING (migré fidèlement) -->
+<script>
+(function () {
+
+  const root = document.getElementById('suivi-monitoring');
+  if (!root) return;
+
+  const visuel = root.querySelector('.bloc8-visuel');
+  const card   = root.querySelector('.bloc8-content > div');
+  const feats  = Array.from(root.querySelectorAll('.feature8'));
+  const ticks  = Array.from(root.querySelectorAll('.tick-anim'));
+  const cta    = root.querySelector('.bloc8-cta');
+  const scan   = root.querySelector('.scan-gold');
+
+  const prefersReduced =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  [visuel, card, cta].forEach(el => {
+    if (!el) return;
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+  });
+
+  feats.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(18px)';
+  });
+
+  let played = false;
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting || played) return;
+      played = true;
+
+      reveal(visuel, 1.1);
+
+      setTimeout(() => {
+        reveal(card, 1.1);
+      }, 360);
+
+      feats.forEach((el, i) => {
+        setTimeout(() => {
+          reveal(el, 0.9);
+          if (ticks[i]) ticks[i].classList.add('draw');
+        }, 760 + i * 220);
+      });
+
+      setTimeout(() => {
+        reveal(cta, 0.8);
+      }, 760 + feats.length * 220 + 240);
+
+      if (!prefersReduced && scan) {
+        setTimeout(() => scan.classList.add('active'), 1200);
+      }
+
+      io.disconnect();
+    });
+  }, { threshold: 0.35 });
+
+  io.observe(root);
+
+  function reveal(el, duration) {
+    if (!el) return;
+
+    if (window.gsap) {
+      gsap.to(el, {
+        opacity: 1,
+        y: 0,
+        duration: duration,
+        ease: 'power2.out'
+      });
+    } else {
+      el.style.transition =
+        'opacity ' + duration + 's ease, transform ' + (duration + 0.2) +
+        's cubic-bezier(.22,.61,.36,1)';
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    }
+  }
+
+})();
+</script>
+
+<!-- Script reveal sections -->
+<script>
+(function(){
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(prefersReduced){
+    document.querySelectorAll('.sg-reveal').forEach(el=>el.classList.add('visible'));
+    return;
+  }
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  },{threshold:0.2});
+  document.querySelectorAll('.sg-reveal').forEach(el=>observer.observe(el));
+})();
+</script>
+
+</body>
+</html>

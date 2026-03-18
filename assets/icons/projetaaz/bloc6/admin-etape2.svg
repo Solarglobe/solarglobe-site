@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Éclair stylisé -->
+  <polygon points="40,12 36,26 42,26 38,40 48,24 42,24 46,12" fill="none" stroke="#C39847" stroke-width="2"/>
+
+  <!-- Prise circulaire -->
+  <circle cx="40" cy="58" r="14" stroke="#C39847" stroke-width="2"/>
+  <!-- Trous de prise -->
+  <circle cx="36" cy="58" r="2" fill="#C39847"/>
+  <circle cx="44" cy="58" r="2" fill="#C39847"/>
+  <!-- Trait de terre -->
+  <line x1="40" y1="62" x2="40" y2="66" stroke="#C39847" stroke-width="1.5"/>
+</svg>

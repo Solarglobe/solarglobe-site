@@ -1,0 +1,393 @@
+/* ====== HEADER GLOBAL SOLARGLOBE ====== */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#solarglobe-header {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  z-index: 1000;
+  background: #000;
+  border-bottom: 1px solid rgba(200,167,90,0.2);
+}
+
+#solarglobe-header .header-container {
+  max-width: 1400px;
+  height: 72px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: auto minmax(0,1fr) auto;
+  align-items: center;
+  column-gap: 24px;
+}
+
+#solarglobe-header .header-logo-link {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#solarglobe-header .header-logo-link img {
+  display: block;
+}
+
+#solarglobe-header .header-logo img,
+#solarglobe-header .header-logo-link img {
+  height: 42px;
+  width: auto;
+  transition: opacity 0.3s ease;
+}
+
+#solarglobe-header .header-logo img:hover,
+#solarglobe-header .header-logo-link img:hover {
+  opacity: 0.85;
+}
+
+#solarglobe-header .header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  white-space: nowrap;
+}
+
+#solarglobe-header .header-menu a {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+#solarglobe-header .header-menu a:hover {
+  color: #C8A75A;
+}
+
+#solarglobe-header .header-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0%;
+  height: 2px;
+  background: #C8A75A;
+  transition: width 0.3s ease;
+}
+
+#solarglobe-header .header-menu a:hover::after {
+  width: 100%;
+}
+
+#solarglobe-header .header-menu a.nav-active {
+  color: #C8A75A;
+  font-weight: 600;
+  position: relative;
+}
+
+#solarglobe-header .header-menu a.nav-active::after {
+  width: 100%;
+}
+
+/* ====== DROPDOWN NOTRE MÉTHODE (desktop) ====== */
+#solarglobe-header .nav-dropdown-wrapper {
+  position: relative;
+}
+
+#solarglobe-header .nav-dropdown-wrapper .nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+}
+
+#solarglobe-header .nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 260px;
+  background: #000;
+  border: 1px solid rgba(195,152,71,0.3);
+  border-radius: 12px;
+  padding: 16px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+  z-index: 1001;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+
+#solarglobe-header .nav-dropdown-wrapper:hover .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(4px);
+}
+
+#solarglobe-header .nav-dropdown-desc {
+  color: #a3a3a3;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 20px 12px;
+  margin: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#solarglobe-header .nav-dropdown a {
+  display: block;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+#solarglobe-header .nav-dropdown a:hover {
+  color: #C39847;
+  background: rgba(195,152,71,0.08);
+}
+
+#solarglobe-header .nav-dropdown a::after {
+  display: none;
+}
+
+/* Dropdown 2 colonnes (Le solaire) */
+#solarglobe-header .nav-dropdown-cols {
+  min-width: 420px;
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+#solarglobe-header .nav-dropdown-cols .nav-dropdown-col {
+  padding: 0 20px;
+}
+
+#solarglobe-header .nav-dropdown-cols .nav-dropdown-col:first-child {
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+#solarglobe-header .nav-dropdown-col-title {
+  color: #C39847;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0 0 12px;
+  margin: 0 0 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#solarglobe-header .nav-dropdown-cols .nav-dropdown-desc {
+  display: none;
+}
+
+#solarglobe-header .header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+#solarglobe-header .header-cta,
+#solarglobe-header .mobile-cta {
+  background: #C39847;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+#solarglobe-header .header-cta:hover,
+#solarglobe-header .mobile-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(200,167,90,0.25);
+}
+
+#solarglobe-header .header-social {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+#solarglobe-header .header-social a {
+  color: #a3a3a3;
+}
+
+#solarglobe-header .header-social a:hover {
+  color: #C39847;
+}
+
+#solarglobe-header .mobile-burger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: transparent;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+#solarglobe-header .mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 72px 0 0 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1001;
+}
+
+#solarglobe-header .mobile-menu {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(195,152,71,0.2);
+  z-index: 1002;
+  padding: 24px;
+}
+
+#solarglobe-header .mobile-menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 0;
+}
+
+#solarglobe-header .mobile-menu a:hover {
+  color: #C39847;
+}
+
+#solarglobe-header .mobile-menu a.nav-active {
+  color: #C8A75A;
+  font-weight: 600;
+}
+
+/* ====== ACCORDION NOTRE MÉTHODE (mobile) ====== */
+#solarglobe-header .mobile-accordion {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#solarglobe-header .mobile-accordion-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 0;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+#solarglobe-header .mobile-accordion-trigger:hover {
+  color: #C39847;
+}
+
+#solarglobe-header .mobile-accordion-trigger::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+#solarglobe-header .mobile-accordion-trigger[aria-expanded="true"]::after {
+  transform: rotate(-135deg);
+}
+
+#solarglobe-header .mobile-accordion-content {
+  display: none;
+  padding: 0 0 0 16px;
+  padding-bottom: 8px;
+}
+
+#solarglobe-header .mobile-accordion-content.open {
+  display: block;
+}
+
+#solarglobe-header .mobile-accordion-desc {
+  color: #a3a3a3;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 0 12px;
+  margin: 0;
+}
+
+#solarglobe-header .mobile-accordion-desc:not(:first-child) {
+  margin-top: 16px;
+}
+
+#solarglobe-header .mobile-accordion-content a {
+  display: block;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#solarglobe-header .mobile-menu.open,
+#solarglobe-header .mobile-overlay.open {
+  display: block;
+}
+
+#header-placeholder {
+  min-height: 72px;
+}
+
+.text-gold {
+  color: #C39847 !important;
+}
+
+#solarglobe-header .header-cta.text-gold,
+#solarglobe-header .mobile-cta.text-gold {
+  color: black !important;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+/* FIX GLOBAL HEADER / HERO ALIGNMENT */
+main {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 1024px) {
+  #solarglobe-header .desktop-menu,
+  #solarglobe-header .desktop-cta,
+  #solarglobe-header .desktop-social {
+    display: none !important;
+  }
+
+  #solarglobe-header .mobile-burger {
+    display: inline-flex !important;
+  }
+
+  #solarglobe-header .header-container {
+    grid-template-columns: auto 1fr auto;
+  }
+}

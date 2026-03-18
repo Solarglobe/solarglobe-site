@@ -1,0 +1,11 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Feuille principale -->
+  <rect x="20" y="18" width="40" height="50" rx="4" stroke="#C39847" stroke-width="2"/>
+  <!-- Lignes sur la feuille -->
+  <line x1="28" y1="30" x2="52" y2="30" stroke="#C39847" stroke-width="1.5"/>
+  <line x1="28" y1="38" x2="52" y2="38" stroke="#C39847" stroke-width="1.2"/>
+  <line x1="28" y1="46" x2="44" y2="46" stroke="#C39847" stroke-width="1"/>
+  <!-- Maison stylisée en bas du document -->
+  <polygon points="32,58 40,52 48,58" stroke="#C39847" stroke-width="2" fill="none"/>
+  <rect x="36" y="58" width="8" height="10" stroke="#C39847" stroke-width="1.5" fill="none"/>
+</svg>

@@ -1,0 +1,856 @@
+/* ====== DESIGN SYSTEM GLOBAL SOLARGLOBE ====== */
+/* Source officielle du style du site - ne pas dupliquer */
+/*
+  COMPOSANTS DISPONIBLES :
+  - Boutons : .sg-btn .sg-btn-primary | .sg-btn-secondary | .sg-btn-outline
+  - Cartes : .sg-card | .sg-card-dark
+  - Arguments : .sg-argument | .sg-argument-dark (.sg-argument-icon, .sg-argument-title, .sg-argument-text)
+  - Listes : .sg-list-premium | .sg-list-premium-dark
+  - Stats : .sg-stats .sg-stat (.sg-stat-value, .sg-stat-label) | .sg-stats-dark
+  - CTA : .sg-cta | .sg-cta-dark
+  - Hero : .sg-hero-premium .sg-hero-bg .sg-hero-content .sg-hero-title .sg-hero-subtitle .sg-hero-badges .sg-hero-cta
+  - Transition : .sg-transition-block | .sg-transition-block-dark
+  - FAQ : .sg-faq .sg-faq-item .sg-faq-question .sg-faq-answer
+  - Breadcrumb : .sg-breadcrumb | .sg-breadcrumb-dark
+  - Layout : .sg-container .sg-section .sg-section-dark
+*/
+
+/* -------------------------------------------
+   1. VARIABLES GLOBALES
+   ------------------------------------------- */
+:root {
+  /* Couleurs principales */
+  --sg-gold: #C39847;
+  --sg-gold-light: #D7B26A;
+  --sg-dark: #0B0B0B;
+  --sg-black: #000000;
+  --sg-white: #ffffff;
+  --sg-gray: #777;
+  --sg-light-gray: #f5f5f5;
+
+  /* Typographie */
+  --sg-font-main: "Inter", "Montserrat", Arial, sans-serif;
+
+  /* Tailles */
+  --sg-max-width: 1200px;
+  --sg-section-padding: 80px;
+  --sg-container-padding: 24px;
+
+  /* Bordures */
+  --sg-radius-small: 6px;
+  --sg-radius-medium: 12px;
+  --sg-radius-large: 20px;
+
+  /* Ombres */
+  --sg-shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --sg-shadow-medium: 0 20px 60px rgba(0, 0, 0, 0.12);
+
+  /* Transitions */
+  --sg-transition: all 0.25s ease;
+}
+
+/* -------------------------------------------
+   2. TYPOGRAPHIE GLOBALE
+   ------------------------------------------- */
+body {
+  font-family: var(--sg-font-main);
+  line-height: 1.6;
+  color: var(--sg-dark);
+  background-color: var(--sg-white);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 0.5em;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 0.5em;
+}
+
+h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 0.5em;
+}
+
+p {
+  margin: 0 0 1em;
+  font-size: 1rem;
+}
+
+a {
+  color: var(--sg-gold);
+  text-decoration: none;
+  transition: var(--sg-transition);
+}
+
+a:hover {
+  color: var(--sg-gold-light);
+}
+
+ul {
+  margin: 0 0 1em;
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.25em;
+}
+
+/* -------------------------------------------
+   HEADER + HERO : fusion visuelle premium
+   ------------------------------------------- */
+#solarglobe-header {
+  position: relative;
+  z-index: 1000;
+  background: #000;
+}
+
+/* -------------------------------------------
+   SÉPARATEURS DE SECTIONS (style Le solaire)
+   ------------------------------------------- */
+.sg-section-divider {
+  position: relative;
+  border-top: 1px solid rgba(195, 152, 71, 0.18);
+}
+.sg-section-divider::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -1px;
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(195, 152, 71, 0.7),
+    transparent
+  );
+}
+.sg-section-divider-b {
+  position: relative;
+  border-bottom: 1px solid rgba(195, 152, 71, 0.18);
+}
+.sg-section-divider-b::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1px;
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(195, 152, 71, 0.7),
+    transparent
+  );
+}
+
+/* -------------------------------------------
+   3. COMPOSANTS RÉUTILISABLES
+   ------------------------------------------- */
+
+/* Container */
+.sg-container {
+  max-width: var(--sg-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--sg-container-padding);
+  padding-right: var(--sg-container-padding);
+}
+
+/* Section */
+.sg-section {
+  padding-top: 80px;
+  padding-bottom: 32px;
+}
+
+/* Titre de section */
+.sg-section-title {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+/* Sous-titre de section */
+.sg-section-subtitle {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+.sg-section-dark .sg-section-subtitle {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Hero */
+.sg-hero {
+  padding-top: calc(var(--sg-section-padding) * 1.5);
+  padding-bottom: var(--sg-section-padding);
+  text-align: center;
+}
+
+.sg-hero .sg-container {
+  max-width: var(--sg-max-width);
+}
+
+/* -------------------------------------------
+   HERO PREMIUM (pages internes - NE PAS modifier la home)
+   ------------------------------------------- */
+.sg-hero-premium {
+  position: relative;
+  margin-top: 0;
+  padding-top: 140px;
+  padding-bottom: 100px;
+  text-align: center;
+  color: var(--sg-white);
+  overflow: hidden;
+}
+
+.sg-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(195, 152, 71, 0.15), transparent 40%),
+    linear-gradient(180deg, #0b0b0b, #000);
+  z-index: 0;
+}
+
+.sg-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--sg-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--sg-container-padding);
+  padding-right: var(--sg-container-padding);
+}
+
+.sg-hero-title {
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--sg-white);
+}
+
+.sg-hero-title .sg-text-gold {
+  color: var(--sg-gold);
+}
+
+.sg-hero-subtitle {
+  font-size: 20px;
+  color: #ccc;
+  margin-top: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.sg-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: 28px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.sg-hero-badges span {
+  padding: 6px 14px;
+  border: 1px solid rgba(195, 152, 71, 0.4);
+  border-radius: 999px;
+  background: rgba(195, 152, 71, 0.08);
+  white-space: nowrap;
+}
+
+.sg-hero-badges .sg-badge-sep {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--sg-gold);
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.sg-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 16px;
+  margin-top: 32px;
+}
+
+.sg-hero-cta .sg-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+/* -------------------------------------------
+   BLOC CTA (.sg-cta, .sg-cta-dark)
+   ------------------------------------------- */
+.sg-cta {
+  text-align: center;
+  padding: var(--sg-section-padding) var(--sg-container-padding);
+}
+
+.sg-cta h2,
+.sg-cta .sg-cta-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75em;
+}
+
+.sg-cta p,
+.sg-cta .sg-cta-text {
+  margin-bottom: 1.5em;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sg-cta .sg-btn,
+.sg-cta .sg-btn-primary {
+  margin-top: 0.5em;
+}
+
+.sg-cta-dark {
+  background: var(--sg-dark);
+  color: var(--sg-white);
+}
+
+.sg-cta-dark h2,
+.sg-cta-dark .sg-cta-title {
+  color: var(--sg-white);
+}
+
+.sg-cta-dark p,
+.sg-cta-dark .sg-cta-text {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* -------------------------------------------
+   BANDEAU DE TRANSITION (.sg-transition-block)
+   ------------------------------------------- */
+.sg-transition-block {
+  padding: calc(var(--sg-section-padding) / 2) var(--sg-container-padding);
+  text-align: center;
+  border-top: 1px solid rgba(195, 152, 71, 0.2);
+}
+
+.sg-transition-block-dark {
+  background: var(--sg-dark);
+  color: var(--sg-white);
+  border-top-color: rgba(195, 152, 71, 0.3);
+  margin: 0;
+}
+
+/* -------------------------------------------
+   FAQ ACCORDION (.sg-faq, .sg-faq-item, .sg-faq-question, .sg-faq-answer)
+   ------------------------------------------- */
+.sg-faq {
+  background: #141415;
+  border: 1px solid rgba(195, 152, 71, 0.3);
+  border-radius: var(--sg-radius-medium);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sg-faq-item {
+  border-bottom: 1px solid rgba(195, 152, 71, 0.15);
+}
+
+.sg-faq-item:last-child {
+  border-bottom: none;
+}
+
+.sg-faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--sg-white);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: var(--sg-transition);
+}
+
+.sg-faq-question:hover {
+  color: var(--sg-gold);
+}
+
+.sg-faq-question:focus {
+  outline: none;
+}
+
+/* Bullet optionnel : ajouter .sg-faq-question-bullet si pas de span dans le HTML */
+.sg-faq-question-bullet::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  border-radius: 50%;
+  background: var(--sg-gold);
+  margin-right: 12px;
+}
+
+.sg-faq-question svg.sg-faq-icon,
+.sg-faq-question .icon-plus,
+.sg-faq-question .icon-minus {
+  flex-shrink: 0;
+  margin-left: 12px;
+  transition: transform 0.25s ease;
+}
+
+.sg-faq-item[aria-expanded="true"] .sg-faq-question svg.sg-faq-icon {
+  transform: rotate(45deg);
+}
+
+.sg-faq-answer {
+  padding: 8px 20px 16px 40px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  border-left: 2px solid rgba(195, 152, 71, 0.4);
+  margin-left: 20px;
+}
+
+/* Variante accordion avec aria-expanded (animation) */
+.sg-faq-answer.sg-faq-answer-accordion {
+  max-height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: max-height 0.3s ease;
+}
+
+.sg-faq-item[aria-expanded="true"] .sg-faq-answer.sg-faq-answer-accordion {
+  max-height: 500px;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+
+.sg-faq-answer .sg-btn {
+  margin-top: 12px;
+}
+
+/* -------------------------------------------
+   BREADCRUMB (.sg-breadcrumb)
+   ------------------------------------------- */
+.sg-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+  font-size: 0.875rem;
+  color: var(--sg-gray);
+  padding: 12px 0;
+}
+
+.sg-breadcrumb a {
+  color: var(--sg-gray);
+  text-decoration: none;
+  transition: var(--sg-transition);
+}
+
+.sg-breadcrumb a:hover {
+  color: var(--sg-gold);
+}
+
+.sg-breadcrumb span {
+  color: var(--sg-gold);
+  opacity: 0.7;
+}
+
+.sg-breadcrumb-dark {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.sg-breadcrumb-dark a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.sg-breadcrumb-dark a:hover {
+  color: var(--sg-gold);
+}
+
+/* Variantes fond sombre */
+.sg-section-dark,
+.sg-hero-dark,
+.sg-cta-dark {
+  background: var(--sg-dark);
+  color: var(--sg-white);
+}
+
+.sg-section-dark .sg-text-gold,
+.sg-hero-dark .sg-text-gold,
+.sg-cta-dark .sg-text-gold {
+  color: var(--sg-gold);
+}
+
+/* -------------------------------------------
+   BOUTONS
+   ------------------------------------------- */
+.sg-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: var(--sg-radius-medium);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: var(--sg-transition);
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.sg-btn-primary {
+  background: var(--sg-gold);
+  color: var(--sg-black);
+}
+
+.sg-btn-primary:hover {
+  background: var(--sg-gold-light);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(195, 152, 71, 0.25);
+}
+
+.sg-btn-secondary {
+  background: var(--sg-dark);
+  color: var(--sg-white);
+}
+
+.sg-btn-secondary:hover {
+  background: #1a1a1a;
+  transform: translateY(-1px);
+  box-shadow: var(--sg-shadow-soft);
+}
+
+.sg-btn-outline {
+  background: transparent;
+  color: var(--sg-gold);
+  border: 2px solid var(--sg-gold);
+}
+
+.sg-btn-outline:hover {
+  background: var(--sg-gold);
+  color: var(--sg-black);
+  transform: translateY(-1px);
+}
+
+/* -------------------------------------------
+   CARTES
+   ------------------------------------------- */
+.sg-card {
+  background: var(--sg-white);
+  border-radius: var(--sg-radius-medium);
+  box-shadow: var(--sg-shadow-soft);
+  padding: 24px;
+  transition: var(--sg-transition);
+}
+
+.sg-card:hover {
+  box-shadow: var(--sg-shadow-medium);
+  transform: translateY(-4px);
+  transition: var(--sg-transition);
+}
+
+.sg-card-dark {
+  background: #141415;
+  color: var(--sg-white);
+  border: 1px solid rgba(195, 152, 71, 0.2);
+}
+
+.sg-card-dark:hover,
+.why-card.sg-card-dark:hover {
+  border-color: rgba(195, 152, 71, 0.4);
+  box-shadow: 0 20px 60px rgba(195, 152, 71, 0.08), 0 6px 60px 0 rgba(195, 152, 71, 0.2);
+  transform: translateY(-4px);
+  transition: var(--sg-transition);
+}
+
+/* Image équilibrée (layout 50/50) */
+.sg-img-balanced {
+  border-radius: var(--sg-radius-large);
+  box-shadow: var(--sg-shadow-soft);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Bloc visuel signature (immersif) */
+.sg-visual-signature {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* -------------------------------------------
+   ENCARTS ARGUMENTAIRES (.sg-argument)
+   ------------------------------------------- */
+.sg-argument {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+  border-radius: var(--sg-radius-medium);
+  transition: var(--sg-transition);
+}
+
+.sg-argument-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sg-argument-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: inherit;
+}
+
+.sg-argument-text {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: inherit;
+  opacity: 0.9;
+}
+
+/* Variante sombre */
+.sg-argument-dark {
+  background: #141415;
+  color: var(--sg-white);
+  border: 1px solid rgba(195, 152, 71, 0.2);
+}
+
+.sg-argument-dark:hover {
+  border-color: rgba(195, 152, 71, 0.4);
+}
+
+.sg-argument-dark .sg-argument-title {
+  color: var(--sg-gold);
+}
+
+/* -------------------------------------------
+   LISTES PREMIUM (.sg-list-premium)
+   ------------------------------------------- */
+.sg-list-premium {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sg-list-premium li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.sg-list-premium li::before {
+  content: '✓';
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 50%;
+  background: var(--sg-gold);
+  color: var(--sg-black);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+}
+
+.sg-list-premium-dark li {
+  color: var(--sg-white);
+}
+
+.sg-list-premium-dark li::before {
+  background: var(--sg-gold);
+  color: var(--sg-black);
+}
+
+/* -------------------------------------------
+   BLOC CHIFFRES CLÉS (.sg-stats, .sg-stat)
+   ------------------------------------------- */
+.sg-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  text-align: center;
+}
+
+.sg-stat {
+  padding: 20px 16px;
+}
+
+.sg-stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--sg-gold);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.sg-stat-label {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.sg-stats-dark .sg-stat-value {
+  color: var(--sg-gold);
+}
+
+.sg-stats-dark .sg-stat-label {
+  color: var(--sg-white);
+}
+
+/* Tables */
+.sg-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sg-table th,
+.sg-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sg-table th {
+  font-weight: 600;
+  color: var(--sg-dark);
+  background: var(--sg-light-gray);
+}
+
+.sg-table th:first-child,
+.sg-table td:first-child {
+  padding-left: 20px;
+}
+
+.sg-table tr:hover td {
+  background: rgba(195, 152, 71, 0.05);
+}
+
+/* Formulaires */
+.sg-input,
+.sg-select,
+.sg-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: var(--sg-radius-small);
+  font-family: var(--sg-font-main);
+  font-size: 1rem;
+  transition: var(--sg-transition);
+}
+
+.sg-input:focus,
+.sg-select:focus,
+.sg-textarea:focus {
+  outline: none;
+  border-color: var(--sg-gold);
+  box-shadow: 0 0 0 3px rgba(195, 152, 71, 0.15);
+}
+
+.sg-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.sg-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--sg-dark);
+}
+
+/* -------------------------------------------
+   4. ESPACEMENTS STANDARDISÉS
+   ------------------------------------------- */
+.sg-mt-small { margin-top: 12px; }
+.sg-mt-medium { margin-top: 24px; }
+.sg-mt-large { margin-top: 48px; }
+
+.sg-mb-small { margin-bottom: 12px; }
+.sg-mb-medium { margin-bottom: 24px; }
+.sg-mb-large { margin-bottom: 48px; }
+
+/* -------------------------------------------
+   5. BORDURES ET SÉPARATEURS
+   ------------------------------------------- */
+/* Référence site : trait de séparation entre blocs (or dégradé) */
+.sg-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C39847, transparent);
+  box-shadow: 0 0 8px rgba(195, 152, 71, 0.25), 0 0 20px rgba(195, 152, 71, 0.08);
+  border: none;
+  margin: 12px auto;
+  max-width: 600px;
+}
+
+/* -------------------------------------------
+   6. SYSTÈME DE COULEURS TEXTE
+   ------------------------------------------- */
+.sg-text-gold {
+  color: var(--sg-gold);
+}
+
+.sg-text-dark {
+  color: var(--sg-dark);
+}
+
+.sg-text-gray {
+  color: var(--sg-gray);
+}
+
+/* -------------------------------------------
+   7. SYSTÈME D'OMBRE
+   ------------------------------------------- */
+.sg-shadow-soft {
+  box-shadow: var(--sg-shadow-soft);
+}
+
+.sg-shadow-medium {
+  box-shadow: var(--sg-shadow-medium);
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" fill="none" class="w-full h-auto">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#C39847;stop-opacity:0.3"/>
+      <stop offset="50%" style="stop-color:#C39847;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#C39847;stop-opacity:0.3"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><polygon points="0,0 10,5 0,10" fill="#C39847"/></marker>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-color="#C39847" flood-opacity="0.2"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="500" fill="#0a0a0a"/>
+  <text x="450" y="45" text-anchor="middle" fill="#C39847" font-family="Montserrat,sans-serif" font-size="18" font-weight="600">Flux de l&#39;&#233;nergie solaire en une journ&#233;e</text>
+  <circle cx="450" cy="120" r="45" fill="#C39847" opacity="0.9" filter="url(#softGlow)"/>
+  <circle cx="450" cy="120" r="35" fill="#E8C97A"/>
+  <text x="450" y="125" text-anchor="middle" fill="#0a0a0a" font-family="Montserrat,sans-serif" font-size="14" font-weight="700">Soleil</text>
+  <path d="M450 165 L450 195" stroke="url(#goldGrad)" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <!-- Panneaux -->
+  <rect x="400" y="200" width="100" height="50" rx="6" fill="#1a1a1a" stroke="#C39847" stroke-width="2"/>
+  <line x1="410" y1="215" x2="430" y2="215" stroke="#C39847" stroke-width="2"/>
+  <line x1="440" y1="215" x2="460" y2="215" stroke="#C39847" stroke-width="2"/>
+  <line x1="470" y1="215" x2="490" y2="215" stroke="#C39847" stroke-width="2"/>
+  <text x="450" y="255" text-anchor="middle" fill="#C39847" font-family="Montserrat,sans-serif" font-size="12" font-weight="600">Production</text>
+  <!-- Branchement consommation -->
+  <path d="M450 250 L450 280 L250 280 L250 320" stroke="#C39847" stroke-width="3" fill="none" stroke-dasharray="0" opacity="0.9"/>
+  <text x="220" y="340" text-anchor="middle" fill="#fff" font-family="Montserrat,sans-serif" font-size="11">Consommation</text>
+  <text x="220" y="355" text-anchor="middle" fill="#C39847" font-family="Montserrat,sans-serif" font-size="10">prioritaire</text>
+  <!-- Branchement surplus -->
+  <path d="M450 250 L450 280 L450 280" stroke="#C39847" stroke-width="2" fill="none"/>
+  <path d="M450 280 L550 280 L550 320" stroke="#C39847" stroke-width="3" fill="none" opacity="0.8"/>
+  <path d="M450 280 L450 320" stroke="#C39847" stroke-width="3" fill="none" opacity="0.8"/>
+  <text x="550" y="340" text-anchor="middle" fill="#fff" font-family="Montserrat,sans-serif" font-size="11">Injection</text>
+  <text x="550" y="355" text-anchor="middle" fill="#C39847" font-family="Montserrat,sans-serif" font-size="10">r&#233;seau</text>
+  <text x="450" y="340" text-anchor="middle" fill="#fff" font-family="Montserrat,sans-serif" font-size="11">Stockage</text>
+  <!-- Soir -->
+  <rect x="350" y="380" width="200" height="60" rx="8" fill="#0f0f0f" stroke="#C39847" stroke-width="2" opacity="0.9"/>
+  <text x="450" y="405" text-anchor="middle" fill="#C39847" font-family="Montserrat,sans-serif" font-size="14" font-weight="600">Soir / Nuit</text>
+  <text x="450" y="425" text-anchor="middle" fill="#fff" font-family="Montserrat,sans-serif" font-size="11">&#201;nergie stock&#233;e ou r&#233;seau</text>
+  <path d="M250 320 L250 360 L350 380" stroke="#C39847" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M450 320 L450 360 L450 380" stroke="#C39847" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M550 320 L550 360 L550 380" stroke="#C39847" stroke-width="2" fill="none" opacity="0.6"/>
+</svg>

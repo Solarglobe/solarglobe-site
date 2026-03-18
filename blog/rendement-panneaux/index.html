@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="canonical" href="https://www.solarglobe.fr/blog/rendement-panneaux/" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Comprendre le rendement réel de vos panneaux | SolarGlobe</title>
+  <meta name="description" content="Orientation, inclinaison, ombrage, température et qualité du matériel : les facteurs qui influencent réellement le rendement d'une installation photovoltaïque." />
+  <meta name="robots" content="index, follow" />
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{ ad_storage:'denied', analytics_storage:'denied', wait_for_update:500 });
+  </script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N2ZQKS6F');</script>
+
+  <meta property="og:title" content="Comprendre le rendement réel de vos panneaux | SolarGlobe" />
+  <meta property="og:description" content="Orientation, inclinaison, ombrage, température : les facteurs qui influencent réellement la production photovoltaïque." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.solarglobe.fr/blog/rendement-panneaux/" />
+  <meta property="og:image" content="https://www.solarglobe.fr/assets/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Comprendre le rendement réel de vos panneaux" />
+  <meta name="twitter:description" content="Orientation, inclinaison, ombrage : optimisez la production de votre installation." />
+  <meta name="twitter:image" content="https://www.solarglobe.fr/assets/images/blog/blog-rendement-panneaux.webp" />
+
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
+  <link rel="stylesheet" href="/assets/css/le-solaire-editorial.css" />
+  <link rel="stylesheet" href="/assets/css/blog.css" />
+  <link rel="stylesheet" href="/assets/css/header-common.css" />
+  <link rel="stylesheet" href="/assets/css/footer-common.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{gold:'#C39847'}}}}</script>
+
+  <style>
+    :root{--bg:#0D0D0D;--gold:#C39847;--narrow:560px;--medium:720px;--wide:960px}
+    body{font-family:'Montserrat',sans-serif;background:var(--bg);color:#fff}
+    .text-gold{color:var(--gold)!important}
+    .sg-art-wrap{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+    .sg-art-main{display:grid;gap:2rem}
+    @media (min-width:1024px){.sg-art-main{grid-template-columns:1fr 240px;align-items:start}.sg-art-sidebar{position:sticky;top:100px}}
+    .sg-art-narrow{max-width:var(--narrow)}
+    .sg-art-medium{max-width:var(--medium)}
+    .sg-art-wide{max-width:var(--wide)}
+    .sg-art-full{max-width:100%}
+    .sg-art-body section{margin-bottom:4rem;transition:background .3s ease}
+    .sg-art-body section+section{margin-top:0}
+    .sg-hero-editorial{position:relative;min-height:280px;display:grid;grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem 2rem;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,#0D0D0D 100%)}
+    @media (min-width:768px){.sg-hero-editorial{grid-template-columns:1.2fr 1fr;align-items:end;min-height:240px;padding:2rem 2rem 2.5rem}}
+    .sg-hero-editorial::before{content:"";position:absolute;inset:0;background:url(/assets/images/blog/blog-rendement-panneaux.webp) center/cover;z-index:-2}
+    .sg-hero-editorial::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.5) 50%,rgba(0,0,0,.85) 100%);z-index:-1}
+    .sg-hero-left,.sg-hero-right{position:relative;z-index:1}
+    .sg-hero-badge{display:inline-block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);padding:4px 10px;margin-bottom:10px;background:rgba(255,255,255,.06)}
+    .sg-hero-bread{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:6px}
+    .sg-hero-bread a{color:rgba(255,255,255,.7);text-decoration:none}
+    .sg-hero-bread a:hover{color:var(--gold)}
+    .sg-hero-title{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;line-height:1.25;color:#fff;margin-bottom:6px}
+    .sg-hero-accroche{font-size:clamp(.85rem,1.1vw,.9rem);color:rgba(255,255,255,.85);line-height:1.5}
+    .sg-hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    @media (min-width:480px){.sg-hero-stats{grid-template-columns:repeat(3,1fr)}}
+    .sg-hero-stat{background:rgba(0,0,0,.2);border-radius:6px;padding:10px 12px;text-align:center}
+    .sg-hero-stat-num{font-size:1.1rem;font-weight:700;color:var(--gold);line-height:1.2}
+    .sg-hero-stat-label{font-size:10px;color:rgba(255,255,255,.6);margin-top:2px;text-transform:uppercase;letter-spacing:.04em}
+    .sg-hero-meta{font-size:11px;color:rgba(255,255,255,.5);margin-top:12px}
+    .sg-sidebar{background:rgba(0,0,0,.15);border-radius:6px;padding:1rem;margin-bottom:1rem}
+    .sg-sidebar-title{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;margin-bottom:10px}
+    .sg-sidebar ol{list-style:none;padding:0;margin:0}
+    .sg-sidebar li{margin-bottom:6px}
+    .sg-sidebar a{font-size:12px;color:rgba(255,255,255,.8);text-decoration:none;transition:color .2s ease}
+    .sg-sidebar a:hover{color:var(--gold)}
+    .sg-maj-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start;padding:1rem 1.25rem;background:rgba(0,0,0,.15);border-radius:10px;margin-bottom:2.5rem}
+    .sg-maj-bar .sg-maj-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;flex-shrink:0}
+    .sg-maj-bar p{margin:0;font-size:12px;color:rgba(255,255,255,.8);line-height:1.5}
+    .sg-art-body h2{font-size:1.4rem;font-weight:700;color:#fff;margin:0 0 1.25rem 0;letter-spacing:-.02em}
+    .sg-art-body p{margin-bottom:1rem;line-height:1.65;color:rgba(255,255,255,.88);font-size:15px}
+    .sg-art-body p.lead{font-size:1rem;font-weight:600;color:rgba(255,255,255,.95)}
+    .sg-punch-full{padding:1.5rem 0;margin:3.5rem 0;font-size:1.05rem;font-weight:600;color:rgba(255,255,255,.95);border-left:3px solid var(--gold);background:transparent;padding-left:1.5rem}
+    .sg-block-h{display:grid;gap:1rem;padding:1.25rem 1.5rem;background:rgba(0,0,0,.08);border-radius:10px;margin:1.25rem 0}
+    @media (min-width:640px){.sg-block-h{grid-template-columns:auto 1fr;align-items:start}}
+    .sg-block-h .sg-block-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:700;min-width:100px}
+    .sg-card{background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.4));border:1px solid rgba(195,152,71,.15);border-radius:10px;padding:1.5rem;backdrop-filter:blur(6px);box-shadow:0 10px 40px rgba(0,0,0,.4)}
+    .sg-card h4{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;margin-bottom:10px}
+    .sg-table{width:100%;border-collapse:collapse;font-size:13px}
+    .sg-table td{padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .sg-cta-bar{display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between;padding:3rem 3.5rem;margin:5rem 0;background:linear-gradient(135deg,rgba(195,152,71,.08) 0%,rgba(0,0,0,.2) 100%);border:1px solid rgba(195,152,71,.4);border-radius:12px;width:100%;max-width:100%}
+    .sg-cta-bar h3{font-size:1.5rem;font-weight:700;color:#fff;margin:0 0 8px 0}
+    .sg-cta-bar p{margin:0;font-size:1rem;color:rgba(255,255,255,.9);line-height:1.5}
+    .sg-cta-bar .btn{flex-shrink:0;display:inline-block;background:var(--gold);color:#0D0D0D;font-weight:700;padding:16px 32px;border-radius:8px;text-decoration:none;transition:all .3s;font-size:16px}
+    .sg-cta-bar .btn:hover{background:#D4A84E;transform:translateY(-2px)}
+    .sg-related{display:grid;grid-template-columns:1fr;gap:.75rem;margin-top:2rem}
+    @media (min-width:640px){.sg-related{grid-template-columns:1fr 1fr}}
+    .sg-related a{display:flex;gap:1rem;align-items:center;padding:1rem 1.25rem;background:rgba(0,0,0,.08);border-radius:10px;text-decoration:none;transition:background .25s ease,transform .2s ease}
+    .sg-related a:hover{background:rgba(0,0,0,.14);transform:translateX(4px)}
+    .sg-related img{width:72px;height:54px;object-fit:cover;border-radius:6px;flex-shrink:0}
+    .sg-related .sg-related-txt{flex:1}
+    .sg-related .sg-related-txt strong{color:rgba(255,255,255,.95);font-size:13px}
+    .sg-related .sg-related-txt span{font-size:12px;color:rgba(255,255,255,.55)}
+    .sg-schema-img{width:100%;max-width:480px;height:auto;border-radius:10px;overflow:hidden;display:block;margin:0 auto}
+    :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2ZQKS6F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="header-placeholder"></div>
+<script src="/assets/js/header.js"></script>
+
+<div class="h-20"></div>
+
+<!-- HERO ÉDITORIAL -->
+<header class="sg-hero-editorial">
+  <div class="sg-hero-left">
+    <span class="sg-hero-badge">Guide expert</span>
+    <p class="sg-hero-bread"><a href="/">Accueil</a> / <a href="/blog/">Blog</a> / Rendement</p>
+    <h1 class="sg-hero-title">Comprendre le rendement réel de vos panneaux</h1>
+    <p class="sg-hero-accroche">Orientation, inclinaison, ombrage, température et qualité du matériel : les facteurs qui influencent réellement la production d'une installation photovoltaïque.</p>
+    <p class="sg-hero-meta">Par SolarGlobe · 8 min</p>
+  </div>
+  <div class="sg-hero-right">
+    <div class="sg-hero-stats">
+      <div class="sg-hero-stat"><div class="sg-hero-stat-num">Sud</div><div class="sg-hero-stat-label">Orientation optimale</div></div>
+      <div class="sg-hero-stat"><div class="sg-hero-stat-num">30–35°</div><div class="sg-hero-stat-label">Inclinaison idéale</div></div>
+      <div class="sg-hero-stat"><div class="sg-hero-stat-num">Micro</div><div class="sg-hero-stat-label">Ombrage</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- LAYOUT PRINCIPAL -->
+<div class="sg-art-wrap">
+  <div class="sg-maj-bar">
+    <span class="sg-maj-label">En bref</span>
+    <p>Le rendement d'un panneau ne se limite pas à un chiffre sur une fiche technique. C'est l'ensemble du projet qui fait la différence : orientation, inclinaison, ombrage, qualité du matériel et précision de l'installation.</p>
+  </div>
+
+  <div class="sg-art-main">
+    <article class="sg-art-body">
+      <!-- INTRO -->
+      <section id="intro" class="sg-art-narrow">
+        <p class="lead">Le rendement d'un panneau solaire est souvent résumé à un simple pourcentage affiché sur une fiche technique. Pourtant, dans la réalité, ce chiffre ne reflète qu'une partie de la performance réelle d'une installation photovoltaïque.</p>
+        <p>Sur le terrain, la production dépend d'un ensemble de paramètres bien plus concrets : l'orientation de la toiture, son inclinaison, les éventuels ombrages, la température des modules ou encore la qualité de l'installation. Deux systèmes identiques sur le papier peuvent ainsi produire des quantités d'énergie très différentes selon leur implantation.</p>
+        <p>Comprendre ces facteurs est essentiel. Non seulement pour maximiser la production, mais aussi pour garantir la rentabilité du projet sur le long terme. Un bon dimensionnement ne repose pas uniquement sur la puissance installée, mais sur la cohérence globale de l'installation.</p>
+        <p>Dans cet article, nous allons décrypter les éléments qui influencent réellement le rendement et voir comment les optimiser de manière concrète.</p>
+      </section>
+
+      <!-- ORIENTATION -->
+      <section id="orientation" class="sg-art-wide">
+        <h2>Orientation</h2>
+        <p>L'orientation est l'un des facteurs les plus déterminants dans la production solaire.</p>
+        <p>En France, une orientation plein sud reste la configuration la plus performante sur l'année. Elle permet de capter un maximum de rayonnement solaire tout au long de la journée, avec un pic de production autour de midi.</p>
+        <p>Cependant, contrairement à une idée reçue, une installation orientée Est ou Ouest peut rester très pertinente. Elle produira légèrement moins sur l'année, mais offrira une répartition plus équilibrée entre le matin et le soir. Cela peut même être plus intéressant dans une logique d'autoconsommation, notamment pour les foyers actifs en début et fin de journée.</p>
+        <p>Une orientation nord, en revanche, reste généralement peu adaptée, sauf cas très spécifiques avec des surfaces importantes ou des contraintes architecturales fortes.</p>
+        <div class="sg-block-h" style="margin-top:1.5rem">
+          <span class="sg-block-label">À retenir</span>
+          <p class="mb-0">Ce n'est pas seulement la quantité d'énergie produite qui compte, mais aussi le moment où elle est produite.</p>
+        </div>
+        <div class="sg-card" style="margin-top:1.5rem;padding:0;overflow:hidden">
+          <img src="/assets/images/blog/schema-orientation.webp" alt="Schéma d'orientation des toitures et impact sur la production" width="1200" height="640" loading="lazy" class="sg-schema-img" />
+        </div>
+      </section>
+
+      <!-- INCLINAISON -->
+      <section id="inclinaison" class="sg-art-wide">
+        <h2>Inclinaison</h2>
+        <p>L'inclinaison des panneaux joue un rôle complémentaire à l'orientation.</p>
+        <p>En France, un angle compris entre 30° et 35° est souvent considéré comme optimal pour maximiser la production annuelle. Cet angle permet de capter efficacement le soleil été comme hiver.</p>
+        <p>Mais dans la réalité, la majorité des installations s'adaptent à la toiture existante. Une pente plus faible ou plus importante n'empêche pas une bonne production, à condition que l'ensemble du projet soit bien conçu.</p>
+        <p>Sur toiture plate, il est possible d'utiliser des structures inclinées pour optimiser l'exposition. Sur toiture très pentue, l'enjeu sera plutôt d'adapter le calepinage et les équipements pour limiter les pertes.</p>
+        <div class="sg-block-h" style="margin-top:1.5rem">
+          <span class="sg-block-label">À retenir</span>
+          <p class="mb-0">L'inclinaison idéale n'est pas une règle fixe, mais un compromis entre performance, contraintes techniques et intégration.</p>
+        </div>
+        <div class="sg-card" style="margin-top:1.5rem">
+          <h4>Repères indicatifs</h4>
+          <table class="sg-table">
+            <thead><tr><td style="color:rgba(255,255,255,.6)">Inclinaison</td><td style="color:rgba(255,255,255,.6)">Contexte</td><td style="color:rgba(255,255,255,.6)">Remarques</td></tr></thead>
+            <tr><td>0–10°</td><td>Toit plat / faible pente</td><td>Supports inclinés utiles pour capter plus</td></tr>
+            <tr><td>~30–35°</td><td>Compromis fréquent</td><td>Bon équilibre production / intégration</td></tr>
+            <tr><td>&gt; 40°</td><td>Toiture très pentue</td><td>Optimiser calepinage et électronique</td></tr>
+          </table>
+        </div>
+      </section>
+
+      <!-- OMBRAGE -->
+      <section id="ombrage" class="sg-art-wide">
+        <h2>Ombrage</h2>
+        <p>L'ombrage est souvent sous-estimé, alors qu'il peut avoir un impact majeur sur la production.</p>
+        <p>Un simple obstacle comme une cheminée, un arbre ou un bâtiment voisin peut réduire significativement le rendement d'une installation, surtout s'il génère de l'ombre de manière répétée dans la journée.</p>
+        <p>Dans un système classique en chaîne, un panneau partiellement ombragé peut impacter toute la production du groupe auquel il est connecté. C'est ce qu'on appelle l'effet de point faible.</p>
+        <p>Heureusement, des solutions existent. Les micro-onduleurs et optimiseurs permettent de gérer chaque panneau indépendamment, limitant ainsi l'impact des zones d'ombre.</p>
+        <p>Mais le levier le plus puissant reste en amont : une bonne étude et un calepinage intelligent permettent d'éviter ou de contourner ces zones dès la conception.</p>
+        <div class="sg-block-h" style="margin-top:1.5rem">
+          <span class="sg-block-label">À retenir</span>
+          <p class="mb-0">En solaire, supprimer une ombre est souvent plus efficace que rajouter des panneaux.</p>
+        </div>
+        <div class="sg-card" style="margin-top:1.5rem;padding:0;overflow:hidden">
+          <img src="/assets/images/blog/schema-ombrage.webp" alt="Illustration d'ombres portées sur une toiture équipée de panneaux" width="1200" height="640" loading="lazy" class="sg-schema-img" />
+        </div>
+      </section>
+
+      <!-- QUALITÉ -->
+      <section id="qualite" class="sg-art-wide">
+        <h2>Qualité du matériel</h2>
+        <p>Tous les panneaux solaires ne se valent pas.</p>
+        <p>Aujourd'hui, la majorité des installations utilisent des modules monocristallins, reconnus pour leur bon niveau de performance. Mais au-delà du rendement annoncé, d'autres critères sont essentiels : la stabilité dans le temps, la qualité de fabrication, et les garanties proposées.</p>
+        <p>L'électronique de puissance joue également un rôle clé. Le choix entre onduleur central, micro-onduleurs ou optimiseurs dépend du projet, de la configuration de la toiture et des éventuels ombrages.</p>
+        <p>Enfin, la qualité de la pose est déterminante. Une installation bien ventilée, correctement fixée et soigneusement câblée aura un impact direct sur les performances et la durabilité.</p>
+        <div class="sg-block-h" style="margin-top:1.5rem">
+          <span class="sg-block-label">À retenir</span>
+          <p class="mb-0">Un bon système solaire est un ensemble cohérent, pas seulement une somme de composants.</p>
+        </div>
+      </section>
+
+      <!-- TEMPÉRATURE -->
+      <section id="temperature" class="sg-art-wide">
+        <h2>Température</h2>
+        <p>Contrairement à ce que l'on pourrait penser, les panneaux solaires n'aiment pas la chaleur excessive.</p>
+        <p>Lorsque la température des modules augmente, leur rendement diminue légèrement. Ce phénomène est normal et intégré dans les caractéristiques techniques des panneaux.</p>
+        <p>En pratique, cela signifie qu'un panneau produit parfois plus efficacement par temps ensoleillé mais frais que lors d'une forte chaleur estivale.</p>
+        <p>La ventilation joue ici un rôle important. Une pose en surimposition, laissant circuler l'air sous les panneaux, permet de limiter la montée en température et de conserver de meilleures performances.</p>
+        <div class="sg-block-h" style="margin-top:1.5rem">
+          <span class="sg-block-label">À retenir</span>
+          <p class="mb-0">Le soleil est indispensable… mais trop de chaleur peut réduire l'efficacité.</p>
+        </div>
+        <div class="sg-card" style="margin-top:1.5rem;padding:0;overflow:hidden">
+          <img src="/assets/images/blog/schema-temperature.webp" alt="Courbe indicative de performance selon la température du module" width="1200" height="640" loading="lazy" class="sg-schema-img" />
+        </div>
+      </section>
+
+      <!-- OPTIMISATION -->
+      <section id="optimiser" class="sg-art-wide">
+        <h2>Comment optimiser votre rendement</h2>
+        <p>Optimiser le rendement d'une installation solaire ne repose pas sur un seul levier, mais sur une approche globale.</p>
+        <p>Tout commence par une étude précise du site : orientation, inclinaison, ombrages, environnement. C'est cette analyse qui permet de définir une implantation réellement performante.</p>
+        <p>Le choix des équipements doit ensuite être cohérent avec la configuration. Dans certains cas, des micro-onduleurs seront indispensables, tandis que dans d'autres, un onduleur central suffira.</p>
+        <p>L'implantation des panneaux, appelée calepinage, est également déterminante. Un bon positionnement permet d'éviter les zones d'ombre et d'optimiser chaque mètre carré disponible.</p>
+        <p>Enfin, le pilotage de la consommation joue un rôle clé. Adapter certains usages (chauffe-eau, électroménager, recharge véhicule) aux périodes de production permet d'augmenter significativement l'autoconsommation.</p>
+        <div class="sg-block-h" style="margin-top:1.5rem">
+          <span class="sg-block-label">À retenir</span>
+          <p class="mb-0">Le rendement réel est toujours le résultat d'un projet bien pensé, pas d'un seul bon choix.</p>
+        </div>
+      </section>
+
+      <!-- CONCLUSION -->
+      <section id="conclusion" class="sg-art-narrow">
+        <p class="sg-punch-full">Le rendement d'un panneau solaire ne se limite pas à un chiffre sur une fiche technique. C'est l'ensemble du projet qui fait la différence : orientation, inclinaison, ombrage, qualité du matériel et précision de l'installation. Deux systèmes identiques peuvent produire très différemment selon leur implantation. C'est pourquoi une étude personnalisée reste essentielle pour garantir un projet réellement performant et rentable. En solaire, la performance ne s'improvise pas. Elle se conçoit.</p>
+      </section>
+
+      <!-- CTA -->
+      <div class="sg-cta-bar" id="cta">
+        <div>
+          <h3>Obtenez votre étude personnalisée gratuite</h3>
+          <p>Simulation précise, calepinage, estimation de production et conseils d'optimisation.</p>
+        </div>
+        <a href="/etude-gratuite/" class="btn">Obtenir mon étude solaire gratuite</a>
+      </div>
+
+      <!-- À LIRE ENSUITE -->
+      <div class="sg-related">
+        <a href="/blog/choisir-puissance-solaire/">
+          <img src="/assets/images/blog/blog-choisir-puissance.webp" alt="" width="80" height="60" loading="lazy" />
+          <div class="sg-related-txt"><strong>6 kWc ou 9 kWc : comment choisir</strong><br><span>Dimensionnement, profils, rentabilité</span></div>
+        </a>
+        <a href="/blog/">
+          <div class="sg-related-txt"><strong>← Retour au blog</strong><br><span>Tous nos articles</span></div>
+        </a>
+      </div>
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="sg-art-sidebar">
+      <div class="sg-sidebar">
+        <div class="sg-sidebar-title">Sommaire</div>
+        <ol>
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#orientation">Orientation</a></li>
+          <li><a href="#inclinaison">Inclinaison</a></li>
+          <li><a href="#ombrage">Ombrage</a></li>
+          <li><a href="#qualite">Qualité du matériel</a></li>
+          <li><a href="#temperature">Température</a></li>
+          <li><a href="#optimiser">Optimiser le rendement</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="/assets/js/footer.js"></script>
+
+<script>
+document.querySelectorAll('.sg-sidebar a').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const href=a.getAttribute('href');
+    if(href&&href.startsWith('#')){
+      e.preventDefault();
+      document.querySelector(href)?.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  });
+});
+window.dataLayer=window.dataLayer||[];
+window.dataLayer.push({event:'blog_article_view',article_slug:'rendement-panneaux'});
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Comprendre le rendement réel de vos panneaux","description":"Orientation, inclinaison, ombrage, température et qualité du matériel : les facteurs qui influencent réellement le rendement photovoltaïque.","image":"https://www.solarglobe.fr/assets/images/blog/blog-rendement-panneaux.webp","datePublished":"2025-08-14","dateModified":"2026-03-17","keywords":["rendement panneaux solaires","orientation","inclinaison","ombrage","photovoltaïque"],"author":{"@type":"Organization","name":"SolarGlobe","url":"https://www.solarglobe.fr/"},"publisher":{"@type":"Organization","name":"SolarGlobe","logo":{"@type":"ImageObject","url":"https://www.solarglobe.fr/assets/images/logo-solarglobe-rect.png"}}}
+</script>
+</body>
+</html>

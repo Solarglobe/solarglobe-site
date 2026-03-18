@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrat d'Apporteur d'Affaires SolarGlobe</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #333;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .doc {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+        }
+        h1 { font-size: 1.2rem; text-align: center; margin: 0 0 15px; }
+        h2 { font-size: 12px; margin: 15px 0 8px; }
+        .section { margin-bottom: 15px; }
+        p, li { margin: 4px 0; }
+        .form-value { display: none; }
+        .form-row { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 8px; }
+        .form-row label { min-width: 80px; }
+        .form-row input { flex: 1; min-width: 120px; padding: 6px 8px; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 15px; }
+        .form-grid .full { grid-column: 1 / -1; }
+        input[type="text"], input[type="email"], input[type="tel"] { padding: 4px 6px; font-size: 12px; }
+        .signature-block { border: 1px solid #ddd; padding: 12px; border-radius: 4px; page-break-inside: avoid; break-inside: avoid; }
+        .signature-section { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .signature-party { border: 1px solid #eee; padding: 10px; border-radius: 4px; }
+        .signature-party h3 { margin: 0 0 10px; font-size: 12px; }
+        .canvas-wrap { border: 2px dashed #ccc; margin-top: 8px; background: #fafafa; touch-action: none; }
+        #signature-pad { display: block; width: 100%; height: 120px; cursor: crosshair; }
+        .no-print { margin-top: 20px; }
+        .btn { padding: 10px 20px; margin-right: 10px; cursor: pointer; border: none; background: #333; color: #fff; }
+        .btn-outline { background: #fff; color: #333; border: 2px solid #333; }
+        @media print {
+            body { margin: 20mm; background: white; padding: 0; }
+            .doc { box-shadow: none; padding: 0; }
+            input { display: none !important; }
+            .form-value { display: inline !important; }
+            .contract-body { page-break-inside: auto; break-inside: auto; }
+            .signature-block { page-break-inside: avoid; break-inside: avoid; }
+            .no-print { display: none !important; }
+        }
+    </style>
+  <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
+  <link rel="stylesheet" href="/assets/css/header-common.css" />
+  <link rel="stylesheet" href="/assets/css/footer-common.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <script src="/assets/js/header.js"></script>
+
+    <div class="doc">
+        <div class="pages">
+        <!-- EXEMPLAIRE 1 -->
+        <div class="page">
+            <h2>EXEMPLAIRE SOLARGLOBE</h2>
+            <h1>CONTRAT D'APPORTEUR D'AFFAIRES</h1>
+
+            <p><strong>SOLARGLOBE</strong><br>SAS — RCS Meaux 988 455 416<br>19 avenue Pierre Curie — 77500 Chelles — France</p>
+            <p><em>Ci-après dénommée SolarGlobe</em></p>
+
+            <h2>IDENTIFICATION APPORTEUR</h2>
+            <div class="form-grid">
+                <div><label>Nom / Société</label><br><input id="nom" type="text" placeholder=""><span id="nom-print" class="form-value"></span></div>
+                <div class="full"><label>Adresse</label><br><input id="adresse" type="text" placeholder=""><span id="adresse-print" class="form-value"></span></div>
+                <div><label>Code postal</label><br><input id="cp" type="text" placeholder=""><span id="cp-print" class="form-value"></span></div>
+                <div><label>Ville</label><br><input id="ville" type="text" placeholder=""><span id="ville-print" class="form-value"></span></div>
+                <div><label>SIRET</label><br><input id="siret" type="text" placeholder=""><span id="siret-print" class="form-value"></span></div>
+                <div><label>Email</label><br><input id="email" type="email" placeholder=""><span id="email-print" class="form-value"></span></div>
+                <div><label>Téléphone</label><br><input id="telephone" type="tel" placeholder=""><span id="telephone-print" class="form-value"></span></div>
+            </div>
+            <p><em>Ci-après dénommé l'Apporteur d'affaires</em></p>
+
+            <div class="contract-body">
+            <h2>CONTRAT</h2>
+            <h3>ARTICLE 1 — OBJET</h3>
+            <p>Le présent contrat définit les conditions dans lesquelles l'Apporteur d'affaires met en relation SolarGlobe avec des particuliers intéressés par une étude photovoltaïque. L'Apporteur agit uniquement comme apporteur de contacts et ne dispose d'aucun pouvoir de représentation ni de signature au nom de SolarGlobe.</p>
+            <h3>ARTICLE 2 — STATUT</h3>
+            <p>L'Apporteur agit en qualité de professionnel indépendant. Ce contrat ne constitue pas un contrat de travail. L'Apporteur organise librement son activité sans lien de subordination.</p>
+            <h3>ARTICLE 3 — MISSION</h3>
+            <p>L'Apporteur identifie et transmet à SolarGlobe des prospects intéressés par une étude photovoltaïque. Ces prospects donnent lieu à des rendez-vous organisés entre SolarGlobe et le particulier.</p>
+            <h3>ARTICLE 4 — DÉFINITION D'UN RENDEZ-VOUS QUALIFIÉ</h3>
+            <p>Un rendez-vous est qualifié si : le prospect est propriétaire du logement ; le logement est une maison individuelle ; la facture d'électricité &gt; 100 €/mois ; tous les décideurs sont présents lors du rendez-vous ; le prospect accepte l'étude photovoltaïque ; le RDV n'est pas annulé moins de 24h avant ; le prospect dispose d'une capacité financière compatible (paiement comptant ou financement). SolarGlobe se réserve le droit de refuser tout rendez-vous ne respectant pas ces critères.</p>
+            <h3>ARTICLE 4.1 — VALIDATION DU RENDEZ-VOUS</h3>
+            <p>Le rendez-vous est valide si : le prospect a expressément accepté la prise de rendez-vous ; le RDV est honoré à l'horaire convenu ; le prospect confirme son intérêt. SolarGlobe peut refuser tout RDV fictif ou erroné. L'Apporteur s'engage à obtenir l'accord explicite du prospect avant transmission de ses coordonnées.</p>
+            <h3>ARTICLE 5 — COMMISSION</h3>
+            <p><strong>150 € HT par rendez-vous qualifié.</strong> La commission n'est due que si le RDV a eu lieu. Aucune commission en cas de RDV fictif, non honoré ou ne respectant pas les critères.</p>
+            <h3>CLAUSE ANTI-ABUS — FRAUDE</h3>
+            <p>En cas de transmission de RDV fictifs ou frauduleux, SolarGlobe peut mettre fin immédiatement au contrat.</p>
+            <h3>CLAUSE ANTI-ABUS — EXCLUSIVITÉ</h3>
+            <p>L'Apporteur s'engage à ne pas transmettre les coordonnées des prospects à d'autres entreprises photovoltaïques.</p>
+            <h3>ARTICLE 6 — FACTURATION</h3>
+            <p>L'Apporteur facture ses commissions à SolarGlobe. Paiement sous 15 jours après réception de la facture.</p>
+            <h3>ARTICLE 7 — RÉGLEMENTATION</h3>
+            <p>L'Apporteur s'engage à respecter la réglementation du démarchage et la protection des données personnelles.</p>
+            <h3>ARTICLE 8 — CONFIDENTIALITÉ</h3>
+            <p>L'Apporteur s'engage à conserver confidentielles toutes les informations relatives à SolarGlobe et ses clients.</p>
+            <h3>ARTICLE 9 — DURÉE</h3>
+            <p>Contrat à durée indéterminée. Résiliable à tout moment par l'une ou l'autre des parties, sans préavis ni indemnité.</p>
+            <h3>ARTICLE 10 — TRIBUNAL</h3>
+            <p>Tout litige sera soumis aux tribunaux du ressort du siège social de SolarGlobe.</p>
+            <p><em>Fait en deux exemplaires originaux, un pour chaque partie.</em></p>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="signature-block">
+                <h2>SIGNATURES</h2>
+                <div class="signature-section">
+                    <div class="signature-party">
+                        <h3>SolarGlobe</h3>
+                        <p>LETREN Benoit<br>Président</p>
+                        <img src="/assets/images/signature.webp" alt="" style="height:70px;">
+                    </div>
+                    <div class="signature-party">
+                        <h3>Apporteur d'affaires</h3>
+                        <p>Lu et approuvé, bon pour accord</p>
+                        <p><label>Nom du signataire :</label> <input id="nom-signataire" type="text" placeholder=""><span id="nom-signataire-print" class="form-value"></span></p>
+                        <p><label>Date :</label> <input id="date-signature" type="text" placeholder="jj/mm/aaaa"><span id="date-signature-print" class="form-value"></span></p>
+                        <p>Signature :</p>
+                        <div class="canvas-wrap"><canvas id="signature-pad" width="350" height="120"></canvas></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXEMPLAIRE 2 -->
+        <div class="page">
+            <h2>EXEMPLAIRE APPORTEUR D'AFFAIRES</h2>
+            <h1>CONTRAT D'APPORTEUR D'AFFAIRES</h1>
+
+            <p><strong>SOLARGLOBE</strong><br>SAS — RCS Meaux 988 455 416<br>19 avenue Pierre Curie — 77500 Chelles — France</p>
+            <p><em>Ci-après dénommée SolarGlobe</em></p>
+
+            <h2>IDENTIFICATION APPORTEUR</h2>
+            <p><strong>Nom / Société :</strong> <span id="nom-print2" class="form-value"></span><br>
+            <strong>Adresse :</strong> <span id="adresse-print2" class="form-value"></span><br>
+            <strong>Code postal :</strong> <span id="cp-print2" class="form-value"></span> <strong>Ville :</strong> <span id="ville-print2" class="form-value"></span><br>
+            <strong>SIRET :</strong> <span id="siret-print2" class="form-value"></span> — <strong>Email :</strong> <span id="email-print2" class="form-value"></span> — <strong>Tél :</strong> <span id="telephone-print2" class="form-value"></span></p>
+            <p><em>Ci-après dénommé l'Apporteur d'affaires</em></p>
+
+            <div class="contract-body">
+            <h2>CONTRAT</h2>
+            <h3>ARTICLE 1 — OBJET</h3>
+            <p>Le présent contrat définit les conditions dans lesquelles l'Apporteur d'affaires met en relation SolarGlobe avec des particuliers intéressés par une étude photovoltaïque. L'Apporteur agit uniquement comme apporteur de contacts et ne dispose d'aucun pouvoir de représentation ni de signature au nom de SolarGlobe.</p>
+            <h3>ARTICLE 2 — STATUT</h3>
+            <p>L'Apporteur agit en qualité de professionnel indépendant. Ce contrat ne constitue pas un contrat de travail. L'Apporteur organise librement son activité sans lien de subordination.</p>
+            <h3>ARTICLE 3 — MISSION</h3>
+            <p>L'Apporteur identifie et transmet à SolarGlobe des prospects intéressés par une étude photovoltaïque. Ces prospects donnent lieu à des rendez-vous organisés entre SolarGlobe et le particulier.</p>
+            <h3>ARTICLE 4 — DÉFINITION D'UN RENDEZ-VOUS QUALIFIÉ</h3>
+            <p>Un rendez-vous est qualifié si : le prospect est propriétaire du logement ; le logement est une maison individuelle ; la facture d'électricité &gt; 100 €/mois ; tous les décideurs sont présents lors du rendez-vous ; le prospect accepte l'étude photovoltaïque ; le RDV n'est pas annulé moins de 24h avant ; le prospect dispose d'une capacité financière compatible (paiement comptant ou financement). SolarGlobe se réserve le droit de refuser tout rendez-vous ne respectant pas ces critères.</p>
+            <h3>ARTICLE 4.1 — VALIDATION DU RENDEZ-VOUS</h3>
+            <p>Le rendez-vous est valide si : le prospect a expressément accepté la prise de rendez-vous ; le RDV est honoré à l'horaire convenu ; le prospect confirme son intérêt. SolarGlobe peut refuser tout RDV fictif ou erroné. L'Apporteur s'engage à obtenir l'accord explicite du prospect avant transmission de ses coordonnées.</p>
+            <h3>ARTICLE 5 — COMMISSION</h3>
+            <p><strong>150 € HT par rendez-vous qualifié.</strong> La commission n'est due que si le RDV a eu lieu. Aucune commission en cas de RDV fictif, non honoré ou ne respectant pas les critères.</p>
+            <h3>CLAUSE ANTI-ABUS — FRAUDE</h3>
+            <p>En cas de transmission de RDV fictifs ou frauduleux, SolarGlobe peut mettre fin immédiatement au contrat.</p>
+            <h3>CLAUSE ANTI-ABUS — EXCLUSIVITÉ</h3>
+            <p>L'Apporteur s'engage à ne pas transmettre les coordonnées des prospects à d'autres entreprises photovoltaïques.</p>
+            <h3>ARTICLE 6 — FACTURATION</h3>
+            <p>L'Apporteur facture ses commissions à SolarGlobe. Paiement sous 15 jours après réception de la facture.</p>
+            <h3>ARTICLE 7 — RÉGLEMENTATION</h3>
+            <p>L'Apporteur s'engage à respecter la réglementation du démarchage et la protection des données personnelles.</p>
+            <h3>ARTICLE 8 — CONFIDENTIALITÉ</h3>
+            <p>L'Apporteur s'engage à conserver confidentielles toutes les informations relatives à SolarGlobe et ses clients.</p>
+            <h3>ARTICLE 9 — DURÉE</h3>
+            <p>Contrat à durée indéterminée. Résiliable à tout moment par l'une ou l'autre des parties, sans préavis ni indemnité.</p>
+            <h3>ARTICLE 10 — TRIBUNAL</h3>
+            <p>Tout litige sera soumis aux tribunaux du ressort du siège social de SolarGlobe.</p>
+            <p><em>Fait en deux exemplaires originaux, un pour chaque partie.</em></p>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="signature-block">
+                <h2>SIGNATURES</h2>
+                <div class="signature-section">
+                    <div class="signature-party">
+                        <h3>SolarGlobe</h3>
+                        <p>LETREN Benoit<br>Président</p>
+                        <img src="/assets/images/signature.webp" alt="" style="height:70px;">
+                    </div>
+                    <div class="signature-party">
+                        <h3>Apporteur d'affaires</h3>
+                        <p>Lu et approuvé, bon pour accord</p>
+                        <p><strong>Nom :</strong> <span id="nom-signataire-print2" class="form-value"></span></p>
+                        <p><strong>Date :</strong> <span id="date-signature-print2" class="form-value"></span></p>
+                        <p>Signature :</p>
+                        <img id="signature-print" src="" alt="" style="max-height:80px; display:none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="no-print">
+            <button class="btn btn-outline" onclick="clearSignature()">Effacer signature</button>
+            <button class="btn" onclick="exportPDF()">Exporter PDF</button>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('signature-pad');
+        const ctx = canvas.getContext('2d');
+        let drawing = false, lastX = 0, lastY = 0;
+
+        function pos(e) {
+            const r = canvas.getBoundingClientRect();
+            const s = canvas.width / r.width;
+            const t = canvas.height / r.height;
+            const ev = e.touches ? e.touches[0] : e;
+            return { x: (ev.clientX - r.left) * s, y: (ev.clientY - r.top) * t };
+        }
+        canvas.onmousedown = canvas.ontouchstart = function(e) { e.preventDefault(); drawing = true; const p = pos(e); lastX = p.x; lastY = p.y; };
+        canvas.onmousemove = canvas.ontouchmove = function(e) {
+            e.preventDefault();
+            if (!drawing) return;
+            const p = pos(e);
+            ctx.strokeStyle = '#000'; ctx.lineWidth = 2; ctx.lineCap = 'round';
+            ctx.beginPath(); ctx.moveTo(lastX, lastY); ctx.lineTo(p.x, p.y); ctx.stroke();
+            lastX = p.x; lastY = p.y;
+        };
+        canvas.onmouseup = canvas.onmouseleave = canvas.ontouchend = function(e) { e.preventDefault(); drawing = false; };
+
+        function syncToPrint() {
+            const ids = ['nom','adresse','cp','ville','siret','email','telephone','nom-signataire','date-signature'];
+            ids.forEach(function(id) {
+                const el = document.getElementById(id);
+                const p1 = document.getElementById(id + '-print');
+                const p2 = document.getElementById(id + '-print2');
+                if (el) {
+                    const v = el.value || '';
+                    if (p1) p1.textContent = v;
+                    if (p2) p2.textContent = v;
+                }
+            });
+            const img = document.getElementById('signature-print');
+            if (img && canvas.width) {
+                const d = ctx.getImageData(0,0,canvas.width,canvas.height).data;
+                const has = [].some.call(d, (v,i) => i%4===3 && v>0);
+                img.src = has ? canvas.toDataURL('image/png') : '';
+                img.style.display = has ? 'block' : 'none';
+            }
+        }
+
+        function clearSignature() {
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            syncToPrint();
+        }
+
+        function exportPDF() {
+            syncToPrint();
+            window.print();
+        }
+
+        ['nom','adresse','cp','ville','siret','email','telephone','nom-signataire','date-signature'].forEach(function(id) {
+            const el = document.getElementById(id);
+            if (el) el.oninput = syncToPrint;
+        });
+        canvas.onmouseup = canvas.onmouseleave = canvas.ontouchend = function(e) { if (e) e.preventDefault(); drawing = false; syncToPrint(); };
+        window.onbeforeprint = syncToPrint;
+    </script>
+
+<div id="footer-placeholder"></div>
+<script src="/assets/js/footer.js"></script>
+
+</body>
+</html>

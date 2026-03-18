@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N2ZQKS6F');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Étude solaire gratuite | Dimensionnement et rentabilité photovoltaïque</title>
+  <meta name="description" content="Demandez votre étude solaire gratuite : analyse de votre toiture, dimensionnement photovoltaïque et estimation de rentabilité pour votre maison." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.solarglobe.fr/etude-gratuite/" />
+  <meta property="og:title" content="Étude solaire gratuite | SolarGlobe" />
+  <meta property="og:description" content="Demandez votre étude solaire gratuite : analyse de votre toiture, dimensionnement photovoltaïque et estimation de rentabilité." />
+  <meta property="og:image" content="https://www.solarglobe.fr/assets/images/og-image.jpg" />
+  <meta property="og:url" content="https://www.solarglobe.fr/etude-gratuite/" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
+  <link rel="stylesheet" href="/assets/css/le-solaire-editorial.css" />
+  <link rel="stylesheet" href="/assets/css/header-common.css" />
+  <link rel="stylesheet" href="/assets/css/footer-common.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{gold:'#C39847'},fontFamily:{montserrat:['Montserrat','sans-serif']}}}}</script>
+  <link rel="stylesheet" href="/assets/css/etude-gratuite-simulateur.css" />
+  <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}
+  .sg-hero-premium.sg-hero-solaire{padding-top:96px}
+  @media (min-width:768px){.sg-hero-premium.sg-hero-solaire{padding-top:120px}}
+  </style>
+</head>
+<body class="bg-black text-white sg-editorial">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2ZQKS6F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="header-placeholder"></div>
+<script src="/assets/js/header.js"></script>
+
+<section class="sg-hero-premium sg-hero-solaire">
+  <div class="sg-hero-bg" aria-hidden="true"></div>
+  <div class="sg-hero-content">
+    <div class="sg-hero-inner ps-reveal ps-reveal-title">
+      <p class="sg-hero-breadcrumb"><a href="/">Accueil</a> <span aria-hidden="true">/</span> Étude gratuite</p>
+      <span class="sg-hero-kicker">Bureau d'étude photovoltaïque</span>
+      <h1 class="sg-hero-title">Étude <span class="text-gold">solaire</span> gratuite</h1>
+      <p class="sg-hero-subtitle">Obtenez une estimation fiable de votre installation photovoltaïque, adaptée à votre maison, votre toiture et votre consommation réelle.</p>
+      <div class="sg-hero-badges">
+        <span>Étude personnalisée</span><span class="sg-badge-sep">•</span><span>Production estimée</span><span class="sg-badge-sep">•</span><span>Rentabilité</span><span class="sg-badge-sep">•</span><span>Autoconsommation</span><span class="sg-badge-sep">•</span><span>Batteries</span><span class="sg-badge-sep">•</span><span>Installation</span>
+      </div>
+      <div class="sg-hero-cta">
+        <a href="#etude-app" class="sg-btn sg-btn-primary">Obtenir mon étude solaire gratuite</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<section id="etude-app" class="sg-section sg-section-dark">
+  <div class="sg-container">
+
+    <div class="etude-sim">
+
+      <div class="etude-sim__intro">
+        <h2 class="sg-section-title text-gold">
+          Lancez votre étude en quelques étapes
+        </h2>
+        <p>
+          Renseignez les informations essentielles sur votre maison.
+          Nous préparons une étude solaire personnalisée fiable et réaliste.
+          Découvrez le <a href="/le-solaire/" class="text-gold hover:underline">fonctionnement du solaire</a> et notre <a href="/notre-methode/" class="text-gold hover:underline">méthode d'accompagnement</a>.
+        </p>
+      </div>
+
+      <div class="simulator-card">
+        <div class="simulator-top">
+          <div class="simulator-media"></div>
+          <div class="simulator-step">
+            <div id="sim-progress"></div>
+            <div id="sim-step"></div>
+            <div id="sim-nav" class="etude-sim__nav"></div>
+          </div>
+        </div>
+        <div class="simulator-bottom" id="simulator-bottom" hidden aria-hidden="true"></div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="/assets/js/footer.js"></script>
+<script src="/assets/js/etude-gratuite-simulateur.js"></script>
+
+<script>
+(function() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const els = document.querySelectorAll('.ps-reveal');
+  if (!els.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('ps-visible');
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  els.forEach(el => io.observe(el));
+})();
+</script>
+
+</body>
+</html>

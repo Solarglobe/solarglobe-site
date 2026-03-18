@@ -1,0 +1,7 @@
+Images à ajouter pour la page batterie-solaire :
+
+- schema-stockage.jpg : Schéma expliquant production → stockage → restitution
+- batterie-physique.jpg : Photo ou illustration d'une batterie physique (optionnel)
+- batterie-virtuelle.jpg : Illustration ou schéma batterie virtuelle (optionnel)
+
+Placez ces fichiers dans ce dossier : /assets/images/solaire/

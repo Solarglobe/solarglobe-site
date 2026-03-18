@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Implantation des panneaux solaires (calpinage) | Solarglobe</title>
+  <meta name="description" content="Découvrez comment SolarGlobe positionne précisément chaque panneau sur votre toiture pour optimiser la production solaire. Calpinage personnalisé, respect des contraintes techniques." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.solarglobe.fr/notre-methode/calpinage/" />
+  <meta property="og:title" content="Implantation des panneaux solaires (calpinage) | Solarglobe" />
+  <meta property="og:description" content="Découvrez comment SolarGlobe positionne précisément chaque panneau sur votre toiture pour optimiser la production solaire. Calpinage personnalisé, respect des contraintes techniques." />
+  <meta property="og:image" content="https://www.solarglobe.fr/assets/images/og-image.jpg" />
+  <meta property="og:url" content="https://www.solarglobe.fr/notre-methode/calpinage/" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
+  <link rel="stylesheet" href="/assets/css/header-common.css" />
+  <link rel="stylesheet" href="/assets/css/footer-common.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{gold:'#C39847',noir:'#0D0D0D'},fontFamily:{montserrat:['Montserrat','sans-serif']}}}}</script>
+  <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}</style>
+  <style>
+  .sg-reveal,.ps-reveal{opacity:0;transform:translateY(50px);filter:blur(6px);transition:opacity 1.3s cubic-bezier(0.22,1,0.36,1),transform 1.3s cubic-bezier(0.22,1,0.36,1),filter 1.3s cubic-bezier(0.22,1,0.36,1);will-change:transform,opacity}
+  .sg-reveal.visible,.ps-reveal.ps-visible{opacity:1;transform:translateY(0);filter:blur(0)}
+  .sg-reveal-slow,.ps-reveal-title{transition:opacity 1.6s cubic-bezier(0.22,1,0.36,1),transform 1.6s cubic-bezier(0.22,1,0.36,1),filter 1.6s cubic-bezier(0.22,1,0.36,1)}
+  .ps-reveal-title.ps-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
+  @media (prefers-reduced-motion:reduce){.sg-reveal,.ps-reveal{opacity:1;transform:none;filter:none}}
+  .hero-method{margin-top:0;min-height:55vh;display:flex;align-items:center;justify-content:center;padding:3rem 1.5rem}
+  .hero-method::before{content:"";position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(195,152,71,0.18) 0%,transparent 70%);filter:blur(80px);pointer-events:none}
+  .sg-flow-calpinage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px 8px;padding:2rem 0}
+  .sg-flow-calpinage>div{padding:14px 24px;border-radius:12px;background:rgba(0,0,0,0.65);backdrop-filter:blur(10px);border:1px solid rgba(195,152,71,0.35);font-weight:600;font-size:15px;color:#fff;opacity:0;transform:translateY(20px);transition:opacity 1s,transform 1s}
+  .sg-flow-calpinage>div.ps-visible,.sg-flow-calpinage>div.visible{opacity:1;transform:translateY(0)}
+  .sg-flow-arrow.ps-visible,.sg-flow-arrow.visible{opacity:1}
+  .sg-flow-calpinage>div:nth-child(1){transition-delay:0.1s}.sg-flow-calpinage>div:nth-child(3){transition-delay:0.25s}.sg-flow-calpinage>div:nth-child(5){transition-delay:0.4s}.sg-flow-calpinage>div:nth-child(7){transition-delay:0.55s}.sg-flow-calpinage>div:nth-child(9){transition-delay:0.75s}
+  .sg-flow-calpinage .sg-flow-arrow:nth-child(2){transition-delay:0.18s}.sg-flow-calpinage .sg-flow-arrow:nth-child(4){transition-delay:0.33s}.sg-flow-calpinage .sg-flow-arrow:nth-child(6){transition-delay:0.48s}.sg-flow-calpinage .sg-flow-arrow:nth-child(8){transition-delay:0.63s}
+  .sg-flow-calpinage>div.highlight{background:rgba(195,152,71,0.2);border-color:#C39847;color:#C39847;box-shadow:0 0 24px rgba(195,152,71,0.25)}
+  .sg-flow-arrow{color:rgba(195,152,71,0.7);font-size:20px;opacity:0;transition:opacity 0.8s ease}
+  .sg-flow-arrow.ps-visible{opacity:1}
+  .sg-compare-calpinage{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:900px;margin:0 auto}
+  .sg-compare-bad{background:rgba(80,40,40,0.4);backdrop-filter:blur(10px);border:1px solid rgba(220,80,80,0.5);border-radius:16px;padding:1.5rem}
+  .sg-compare-bad h3{color:#e07a7a}
+  .sg-compare-good{background:rgba(40,60,40,0.4);backdrop-filter:blur(10px);border:1px solid rgba(195,152,71,0.5);border-radius:16px;padding:1.5rem}
+  .sg-card-calpinage{background:rgba(0,0,0,0.6);backdrop-filter:blur(12px);border:1px solid rgba(195,152,71,0.4);transition:transform 0.8s,box-shadow 0.6s,border-color 0.5s}
+  .sg-card-calpinage:hover{transform:scale(1.02);box-shadow:0 0 48px rgba(195,152,71,0.2);border-color:rgba(195,152,71,0.7)!important}
+  .sg-calpinage-zoom{transition:transform 0.6s cubic-bezier(0.22,1,0.36,1)}
+  .sg-calpinage-zoom:hover{transform:scale(1.03)}
+  .sg-cta-mid{text-align:center;padding:4rem 1.5rem;background:linear-gradient(180deg,rgba(10,10,10,0.98),rgba(0,0,0,0.95));border-top:1px solid rgba(195,152,71,0.2);border-bottom:1px solid rgba(195,152,71,0.2)}
+  .sg-cta-mid h2{font-size:1.75rem;font-weight:700;color:#fff;margin-bottom:1.5rem}
+  .sg-cta-mid .btn-gold{display:inline-block;background:#C39847;color:#000;font-weight:700;padding:1rem 2rem;border-radius:16px;text-decoration:none;transition:transform 0.3s,box-shadow 0.3s}
+  .sg-cta-mid .btn-gold:hover{transform:scale(1.05);box-shadow:0 0 32px rgba(195,152,71,0.4)}
+  @media(max-width:768px){.sg-flow-calpinage{flex-direction:column}.sg-flow-arrow{transform:rotate(90deg)}.sg-compare-calpinage{grid-template-columns:1fr}}
+  </style>
+</head>
+<body class="bg-noir text-white">
+
+<div id="header-placeholder"></div>
+<script src="/assets/js/header.js"></script>
+
+<main>
+
+<!-- HERO -->
+<section class="hero-method relative bg-black overflow-hidden">
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+    <p class="sg-reveal text-gold uppercase tracking-widest text-sm mb-4">&#201;TAPE 3 &mdash; NOTRE M&eacute;THODE</p>
+    <h1 class="sg-reveal text-4xl md:text-5xl font-bold text-white mb-6">
+      L&rsquo;implantation d&eacute;termine la performance r&eacute;elle
+    </h1>
+    <p class="sg-reveal text-lg text-gray-300 mb-4">
+      Ce n&rsquo;est pas juste poser des panneaux.
+    </p>
+    <p class="sg-reveal text-gold font-semibold mb-6">
+      Chaque panneau compte.
+    </p>
+    <div class="sg-reveal flex flex-col md:flex-row justify-center gap-4 text-sm text-gray-300 mb-8">
+      <span>&#10003; Orientation optimis&eacute;e</span>
+      <span>&#10003; Production maximis&eacute;e</span>
+      <span>&#10003; Esth&eacute;tique ma&icirc;tris&eacute;e</span>
+    </div>
+    <a href="/etude-gratuite/" class="sg-reveal inline-block border-2 border-gold text-gold px-8 py-4 rounded-xl hover:bg-gold hover:text-black transition font-semibold">
+      Obtenir mon étude solaire gratuite
+    </a>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- BLOC SIGNATURE — CHAQUE PANNEAU COMPTE -->
+<section class="relative bg-[#0a0a0a] py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white mb-4">
+      Chaque panneau compte
+    </h2>
+    <p class="sg-reveal text-neutral-300 max-w-2xl mx-auto mb-12 text-lg">
+      Un mauvais positionnement peut r&eacute;duire fortement votre production.
+    </p>
+    <div class="sg-flow-calpinage">
+      <div class="sg-reveal">Toiture</div>
+      <span class="sg-flow-arrow sg-reveal" aria-hidden="true">&#8594;</span>
+      <div class="sg-reveal">Obstacles</div>
+      <span class="sg-flow-arrow sg-reveal" aria-hidden="true">&#8594;</span>
+      <div class="sg-reveal">Orientation</div>
+      <span class="sg-flow-arrow sg-reveal" aria-hidden="true">&#8594;</span>
+      <div class="sg-reveal">Placement pr&eacute;cis</div>
+      <span class="sg-flow-arrow sg-reveal" aria-hidden="true">&#8594;</span>
+      <div class="sg-reveal highlight">Production optimis&eacute;e</div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- SECTION — QU'EST-CE QUE LE CALPINAGE ? -->
+<section class="relative bg-[#0a0a0a] py-20 md:py-28 ">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white text-center mb-16">
+      Qu&rsquo;est-ce que le calpinage solaire&nbsp;?
+    </h2>
+    <div class="sg-reveal max-w-3xl mx-auto space-y-6 text-center">
+      <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+        Le calpinage consiste &agrave; d&eacute;finir la <strong class="text-gold">position pr&eacute;cise</strong> de chaque panneau
+        sur votre toit. C&rsquo;est une &eacute;tape technique essentielle qui d&eacute;termine&nbsp;:
+      </p>
+      <ul class="text-neutral-200 leading-relaxed text-base md:text-lg space-y-3 text-left max-w-xl mx-auto">
+        <li class="flex items-start gap-3">
+          <span class="text-gold font-bold shrink-0">•</span>
+          <span>L&rsquo;<strong>orientation</strong> des panneaux (vers le sud, le sud-ouest ou le sud-est)</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-gold font-bold shrink-0">•</span>
+          <span>L&rsquo;<strong>espacement</strong> entre les modules pour &eacute;viter les ombrages</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-gold font-bold shrink-0">•</span>
+          <span>L&rsquo;<strong>organisation</strong> des panneaux sur la surface disponible</span>
+        </li>
+      </ul>
+      <p class="text-neutral-200 leading-relaxed text-base md:text-lg pt-4">
+        Un bon calpinage est crucial pour la production&nbsp;: il permet d&rsquo;exploiter au maximum
+        le potentiel de votre toiture tout en &eacute;vitant les zones d&rsquo;ombre ou les contraintes
+        techniques qui r&eacute;duiraient le rendement. Il s&rsquo;appuie sur le <a href="/notre-methode/dimensionnement/" class="text-gold hover:underline">dimensionnement</a> et pr&eacute;c&egrave;de l&rsquo;<a href="/notre-methode/etude-financiere/" class="text-gold hover:underline">&eacute;tude financi&egrave;re</a>.
+      </p>
+    </div>
+    <!-- BLOC COMPARAISON — MAUVAIS VS BON CALPINAGE -->
+    <div class="sg-reveal sg-compare-calpinage mt-16">
+      <div class="sg-compare-bad">
+        <h3 class="text-lg font-bold mb-4">&#10007; Mauvais calpinage</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li>&bull; Panneaux mal plac&eacute;s</li>
+          <li>&bull; Zones d&rsquo;ombre</li>
+          <li>&bull; Pertes</li>
+        </ul>
+      </div>
+      <div class="sg-compare-good">
+        <h3 class="text-lg font-bold text-gold mb-4">&#10003; Bon calpinage</h3>
+        <ul class="space-y-2 text-neutral-200 text-sm">
+          <li>&bull; Alignement optimal</li>
+          <li>&bull; Z&eacute;ro ombre critique</li>
+          <li>&bull; Production max</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- SECTION — EXEMPLE DE CALPINAGE -->
+<section class="relative bg-black py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white text-center mb-6">
+      Exemple de calpinage r&eacute;alis&eacute; par SolarGlobe
+    </h2>
+    <p class="sg-reveal text-neutral-300 text-center max-w-2xl mx-auto mb-12 text-lg">
+      Ce plan n&rsquo;est pas un simple sch&eacute;ma.<br>
+      C&rsquo;est exactement ce qui sera pos&eacute; sur votre toiture.
+    </p>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="sg-reveal sg-calpinage-zoom rounded-2xl overflow-hidden border border-gold/30 shadow-[0_0_32px_rgba(195,152,71,0.12)] hover:shadow-[0_0_48px_rgba(195,152,71,0.2)] transition-shadow duration-500">
+        <img src="/assets/images/etude/calpinage-exemple-solarglobe.webp" alt="Exemple de calpinage SolarGlobe sur une toiture" class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="sg-reveal space-y-6">
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          Chaque toiture poss&egrave;de ses contraintes&nbsp;: chemin&eacute;es, fen&ecirc;tres de toit,
+          orientation, zones d&rsquo;ombre ou surface disponible.
+        </p>
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          Le calpinage permet d&rsquo;implanter les panneaux de mani&egrave;re optimale tout en respectant
+          ces contraintes techniques. Chaque projet est unique et n&eacute;cessite une analyse
+          personnalis&eacute;e de votre b&acirc;timent.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- SECTION — POURQUOI LA PLUPART DES INSTALLATIONS SONT MAL IMPLANTÉES -->
+<section class="relative bg-[#0a0a0a] py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white text-center mb-12">
+      Pourquoi la plupart des installations sont mal implant&eacute;es
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="sg-reveal sg-card-calpinage rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-gold mb-3">Placement rapide</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Sans vraie optimisation.</p>
+      </div>
+      <div class="sg-reveal sg-card-calpinage rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-gold mb-3">Pas d&rsquo;analyse d&rsquo;ombre</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Impact direct sur la production.</p>
+      </div>
+      <div class="sg-reveal sg-card-calpinage rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-gold mb-3">Logique standardis&eacute;e</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Pas adapt&eacute;e &agrave; votre maison.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- SECTION — CE QUE NOUS ANALYSONS -->
+<section class="relative bg-black py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white text-center mb-6">
+      Ce que nous analysons pour votre calpinage
+    </h2>
+    <p class="sg-reveal text-gold font-semibold text-center max-w-2xl mx-auto mb-12">
+      Chaque param&egrave;tre est analys&eacute; pour &eacute;viter toute perte invisible.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="sg-reveal sg-card-calpinage rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-gold mb-3">Orientation de la toiture</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Sud, sud-ouest ou sud-est&nbsp;: nous identifions la meilleure exposition pour maximiser la production.</p>
+      </div>
+      <div class="sg-reveal sg-card-calpinage rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-gold mb-3">Inclinaison du toit</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">L&rsquo;angle de votre toit influence le rendement. Nous adaptons l&rsquo;implantation en cons&eacute;quence.</p>
+      </div>
+      <div class="sg-reveal sg-card-calpinage rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-gold mb-3">Zones d&rsquo;ombrage</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Arbres, chemin&eacute;es, lucarnes&nbsp;: nous &eacute;vitons les zones qui r&eacute;duiraient la production.</p>
+      </div>
+      <div class="sg-reveal sg-card-calpinage rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-gold mb-3">Surface exploitable</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Nous calculons la surface r&eacute;ellement disponible pour placer les panneaux de fa&ccedil;on optimale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- SECTION — OPTIMISER LA PRODUCTION -->
+<section class="relative bg-[#0a0a0a] py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white text-center mb-6">
+      Optimiser la production solaire
+    </h2>
+    <p class="sg-reveal text-gold font-semibold text-center max-w-2xl mx-auto mb-12 text-lg">
+      Deux installations identiques peuvent produire jusqu&rsquo;&agrave; 20&nbsp;% d&rsquo;&eacute;cart
+      uniquement &agrave; cause du positionnement.
+    </p>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="sg-reveal space-y-6">
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          L&rsquo;orientation <strong class="text-gold">sud</strong> est id&eacute;ale, mais les toitures orient&eacute;es
+          <strong class="text-gold">sud-est</strong> ou <strong class="text-gold">sud-ouest</strong> restent tr&egrave;s performantes.
+          Nous adaptons l&rsquo;implantation &agrave; votre configuration r&eacute;elle.
+        </p>
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          L&rsquo;<strong class="text-gold">inclinaison</strong> du toit joue aussi un r&ocirc;le important. Un calpinage
+          bien pens&eacute; permet de tirer le meilleur parti de chaque panneau et d&rsquo;obtenir
+          un <strong class="text-gold">rendement global</strong> optimal pour votre installation.
+          <a href="/etude-gratuite/" class="text-gold hover:underline">Obtenir mon &eacute;tude solaire gratuite</a> pour un calpinage personnalis&eacute;.
+        </p>
+      </div>
+      <div class="sg-reveal rounded-2xl overflow-hidden border border-gold/30 shadow-[0_0_32px_rgba(195,152,71,0.12)]">
+        <img src="/assets/images/etude/optimisation-production-solaire-solarglobe.webp" alt="Calpinage optimis&eacute; pour maximiser la production solaire" class="w-full h-full object-cover" loading="lazy">
+        <p class="p-4 text-center text-neutral-400 text-sm bg-[#0f0f0f]">Exemple d&rsquo;orientation </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- SECTION — SIMULATION SOLARNEXT -->
+<section class="relative bg-black py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white mb-6">
+      Simulation r&eacute;elle avant installation
+    </h2>
+    <p class="sg-reveal text-neutral-300 max-w-2xl mx-auto mb-6 text-lg">
+      Nous simulons pr&eacute;cis&eacute;ment l&rsquo;implantation pour anticiper la production r&eacute;elle.
+    </p>
+    <p class="sg-reveal text-neutral-300 max-w-xl mx-auto">
+      Gr&acirc;ce &agrave; notre technologie SolarNext, chaque panneau est test&eacute; virtuellement
+      avant validation finale.
+    </p>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- CTA INTERMÉDIAIRE -->
+<section class="sg-cta-mid">
+  <h2 class="sg-reveal">Votre toiture est-elle optimisable&nbsp;?</h2>
+  <a href="/etude-gratuite/" class="sg-reveal btn-gold">Obtenir mon &eacute;tude solaire gratuite</a>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- SECTION — POURQUOI CETTE ÉTAPE EST IMPORTANTE -->
+<section class="relative bg-[#0a0a0a] py-20 md:py-28 ">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white text-center mb-16">
+      Pourquoi cette &eacute;tape est importante
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="sg-reveal sg-card-calpinage rounded-2xl p-8 text-center">
+        <div class="text-gold text-xl font-bold mb-4">Production maximale</div>
+        <p class="text-neutral-300 leading-relaxed">Un calpinage pr&eacute;cis &eacute;vite les ombrages et optimise chaque m&sup2; de toiture. Vous produisez plus d&rsquo;&eacute;lectricit&eacute; sur la m&ecirc;me surface.</p>
+      </div>
+      <div class="sg-reveal sg-card-calpinage rounded-2xl p-8 text-center">
+        <div class="text-gold text-xl font-bold mb-4">Installation coh&eacute;rente</div>
+        <p class="text-neutral-300 leading-relaxed">L&rsquo;installateur dispose d&rsquo;un plan clair et pr&eacute;cis. L&rsquo;installation se d&eacute;roule sans surprise et respecte le projet valid&eacute;.</p>
+      </div>
+      <div class="sg-reveal sg-card-calpinage rounded-2xl p-8 text-center">
+        <div class="text-gold text-xl font-bold mb-4">Esth&eacute;tique de la toiture</div>
+        <p class="text-neutral-300 leading-relaxed">Les panneaux sont dispos&eacute;s de mani&egrave;re harmonieuse. Votre toiture reste &eacute;l&eacute;gante et professionnelle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- BLOC IMPACT — AVANT CTA FINAL -->
+<section class="relative bg-[#0a0a0a] py-16 md:py-20">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <p class="sg-reveal text-neutral-200 text-lg md:text-xl leading-relaxed">
+      Une bonne installation ne se joue pas au nombre de panneaux.<br>
+      <span class="text-gold font-semibold">Elle se joue &agrave; leur position.</span>
+    </p>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- SECTION — TRANSITION ÉTAPE SUIVANTE -->
+<section class="relative bg-black py-24 md:py-32">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="sg-reveal text-3xl md:text-4xl font-bold text-white mb-6">Une fois l&rsquo;implantation valid&eacute;e</h2>
+    <p class="sg-reveal text-gray-300 text-base md:text-lg mb-8">
+      Une fois le calpinage valid&eacute;, nous pouvons lancer les d&eacute;marches administratives
+      et pr&eacute;parer l&rsquo;installation.
+    </p>
+    <a href="/notre-methode/demarches-administratives/" class="sg-reveal inline-block bg-gold text-black font-bold py-4 px-10 rounded-2xl shadow-xl hover:scale-105 transition text-lg">
+      D&eacute;couvrir les d&eacute;marches administratives
+    </a>
+    <p class="sg-reveal text-xs text-neutral-400 mt-8">SolarGlobe prend en charge l&rsquo;ensemble des formalit&eacute;s</p>
+  </div>
+</section>
+
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="/assets/js/footer.js"></script>
+
+<script>
+(function(){
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(prefersReduced){
+    document.querySelectorAll('.sg-reveal, .ps-reveal').forEach(el=>{el.classList.add('visible');el.classList.add('ps-visible')});
+    return;
+  }
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      entry.target.classList.add('ps-visible');
+      observer.unobserve(entry.target);
+    });
+  },{threshold:0.15,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.sg-reveal, .ps-reveal').forEach(el=>observer.observe(el));
+})();
+</script>
+
+</body>
+</html>

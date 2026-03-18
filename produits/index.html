@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<script>if(/\/produits\.html$/.test(window.location.pathname))window.location.replace('/produits/');</script>
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N2ZQKS6F');
+</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nos Produits – Solarglobe | Panneaux solaires premium</title>
+<meta name="description" content="Découvrez la gamme de produits Solarglobe : panneaux solaires premium, batteries, micro-onduleurs et solutions complètes. Performance, design et garanties jusqu'à 25 ans." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.solarglobe.fr/produits/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:title" content="Nos Produits – Solarglobe | Panneaux solaires premium" />
+<meta property="og:description" content="Découvrez la gamme complète Solarglobe : panneaux solaires, batteries, micro-onduleurs et coffrets. Qualité premium et garanties jusqu'à 25 ans." />
+<meta property="og:image" content="https://www.solarglobe.fr/assets/images/og-image.jpg" />
+<meta property="og:url" content="https://www.solarglobe.fr/produits/" />
+<meta property="og:site_name" content="Solarglobe" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Nos Produits – Solarglobe | Panneaux solaires premium" />
+<meta name="twitter:description" content="Découvrez la gamme complète Solarglobe : panneaux solaires, batteries, micro-onduleurs et coffrets. Qualité premium et garanties jusqu'à 25 ans." />
+<meta name="twitter:image" content="https://www.solarglobe.fr/assets/images/og-produits.jpg" />
+
+<link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+<link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
+<link rel="stylesheet" href="/assets/css/header-common.css" />
+<link rel="stylesheet" href="/assets/css/footer-common.css" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: { gold: '#C39847' },
+      fontFamily: { montserrat: ['Montserrat', 'sans-serif'] },
+    }
+  }
+}
+</script>
+
+<style>
+  body.menu-open { overflow: hidden; }
+  .shadow-gold { box-shadow: 0 0 32px 0 #C39847bb; }
+
+  /* Scroll reveal – lent, futuriste, premium (comme panneaux-solaires.html) */
+  .ps-reveal {
+    opacity: 0;
+    transform: translateY(56px) scale(0.98);
+    filter: blur(4px);
+    will-change: opacity, transform, filter;
+    transition: opacity 2.2s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 2.4s cubic-bezier(0.16, 1, 0.3, 1),
+                filter 2s ease-out,
+                box-shadow 2s ease;
+  }
+  .ps-reveal.ps-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+  .ps-reveal-title.ps-visible {
+    text-shadow: 0 0 40px rgba(195, 152, 71, 0.15);
+  }
+  .ps-reveal-card.ps-visible {
+    box-shadow: 0 0 0 1px rgba(195, 152, 71, 0.08);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ps-reveal { transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
+  }
+
+  /* Hero produits : titre collé au header */
+  #hero-produits.sg-hero-premium {
+    padding-top: 24px;
+    padding-bottom: 80px;
+  }
+</style>
+</head>
+
+<body class="bg-black text-white">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2ZQKS6F"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<div id="header-placeholder"></div>
+<script src="/assets/js/header.js"></script>
+
+<!-- 1. HERO -->
+<section id="hero-produits" class="sg-hero-premium relative overflow-hidden">
+  <div class="sg-hero-bg" aria-hidden="true"></div>
+  <div class="sg-container text-center sg-hero-content">
+    <div class="ps-reveal ps-reveal-title">
+    <h1 class="sg-hero-title">
+      Nos produits solaires <span class="sg-text-gold">haut de gamme</span>
+    </h1>
+    <p class="sg-hero-subtitle">
+      Panneaux solaires, onduleurs, micro-onduleurs et batteries : découvrez les technologies sélectionnées par SolarGlobe pour construire une installation photovoltaïque fiable, performante et durable.
+    </p>
+    <div class="sg-hero-badges">
+      <span>Étude</span><span class="sg-badge-sep">•</span><span>Devis</span><span class="sg-badge-sep">•</span><span>Démarches</span><span class="sg-badge-sep">•</span><span>Pose</span><span class="sg-badge-sep">•</span><span>Suivi</span>
+    </div>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <div class="text-center ps-reveal ps-reveal-card" style="transition-delay: 0.1s">
+        <img src="/assets/images/produits/panneaux-hero.avif" alt="Panneaux solaires" class="mx-auto rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+        <h3 class="text-lg font-semibold text-gold mt-4">Panneaux Solaires</h3>
+        <p class="text-neutral-300 text-sm">Haute performance pour une production durable.</p>
+      </div>
+      <div class="text-center ps-reveal ps-reveal-card" style="transition-delay: 0.2s">
+        <img src="/assets/images/produits/micro-onduleur-hero.avif" alt="Micro-onduleur" class="mx-auto rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+        <h3 class="text-lg font-semibold text-gold mt-4">Micro-onduleurs</h3>
+        <p class="text-neutral-300 text-sm">Optimisation par panneau, idéal sous ombrages.</p>
+      </div>
+      <div class="text-center ps-reveal ps-reveal-card" style="transition-delay: 0.3s">
+        <img src="/assets/images/produits/batterie-hero.avif" alt="Batterie solaire" class="mx-auto rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+        <h3 class="text-lg font-semibold text-gold mt-4">Batterie Solaire</h3>
+        <p class="text-neutral-300 text-sm">Stockage pour autonomie et confort énergétique.</p>
+      </div>
+    </div>
+
+    <div class="sg-hero-cta flex flex-wrap justify-center gap-3 ps-reveal" style="transition-delay: 0.4s">
+      <a href="/etude-gratuite/" class="sg-btn sg-btn-primary">Obtenir mon étude solaire gratuite</a>
+      <a href="#categories-produits" class="sg-btn sg-btn-outline">Explorer les équipements</a>
+    </div>
+  </div>
+</section>
+
+<!-- 2. INTRODUCTION HUB COURTE -->
+<section class="sg-section sg-section-dark">
+  <div class="sg-container">
+    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Choisir les bons équipements pour son installation solaire</h2>
+    <p class="ps-reveal" style="transition-delay: 0.1s">Une installation photovoltaïque performante repose sur une combinaison adaptée de matériel. Toutes les maisons ne nécessitent pas la même configuration : selon votre consommation, votre toiture et vos objectifs, le dimensionnement varie.</p>
+    <p class="mt-4 ps-reveal" style="transition-delay: 0.15s">SolarGlobe structure son offre en quatre familles d'équipements : <strong>panneaux solaires</strong>, <strong>onduleurs</strong>, <strong>micro-onduleurs</strong> et <strong>batteries</strong>. Chaque famille joue un rôle précis dans la production, la conversion et le stockage de l'énergie. Découvrez ci-dessous nos catégories et accédez directement aux pages détaillées.</p>
+  </div>
+</section>
+
+<!-- BANDEAU DE TRANSITION -->
+<div class="sg-transition-block sg-transition-block-dark"></div>
+
+<!-- 3. CATÉGORIES PRODUITS (cœur du hub) -->
+<section id="categories-produits" class="sg-section sg-section-dark">
+  <div class="sg-container">
+    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Explorez nos équipements</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="/produits/panneaux-solaires/" class="sg-card sg-card-dark block p-6 no-underline text-white hover:text-white border border-gold/20 hover:border-gold/40 transition-colors duration-300 ps-reveal ps-reveal-card" style="transition-delay: 0.1s">
+        <h3 class="text-lg font-bold text-gold mb-2">Panneaux solaires</h3>
+        <p class="text-sm text-neutral-300 mb-4">Panneaux premium haut rendement : LONGi, Dualsun et marques sélectionnées pour une production optimale.</p>
+        <ul class="text-sm text-neutral-400 space-y-1 mb-4">
+          <li>• Rendement jusqu'à 25 %</li>
+          <li>• Durabilité 25–30 ans</li>
+          <li>• Esthétique full black</li>
+        </ul>
+        <span class="inline-block px-4 py-2 rounded-lg border border-gold/50 text-gold text-sm font-semibold hover:bg-gold hover:text-black transition">Découvrir</span>
+      </a>
+      <a href="/produits/onduleurs/" class="sg-card sg-card-dark block p-6 no-underline text-white hover:text-white border border-gold/20 hover:border-gold/40 transition-colors duration-300 ps-reveal ps-reveal-card" style="transition-delay: 0.2s">
+        <h3 class="text-lg font-bold text-gold mb-2">Onduleurs</h3>
+        <p class="text-sm text-neutral-300 mb-4">Conversion DC/AC et pilotage centralisé de l'installation pour une production électrique optimisée.</p>
+        <ul class="text-sm text-neutral-400 space-y-1 mb-4">
+          <li>• Conversion DC/AC</li>
+          <li>• Pilotage installation</li>
+          <li>• Compatibilité système</li>
+        </ul>
+        <span class="inline-block px-4 py-2 rounded-lg border border-gold/50 text-gold text-sm font-semibold hover:bg-gold hover:text-black transition">Découvrir</span>
+      </a>
+      <a href="/produits/micro-onduleurs/" class="sg-card sg-card-dark block p-6 no-underline text-white hover:text-white border border-gold/20 hover:border-gold/40 transition-colors duration-300 ps-reveal ps-reveal-card" style="transition-delay: 0.3s">
+        <h3 class="text-lg font-bold text-gold mb-2">Micro-onduleurs</h3>
+        <p class="text-sm text-neutral-300 mb-4">Optimisation par panneau, idéal pour toitures avec ombrages ou multi-orientations.</p>
+        <ul class="text-sm text-neutral-400 space-y-1 mb-4">
+          <li>• Optimisation par panneau</li>
+          <li>• Idéal ombrages</li>
+          <li>• Suivi précis par module</li>
+        </ul>
+        <span class="inline-block px-4 py-2 rounded-lg border border-gold/50 text-gold text-sm font-semibold hover:bg-gold hover:text-black transition">Découvrir</span>
+      </a>
+      <a href="/produits/batteries-solaires/" class="sg-card sg-card-dark block p-6 no-underline text-white hover:text-white border border-gold/20 hover:border-gold/40 transition-colors duration-300 ps-reveal ps-reveal-card" style="transition-delay: 0.4s">
+        <h3 class="text-lg font-bold text-gold mb-2">Batteries solaires</h3>
+        <p class="text-sm text-neutral-300 mb-4">Stockage d'énergie pour maximiser l'autoconsommation et gagner en autonomie.</p>
+        <ul class="text-sm text-neutral-400 space-y-1 mb-4">
+          <li>• Stockage intelligent</li>
+          <li>• Autonomie renforcée</li>
+          <li>• Confort énergétique</li>
+        </ul>
+        <span class="inline-block px-4 py-2 rounded-lg border border-gold/50 text-gold text-sm font-semibold hover:bg-gold hover:text-black transition">Découvrir</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. COMMENT CHOISIR VOTRE SYSTÈME (assistant simplifié) -->
+<section id="assistant-choix" class="sg-section sg-section-dark">
+  <div class="sg-container">
+    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Quel système pour votre maison ?</h2>
+    <p class="mb-8 text-neutral-200 ps-reveal" style="transition-delay: 0.05s">SolarGlobe installe une combinaison performante : panneaux LONGi Hi-MO X10 Explorer et micro-onduleurs ATMOCE. Suivez les étapes ci-dessous pour affiner votre choix selon votre profil.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <article class="rounded-2xl border border-gold/25 bg-white/5 p-5 flex flex-col ps-reveal ps-reveal-card" style="transition-delay: 0.1s">
+        <span class="text-[11px] uppercase tracking-wider text-gold/90 font-semibold">Étape 1</span>
+        <h3 class="mt-3 text-lg font-bold text-gold">Choisir la puissance (kWc)</h3>
+        <p class="mt-2 text-sm text-neutral-300">Basez-vous sur votre consommation annuelle et votre surface de toiture. 3 kWc pour un petit foyer, 6 kWc pour une famille, 9 kWc pour les grandes consommations.</p>
+        <a href="/etude-gratuite/" class="mt-4 inline-block px-4 py-2 rounded-lg bg-gold text-black font-semibold text-sm hover:bg-black hover:text-gold border border-gold transition">Voir les packs</a>
+      </article>
+
+      <article class="rounded-2xl border border-gold/25 bg-white/5 p-5 flex flex-col ps-reveal ps-reveal-card" style="transition-delay: 0.2s">
+        <span class="text-[11px] uppercase tracking-wider text-gold/90 font-semibold">Étape 2</span>
+        <h3 class="mt-3 text-lg font-bold">Autoconsommation sans batterie</h3>
+        <p class="mt-2 text-sm text-neutral-300">Meilleur ROI initial. Idéal si vous pouvez déplacer des usages le jour. Micro-onduleurs ATMOCE pour optimiser chaque module.</p>
+        <a href="/produits/micro-onduleurs/" class="mt-4 inline-block px-4 py-2 rounded-lg bg-gold text-black font-semibold text-sm hover:bg-black hover:text-gold border border-gold transition">Découvrir les micro-onduleurs</a>
+      </article>
+
+      <article class="rounded-2xl border border-gold/25 bg-white/5 p-5 flex flex-col ps-reveal ps-reveal-card" style="transition-delay: 0.3s">
+        <span class="text-[11px] uppercase tracking-wider text-gold/90 font-semibold">Étape 3</span>
+        <h3 class="mt-3 text-lg font-bold">Avec batterie – autonomie</h3>
+        <p class="mt-2 text-sm text-neutral-300">Pour consommer votre énergie le soir. Capacités 7 à 21 kWh. Recommandé si vos usages sont majoritairement nocturnes.</p>
+        <a href="/produits/batteries-solaires/" class="mt-4 inline-block px-4 py-2 rounded-lg bg-gold text-black font-semibold text-sm hover:bg-black hover:text-gold border border-gold transition">Voir les batteries</a>
+      </article>
+
+      <article class="rounded-2xl border border-gold/25 bg-white/5 p-5 flex flex-col ps-reveal ps-reveal-card" style="transition-delay: 0.4s">
+        <span class="text-[11px] uppercase tracking-wider text-gold/90 font-semibold">Étape 4</span>
+        <h3 class="mt-3 text-lg font-bold">Ombres, multi-pans</h3>
+        <p class="mt-2 text-sm text-neutral-300">Les micro-onduleurs ATMOCE optimisent chaque panneau indépendamment. Tolérant aux ombrages partiels et toitures multi-orientations.</p>
+        <a href="/produits/micro-onduleurs/" class="mt-4 inline-block px-4 py-2 rounded-lg bg-gold text-black font-semibold text-sm hover:bg-black hover:text-gold border border-gold transition">En savoir plus</a>
+      </article>
+    </div>
+
+    <div class="mt-8 rounded-2xl border border-gold/25 bg-white/5 p-5 md:p-6 ps-reveal" style="transition-delay: 0.05s">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <h3 class="text-lg font-bold text-gold">Matériel sélectionné par SolarGlobe</h3>
+          <p class="text-sm text-neutral-300 mt-1">
+            <a href="/produits/panneaux-solaires/" class="text-gold hover:underline">Panneaux LONGi Hi-MO X10 Explorer</a> (haut rendement) + <a href="/produits/micro-onduleurs/" class="text-gold hover:underline">micro-onduleurs ATMOCE</a> (optimisation par module, suivi en temps réel).
+          </p>
+        </div>
+        <a href="/etude-gratuite/" class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gold text-black font-semibold hover:bg-black hover:text-gold border border-gold transition">
+          Découvrir les packs
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. POURQUOI SOLARGLOBE SÉLECTIONNE CES TECHNOLOGIES -->
+<section class="sg-section sg-section-dark">
+  <div class="sg-container">
+    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Pourquoi SolarGlobe sélectionne des équipements premium</h2>
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="border border-gold/20 rounded-xl p-5 bg-white/5 ps-reveal ps-reveal-card" style="transition-delay: 0.1s">
+        <h3 class="text-lg font-bold text-gold mb-2">Performance</h3>
+        <p class="text-sm text-neutral-300">Nos <a href="/produits/panneaux-solaires/" class="text-gold hover:underline">panneaux</a> et <a href="/produits/micro-onduleurs/" class="text-gold hover:underline">micro-onduleurs</a> offrent un rendement maximal pour produire davantage de kWh par m² installé.</p>
+      </div>
+      <div class="border border-gold/20 rounded-xl p-5 bg-white/5 ps-reveal ps-reveal-card" style="transition-delay: 0.2s">
+        <h3 class="text-lg font-bold text-gold mb-2">Fiabilité</h3>
+        <p class="text-sm text-neutral-300">Équipements testés et éprouvés, résistants aux conditions extrêmes. Une installation durable pour 25 ans et plus.</p>
+      </div>
+      <div class="border border-gold/20 rounded-xl p-5 bg-white/5 ps-reveal ps-reveal-card" style="transition-delay: 0.3s">
+        <h3 class="text-lg font-bold text-gold mb-2">Garanties longues</h3>
+        <p class="text-sm text-neutral-300">Jusqu'à 25 ans sur les panneaux et micro-onduleurs, 15 ans sur les <a href="/produits/batteries-solaires/" class="text-gold hover:underline">batteries</a>. Sérénité sur la durée.</p>
+      </div>
+      <div class="border border-gold/20 rounded-xl p-5 bg-white/5 ps-reveal ps-reveal-card" style="transition-delay: 0.4s">
+        <h3 class="text-lg font-bold text-gold mb-2">Compatibilité système</h3>
+        <p class="text-sm text-neutral-300">Tous nos équipements sont conçus pour fonctionner ensemble : panneaux, onduleurs, micro-onduleurs et batteries.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. LIENS RAPIDES VERS LES SOUS-PAGES -->
+<section class="sg-section sg-section-dark">
+  <div class="sg-container">
+    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Accéder directement à la bonne page</h2>
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <a href="/produits/panneaux-solaires/" class="flex items-center gap-4 p-5 rounded-xl border border-gold/25 bg-white/5 hover:border-gold/50 hover:bg-white/10 transition ps-reveal ps-reveal-card" style="transition-delay: 0.1s">
+        <span class="text-2xl">☀️</span>
+        <div>
+          <h3 class="font-bold text-gold">Je cherche les meilleurs panneaux solaires</h3>
+          <p class="text-sm text-neutral-400 mt-1">LONGi, Dualsun, rendement, garanties</p>
+        </div>
+        <svg class="h-5 w-5 text-gold ml-auto shrink-0" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg>
+      </a>
+      <a href="/produits/micro-onduleurs/" class="flex items-center gap-4 p-5 rounded-xl border border-gold/25 bg-white/5 hover:border-gold/50 hover:bg-white/10 transition ps-reveal ps-reveal-card" style="transition-delay: 0.2s">
+        <span class="text-2xl">⚡</span>
+        <div>
+          <h3 class="font-bold text-gold">Je veux comprendre micro-onduleurs vs onduleur</h3>
+          <p class="text-sm text-neutral-400 mt-1">Comparatif onduleurs et micro-onduleurs</p>
+        </div>
+        <svg class="h-5 w-5 text-gold ml-auto shrink-0" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg>
+      </a>
+      <a href="/produits/batteries-solaires/" class="flex items-center gap-4 p-5 rounded-xl border border-gold/25 bg-white/5 hover:border-gold/50 hover:bg-white/10 transition ps-reveal ps-reveal-card" style="transition-delay: 0.3s">
+        <span class="text-2xl">🔋</span>
+        <div>
+          <h3 class="font-bold text-gold">Je veux stocker mon énergie</h3>
+          <p class="text-sm text-neutral-400 mt-1">Batteries, autonomie, autoconsommation</p>
+        </div>
+        <svg class="h-5 w-5 text-gold ml-auto shrink-0" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg>
+      </a>
+      <a href="/etude-gratuite/" class="flex items-center gap-4 p-5 rounded-xl border border-gold/25 bg-white/5 hover:border-gold/50 hover:bg-white/10 transition ps-reveal ps-reveal-card" style="transition-delay: 0.4s">
+        <span class="text-2xl">🏠</span>
+        <div>
+          <h3 class="font-bold text-gold">Je veux être guidé selon ma maison</h3>
+          <p class="text-sm text-neutral-400 mt-1">Étude gratuite personnalisée</p>
+        </div>
+        <svg class="h-5 w-5 text-gold ml-auto shrink-0" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Pilotage Shelly – bloc résumé -->
+<section class="sg-section sg-section-dark">
+  <div class="sg-container text-center">
+    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Pilotage intelligent de votre énergie</h2>
+    <p class="max-w-2xl mx-auto text-neutral-200 ps-reveal" style="transition-delay: 0.1s">Le système Shelly maximise l'utilisation de votre énergie solaire en activant vos équipements (chauffe-eau, borne de recharge, climatisation) lorsque le surplus est disponible. Confort total et économies optimisées.</p>
+    <a href="/etude-gratuite/" class="mt-4 inline-block sg-btn sg-btn-primary ps-reveal" style="transition-delay: 0.2s">Obtenir mon étude solaire gratuite</a>
+  </div>
+</section>
+
+<!-- Garanties – 3 cartes simplifiées -->
+<section id="garanties" class="sg-section sg-section-dark">
+  <div class="sg-container">
+    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Garanties & conformité</h2>
+    <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div class="border border-gold/20 rounded-xl p-5 text-center ps-reveal ps-reveal-card" style="transition-delay: 0.1s">
+        <span class="text-3xl font-bold text-gold">25 ans</span>
+        <p class="mt-1 text-neutral-300">Panneaux & micro-onduleurs</p>
+      </div>
+      <div class="border border-gold/20 rounded-xl p-5 text-center ps-reveal ps-reveal-card" style="transition-delay: 0.2s">
+        <span class="text-3xl font-bold text-gold">15 ans</span>
+        <p class="mt-1 text-neutral-300">Batteries</p>
+      </div>
+      <div class="border border-gold/20 rounded-xl p-5 text-center ps-reveal ps-reveal-card" style="transition-delay: 0.3s">
+        <span class="text-3xl font-bold text-gold">10 ans</span>
+        <p class="mt-1 text-neutral-300">Pose & garantie décennale</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BANDEAU DE TRANSITION -->
+<div class="sg-transition-block sg-transition-block-dark ps-reveal"></div>
+
+<!-- 7. FAQ COURTE HUB (3 questions) -->
+<section id="faq-produits" class="sg-section sg-section-dark">
+  <div class="sg-container">
+    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Questions sur nos équipements</h2>
+    <div class="sg-faq">
+      <div class="sg-faq-item ps-reveal" style="transition-delay: 0.05s">
+        <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
+          <span>Quelles marques de panneaux installez-vous ?</span>
+          <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+        </button>
+        <div class="sg-faq-answer hidden">Nous installons notamment LONGi Hi-MO X10 Explorer et Dualsun Flash 500, des panneaux premium avec garanties jusqu'à 25 ans.</div>
+      </div>
+      <div class="sg-faq-item">
+        <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
+          <span>Micro-onduleurs ou onduleur central ?</span>
+          <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+        </button>
+        <div class="sg-faq-answer hidden">Les micro-onduleurs optimisent chaque panneau individuellement, idéal pour toitures avec ombrages ou multi-orientations. Consultez notre <a href="/produits/micro-onduleurs/" class="text-gold hover:underline">page micro-onduleurs</a> pour plus de détails.</div>
+      </div>
+      <div class="sg-faq-item ps-reveal" style="transition-delay: 0.15s">
+        <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
+          <span>Une batterie est-elle indispensable ?</span>
+          <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+        </button>
+        <div class="sg-faq-answer hidden">Non. Une installation sans batterie offre un excellent ROI. La batterie augmente l'autoconsommation si vos usages sont plutôt le soir. Notre <a href="/etude-gratuite/" class="text-gold hover:underline">étude gratuite</a> vous aide à choisir.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. CTA FINAL -->
+<section id="cta-final" class="sg-cta sg-cta-dark">
+  <div class="sg-container ps-reveal ps-reveal-title">
+    <h2>Faites étudier votre projet solaire</h2>
+    <p>Obtenez une étude personnalisée et gratuite par nos experts.</p>
+    <a href="/etude-gratuite/" class="sg-btn sg-btn-primary">Obtenir mon étude solaire gratuite</a>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="/assets/js/footer.js"></script>
+
+<!-- Schema.org – Page Produits (WebPage + Breadcrumb + ItemList + FAQPage) -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.solarglobe.fr/produits/#webpage",
+    "url": "https://www.solarglobe.fr/produits/",
+    "name": "Nos produits – Équipements photovoltaïques premium",
+    "description": "Panneaux solaires, micro-onduleurs, onduleurs et solutions de stockage sélectionnés par Solarglobe pour des installations fiables et performantes."
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.solarglobe.fr/produits/#breadcrumb",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.solarglobe.fr/" },
+      { "@type": "ListItem", "position": 2, "name": "Nos produits", "item": "https://www.solarglobe.fr/produits/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": "https://www.solarglobe.fr/produits/#itemlist",
+    "name": "Produits Solarglobe",
+    "description": "Sélection d'équipements photovoltaïques premium : panneaux solaires, onduleurs, micro-onduleurs et batteries.",
+    "numberOfItems": 4,
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Panneaux solaires", "item": "https://www.solarglobe.fr/produits/panneaux-solaires/" },
+      { "@type": "ListItem", "position": 2, "name": "Onduleurs", "item": "https://www.solarglobe.fr/produits/onduleurs/" },
+      { "@type": "ListItem", "position": 3, "name": "Micro-onduleurs", "item": "https://www.solarglobe.fr/produits/micro-onduleurs/" },
+      { "@type": "ListItem", "position": 4, "name": "Batteries solaires", "item": "https://www.solarglobe.fr/produits/batteries-solaires/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Hub Produits – Solarglobe",
+    "description": "Équipements photovoltaïques premium : panneaux solaires, onduleurs, micro-onduleurs et batteries.",
+    "provider": { "@type": "Organization", "name": "Solarglobe", "url": "https://www.solarglobe.fr/" },
+    "url": "https://www.solarglobe.fr/produits/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Quelles marques de panneaux installez-vous ?", "acceptedAnswer": { "@type": "Answer", "text": "Nous installons notamment LONGi Hi-MO X10 Explorer et Dualsun Flash 500, des panneaux premium avec garanties jusqu'à 25 ans." }},
+      { "@type": "Question", "name": "Micro-onduleurs ou onduleur central ?", "acceptedAnswer": { "@type": "Answer", "text": "Les micro-onduleurs optimisent chaque panneau individuellement, idéal pour toitures avec ombrages ou multi-orientations. Consultez notre page micro-onduleurs pour plus de détails." }},
+      { "@type": "Question", "name": "Une batterie est-elle indispensable ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Une installation sans batterie offre un excellent ROI. La batterie augmente l'autoconsommation si vos usages sont plutôt le soir. Notre étude gratuite vous aide à choisir." }}
+    ]
+  }
+]
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.solarglobe.fr/#solarglobe",
+  "name": "Solarglobe",
+  "url": "https://www.solarglobe.fr/",
+  "logo": "https://www.solarglobe.fr/assets/images/logo-solarglobe-rect.png",
+  "description": "Solarglobe installe des systèmes photovoltaïques haut de gamme en Île-de-France et départements limitrophes.",
+  "telephone": "+33 1 72 99 47 53",
+  "email": "contact@solarglobe.fr",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "19 avenue Pierre Curie",
+    "addressLocality": "Chelles",
+    "postalCode": "77500",
+    "addressRegion": "Île-de-France",
+    "addressCountry": "FR"
+  }
+}
+</script>
+
+<script>
+document.querySelectorAll('.sg-faq-item').forEach(item => {
+  const btn = item.querySelector('.sg-faq-question');
+  const answer = item.querySelector('.sg-faq-answer');
+  if (!btn || !answer) return;
+  btn.addEventListener('click', () => {
+    const isOpen = !answer.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', isOpen);
+    const icon = btn.querySelector('.sg-faq-icon');
+    if (icon) icon.style.transform = isOpen ? 'rotate(45deg)' : 'none';
+  });
+});
+</script>
+
+<!-- Scroll reveal – IntersectionObserver (comme panneaux-solaires.html) -->
+<script>
+(function() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const els = document.querySelectorAll('.ps-reveal');
+  if (!els.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('ps-visible');
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  els.forEach(el => io.observe(el));
+})();
+</script>
+
+</body>
+</html>

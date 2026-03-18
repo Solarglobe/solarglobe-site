@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N2ZQKS6F');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Le solaire photovoltaïque : comprendre, produire et économiser | Solarglobe</title>
+  <meta name="description" content="Hub pédagogique sur le solaire photovoltaïque : fonctionnement, rentabilité, étude solaire, dimensionnement. Tout comprendre avant d'installer des panneaux. SolarGlobe vous accompagne de A à Z." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.solarglobe.fr/le-solaire/" />
+  <meta property="og:title" content="Le solaire photovoltaïque : comprendre, produire et économiser | Solarglobe" />
+  <meta property="og:description" content="Hub pédagogique sur le solaire photovoltaïque : fonctionnement, rentabilité, étude solaire, dimensionnement. Tout comprendre avant d'installer des panneaux. SolarGlobe vous accompagne de A à Z." />
+  <meta property="og:image" content="https://www.solarglobe.fr/assets/images/og-image.jpg" />
+  <meta property="og:url" content="https://www.solarglobe.fr/le-solaire/" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
+  <link rel="stylesheet" href="/assets/css/le-solaire-editorial.css" />
+  <link rel="stylesheet" href="/assets/css/header-common.css" />
+  <link rel="stylesheet" href="/assets/css/footer-common.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{gold:'#C39847'},fontFamily:{montserrat:['Montserrat','sans-serif']}}}}</script>
+  <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}
+
+  /* Scroll reveal – lent, futuriste, premium (comme produits/index.html) */
+  .ps-reveal {
+    opacity: 0;
+    transform: translateY(56px) scale(0.98);
+    filter: blur(4px);
+    will-change: opacity, transform, filter;
+    transition: opacity 2.2s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 2.4s cubic-bezier(0.16, 1, 0.3, 1),
+                filter 2s ease-out,
+                box-shadow 2s ease;
+  }
+  .ps-reveal.ps-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+  .ps-reveal-title.ps-visible {
+    text-shadow: 0 0 40px rgba(195, 152, 71, 0.15);
+  }
+  .ps-reveal-card.ps-visible {
+    box-shadow: 0 0 0 1px rgba(195, 152, 71, 0.08);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ps-reveal { transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
+  }
+
+  /* ======================================
+  SOLARGLOBE PREMIUM CARD SYSTEM
+  ====================================== */
+  .sg-card-premium{
+  position:relative;
+  overflow:hidden;
+  border-radius:16px;
+  background:#111;
+  aspect-ratio:16/9;
+  margin-bottom:28px;
+  transition:
+  transform .5s cubic-bezier(.22,1,.36,1),
+  box-shadow .5s cubic-bezier(.22,1,.36,1);
+  }
+  .sg-card-premium img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 1.4s cubic-bezier(.22,1,.36,1);
+  }
+  .sg-card-premium::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+  180deg,
+  rgba(0,0,0,0) 0%,
+  rgba(0,0,0,.55) 60%,
+  rgba(0,0,0,.75) 100%
+  );
+  z-index:1;
+  }
+  .sg-card-content{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:24px;
+  z-index:2;
+  color:white;
+  }
+  .sg-card-premium:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,.45);
+  }
+  .sg-card-premium:hover img{
+  transform:scale(1.08);
+  }
+  .sg-card-content h3{
+  font-size:1.125rem;
+  font-weight:700;
+  color:#C39847;
+  margin-bottom:.5rem;
+  }
+  .sg-card-content p{
+  font-size:.875rem;
+  opacity:.95;
+  line-height:1.4;
+  margin-bottom:.75rem;
+  }
+  .sg-card-content a{
+  font-size:.875rem;
+  color:#C39847;
+  text-decoration:none;
+  font-weight:600;
+  transition:opacity .3s ease;
+  }
+  .sg-card-content a:hover{
+  opacity:.85;
+  }
+  @media (max-width:768px){
+  .sg-card-content{
+  padding:18px;
+  }
+  }
+  /* Images premium sections hub */
+  .sg-img-premium-wrap{width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.4);}
+  .sg-img-premium-wrap--graph{aspect-ratio:16/9.5;}
+  .sg-img-premium-wrap--graph img{filter:contrast(1.05) brightness(1.02);}
+  .sg-img-premium-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
+
+  /* ======================================
+  SOLARGLOBE GUIDES SECTIONS HARMONISÉES
+  ====================================== */
+  .sg-guides{
+  padding-top:80px;
+  padding-bottom:32px;
+  background:#050505;
+  }
+  .sg-guides-block .sg-section-kicker,
+  .sg-guides .sg-section-kicker{
+  display:block;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#C9A54C;
+  margin-bottom:10px;
+  }
+  .sg-guides-block .sg-section-title,
+  .sg-guides .sg-section-title{
+  font-size:36px;
+  font-weight:600;
+  margin-bottom:14px;
+  color:#fff;
+  }
+  .sg-guides-block .sg-section-intro,
+  .sg-guides .sg-section-intro{
+  max-width:650px;
+  opacity:.85;
+  margin-bottom:50px;
+  }
+  .sg-guides-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:36px;
+  }
+  .sg-guide-card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  background:#0b0b0b;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid rgba(195,152,71,0.25);
+  transition:
+  transform .45s cubic-bezier(.22,.61,.36,1),
+  box-shadow .45s cubic-bezier(.22,.61,.36,1),
+  border-color .45s ease;
+  }
+  .sg-guide-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(195,152,71,0.55);
+  box-shadow:
+  0 10px 35px rgba(0,0,0,0.55),
+  0 0 0 1px rgba(195,152,71,0.15),
+  0 0 40px rgba(195,152,71,0.15);
+  }
+  .sg-guide-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at center,rgba(195,152,71,0.12),transparent 70%);
+  opacity:0;
+  transition:opacity .45s ease;
+  pointer-events:none;
+  }
+  .sg-guide-card:hover::after{
+  opacity:1;
+  }
+  .sg-guide-media{
+  position:relative;
+  height:210px;
+  overflow:hidden;
+  }
+  .sg-guide-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 1.1s cubic-bezier(.22,.61,.36,1);
+  }
+  .sg-guide-card:hover img{
+  transform:scale(1.04);
+  }
+  .sg-guide-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+  to top,
+  rgba(0,0,0,.85),
+  rgba(0,0,0,.45),
+  rgba(0,0,0,.1)
+  );
+  }
+  .sg-guide-content{
+  padding:22px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  }
+  .sg-guide-content h3{
+  font-size:18px;
+  margin-bottom:6px;
+  color:#fff;
+  transition:color .35s ease;
+  }
+  .sg-guide-card:hover h3{
+  color:#C39847;
+  }
+  .sg-guide-content p{
+  font-size:14px;
+  opacity:.8;
+  margin-bottom:14px;
+  }
+  .sg-guide-link{
+  color:#C9A54C;
+  font-weight:500;
+  font-size:14px;
+  margin-top:auto;
+  }
+  .sg-guide-card a{
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  transition:color .3s ease;
+  }
+  .sg-guide-card:hover a{
+  color:#C39847;
+  }
+  @media (max-width:1100px){
+  .sg-guides-grid{
+  grid-template-columns:repeat(2,1fr);
+  }
+  }
+  @media (max-width:700px){
+  .sg-guides-grid{
+  grid-template-columns:1fr;
+  }
+  }
+
+  /* ======================================
+  STRUCTURE VISUELLE UX — Premium editorial
+  py-24 md:py-32, max-w-2xl intro, rythme mt-12
+  ====================================== */
+  .sg-section{
+  padding-top:80px;
+  padding-bottom:32px;
+  }
+  @media (min-width:768px){
+  .sg-section{
+  padding-top:80px;
+  padding-bottom:32px;
+  }
+  }
+  .sg-section .sg-section-kicker{
+  display:block;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#C9A54C;
+  margin-bottom:10px;
+  }
+  .sg-section .sg-section-title{
+  font-size:36px;
+  font-weight:600;
+  margin-bottom:14px;
+  color:#fff;
+  }
+  .sg-section .sg-section-intro{
+  max-width:672px;
+  opacity:.85;
+  margin-bottom:0;
+  font-size:1.125rem;
+  line-height:1.75;
+  color:rgba(209,213,219,1);
+  }
+  .sg-two-columns{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+  }
+  .sg-two-columns .sg-img-premium-wrap{
+  width:100%;
+  }
+  @media (max-width:900px){
+  .sg-two-columns{
+  grid-template-columns:1fr;
+  }
+  .sg-section-intro{
+  max-width:100%;
+  }
+  }
+
+  /* ======================================
+  HERO PREMIUM REFONTE — PAGE SOLAIRE
+  Largeur noble, halo doré, rendu luxueux
+  ====================================== */
+  /* CORRECTION CIBLÉE : supprimer le vide header→hero
+  Cause : body padding-top 72px + #header-placeholder min-height 72px = 144px
+  Solution : margin-top négatif pour remonter le hero sous le header */
+  .sg-hero-premium.sg-hero-solaire{
+  position:relative;
+  min-height:78vh;
+  margin-top:-72px;
+  padding-top:24px;
+  padding-bottom:100px;
+  overflow:visible;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-bg{
+  background:linear-gradient(180deg,#0b0b0b,#000);
+  z-index:0;
+  }
+  /* Halo doré principal — large, diffus, premium (au-dessus du fond) */
+  .sg-hero-premium.sg-hero-solaire::before{
+  content:"";
+  position:absolute;
+  width:900px;
+  height:900px;
+  left:50%;
+  top:46%;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(circle,rgba(195,152,71,0.24) 0%,rgba(195,152,71,0.14) 22%,rgba(195,152,71,0.06) 40%,rgba(195,152,71,0) 72%);
+  filter:blur(45px);
+  pointer-events:none;
+  z-index:1;
+  }
+  /* Second halo plus chaud, subtil */
+  .sg-hero-premium.sg-hero-solaire::after{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  left:50%;
+  top:44%;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(circle,rgba(195,152,71,0.16) 0%,rgba(195,152,71,0.06) 35%,transparent 70%);
+  filter:blur(28px);
+  pointer-events:none;
+  z-index:1;
+  }
+  /* Conteneur large — 1100px max, respiration premium */
+  .sg-hero-premium.sg-hero-solaire .sg-hero-content{
+  position:relative;
+  z-index:2;
+  max-width:1100px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:40px;
+  padding-right:40px;
+  text-align:center;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-inner{
+  max-width:100%;
+  margin:0 auto;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-kicker{
+  display:block;
+  font-size:13px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:#C39847;
+  margin-bottom:16px;
+  }
+  /* Titre — large, respirant, max-width 1000px */
+  .sg-hero-premium.sg-hero-solaire .sg-hero-title{
+  font-size:48px;
+  font-weight:600;
+  line-height:1.18;
+  letter-spacing:-0.01em;
+  max-width:1000px;
+  margin-left:auto;
+  margin-right:auto;
+  color:#fff;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-title .gold{
+  color:#C39847;
+  text-shadow:0 0 60px rgba(195,152,71,0.12);
+  }
+  /* Sous-titre — hiérarchie élégante, 720px */
+  .sg-hero-premium.sg-hero-solaire .sg-hero-subtitle{
+  font-size:19px;
+  color:rgba(209,213,219,0.92);
+  margin-top:24px;
+  line-height:1.65;
+  max-width:720px;
+  margin-left:auto;
+  margin-right:auto;
+  letter-spacing:0.01em;
+  }
+  /* CTA — espace horizontal premium */
+  .sg-hero-premium.sg-hero-solaire .sg-hero-cta{
+  margin-top:36px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:24px;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-cta .sg-btn-primary{
+  background:#C39847;
+  color:#fff;
+  padding:16px 34px;
+  border-radius:8px;
+  font-weight:600;
+  font-size:1.05rem;
+  transition:all .3s cubic-bezier(.22,1,.36,1);
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-cta .sg-btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 28px rgba(195,152,71,0.32);
+  background:#D4A84E;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-cta .sg-btn-outline{
+  padding:16px 34px;
+  font-size:1.05rem;
+  border:1px solid rgba(195,152,71,0.5);
+  color:#C39847;
+  border-radius:8px;
+  transition:all .3s cubic-bezier(.22,1,.36,1);
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-cta .sg-btn-outline:hover{
+  background:rgba(195,152,71,0.08);
+  border-color:rgba(195,152,71,0.7);
+  }
+  /* Laptop */
+  @media (max-width:1200px){
+  .sg-hero-premium.sg-hero-solaire{
+  min-height:74vh;
+  margin-top:-72px;
+  padding-top:24px;
+  padding-bottom:90px;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-content{
+  padding-left:40px;
+  padding-right:40px;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-title{
+  font-size:44px;
+  max-width:100%;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-subtitle{
+  max-width:680px;
+  font-size:18px;
+  }
+  .sg-hero-premium.sg-hero-solaire::before{
+  width:700px;
+  height:700px;
+  }
+  }
+  /* Tablette */
+  @media (max-width:768px){
+  .sg-hero-premium.sg-hero-solaire{
+  min-height:68vh;
+  margin-top:-72px;
+  padding-top:20px;
+  padding-bottom:80px;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-content{
+  max-width:900px;
+  padding-left:32px;
+  padding-right:32px;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-title{
+  font-size:38px;
+  max-width:100%;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-subtitle{
+  font-size:17px;
+  max-width:100%;
+  margin-top:20px;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-cta{
+  margin-top:32px;
+  gap:20px;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-cta .sg-btn-primary,
+  .sg-hero-premium.sg-hero-solaire .sg-hero-cta .sg-btn-outline{
+  padding:14px 28px;
+  font-size:1rem;
+  }
+  .sg-hero-premium.sg-hero-solaire::before{
+  width:500px;
+  height:500px;
+  filter:blur(30px);
+  }
+  .sg-hero-premium.sg-hero-solaire::after{
+  width:350px;
+  height:350px;
+  filter:blur(18px);
+  }
+  }
+  /* Mobile */
+  @media (max-width:480px){
+  .sg-hero-premium.sg-hero-solaire{
+  min-height:auto;
+  margin-top:-72px;
+  padding-top:24px;
+  padding-bottom:64px;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-content{
+  max-width:100%;
+  padding-left:24px;
+  padding-right:24px;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-title{
+  font-size:30px;
+  line-height:1.2;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-subtitle{
+  font-size:16px;
+  margin-top:18px;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-cta{
+  flex-direction:column;
+  align-items:center;
+  margin-top:28px;
+  gap:12px;
+  }
+  .sg-hero-premium.sg-hero-solaire .sg-hero-cta .sg-btn{
+  width:100%;
+  max-width:280px;
+  text-align:center;
+  }
+  .sg-hero-premium.sg-hero-solaire::before{
+  width:380px;
+  height:380px;
+  top:48%;
+  filter:blur(25px);
+  }
+  .sg-hero-premium.sg-hero-solaire::after{
+  width:260px;
+  height:260px;
+  filter:blur(15px);
+  }
+  }
+  .sg-hero-solaire+.sg-section{
+  margin-top:0;
+  }
+  /* Hero image — bouton secondaire visible sur fond sombre */
+  .sg-hero-solaire .sg-btn-secondary{
+  border:1px solid rgba(255,255,255,0.3);
+  }
+  .sg-hero-solaire .sg-btn-secondary:hover{
+  border-color:rgba(255,255,255,0.5);
+  background:#1a1a1a;
+  }
+
+  .sg-section-alt{
+  background:linear-gradient(
+    180deg,
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.96)
+  );
+  }
+
+  /* ======================================
+  BLOC GRAPHIQUE ÉCONOMIES — Pédagogie & crédibilité
+  ====================================== */
+  .sg-proof-box{
+  padding:20px 24px;
+  border:1px solid rgba(195,152,71,0.3);
+  border-radius:12px;
+  background:rgba(195,152,71,0.06);
+  margin-top:12px;
+  font-size:0.9rem;
+  color:rgba(209,213,219,0.9);
+  line-height:1.6;
+  }
+  .sg-proof-box ul{
+  margin:8px 0 0 0;
+  padding-left:20px;
+  list-style:disc;
+  }
+  .sg-proof-box li{
+  margin-bottom:4px;
+  }
+  .sg-highlight-stat{
+  font-size:1.2rem;
+  font-weight:600;
+  color:#C39847;
+  margin-top:20px;
+  }
+
+  /* ======================================
+  UX CONVERSION — CTA inline, réassurance, lisibilité
+  ====================================== */
+  .sg-cta-inline{
+  margin-top:40px;
+  }
+  .sg-cta-inline .sg-btn-primary{
+  display:inline-block;
+  background:#C39847;
+  color:#000;
+  padding:14px 26px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all .3s ease;
+  }
+  .sg-cta-inline .sg-btn-primary:hover{
+  background:#d4a85a;
+  }
+  .sg-reassurance{
+  list-style:none;
+  padding:0;
+  margin:12px 0 0 0;
+  font-size:0.9rem;
+  color:rgba(209,213,219,0.85);
+  }
+  .sg-reassurance li{
+  margin-bottom:6px;
+  }
+  .sg-reassurance li::before{
+  content:"✔ ";
+  color:#C39847;
+  font-weight:600;
+  margin-right:6px;
+  }
+  .sg-text-readable{
+  max-width:700px;
+  }
+  .sg-summary-box{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(195,152,71,0.25);
+  padding:30px;
+  border-radius:10px;
+  margin-top:40px;
+  }
+  .sg-summary-box ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:12px 24px;
+  }
+  .sg-summary-box li{
+  color:rgba(209,213,219,0.9);
+  font-size:0.95rem;
+  }
+  .sg-summary-box li::before{
+  content:"✓ ";
+  color:#C39847;
+  font-weight:600;
+  margin-right:6px;
+  }
+
+  /* ======================================
+  POLISH FINAL PREMIUM — Agence haut de gamme
+  Typographie, micro-interactions, cohérence visuelle
+  ====================================== */
+  /* 1 — TYPOGRAPHIE PREMIUM */
+  .sg-section .sg-section-title,
+  .sg-section h2.sg-section-title{
+  font-size:clamp(2rem,3vw,3rem);
+  line-height:1.1;
+  font-weight:600;
+  letter-spacing:-0.02em;
+  }
+  .sg-section h3,
+  .sg-section .text-xl{
+  font-size:clamp(1.125rem,1.2vw,1.25rem);
+  font-weight:600;
+  line-height:1.3;
+  }
+  .sg-section p,
+  .sg-section .sg-section-intro{
+  font-size:clamp(1rem,1.02vw,1.05rem);
+  line-height:1.75;
+  color:rgba(255,255,255,0.84);
+  }
+  .sg-section .sg-section-intro{color:rgba(255,255,255,0.84);}
+  .sg-section .sg-section-kicker,
+  .sg-hero-premium .sg-hero-kicker,
+  .sg-guides-block .sg-section-kicker,
+  .sg-guides .sg-section-kicker{
+  font-size:clamp(11px,1.2vw,12px);
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:#C39847;
+  }
+  /* 2 — LISIBILITÉ PREMIUM */
+  .sg-readable{
+  max-width:760px;
+  }
+  .sg-text-readable{max-width:760px;}
+  /* 3 — MICRO-INTERACTIONS BOUTONS */
+  .sg-btn-primary,
+  .sg-hero-cta .sg-btn-primary,
+  .sg-cta .sg-btn-primary,
+  .sg-cta-inline .sg-btn-primary{
+  transition:
+  transform .3s cubic-bezier(.22,.61,.36,1),
+  box-shadow .3s cubic-bezier(.22,.61,.36,1),
+  background-color .3s ease,
+  border-color .3s ease;
+  }
+  .sg-btn-primary:hover,
+  .sg-hero-cta .sg-btn-primary:hover,
+  .sg-cta .sg-btn-primary:hover,
+  .sg-cta-inline .sg-btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:
+  0 12px 28px rgba(0,0,0,.28),
+  0 0 24px rgba(195,152,71,.22);
+  }
+  .sg-btn-outline,
+  .sg-hero-cta .sg-btn-outline{
+  transition:
+  transform .3s cubic-bezier(.22,.61,.36,1),
+  box-shadow .3s cubic-bezier(.22,.61,.36,1),
+  background-color .3s ease,
+  border-color .3s ease;
+  }
+  .sg-btn-outline:hover,
+  .sg-hero-cta .sg-btn-outline:hover{
+  transform:translateY(-2px);
+  box-shadow:
+  0 10px 22px rgba(0,0,0,.22),
+  0 0 18px rgba(195,152,71,.14);
+  }
+  /* 4 — ARRONDIS UNIFORMES */
+  .sg-guide-card{border-radius:14px;}
+  .sg-btn-primary,
+  .sg-btn-outline,
+  .sg-cta-inline .sg-btn-primary{
+  border-radius:8px;
+  }
+  .sg-proof-box,
+  .sg-summary-box{border-radius:12px;}
+  .sg-img-premium-wrap{border-radius:12px;}
+  .sg-card-premium{border-radius:14px;}
+  .sg-card-production{border-radius:14px;}
+  /* 5 — HOVER LIENS TEXTE */
+  .sg-section a{
+  transition:color .25s ease,opacity .25s ease;
+  }
+  .sg-section a:hover{
+  color:#D4A84E;
+  opacity:1;
+  }
+  /* 6 — MICRO-HALO ÉLÉMENTS PREMIUM */
+  .sg-btn-primary,
+  .sg-cta-inline .sg-btn-primary{
+  box-shadow:0 0 20px rgba(195,152,71,0.08);
+  }
+  .sg-guide-card{
+  box-shadow:0 4px 20px rgba(0,0,0,0.25);
+  }
+  .sg-guide-card:hover{
+  box-shadow:
+  0 10px 35px rgba(0,0,0,0.45),
+  0 0 24px rgba(195,152,71,0.12);
+  }
+  /* 7 — RESPONSIVE PARFAIT */
+  @media (max-width:768px){
+  .sg-section .sg-section-title{font-size:clamp(1.75rem,5vw,2.25rem);}
+  .sg-section{padding-top:56px;padding-bottom:32px;}
+  .sg-container{padding-left:24px;padding-right:24px;}
+  .sg-cta-inline{
+  text-align:center;
+  }
+  .sg-cta-inline .sg-btn-primary{
+  display:block;
+  width:100%;
+  max-width:320px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  }
+  .sg-reassurance{margin-left:auto;margin-right:auto;}
+  .sg-two-columns{gap:40px;}
+  .sg-guides-grid{gap:24px;}
+  }
+  @media (max-width:480px){
+  .sg-section .sg-section-title{font-size:clamp(1.5rem,6vw,2rem);}
+  .sg-section{padding-top:48px;padding-bottom:32px;}
+  .sg-container{padding-left:20px;padding-right:20px;}
+  .sg-hero-premium.sg-hero-solaire .sg-hero-content{padding-left:20px;padding-right:20px;}
+  .sg-cta-inline .sg-btn-primary{max-width:100%;}
+  }
+  body{overflow-x:hidden;}
+  /* 8 — ESPACEMENTS HARMONISÉS */
+  .sg-section .sg-section-kicker{margin-bottom:12px;}
+  .sg-section .sg-section-title{margin-bottom:16px;}
+  .sg-section .sg-section-intro{margin-bottom:24px;}
+  .sg-cta-inline{margin-top:48px;}
+  .sg-summary-box{margin-bottom:32px;}
+  </style>
+</head>
+<body class="bg-black text-white">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2ZQKS6F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="header-placeholder"></div>
+<script src="/assets/js/header.js"></script>
+
+<!-- HERO -->
+<section class="sg-hero-solaire relative min-h-[85vh] flex items-center overflow-hidden -mt-[72px]">
+  <div class="absolute inset-0 z-0">
+    <img
+      src="/assets/images/solaire/hero-solaire.webp"
+      alt="Installation photovoltaïque sur toiture résidentielle"
+      class="w-full h-full object-cover"
+    />
+  </div>
+  <div class="absolute inset-0 bg-black/70 z-[1]"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-black z-[1]"></div>
+  <div class="relative z-10 max-w-6xl mx-auto px-6 w-full">
+    <span class="text-gold uppercase tracking-[0.25em] text-sm ps-reveal ps-reveal-title">Énergie solaire</span>
+    <h1 class="mt-6 text-5xl md:text-6xl font-semibold leading-tight max-w-4xl text-white ps-reveal ps-reveal-title">
+      Produisez votre propre électricité grâce au solaire
+    </h1>
+    <p class="mt-6 text-lg text-white/80 max-w-2xl ps-reveal">
+      Une installation photovoltaïque bien dimensionnée permet de réduire fortement votre facture d'électricité et de sécuriser votre énergie pendant des décennies.
+    </p>
+    <div class="mt-10 flex gap-6 flex-wrap ps-reveal">
+      <a href="/etude-gratuite/" class="sg-btn sg-btn-primary">Obtenir mon étude solaire gratuite</a>
+      <a href="/produits/" class="sg-btn sg-btn-secondary">Voir nos produits</a>
+    </div>
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 max-w-4xl ps-reveal">
+      <div>
+        <div class="text-3xl font-semibold text-gold">1200€</div>
+        <p class="text-white/70 text-sm mt-2">
+          d'économies possibles par an avec une installation 6 kWc
+        </p>
+      </div>
+      <div>
+        <div class="text-3xl font-semibold text-gold">25 ans</div>
+        <p class="text-white/70 text-sm mt-2">
+          durée de production garantie des panneaux
+        </p>
+      </div>
+      <div>
+        <div class="text-3xl font-semibold text-gold">40 000€</div>
+        <p class="text-white/70 text-sm mt-2">
+          d'économies potentielles sur la durée de vie du système
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION RENTABILITÉ (remontée après Hero) -->
+<section class="sg-section sg-section-dark">
+  <div class="sg-divider" id="sgsep00" aria-hidden="true"></div>
+  <div class="sg-container">
+    <div class="max-w-3xl mb-16 sg-text-readable">
+      <span class="sg-section-kicker ps-reveal">Rentabilité</span>
+      <h2 class="sg-section-title ps-reveal">Les panneaux solaires sont-ils rentables ?</h2>
+      <p class="sg-section-intro ps-reveal">Découvrez combien une installation photovoltaïque peut vous faire économiser sur votre facture d'électricité.</p>
+    </div>
+    <div class="sg-text-readable ps-reveal">
+    <p>Oui, à condition d'un bon dimensionnement et de la prise en compte des aides. Le coût d'une installation varie entre 8 000 et 20 000 € selon la puissance (3 à 6 kWc) et les équipements (batterie, micro-onduleurs). Les économies réalisables dépendent de votre taux d'autoconsommation : comptez 700 à 1 200 € par an pour une installation de 6 kWc bien dimensionnée.</p>
+    <p class="mt-4">La durée de retour sur investissement se situe en moyenne entre 8 et 12 ans avec les aides (prime à l'autoconsommation, TVA réduite). Au-delà, vous profitez d'électricité à faible coût pendant 15 à 20 ans. Découvrez notre guide détaillé sur la <a href="/rentabilite-solaire/" class="text-gold hover:text-gold underline">rentabilité solaire</a>.</p>
+    <p class="text-lg text-gray-300 mb-6">Une installation solaire bien dimensionnée permet généralement de générer <span class="text-gold font-semibold">plus de 40 000 € d'économies</span> sur 25 ans, tout en réduisant fortement votre dépendance au réseau électrique.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-16 items-center mt-12">
+      <div class="ps-reveal">
+        <h3 class="text-xl font-semibold text-gold mb-6">Combien pouvez-vous réellement économiser avec le solaire ?</h3>
+        <p class="text-gray-300 mb-4">Une installation photovoltaïque permet de produire une partie de votre électricité et de réduire durablement votre facture.</p>
+        <p class="text-gray-300 mb-4">Le graphique ci-contre montre l'évolution estimée de votre facture d'électricité sur 25 ans avec et sans installation solaire.</p>
+        <p class="text-gray-300">Même avec des hypothèses prudentes d'augmentation du prix de l'énergie, l'écart devient significatif au fil des années.</p>
+        <div class="sg-proof-box">
+          <strong class="text-gold">Méthodologie :</strong>
+          <ul>
+            <li>Estimation basée sur la production solaire moyenne de la région</li>
+            <li>Prix moyen de l'électricité observé ces dernières années</li>
+            <li>Hypothèses prudentes d'évolution du tarif</li>
+          </ul>
+        </div>
+        <p class="sg-highlight-stat">Sur 25 ans, une installation solaire permet souvent d'économiser plusieurs dizaines de milliers d'euros sur la facture d'électricité.</p>
+      </div>
+      <div class="ps-reveal">
+        <div class="sg-img-premium-wrap sg-img-premium-wrap--graph">
+          <img src="/assets/images/solaire/evolution-economies-solaire-25-ans.jpg" alt="Graphique évolution des économies cumulées sur 25 ans - installation photovoltaïque 6 kWc, autoconsommation 70 %">
+        </div>
+        <p class="text-gray-300 mt-6 text-center md:text-left">Chaque projet est différent : une <a href="/etude-gratuite/" class="text-gold hover:text-gold underline font-medium">étude solaire gratuite</a> permet d'estimer précisément les économies possibles pour votre maison.</p>
+      </div>
+    </div>
+    <div class="sg-cta-inline">
+      <a href="/etude-gratuite/" class="sg-btn-primary">Obtenir mon étude solaire gratuite</a>
+      <ul class="sg-reassurance">
+        <li>Étude gratuite</li>
+        <li>Estimation personnalisée</li>
+        <li>Sans engagement</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION : DURÉE DE VIE DES PANNEAUX SOLAIRES -->
+<section class="sg-section sg-section-dark sg-section-alt">
+  <div class="sg-divider" id="sgsep01" aria-hidden="true"></div>
+  <div class="sg-container">
+    <div class="max-w-3xl mb-16 sg-text-readable">
+      <span class="sg-section-kicker ps-reveal">Durabilité</span>
+      <h2 class="sg-section-title ps-reveal">Quelle est la durée de vie des panneaux solaires</h2>
+      <p class="sg-section-intro ps-reveal">Durée de vie des panneaux, garanties fabricant et choix des composants.</p>
+    </div>
+    <div class="sg-text-readable ps-reveal">
+    <p>Les panneaux photovoltaïques sont conçus pour fonctionner pendant plusieurs décennies. Les technologies actuelles permettent d'atteindre une durée de vie moyenne de <span class="text-gold font-semibold">30 à 40 ans</span>, avec une production qui diminue très lentement au fil du temps.</p>
+    <p class="mt-4">La plupart des fabricants garantissent encore <span class="text-gold font-semibold">80 à 85 % de la puissance initiale après 25 ans</span>. Cela signifie que même après deux décennies, les panneaux continuent de produire une grande partie de leur électricité.</p>
+    <p class="mt-4">Sur les installations classiques, l'électronique repose souvent sur un onduleur central, qui doit généralement être remplacé après 10 à 15 ans.</p>
+    <p class="mt-4">Aujourd'hui, nous privilégions principalement les <span class="text-gold font-semibold">micro-onduleurs</span>, qui offrent une durée de vie généralement plus longue et permettent de <span class="font-semibold">gérer chaque panneau individuellement</span>.</p>
+    <p class="mt-4">C'est un vrai avantage pour la fiabilité et la performance de l'installation : si un panneau est partiellement <span class="font-semibold">ombragé, encrassé ou moins performant</span>, les autres continuent de produire normalement. Le système est donc plus robuste, plus précis et souvent plus efficace dans les conditions réelles.</p>
+    <p class="mt-4">En résumé, une installation solaire bien conçue avec des composants de qualité reste productive pendant de très nombreuses années, avec une performance mieux maîtrisée dans le temps.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INTRODUCTION HUB -->
+<section class="sg-section sg-section-dark">
+  <div class="sg-divider" id="sgsep02" aria-hidden="true"></div>
+  <div class="sg-container">
+    <div class="max-w-3xl mb-16 sg-text-readable">
+      <span class="sg-section-kicker ps-reveal">Contexte</span>
+      <h2 class="sg-section-title ps-reveal">Pourquoi le solaire se développe</h2>
+      <p class="sg-section-intro ps-reveal">Le solaire photovoltaïque connaît un essor sans précédent en France.</p>
+    </div>
+    <div class="sg-text-readable ps-reveal">
+    <p>La hausse du prix de l'électricité, les objectifs de transition énergétique et les progrès techniques des panneaux rendent l'investissement de plus en plus attractif pour les particuliers. Produire sa propre électricité n'est plus réservé à quelques pionniers : c'est devenu une solution accessible, rentable et pérenne.</p>
+    <p class="mt-4">Les particuliers s'y intéressent pour trois raisons principales : réduire leurs factures, anticiper les hausses tarifaires et valoriser leur patrimoine immobilier. Mais avant d'installer des panneaux, il est essentiel de bien comprendre le fonctionnement du solaire, la rentabilité réelle et les étapes clés du projet. Cette page vous guide à travers tout ce qu'il faut savoir.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1 : COMMENT FONCTIONNE LE SOLAIRE -->
+<section class="sg-section sg-section-dark sg-section-alt">
+  <div class="sg-divider" id="sgsep03" aria-hidden="true"></div>
+  <div class="sg-container">
+    <div class="max-w-3xl mb-16 sg-text-readable">
+      <span class="sg-section-kicker ps-reveal">Fonctionnement</span>
+      <h2 class="sg-section-title ps-reveal">Comment fonctionne une installation solaire photovoltaïque</h2>
+      <p class="sg-section-intro ps-reveal">Comprendre les trois piliers : production, autoconsommation et revente du surplus.</p>
+    </div>
+    <div class="sg-two-columns mt-12">
+      <div class="ps-reveal">
+        <p class="text-gray-300 mb-6">Une installation photovoltaïque repose sur un principe simple : <span class="text-gold font-semibold">produire</span> de l'électricité avec les panneaux, <span class="text-gold font-semibold">consommer</span> directement cette énergie dans la maison, et <span class="text-gold font-semibold">revendre</span> l'éventuel surplus au réseau.</p>
+        <h3 class="text-xl font-semibold text-gold mb-3">Production d'électricité solaire</h3>
+        <p>Les panneaux photovoltaïques captent les photons de la lumière et les convertissent en courant continu. L'onduleur (ou les micro-onduleurs) transforme ce courant en 230 V alternatif, compatible avec votre tableau électrique et vos appareils.</p>
+        <h3 class="text-xl font-semibold text-gold mt-6 mb-3">Autoconsommation</h3>
+        <p>L'autoconsommation consiste à consommer directement l'électricité produite par vos panneaux. C'est le mode le plus rentable : chaque kWh autoconsommé vous évite d'acheter l'électricité au prix du réseau (0,20 à 0,25 €/kWh).</p>
+        <h3 class="text-xl font-semibold text-gold mt-6 mb-3">Revente du surplus</h3>
+        <p>Quand vous produisez plus que vous ne consommez, l'excédent est injecté sur le réseau et racheté par votre fournisseur à 0,04 €/kWh. Un complément de revenus, moins intéressant que l'autoconsommation mais utile pour optimiser la production.</p>
+      </div>
+      <div class="w-full sg-img-premium-wrap sg-img-premium-wrap--graph ps-reveal">
+        <img src="/assets/images/solaire/schema-installation.jpg" alt="Schéma installation photovoltaïque : panneaux, onduleur, compteur et autoconsommation">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION : COMBIEN PRODUIT UNE INSTALLATION SOLAIRE -->
+<section class="sg-section sg-section-dark">
+  <div class="sg-divider" id="sgsep04" aria-hidden="true"></div>
+  <div class="sg-container">
+    <div class="max-w-3xl mb-16 sg-text-readable">
+      <span class="sg-section-kicker ps-reveal">Production</span>
+      <h2 class="sg-section-title ps-reveal">Combien produit une installation solaire en France</h2>
+      <p class="sg-section-intro ps-reveal">La production dépend de l'orientation, l'inclinaison et l'ensoleillement de votre région.</p>
+    </div>
+    <div class="sg-text-readable ps-reveal">
+    <p>La production d'une installation photovoltaïque dépend de plusieurs facteurs : l'orientation du toit, son inclinaison, la puissance installée et l'ensoleillement de la région.</p>
+    <p class="mt-4">En moyenne en France, une installation produit entre <span class="text-gold font-semibold">900 et 1 200 kWh par kWc installé</span>.</p>
+    </div>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 sg-card-grid">
+      <div class="p-6 border border-gray-800 ps-reveal ps-reveal-card sg-card-production">
+        <h3 class="text-gold font-semibold mb-2">Installation 3 kWc</h3>
+        <p class="text-sm text-gray-300">Production annuelle moyenne :<br>≈ 2 700 à 3 600 kWh</p>
+      </div>
+      <div class="p-6 border border-gray-800 ps-reveal ps-reveal-card sg-card-production">
+        <h3 class="text-gold font-semibold mb-2">Installation 6 kWc</h3>
+        <p class="text-sm text-gray-300">Production annuelle moyenne :<br>≈ 5 400 à 7 200 kWh</p>
+      </div>
+      <div class="p-6 border border-gray-800 ps-reveal ps-reveal-card sg-card-production">
+        <h3 class="text-gold font-semibold mb-2">Installation 9 kWc</h3>
+        <p class="text-sm text-gray-300">Production annuelle moyenne :<br>≈ 8 100 à 10 800 kWh</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 : ÉTUDE SOLAIRE -->
+<section class="sg-section sg-section-dark sg-section-alt">
+  <div class="sg-divider" id="sgsep05" aria-hidden="true"></div>
+  <div class="sg-container">
+    <div class="max-w-3xl mb-16 sg-text-readable">
+      <span class="sg-section-kicker ps-reveal">Étude</span>
+      <h2 class="sg-section-title ps-reveal">Pourquoi une étude solaire est indispensable</h2>
+      <p class="sg-section-intro ps-reveal">Une analyse complète de votre toiture pour optimiser votre projet.</p>
+    </div>
+    <div class="sg-two-columns mt-12">
+      <div class="ps-reveal">
+        <p>Avant d'investir, une étude solaire analyse votre projet sous tous les angles. L'orientation du toit (sud idéal, sud-est et sud-ouest corrects) détermine la production. L'inclinaison optimale se situe entre 30° et 35°. L'ombrage (arbres, cheminées, bâtiments voisins) peut réduire la production de 10 à 30 % : il doit être identifié et intégré dans la simulation.</p>
+        <p class="mt-4">La consommation du foyer est tout aussi importante : elle permet de dimensionner l'installation pour maximiser l'autoconsommation. Sans étude, vous investissez à l'aveugle. Découvrez notre page dédiée à l'<a href="/etude-solaire/" class="text-gold hover:text-gold underline">étude solaire</a> et notre <a href="/notre-methode/" class="text-gold hover:text-gold underline">méthode d'accompagnement</a>.</p>
+      </div>
+      <div class="w-full sg-img-premium-wrap ps-reveal">
+        <img src="/assets/images/solaire/analyse-toiture.jpg" alt="Analyse toiture solaire : orientation, inclinaison et potentiel photovoltaïque">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 : DIMENSIONNEMENT -->
+<section class="sg-section sg-section-dark">
+  <div class="sg-divider" id="sgsep06" aria-hidden="true"></div>
+  <div class="sg-container">
+    <div class="max-w-3xl mb-16 sg-text-readable">
+      <span class="sg-section-kicker ps-reveal">Dimensionnement</span>
+      <h2 class="sg-section-title ps-reveal">Combien de panneaux solaires faut-il pour une maison</h2>
+      <p class="sg-section-intro ps-reveal">La puissance idéale dépend de votre consommation et de votre toiture.</p>
+    </div>
+    <div class="sg-two-columns mt-12">
+      <div class="order-2 lg:order-1 w-full sg-img-premium-wrap ps-reveal">
+        <img src="/assets/images/solaire/calpinage-toiture.jpg" alt="Calpinage panneaux solaires sur toiture maison">
+      </div>
+      <div class="order-1 lg:order-2 ps-reveal">
+        <p>La puissance nécessaire dépend de trois facteurs : votre consommation annuelle (kWh), la surface de toiture disponible et l'orientation. Une maison type consomme 3 000 à 5 000 kWh/an ; une installation de 3 à 6 kWc couvre une part significative de ces besoins. Comptez environ 15 panneaux de 400 Wc pour 6 kWc, soit 25 à 30 m² de toiture.</p>
+        <p class="mt-4">Le dimensionnement optimal maximise l'autoconsommation sans surdimensionner. Trop de panneaux = surplus important revendu à bas prix. Trop peu = économies limitées. Notre guide <a href="/dimensionnement-photovoltaique/" class="text-gold hover:text-gold underline">dimensionnement photovoltaïque</a> vous explique tout.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 : BUREAU D'ÉTUDE -->
+<section class="sg-section sg-section-dark sg-section-alt">
+  <div class="sg-divider" id="sgsep07" aria-hidden="true"></div>
+  <div class="sg-container">
+    <div class="max-w-3xl mb-16 sg-text-readable">
+      <span class="sg-section-kicker ps-reveal">Expertise</span>
+      <h2 class="sg-section-title ps-reveal">Le rôle du bureau d'étude photovoltaïque</h2>
+      <p class="sg-section-intro ps-reveal">Une conception sur mesure pour maximiser votre retour sur investissement.</p>
+    </div>
+    <div class="ps-reveal">
+    <p>Un bureau d'étude photovoltaïque conçoit votre projet avant la pose. Il réalise l'analyse technique (toiture, ombrages, zone géographique), la simulation de production (kWh/an attendus) et l'optimisation du dimensionnement. Cette étape garantit que votre installation correspond à votre profil et maximise votre retour sur investissement.</p>
+    <p class="mt-4">Solarglobe intègre cette expertise dès la phase de conseil. Chaque projet bénéficie d'une étude personnalisée réalisée par des professionnels formés aux outils de simulation. Découvrez le <a href="/bureau-etude-photovoltaique/" class="text-gold hover:text-gold underline">rôle du bureau d'étude photovoltaïque</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION : COMPRENDRE LE SOLAIRE -->
+<section class="sg-section sg-section-dark sg-guides-block">
+  <div class="sg-divider" id="sgsep08" aria-hidden="true"></div>
+  <div class="sg-container">
+    <div class="max-w-3xl mb-16 sg-text-readable">
+      <span class="sg-section-kicker ps-reveal">Guides solaire</span>
+      <h2 class="sg-section-title ps-reveal">Comprendre le solaire</h2>
+      <p class="sg-section-intro ps-reveal">Approfondissez vos connaissances avec nos guides détaillés sur chaque aspect du photovoltaïque.</p>
+    </div>
+    <div class="sg-guides-grid mt-12">
+      <article class="sg-guide-card ps-reveal ps-reveal-card">
+        <a href="/le-solaire/autoconsommation-solaire/">
+          <div class="sg-guide-media">
+            <img src="/assets/images/solaire/autoconsommation.jpg" alt="Autoconsommation solaire : produire et consommer sa propre électricité">
+            <div class="sg-guide-overlay"></div>
+          </div>
+          <div class="sg-guide-content">
+            <h3>Autoconsommation solaire</h3>
+            <p>Produisez et consommez votre propre électricité.</p>
+            <span class="sg-guide-link">Comprendre le fonctionnement</span>
+          </div>
+        </a>
+      </article>
+      <article class="sg-guide-card ps-reveal ps-reveal-card">
+        <a href="/le-solaire/rentabilite-panneaux-solaires/">
+          <div class="sg-guide-media">
+            <img src="/assets/images/solaire/rentabilite.jpg" alt="Rentabilité des panneaux solaires et retour sur investissement">
+            <div class="sg-guide-overlay"></div>
+          </div>
+          <div class="sg-guide-content">
+            <h3>Rentabilité des panneaux solaires</h3>
+            <p>Combien rapportent réellement vos panneaux.</p>
+            <span class="sg-guide-link">Découvrir la rentabilité</span>
+          </div>
+        </a>
+      </article>
+      <article class="sg-guide-card ps-reveal ps-reveal-card">
+        <a href="/le-solaire/rendement-panneaux-solaires/">
+          <div class="sg-guide-media">
+            <img src="/assets/images/solaire/rendement.jpg" alt="Rendement des panneaux solaires photovoltaïques">
+            <div class="sg-guide-overlay"></div>
+          </div>
+          <div class="sg-guide-content">
+            <h3>Rendement des panneaux solaires</h3>
+            <p>Orientation et inclinaison : optimisez votre production.</p>
+            <span class="sg-guide-link">Voir le guide</span>
+          </div>
+        </a>
+      </article>
+      <article class="sg-guide-card ps-reveal ps-reveal-card">
+        <a href="/le-solaire/puissance-installation-solaire/">
+          <div class="sg-guide-media">
+            <img src="/assets/images/solaire/puissance-installation.jpg" alt="Puissance d'une installation solaire photovoltaïque">
+            <div class="sg-guide-overlay"></div>
+          </div>
+          <div class="sg-guide-content">
+            <h3>Puissance d'une installation solaire</h3>
+            <p>La puissance idéale pour votre maison.</p>
+            <span class="sg-guide-link">Analyser l'installation</span>
+          </div>
+        </a>
+      </article>
+      <article class="sg-guide-card ps-reveal ps-reveal-card">
+        <a href="/le-solaire/aides-panneaux-solaires/">
+          <div class="sg-guide-media">
+            <img src="/assets/images/solaire/aides-solaire.jpg" alt="Aides et subventions pour panneaux solaires">
+            <div class="sg-guide-overlay"></div>
+          </div>
+          <div class="sg-guide-content">
+            <h3>Aides pour panneaux solaires</h3>
+            <p>Toutes les aides pour financer votre projet.</p>
+            <span class="sg-guide-link">Voir le guide</span>
+          </div>
+        </a>
+      </article>
+      <article class="sg-guide-card ps-reveal ps-reveal-card">
+        <a href="/le-solaire/batterie-solaire/">
+          <div class="sg-guide-media">
+            <img src="/assets/images/solaire/batterie.jpg" alt="Batterie solaire et stockage de l'électricité">
+            <div class="sg-guide-overlay"></div>
+          </div>
+          <div class="sg-guide-content">
+            <h3>Batterie solaire</h3>
+            <p>Stockez votre énergie pour la consommer le soir.</p>
+            <span class="sg-guide-link">Voir le guide</span>
+          </div>
+        </a>
+      </article>
+    </div>
+    <div class="sg-cta-inline">
+      <a href="/etude-gratuite/" class="sg-btn-primary">Obtenir mon étude solaire gratuite</a>
+      <ul class="sg-reassurance">
+        <li>Étude personnalisée</li>
+        <li>Simulation de production</li>
+        <li>Estimation des économies</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION GUIDES EXPERTISE PREMIUM -->
+<section class="sg-section sg-guides sg-guides-block sg-section-alt">
+  <div class="sg-divider" id="sgsep09" aria-hidden="true"></div>
+  <div class="sg-container">
+    <div class="max-w-3xl mb-16 sg-text-readable">
+      <span class="sg-section-kicker ps-reveal">Guides photovoltaïques</span>
+      <h2 class="sg-section-title ps-reveal">Explorez nos guides expertise</h2>
+      <p class="sg-section-intro ps-reveal">Des ressources complètes pour comprendre le photovoltaïque et réussir votre projet solaire.</p>
+    </div>
+    <div class="sg-guides-grid mt-12">
+      <article class="sg-guide-card ps-reveal ps-reveal-card">
+        <a href="/etude-solaire/">
+          <div class="sg-guide-media">
+            <img src="/assets/images/solaire/etude-solaire.jpg" alt="Étude solaire maison et potentiel toiture">
+            <div class="sg-guide-overlay"></div>
+          </div>
+          <div class="sg-guide-content">
+            <h3>Étude solaire</h3>
+            <p>Votre maison est-elle adaptée au photovoltaïque ?</p>
+            <span class="sg-guide-link">Voir le guide</span>
+          </div>
+        </a>
+      </article>
+      <article class="sg-guide-card ps-reveal ps-reveal-card">
+        <a href="/rentabilite-solaire/">
+          <div class="sg-guide-media">
+            <img src="/assets/images/solaire/rentabilite.jpg" alt="Rentabilité panneaux solaires et retour sur investissement">
+            <div class="sg-guide-overlay"></div>
+          </div>
+          <div class="sg-guide-content">
+            <h3>Rentabilité solaire</h3>
+            <p>Combien rapportent réellement vos panneaux.</p>
+            <span class="sg-guide-link">Découvrir la rentabilité</span>
+          </div>
+        </a>
+      </article>
+      <article class="sg-guide-card ps-reveal ps-reveal-card">
+        <a href="/dimensionnement-photovoltaique/">
+          <div class="sg-guide-media">
+            <img src="/assets/images/solaire/dimensionnement.jpg" alt="Dimensionnement installation panneaux solaires maison">
+            <div class="sg-guide-overlay"></div>
+          </div>
+          <div class="sg-guide-content">
+            <h3>Dimensionnement photovoltaïque</h3>
+            <p>La puissance idéale pour votre maison.</p>
+            <span class="sg-guide-link">Analyser l'installation</span>
+          </div>
+        </a>
+      </article>
+      <article class="sg-guide-card ps-reveal ps-reveal-card">
+        <a href="/bureau-etude-photovoltaique/">
+          <div class="sg-guide-media">
+            <img src="/assets/images/solaire/bureau-etude.jpg" alt="Bureau d'étude photovoltaïque analyse toiture">
+            <div class="sg-guide-overlay"></div>
+          </div>
+          <div class="sg-guide-content">
+            <h3>Bureau d'étude photovoltaïque</h3>
+            <p>L'étude essentielle avant d'installer.</p>
+            <span class="sg-guide-link">Voir le guide</span>
+          </div>
+        </a>
+      </article>
+    </div>
+    <div class="sg-cta-inline">
+      <a href="/etude-gratuite/" class="sg-btn-primary">Obtenir mon étude solaire gratuite</a>
+      <ul class="sg-reassurance">
+        <li>Étude gratuite</li>
+        <li>Simulation de production</li>
+        <li>Sans engagement</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION : LES AVANTAGES DES PANNEAUX SOLAIRES -->
+<section class="sg-section sg-section-dark">
+  <div class="sg-divider" id="sgsep10" aria-hidden="true"></div>
+  <div class="sg-container">
+    <div class="max-w-3xl mb-16 sg-text-readable">
+      <span class="sg-section-kicker ps-reveal">Avantages</span>
+      <h2 class="sg-section-title ps-reveal">Les avantages des panneaux solaires</h2>
+      <p class="sg-section-intro ps-reveal">Réduisez votre facture, protégez-vous des hausses et valorisez votre bien.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 ps-reveal">
+      <div>
+        <h3 class="text-gold font-semibold mb-2">Réduction de la facture d'électricité</h3>
+        <p class="text-sm text-gray-300">L'autoconsommation permet d'utiliser directement l'électricité produite par les panneaux et de réduire significativement la facture énergétique.</p>
+      </div>
+      <div>
+        <h3 class="text-gold font-semibold mb-2">Protection contre la hausse des prix</h3>
+        <p class="text-sm text-gray-300">Produire sa propre énergie permet de limiter l'impact des augmentations du prix de l'électricité sur le long terme.</p>
+      </div>
+      <div>
+        <h3 class="text-gold font-semibold mb-2">Valorisation du bien immobilier</h3>
+        <p class="text-sm text-gray-300">Une maison équipée de panneaux photovoltaïques bénéficie souvent d'une meilleure valorisation sur le marché immobilier.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SOLAIRE -->
+<section class="sg-section sg-section-dark sg-section-alt">
+  <div class="sg-divider" id="sgsep11" aria-hidden="true"></div>
+  <div class="sg-container">
+    <div class="max-w-3xl mb-16 sg-text-readable">
+      <span class="sg-section-kicker ps-reveal">FAQ</span>
+      <h2 class="sg-section-title ps-reveal">Questions fréquentes</h2>
+      <p class="sg-section-intro ps-reveal">Les réponses aux questions les plus posées sur le solaire photovoltaïque.</p>
+    </div>
+    <div class="sg-faq mt-12">
+      <div class="sg-faq-item">
+        <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
+          <span>Les panneaux solaires fonctionnent-ils en hiver ?</span>
+          <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+        </button>
+        <div class="sg-faq-answer hidden">Oui. Les panneaux produisent même par temps nuageux, mais en moindre quantité. En hiver, la production est environ 3 à 4 fois inférieure à l'été (jours courts, soleil bas). Sur l'année, une installation bien orientée en Île-de-France produit environ 950 à 1 100 kWh par kWc installé.</div>
+      </div>
+      <div class="sg-faq-item">
+        <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
+          <span>Combien coûte une installation solaire ?</span>
+          <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+        </button>
+        <div class="sg-faq-answer hidden">Comptez environ 1 500 à 2 500 € par kWc hors aides. Une installation de 6 kWc coûte 9 000 à 15 000 € avant aides. La prime à l'autoconsommation et la TVA réduite (10 % ou 5,5 %) réduisent significativement la facture. Une <a href="/etude-gratuite/" class="text-gold underline">étude gratuite</a> vous donne un devis personnalisé.</div>
+      </div>
+      <div class="sg-faq-item">
+        <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
+          <span>Combien de panneaux pour une maison ?</span>
+          <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+        </button>
+        <div class="sg-faq-answer hidden">Une maison type (3 000 à 5 000 kWh/an) est souvent adaptée à une installation de 3 à 6 kWc, soit 8 à 15 panneaux de 400 Wc. La surface nécessaire : environ 15 à 30 m² de toiture. Le dimensionnement précis dépend de votre consommation et de l'orientation. Notre <a href="/dimensionnement-photovoltaique/" class="text-gold underline">guide dimensionnement</a> détaille les critères.</div>
+      </div>
+      <div class="sg-faq-item">
+        <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
+          <span>Les panneaux solaires sont-ils rentables ?</span>
+          <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+        </button>
+        <div class="sg-faq-answer hidden">Oui, avec un bon dimensionnement et les aides. Le retour sur investissement se situe en moyenne entre 8 et 12 ans. Au-delà, vous profitez d'électricité à faible coût pendant 15 à 20 ans. La rentabilité augmente avec le prix de l'électricité. Consultez notre page <a href="/rentabilite-solaire/" class="text-gold underline">rentabilité solaire</a> pour les détails.</div>
+      </div>
+      <div class="sg-faq-item">
+        <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
+          <span>Qu'est-ce que l'autoconsommation solaire ?</span>
+          <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+        </button>
+        <div class="sg-faq-answer hidden">Consommer l'électricité produite par vos panneaux directement dans votre maison, plutôt que de l'injecter sur le réseau. Cela réduit votre facture et votre dépendance aux fournisseurs. Le surplus peut être revendu à 0,04 €/kWh ou stocké dans une batterie. Découvrez notre <a href="/le-solaire/autoconsommation-solaire/" class="text-gold underline">guide autoconsommation</a>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION : LE SOLAIRE EST-IL ADAPTÉ À MA MAISON -->
+<section class="sg-section sg-section-dark">
+  <div class="sg-divider" id="sgsep13" aria-hidden="true"></div>
+  <div class="sg-container">
+    <div class="max-w-3xl mb-16 sg-text-readable">
+      <span class="sg-section-kicker ps-reveal">Éligibilité</span>
+      <h2 class="sg-section-title ps-reveal">Le solaire est-il adapté à votre maison ?</h2>
+      <p class="sg-section-intro ps-reveal">Vérifiez les critères essentiels pour une installation réussie.</p>
+    </div>
+    <div class="sg-text-readable ps-reveal">
+    <p>Plusieurs critères permettent de savoir si votre maison est adaptée à une installation photovoltaïque :</p>
+    <ul class="mt-6 space-y-3 text-gray-300">
+      <li>• une toiture bien orientée (sud, sud-est ou sud-ouest)</li>
+      <li>• une inclinaison comprise entre 20° et 40°</li>
+      <li>• peu d'ombrages (arbres, bâtiments voisins)</li>
+      <li>• une surface disponible d'environ 20 à 30 m²</li>
+    </ul>
+    <p class="mt-6">Une étude solaire permet d'analyser précisément le potentiel de votre toiture et d'estimer la production d'électricité et les économies possibles.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL UNIFIÉ -->
+<section class="sg-cta-editorial">
+  <div class="sg-cta-inner">
+    <h2>Passez à l'énergie solaire</h2>
+    <p>Nos experts réalisent gratuitement l'étude de votre toiture et estiment vos économies.</p>
+    <a href="/etude-gratuite/" class="sg-btn-cta-primary">Obtenir mon étude solaire gratuite</a>
+    <a href="/le-solaire/" class="sg-btn-cta-secondary">Voir comment fonctionne une installation solaire</a>
+    <p class="sg-cta-reassurance">Étude gratuite · Estimation personnalisée · Sans engagement</p>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="/assets/js/footer.js"></script>
+
+<script>
+document.querySelectorAll('.sg-faq-item').forEach(item => {
+  const btn = item.querySelector('.sg-faq-question');
+  const answer = item.querySelector('.sg-faq-answer');
+  if (!btn || !answer) return;
+  btn.addEventListener('click', () => {
+    const isOpen = !answer.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', isOpen);
+    const icon = btn.querySelector('.sg-faq-icon');
+    if (icon) icon.style.transform = isOpen ? 'rotate(45deg)' : 'none';
+  });
+});
+</script>
+
+<!-- Scroll reveal – IntersectionObserver (comme produits/index.html) -->
+<script>
+(function() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const els = document.querySelectorAll('.ps-reveal');
+  if (!els.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('ps-visible');
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  els.forEach(el => io.observe(el));
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.solarglobe.fr/"},
+    {"@type": "ListItem", "position": 2, "name": "Le solaire", "item": "https://www.solarglobe.fr/le-solaire/"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Le solaire photovoltaïque : comprendre, produire et économiser",
+  "description": "Hub pédagogique sur le solaire photovoltaïque : fonctionnement, rentabilité, étude solaire, dimensionnement.",
+  "url": "https://www.solarglobe.fr/le-solaire/",
+  "publisher": {"@type": "Organization", "name": "Solarglobe", "url": "https://www.solarglobe.fr/"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Les panneaux solaires fonctionnent-ils en hiver ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Les panneaux produisent même par temps nuageux, mais en moindre quantité. En hiver, la production est environ 3 à 4 fois inférieure à l'été. Sur l'année, une installation bien orientée en Île-de-France produit environ 950 à 1 100 kWh par kWc installé."}},
+    {"@type": "Question", "name": "Combien coûte une installation solaire ?", "acceptedAnswer": {"@type": "Answer", "text": "Comptez environ 1 500 à 2 500 € par kWc hors aides. Une installation de 6 kWc coûte 9 000 à 15 000 € avant aides. La prime à l'autoconsommation et la TVA réduite réduisent significativement la facture."}},
+    {"@type": "Question", "name": "Combien de panneaux pour une maison ?", "acceptedAnswer": {"@type": "Answer", "text": "Une maison type est souvent adaptée à une installation de 3 à 6 kWc, soit 8 à 15 panneaux de 400 Wc. La surface nécessaire : environ 15 à 30 m² de toiture."}},
+    {"@type": "Question", "name": "Les panneaux solaires sont-ils rentables ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, avec un bon dimensionnement et les aides. Le retour sur investissement se situe en moyenne entre 8 et 12 ans. Au-delà, vous profitez d'électricité à faible coût pendant 15 à 20 ans."}},
+    {"@type": "Question", "name": "Qu'est-ce que l'autoconsommation solaire ?", "acceptedAnswer": {"@type": "Answer", "text": "Consommer l'électricité produite par vos panneaux directement dans votre maison, plutôt que de l'injecter sur le réseau. Le surplus peut être revendu à 0,04 €/kWh ou stocké dans une batterie."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SolarEnergy",
+  "name":"Installation solaire photovoltaïque résidentielle",
+  "description":"Production d'électricité solaire par panneaux photovoltaïques pour autoconsommation et revente du surplus.",
+  "provider":{
+    "@type":"Organization",
+    "name":"SolarGlobe",
+    "url":"https://www.solarglobe.fr/"
+  }
+}
+</script>
+
+</body>
+</html>

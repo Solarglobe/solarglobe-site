@@ -1,0 +1,9 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cercle médaille -->
+  <circle cx="40" cy="28" r="14" stroke="#C39847" stroke-width="2"/>
+  <!-- Check au centre -->
+  <polyline points="35,28 39,32 46,24" stroke="#C39847" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Rubans séparés -->
+  <polygon points="32,42 36,54 40,48" stroke="#C39847" stroke-width="1.5" fill="none"/>
+  <polygon points="48,42 44,54 40,48" stroke="#C39847" stroke-width="1.5" fill="none"/>
+</svg>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="canonical" href="https://www.solarglobe.fr/blog/autonomie-solaire/" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Autonomie solaire : mythe vs réalité — guide expert | SolarGlobe</title>
+  <meta name="description" content="Autonomie solaire résidentielle : mythe vs réalité. Batterie, pilotage, dimensionnement. Quel niveau d'autonomie est intelligent pour votre projet ? Guide expert SolarGlobe." />
+  <meta name="robots" content="index, follow" />
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{ ad_storage:'denied', analytics_storage:'denied', wait_for_update:500 });
+  </script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N2ZQKS6F');</script>
+
+  <meta property="og:title" content="Autonomie solaire : mythe vs réalité — guide expert | SolarGlobe" />
+  <meta property="og:description" content="Quel niveau d'autonomie est intelligent pour votre projet ? Batterie, pilotage, dimensionnement. Guide expert." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.solarglobe.fr/blog/autonomie-solaire/" />
+  <meta property="og:image" content="https://www.solarglobe.fr/assets/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Autonomie solaire : mythe vs réalité" />
+  <meta name="twitter:description" content="Quel niveau d'autonomie est intelligent pour votre projet ?" />
+  <meta name="twitter:image" content="https://www.solarglobe.fr/assets/images/blog/blog-autonomie-solaire.webp" />
+
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
+  <link rel="stylesheet" href="/assets/css/le-solaire-editorial.css" />
+  <link rel="stylesheet" href="/assets/css/blog.css" />
+  <link rel="stylesheet" href="/assets/css/header-common.css" />
+  <link rel="stylesheet" href="/assets/css/footer-common.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{gold:'#C39847'}}}}</script>
+
+  <style>
+    :root{--bg:#0D0D0D;--gold:#C39847;--narrow:560px;--medium:720px;--wide:960px}
+    body{font-family:'Montserrat',sans-serif;background:var(--bg);color:#fff}
+    .text-gold{color:var(--gold)!important}
+    .sg-art-wrap{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+    .sg-art-main{display:grid;gap:2rem}
+    @media (min-width:1024px){.sg-art-main{grid-template-columns:1fr 240px;align-items:start}.sg-art-sidebar{position:sticky;top:100px}}
+    .sg-art-narrow{max-width:var(--narrow)}
+    .sg-art-medium{max-width:var(--medium)}
+    .sg-art-wide{max-width:var(--wide)}
+    .sg-art-full{max-width:100%}
+    .sg-art-body section{margin-bottom:4rem;transition:background .3s ease}
+    .sg-art-body section+section{margin-top:0}
+    .sg-art-body .sg-breath{margin-top:3rem;margin-bottom:3rem}
+    .sg-zone-sombre{background:rgba(0,0,0,.22);padding:2.5rem 1.5rem;border-radius:12px}
+    .sg-zone-claire{background:rgba(255,255,255,.04);padding:2.5rem 1.5rem;border-radius:12px}
+    .sg-hero-editorial{position:relative;min-height:280px;display:grid;grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem 2rem;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,#0D0D0D 100%)}
+    @media (min-width:768px){.sg-hero-editorial{grid-template-columns:1.2fr 1fr;align-items:end;min-height:240px;padding:2rem 2rem 2.5rem}}
+    .sg-hero-editorial::before{content:"";position:absolute;inset:0;background:url(/assets/images/blog/blog-autonomie-solaire.webp) center/cover;z-index:-2}
+    .sg-hero-editorial::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.5) 50%,rgba(0,0,0,.85) 100%);z-index:-1}
+    .sg-hero-left,.sg-hero-right{position:relative;z-index:1}
+    .sg-hero-badge{display:inline-block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);padding:4px 10px;margin-bottom:10px;background:rgba(255,255,255,.06)}
+    .sg-hero-bread{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:6px}
+    .sg-hero-bread a{color:rgba(255,255,255,.7);text-decoration:none}
+    .sg-hero-bread a:hover{color:var(--gold)}
+    .sg-hero-title{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;line-height:1.25;color:#fff;margin-bottom:6px}
+    .sg-hero-accroche{font-size:clamp(.85rem,1.1vw,.9rem);color:rgba(255,255,255,.85);line-height:1.5}
+    .sg-hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    @media (min-width:480px){.sg-hero-stats{grid-template-columns:repeat(3,1fr)}}
+    .sg-hero-stat{background:rgba(0,0,0,.2);border-radius:6px;padding:10px 12px;text-align:center}
+    .sg-hero-stat-num{font-size:1.1rem;font-weight:700;color:var(--gold);line-height:1.2}
+    .sg-hero-stat-label{font-size:10px;color:rgba(255,255,255,.6);margin-top:2px;text-transform:uppercase;letter-spacing:.04em}
+    .sg-hero-meta{font-size:11px;color:rgba(255,255,255,.5);margin-top:12px}
+    .sg-sidebar{background:rgba(0,0,0,.15);border-radius:6px;padding:1rem;margin-bottom:1rem}
+    .sg-sidebar-title{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;margin-bottom:10px}
+    .sg-sidebar ol{list-style:none;padding:0;margin:0}
+    .sg-sidebar li{margin-bottom:6px}
+    .sg-sidebar a{font-size:12px;color:rgba(255,255,255,.8);text-decoration:none;transition:color .2s ease,padding-left .2s ease}
+    .sg-sidebar a:hover{color:var(--gold)}
+    .sg-maj-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start;padding:1rem 1.25rem;background:rgba(0,0,0,.15);border-radius:10px;margin-bottom:2.5rem;transition:background .25s ease}
+    .sg-maj-bar .sg-maj-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;flex-shrink:0}
+    .sg-maj-bar p{margin:0;font-size:12px;color:rgba(255,255,255,.8);line-height:1.5}
+    .sg-art-body h2{font-size:1.4rem;font-weight:700;color:#fff;margin:0 0 1.25rem 0;letter-spacing:-.02em}
+    .sg-art-body p{margin-bottom:1rem;line-height:1.65;color:rgba(255,255,255,.88);font-size:15px}
+    .sg-art-body p.lead{font-size:1rem;font-weight:600;color:rgba(255,255,255,.95)}
+    .sg-punch-full{padding:1.5rem 0;margin:3.5rem 0;font-size:1.05rem;font-weight:600;color:rgba(255,255,255,.95);border-left:3px solid var(--gold);background:transparent;padding-left:1.5rem;transition:border-color .25s ease}
+    .sg-punch-full:hover{border-left-color:rgba(195,152,71,.8)}
+    .sg-chiffre-fort-wrap{padding:6rem 3rem;margin:6rem 0;text-align:center;max-width:100%;position:relative;background:linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(195,152,71,.03) 50%,rgba(0,0,0,.2) 100%);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+    .sg-chiffre-fort{font-size:clamp(6rem,16vw,10rem);font-weight:700;color:var(--gold);line-height:1;letter-spacing:-.05em;text-shadow:0 0 60px rgba(195,152,71,.25),0 0 120px rgba(195,152,71,.1);animation:sg-chiffre-pulse 4s ease-in-out infinite}
+    @keyframes sg-chiffre-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.95;transform:scale(1.02)}}
+    .sg-chiffre-fort-sub{font-size:15px;color:rgba(255,255,255,.55);margin-top:1.5rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.5}
+    .sg-chiffre-bar{height:6px;background:rgba(255,255,255,.08);border-radius:3px;max-width:400px;margin:2rem auto 0;overflow:hidden}
+    .sg-chiffre-bar-fill{height:100%;width:70%;background:linear-gradient(90deg,var(--gold),rgba(195,152,71,.4));border-radius:3px;box-shadow:0 0 12px rgba(195,152,71,.2)}
+    .sg-2col{display:grid;gap:1.5rem}
+    @media (min-width:768px){.sg-2col{grid-template-columns:1fr 1fr}}
+    .sg-card{background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.4));border:1px solid rgba(195,152,71,.15);border-radius:10px;padding:1.5rem;backdrop-filter:blur(6px);box-shadow:0 10px 40px rgba(0,0,0,.4);transition:transform .3s ease,box-shadow .3s ease}
+    .sg-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.5)}
+    .sg-card-highlight{background:linear-gradient(180deg,rgba(195,152,71,.08),rgba(0,0,0,.35));border-color:rgba(195,152,71,.3);box-shadow:0 10px 40px rgba(0,0,0,.4),0 0 24px rgba(195,152,71,.06)}
+    .sg-card-highlight:hover{box-shadow:0 16px 48px rgba(0,0,0,.5),0 0 32px rgba(195,152,71,.1)}
+    .sg-card-neutre{background:rgba(0,0,0,.08);border:none;box-shadow:none}
+    .sg-card-neutre:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+    .sg-card h4{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;margin-bottom:10px}
+    .sg-table{width:100%;border-collapse:collapse;font-size:13px}
+    .sg-table td{padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .sg-table .gold{color:var(--gold);font-weight:600}
+    .sg-exemples-bandeau{display:flex;flex-wrap:wrap;gap:12px 20px;padding:.875rem 1rem;border-radius:6px;margin-top:1rem;font-size:13px}
+    .sg-card-neutre.sg-exemples-bandeau{padding:1.25rem 1.25rem;border-radius:10px}
+    .sg-exemples-bandeau span{color:rgba(255,255,255,.9)}
+    .sg-exemples-bandeau .val{color:var(--gold);font-weight:600}
+    .sg-block-h{display:grid;gap:1rem;padding:1.25rem 1.5rem;background:rgba(0,0,0,.08);border-radius:10px;margin:1.25rem 0;transition:background .3s ease,transform .2s ease}
+    .sg-block-h:hover{background:rgba(0,0,0,.12)}
+    @media (min-width:640px){.sg-block-h{grid-template-columns:auto 1fr;align-items:start}}
+    .sg-block-h .sg-block-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:700;min-width:100px}
+    .sg-block-h.vigilance{background:rgba(0,0,0,.12)}
+    .sg-block-h.vigilance:hover{background:rgba(0,0,0,.16)}
+    .sg-timeline{display:grid;gap:6px;font-size:13px}
+    .sg-timeline-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+    .sg-timeline-row:last-child{border-bottom:none}
+    .sg-timeline .gold{color:var(--gold)}
+    .sg-cta-bar{display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between;padding:3rem 3.5rem;margin:5rem 0;background:linear-gradient(135deg,rgba(195,152,71,.08) 0%,rgba(0,0,0,.2) 100%);border:1px solid rgba(195,152,71,.4);border-radius:12px;width:100%;max-width:100%}
+    .sg-cta-bar h3{font-size:1.5rem;font-weight:700;color:#fff;margin:0 0 8px 0;letter-spacing:-.02em}
+    .sg-cta-bar p{margin:0;font-size:1rem;color:rgba(255,255,255,.9);line-height:1.5}
+    .sg-cta-bar .btn{flex-shrink:0;display:inline-block;background:var(--gold);color:#0D0D0D;font-weight:700;padding:16px 32px;border-radius:8px;text-decoration:none;transition:all .3s;font-size:16px;box-shadow:0 4px 24px rgba(195,152,71,.3)}
+    .sg-cta-bar .btn:hover{background:#D4A84E;transform:translateY(-2px);box-shadow:0 8px 32px rgba(195,152,71,.4)}
+    .sg-faq-compact{display:grid;gap:8px}
+    .sg-faq-compact details{background:rgba(0,0,0,.08);border-radius:8px;padding:12px 16px;transition:background .25s ease}
+    .sg-faq-compact details:hover{background:rgba(0,0,0,.12)}
+    .sg-faq-compact details[open]{background:rgba(0,0,0,.1)}
+    .sg-faq-compact summary{font-weight:600;cursor:pointer;color:#fff;font-size:13px}
+    .sg-faq-compact p{margin:6px 0 0 0;font-size:13px;color:rgba(255,255,255,.8);line-height:1.5}
+    .sg-related{display:grid;grid-template-columns:1fr;gap:.75rem;margin-top:2rem}
+    @media (min-width:640px){.sg-related{grid-template-columns:1fr 1fr}}
+    .sg-related a{display:flex;gap:1rem;align-items:center;padding:1rem 1.25rem;background:rgba(0,0,0,.08);border-radius:10px;text-decoration:none;transition:background .25s ease,transform .2s ease}
+    .sg-related a:hover{background:rgba(0,0,0,.14);transform:translateX(4px)}
+    .sg-related img{width:72px;height:54px;object-fit:cover;border-radius:6px;flex-shrink:0}
+    .sg-related .sg-related-txt{flex:1}
+    .sg-related .sg-related-txt strong{color:rgba(255,255,255,.95);font-size:13px}
+    .sg-related .sg-related-txt span{font-size:12px;color:rgba(255,255,255,.55)}
+    :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2ZQKS6F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="header-placeholder"></div>
+<script src="/assets/js/header.js"></script>
+
+<div class="h-20"></div>
+
+<!-- HERO ÉDITORIAL ASYMÉTRIQUE -->
+<header class="sg-hero-editorial">
+  <div class="sg-hero-left">
+    <span class="sg-hero-badge">Guide expert</span>
+    <p class="sg-hero-bread"><a href="/">Accueil</a> / <a href="/blog/">Blog</a> / Autonomie solaire</p>
+    <h1 class="sg-hero-title">Autonomie solaire : mythe vs réalité</h1>
+    <p class="sg-hero-accroche">Quel niveau d'autonomie est intelligent pour votre projet ? Batterie, pilotage, dimensionnement. La vraie question n'est pas « comment devenir autonome » mais « quel équilibre choisir ».</p>
+    <p class="sg-hero-meta">Par SolarGlobe · 8 min</p>
+  </div>
+  <div class="sg-hero-right">
+    <div class="sg-hero-stats">
+      <div class="sg-hero-stat"><div class="sg-hero-stat-num">50–80 %</div><div class="sg-hero-stat-label">Autonomie réaliste</div></div>
+      <div class="sg-hero-stat"><div class="sg-hero-stat-num">5 kWh</div><div class="sg-hero-stat-label">Batterie type</div></div>
+      <div class="sg-hero-stat"><div class="sg-hero-stat-num">+25 %</div><div class="sg-hero-stat-label">Gain pilotage</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- LAYOUT PRINCIPAL -->
+<div class="sg-art-wrap">
+  <div class="sg-maj-bar">
+    <span class="sg-maj-label">En bref</span>
+    <p>L'autonomie solaire n'est pas une course au 100 %. C'est un équilibre entre production, stockage et usage. Le bon projet n'est pas le plus autonome — c'est le plus rentable.</p>
+  </div>
+
+  <div class="sg-art-main">
+    <article class="sg-art-body">
+      <!-- INTRO -->
+      <section id="intro" class="sg-art-narrow">
+        <p class="lead">L'autonomie solaire fait rêver. Produire sa propre électricité, ne plus dépendre du réseau, maîtriser ses coûts.</p>
+        <p>Mais dans la réalité, une maison 100 % autonome est rare. Et surtout, elle n'est pas toujours pertinente. La vraie question n'est pas « comment devenir autonome ? » mais plutôt « quel niveau d'autonomie est intelligent pour mon projet ? »</p>
+        <p>90 % des installations solaires en France sont sous-optimisées. Dans la majorité des cas, ce n'est pas un problème de panneaux, ni de puissance installée. C'est un problème de stratégie. Une installation peut produire correctement… mais être mal utilisée, mal dimensionnée ou mal pilotée. Résultat : une partie importante de l'énergie produite est perdue ou revendue à faible valeur, alors qu'elle pourrait être utilisée directement dans la maison.</p>
+      </section>
+
+      <!-- PUNCHLINE -->
+      <div class="sg-art-full">
+        <p class="sg-punch-full">Le bon projet n'est pas le plus autonome. C'est le plus rentable.</p>
+      </div>
+
+      <!-- SECTION 1 : MYTHE VS RÉALITÉ -->
+      <section id="mythe-realite" class="sg-2col sg-art-medium">
+        <div>
+          <h2>Autonomie : mythe vs réalité</h2>
+          <p>On confond souvent : <span class="text-gold">autonomie partielle</span> (30 à 70 %), <span class="text-gold">forte autonomie</span> (70 à 90 %) et <span class="text-gold">autonomie totale</span> — très rare en résidentiel.</p>
+          <p>Une maison classique consomme le matin, le soir et la nuit. Or le solaire produit en journée uniquement. Donc sans stockage : impossible d'être autonome. Et même avec batterie : autonomie totale = complexe + coûteuse.</p>
+        </div>
+        <div class="sg-block-h vigilance">
+          <span class="sg-block-label">Vigilance</span>
+          <p class="mb-0">Croire qu'une batterie suffit à rendre autonome est une erreur. Elle optimise. Elle ne transforme pas une installation mal dimensionnée en projet rentable.</p>
+        </div>
+      </section>
+
+      <!-- SECTION 2 : LA BATTERIE -->
+      <section id="batterie" class="sg-art-wide">
+        <h2>Le vrai rôle de la batterie</h2>
+        <p class="sg-art-narrow">La batterie n'est pas magique. Elle sert à décaler l'énergie du jour vers le soir et à augmenter l'autoconsommation. Mais elle a un coût élevé, une durée de vie limitée, et ne couvre pas tous les besoins.</p>
+
+        <div class="sg-2col" style="margin-top:1.5rem">
+          <div class="sg-card">
+            <h4>Ce que fait la batterie</h4>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:1.8">
+              <li>→ Décaler l'énergie du jour vers le soir</li>
+              <li>→ Augmenter l'autoconsommation</li>
+              <li>→ Réduire la dépendance au réseau</li>
+            </ul>
+          </div>
+          <div class="sg-card">
+            <h4>Ses limites</h4>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:1.8">
+              <li>→ Coût élevé</li>
+              <li>→ Durée de vie limitée</li>
+              <li>→ Ne couvre pas tous les besoins</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sg-card sg-card-neutre sg-exemples-bandeau">
+          <span>Batterie 5 kWh</span><span class="val">Soirée normale couverte</span>
+          <span>Maison en hiver</span><span class="val">Non couvert</span>
+        </div>
+
+        <p class="text-sm text-white/60 mt-3">Une batterie 5 kWh couvre une soirée normale, mais pas une maison complète en hiver. La batterie optimise — elle ne rend pas autonome à 100 %.</p>
+      </section>
+
+      <!-- CHIFFRE FORT -->
+      <div class="sg-art-full">
+        <div class="sg-chiffre-fort-wrap">
+          <p class="sg-chiffre-fort">70 %</p>
+          <p class="sg-chiffre-fort-sub">Autoconsommation atteignable avec pilotage sur une maison 6 kWc. Sans batterie. Sans changer l'installation. L'écart avec une installation non pilotée (35 %) est énorme — et ne dépend pas des aides.</p>
+          <div class="sg-chiffre-bar"><div class="sg-chiffre-bar-fill"></div></div>
+        </div>
+      </div>
+
+      <!-- SECTION 3 : CE QUI CHANGE VRAIMENT -->
+      <section id="ce-qui-change" class="sg-art-wide sg-zone-sombre">
+        <h2>Ce qui change vraiment</h2>
+        <p>L'autonomie solaire = combinaison de 3 éléments : <strong>dimensionnement</strong>, <strong>profil de consommation</strong> et <strong>pilotage énergétique</strong>.</p>
+
+        <div class="sg-card sg-card-highlight" style="margin-top:1.5rem">
+          <h4>Exemple concret — Maison 6 kWc</h4>
+          <div class="sg-timeline">
+            <div class="sg-timeline-row"><span>Sans pilotage</span><span class="gold">35 % autoconsommation</span></div>
+            <div class="sg-timeline-row"><span>Avec pilotage</span><span class="gold">55 à 70 %</span></div>
+            <div class="sg-timeline-row"><span>Avec batterie</span><span class="gold">70 à 85 %</span></div>
+          </div>
+        </div>
+
+        <p class="mt-4">L'écart est énorme. Et ne dépend pas des aides.</p>
+
+        <div class="sg-block-h" style="margin-top:2rem">
+          <span class="sg-block-label">Exemple concret SolarGlobe</span>
+          <div>
+            <p class="mb-0">Maison de 120 m² située en Île-de-France, équipée d'une installation photovoltaïque de 6 kWc. Dans un premier scénario, sans optimisation particulière, le taux d'autoconsommation est de 38 %. Après mise en place d'un pilotage simple (chauffe-eau en journée, programmation des appareils, adaptation des usages), ce taux monte à 64 %. Cela représente un gain d'environ 300 € par an, sans ajouter de panneaux ni de batterie. Ce type d'écart est très fréquent. La performance d'une installation dépend autant de son utilisation que de sa puissance.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4 : LE PILOTAGE -->
+      <section id="pilotage" class="sg-art-wide sg-zone-claire">
+        <h2>Le vrai levier : le pilotage</h2>
+        <p>Ce que les gens ignorent : le vrai gain ne vient pas des panneaux, mais de l'usage.</p>
+        <p><strong>Pilotage =</strong> chauffe-eau en journée, recharge véhicule électrique, appareils programmés, gestion intelligente. Gain : <span class="text-gold">+15 à +25 % d'autoconsommation</span> — sans changer l'installation.</p>
+
+        <div class="sg-block-h" style="margin-top:1.5rem">
+          <span class="sg-block-label">En pratique</span>
+          <p class="mb-0">Chauffe-eau, VMC, clim, borne EV : programmez les gros consommateurs en journée. L'impact est immédiat et ne coûte rien en matériel supplémentaire.</p>
+        </div>
+      </section>
+
+      <!-- SECTION : ERREURS FRÉQUENTES -->
+      <section id="erreurs" class="sg-art-wide">
+        <h2>Les erreurs les plus fréquentes en solaire</h2>
+        <p>Dans la majorité des projets, les erreurs ne viennent pas du matériel, mais des choix faits en amont. Voici les trois erreurs les plus fréquentes :</p>
+        <p><strong>Première erreur : chercher à être autonome à tout prix.</strong> Cela conduit souvent à surdimensionner l'installation ou à investir dans une batterie trop importante, avec un retour sur investissement dégradé.</p>
+        <p><strong>Deuxième erreur : installer une batterie sans optimiser les usages.</strong> Une batterie mal utilisée ne fait que déplacer le problème, sans améliorer réellement la performance globale.</p>
+        <p><strong>Troisième erreur : ne pas adapter le projet au mode de vie réel.</strong> Chaque foyer consomme différemment. Un projet standardisé est rarement optimal.</p>
+        <p>Dans ces situations, le résultat est toujours le même : un investissement plus élevé, pour une rentabilité plus faible.</p>
+      </section>
+
+      <!-- SECTION 5 : STRATÉGIE SOLARGLOBE -->
+      <section id="strategie" class="sg-art-narrow">
+        <h2>Stratégie SolarGlobe</h2>
+        <p>Chez SolarGlobe, on ne cherche pas l'autonomie maximale. On cherche l'autonomie optimale — adaptée à votre maison, à vos usages et à votre budget. Un projet bien pensé produit moins, mais rapporte plus.</p>
+        <p>Chaque semaine, nous analysons des projets solaires dans toute la France. Dans une grande partie des cas, les installations pourraient produire plus efficacement sans ajouter de matériel, simplement en ajustant la stratégie globale. C'est pour cela que notre approche ne consiste pas à vendre plus de panneaux, mais à concevoir des projets adaptés, cohérents et réellement performants dans le temps.</p>
+      </section>
+
+      <!-- CTA -->
+      <div class="sg-cta-bar" id="cta">
+        <div>
+          <h3>Votre autonomie optimale, chiffrée en 48 h</h3>
+          <p>On calcule votre projet : dimensionnement, pilotage, batterie ou pas. Pas de promesse. Pas de vente. Juste une étude sur-mesure pour comprendre quel niveau d'autonomie est intelligent pour vous.</p>
+        </div>
+        <a href="/etude-gratuite/" class="btn">Obtenir mon étude solaire gratuite</a>
+      </div>
+
+      <!-- FAQ COMPACTE -->
+      <section id="faq" style="margin-top:4rem">
+        <h2>FAQ — Autonomie solaire</h2>
+        <div class="sg-faq-compact">
+          <details>
+            <summary>Peut-on être 100 % autonome ?</summary>
+            <p>Oui, mais rarement en résidentiel classique. Cela nécessite surdimensionnement + batterie importante + coût élevé.</p>
+          </details>
+          <details>
+            <summary>Quelle autonomie réaliste ?</summary>
+            <p>Entre 50 % et 80 % dans la majorité des projets bien conçus.</p>
+          </details>
+          <details>
+            <summary>La batterie est-elle obligatoire ?</summary>
+            <p>Non. Elle améliore l'autonomie mais n'est pas toujours rentable.</p>
+          </details>
+          <details>
+            <summary>Peut-on être autonome l'hiver ?</summary>
+            <p>Non. La production solaire est trop faible.</p>
+          </details>
+          <details>
+            <summary>Le solaire rend-il indépendant ?</summary>
+            <p>Il réduit fortement la dépendance, mais ne la supprime pas totalement.</p>
+          </details>
+          <details>
+            <summary>Quel est le bon niveau d'autonomie ?</summary>
+            <p>Il n'existe pas de chiffre universel. Un bon niveau d'autonomie est celui qui permet de maximiser la rentabilité de l'installation en fonction de votre consommation, de votre mode de vie et de votre budget. Dans la majorité des cas, une autonomie comprise entre 50 % et 80 % représente un équilibre optimal entre investissement et performance. Chercher à atteindre 100 % d'autonomie est possible, mais rarement pertinent économiquement en résidentiel.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- À LIRE ENSUITE -->
+      <div class="sg-related">
+        <a href="/blog/aides-financieres/">
+          <img src="/assets/images/blog/blog-aides-financieres.webp" alt="" width="80" height="60" loading="lazy" />
+          <div class="sg-related-txt"><strong>Aides photovoltaïque 2026</strong><br><span>Prime, TVA 5,5 %, surplus</span></div>
+        </a>
+        <a href="/blog/">
+          <div class="sg-related-txt"><strong>← Retour au blog</strong><br><span>Tous nos articles</span></div>
+        </a>
+      </div>
+    </article>
+
+    <!-- SIDEBAR STICKY -->
+    <aside class="sg-art-sidebar">
+      <div class="sg-sidebar">
+        <div class="sg-sidebar-title">Sommaire</div>
+        <ol>
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#mythe-realite">Mythe vs réalité</a></li>
+          <li><a href="#batterie">Le rôle de la batterie</a></li>
+          <li><a href="#ce-qui-change">Ce qui change vraiment</a></li>
+          <li><a href="#pilotage">Le pilotage</a></li>
+          <li><a href="#erreurs">Erreurs fréquentes</a></li>
+          <li><a href="#strategie">Stratégie SolarGlobe</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="/assets/js/footer.js"></script>
+
+<script>
+document.querySelectorAll('.sg-sidebar a').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const href=a.getAttribute('href');
+    if(href&&href.startsWith('#')){
+      e.preventDefault();
+      document.querySelector(href)?.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  });
+});
+window.dataLayer=window.dataLayer||[];
+window.dataLayer.push({event:'blog_article_view',article_slug:'autonomie-solaire'});
+</script>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Autonomie solaire : mythe vs réalité — guide expert","description":"Quel niveau d'autonomie est intelligent pour votre projet ? Batterie, pilotage, dimensionnement. Guide expert SolarGlobe.","image":"https://www.solarglobe.fr/assets/images/blog/blog-autonomie-solaire.webp","datePublished":"2025-01-15","dateModified":"2026-03-17","keywords":["autonomie solaire","batterie photovoltaïque","pilotage énergétique","autoconsommation","rentabilité solaire"],"author":{"@type":"Organization","name":"SolarGlobe","url":"https://www.solarglobe.fr/"},"publisher":{"@type":"Organization","name":"SolarGlobe","logo":{"@type":"ImageObject","url":"https://www.solarglobe.fr/assets/images/logo-solarglobe-rect.png"}}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Peut-on être 100 % autonome ?","acceptedAnswer":{"@type":"Answer","text":"Oui, mais rarement en résidentiel classique. Cela nécessite surdimensionnement + batterie importante + coût élevé."}},
+{"@type":"Question","name":"Quelle autonomie réaliste ?","acceptedAnswer":{"@type":"Answer","text":"Entre 50 % et 80 % dans la majorité des projets bien conçus."}},
+{"@type":"Question","name":"La batterie est-elle obligatoire ?","acceptedAnswer":{"@type":"Answer","text":"Non. Elle améliore l'autonomie mais n'est pas toujours rentable."}},
+{"@type":"Question","name":"Peut-on être autonome l'hiver ?","acceptedAnswer":{"@type":"Answer","text":"Non. La production solaire est trop faible."}},
+{"@type":"Question","name":"Le solaire rend-il indépendant ?","acceptedAnswer":{"@type":"Answer","text":"Il réduit fortement la dépendance, mais ne la supprime pas totalement."}},
+{"@type":"Question","name":"Quel est le bon niveau d'autonomie ?","acceptedAnswer":{"@type":"Answer","text":"Il n'existe pas de chiffre universel. Un bon niveau d'autonomie maximise la rentabilité en fonction de votre consommation, mode de vie et budget. Entre 50 % et 80 % représente souvent un équilibre optimal. Atteindre 100 % est possible mais rarement pertinent économiquement en résidentiel."}}
+]}
+</script>
+</body>
+</html>

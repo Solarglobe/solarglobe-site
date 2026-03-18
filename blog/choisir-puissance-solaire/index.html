@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="canonical" href="https://www.solarglobe.fr/blog/choisir-puissance-solaire/" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>6 kWc ou 9 kWc : comment choisir la bonne puissance ? | SolarGlobe</title>
+  <meta name="description" content="Profil de consommation, PAC/ballon, surface de toit, taux d'autoconsommation, saisonnalité : la méthode SolarGlobe pour choisir entre 6 kWc et 9 kWc sans se tromper." />
+  <meta name="robots" content="index, follow" />
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{ ad_storage:'denied', analytics_storage:'denied', wait_for_update:500 });
+  </script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N2ZQKS6F');</script>
+
+  <meta property="og:title" content="6 kWc ou 9 kWc : comment choisir la bonne puissance ? | SolarGlobe" />
+  <meta property="og:description" content="La méthode SolarGlobe : dimensionner pour l'autoconsommation, pas au hasard. Profils types, surface, PAC, production et ROI." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.solarglobe.fr/blog/choisir-puissance-solaire/" />
+  <meta property="og:image" content="https://www.solarglobe.fr/assets/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="6 kWc ou 9 kWc : comment choisir la bonne puissance ?" />
+  <meta name="twitter:description" content="Profil, toitures, PAC/ballon, autoconsommation : choisissez la bonne puissance, simplement." />
+  <meta name="twitter:image" content="https://www.solarglobe.fr/assets/images/blog/blog-choisir-puissance.webp" />
+
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
+  <link rel="stylesheet" href="/assets/css/le-solaire-editorial.css" />
+  <link rel="stylesheet" href="/assets/css/blog.css" />
+  <link rel="stylesheet" href="/assets/css/header-common.css" />
+  <link rel="stylesheet" href="/assets/css/footer-common.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{gold:'#C39847'}}}}</script>
+
+  <style>
+    :root{--bg:#0D0D0D;--gold:#C39847;--narrow:560px;--medium:720px;--wide:960px}
+    body{font-family:'Montserrat',sans-serif;background:var(--bg);color:#fff}
+    .text-gold{color:var(--gold)!important}
+    .sg-art-wrap{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+    .sg-art-main{display:grid;gap:2rem}
+    @media (min-width:1024px){.sg-art-main{grid-template-columns:1fr 240px;align-items:start}.sg-art-sidebar{position:sticky;top:100px}}
+    .sg-art-narrow{max-width:var(--narrow)}
+    .sg-art-medium{max-width:var(--medium)}
+    .sg-art-wide{max-width:var(--wide)}
+    .sg-art-full{max-width:100%}
+    .sg-art-body section{margin-bottom:4rem;transition:background .3s ease}
+    .sg-art-body section+section{margin-top:0}
+    .sg-art-body .sg-breath{margin-top:3rem;margin-bottom:3rem}
+    .sg-zone-sombre{background:rgba(0,0,0,.22);padding:2.5rem 1.5rem;border-radius:12px}
+    .sg-zone-claire{background:rgba(255,255,255,.04);padding:2.5rem 1.5rem;border-radius:12px}
+    .sg-hero-editorial{position:relative;min-height:280px;display:grid;grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem 2rem;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,#0D0D0D 100%)}
+    @media (min-width:768px){.sg-hero-editorial{grid-template-columns:1.2fr 1fr;align-items:end;min-height:240px;padding:2rem 2rem 2.5rem}}
+    .sg-hero-editorial::before{content:"";position:absolute;inset:0;background:url(/assets/images/blog/blog-choisir-puissance.webp) center/cover;z-index:-2}
+    .sg-hero-editorial::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.5) 50%,rgba(0,0,0,.85) 100%);z-index:-1}
+    .sg-hero-left,.sg-hero-right{position:relative;z-index:1}
+    .sg-hero-badge{display:inline-block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);padding:4px 10px;margin-bottom:10px;background:rgba(255,255,255,.06)}
+    .sg-hero-bread{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:6px}
+    .sg-hero-bread a{color:rgba(255,255,255,.7);text-decoration:none}
+    .sg-hero-bread a:hover{color:var(--gold)}
+    .sg-hero-title{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;line-height:1.25;color:#fff;margin-bottom:6px}
+    .sg-hero-accroche{font-size:clamp(.85rem,1.1vw,.9rem);color:rgba(255,255,255,.85);line-height:1.5}
+    .sg-hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    @media (min-width:480px){.sg-hero-stats{grid-template-columns:repeat(3,1fr)}}
+    .sg-hero-stat{background:rgba(0,0,0,.2);border-radius:6px;padding:10px 12px;text-align:center}
+    .sg-hero-stat-num{font-size:1.1rem;font-weight:700;color:var(--gold);line-height:1.2}
+    .sg-hero-stat-label{font-size:10px;color:rgba(255,255,255,.6);margin-top:2px;text-transform:uppercase;letter-spacing:.04em}
+    .sg-hero-meta{font-size:11px;color:rgba(255,255,255,.5);margin-top:12px}
+    .sg-sidebar{background:rgba(0,0,0,.15);border-radius:6px;padding:1rem;margin-bottom:1rem}
+    .sg-sidebar-title{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;margin-bottom:10px}
+    .sg-sidebar ol{list-style:none;padding:0;margin:0}
+    .sg-sidebar li{margin-bottom:6px}
+    .sg-sidebar a{font-size:12px;color:rgba(255,255,255,.8);text-decoration:none;transition:color .2s ease,padding-left .2s ease}
+    .sg-sidebar a:hover{color:var(--gold)}
+    .sg-maj-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start;padding:1rem 1.25rem;background:rgba(0,0,0,.15);border-radius:10px;margin-bottom:2.5rem;transition:background .25s ease}
+    .sg-maj-bar .sg-maj-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;flex-shrink:0}
+    .sg-maj-bar p{margin:0;font-size:12px;color:rgba(255,255,255,.8);line-height:1.5}
+    .sg-art-body h2{font-size:1.4rem;font-weight:700;color:#fff;margin:0 0 1.25rem 0;letter-spacing:-.02em}
+    .sg-art-body p{margin-bottom:1rem;line-height:1.65;color:rgba(255,255,255,.88);font-size:15px}
+    .sg-art-body p.lead{font-size:1rem;font-weight:600;color:rgba(255,255,255,.95)}
+    .sg-punch-full{padding:1.5rem 0;margin:3.5rem 0;font-size:1.05rem;font-weight:600;color:rgba(255,255,255,.95);border-left:3px solid var(--gold);background:transparent;padding-left:1.5rem;transition:border-color .25s ease}
+    .sg-punch-full:hover{border-left-color:rgba(195,152,71,.8)}
+    .sg-chiffre-fort-wrap{padding:6rem 3rem;margin:6rem 0;text-align:center;max-width:100%;position:relative;background:linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(195,152,71,.03) 50%,rgba(0,0,0,.2) 100%);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+    .sg-chiffre-fort{font-size:clamp(6rem,16vw,10rem);font-weight:700;color:var(--gold);line-height:1;letter-spacing:-.05em;text-shadow:0 0 60px rgba(195,152,71,.25),0 0 120px rgba(195,152,71,.1);animation:sg-chiffre-pulse 4s ease-in-out infinite}
+    @keyframes sg-chiffre-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.95;transform:scale(1.02)}}
+    .sg-chiffre-fort-sub{font-size:15px;color:rgba(255,255,255,.55);margin-top:1.5rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.5}
+    .sg-chiffre-bar{height:6px;background:rgba(255,255,255,.08);border-radius:3px;max-width:400px;margin:2rem auto 0;overflow:hidden}
+    .sg-chiffre-bar-fill{height:100%;width:65%;background:linear-gradient(90deg,var(--gold),rgba(195,152,71,.4));border-radius:3px;box-shadow:0 0 12px rgba(195,152,71,.2)}
+    .sg-2col{display:grid;gap:1.5rem}
+    @media (min-width:768px){.sg-2col{grid-template-columns:1fr 1fr}}
+    .sg-card{background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.4));border:1px solid rgba(195,152,71,.15);border-radius:10px;padding:1.5rem;backdrop-filter:blur(6px);box-shadow:0 10px 40px rgba(0,0,0,.4);transition:transform .3s ease,box-shadow .3s ease}
+    .sg-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.5)}
+    .sg-card-highlight{background:linear-gradient(180deg,rgba(195,152,71,.08),rgba(0,0,0,.35));border-color:rgba(195,152,71,.3);box-shadow:0 10px 40px rgba(0,0,0,.4),0 0 24px rgba(195,152,71,.06)}
+    .sg-card-highlight:hover{box-shadow:0 16px 48px rgba(0,0,0,.5),0 0 32px rgba(195,152,71,.1)}
+    .sg-card-neutre{background:rgba(0,0,0,.08);border:none;box-shadow:none}
+    .sg-card-neutre:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+    .sg-card h4{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;margin-bottom:10px}
+    .sg-table{width:100%;border-collapse:collapse;font-size:13px}
+    .sg-table td{padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+    .sg-table .gold{color:var(--gold);font-weight:600}
+    .sg-block-h{display:grid;gap:1rem;padding:1.25rem 1.5rem;background:rgba(0,0,0,.08);border-radius:10px;margin:1.25rem 0;transition:background .3s ease,transform .2s ease}
+    .sg-block-h:hover{background:rgba(0,0,0,.12)}
+    @media (min-width:640px){.sg-block-h{grid-template-columns:auto 1fr;align-items:start}}
+    .sg-block-h .sg-block-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:700;min-width:100px}
+    .sg-block-h.vigilance{background:rgba(0,0,0,.12)}
+    .sg-block-h.vigilance:hover{background:rgba(0,0,0,.16)}
+    .sg-cta-bar{display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between;padding:3rem 3.5rem;margin:5rem 0;background:linear-gradient(135deg,rgba(195,152,71,.08) 0%,rgba(0,0,0,.2) 100%);border:1px solid rgba(195,152,71,.4);border-radius:12px;width:100%;max-width:100%}
+    .sg-cta-bar h3{font-size:1.5rem;font-weight:700;color:#fff;margin:0 0 8px 0;letter-spacing:-.02em}
+    .sg-cta-bar p{margin:0;font-size:1rem;color:rgba(255,255,255,.9);line-height:1.5}
+    .sg-cta-bar .btn{flex-shrink:0;display:inline-block;background:var(--gold);color:#0D0D0D;font-weight:700;padding:16px 32px;border-radius:8px;text-decoration:none;transition:all .3s;font-size:16px;box-shadow:0 4px 24px rgba(195,152,71,.3)}
+    .sg-cta-bar .btn:hover{background:#D4A84E;transform:translateY(-2px);box-shadow:0 8px 32px rgba(195,152,71,.4)}
+    .sg-faq-compact{display:grid;gap:8px}
+    .sg-faq-compact details{background:rgba(0,0,0,.08);border-radius:8px;padding:12px 16px;transition:background .25s ease}
+    .sg-faq-compact details:hover{background:rgba(0,0,0,.12)}
+    .sg-faq-compact details[open]{background:rgba(0,0,0,.1)}
+    .sg-faq-compact summary{font-weight:600;cursor:pointer;color:#fff;font-size:13px}
+    .sg-faq-compact p{margin:6px 0 0 0;font-size:13px;color:rgba(255,255,255,.8);line-height:1.5}
+    .sg-related{display:grid;grid-template-columns:1fr;gap:.75rem;margin-top:2rem}
+    @media (min-width:640px){.sg-related{grid-template-columns:1fr 1fr}}
+    .sg-related a{display:flex;gap:1rem;align-items:center;padding:1rem 1.25rem;background:rgba(0,0,0,.08);border-radius:10px;text-decoration:none;transition:background .25s ease,transform .2s ease}
+    .sg-related a:hover{background:rgba(0,0,0,.14);transform:translateX(4px)}
+    .sg-related img{width:72px;height:54px;object-fit:cover;border-radius:6px;flex-shrink:0}
+    .sg-related .sg-related-txt{flex:1}
+    .sg-related .sg-related-txt strong{color:rgba(255,255,255,.95);font-size:13px}
+    .sg-related .sg-related-txt span{font-size:12px;color:rgba(255,255,255,.55)}
+    :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2ZQKS6F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="header-placeholder"></div>
+<script src="/assets/js/header.js"></script>
+
+<div class="h-20"></div>
+
+<!-- HERO ÉDITORIAL ASYMÉTRIQUE -->
+<header class="sg-hero-editorial">
+  <div class="sg-hero-left">
+    <span class="sg-hero-badge">Guide expert</span>
+    <p class="sg-hero-bread"><a href="/">Accueil</a> / <a href="/blog/">Blog</a> / Choisir sa puissance</p>
+    <h1 class="sg-hero-title">6 kWc ou 9 kWc : comment choisir la bonne puissance ?</h1>
+    <p class="sg-hero-accroche">On dimensionne pour l'autoconsommation, pas au hasard. La méthode SolarGlobe pour choisir entre 6 et 9 kWc selon votre profil, votre toit et vos usages (PAC, ballon, borne EV).</p>
+    <p class="sg-hero-meta">Par SolarGlobe · 12 min</p>
+  </div>
+  <div class="sg-hero-right">
+    <div class="sg-hero-stats">
+      <div class="sg-hero-stat"><div class="sg-hero-stat-num">6 kWc</div><div class="sg-hero-stat-label">Foyers classiques</div></div>
+      <div class="sg-hero-stat"><div class="sg-hero-stat-num">9 kWc</div><div class="sg-hero-stat-label">Gros consommateurs</div></div>
+      <div class="sg-hero-stat"><div class="sg-hero-stat-num">55–75 %</div><div class="sg-hero-stat-label">Autoconsommation cible</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- LAYOUT PRINCIPAL -->
+<div class="sg-art-wrap">
+  <div class="sg-maj-bar">
+    <span class="sg-maj-label">En bref</span>
+    <p>Le bon dimensionnement n'est pas une question de puissance maximale. C'est une question d'équilibre entre production, consommation et rentabilité. Nous cherchons la puissance optimale, pas la maximale.</p>
+  </div>
+
+  <div class="sg-art-main">
+    <article class="sg-art-body">
+      <!-- INTRO -->
+      <section id="intro" class="sg-art-narrow">
+        <p class="lead">Choisir entre 6 kWc et 9 kWc est l'une des décisions les plus importantes dans un projet photovoltaïque. Et pourtant, dans la majorité des cas, ce choix est fait trop rapidement.</p>
+        <p>Beaucoup de particuliers pensent qu'il suffit de "mettre le plus possible" pour maximiser les gains. C'est une erreur. En solaire, produire plus ne signifie pas gagner plus. Ce qui fait la rentabilité d'une installation, c'est la part que vous consommez directement.</p>
+        <p>Chez SolarGlobe, nous raisonnons différemment. Nous ne cherchons pas la puissance maximale. Nous cherchons la puissance optimale. Celle qui correspond à votre maison, votre mode de vie et vos usages.</p>
+      </section>
+
+      <!-- PUNCHLINE -->
+      <div class="sg-art-full">
+        <p class="sg-punch-full">Le bon projet n'est pas le plus puissant. C'est le plus rentable.</p>
+      </div>
+
+      <!-- POURQUOI LE CHOIX EST CRITIQUE -->
+      <section id="choix-critique" class="sg-2col sg-art-medium">
+        <div>
+          <h2>Pourquoi le choix est critique</h2>
+          <p>Deux installations identiques peuvent avoir des résultats totalement différents. Une maison équipée de 6 kWc bien optimisée peut être plus rentable qu'une maison équipée de 9 kWc mal utilisée.</p>
+          <p>Pourquoi ? Parce que tout dépend : de votre présence en journée, de vos équipements (chauffage, eau chaude, véhicule électrique), de votre capacité à consommer l'électricité au moment où elle est produite.</p>
+        </div>
+        <div class="sg-block-h vigilance">
+          <span class="sg-block-label">Vigilance</span>
+          <p class="mb-0">C'est pour cela qu'un bon dimensionnement ne se devine pas. Il se construit.</p>
+        </div>
+      </section>
+
+      <!-- MÉTHODE -->
+      <section id="method" class="sg-art-wide">
+        <h2>Comment dimensionner correctement son installation solaire</h2>
+        <p class="sg-art-narrow">La méthode SolarGlobe repose sur une approche simple : adapter la production à votre consommation réelle.</p>
+        <ol class="sg-art-narrow" style="list-style:decimal;padding-left:1.5rem;margin:1.5rem 0">
+          <li style="margin-bottom:.75rem"><strong>Étape 1 : analyser votre profil de consommation</strong> — Nous identifions précisément vos habitudes : heures de présence, pics de consommation, saisonnalité.</li>
+          <li style="margin-bottom:.75rem"><strong>Étape 2 : identifier les usages optimisables</strong> — Une partie importante de votre consommation peut être déplacée en journée : chauffe-eau, électroménager, recharge véhicule.</li>
+          <li style="margin-bottom:.75rem"><strong>Étape 3 : analyser la toiture</strong> — Surface disponible, orientation, inclinaison, zones d'ombre.</li>
+          <li style="margin-bottom:.75rem"><strong>Étape 4 : définir une puissance cible</strong> — Nous visons un taux d'autoconsommation compris entre 55 % et 75 %.</li>
+          <li style="margin-bottom:.75rem"><strong>Étape 5 : projeter la rentabilité</strong> — Économies annuelles, production utile, retour sur investissement.</li>
+        </ol>
+        <p class="sg-art-narrow">Un bon projet solaire n'est jamais standard. Il est toujours personnalisé.</p>
+      </section>
+
+      <!-- CHIFFRE FORT -->
+      <div class="sg-art-full">
+        <div class="sg-chiffre-fort-wrap">
+          <p class="sg-chiffre-fort">65 %</p>
+          <p class="sg-chiffre-fort-sub">Taux d'autoconsommation cible pour un projet bien dimensionné. Ni trop, ni trop peu. L'équilibre entre production utile et surplus revendu à faible valeur.</p>
+          <div class="sg-chiffre-bar"><div class="sg-chiffre-bar-fill"></div></div>
+        </div>
+      </div>
+
+      <!-- PRODUCTION -->
+      <section id="prod" class="sg-art-wide sg-zone-sombre">
+        <h2>Production réelle d'une installation 6 kWc vs 9 kWc</h2>
+        <p>En France, la production dépend de la région, de l'orientation et de l'inclinaison. En moyenne :</p>
+        <div class="sg-card" style="margin-top:1.5rem">
+          <h4>Production annuelle</h4>
+          <table class="sg-table">
+            <tr><td>6 kWc</td><td class="gold">5 500 à 6 500 kWh/an</td></tr>
+            <tr><td>9 kWc</td><td class="gold">8 000 à 9 500 kWh/an</td></tr>
+          </table>
+        </div>
+        <p>Mais ce chiffre ne suffit pas. Ce qui compte réellement, c'est la production utile. En hiver, la production chute fortement. Une installation de 6 kWc produit parfois moins de 10 kWh par jour en janvier. Le dimensionnement doit être pensé à l'année, et pas uniquement sur une moyenne.</p>
+      </section>
+
+      <!-- PANNEAUX + TOIT -->
+      <section id="panneaux" class="sg-art-wide sg-zone-claire">
+        <h2>Combien de panneaux pour 6 kWc et 9 kWc ?</h2>
+        <p>Avec des panneaux modernes (400 à 450 Wc) :</p>
+        <div class="sg-2col" style="margin-top:1.5rem">
+          <div class="sg-card">
+            <h4>6 kWc</h4>
+            <p class="mb-0">12 à 14 panneaux · environ 25 m²</p>
+          </div>
+          <div class="sg-card">
+            <h4>9 kWc</h4>
+            <p class="mb-0">18 à 20 panneaux · environ 35 m²</p>
+          </div>
+        </div>
+        <p class="mt-4">Le dimensionnement réel dépend de la surface utile (hors chemin de circulation, aérations, velux), de l'orientation/inclinaison et des ombrages. Ces valeurs varient selon le calepinage, la toiture et les contraintes techniques.</p>
+      </section>
+
+      <!-- COÛT -->
+      <section id="cout" class="sg-art-wide">
+        <h2>Combien coûte une installation 6 kWc ou 9 kWc ?</h2>
+        <p>Le prix dépend de nombreux facteurs (matériel, toiture, complexité). En moyenne :</p>
+        <div class="sg-card sg-card-neutre" style="margin-top:1.5rem;padding:1.25rem">
+          <table class="sg-table">
+            <tr><td>6 kWc</td><td class="gold">10 000 € à 14 000 €</td></tr>
+            <tr><td>9 kWc</td><td class="gold">14 000 € à 18 000 €</td></tr>
+          </table>
+        </div>
+        <p>Certaines installations peuvent bénéficier d'une TVA réduite à 5,5 % sous conditions. Mais le prix ne doit jamais être le seul critère. Ce qui compte, c'est la rentabilité globale.</p>
+      </section>
+
+      <!-- RENTABILITÉ -->
+      <section id="rentabilite" class="sg-art-wide">
+        <h2>Rentabilité réelle sur 20 ans</h2>
+        <p>Une installation solaire bien dimensionnée permet de réduire fortement la facture d'électricité.</p>
+        <div class="sg-2col" style="margin-top:1.5rem">
+          <div class="sg-card">
+            <h4>6 kWc</h4>
+            <p class="mb-0"><span class="text-gold">700 € à 1 000 €</span> d'économie annuelle moyenne</p>
+          </div>
+          <div class="sg-card">
+            <h4>9 kWc</h4>
+            <p class="mb-0"><span class="text-gold">900 € à 1 300 €</span> d'économie annuelle moyenne</p>
+          </div>
+        </div>
+        <p class="mt-4">Mais attention : une installation plus grande ne signifie pas forcément un meilleur retour sur investissement. Si vous ne consommez pas l'énergie produite, elle est revendue à un tarif plus faible.</p>
+      </section>
+
+      <!-- PROFILS TYPES -->
+      <section id="profils" class="sg-art-wide">
+        <h2>Profils types : quand 6 kWc, quand 9 kWc ?</h2>
+        <div class="sg-2col" style="margin-top:1.5rem">
+          <div class="sg-card">
+            <h4>6 kWc – le "juste" pour beaucoup</h4>
+            <ul style="list-style:disc;padding-left:1.25rem;margin:0;font-size:14px;line-height:1.8">
+              <li>Couple actif / famille avec occupation en journée modérée</li>
+              <li>Ballon ECS pilotable en journée</li>
+              <li>Toit limité ou simple exposition</li>
+              <li>Objectif : 60–75 % d'autoconsommation</li>
+            </ul>
+          </div>
+          <div class="sg-card">
+            <h4>9 kWc – pour charges plus lourdes</h4>
+            <ul style="list-style:disc;padding-left:1.25rem;margin:0;font-size:14px;line-height:1.8">
+              <li>Maison avec PAC + ballon ECS, usages soutenus</li>
+              <li>Présence régulière en journée (télétravail)</li>
+              <li>Borne EV / climatisation l'été</li>
+              <li>Objectif : 55–65 % d'autoconsommation</li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-sm text-white/60 mt-3">On ne suréquipe pas pour "vendre" le surplus : le tarif d'achat est faible. Le cœur du ROI est l'autoconsommation.</p>
+      </section>
+
+      <!-- COMPARATIF -->
+      <section id="comparatif" class="sg-art-medium">
+        <h2>6 kWc ou 9 kWc : le comparatif</h2>
+        <div class="sg-2col" style="margin-top:1.5rem">
+          <div class="sg-card sg-card-neutre">
+            <h4>6 kWc</h4>
+            <p class="mb-0">Investissement plus faible · meilleure autoconsommation · idéal pour foyers classiques</p>
+          </div>
+          <div class="sg-card sg-card-neutre">
+            <h4>9 kWc</h4>
+            <p class="mb-0">Production plus élevée · adapté aux gros consommateurs · plus de surplus</p>
+          </div>
+        </div>
+        <p class="mt-4"><strong>Conclusion :</strong> Le meilleur choix dépend toujours de votre profil.</p>
+      </section>
+
+      <!-- ERREURS -->
+      <section id="erreurs" class="sg-art-narrow">
+        <h2>Les erreurs les plus fréquentes</h2>
+        <ul style="list-style:disc;padding-left:1.5rem;line-height:1.8">
+          <li>choisir la puissance au hasard</li>
+          <li>vouloir être autonome à tout prix</li>
+          <li>installer une batterie inutile</li>
+          <li>ne pas optimiser les usages</li>
+        </ul>
+        <p>Ces erreurs réduisent fortement la rentabilité.</p>
+      </section>
+
+      <!-- USAGES -->
+      <section id="usages" class="sg-art-wide">
+        <h2>Usages clés : PAC, eau chaude, borne EV</h2>
+        <p><strong>PAC</strong> : ajoute une base conso significative l'hiver. 9 kWc se justifie si la maison est souvent occupée en journée, sinon 6 kWc + pilotage peut suffire.</p>
+        <p><strong>ECS</strong> : ballon programmable = levier majeur pour consommer le midi (2–3 kWh décalables).</p>
+        <p><strong>Borne EV</strong> : si recharge régulière en journée, 9 kWc devient pertinent. Recharge nocturne → privilégier 6 kWc et/ou batterie selon objectifs.</p>
+      </section>
+
+      <!-- BATTERIE -->
+      <section id="batterie" class="sg-art-narrow">
+        <h2>Faut-il une batterie ?</h2>
+        <p>La batterie permet de stocker l'énergie produite en journée pour l'utiliser le soir. Mais elle a des limites : coût élevé, durée de vie limitée, rendement imparfait. Dans de nombreux cas, une bonne stratégie d'autoconsommation suffit.</p>
+      </section>
+
+      <!-- CTA -->
+      <div class="sg-cta-bar" id="cta">
+        <div>
+          <h3>On choisit ensemble la bonne puissance</h3>
+          <p>Étude gratuite : calepinage toit, profil conso, projection 6 vs 9 kWc, économies et ROI réalistes.</p>
+        </div>
+        <a href="/etude-gratuite/" class="btn">Obtenir mon étude solaire gratuite</a>
+      </div>
+
+      <!-- FAQ -->
+      <section id="faq" style="margin-top:4rem">
+        <h2>FAQ — 6 kWc ou 9 kWc</h2>
+        <div class="sg-faq-compact">
+          <details>
+            <summary>Quelle puissance pour une maison de 100 m² ?</summary>
+            <p>Généralement entre 3 et 6 kWc selon les usages.</p>
+          </details>
+          <details>
+            <summary>Peut-on passer de 6 à 9 kWc plus tard ?</summary>
+            <p>Oui, sous conditions techniques.</p>
+          </details>
+          <details>
+            <summary>6 kWc est-il suffisant ?</summary>
+            <p>Oui pour la majorité des foyers.</p>
+          </details>
+          <details>
+            <summary>9 kWc est-il rentable ?</summary>
+            <p>Oui si la consommation est adaptée.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- CONCLUSION -->
+      <div class="sg-art-full">
+        <p class="sg-punch-full">Le bon dimensionnement n'est pas une question de puissance maximale. C'est une question d'équilibre. Entre production, consommation et rentabilité. C'est ce que nous faisons chez SolarGlobe.</p>
+      </div>
+
+      <!-- À LIRE ENSUITE -->
+      <div class="sg-related">
+        <a href="/blog/aides-financieres/">
+          <img src="/assets/images/blog/blog-aides-financieres.webp" alt="" width="80" height="60" loading="lazy" />
+          <div class="sg-related-txt"><strong>Aides photovoltaïque 2026</strong><br><span>Prime, TVA 5,5 %, surplus</span></div>
+        </a>
+        <a href="/blog/">
+          <div class="sg-related-txt"><strong>← Retour au blog</strong><br><span>Tous nos articles</span></div>
+        </a>
+      </div>
+    </article>
+
+    <!-- SIDEBAR STICKY -->
+    <aside class="sg-art-sidebar">
+      <div class="sg-sidebar">
+        <div class="sg-sidebar-title">Sommaire</div>
+        <ol>
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#choix-critique">Pourquoi le choix est critique</a></li>
+          <li><a href="#method">Comment dimensionner</a></li>
+          <li><a href="#prod">Production 6 vs 9 kWc</a></li>
+          <li><a href="#panneaux">Combien de panneaux</a></li>
+          <li><a href="#cout">Coût réel</a></li>
+          <li><a href="#rentabilite">Rentabilité</a></li>
+          <li><a href="#profils">Profils types</a></li>
+          <li><a href="#comparatif">Comparatif</a></li>
+          <li><a href="#erreurs">Erreurs fréquentes</a></li>
+          <li><a href="#usages">Usages clés</a></li>
+          <li><a href="#batterie">Faut-il une batterie ?</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="/assets/js/footer.js"></script>
+
+<script>
+document.querySelectorAll('.sg-sidebar a').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const href=a.getAttribute('href');
+    if(href&&href.startsWith('#')){
+      e.preventDefault();
+      document.querySelector(href)?.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  });
+});
+window.dataLayer=window.dataLayer||[];
+window.dataLayer.push({event:'blog_article_view',article_slug:'choisir-puissance-solaire'});
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"6 kWc ou 9 kWc : comment choisir la bonne puissance ?","description":"Dimensionner pour l'autoconsommation. Profils types, toiture, usages, production et ROI.","image":"https://www.solarglobe.fr/assets/images/blog/blog-choisir-puissance.webp","datePublished":"2025-10-22","dateModified":"2026-03-17","keywords":["6 kWc","9 kWc","dimensionnement","autoconsommation","PAC","ballon ECS","borne EV"],"author":{"@type":"Organization","name":"SolarGlobe","url":"https://www.solarglobe.fr/"},"publisher":{"@type":"Organization","name":"SolarGlobe","logo":{"@type":"ImageObject","url":"https://www.solarglobe.fr/assets/images/logo-solarglobe-rect.png"}}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Quelle puissance pour une maison de 100 m² ?","acceptedAnswer":{"@type":"Answer","text":"Généralement entre 3 et 6 kWc selon les usages."}},
+{"@type":"Question","name":"Peut-on passer de 6 à 9 kWc plus tard ?","acceptedAnswer":{"@type":"Answer","text":"Oui, sous conditions techniques."}},
+{"@type":"Question","name":"6 kWc est-il suffisant ?","acceptedAnswer":{"@type":"Answer","text":"Oui pour la majorité des foyers."}},
+{"@type":"Question","name":"9 kWc est-il rentable ?","acceptedAnswer":{"@type":"Answer","text":"Oui si la consommation est adaptée."}}
+]}
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Feuille de contrat -->
+  <rect x="20" y="18" width="40" height="50" rx="4" stroke="#C39847" stroke-width="2"/>
+
+  <!-- Lignes de texte -->
+  <line x1="28" y1="28" x2="52" y2="28" stroke="#C39847" stroke-width="1.2"/>
+  <line x1="28" y1="36" x2="52" y2="36" stroke="#C39847" stroke-width="1.2"/>
+
+  <!-- Signature manuscrite -->
+  <path d="M28 50 C32 54, 36 46, 40 50 C44 54, 48 46, 52 50" stroke="#C39847" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Crayon -->
+  <line x1="54" y1="54" x2="62" y2="62" stroke="#C39847" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="62,62 64,58 58,64" fill="#C39847"/>
+</svg>

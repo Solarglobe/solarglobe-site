@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Étude financière solaire | Rentabilité panneaux photovoltaïques</title>
+  <meta name="description" content="Découvrez la rentabilité d'une installation solaire : coûts, économies, retour sur investissement et projection financière sur 25 ans." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.solarglobe.fr/notre-methode/etude-financiere/" />
+  <meta property="og:title" content="Étude financière solaire | Rentabilité panneaux photovoltaïques" />
+  <meta property="og:description" content="Découvrez la rentabilité d'une installation solaire : coûts, économies, retour sur investissement et projection financière sur 25 ans." />
+  <meta property="og:image" content="https://www.solarglobe.fr/assets/images/og-image.jpg" />
+  <meta property="og:url" content="https://www.solarglobe.fr/notre-methode/etude-financiere/" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
+  <link rel="stylesheet" href="/assets/css/header-common.css" />
+  <link rel="stylesheet" href="/assets/css/footer-common.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{gold:'#C39847',noir:'#0D0D0D'},fontFamily:{montserrat:['Montserrat','sans-serif']}}}}</script>
+  <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}</style>
+  <style>
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity 1.2s cubic-bezier(0.22,1,0.36,1),transform 1.2s cubic-bezier(0.22,1,0.36,1)}
+  .reveal.reveal-visible{opacity:1;transform:translateY(0)}
+  .fade-up{opacity:0;transform:translateY(30px);transition:opacity 1.2s cubic-bezier(0.22,1,0.36,1),transform 1.2s cubic-bezier(0.22,1,0.36,1)}
+  .fade-up.reveal-visible{opacity:1;transform:translateY(0)}
+  .slide-left{opacity:0;transform:translateX(-40px);transition:opacity 1.2s cubic-bezier(0.22,1,0.36,1),transform 1.2s cubic-bezier(0.22,1,0.36,1)}
+  .slide-left.reveal-visible{opacity:1;transform:translateX(0)}
+  .slide-right{opacity:0;transform:translateX(40px);transition:opacity 1.2s cubic-bezier(0.22,1,0.36,1),transform 1.2s cubic-bezier(0.22,1,0.36,1)}
+  .slide-right.reveal-visible{opacity:1;transform:translateX(0)}
+  .zoom-image{opacity:0;transform:scale(0.96);transition:opacity 1.2s cubic-bezier(0.22,1,0.36,1),transform 1.2s cubic-bezier(0.22,1,0.36,1)}
+  .zoom-image.reveal-visible{opacity:1;transform:scale(1)}
+  .reveal-slow{transition:opacity 1.5s cubic-bezier(0.22,1,0.36,1),transform 1.5s cubic-bezier(0.22,1,0.36,1)}
+  @media (prefers-reduced-motion:reduce){.reveal,.fade-up,.slide-left,.slide-right,.zoom-image{opacity:1;transform:none}}
+  .sg-reveal{opacity:0;transform:translateY(40px);transition:opacity 1.2s cubic-bezier(0.22,1,0.36,1),transform 1.2s cubic-bezier(0.22,1,0.36,1)}
+  .sg-reveal.visible{opacity:1;transform:translateY(0)}
+  @media (prefers-reduced-motion:reduce){.sg-reveal{opacity:1;transform:none}}
+  .hero-method{margin-top:0;min-height:55vh;display:flex;align-items:center;justify-content:center;padding:3rem 1.5rem}
+  .hero-method::before{content:"";position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(195,152,71,0.18) 0%,transparent 70%);filter:blur(80px);pointer-events:none}
+  .sg-card-finance{background:rgba(0,0,0,0.6);backdrop-filter:blur(12px);border:1px solid rgba(195,152,71,0.4);transition:transform 0.8s,box-shadow 0.6s,border-color 0.5s}
+  .sg-card-finance:hover{transform:scale(1.02);box-shadow:0 0 48px rgba(195,152,71,0.2);border-color:rgba(195,152,71,0.7)!important}
+  .sg-card-finance.sg-bad{border-left:3px solid rgba(220,80,80,0.6)}
+  .sg-card-finance.sg-bad h3{color:#e07a7a}
+  .sg-card-finance.sg-good{border:1px solid rgba(195,152,71,0.5);box-shadow:0 0 32px rgba(195,152,71,0.15)}
+  .sg-card-finance.sg-good:hover{box-shadow:0 0 56px rgba(195,152,71,0.3)}
+  .sg-flow-finance{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px 8px;padding:2rem 0}
+  .sg-flow-finance>div{padding:14px 24px;border-radius:12px;background:rgba(0,0,0,0.65);backdrop-filter:blur(10px);border:1px solid rgba(195,152,71,0.35);font-weight:600;font-size:15px;color:#fff;opacity:0;transform:translateY(20px);transition:opacity 1s,transform 1s}
+  .sg-flow-finance>div.reveal-visible{opacity:1;transform:translateY(0)}
+  .sg-flow-finance>div:nth-child(1){transition-delay:0.1s}.sg-flow-finance>div:nth-child(3){transition-delay:0.25s}.sg-flow-finance>div:nth-child(5){transition-delay:0.4s}.sg-flow-finance>div:nth-child(7){transition-delay:0.55s}.sg-flow-finance>div:nth-child(9){transition-delay:0.75s}
+  .sg-flow-finance .sg-flow-arrow:nth-child(2){transition-delay:0.18s}.sg-flow-finance .sg-flow-arrow:nth-child(4){transition-delay:0.33s}.sg-flow-finance .sg-flow-arrow:nth-child(6){transition-delay:0.48s}.sg-flow-finance .sg-flow-arrow:nth-child(8){transition-delay:0.63s}
+  .sg-flow-finance>div.highlight{background:rgba(195,152,71,0.2);border-color:#C39847;color:#C39847;box-shadow:0 0 24px rgba(195,152,71,0.25)}
+  .sg-flow-arrow{color:rgba(195,152,71,0.7);font-size:20px;opacity:0;transition:opacity 0.8s ease}
+  .sg-flow-arrow.reveal-visible{opacity:1}
+  .sg-graph-zoom{transition:transform 1.2s cubic-bezier(0.22,1,0.36,1)}
+  .sg-graph-zoom:hover{transform:scale(1.02)}
+  .sg-cta-mid{text-align:center;padding:4rem 1.5rem;background:linear-gradient(180deg,rgba(10,10,10,0.98),rgba(0,0,0,0.95));border-top:1px solid rgba(195,152,71,0.2);border-bottom:1px solid rgba(195,152,71,0.2)}
+  .sg-cta-mid h2{font-size:1.75rem;font-weight:700;color:#fff;margin-bottom:1.5rem}
+  .sg-cta-mid .btn-gold{display:inline-block;background:#C39847;color:#000;font-weight:700;padding:1rem 2rem;border-radius:16px;text-decoration:none;transition:transform 0.3s,box-shadow 0.3s}
+  .sg-cta-mid .btn-gold:hover{transform:scale(1.05);box-shadow:0 0 32px rgba(195,152,71,0.4)}
+  @media(max-width:768px){.sg-flow-finance{flex-direction:column}.sg-flow-arrow{transform:rotate(90deg)}}
+  </style>
+</head>
+<body class="bg-noir text-white">
+
+<div id="header-placeholder"></div>
+<script src="/assets/js/header.js"></script>
+
+<main>
+
+<!-- HERO -->
+<section class="hero-method relative bg-black overflow-hidden">
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+    <p class="sg-reveal text-gold uppercase tracking-widest text-sm mb-4">&#201;TAPE 4 &mdash; NOTRE M&eacute;THODE</p>
+    <h1 class="sg-reveal text-4xl md:text-5xl font-bold text-white mb-6">
+      Votre projet solaire est-il vraiment rentable&nbsp;?
+    </h1>
+    <p class="sg-reveal text-lg text-gray-300 mb-4">
+      Sans analyse financi&egrave;re, impossible de savoir.
+    </p>
+    <p class="sg-reveal text-gold font-semibold mb-6">
+      Un bon projet vous fait gagner. Un mauvais vous co&ucirc;te.
+    </p>
+    <div class="sg-reveal flex flex-col md:flex-row justify-center gap-4 text-sm text-gray-300 mb-8">
+      <span>&#10003; ROI clair</span>
+      <span>&#10003; &Eacute;conomies r&eacute;elles</span>
+      <span>&#10003; Vision long terme</span>
+    </div>
+    <a href="/etude-gratuite/" class="sg-reveal inline-block border-2 border-gold text-gold px-8 py-4 rounded-xl hover:bg-gold hover:text-black transition font-semibold">
+      Obtenir mon étude solaire gratuite
+    </a>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- BLOC SIGNATURE — UN PROJET PEUT ÊTRE RENTABLE OU UNE ERREUR -->
+<section class="relative bg-[#0a0a0a] py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="reveal text-3xl md:text-4xl font-bold text-white mb-4">
+      Un projet solaire peut &ecirc;tre tr&egrave;s rentable&hellip; ou une erreur
+    </h2>
+    <p class="reveal text-neutral-300 max-w-2xl mx-auto mb-12 text-lg">
+      Tout d&eacute;pend de votre &eacute;tude financi&egrave;re.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="reveal sg-card-finance sg-bad rounded-2xl p-6 backdrop-blur-sm">
+        <h3 class="text-lg font-bold mb-4">Mauvaise &eacute;tude</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li>&bull; ROI trop long</li>
+          <li>&bull; Surco&ucirc;t inutile</li>
+          <li>&bull; Rentabilit&eacute; faible</li>
+        </ul>
+      </div>
+      <div class="reveal sg-card-finance sg-good rounded-2xl p-6 backdrop-blur-sm">
+        <h3 class="text-lg font-bold text-gold mb-4">&Eacute;tude optimis&eacute;e</h3>
+        <ul class="space-y-2 text-neutral-200 text-sm">
+          <li>&bull; ROI ma&icirc;tris&eacute;</li>
+          <li>&bull; &Eacute;conomies maximales</li>
+          <li>&bull; Investissement intelligent</li>
+        </ul>
+      </div>
+      <div class="reveal sg-card-finance sg-bad rounded-2xl p-6 backdrop-blur-sm">
+        <h3 class="text-lg font-bold mb-4">Aucune &eacute;tude</h3>
+        <ul class="space-y-2 text-neutral-300 text-sm">
+          <li>&bull; D&eacute;cision &agrave; l&rsquo;aveugle</li>
+          <li>&bull; Risque &eacute;lev&eacute;</li>
+          <li>&bull; Projet non rentable</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- 2 — POURQUOI ANALYSER LA RENTABILITÉ -->
+<section id="pourquoi-etude" class="relative bg-black py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="slide-left space-y-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-white">
+          Pourquoi une &eacute;tude financi&egrave;re est indispensable
+        </h2>
+        <p class="text-gold font-semibold text-base md:text-lg">
+          La plupart des projets solaires sont vendus sans v&eacute;ritable analyse financi&egrave;re.
+        </p>
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          Une installation solaire est un investissement sur le long terme.
+        </p>
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          Contrairement &agrave; une d&eacute;pense &eacute;nerg&eacute;tique classique,
+          les panneaux photovolta&iuml;ques produisent de l&rsquo;&eacute;lectricit&eacute;
+          pendant plus de 25 ans.
+        </p>
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          L&rsquo;objectif de l&rsquo;&eacute;tude financi&egrave;re est donc simple&nbsp;:
+          transformer une d&eacute;pense &eacute;nerg&eacute;tique en investissement rentable.
+        </p>
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          Au lieu de payer votre fournisseur d&rsquo;&eacute;lectricit&eacute;,
+          vous investissez dans votre propre production d&rsquo;&eacute;nergie.
+        </p>
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          Chaque kilowattheure produit par vos panneaux
+          est un kilowattheure que vous n&rsquo;achetez plus.
+        </p>
+        <ul class="text-neutral-200 leading-relaxed text-base md:text-lg space-y-2 pt-4">
+          <li class="flex items-start gap-3"><span class="text-gold font-bold shrink-0">•</span> co&ucirc;t r&eacute;el de l&rsquo;installation</li>
+          <li class="flex items-start gap-3"><span class="text-gold font-bold shrink-0">•</span> production solaire estim&eacute;e</li>
+          <li class="flex items-start gap-3"><span class="text-gold font-bold shrink-0">•</span> autoconsommation</li>
+          <li class="flex items-start gap-3"><span class="text-gold font-bold shrink-0">•</span> &eacute;conomies sur la facture</li>
+          <li class="flex items-start gap-3"><span class="text-gold font-bold shrink-0">•</span> &eacute;volution du prix de l&rsquo;&eacute;lectricit&eacute;</li>
+          <li class="flex items-start gap-3"><span class="text-gold font-bold shrink-0">•</span> retour sur investissement</li>
+        </ul>
+      </div>
+      <div class="slide-right">
+        <div class="rounded-2xl overflow-hidden border border-gold/30 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+          <img src="/assets/images/etude/etude-financiere.webp" alt="Rentabilit&eacute; installation solaire" class="w-full h-full object-cover aspect-[4/3]" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- FLUX FINANCIER — COMMENT FONCTIONNE LA RENTABILITÉ -->
+<section class="relative bg-[#0a0a0a] py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="reveal text-3xl md:text-4xl font-bold text-white mb-12">
+      Comment fonctionne la rentabilit&eacute; solaire
+    </h2>
+    <div class="sg-flow-finance">
+      <div class="reveal">Investissement</div>
+      <span class="sg-flow-arrow reveal" aria-hidden="true">&#8594;</span>
+      <div class="reveal">Production</div>
+      <span class="sg-flow-arrow reveal" aria-hidden="true">&#8594;</span>
+      <div class="reveal">&Eacute;conomies</div>
+      <span class="sg-flow-arrow reveal" aria-hidden="true">&#8594;</span>
+      <div class="reveal">ROI</div>
+      <span class="sg-flow-arrow reveal" aria-hidden="true">&#8594;</span>
+      <div class="reveal highlight">Gain net</div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- 3 — COMMENT NOUS CALCULONS -->
+<section class="relative bg-black py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="reveal text-3xl md:text-4xl font-bold text-white text-center mb-6">
+      Comment nous calculons la rentabilit&eacute; de votre projet
+    </h2>
+    <p class="reveal text-gold font-semibold text-center max-w-2xl mx-auto mb-12 text-lg">
+      Nous ne faisons pas d&rsquo;estimation approximative.<br>
+      Chaque chiffre est simul&eacute; pr&eacute;cis&eacute;ment.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="reveal sg-card-finance rounded-2xl p-6 backdrop-blur-sm" style="transition-delay:0ms">
+        <h3 class="text-lg font-bold text-gold mb-3">Analyse de consommation</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Nous analysons votre consommation &eacute;lectrique annuelle afin d&rsquo;estimer l&rsquo;&eacute;nergie que vous pourrez autoconsommer.</p>
+      </div>
+      <div class="reveal sg-card-finance rounded-2xl p-6 backdrop-blur-sm" style="transition-delay:100ms">
+        <h3 class="text-lg font-bold text-gold mb-3">Production solaire</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">La production est simul&eacute;e selon l&rsquo;orientation de votre toiture, son inclinaison et l&rsquo;ensoleillement local.</p>
+      </div>
+      <div class="reveal sg-card-finance rounded-2xl p-6 backdrop-blur-sm" style="transition-delay:200ms">
+        <h3 class="text-lg font-bold text-gold mb-3">Prix de l&rsquo;&eacute;lectricit&eacute;</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Nos simulations prennent en compte l&rsquo;&eacute;volution probable du prix de l&rsquo;&eacute;nergie sur les prochaines ann&eacute;es.</p>
+      </div>
+      <div class="reveal sg-card-finance rounded-2xl p-6 backdrop-blur-sm" style="transition-delay:300ms">
+        <h3 class="text-lg font-bold text-gold mb-3">Autoconsommation</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Nous estimons pr&eacute;cis&eacute;ment la part d&rsquo;&eacute;nergie solaire que vous utiliserez directement dans votre maison.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- 4 — EXEMPLE CONCRET -->
+<section class="relative bg-[#0a0a0a] py-24 md:py-32 ">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="zoom-image order-2 lg:order-1">
+        <div class="rounded-2xl overflow-hidden border border-gold/30 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+          <img src="/assets/images/etude/rentabilite-solaire.webp" alt="Maison avec panneaux solaires" class="w-full h-full object-cover aspect-[4/3]" loading="lazy">
+        </div>
+      </div>
+      <div class="slide-right space-y-6 order-1 lg:order-2">
+        <h2 class="text-3xl md:text-4xl font-bold text-white">
+          Exemple de rentabilit&eacute; d&rsquo;une installation solaire
+        </h2>
+        <p class="text-gold font-semibold text-base md:text-lg">
+          Ce type de r&eacute;sultat est impossible &agrave; estimer sans simulation compl&egrave;te.
+        </p>
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          Prenons l&rsquo;exemple d&rsquo;une installation solaire r&eacute;sidentielle classique.
+        </p>
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          Une maison consommant environ 6&nbsp;000 kWh par an peut installer environ 6&nbsp;kWc de panneaux photovolta&iuml;ques.
+        </p>
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          Cette installation produit en moyenne entre 6&nbsp;000 et 7&nbsp;000 kWh d&rsquo;&eacute;lectricit&eacute; par an.
+        </p>
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          Une grande partie de cette &eacute;nergie sera directement utilis&eacute;e dans la maison,
+          r&eacute;duisant imm&eacute;diatement la facture d&rsquo;&eacute;lectricit&eacute;.
+        </p>
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          Le surplus peut &eacute;galement &ecirc;tre inject&eacute; dans le r&eacute;seau,
+          g&eacute;n&eacute;rant un revenu compl&eacute;mentaire.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- 5 — GRAPHIQUE ÉCONOMIES -->
+<section class="relative bg-[#0a0a0a] py-24 md:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="reveal text-3xl md:text-4xl font-bold text-white text-center mb-6">
+      Projection des &eacute;conomies sur 25 ans
+    </h2>
+    <p class="reveal text-gold font-semibold text-center mb-8 text-lg">
+      Voici ce que vous ne voyez jamais ailleurs
+    </p>
+    <div class="zoom-image flex justify-center mb-8">
+      <div class="sg-graph-zoom rounded-2xl overflow-hidden border border-gold/40 shadow-[0_25px_80px_rgba(0,0,0,0.6)] max-w-4xl w-full">
+        <img src="/assets/images/etude/gains-cumules-25-ans.webp" alt="Projection des gains cumul&eacute;s sur 25 ans" class="w-full h-full object-cover" loading="lazy">
+      </div>
+    </div>
+    <p class="reveal text-neutral-300 text-center mb-12 text-base md:text-lg">
+      Ce graphique montre le moment exact o&ugrave; votre installation devient rentable.
+    </p>
+    <div class="reveal max-w-3xl mx-auto space-y-4">
+      <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+        Le graphique ci-dessus montre l&rsquo;&eacute;volution des &eacute;conomies g&eacute;n&eacute;r&eacute;es par une installation solaire sur 25 ans.
+      </p>
+      <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+        Les &eacute;conomies proviennent de deux sources principales&nbsp;:
+      </p>
+      <ul class="text-neutral-200 leading-relaxed text-base md:text-lg space-y-2">
+        <li class="flex items-start gap-3"><span class="text-gold font-bold shrink-0">•</span> l&rsquo;&eacute;lectricit&eacute; que vous ne consommez plus sur le r&eacute;seau</li>
+        <li class="flex items-start gap-3"><span class="text-gold font-bold shrink-0">•</span> la revente &eacute;ventuelle du surplus</li>
+      </ul>
+      <p class="text-neutral-200 leading-relaxed text-base md:text-lg pt-4">
+        Avec l&rsquo;augmentation progressive du prix de l&rsquo;&eacute;lectricit&eacute;,
+        les &eacute;conomies deviennent de plus en plus importantes au fil des ann&eacute;es.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- SECTION — LA RÉALITÉ DU MARCHÉ SOLAIRE -->
+<section class="relative bg-black py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="reveal text-3xl md:text-4xl font-bold text-white text-center mb-12">
+      La r&eacute;alit&eacute; du march&eacute; solaire
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="reveal sg-card-finance rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-gold mb-3">Promesses exag&eacute;r&eacute;es</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Certains chiffres sont volontairement optimistes.</p>
+      </div>
+      <div class="reveal sg-card-finance rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-gold mb-3">ROI mal calcul&eacute;</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Sans prendre en compte tous les param&egrave;tres.</p>
+      </div>
+      <div class="reveal sg-card-finance rounded-2xl p-6">
+        <h3 class="text-lg font-bold text-gold mb-3">Manque de transparence</h3>
+        <p class="text-neutral-300 text-sm leading-relaxed">Le client ne comprend pas r&eacute;ellement la rentabilit&eacute;.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- 6 — RETOUR SUR INVESTISSEMENT -->
+<section class="relative bg-[#0a0a0a] py-24 md:py-32 ">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="slide-left space-y-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-white">
+          Quel est le retour sur investissement&nbsp;?
+        </h2>
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          Dans la majorit&eacute; des cas, une installation solaire est amortie entre 8 et 12 ans.
+        </p>
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          Cela signifie qu&rsquo;apr&egrave;s cette p&eacute;riode, l&rsquo;&eacute;lectricit&eacute; produite par votre installation devient quasiment gratuite.
+        </p>
+        <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
+          Sur la dur&eacute;e de vie compl&egrave;te de l&rsquo;installation, les &eacute;conomies cumul&eacute;es peuvent repr&eacute;senter plusieurs dizaines de milliers d&rsquo;euros.
+        </p>
+        <p class="text-gold font-semibold text-base md:text-lg pt-2">Le solaire permet donc&nbsp;:</p>
+        <ul class="text-neutral-200 leading-relaxed text-base md:text-lg space-y-2">
+          <li class="flex items-start gap-3"><span class="text-gold font-bold shrink-0">•</span> de r&eacute;duire fortement sa facture d&rsquo;&eacute;lectricit&eacute;</li>
+          <li class="flex items-start gap-3"><span class="text-gold font-bold shrink-0">•</span> de se prot&eacute;ger contre la hausse des prix de l&rsquo;&eacute;nergie</li>
+          <li class="flex items-start gap-3"><span class="text-gold font-bold shrink-0">•</span> d&rsquo;augmenter la valeur de son bien immobilier</li>
+        </ul>
+      </div>
+      <div class="slide-right">
+        <div class="rounded-2xl overflow-hidden border border-gold/30 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+          <img src="/assets/images/etude/retour-investissement.webp" alt="Retour sur investissement solaire" class="w-full h-full object-cover aspect-[4/3]" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- 7 — CE QUE VOUS RECEVEZ -->
+<section class="relative bg-black py-24 md:py-32 ">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="reveal text-3xl md:text-4xl font-bold text-white text-center mb-16">
+      Votre &eacute;tude financi&egrave;re compl&egrave;te
+    </h2>
+    <div class="reveal max-w-2xl mx-auto">
+      <ul class="text-neutral-200 leading-relaxed text-base md:text-lg space-y-4">
+        <li class="flex items-start gap-3"><span class="text-gold text-xl font-bold shrink-0">✔</span> estimation de production solaire</li>
+        <li class="flex items-start gap-3"><span class="text-gold text-xl font-bold shrink-0">✔</span> analyse de consommation</li>
+        <li class="flex items-start gap-3"><span class="text-gold text-xl font-bold shrink-0">✔</span> simulation d&rsquo;autoconsommation</li>
+        <li class="flex items-start gap-3"><span class="text-gold text-xl font-bold shrink-0">✔</span> projection financi&egrave;re sur 25 ans</li>
+        <li class="flex items-start gap-3"><span class="text-gold text-xl font-bold shrink-0">✔</span> calcul du retour sur investissement</li>
+        <li class="flex items-start gap-3"><span class="text-gold text-xl font-bold shrink-0">✔</span> estimation des &eacute;conomies cumul&eacute;es</li>
+      </ul>
+      <p class="text-neutral-300 text-base md:text-lg mt-10 text-center">
+        Toutes ces informations sont pr&eacute;sent&eacute;es de mani&egrave;re simple et transparente afin de vous permettre de prendre une d&eacute;cision &eacute;clair&eacute;e. D&eacute;couvrez notre <a href="/notre-methode/" class="text-gold hover:underline">m&eacute;thode d&rsquo;accompagnement</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- SECTION — SIMULATION SOLARNEXT -->
+<section class="relative bg-[#0a0a0a] py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="reveal text-3xl md:text-4xl font-bold text-white mb-6">
+      Simulation pr&eacute;cise avec SolarNext
+    </h2>
+    <p class="reveal text-neutral-300 max-w-2xl mx-auto text-lg">
+      Nous simulons votre rentabilit&eacute; r&eacute;elle sur 25&nbsp;ans, avec des donn&eacute;es concr&egrave;tes.
+    </p>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- CTA INTERMÉDIAIRE -->
+<section class="sg-cta-mid">
+  <h2 class="reveal">Votre projet est-il rentable&nbsp;?</h2>
+  <a href="/etude-gratuite/" class="reveal btn-gold">Obtenir mon &eacute;tude solaire gratuite</a>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- BLOC IMPACT — AVANT CTA FINAL -->
+<section class="relative bg-black py-16 md:py-20">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <p class="reveal text-neutral-200 text-lg md:text-xl leading-relaxed">
+      Un projet solaire rentable ne s&rsquo;improvise pas.<br>
+      <span class="text-gold font-semibold">Il se calcule.</span>
+    </p>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- 8 — CTA FINAL -->
+<section class="relative bg-[#0a0a0a] py-28 md:py-36 overflow-hidden">
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gold/10 blur-[100px]"></div>
+  </div>
+  <div class="relative max-w-4xl mx-auto px-6 text-center">
+    <h2 class="reveal text-3xl md:text-4xl font-bold text-white mb-6">Recevez votre &eacute;tude solaire personnalis&eacute;e</h2>
+    <p class="reveal text-gray-300 text-base md:text-lg mb-8">
+      Chaque maison est diff&eacute;rente.
+      <br>
+      Notre bureau d&rsquo;&eacute;tude analyse votre toiture et votre consommation afin d&rsquo;&eacute;valuer la rentabilit&eacute; r&eacute;elle de votre projet.
+    </p>
+    <a href="/etude-gratuite/" class="reveal inline-block bg-gold text-black font-bold py-4 px-10 rounded-2xl shadow-xl hover:scale-105 transition text-lg">
+      Obtenir mon &eacute;tude solaire gratuite
+    </a>
+    <p class="reveal text-xs text-neutral-400 mt-8">Sans engagement &ndash; R&eacute;ponse sous 24&nbsp;h</p>
+  </div>
+</section>
+
+</main>
+
+<div id="footer-placeholder"></div>
+<script src="/assets/js/footer.js"></script>
+
+<script>
+(function(){
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(prefersReduced){
+    document.querySelectorAll('.sg-reveal,.reveal,.fade-up,.slide-left,.slide-right,.zoom-image,.sg-flow-arrow').forEach(el=>{el.classList.add('visible');el.classList.add('reveal-visible')});
+    return;
+  }
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      entry.target.classList.add('reveal-visible');
+      observer.unobserve(entry.target);
+    });
+  },{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.sg-reveal,.reveal,.fade-up,.slide-left,.slide-right,.zoom-image,.sg-flow-arrow').forEach(el=>observer.observe(el));
+})();
+</script>
+
+</body>
+</html>

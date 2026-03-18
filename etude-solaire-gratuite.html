@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Canonical + Titres unifiÃ©s -->
+  <link rel="canonical" href="https://www.solarglobe.fr/etude-solaire-gratuite" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ã‰tude solaire gratuite â€“ Solarglobe</title>
+
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:title" content="Ã‰tude solaire gratuite â€“ Solarglobe" />
+  <meta property="og:description" content="Solarglobe, spÃ©cialiste de lâ€™installation solaire premium. Ã‰tude gratuite, installateurs certifiÃ©s RGE, accompagnement complet." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.solarglobe.fr/etude-solaire-gratuite" />
+  <meta property="og:image" content="https://www.solarglobe.fr/assets/images/ton-visuel.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ã‰tude solaire gratuite â€“ Solarglobe" />
+  <meta name="twitter:description" content="Solarglobe, spÃ©cialiste de lâ€™installation solaire premium. Ã‰tude gratuite, installateurs certifiÃ©s RGE, accompagnement complet." />
+  <meta name="twitter:image" content="https://www.solarglobe.fr/assets/images/ton-visuel.jpg" />
+
+  <!-- Meta description -->
+  <meta name="description" content="Testez SOLARGLOBE, le simulateur solaire le plus avancÃ© de France : expÃ©rience immersive, Ã©tapes interactives, visuels premium, et estimation sur-mesure par Solarglobe." />
+
+  <!-- Consent Mode v2 par dÃ©faut AVANT GTM -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default', { ad_storage:'denied', analytics_storage:'denied', wait_for_update:500 });
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N2ZQKS6F');</script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="icon" href="assets/images/favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { gold:'#C39847', noir:'#0D0D0D' } } } }
+  </script>
+
+  <style>
+    body { font-family:'Montserrat', sans-serif; background:#0D0D0D; }
+    /* Corrections courbes dâ€™anim (.58 au lieu de 58) */
+    .fade-in { animation: fadeIn .8s cubic-bezier(.42,0,.58,1) both; }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+    .slide-left { animation: slideLeft .8s cubic-bezier(.42,0,.58,1) both; }
+    @keyframes slideLeft { from{opacity:0;transform:translateX(60px)} to{opacity:1;transform:translateX(0)} }
+
+    .gold-shadow { box-shadow:0 0 32px 8px #C39847bb, 0 2px 16px #131314cc; border-radius:18px; }
+    .progress-bar { background:linear-gradient(90deg,#C39847 0%,#FFD700 100%); height:6px; border-radius:6px; box-shadow:0 2px 10px #C3984740; transition:width .4s cubic-bezier(.42,0,.58,1); }
+    .progress-label { font-size:1.1rem; color:#C39847; font-weight:700; letter-spacing:.01em; }
+
+    /* Autocomplete */
+    .autocomplete-suggestions { background:#181818; border:1px solid #C39847; border-top:none; max-height:200px; overflow-y:auto; border-radius:0 0 8px 8px; box-shadow:0 8px 24px #C3984744; position:absolute; width:100%; z-index:20; }
+    .autocomplete-suggestion { padding:10px 14px; cursor:pointer; border-bottom:1px solid #222; color:#fff; transition:background .2s; }
+    .autocomplete-suggestion:last-child { border-bottom:none; }
+    .autocomplete-suggestion:hover, .autocomplete-suggestion.active { background:#C39847; color:#181818; }
+
+    /* Focus visible pour accessibilitÃ© */
+    :focus-visible { outline:2px solid #C39847; outline-offset:3px; border-radius:10px; }
+
+    @media (max-width:768px){
+      .split { flex-direction:column!important; }
+      .split-left, .split-right { width:100%!important; }
+      .split-left { min-height:180px!important; }
+    }
+  </style>
+</head>
+<body class="bg-noir text-white min-h-screen">
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2ZQKS6F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+ 
+  <!-- NAV -->
+<nav id="main-nav"
+     class="fixed top-0 left-0 w-full z-50
+            bg-black/70 backdrop-blur
+            shadow-lg">
+
+  <div class="max-w-7xl mx-auto
+              flex items-center justify-between
+              px-4 sm:px-6 lg:px-8 2xl:px-12
+              py-3 lg:py-4">
+
+    <!-- LOGO -->
+    <a href="/" class="flex-shrink-0">
+      <img src="assets/images/logo-solarglobe-rect.png"
+           alt="Logo Solarglobe"
+           class="h-8 sm:h-9 lg:h-10 xl:h-11 2xl:h-12" />
+    </a>
+
+    <!-- MENU DESKTOP -->
+    <ul class="hidden md:flex items-center
+               whitespace-nowrap
+               space-x-5 lg:space-x-6 xl:space-x-7 2xl:space-x-8
+               font-semibold text-white
+               text-sm lg:text-[15px] xl:text-base 2xl:text-lg
+               select-none">
+
+      <li><a href="/" class="hover:text-gold transition">Accueil</a></li>
+      <li><a href="/notre-methode/" class="hover:text-gold transition">Qui sommes&#8209;nous</a></li>
+      <li><a href="/notre-methode/" class="hover:text-gold transition">Votre projet de A &agrave; Z</a></li>
+      <li><a href="/produits/" class="hover:text-gold transition">Produits</a></li>
+      <li><a href="/faq/" class="hover:text-gold transition">FAQ</a></li>
+      <li><a href="/blog/" class="hover:text-gold transition">Blog</a></li>
+      <li><a href="/contact/" class="hover:text-gold transition">Contact</a></li>
+
+      <!-- R&Eacute;SEAUX -->
+      <li class="flex items-center gap-3 pl-2">
+        <a href="https://www.facebook.com/profile.php?id=61578264284164"
+           target="_blank" rel="noopener"
+           class="opacity-75 hover:opacity-100 transition">
+          <!-- svg facebook -->
+        </a>
+        <a href="https://www.instagram.com/solarglobe.fr/"
+           target="_blank" rel="noopener"
+           class="opacity-75 hover:opacity-100 transition">
+          <!-- svg instagram -->
+        </a>
+        <a href="https://www.linkedin.com/company/108327439/"
+           target="_blank" rel="noopener"
+           class="opacity-75 hover:opacity-100 transition">
+          <!-- svg linkedin -->
+        </a>
+      </li>
+    </ul>
+
+    <!-- CTA DESKTOP -->
+    <div class="hidden md:block ml-4">
+      <a href="/etude-gratuite/"
+         class="bg-gold text-black font-semibold
+                px-4 lg:px-5 xl:px-6
+                py-1.5 lg:py-2
+                text-sm lg:text-base
+                rounded-xl shadow-lg
+                whitespace-nowrap
+                hover:scale-105 transition">
+        &Eacute;tude gratuite
+      </a>
+    </div>
+
+    <!-- BURGER -->
+    <div class="md:hidden">
+      <button id="mobile-menu-button"
+              class="text-white focus:outline-none"
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+        <svg class="h-8 w-8"
+             xmlns="http://www.w3.org/2000/svg"
+             fill="none" viewBox="0 0 24 24"
+             stroke="currentColor">
+          <path stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+<!-- MENU MOBILE -->
+<div id="mobile-menu"
+     class="hidden fixed top-16 left-0 right-0
+            bg-black/95 z-50
+            px-6 py-6 space-y-4
+            shadow-xl">
+
+  <a href="/" class="block text-white font-semibold hover:text-gold">Accueil</a>
+  <a href="/notre-methode/" class="block text-white font-semibold hover:text-gold">Qui sommes&#8209;nous</a>
+  <a href="/votre-projet-de-a-a-z" class="block text-white font-semibold hover:text-gold">Votre projet de A &agrave; Z</a>
+  <a href="/produits/" class="block text-white font-semibold hover:text-gold">Produits</a>
+  <a href="/faq/" class="block text-white font-semibold hover:text-gold">FAQ</a>
+  <a href="/blog/" class="block text-white font-semibold hover:text-gold">Blog</a>
+  <a href="/contact/" class="block text-white font-semibold hover:text-gold">Contact</a>
+
+  <a href="/etude-gratuite/"
+     class="block bg-gold text-black font-semibold
+            py-2 px-6 rounded-xl text-center">
+    &Eacute;tude gratuite
+  </a>
+</div>
+
+<script>
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    const open = !menu.classList.contains('hidden');
+    menu.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', String(!open));
+  });
+</script>
+
+<!-- Spacer header -->
+<div class="h-24"></div>
+
+
+<!-- HERO -->
+<div class="max-w-3xl mx-auto text-center mt-8 fade-in">
+  <h1 class="text-4xl md:text-5xl font-bold text-gold mb-2">
+    Votre &eacute;tude solaire personnalis&eacute;e, valid&eacute;e par un expert
+  </h1>
+  <p class="text-base md:text-lg text-white/80">
+    Simulation interactive &bull; R&eacute;sultats humains &bull; 100&nbsp;% gratuite
+  </p>
+</div>
+
+
+<!-- Intro block -->
+<section class="w-full py-4 px-4 mb-8">
+  <div class="max-w-3xl mx-auto text-center fade-in gold-shadow" style="background:#1C1C1E; border-radius:18px;">
+    <p class="text-xl md:text-2xl text-white mb-4 font-semibold pt-7 px-4">
+      D&eacute;couvrez l&rsquo;exp&eacute;rience la plus avanc&eacute;e de France pour &eacute;valuer le potentiel solaire de votre maison.
+    </p>
+    <p class="text-base md:text-lg text-white/80 px-6 pb-6">
+      Ici, aucun chiffre automatique&nbsp;: chaque &eacute;tude est analys&eacute;e et valid&eacute;e par un expert Solarglobe.
+      <span class="block mt-3 text-gold font-medium">
+        Technologie, expertise humaine et accompagnement sur-mesure.
+      </span>
+    </p>
+  </div>
+</section>
+
+<!-- Simulateur -->
+<div class="flex split max-w-6xl mx-auto mb-16 px-2 md:gap-12 items-start min-h-[570px]">
+
+  <!-- Visuel -->
+  <div class="split-left md:w-1/2 flex justify-center items-center min-h-[480px] relative"
+       style="background:#1C1C1E; border-radius:18px;">
+
+    <div id="sim-illustration"
+         class="w-full max-w-lg mx-auto py-10 flex justify-center items-center">
+      <video
+        id="visuel-3d"
+        src="assets/videos/step1-carte.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="assets/images/simulateur-poster.jpg"
+        class="w-full h-[340px] rounded-2xl bg-black object-cover shadow-xl border border-gold/20">
+      </video>
+    </div>
+
+    <div class="absolute left-3 bottom-3 bg-gold/90 text-black px-5 py-2 rounded-xl text-sm font-bold shadow-xl">
+      Simulation gratuite &amp; confidentielle
+    </div>
+  </div>
+
+  <!-- Étapes -->
+  <div class="split-right md:w-1/2 w-full gold-shadow p-8 rounded-2xl flex flex-col gap-6"
+       style="background:#1C1C1E;">
+
+    <div id="progress-bar" class="w-full mb-1" aria-live="polite">
+      <div class="progress-label text-gold mb-2" id="progress-label"></div>
+      <div class="progress-bar" id="progress"></div>
+    </div>
+
+    <!-- Micro-réassurance sobre (aucune promesse, aucun gadget) -->
+    <p class="text-xs text-neutral-400 text-center mb-2">
+      Donn&eacute;es confidentielles &middot; aucune revente &middot; sans engagement
+    </p>
+
+    <!-- Zone JS (NE PAS TOUCHER) -->
+    <div id="steps"></div>
+
+  </div>
+</div>
+
+<!-- Pourquoi Solarglobe -->
+<div class="max-w-3xl mx-auto text-center mt-12 fade-in">
+  <h2 class="text-3xl text-gold font-bold mb-2">
+    Pourquoi choisir Solarglobe&nbsp;?
+  </h2>
+</div>
+
+<section class="max-w-3xl mx-auto mb-12 fade-in gold-shadow px-8 py-10 rounded-2xl"
+         style="background:#1C1C1E;">
+  <p class="text-white text-lg md:text-xl text-center mb-4 leading-relaxed">
+    <strong>Solarglobe</strong>, c&rsquo;est un accompagnement
+    <strong>100&nbsp;% premium</strong>, de la premi&egrave;re simulation
+    jusqu&rsquo;&agrave; l&rsquo;installation cl&eacute; en main&nbsp;:
+  </p>
+
+  <ul class="text-white text-lg md:text-xl text-center space-y-2 mb-4">
+    <li>
+      &bull; Des panneaux
+      <span class="text-gold font-semibold">haut de gamme</span>
+      s&eacute;lectionn&eacute;s pour leur performance et leur durabilit&eacute;
+    </li>
+    <li>
+      &bull; Des experts solaires
+      <span class="text-gold font-semibold">certifi&eacute;s</span>
+      et exp&eacute;riment&eacute;s
+    </li>
+    <li>
+      &bull; Un suivi
+      <span class="text-gold font-semibold">personnalis&eacute; et local</span>,
+      avant, pendant et apr&egrave;s votre projet
+    </li>
+  </ul>
+
+  <p class="text-gold text-lg md:text-xl text-center font-medium">
+    Une approche s&eacute;rieuse, transparente et orient&eacute;e performance
+    pour votre transition &eacute;nerg&eacute;tique.
+  </p>
+</section>
+
+<!-- Villes (accents corrigÃ©s) -->
+<section class="mt-20 px-4">
+  <h2 class="text-2xl text-gold font-bold mb-6 text-center">Solarglobe installe aussi dans votre ville :</h2>
+  <div class="flex flex-wrap justify-center gap-3 text-sm text-white">
+    <a href="seo/villes/lagny-sur-marne" class="hover:text-gold">Lagny-sur-Marne</a>
+    <a href="seo/villes/meaux" class="hover:text-gold">Meaux</a>
+    <a href="seo/villes/fontainebleau" class="hover:text-gold">Fontainebleau</a>
+    <a href="seo/villes/provins" class="hover:text-gold">Provins</a>
+    <a href="seo/villes/evry-courcouronnes" class="hover:text-gold">Ã‰vryâ€‘Courcouronnes</a>
+    <a href="seo/villes/etampes" class="hover:text-gold">Ã‰tampes</a>
+    <a href="seo/villes/dourdan" class="hover:text-gold">Dourdan</a>
+    <a href="seo/villes/massy" class="hover:text-gold">Massy</a>
+    <a href="seo/villes/argenteuil" class="hover:text-gold">Argenteuil</a>
+    <a href="seo/villes/l-isle-adam" class="hover:text-gold">Lâ€™Isle-Adam</a>
+    <a href="seo/villes/magny-en-vexin" class="hover:text-gold">Magny-en-Vexin</a>
+    <a href="seo/villes/montmorency" class="hover:text-gold">Montmorency</a>
+    <a href="seo/villes/compiegne" class="hover:text-gold">CompiÃ¨gne</a>
+    <a href="seo/villes/beauvais" class="hover:text-gold">Beauvais</a>
+    <a href="seo/villes/senlis" class="hover:text-gold">Senlis</a>
+    <a href="seo/villes/nogent-sur-oise" class="hover:text-gold">Nogent-sur-Oise</a>
+    <a href="seo/villes/soissons" class="hover:text-gold">Soissons</a>
+    <a href="seo/villes/saint-quentin" class="hover:text-gold">Saint-Quentin</a>
+    <a href="seo/villes/chateau-thierry" class="hover:text-gold">ChÃ¢teau-Thierry</a>
+    <a href="seo/villes/laon" class="hover:text-gold">Laon</a>
+    <a href="seo/villes/reims" class="hover:text-gold">Reims</a>
+    <a href="seo/villes/epernay" class="hover:text-gold">Ã‰pernay</a>
+    <a href="seo/villes/chalons-en-champagne" class="hover:text-gold">ChÃ¢lons-en-Champagne</a>
+    <a href="seo/villes/vitry-le-francois" class="hover:text-gold">Vitry-le-FranÃ§ois</a>
+    <a href="seo/villes/troyes" class="hover:text-gold">Troyes</a>
+    <a href="seo/villes/romilly-sur-seine" class="hover:text-gold">Romilly-sur-Seine</a>
+    <a href="seo/villes/sainte-savine" class="hover:text-gold">Sainte-Savine</a>
+    <a href="seo/villes/bar-sur-seine" class="hover:text-gold">Bar-sur-Seine</a>
+    <a href="seo/villes/sens" class="hover:text-gold">Sens</a>
+    <a href="seo/villes/auxerre" class="hover:text-gold">Auxerre</a>
+    <a href="seo/villes/joigny" class="hover:text-gold">Joigny</a>
+    <a href="seo/villes/migennes" class="hover:text-gold">Migennes</a>
+    <a href="seo/villes/orleans" class="hover:text-gold">OrlÃ©ans</a>
+    <a href="seo/villes/montargis" class="hover:text-gold">Montargis</a>
+    <a href="seo/villes/gien" class="hover:text-gold">Gien</a>
+    <a href="seo/villes/olivet" class="hover:text-gold">Olivet</a>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-white text-sm px-6 pt-16 pb-10 mt-12 border-t border-neutral-800">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
+      <div>
+        <h3 class="text-gold text-base font-semibold mb-2">Solarglobe</h3>
+        <p>19 avenue Pierre Curie, 77500 Chelles ÃŽle-de-France</p>
+        <p>TÃ©l : <a href="tel:+33172994753" class="hover:underline text-gold">+33 1 72 99 47 53</a></p>
+        <p>Email : <a href="mailto:contact@solarglobe.fr" class="hover:underline text-gold">contact@solarglobe.fr</a></p>
+        <p>SIRET : 988 455 416 00012</p>
+      </div>
+      <div class="space-y-3">
+        <h4 class="text-gold font-semibold">Navigation</h4>
+        <ul class="space-y-1">
+          <li><a href="/" class="hover:text-gold slow">Accueil</a></li>
+          <li><a href="/notre-methode/" class="hover:text-gold slow">Qui sommes-nous</a></li>
+          <li><a href="/votre-projet-de-a-a-z" class="hover:text-gold slow">Votre projet de A Ã  Z</a></li>
+          <li><a href="/produits/" class="hover:text-gold slow">Produits</a></li>
+          <li><a href="/faq/" class="hover:text-gold slow">FAQ</a></li>
+          <li><a href="/blog/" class="hover:text-gold slow">Blog</a></li>
+          <li><a href="/contact/" class="hover:text-gold slow">Contact</a></li>
+          <li><a href="/etude-gratuite/" class="hover:text-gold slow">Ã‰tude gratuite</a></li>
+        </ul>
+      </div>
+      <div class="space-y-3">
+        <h4 class="text-gold font-semibold">Ã‰nergie solaire</h4>
+        <ul class="space-y-1">
+          <li><a href="/seo/panneaux-solaires/" class="hover:text-gold slow">Panneaux solaires</a></li>
+          <li><a href="/seo/autoconsommation-solaire/" class="hover:text-gold slow">Autoconsommation</a></li>
+          <li><a href="/seo/batteries-solaires/" class="hover:text-gold slow">Batteries solaires</a></li>
+          <li><a href="/seo/onduleurs-solaires/" class="hover:text-gold slow">Onduleurs solaires</a></li>
+          <li><a href="/seo/installation-solaire/" class="hover:text-gold slow">Installation solaire</a></li>
+          <li><a href="/seo/aides-financements/" class="hover:text-gold slow">Aides & financements</a></li>
+        </ul>
+      </div>
+      <div class="space-y-3 pt-6 md:pt-0">
+        <ul class="space-y-1 mt-[1.6rem]">
+          <li><a href="/seo/rentabilite-panneaux-solaires/" class="hover:text-gold slow">RentabilitÃ©</a></li>
+          <li><a href="/seo/energie-solaire-maison/" class="hover:text-gold slow">Ã‰nergie solaire maison</a></li>
+          <li><a href="/seo/production-solaire/" class="hover:text-gold slow">Production solaire</a></li>
+          <li><a href="/etude-gratuite/" class="hover:text-gold slow">Ã‰tude solaire gratuite</a></li>
+          <li><a href="/seo/solution-solaire-sur-mesure/" class="hover:text-gold slow">Solution sur-mesure</a></li>
+          <li><a href="/seo/panneaux-photovoltaiques/" class="hover:text-gold slow">Panneaux photovoltaÃ¯ques</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-gold text-base font-semibold mb-2">Zones dâ€™intervention</h3>
+        <p>ÃŽle-de-France</p>
+        <p>Oise â€“ Aisne â€“ Marne</p>
+        <p>Aube â€“ Yonne â€“ Loiret</p>
+      </div>
+    </div>
+
+    <!-- IcÃ´nes rÃ©seaux sociaux -->
+<div class="mt-10 flex justify-center space-x-6">
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/profile.php?id=61578264284164" target="_blank" rel="noopener" aria-label="Facebook Solarglobe">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 text-neutral-400 hover:text-gold transition">
+      <path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-3h2.4V9.5c0-2.4 1.4-3.8 3.6-3.8 1 0 2 .2 2 .2v2.2h-1.1c-1.1 0-1.5.7-1.5 1.4V12H16l-.4 3h-2.2v7A10 10 0 0 0 22 12"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/solarglobe.fr/" target="_blank" rel="noopener" aria-label="Instagram Solarglobe">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 text-neutral-400 hover:text-gold transition">
+      <path fill="currentColor" d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm10.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+    </svg>
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/company/108327439/" target="_blank" rel="noopener" aria-label="LinkedIn Solarglobe">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 text-neutral-400 hover:text-gold transition">
+      <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.5-.9 1.8-1.8 3.7-1.8 4 0 4.8 2.6 4.8 6v9.6h-4v-8.5c0-2-.1-4.5-2.7-4.5-2.7 0-3.1 2.1-3.1 4.3V24h-4V8z"/>
+    </svg>
+  </a>
+</div>
+
+
+    <div class="mt-12 border-t border-neutral-700 pt-6 text-center text-neutral-400">
+      <p>&copy; 2025 Solarglobe â€“ Tous droits rÃ©servÃ©s</p>
+      <p class="mt-2">
+        <a href="/mentions-legales" class="hover:text-gold slow">Mentions lÃ©gales</a> |
+        <a href="/politique-de-confidentialite" class="hover:text-gold slow">Politique de ConfidentialitÃ©</a> |
+        <a href="/cookies" class="hover:text-gold slow">Gestion des cookies</a> |
+        <a href="/C.G.V" class="hover:text-gold slow">C.G.V</a>
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- JS SIMULATEUR -->
+  <script>
+    let data = { address:null, lat:null, lon:null, surface:30, orientation:"sud", inclinaison:30, obstacles:"non", panneaux:"longi" };
+
+    const stepVideos = [
+      "assets/videos/step1-carte.mp4",
+      "assets/videos/step2-maison.mp4",
+      "assets/videos/step3-orientation.mp4",
+      "assets/videos/step4-inclinaison.mp4",
+      "assets/videos/step5-ombres.mp4",
+      "assets/videos/step6-panneaux.mp4",
+      "assets/videos/step7-success.mp4"
+    ];
+
+const steps = [
+  // 1) Adresse
+  {
+    label: `
+  <span class="inline-flex items-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         class="h-5 w-5 text-gold"
+         viewBox="0 0 24 24"
+         fill="currentColor">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+    </svg>
+    O&ugrave; se situe votre maison&nbsp;?
+  </span>
+`,
+
+    render: () => `
+      <label class="block mb-4 fade-in">
+        <span class="text-white">
+          Commencez &agrave; taper votre adresse&nbsp;:
+        </span>
+
+        <div class="relative mt-3">
+          <input
+            id="address-input"
+            type="text"
+            class="w-full p-3 rounded-lg bg-noir border border-gold/30 text-white text-base"
+            placeholder="Ex&nbsp;: 8 avenue des Champs-&Eacute;lys&eacute;es, Paris"
+            autocomplete="off"
+            aria-autocomplete="list"
+            aria-controls="suggestions"
+          />
+          <div
+            id="suggestions"
+            class="autocomplete-suggestions"
+            style="display:none;"
+            role="listbox"
+            aria-live="polite">
+          </div>
+        </div>
+
+        <p class="text-xs text-neutral-400 mt-2">
+          Adresse utilis&eacute;e uniquement pour analyser le potentiel solaire de votre toiture
+        </p>
+
+ <button id="detect-gps" type="button"
+  class="mt-2 inline-flex items-center gap-2 text-gold underline text-sm">
+  
+  <svg xmlns="http://www.w3.org/2000/svg"
+       class="h-4 w-4"
+       viewBox="0 0 24 24"
+       fill="currentColor">
+    <path d="M12 8a4 4 0 1 0 0 8a4 4 0 0 0 0-8zm9.94 3h-2.02a8.06 8.06 0 0 0-1.65-3.97l1.43-1.43a.996.996 0 1 0-1.41-1.41l-1.43 1.43A8.06 8.06 0 0 0 13 2.08V.06a1 1 0 1 0-2 0v2.02a8.06 8.06 0 0 0-3.97 1.65L5.6 2.3a.996.996 0 1 0-1.41 1.41l1.43 1.43A8.06 8.06 0 0 0 2.08 11H.06a1 1 0 1 0 0 2h2.02a8.06 8.06 0 0 0 1.65 3.97l-1.43 1.43a.996.996 0 1 0 1.41 1.41l1.43-1.43A8.06 8.06 0 0 0 11 21.92v2.02a1 1 0 1 0 2 0v-2.02a8.06 8.06 0 0 0 3.97-1.65l1.43 1.43a.996.996 0 1 0 1.41-1.41l-1.43-1.43A8.06 8.06 0 0 0 21.92 13h2.02a1 1 0 1 0 0-2z"/>
+  </svg>
+
+  <span>Localiser automatiquement</span>
+</button>
+      </label>
+    `,
+    onMount: () => {
+      const input = document.getElementById('address-input');
+      const suggestionsBox = document.getElementById('suggestions');
+
+      input && input.focus();
+
+      let debounceTimer;
+
+      input.addEventListener("input", async (e) => {
+        const query = e.target.value;
+        clearTimeout(debounceTimer);
+
+        if (query.length < 3) {
+          suggestionsBox.style.display = "none";
+          return;
+        }
+
+        debounceTimer = setTimeout(async () => {
+          // NOTE : &agrave; s&eacute;curiser via un proxy backend plus tard
+          const url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(query)}&lang=fr&limit=6&format=json&apiKey=332e9049494d42e09da67425057cf1b2`;
+
+          const res = await fetch(url);
+          if (!res.ok) return;
+
+          const dataApi = await res.json();
+          suggestionsBox.innerHTML = "";
+
+          if (!dataApi.results || !dataApi.results.length) {
+            suggestionsBox.style.display = "none";
+            return;
+          }
+
+          dataApi.results.forEach(item => {
+            const div = document.createElement("div");
+            div.className = "autocomplete-suggestion";
+            div.textContent = item.formatted;
+            div.setAttribute("role", "option");
+
+            div.addEventListener("mousedown", () => {
+              input.value = item.formatted;
+              data.address = item.formatted;
+              data.lat = item.lat || item.properties?.lat;
+              data.lon = item.lon || item.properties?.lon;
+              suggestionsBox.style.display = "none";
+              updateIllustration(currentStep);
+            });
+
+            suggestionsBox.appendChild(div);
+          });
+
+          suggestionsBox.style.display = "block";
+        }, 220);
+      });
+
+      document.addEventListener("mousedown", (e) => {
+        if (!e.target.closest(".autocomplete-suggestions")) {
+          suggestionsBox.style.display = "none";
+        }
+      });
+
+      document.getElementById('detect-gps').onclick = () => {
+        navigator.geolocation.getCurrentPosition(
+          pos => {
+            data.lat = pos.coords.latitude;
+            data.lon = pos.coords.longitude;
+
+            input.value =
+              `Coordonn&eacute;es d&eacute;tect&eacute;es (${data.lat.toFixed(4)}, ${data.lon.toFixed(4)})`;
+
+            data.address = "Localisation GPS";
+            updateIllustration(currentStep);
+          },
+          () => {
+            alert("Impossible de d&eacute;tecter la position GPS.");
+          },
+          { enableHighAccuracy: false, timeout: 5000 }
+        );
+      };
+    }
+  },
+
+
+// 2) Surface
+{
+  label: "?? Surface de toiture disponible",
+  render: () => `
+    <label class="block mb-6 fade-in">
+      <span class="text-white">
+        Indiquez la surface estim&eacute;e de toiture exploitable&nbsp;(en m&sup2)&nbsp;:
+      </span>
+
+      <input
+        id="surface-slider"
+        type="range"
+        min="10"
+        max="120"
+        value="${data.surface}"
+        class="w-full mt-3 accent-gold"
+      />
+
+      <span
+        id="surface-value"
+        class="block mt-2 text-gold text-xl font-bold text-center">
+        ${data.surface} m&sup2;
+      </span>
+
+      <p class="text-xs text-neutral-400 mt-2 text-center">
+        &Agrave; titre indicatif&nbsp;: une maison individuelle dispose g&eacute;n&eacute;ralement de 30 &agrave; 50&nbsp;m&sup2; exploitables
+      </p>
+    </label>
+  `,
+  onMount: () => {
+    const slider = document.getElementById('surface-slider');
+    const valueText = document.getElementById('surface-value');
+
+    slider.oninput = () => {
+      valueText.textContent = slider.value + " m²";
+      data.surface = parseInt(slider.value, 10);
+    };
+
+    slider.focus();
+  }
+},
+
+// 3) Orientation
+{
+  label: "?? Orientation du toit",
+  render: () => `
+    <label class="block mb-6 fade-in">
+      <span class="text-white">
+        Dans quelle direction est orient&eacute;e la pente principale&nbsp;?
+      </span>
+
+      <div class="flex flex-wrap gap-2 mt-4 justify-center">
+
+        <button type="button"
+          class="orientation-btn px-3 py-2 rounded-xl bg-noir border border-gold/40 text-white hover:bg-gold hover:text-noir"
+          data-orient="sud">Sud</button>
+
+        <button type="button"
+          class="orientation-btn px-3 py-2 rounded-xl bg-noir border border-gold/40 text-white hover:bg-gold hover:text-noir"
+          data-orient="sud-est">Sud-Est</button>
+
+        <button type="button"
+          class="orientation-btn px-3 py-2 rounded-xl bg-noir border border-gold/40 text-white hover:bg-gold hover:text-noir"
+          data-orient="sud-ouest">Sud-Ouest</button>
+
+        <button type="button"
+          class="orientation-btn px-3 py-2 rounded-xl bg-noir border border-gold/40 text-white hover:bg-gold hover:text-noir"
+          data-orient="est">Est</button>
+
+        <button type="button"
+          class="orientation-btn px-3 py-2 rounded-xl bg-noir border border-gold/40 text-white hover:bg-gold hover:text-noir"
+          data-orient="ouest">Ouest</button>
+
+        <button type="button"
+          class="orientation-btn px-3 py-2 rounded-xl bg-noir border border-gold/40 text-white hover:bg-gold hover:text-noir"
+          data-orient="nord-est">Nord-Est</button>
+
+        <button type="button"
+          class="orientation-btn px-3 py-2 rounded-xl bg-noir border border-gold/40 text-white hover:bg-gold hover:text-noir"
+          data-orient="nord-ouest">Nord-Ouest</button>
+
+        <button type="button"
+          class="orientation-btn px-3 py-2 rounded-xl bg-noir border border-gold/40 text-white hover:bg-gold hover:text-noir"
+          data-orient="nord">Nord</button>
+
+        <button type="button"
+          class="orientation-btn px-3 py-2 rounded-xl bg-noir border border-gold/40 text-white hover:bg-gold hover:text-noir"
+          data-orient="plat">Toit plat</button>
+
+      </div>
+
+      <p class="text-xs text-neutral-400 mt-3 text-center">
+        M&ecirc;me une orientation imparfaite peut &ecirc;tre optimis&eacute;e par un bon dimensionnement
+      </p>
+    </label>
+  `,
+  onMount: () => {
+    document.querySelectorAll('.orientation-btn').forEach(b => {
+      b.onclick = () => {
+        data.orientation = b.getAttribute('data-orient');
+        nextStep();
+      };
+    });
+
+    document.querySelector('.orientation-btn').focus();
+  }
+},
+
+// 4) Inclinaison
+{
+  label: "Inclinaison du toit",
+  render: () => `
+    <label class="block mb-6 fade-in">
+      <span class="text-white">
+        Choisissez l&rsquo;inclinaison de la toiture&nbsp;:
+      </span>
+
+      <input
+        id="inclinaison-slider"
+        type="range"
+        min="0"
+        max="45"
+        step="1"
+        value="${data.inclinaison}"
+        class="w-full mt-3 accent-gold"
+      />
+
+      <span
+        id="inclinaison-value"
+        class="block mt-2 text-gold text-xl font-bold text-center">
+        ${data.inclinaison === 0 ? "Toit plat" : data.inclinaison + "&deg;"}
+      </span>
+
+      <p class="text-xs text-neutral-400 mt-2 text-center">
+        Une inclinaison comprise entre 25&deg; et 35&deg; est g&eacute;n&eacute;ralement optimale en France
+      </p>
+    </label>
+  `,
+  onMount: () => {
+    const slider = document.getElementById('inclinaison-slider');
+    const valueText = document.getElementById('inclinaison-value');
+
+    // Toit plat => verrouille &agrave; 0&deg;
+    if (data.orientation === 'plat') {
+      slider.value = 0;
+      slider.disabled = true;
+      data.inclinaison = 0;
+      valueText.textContent = "Toit plat";
+    }
+
+    slider.oninput = () => {
+      data.inclinaison = parseInt(slider.value, 10);
+      valueText.textContent =
+        slider.value == 0 ? "Toit plat" : slider.value + "°";
+    };
+
+    slider.focus();
+  }
+},
+
+// 5) Ombres / obstacles
+{
+  label: "Pr&eacute;sence d&rsquo;ombres ou d&rsquo;obstacles",
+  render: () => `
+    <div class="fade-in text-center">
+
+      <p class="text-white mb-4">
+        Votre toiture est-elle concern&eacute;e par des ombres ou des obstacles
+        (arbres, chemin&eacute;es, b&acirc;timents voisins)&nbsp;?
+      </p>
+
+      <div class="flex gap-4 justify-center">
+        <button
+          type="button"
+          class="ombre-btn px-4 py-2 rounded-xl bg-noir border border-gold/40 text-white hover:bg-gold hover:text-noir"
+          data-ombre="non">
+          Non
+        </button>
+
+        <button
+          type="button"
+          class="ombre-btn px-4 py-2 rounded-xl bg-noir border border-gold/40 text-white hover:bg-gold hover:text-noir"
+          data-ombre="oui">
+          Oui
+        </button>
+
+        <button
+          type="button"
+          class="ombre-btn px-4 py-2 rounded-xl bg-noir border border-gold/40 text-white hover:bg-gold hover:text-noir"
+          data-ombre="incertain">
+          Je ne sais pas
+        </button>
+      </div>
+
+      <p class="text-xs text-neutral-400 mt-3">
+        Les ombres peuvent &ecirc;tre prises en compte lors du dimensionnement de l&rsquo;installation
+      </p>
+
+    </div>
+  `,
+  onMount: () => {
+    document.querySelectorAll('.ombre-btn').forEach(b => {
+      b.onclick = () => {
+        data.obstacles = b.getAttribute('data-ombre');
+        nextStep();
+      };
+    });
+  }
+},
+
+// 6) Panneaux
+{
+  label: "Choix de la technologie photovolta&iuml;que",
+  render: () => `
+    <label class="block mb-6 fade-in text-center">
+      <span class="text-white">
+        S&eacute;lectionnez la technologie de panneaux que vous souhaitez &eacute;tudier&nbsp;:
+      </span>
+
+      <div class="flex gap-4 mt-4 justify-center flex-wrap">
+
+        <button
+          type="button"
+          class="panneau-btn px-4 py-2 rounded-xl bg-noir border border-gold/40 text-white hover:bg-gold hover:text-noir"
+          data-pan="longi">
+          Longi Hi-MO&nbsp;10 Explorer
+        </button>
+
+        <button
+          type="button"
+          class="panneau-btn px-4 py-2 rounded-xl bg-noir border border-gold/40 text-white hover:bg-gold hover:text-noir"
+          data-pan="dualsun">
+          Dualsun Flash&nbsp;500
+        </button>
+
+      </div>
+
+      <p class="text-xs text-neutral-400 mt-3">
+        Les deux technologies sont compatibles avec une installation performante et durable
+      </p>
+    </label>
+  `,
+  onMount: () => {
+    document.querySelectorAll('.panneau-btn').forEach(b => {
+      b.onclick = () => {
+        data.panneaux = b.getAttribute('data-pan');
+        nextStep();
+      };
+    });
+  }
+},
+
+
+      
+    
+// 7) Formulaire final
+{
+  label: "F&eacute;licitations, votre projet est &eacute;ligible &agrave; une &eacute;tude solaire personnalis&eacute;e",
+  render: () => `
+    <div id="result-block" class="fade-in flex flex-col items-center gap-4">
+
+      <div class="flex flex-col items-center gap-4">
+        <img
+          id="dynamic-final-img"
+          src=""
+          alt="Simulation d&rsquo;installation photovolta&iuml;que"
+          class="w-full max-w-md rounded-2xl gold-shadow"
+        />
+      </div>
+
+      <p class="text-xl text-gold font-bold text-center">
+        Votre toiture pr&eacute;sente un potentiel favorable pour une installation solaire performante.
+      </p>
+
+      <p class="text-white/80 text-center max-w-lg mb-2">
+        Vous allez recevoir une <strong>&eacute;tude sur-mesure</strong>, r&eacute;alis&eacute;e &agrave; partir
+        des informations que vous venez de renseigner&nbsp;:
+      </p>
+
+      <ul class="text-white/80 text-center text-sm max-w-lg mb-2 space-y-1">
+        <li>&bull; Simulation compl&egrave;te de la production annuelle</li>
+        <li>&bull; Estimation r&eacute;aliste des &eacute;conomies possibles</li>
+        <li>&bull; Recommandations techniques adapt&eacute;es &agrave; votre maison</li>
+        <li>&bull; Validation par un expert Solarglobe</li>
+      </ul>
+
+      <p class="text-gold font-semibold text-center text-sm mb-2">
+        Aucun chiffre g&eacute;n&eacute;rique&nbsp;: chaque &eacute;tude est analys&eacute;e individuellement.
+      </p>
+
+      <form
+        id="contactForm"
+        action="https://formsubmit.co/direction.solarglobe@gmail.com"
+        method="POST"
+        class="w-full max-w-sm mx-auto bg-[#222225] p-6 rounded-2xl border border-gold/20 flex flex-col gap-3 gold-shadow"
+        autocomplete="off"
+        novalidate
+      >
+        <!-- Champs cach&eacute;s obligatoires -->
+        <input type="hidden" name="_subject" value="Nouvelle demande d&rsquo;&eacute;tude solaire via le simulateur Solarglobe">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.solarglobe.fr/merci">
+
+        <!-- Champs visibles -->
+        <input required name="nom" type="text" placeholder="Votre nom"
+          class="rounded-md px-4 py-2 bg-noir border border-gold/20 text-white" />
+
+        <input required name="prenom" type="text" placeholder="Votre pr&eacute;nom"
+          class="rounded-md px-4 py-2 bg-noir border border-gold/20 text-white" />
+
+        <input required name="email" type="email" placeholder="Adresse email"
+          class="rounded-md px-4 py-2 bg-noir border border-gold/20 text-white" />
+
+        <input required name="tel" type="tel" placeholder="T&eacute;l&eacute;phone"
+          class="rounded-md px-4 py-2 bg-noir border border-gold/20 text-white" />
+
+        <p class="text-xs text-neutral-400">
+          Utilis&eacute; uniquement pour vous transmettre votre &eacute;tude et r&eacute;pondre &agrave; vos questions
+        </p>
+
+        <!-- Consentement RGPD -->
+        <label class="flex items-start gap-2 text-sm text-neutral-200 mt-1">
+          <input required type="checkbox" name="rgpd_ok" class="mt-1">
+          <span>
+            J&rsquo;accepte que mes donn&eacute;es soient utilis&eacute;es pour me recontacter
+            dans le cadre de mon &eacute;tude solaire.
+            <a href="/politique-de-confidentialite" class="text-gold underline" target="_blank" rel="noopener">
+              En savoir plus
+            </a>.
+          </span>
+        </label>
+
+        <!-- Honeypot anti-spam -->
+        <input type="text" name="_hpt" style="display:none" tabindex="-1" autocomplete="off">
+
+        <!-- Champs cach&eacute;s remplis par JS -->
+        <input type="hidden" name="Adresse" id="formAdresse" />
+        <input type="hidden" name="Latitude" id="formLat" />
+        <input type="hidden" name="Longitude" id="formLon" />
+        <input type="hidden" name="Surface" id="formSurface" />
+        <input type="hidden" name="Orientation" id="formOrientation" />
+        <input type="hidden" name="Inclinaison" id="formInclinaison" />
+        <input type="hidden" name="Obstacles" id="formObstacles" />
+        <input type="hidden" name="Panneaux" id="formPanneaux" />
+
+        <button
+          type="submit"
+          class="bg-gold text-black font-semibold px-6 py-3 rounded-xl hover:scale-105 transition mt-2">
+          Obtenir mon &eacute;tude solaire gratuite
+        </button>
+      </form>
+    </div>
+  `,
+
+
+        
+onMount: () => {
+  const finalImg = document.getElementById('dynamic-final-img');
+  if (finalImg) {
+    if (data.panneaux === "dualsun") {
+      finalImg.src = "assets/images/final-dualsun.webp";
+      finalImg.alt = "Panneaux Dualsun sur toiture";
+    } else {
+      finalImg.src = "assets/images/final-longi.webp";
+      finalImg.alt = "Panneaux Longi Hi-MO 6 Artist sur toiture";
+    }
+  }
+
+  // Injection des valeurs
+  setTimeout(() => {
+    document.getElementById('formAdresse').value = data.address || '';
+    document.getElementById('formLat').value = data.lat || '';
+    document.getElementById('formLon').value = data.lon || '';
+    document.getElementById('formSurface').value = data.surface || '';
+    document.getElementById('formOrientation').value = data.orientation || '';
+    document.getElementById('formInclinaison').value = data.inclinaison || '';
+    document.getElementById('formObstacles').value = data.obstacles || '';
+    document.getElementById('formPanneaux').value = data.panneaux || '';
+  }, 300);
+}
+}
+];
+
+let currentStep = 0;
+
+function renderStep() {
+  const stepsDiv = document.getElementById("steps");
+  const progress = document.getElementById('progress');
+  const progressLabel = document.getElementById('progress-label');
+
+  const percent = Math.round(((currentStep + 1) / steps.length) * 100);
+  progress.style.width = percent + '%';
+
+  // IMPORTANT : textContent ne "lit" PAS les entit&eacute;s HTML.
+  // Donc ici on met une version SAFE (sans accent) pour &ecirc;tre 100% stable.
+progressLabel.textContent = `Etape ${currentStep + 1} / ${steps.length} - ${percent}%`;
+
+
+  stepsDiv.innerHTML = `
+    <div class="slide-left">
+      <h3 class="text-2xl text-gold mb-2">${steps[currentStep].label}</h3>
+      ${steps[currentStep].render()}
+      <div class="flex justify-between mt-6">
+        ${currentStep > 0
+          ? `<button id="prevBtn" type="button"
+              class="bg-noir border border-gold/30 px-4 py-2 rounded-xl hover:bg-gold hover:text-black">
+              Retour
+            </button>`
+          : "<span></span>"
+        }
+        ${currentStep < steps.length - 1
+          ? `<button id="nextBtn" type="button"
+              class="bg-gold text-black font-bold px-6 py-2 rounded-xl hover:scale-105 transition">
+              Suivant
+            </button>`
+          : "<span></span>"
+        }
+      </div>
+    </div>
+  `;
+
+  steps[currentStep].onMount && steps[currentStep].onMount();
+
+  const next = document.getElementById("nextBtn");
+  if (next) next.onclick = nextStep;
+
+  const prev = document.getElementById("prevBtn");
+  if (prev) prev.onclick = prevStep;
+
+  // Tracking Funnel (GTM)
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'simulateur_step_view',
+    step_index: currentStep + 1,
+    step_label: steps[currentStep].label
+  });
+
+  updateIllustration(currentStep);
+}
+
+function nextStep() {
+  if (currentStep < steps.length - 1) {
+    currentStep++;
+    renderStep();
+  }
+}
+
+function prevStep() {
+  if (currentStep > 0) {
+    currentStep--;
+    renderStep();
+  }
+}
+
+function updateIllustration(stepIdx) {
+  const video = document.getElementById("visuel-3d");
+  if (!video) return;
+  video.src = stepVideos[stepIdx] || stepVideos[0];
+  video.load();
+  video.play();
+}
+
+window.onload = () => { renderStep(); };
+</script>
+
+<!-- BANDEAU COOKIES + Consent Mode update -->
+<div id="cookie-banner-solarglobe" style="display:none; position:fixed; left:0; right:0; bottom:0; z-index:9999; width:100vw;">
+  <div style="max-width:600px;width:94vw;margin:0 auto 2.5vw auto;background:#101010;border:2px solid #C39847;border-radius:1.5rem;box-shadow:0 0 32px #C39847bb;color:#fff;padding:2rem 1.4rem 1.4rem;display:flex;flex-direction:column;align-items:center;pointer-events:auto;">
+    <span style="font-size:1.2rem;font-weight:700;color:#C39847;margin-bottom:0.6rem;">
+      Votre vie priv&eacute;e, notre priorit&eacute;.
+    </span>
+    <span style="text-align:center;font-size:1rem;color:#fff;margin-bottom:1.2rem;">
+      Aucun cookie non essentiel sans votre accord.<br>
+      Vous pouvez tout accepter, tout refuser ou personnaliser &agrave; tout moment.<br>
+      <a href="/cookies" style="color:#C39847;text-decoration:underline;" target="_blank" rel="noopener">En savoir plus</a>
+    </span>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+      <button id="cookie-accept" type="button" style="background:#C39847;color:#101010;font-weight:700;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1rem;cursor:pointer;transition:.2s;">Tout accepter</button>
+      <button id="cookie-decline" type="button" style="background:#232323;color:#fff;font-weight:700;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1rem;cursor:pointer;transition:.2s;">Tout refuser</button>
+      <button id="cookie-settings" type="button" style="background:transparent;color:#C39847;font-weight:600;border:1px solid #C39847;border-radius:8px;padding:.7rem 1.4rem;font-size:1rem;cursor:pointer;transition:.2s;">Personnaliser</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const COOKIE_KEY = "solarglobe_cookie_consent";
+  const banner = document.getElementById("cookie-banner-solarglobe");
+
+  function hideBanner(){ banner.style.display = "none"; }
+  function showBanner(){ banner.style.display = "flex"; }
+
+  function setConsent(value){
+    localStorage.setItem(COOKIE_KEY, value);
+    hideBanner();
+    if(value === "accepted"){
+      gtag('consent','update',{ ad_storage:'granted', analytics_storage:'granted' });
+    }else{
+      gtag('consent','update',{ ad_storage:'denied', analytics_storage:'denied' });
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", function(){
+    const consent = localStorage.getItem(COOKIE_KEY);
+    if(!consent) showBanner();
+  });
+
+  document.getElementById("cookie-accept").onclick = () => setConsent("accepted");
+  document.getElementById("cookie-decline").onclick = () => setConsent("declined");
+  document.getElementById("cookie-settings").onclick = () => alert("Le panneau de personnalisation arrive bient\u00f4t !");
+</script>
+
+<!-- Schema.org : WebPage + Breadcrumb + Service (Etude solaire gratuite) -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.solarglobe.fr/etude-solaire-gratuite#webpage",
+    "url": "https://www.solarglobe.fr/etude-solaire-gratuite",
+    "name": "\u00c9tude solaire gratuite \u2013 Estimez vos \u00e9conomies | Solarglobe",
+    "description": "Obtenez gratuitement une \u00e9tude solaire personnalis\u00e9e : potentiel de production, \u00e9conomies r\u00e9alisables, aides financi\u00e8res et dimensionnement id\u00e9al pour votre maison.",
+    "inLanguage": "fr",
+    "isPartOf": { "@id": "https://www.solarglobe.fr/#website" },
+    "publisher": { "@id": "https://www.solarglobe.fr/#organization" },
+    "potentialAction": {
+      "@type": "Action",
+      "name": "Obtenir mon \u00e9tude solaire gratuite",
+      "target": "https://www.solarglobe.fr/etude-solaire-gratuite#form"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.solarglobe.fr/etude-solaire-gratuite#breadcrumb",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.solarglobe.fr/" },
+      { "@type": "ListItem", "position": 2, "name": "\u00c9tude solaire gratuite", "item": "https://www.solarglobe.fr/etude-solaire-gratuite" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.solarglobe.fr/etude-solaire-gratuite#service",
+    "serviceType": "\u00c9tude solaire personnalis\u00e9e gratuite",
+    "provider": { "@id": "https://www.solarglobe.fr/#organization" },
+    "areaServed": [
+      "\u00cele-de-France",
+      "Seine-et-Marne (77)",
+      "Essonne (91)",
+      "Val-d'Oise (95)",
+      "Oise (60)",
+      "Aisne (02)",
+      "Marne (51)",
+      "Aube (10)",
+      "Yonne (89)",
+      "Loiret (45)"
+    ],
+    "description": "Analyse personnalis\u00e9e de votre toiture et de votre consommation pour estimer la production photovolta\u00efque, les \u00e9conomies et les aides financi\u00e8res.",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.solarglobe.fr/etude-solaire-gratuite",
+      "priceCurrency": "EUR",
+      "price": "0",
+      "availability": "https://schema.org/InStock",
+      "eligibleRegion": "FR",
+      "category": "Consultation"
+    },
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "name": "Obtenir mon \u00e9tude gratuite",
+      "target": "https://www.solarglobe.fr/etude-solaire-gratuite#form"
+    }
+  }
+]
+</script>
+
+<!-- LocalBusiness optimis&eacute; -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://solarglobe.fr/#solarglobe",
+  "name": "Solarglobe",
+  "url": "https://solarglobe.fr/",
+  "logo": "https://solarglobe.fr/assets/images/logo-solarglobe-rect.png",
+  "image": "https://solarglobe.fr/assets/images/logo-solarglobe-rect.png",
+  "description": "Solarglobe installe des syst\u00e8mes photovolta\u00efques haut de gamme en \u00cele-de-France et d\u00e9partements limitrophes, avec accompagnement complet et garanties longues.",
+  "telephone": "+33 1 72 99 47 53",
+  "email": "contact@solarglobe.fr",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "19 avenue Pierre Curie",
+    "addressLocality": "Chelles",
+    "postalCode": "77500",
+    "addressRegion": "\u00cele-de-France",
+    "addressCountry": "FR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:30",
+      "closes": "16:30"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61578264284164",
+    "https://www.instagram.com/solarglobe.fr/",
+    "https://www.linkedin.com/company/108327439/"
+  ],
+  "areaServed": [
+    "\u00cele-de-France",
+    "Seine-et-Marne (77)",
+    "Essonne (91)",
+    "Val-d'Oise (95)",
+    "Oise (60)",
+    "Aisne (02)",
+    "Marne (51)",
+    "Aube (10)",
+    "Yonne (89)",
+    "Loiret (45)"
+  ],
+  "priceRange": "\u20ac\u20ac",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Service client",
+    "telephone": "+33 1 72 99 47 53",
+    "email": "contact@solarglobe.fr",
+    "areaServed": "FR",
+    "availableLanguage": ["fr"]
+  }
+}
+</script>
+
+
+</body>
+</html>

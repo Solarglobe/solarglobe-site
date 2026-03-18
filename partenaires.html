@@ -1,0 +1,2337 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
+  <link rel="stylesheet" href="/assets/css/header-common.css" />
+  <link rel="stylesheet" href="/assets/css/footer-common.css" />
+  <title>SolarGlobe — Pr&eacute;sentation partenaires</title>
+
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold: '#C39847' }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html, body { height: 100%; }
+    body { overflow: hidden; }
+
+    :root {
+      --sg-topbar-h: 88px;
+    }
+
+    /* ===============================
+       FOND GLOBAL FIXE
+    =============================== */
+    #global-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-image: url("/assets/images/partenaire/maison-photovoltaique.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    #global-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.65),
+          rgba(0,0,0,0.45),
+          rgba(0,0,0,0.85)
+        );
+    }
+
+    /* ===============================
+       GABARIT COMMUN — TOUTES LES SLIDES
+    =============================== */
+    #slides {
+      padding-top: var(--sg-topbar-h);
+      box-sizing: border-box;
+    }
+
+    .sg-slide {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - var(--sg-topbar-h));
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .sg-slide-inner {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: min(80rem, 92vw);
+      margin-left: auto;
+      margin-right: auto;
+      flex: 1;
+      min-height: 0;
+      padding: clamp(1rem, 2.5vw, 2rem) clamp(1rem, 4vw, 3rem);
+      gap: clamp(0.8rem, 1.8vh, 1.4rem);
+    }
+
+    .sg-slide-inner > main {
+      width: 100%;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .sg-slide-inner > footer {
+      flex-shrink: 0;
+    }
+
+    .sg-slide-inner > header {
+      flex-shrink: 0;
+    }
+
+    .sg-slide-inner--centered {
+      justify-content: center;
+    }
+
+    nav a.active {
+      color: #C39847;
+    }
+
+  </style>
+
+  
+</head>
+
+<body class="bg-black text-white antialiased overflow-x-hidden">
+
+  <div id="header-placeholder"></div>
+  <script src="/assets/js/header.js"></script>
+
+  <div id="global-bg" aria-hidden="true"></div>
+
+  <!-- ======================================================
+  SECTION LOGIN (TOUJOURS PR&Eacute;SENTE)
+  ====================================================== -->
+  <section id="login" class="w-full h-screen overflow-hidden relative">
+
+    <!-- IMAGE DE FOND -->
+   <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-connexion.webp"
+         alt="SolarGlobe &eacute;nergie"
+         class="w-full h-full object-cover object-center" />
+
+    <!-- voile ciné léger (NE CACHE PAS LA PHOTO) -->
+    <div class="absolute inset-0 bg-black/45"></div>
+    <div class="absolute inset-0 bg-gradient-to-b
+                from-black/30 via-black/20 to-black/55"></div>
+
+    <!-- halos -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute -top-40 -left-32
+                  w-[520px] h-[520px]
+                  rounded-full bg-gold/18 blur-3xl"></div>
+      <div class="absolute -bottom-40 -right-32
+                  w-[520px] h-[520px]
+                  rounded-full bg-gold/14 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.06]
+                  bg-[url('/assets/images/grain.png')] bg-repeat"></div>
+    </div>
+  </div>
+
+    <!-- CONTENU -->
+    <div class="relative z-10 h-full flex items-center">
+      <div class="max-w-7xl mx-auto px-8 w-full">
+        <div class="max-w-xl">
+
+          <img src="/assets/images/logo-solarglobe-rect.png"
+               alt="SolarGlobe"
+               class="h-10 mb-10 object-contain" />
+
+          <h1 class="text-4xl md:text-5xl font-semibold leading-tight mb-6">
+            Acc&egrave;s partenaires
+          </h1>
+
+          <p class="text-neutral-300 text-lg leading-relaxed mb-10">
+            Cette pr&eacute;sentation est strictement r&eacute;serv&eacute;e aux
+            <span class="text-white font-medium">agents immobiliers partenaires</span>.
+          </p>
+
+          <div class="max-w-md space-y-5">
+            <input id="passwordInput" type="password"
+                   placeholder="Mot de passe"
+                   class="w-full bg-black/60 border border-white/20
+                          rounded-xl px-5 py-4 text-white
+                          placeholder-neutral-400 focus:outline-none
+                          focus:border-gold transition" />
+
+            <button id="accessBtn"
+                    class="w-full bg-gold text-black font-semibold py-4 rounded-xl
+                           hover:scale-[1.03] transition">
+              Acc&eacute;der &agrave; la pr&eacute;sentation
+            </button>
+
+            <p class="text-xs text-neutral-400">
+              Acc&egrave;s confidentiel &middot; Lien s&eacute;curis&eacute;
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+  APP (CONTENU PROT&Eacute;G&Eacute;)
+  ====================================================== -->
+  <section id="app" class="hidden relative w-full h-screen overflow-hidden">
+
+    <!-- ======================================================
+    TOP BAR — FIXE / IDENTIQUE PARTOUT
+    ====================================================== -->
+    <header class="fixed top-0 left-0 w-full z-50">
+      <div class="backdrop-blur-xl bg-black/60 border-b border-white/10">
+
+        <div class="max-w-7xl mx-auto
+                    px-4 sm:px-6
+                    py-3 lg:py-4
+                    flex items-center gap-4">
+
+          <!-- LOGO -->
+          <a href="#"
+             class="flex-shrink-0 flex items-center select-none">
+            <img src="/assets/images/logo-solarglobe-rect.png"
+                 alt="SolarGlobe"
+                 class="h-8 sm:h-9 lg:h-10 xl:h-11 w-auto object-contain" />
+          </a>
+
+          <!-- NAV DESKTOP -->
+          <nav class="hidden md:flex flex-1
+                      justify-center items-center
+                      whitespace-nowrap
+                      gap-4 lg:gap-6 xl:gap-8
+                      text-[clamp(0.75rem,0.9vw,0.9rem)]
+                      font-medium text-neutral-300">
+
+            <a href="#" class="hover:text-gold transition">Intro</a>
+            <a href="#" class="hover:text-gold transition">&Eacute;nergie</a>
+            <a href="#" class="hover:text-gold transition">Terrain</a>
+            <a href="#" class="hover:text-gold transition">Solaire</a>
+            <a href="#" class="hover:text-gold transition">Levier</a>
+            <a href="#" class="hover:text-gold transition">Vendeur</a>
+            <a href="#" class="hover:text-gold transition">Acheteur</a>
+            <a href="#" class="hover:text-gold transition">SolarGlobe</a>
+            <a href="#" class="hover:text-gold transition">Process</a>
+            <a href="#" class="hover:text-gold transition">Primes</a>
+
+          </nav>
+
+          <!-- ACTIONS -->
+          <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+
+
+            <!-- CTA D’APPEL PREMIUM — NON CLIQUABLE -->
+<span
+  class="inline-flex items-center gap-2
+         px-4 sm:px-5 py-2.5
+         rounded-full
+         border border-gold/45
+         bg-black/25 backdrop-blur-md
+         text-gold font-semibold
+         text-[clamp(0.75rem,1vw,0.9rem)]
+         whitespace-nowrap
+         shadow-[0_18px_50px_rgba(195,152,71,0.18)]
+         select-none">
+  Tester un vrai dossier
+  <span class="text-gold/80">→</span>
+</span>
+
+
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- ======================================================
+    SLIDE 1 — INTRO
+    (padding-top = header fixe)
+    ====================================================== -->
+    <main id="slides" class="w-full h-screen">
+      <section id="intro"
+               class="sg-slide">
+
+        <!-- FOND -->
+     <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-connexion.webp"
+         alt="SolarGlobe &eacute;nergie"
+         class="w-full h-full object-cover object-center" />
+
+    <!-- voile ciné léger (NE CACHE PAS LA PHOTO) -->
+    <div class="absolute inset-0 bg-black/45"></div>
+    <div class="absolute inset-0 bg-gradient-to-b
+                from-black/30 via-black/20 to-black/55"></div>
+
+    <!-- halos -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute -top-40 -left-32
+                  w-[520px] h-[520px]
+                  rounded-full bg-gold/18 blur-3xl"></div>
+      <div class="absolute -bottom-40 -right-32
+                  w-[520px] h-[520px]
+                  rounded-full bg-gold/14 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.06]
+                  bg-[url('/assets/images/grain.png')] bg-repeat"></div>
+    </div>
+  </div>
+          <!-- HALOS PREMIUM -->
+          <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <div class="absolute -top-40 -left-32 w-[520px] h-[520px] rounded-full bg-gold/14 blur-3xl"></div>
+            <div class="absolute -bottom-40 -right-32 w-[520px] h-[520px] rounded-full bg-gold/10 blur-3xl"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(70%_55%_at_50%_18%,rgba(195,152,71,0.12),transparent_60%)]"></div>
+            <div class="absolute inset-0 opacity-[0.06] bg-[url('/assets/images/grain.png')] bg-repeat"></div>
+          </div>
+
+        <!-- CONTENU -->
+        <div class="relative z-10 w-full sg-slide-inner sg-slide-inner--centered">
+          <div class="max-w-7xl mx-auto px-6 sm:px-8 w-full">
+
+            <div class="max-w-3xl intro-reveal
+                        space-y-[clamp(1.4rem,2.2vh,2.8rem)]">
+
+              <!-- LIGNE 1 -->
+              <p class="intro-line-1
+                        text-[10px] sm:text-xs
+                        tracking-[0.32em] uppercase text-neutral-400">
+                R&eacute;serv&eacute; aux partenaires &middot;
+                <span class="text-gold">Agents immobiliers</span>
+              </p>
+
+              <!-- TITRE -->
+              <h1 class="intro-line-2
+                         font-semibold leading-[1.05]
+                         text-[clamp(2.2rem,4.6vw,4.4rem)]">
+                Ajoutez de la <span class="text-gold">valeur</span> &agrave; vos mandats,<br />
+                <span class="text-gold">sans</span> complexifier la vente.
+              </h1>
+
+              <!-- TEXTE -->
+              <p class="intro-line-3
+                        text-neutral-300 leading-relaxed max-w-2xl
+                        text-[clamp(1rem,1.2vw,1.25rem)]">
+                Un outil clair pour <span class="text-gold font-medium">rassurer</span> vendeurs et acheteurs,<br />
+                et un partenaire technique que vous pouvez recommander
+                <span class="text-neutral-100 font-semibold">les yeux ferm&eacute;s</span>.
+              </p>
+
+              <!-- PILIERS -->
+              <div class="intro-pillars
+                          grid grid-cols-1 sm:grid-cols-3
+                          gap-[clamp(1rem,2vw,2rem)]
+                          pt-[clamp(0.6rem,1.4vh,1.6rem)]">
+
+                <div class="pillar flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-full
+                              border border-gold/60 bg-gold/10
+                              flex items-center justify-center
+                              text-gold font-semibold">
+                    1
+                  </div>
+                  <span class="text-sm text-neutral-200 leading-snug">
+                    <span class="text-gold font-semibold">&Eacute;tude</span> claire &amp; ind&eacute;pendante
+                  </span>
+                </div>
+
+                <div class="pillar flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-full
+                              border border-gold/60 bg-gold/10
+                              flex items-center justify-center
+                              text-gold font-semibold">
+                    2
+                  </div>
+                  <span class="text-sm text-neutral-200 leading-snug">
+                    <span class="text-gold font-semibold">Valorisation</span> imm&eacute;diate du bien
+                  </span>
+                </div>
+
+                <div class="pillar flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-full
+                              border border-gold/60 bg-gold/10
+                              flex items-center justify-center
+                              text-gold font-semibold">
+                    3
+                  </div>
+                  <span class="text-sm text-neutral-200 leading-snug">
+                    <span class="text-gold font-semibold">Commission</span> partenaire transparente
+                  </span>
+                </div>
+
+              </div>
+
+              <!-- CTA / SUIVANT -->
+              <div class="intro-cta pt-[clamp(1.6rem,3vh,3.4rem)] flex items-center gap-4">
+                <button type="button"
+                        data-next
+                        class="inline-flex items-center
+                               px-8 lg:px-10 py-3.5
+                               rounded-full bg-gold
+                               text-black font-semibold text-sm
+                               shadow-[0_20px_60px_rgba(195,152,71,0.35)]
+                               hover:scale-[1.04] transition">
+                  D&eacute;couvrir la suite
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+<!-- ======================================================
+ÉNERGIE — SLIDE (PHOTO VISIBLE / CINÉ / 1 PAGE)
+====================================================== -->
+<section id="energie"
+  class="sg-slide"
+>
+
+  <!-- =======================
+  FOND IMAGE (COMME INTRO)
+  ======================== -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-connexion.webp"
+         alt="SolarGlobe &eacute;nergie"
+         class="w-full h-full object-cover object-center" />
+
+    <!-- voile ciné léger (NE CACHE PAS LA PHOTO) -->
+    <div class="absolute inset-0 bg-black/45"></div>
+    <div class="absolute inset-0 bg-gradient-to-b
+                from-black/30 via-black/20 to-black/55"></div>
+
+    <!-- halos -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute -top-40 -left-32
+                  w-[520px] h-[520px]
+                  rounded-full bg-gold/18 blur-3xl"></div>
+      <div class="absolute -bottom-40 -right-32
+                  w-[520px] h-[520px]
+                  rounded-full bg-gold/14 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.06]
+                  bg-[url('/assets/images/grain.png')] bg-repeat"></div>
+    </div>
+  </div>
+
+  <!-- =======================
+  CONTENU
+  ======================== -->
+  <div class="relative z-10 sg-slide-inner">
+
+    <!-- HEADER -->
+    <header class="max-w-5xl">
+      <p class="uppercase tracking-[0.28em]
+                text-neutral-300
+                text-[clamp(0.6rem,0.9vw,0.75rem)]
+                mb-[clamp(0.4rem,1vh,0.8rem)]">
+        Lecture &eacute;nerg&eacute;tique &middot;
+        <span class="text-gold">D&eacute;cision immobili&egrave;re</span>
+      </p>
+
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(1.6rem,3.6vw,3rem)]">
+        Pourquoi le sujet <span class="text-gold">&eacute;nergie</span><br />
+        p&egrave;se <span class="text-gold">d&eacute;sormais</span> dans une vente
+      </h2>
+
+      <p class="mt-[clamp(0.4rem,1.2vh,0.9rem)]
+                max-w-3xl text-neutral-200
+                text-[clamp(0.8rem,1.2vw,1.05rem)]">
+        Ce n&rsquo;est pas un &laquo; probl&egrave;me d&rsquo;agent &raquo;.
+        C&rsquo;est un <span class="text-gold font-medium">crit&egrave;re de d&eacute;cision</span>
+        qui monte chez les clients.
+      </p>
+    </header>
+
+    <!-- CŒUR -->
+    <main class="w-full max-w-full grid grid-cols-1 lg:grid-cols-2
+                 gap-[clamp(1.2rem,3vw,3.5rem)]
+                 rounded-[clamp(1.2rem,3vw,2.2rem)]
+                 border border-gold/30
+                 bg-black/25 backdrop-blur-md
+                 p-[clamp(1.2rem,3vw,2.8rem)]">
+
+      <!-- GAUCHE -->
+      <div class="flex flex-col justify-center
+                  gap-[clamp(0.6rem,1.4vh,1.1rem)]">
+
+        <h3 class="font-semibold
+                   text-[clamp(0.95rem,1.6vw,1.35rem)]">
+          Ce que &ccedil;a change
+          <span class="text-gold">en rendez-vous</span>
+        </h3>
+
+        <ul class="space-y-[clamp(0.35rem,1vh,0.7rem)]
+                   text-neutral-100
+                   text-[clamp(0.75rem,1.05vw,0.95rem)]
+                   leading-relaxed">
+
+          <li>
+            <span class="text-gold font-semibold">Charges</span>
+            (&eacute;lectricit&eacute; / &eacute;nergie)
+            devenues un frein post-visite.
+          </li>
+
+          <li>
+            Les clients veulent une
+            <span class="text-gold font-semibold">
+              projection de co&ucirc;t d&rsquo;usage
+            </span>,
+            pas seulement un prix.
+          </li>
+
+          <li>
+            L&rsquo;&eacute;lectricit&eacute; reste
+            <span class="text-gold">volatile</span>
+            sur <span class="text-gold">10 &agrave; 20 ans</span>.
+          </li>
+        </ul>
+
+        <div class="mt-[clamp(0.4rem,1.2vh,0.8rem)]
+                    rounded-xl border border-gold/40
+                    bg-gold/15
+                    px-[clamp(0.8rem,2vw,1.2rem)]
+                    py-[clamp(0.5rem,1.2vh,0.9rem)]">
+
+          <p class="text-neutral-100
+                    text-[clamp(0.7rem,1vw,0.85rem)]">
+            <span class="text-gold font-semibold">Le bon angle :</span>
+            parler <strong>co&ucirc;t mensuel</strong> +
+            <strong>projection</strong>
+            <span class="text-neutral-300">(simple, concret)</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- DROITE — QUOTE -->
+      <div class="relative flex items-center justify-center
+                  rounded-[clamp(1rem,3vw,2rem)]
+                  border border-white/20
+                  bg-black/30
+                  p-[clamp(1.2rem,2.8vw,2.4rem)]
+                  text-center
+                  overflow-hidden">
+
+        <div class="absolute text-gold/20 text-[6rem] left-4 top-2 pointer-events-none">"</div>
+        <div class="absolute text-gold/20 text-[6rem] right-4 bottom-0 pointer-events-none">"</div>
+
+        <div class="max-w-md mx-auto">
+
+          <p class="font-semibold leading-snug
+                    text-[clamp(1.15rem,2.5vw,2.2rem)]">
+            Combien va me co&ucirc;ter la maison<br />
+            <span class="text-gold">chaque mois</span> ?
+          </p>
+
+          <p class="mt-2 text-neutral-300
+                    text-[clamp(0.7rem,1vw,0.9rem)]">
+            La question qui fait basculer
+            <span class="text-gold">apr&egrave;s</span> la visite.
+          </p>
+
+        </div>
+      </div>
+
+    </main>
+
+    <!-- OUTRO + NAVIGATION -->
+<div id="footer-placeholder"></div>
+<script src="/assets/js/footer.js"></script>
+
+  </div>
+</section>
+
+
+
+<!-- ======================================================
+TERRAIN — SLIDE (1 PAGE / ADN INTRO & ÉNERGIE)
+====================================================== -->
+<section id="terrain"
+  class="sg-slide"
+>
+
+  <!-- =======================
+  FOND IMAGE (STANDARD GLOBAL)
+  ======================== -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-connexion.webp"
+         alt="SolarGlobe terrain"
+         class="w-full h-full object-cover object-center" />
+
+    <!-- voile ciné LÉGER (photo visible) -->
+    <div class="absolute inset-0 bg-black/45"></div>
+    <div class="absolute inset-0 bg-gradient-to-b
+                from-black/30 via-black/20 to-black/55"></div>
+
+    <!-- halos -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute -top-40 -left-32
+                  w-[520px] h-[520px]
+                  rounded-full bg-gold/18 blur-3xl"></div>
+      <div class="absolute -bottom-40 -right-32
+                  w-[520px] h-[520px]
+                  rounded-full bg-gold/14 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.06]
+                  bg-[url('/assets/images/grain.png')] bg-repeat"></div>
+    </div>
+  </div>
+
+  <!-- =======================
+  CONTENU
+  ======================== -->
+  <div class="relative z-10 sg-slide-inner">
+
+    <!-- HEADER -->
+    <header class="terrain-header max-w-5xl">
+      <p class="uppercase tracking-[0.28em]
+                text-neutral-300
+                text-[clamp(0.6rem,0.9vw,0.75rem)]
+                mb-2">
+        R&eacute;alit&eacute; terrain &middot;
+        <span class="text-gold">Post-visite</span>
+      </p>
+
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(1.6rem,3.4vw,3rem)]">
+        Ce qui bloque <span class="text-gold">r&eacute;ellement</span><br />
+        apr&egrave;s une visite
+      </h2>
+
+      <p class="mt-2 max-w-3xl text-neutral-200
+                text-[clamp(0.8rem,1.2vw,1.05rem)]">
+        Ce n&rsquo;est pas un manque d&rsquo;int&eacute;r&ecirc;t.
+        C&rsquo;est une <span class="text-gold font-medium">h&eacute;sitation silencieuse</span>.
+      </p>
+    </header>
+
+    <!-- PANEL CENTRAL -->
+    <main class="terrain-panel w-full grid grid-cols-1 lg:grid-cols-2
+                 gap-[clamp(1.2rem,3vw,3rem)]
+                 rounded-[clamp(1.2rem,3vw,2.2rem)]
+                 border border-gold/30
+                 bg-black/25 backdrop-blur-md
+                 p-[clamp(1.2rem,3vw,2.6rem)]">
+
+      <!-- GAUCHE -->
+      <div class="terrain-left space-y-4">
+        <h3 class="font-semibold text-[clamp(1rem,1.6vw,1.4rem)]">
+          Ce que le client se dit <span class="text-gold">vraiment</span>
+        </h3>
+
+        <ul class="space-y-3 text-neutral-100
+                   text-[clamp(0.8rem,1.05vw,0.95rem)] leading-relaxed">
+          <li>“<span class="text-gold font-medium">Et si</span> les charges explosent ?”</li>
+          <li>“On n&rsquo;est <span class="text-gold">pas s&ucirc;rs</span> des chiffres…”</li>
+          <li>“On d&eacute;cidera plus tard.”</li>
+          <li>“On veut comparer tranquillement.”</li>
+        </ul>
+      </div>
+
+      <!-- DROITE — QUOTE -->
+      <div class="terrain-quote relative flex items-center justify-center
+                  rounded-[clamp(1rem,3vw,2rem)]
+                  border border-white/20
+                  bg-black/30
+                  p-[clamp(1.2rem,2.6vw,2.4rem)] text-center">
+
+        <div class="absolute top-[-3vh] left-[-1vw]
+                    text-[clamp(3.5rem,9vw,7rem)]
+                    text-gold/25 font-semibold">“</div>
+
+        <div>
+          <p class="font-semibold
+                    text-[clamp(1.1rem,2.4vw,2rem)]">
+            On adore…<br />
+            <span class="text-gold">mais on va r&eacute;fl&eacute;chir.</span>
+          </p>
+
+          <p class="mt-2 text-neutral-300
+                    text-[clamp(0.75rem,1vw,0.9rem)]">
+            Un empilement de doutes invisibles.
+          </p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- FOOTER / NAV -->
+    <footer class="terrain-footer flex items-center justify-between">
+
+      <button type="button"
+              data-prev
+              class="px-6 py-3 rounded-full
+                     border border-white/25
+                     bg-white/5 text-white text-sm
+                     hover:bg-white/10 transition">
+        ← &Eacute;nergie
+      </button>
+
+      <button type="button"
+              data-next
+              class="px-7 py-3 rounded-full
+                     bg-gold text-black font-semibold text-sm
+                     hover:scale-[1.04] transition">
+        Solaire →
+      </button>
+
+    </footer>
+
+  </div>
+</section>
+
+
+<!-- ======================================================
+SOLAIRE — SLIDE (1 PAGE / RESPONSIVE + NAV)
+ID NAV : #pourquoi-solaire
+====================================================== -->
+<section id="solaire"
+  class="sg-slide"
+>
+
+  <!-- =======================
+  FOND IMAGE (STANDARD GLOBAL)
+  ======================== -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-connexion.webp"
+         alt="SolarGlobe solaire immobilier"
+         class="w-full h-full object-cover object-center" />
+
+    <div class="absolute inset-0 bg-black/45"></div>
+    <div class="absolute inset-0 bg-gradient-to-b
+                from-black/30 via-black/20 to-black/55"></div>
+
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute -top-40 -left-32
+                  w-[520px] h-[520px]
+                  rounded-full bg-gold/18 blur-3xl"></div>
+      <div class="absolute -bottom-40 -right-32
+                  w-[520px] h-[520px]
+                  rounded-full bg-gold/14 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.06]
+                  bg-[url('/assets/images/grain.png')] bg-repeat"></div>
+    </div>
+  </div>
+
+  <!-- =======================
+  CONTENU
+  ======================== -->
+  <div class="relative z-10 sg-slide-inner -mt-[3vh]">
+
+    <!-- HEADER -->
+    <header class="solaire-header max-w-4xl">
+      <p class="uppercase tracking-[0.28em]
+                text-neutral-300
+                text-[clamp(0.6rem,0.9vw,0.75rem)]
+                mb-2">
+        Levier de vente &middot;
+        <span class="text-gold">Argument imm&eacute;diat</span>
+      </p>
+
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(1.6rem,3.4vw,3rem)]">
+        Pourquoi le solaire<br />
+        <span class="text-gold">acc&eacute;l&egrave;re</span> la d&eacute;cision
+      </h2>
+
+      <p class="mt-2 max-w-2xl text-neutral-200
+                text-[clamp(0.8rem,1.1vw,1.05rem)]">
+        Le solaire n&rsquo;est pas un &eacute;quipement.
+        C&rsquo;est une
+        <span class="text-gold font-medium">projection chiffr&eacute;e</span>
+        qui d&eacute;bloque la vente.
+      </p>
+    </header>
+
+    <!-- PANEL CENTRAL -->
+    <main class="solaire-panel w-full grid grid-cols-1 lg:grid-cols-2 items-center
+                 gap-[clamp(1rem,2.6vw,2.6rem)]
+                 rounded-[clamp(1.2rem,3vw,2.2rem)]
+                 border border-gold/30
+                 bg-black/25 backdrop-blur-md
+                 p-[clamp(1.1rem,2.6vw,2.4rem)]">
+
+      <!-- GAUCHE -->
+      <div class="solaire-left space-y-3">
+        <h3 class="font-semibold
+                   text-[clamp(1rem,1.6vw,1.35rem)]">
+          Ce qui bloque une vente
+          <span class="text-gold">classique</span>
+        </h3>
+
+        <ul class="space-y-3 text-neutral-100
+                   text-[clamp(0.8rem,1.05vw,0.95rem)]
+                   leading-relaxed">
+
+          <li>
+            <span class="text-gold font-medium">
+              &laquo; On va r&eacute;fl&eacute;chir &raquo;
+            </span><br />
+            <span class="text-neutral-400">
+              L&rsquo;&eacute;lan retombe apr&egrave;s la visite.
+            </span>
+          </li>
+
+          <li>
+            Discussion trop centr&eacute;e sur le
+            <span class="text-gold font-medium">prix</span><br />
+            <span class="text-neutral-400">
+              Faute d&rsquo;argument chiffr&eacute; diff&eacute;renciant.
+            </span>
+          </li>
+
+          <li>
+            Peur des
+            <span class="text-gold font-medium">charges futures</span><br />
+            <span class="text-neutral-400">
+              L&rsquo;inconnu bloque la signature.
+            </span>
+          </li>
+
+          <li>
+            Manque de
+            <span class="text-gold font-medium">r&eacute;ponse claire</span> en visite<br />
+            <span class="text-neutral-400">
+              L&rsquo;acheteur repart avec ses doutes.
+            </span>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- DROITE — QUOTE -->
+      <div class="solaire-quote relative flex items-center justify-center
+                  min-h-[220px]
+                  rounded-[clamp(1rem,3vw,2rem)]
+                  border border-white/20
+                  bg-black/30
+                  p-[clamp(1.1rem,2.4vw,2.2rem)]
+                  text-center">
+
+        <div class="absolute top-[-3vh] left-[-1vw]
+                    text-[clamp(3.5rem,9vw,7rem)]
+                    text-gold/25 font-semibold select-none">“</div>
+
+        <div class="absolute bottom-[-4vh] right-[-1vw]
+                    text-[clamp(3.5rem,9vw,7rem)]
+                    text-gold/20 font-semibold select-none">”</div>
+
+        <div>
+          <p class="font-semibold leading-snug
+                    text-[clamp(1.05rem,2.2vw,2rem)]">
+            Avec une projection solaire,<br />
+            <span class="text-gold">le doute devient lisible.</span>
+          </p>
+
+          <p class="mt-2 text-neutral-300
+                    text-[clamp(0.75rem,1vw,0.9rem)]">
+            Co&ucirc;t mensuel, &eacute;conomies, stabilit&eacute;.
+          </p>
+
+          <p class="mt-1 text-neutral-400
+                    text-[clamp(0.7rem,0.95vw,0.85rem)]">
+            L&rsquo;acheteur peut enfin se projeter.
+          </p>
+        </div>
+      </div>
+
+      <!-- OUTRO MOBILE (pour garder 1 &eacute;cran sans &eacute;craser le footer) -->
+      <div class="md:hidden">
+        <p class="text-neutral-200
+                  text-[clamp(0.85rem,1.1vw,1rem)]
+                  leading-relaxed">
+          SolarGlobe ne vend pas des panneaux.
+          <span class="text-gold font-semibold">
+            Il s&eacute;curise la d&eacute;cision d&rsquo;achat.
+          </span>
+        </p>
+      </div>
+
+    </main>
+
+    <!-- FOOTER / NAV -->
+    <footer class="solaire-footer flex items-center justify-between">
+
+      <button type="button"
+              data-prev
+              class="px-6 py-3 rounded-full
+                     border border-white/25
+                     bg-white/5 text-white text-sm
+                     hover:bg-white/10 transition">
+        ← Terrain
+      </button>
+
+      <p class="hidden md:block text-neutral-200
+                text-[clamp(0.85rem,1.1vw,1rem)]
+                max-w-3xl text-center leading-relaxed">
+        SolarGlobe ne vend pas des panneaux.
+        <span class="text-gold font-semibold">
+          Il s&eacute;curise la d&eacute;cision d&rsquo;achat.
+        </span>
+      </p>
+
+      <button type="button"
+              data-next
+              class="px-7 py-3 rounded-full
+                     bg-gold text-black font-semibold text-sm
+                     hover:scale-[1.04] transition">
+        Levier →
+      </button>
+
+    </footer>
+
+  </div>
+</section>
+
+
+<!-- ======================================================
+LEVIER — SLIDE (AJUSTEMENT VERTICAL FIN / AUCUNE SUPPRESSION)
+====================================================== -->
+<section id="levier"
+  class="sg-slide"
+>
+
+  <!-- =======================
+  FOND IMAGE (STANDARD GLOBAL)
+  ======================== -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-connexion.webp"
+         alt="SolarGlobe levier de vente"
+         class="w-full h-full object-cover object-center" />
+
+    <div class="absolute inset-0 bg-black/45"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/55"></div>
+
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute -top-36 -left-32 w-[480px] h-[480px] rounded-full bg-gold/18 blur-3xl"></div>
+      <div class="absolute -bottom-36 -right-32 w-[480px] h-[480px] rounded-full bg-gold/14 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.06] bg-[url('/assets/images/grain.png')] bg-repeat"></div>
+    </div>
+  </div>
+
+  <!-- =======================
+  CONTENU
+  ======================== -->
+  <div class="relative z-10 sg-slide-inner">
+
+    <!-- HEADER -->
+    <header class="max-w-4xl">
+      <p class="uppercase tracking-[0.28em]
+                text-neutral-300
+                text-[clamp(0.55rem,0.8vw,0.7rem)]
+                mb-1">
+        Acc&eacute;l&eacute;rateur &middot;
+        <span class="text-gold">D&eacute;cision</span>
+      </p>
+
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(1.4rem,3.2vw,2.8rem)]">
+        Le <span class="text-gold">levier</span> que les autres<br />
+        n&rsquo;utilisent pas
+      </h2>
+
+      <p class="mt-1 text-neutral-200
+                text-[clamp(0.8rem,1vw,0.95rem)]
+                leading-snug">
+        Vous ne poussez pas &agrave; l&rsquo;achat.
+        <span class="text-gold font-medium">
+          Vous rendez la d&eacute;cision rationnelle.
+        </span>
+      </p>
+    </header>
+
+    <!-- PANEL CENTRAL -->
+    <main class="w-full max-w-full grid grid-cols-1 lg:grid-cols-2
+                 gap-[clamp(1rem,2.2vw,2.2rem)]
+                 rounded-[clamp(1.2rem,2.6vw,2.2rem)]
+                 border border-gold/30
+                 bg-black/25 backdrop-blur-md
+                 p-[clamp(1rem,2.4vw,2.4rem)]">
+
+      <!-- GAUCHE -->
+      <div class="space-y-3">
+        <div class="rounded-xl border border-gold/40 bg-gold/10 px-3 py-2 text-[clamp(0.78rem,0.95vw,0.9rem)]">
+          Aujourd&rsquo;hui, une maison qui fait
+          <span class="text-gold font-semibold">
+            &eacute;conomiser de l&rsquo;&eacute;nergie
+          </span>
+          n&rsquo;est plus un bonus&nbsp;:
+          <span class="text-gold font-semibold">
+            c&rsquo;est un avantage rare, et souvent d&eacute;cisif.
+          </span>
+        </div>
+
+        <h3 class="font-semibold text-[clamp(0.95rem,1.4vw,1.25rem)]">
+          Ce que &ccedil;a change
+          <span class="text-gold">dans une h&eacute;sitation</span>
+        </h3>
+
+        <ul class="space-y-2 text-neutral-100 text-[clamp(0.78rem,0.95vw,0.9rem)] leading-snug">
+          <li>Entre deux biens comparables, <span class="text-gold">l&rsquo;&eacute;conomie r&eacute;elle tranche.</span></li>
+          <li>Les panneaux transforment un doute <span class="text-gold">en projection concr&egrave;te.</span></li>
+          <li>L&rsquo;acheteur compare un <span class="text-gold">co&ucirc;t de vie</span>, pas juste un prix.</li>
+          <li>Pour le vendeur : <span class="text-gold">diff&eacute;renciateur rare et imm&eacute;diat.</span></li>
+        </ul>
+      </div>
+
+      <!-- DROITE — QUOTE -->
+      <div class="relative flex items-center justify-center
+                  rounded-[clamp(1.2rem,2.6vw,2.2rem)]
+                  border border-white/20
+                  bg-black/30
+                  p-[clamp(1rem,2.2vw,2.2rem)]
+                  text-center">
+
+        <div>
+          <p class="font-semibold leading-snug
+                    text-[clamp(1.05rem,2.2vw,2rem)]">
+            Ce n&rsquo;est plus une opinion.<br />
+            <span class="text-gold">C&rsquo;est un cadre de d&eacute;cision.</span>
+          </p>
+
+          <p class="mt-2 text-neutral-300 text-[clamp(0.7rem,0.9vw,0.85rem)]">
+            &Eacute;conomie, raret&eacute;, visibilit&eacute;.
+          </p>
+
+          <p class="mt-1 text-neutral-400 text-[clamp(0.65rem,0.85vw,0.8rem)]">
+            Quand le cadre est pos&eacute;, la vente avance.
+          </p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- FOOTER / NAV -->
+    <footer class="flex items-center justify-between mt-[clamp(0.9rem,2vh,1.6rem)]">
+      <button data-prev class="px-5 py-2 rounded-full border border-white/25 bg-white/5 text-xs hover:bg-white/10">← Solaire</button>
+      <button data-next class="px-5 py-2 rounded-full bg-gold text-black text-xs font-semibold">Vendeur →</button>
+    </footer>
+
+  </div>
+</section>
+
+
+<!-- ======================================================
+VENDEUR — SLIDE (ROI PHOTOVOLTAÏQUE AVANT VENTE)
+AJUSTEMENT VERTICAL FIN — AUCUNE SUPPRESSION
+====================================================== -->
+<section id="vendeur"
+  class="sg-slide"
+>
+
+  <!-- =======================
+  FOND IMAGE (STANDARD GLOBAL)
+  ======================== -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-connexion.webp"
+         alt="Photovolta&iuml;que et vente immobili&egrave;re"
+         class="w-full h-full object-cover object-center" />
+
+    <div class="absolute inset-0 bg-black/45"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/55"></div>
+
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute -top-36 -left-32 w-[480px] h-[480px] rounded-full bg-gold/18 blur-3xl"></div>
+      <div class="absolute -bottom-36 -right-32 w-[480px] h-[480px] rounded-full bg-gold/14 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.06] bg-[url('/assets/images/grain.png')] bg-repeat"></div>
+    </div>
+  </div>
+
+  <!-- =======================
+  CONTENU
+  ======================== -->
+  <div class="relative z-10 sg-slide-inner">
+
+    <!-- INTRO -->
+    <header class="max-w-4xl">
+      <p class="uppercase tracking-[0.26em] text-neutral-300 text-[clamp(0.55rem,0.8vw,0.7rem)] mb-1">
+        Vendeur &middot; <span class="text-gold">Investissement photovolta&iuml;que</span>
+      </p>
+
+      <h2 class="font-semibold leading-tight text-[clamp(1.3rem,3vw,2.6rem)]">
+        Avant de vendre, le photovolta&iuml;que<br />
+        <span class="text-gold">peut rapporter plus qu&rsquo;il ne co&ucirc;te</span>
+      </h2>
+
+      <p class="mt-1 text-neutral-200 text-[clamp(0.8rem,1vw,0.95rem)] leading-snug">
+        Contrairement &agrave; la plupart des travaux,
+        le photovolta&iuml;que agit directement sur
+        <span class="text-gold font-medium">le prix net vendeur</span>,
+        la <span class="text-gold font-medium">vitesse de vente</span>
+        et la <span class="text-gold font-medium">n&eacute;gociation</span>.
+      </p>
+    </header>
+
+    <!-- CŒUR -->
+    <main class="w-full max-w-full grid grid-cols-1 lg:grid-cols-2
+                 gap-[clamp(0.9rem,2vw,2rem)]
+                 rounded-[clamp(1.1rem,2.4vw,2rem)]
+                 border border-gold/30
+                 bg-black/25 backdrop-blur-md
+                 p-[clamp(0.9rem,2vw,2rem)]">
+
+      <!-- GAUCHE -->
+      <div class="space-y-3">
+        <h3 class="font-semibold text-[clamp(0.95rem,1.4vw,1.25rem)]">
+          Ce que compare r&eacute;ellement un acheteur
+        </h3>
+
+        <ul class="space-y-2 text-neutral-100 text-[clamp(0.78rem,0.95vw,0.9rem)] leading-snug">
+          <li><span class="text-gold font-medium">Sans photovolta&iuml;que&nbsp;:</span> comparaison centr&eacute;e sur le prix.</li>
+          <li><span class="text-gold font-medium">Avec photovolta&iuml;que&nbsp;:</span> actif &eacute;nerg&eacute;tique, &eacute;conomies visibles.</li>
+          <li>La discussion passe de <span class="text-gold">baisser</span> &agrave; <span class="text-gold">&eacute;conomiser</span>.</li>
+        </ul>
+
+        <div class="rounded-lg border border-gold/40 bg-gold/10 px-3 py-2 text-[clamp(0.74rem,0.9vw,0.86rem)] leading-snug">
+          <strong>Exemple courant&nbsp;:</strong><br />
+          Maison 300&nbsp;000&nbsp;&euro; + 10&nbsp;000&nbsp;&euro; de photovolta&iuml;que<br />
+          &rarr; vente plus rapide<br />
+          &rarr; prix final souvent <span class="text-gold font-semibold">sup&eacute;rieur</span>
+        </div>
+      </div>
+
+      <!-- DROITE -->
+      <div class="relative flex items-center justify-center rounded-[clamp(1.1rem,2.4vw,2rem)]
+                  border border-white/20 bg-black/30 p-[clamp(0.9rem,2vw,2rem)] text-center">
+        <div>
+          <p class="font-semibold text-[clamp(0.95rem,2vw,1.9rem)] leading-snug">
+            Aujourd&rsquo;hui, une maison qui fait<br />
+            <span class="text-gold">&eacute;conomiser de l&rsquo;&eacute;nergie</span><br />
+            est un avantage rare et d&eacute;cisif.
+          </p>
+          <p class="mt-1 text-neutral-400 text-[clamp(0.65rem,0.85vw,0.8rem)]">
+            R&eacute;alit&eacute; terrain, pas marketing.
+          </p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- FOOTER / NAV -->
+    <footer class="flex items-center justify-between mt-[clamp(0.9rem,2vh,1.6rem)]">
+      <button data-prev class="px-5 py-2 rounded-full border border-white/25 bg-white/5 text-xs hover:bg-white/10">← Levier</button>
+      <button data-next class="px-5 py-2 rounded-full bg-gold text-black text-xs font-semibold">Acheteur →</button>
+    </footer>
+
+  </div>
+</section>
+
+
+<!-- ======================================================
+ACHETEUR — SLIDE (DÉCISION AU MOMENT DE L’ACHAT)
+RESPONSIVE AJUSTÉ — NAV VISIBLE
+====================================================== -->
+<section id="acheteur"
+  class="sg-slide"
+>
+  <!-- =======================
+  FOND IMAGE (STANDARD GLOBAL)
+  ======================== -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-connexion.webp"
+         alt="Acheteur immobilier et photovolta&iuml;que"
+         class="w-full h-full object-cover object-center" />
+
+    <div class="absolute inset-0 bg-black/45"></div>
+    <div class="absolute inset-0 bg-gradient-to-b
+                from-black/30 via-black/20 to-black/55"></div>
+
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute -top-36 -left-32
+                  w-[480px] h-[480px]
+                  rounded-full bg-gold/18 blur-3xl"></div>
+      <div class="absolute -bottom-36 -right-32
+                  w-[480px] h-[480px]
+                  rounded-full bg-gold/14 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.06]
+                  bg-[url('/assets/images/grain.png')] bg-repeat"></div>
+    </div>
+  </div>
+
+  <!-- =======================
+  CONTENU
+  ======================== -->
+  <div class="relative z-10 sg-slide-inner">
+
+    <!-- =======================
+    HEADER
+    ======================== -->
+    <header class="max-w-4xl">
+      <p class="uppercase tracking-[0.28em]
+                text-neutral-300
+                text-[clamp(0.55rem,0.8vw,0.7rem)]
+                mb-1">
+        Acheteur &middot;
+        <span class="text-gold">Moment de d&eacute;cision</span>
+      </p>
+
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(1.35rem,3.1vw,2.7rem)]">
+        Le meilleur moment pour le photovolta&iuml;que,<br />
+        <span class="text-gold">c&rsquo;est au moment de l&rsquo;achat</span>
+      </h2>
+
+      <p class="mt-1 text-neutral-200
+                text-[clamp(0.8rem,1vw,0.95rem)]
+                leading-snug">
+        Lors d&rsquo;un achat immobilier, l&rsquo;acheteur raisonne en
+        <span class="text-gold font-medium">budget global</span>,
+        en <span class="text-gold font-medium">mensualit&eacute;</span>
+        et en <span class="text-gold font-medium">co&ucirc;t de vie</span>.
+        C&rsquo;est l&agrave; que le photovolta&iuml;que devient &eacute;vident.
+      </p>
+    </header>
+
+    <!-- =======================
+    PANEL CENTRAL
+    ======================== -->
+    <main class="w-full max-w-full grid grid-cols-1 lg:grid-cols-2
+                 gap-[clamp(1rem,2.2vw,2.2rem)]
+                 rounded-[clamp(1.2rem,2.6vw,2.2rem)]
+                 border border-gold/30
+                 bg-black/25 backdrop-blur-md
+                 p-[clamp(1rem,2.2vw,2.2rem)]">
+
+      <!-- GAUCHE — LOGIQUE ACHETEUR -->
+      <div class="space-y-3">
+        <h3 class="font-semibold
+                   text-[clamp(0.95rem,1.4vw,1.25rem)]">
+          Pourquoi l&rsquo;acheteur dit plus facilement oui
+        </h3>
+
+        <ul class="space-y-2 text-neutral-100
+                   text-[clamp(0.78rem,0.95vw,0.9rem)]
+                   leading-snug">
+
+          <li>
+            L&rsquo;acheteur accepte d&eacute;j&agrave; un
+            <span class="text-gold">engagement long terme</span>.
+          </li>
+
+          <li>
+            Le photovolta&iuml;que s&rsquo;int&egrave;gre dans une
+            <span class="text-gold">mensualit&eacute; globale</span>,
+            souvent inf&eacute;rieure aux &eacute;conomies g&eacute;n&eacute;r&eacute;es.
+          </li>
+
+          <li>
+            Il ne voit pas un travail en plus,
+            mais une <span class="text-gold">baisse imm&eacute;diate des charges</span>.
+          </li>
+
+          <li>
+            La maison est per&ccedil;ue comme
+            <span class="text-gold">optimis&eacute;e d&egrave;s le premier jour</span>.
+          </li>
+        </ul>
+
+        <div class="rounded-lg border border-gold/40
+                    bg-gold/10
+                    px-3 py-2
+                    text-[clamp(0.74rem,0.9vw,0.86rem)]
+                    text-neutral-100
+                    leading-snug">
+          <strong>Timing cl&eacute;&nbsp;:</strong><br />
+          Pendant l&rsquo;achat, la d&eacute;cision est
+          <span class="text-gold font-semibold">rationnelle</span>.<br />
+          Apr&egrave;s l&rsquo;achat, elle devient
+          <span class="text-gold font-semibold">&eacute;motionnelle et souvent repouss&eacute;e</span>.
+        </div>
+      </div>
+
+      <!-- DROITE — CADRE AGENT -->
+      <div class="relative flex items-center justify-center
+                  rounded-[clamp(1.2rem,2.6vw,2.2rem)]
+                  border border-white/20
+                  bg-black/30
+                  p-[clamp(1rem,2.2vw,2.2rem)]
+                  text-center">
+
+        <div>
+          <p class="font-semibold leading-snug
+                    text-[clamp(1.05rem,2.2vw,2rem)]">
+            Vous ne vendez pas du solaire.<br />
+            <span class="text-gold">
+              Vous facilitez la d&eacute;cision d&rsquo;achat.
+            </span>
+          </p>
+
+          <p class="mt-2 text-neutral-300
+                    text-[clamp(0.7rem,0.9vw,0.85rem)]">
+            Pour l&rsquo;agent&nbsp;: fluidit&eacute;, cr&eacute;dibilit&eacute;, diff&eacute;renciation.
+          </p>
+
+          <p class="mt-1 text-neutral-400
+                    text-[clamp(0.65rem,0.85vw,0.8rem)]">
+            Quand la projection est claire, la vente avance.
+          </p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- =======================
+    FOOTER / NAV (VISIBLE)
+    ======================== -->
+    <footer class="flex items-center justify-between
+                   mt-[clamp(0.75rem,1.4vh,1.2rem)]">
+
+      <button type="button"
+              data-prev
+              class="px-5 py-2 rounded-full
+                     border border-white/25
+                     bg-white/5 text-white text-xs
+                     hover:bg-white/10 transition">
+        ← Vendeur
+      </button>
+
+      <button type="button"
+              data-next
+              class="px-5 py-2 rounded-full
+                     bg-gold text-black font-semibold text-xs
+                     hover:scale-[1.04] transition">
+        SolarGlobe →
+      </button>
+
+    </footer>
+
+  </div>
+</section>
+
+
+<!-- ======================================================
+SOLARGLOBE — SLIDE (POSITIONNEMENT PREMIUM)
+STRUCTURE IDENTIQUE — OPTION A (MICRO-LABELS)
+====================================================== -->
+<section id="SolarGlobe"
+  class="sg-slide"
+>
+
+  <!-- =======================
+  FOND IMAGE (STANDARD GLOBAL)
+  ======================== -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-connexion.webp"
+         alt="Projet solaire premium Solarglobe"
+         class="w-full h-full object-cover object-center" />
+
+    <div class="absolute inset-0 bg-black/45"></div>
+    <div class="absolute inset-0 bg-gradient-to-b
+                from-black/30 via-black/20 to-black/55"></div>
+
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute -top-36 -left-32
+                  w-[480px] h-[480px]
+                  rounded-full bg-gold/18 blur-3xl"></div>
+      <div class="absolute -bottom-36 -right-32
+                  w-[480px] h-[480px]
+                  rounded-full bg-gold/14 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.06]
+                  bg-[url('/assets/images/grain.png')] bg-repeat"></div>
+    </div>
+  </div>
+
+  <!-- =======================
+  CONTENU
+  ======================== -->
+  <div class="relative z-10 sg-slide-inner">
+
+    <!-- =======================
+    HEADER
+    ======================== -->
+    <header class="max-w-4xl">
+      <p class="uppercase tracking-[0.28em]
+                text-neutral-300
+                text-[clamp(0.55rem,0.8vw,0.7rem)]
+                mb-1">
+        Solarglobe &middot;
+        <span class="text-gold">Solution premium</span>
+      </p>
+
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(1.35rem,3.1vw,2.7rem)]">
+        Un projet solaire pens&eacute;<br />
+        <span class="text-gold">pour vendre et acheter sereinement</span>
+      </h2>
+
+      <p class="mt-1 text-neutral-200
+                text-[clamp(0.8rem,1vw,0.95rem)]
+                leading-snug">
+        Solarglobe con&ccedil;oit des projets solaires coh&eacute;rents,
+        adapt&eacute;s &agrave; la maison et &agrave; son usage,
+        pour que vendeur et acheteur avancent
+        <span class="text-gold font-medium">sans risque ni surprise</span>.
+      </p>
+    </header>
+
+    <!-- =======================
+    PANEL CENTRAL
+    ======================== -->
+    <main class="w-full max-w-full grid grid-cols-1 lg:grid-cols-2
+                 gap-[clamp(1rem,2.2vw,2.2rem)]
+                 rounded-[clamp(1.2rem,2.6vw,2.2rem)]
+                 border border-gold/30
+                 bg-black/25 backdrop-blur-md
+                 p-[clamp(1rem,2.2vw,2.2rem)]">
+
+      <!-- GAUCHE — LOGIQUE PROJET -->
+      <div class="space-y-3">
+        <h3 class="font-semibold
+                   text-[clamp(0.95rem,1.4vw,1.25rem)]">
+          Un projet s&eacute;rieux, pas une vente de kW
+        </h3>
+
+        <ul class="space-y-2 text-neutral-100
+                   text-[clamp(0.78rem,0.95vw,0.9rem)]
+                   leading-snug">
+
+          <li>
+            Chaque projet est
+            <span class="text-gold">pens&eacute; pour la maison</span>
+            et son usage r&eacute;el.
+          </li>
+
+          <li>
+            Une logique unique pour le
+            <span class="text-gold">vendeur</span>
+            comme pour l&rsquo;
+            <span class="text-gold">acheteur</span>.
+          </li>
+
+          <li>
+            Pas d&rsquo;approximation&nbsp;:
+            un projet
+            <span class="text-gold">coh&eacute;rent et cr&eacute;dible</span>.
+          </li>
+        </ul>
+
+        <div class="rounded-lg border border-gold/40
+                    bg-gold/10
+                    px-3 py-2
+                    text-[clamp(0.74rem,0.9vw,0.86rem)]
+                    text-neutral-100
+                    leading-snug">
+          <strong>R&eacute;sultat&nbsp;:</strong><br />
+          Le solaire devient un
+          <span class="text-gold font-semibold">atout clair</span>,
+          jamais un sujet de doute ou de n&eacute;gociation.
+        </div>
+      </div>
+
+      <!-- DROITE — SÉCURITÉ & FLUIDITÉ -->
+      <div class="relative flex items-center justify-center
+                  rounded-[clamp(1.2rem,2.6vw,2.2rem)]
+                  border border-white/20
+                  bg-black/30
+                  p-[clamp(1rem,2.2vw,2.2rem)]
+                  text-center">
+
+        <div>
+          <p class="font-semibold leading-snug
+                    text-[clamp(1.05rem,2.2vw,2rem)]">
+            Mat&eacute;riel haut de gamme.<br />
+            <span class="text-gold">
+              Installateurs s&eacute;lectionn&eacute;s.
+            </span>
+          </p>
+
+          <p class="mt-2 text-neutral-300
+                    text-[clamp(0.7rem,0.9vw,0.85rem)]">
+            Tout est anticip&eacute;, cadr&eacute; et s&eacute;curis&eacute;.
+          </p>
+
+          <p class="mt-1 text-neutral-400
+                    text-[clamp(0.65rem,0.85vw,0.8rem)]">
+            Pour une transaction fluide,
+            sans probl&egrave;me apr&egrave;s la vente.
+          </p>
+        </div>
+      </div>
+
+      <!-- MICRO-LABELS (OPTION A) -->
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2
+                  text-[clamp(0.55rem,0.8vw,0.7rem)]
+                  tracking-widest uppercase
+                  text-neutral-400
+                  mt-[clamp(0.6rem,1.2vh,1rem)]">
+        <span class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+          &Eacute;tude s&eacute;rieuse
+        </span>
+        <span class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+          Mat&eacute;riel premium
+        </span>
+        <span class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+          Installateurs tri&eacute;s
+        </span>
+        <span class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+          Dossier s&eacute;curis&eacute;
+        </span>
+      </div>
+
+    </main>
+
+    <!-- =======================
+    FOOTER / NAV
+    ======================== -->
+    <footer class="flex items-center justify-between
+                   mt-[clamp(0.75rem,1.4vh,1.2rem)]">
+
+      <button type="button"
+              data-prev
+              class="px-5 py-2 rounded-full
+                     border border-white/25
+                     bg-white/5 text-white text-xs
+                     hover:bg-white/10 transition">
+        ← Acheteur
+      </button>
+
+      <button type="button"
+              data-next
+              class="px-5 py-2 rounded-full
+                     bg-gold text-black font-semibold text-xs
+                     hover:scale-[1.04] transition">
+        Process →
+      </button>
+
+    </footer>
+
+  </div>
+</section>
+
+
+<!-- ======================================================
+PROCESS &mdash; SLIDE (PARCOURS FLUIDE &amp; S&Eacute;CURIS&Eacute;)
+STRUCTURE IDENTIQUE &mdash; AJUSTEMENT VERTICAL VALID&Eacute;
+====================================================== -->
+<section id="process"
+  class="sg-slide"
+>
+
+  <!-- =======================
+  FOND IMAGE (STANDARD GLOBAL)
+  ======================== -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-connexion.webp"
+         alt="Process solaire Solarglobe"
+         class="w-full h-full object-cover object-center" />
+
+    <div class="absolute inset-0 bg-black/45"></div>
+    <div class="absolute inset-0 bg-gradient-to-b
+                from-black/30 via-black/20 to-black/55"></div>
+
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute -top-36 -left-32
+                  w-[480px] h-[480px]
+                  rounded-full bg-gold/18 blur-3xl"></div>
+      <div class="absolute -bottom-36 -right-32
+                  w-[480px] h-[480px]
+                  rounded-full bg-gold/14 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.06]
+                  bg-[url('/assets/images/grain.png')] bg-repeat"></div>
+    </div>
+  </div>
+
+  <!-- =======================
+  CONTENU
+  ======================== -->
+  <div class="relative z-10 sg-slide-inner -mt-[3vh]">
+
+    <!-- =======================
+    HEADER
+    ======================== -->
+    <header class="max-w-4xl">
+      <p class="uppercase tracking-[0.28em]
+                text-neutral-300
+                text-[clamp(0.55rem,0.8vw,0.7rem)]
+                mb-1">
+        Process &middot;
+        <span class="text-gold">Fluide &amp; s&eacute;curis&eacute;</span>
+      </p>
+
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(1.35rem,3.1vw,2.7rem)]">
+        Un parcours clair,<br />
+        <span class="text-gold">sans friction ni surprise</span>
+      </h2>
+
+      <p class="mt-1 text-neutral-200
+                text-[clamp(0.8rem,1vw,0.95rem)]
+                leading-snug">
+        Chaque projet Solarglobe suit un cadre pr&eacute;cis,
+        con&ccedil;u pour rassurer le vendeur,
+        l&rsquo;acheteur et l&rsquo;agent,
+        sans jamais ralentir la vente.
+      </p>
+    </header>
+
+    <!-- =======================
+    PANEL CENTRAL
+    ======================== -->
+    <main class="w-full max-w-full grid grid-cols-1 lg:grid-cols-2
+                 gap-[clamp(1rem,2.2vw,2.2rem)]
+                 rounded-[clamp(1.2rem,2.6vw,2.2rem)]
+                 border border-gold/30
+                 bg-black/25 backdrop-blur-md
+                 p-[clamp(1rem,2.2vw,2.2rem)]">
+
+      <!-- GAUCHE &mdash; LES GRANDES &Eacute;TAPES -->
+      <div class="space-y-3">
+        <h3 class="font-semibold
+                   text-[clamp(0.95rem,1.4vw,1.25rem)]">
+          Les grandes &eacute;tapes
+        </h3>
+
+        <ul class="space-y-2 text-neutral-100
+                   text-[clamp(0.78rem,0.95vw,0.9rem)]
+                   leading-snug">
+
+          <li>
+            <span class="text-gold font-medium">Analyse du bien</span><br />
+            Maison, usage, contraintes, contexte de vente.
+          </li>
+
+          <li>
+            <span class="text-gold font-medium">Conception du projet</span><br />
+            Projet coh&eacute;rent, adapt&eacute; et cr&eacute;dible.
+          </li>
+
+          <li>
+            <span class="text-gold font-medium">Validation &amp; coordination</span><br />
+            Mat&eacute;riel, installateur, dossier.
+          </li>
+
+          <li>
+            <span class="text-gold font-medium">R&eacute;alisation &amp; suivi</span><br />
+            Pose ma&icirc;tris&eacute;e, sans mauvaise surprise.
+          </li>
+        </ul>
+
+        <div class="rounded-lg border border-gold/40
+                    bg-gold/10
+                    px-3 py-2
+                    text-[clamp(0.74rem,0.9vw,0.86rem)]
+                    text-neutral-100
+                    leading-snug">
+          <strong>Principe cl&eacute;&nbsp;:</strong><br />
+          Le process est
+          <span class="text-gold font-semibold">structur&eacute;</span>,
+          mais reste
+          <span class="text-gold font-semibold">invisible</span>
+          quand tout se passe bien.
+        </div>
+      </div>
+
+      <!-- DROITE &mdash; CE QUE &Ccedil;A CHANGE -->
+      <div class="relative flex items-start justify-center
+                  rounded-[clamp(1.2rem,2.6vw,2.2rem)]
+                  border border-white/20
+                  bg-black/30
+                  p-[clamp(1rem,2.2vw,2.2rem)]
+                  text-center">
+
+        <div class="pt-[clamp(1.5rem,3vh,2.5rem)]">
+          <p class="font-semibold leading-snug
+                    text-[clamp(1.05rem,2.2vw,2rem)]">
+            Le process ne complique pas la vente.<br />
+            <span class="text-gold">
+              Il la s&eacute;curise.
+            </span>
+          </p>
+
+          <p class="mt-2 text-neutral-300
+                    text-[clamp(0.7rem,0.9vw,0.85rem)]">
+            Pour le vendeur&nbsp;: clart&eacute; et s&eacute;r&eacute;nit&eacute;.
+          </p>
+
+          <p class="mt-1 text-neutral-300
+                    text-[clamp(0.7rem,0.9vw,0.85rem)]">
+            Pour l&rsquo;acheteur&nbsp;: compr&eacute;hension et confiance.
+          </p>
+
+          <p class="mt-1 text-neutral-400
+                    text-[clamp(0.65rem,0.85vw,0.8rem)]">
+            Pour l&rsquo;agent&nbsp;: une transaction fluide, sans sujet parasite.
+          </p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- =======================
+    FOOTER / NAV
+    ======================== -->
+    <footer class="flex items-center justify-between
+                   mt-[clamp(1rem,2vh,1.6rem)]">
+
+      <button type="button"
+              data-prev
+              class="px-5 py-2 rounded-full
+                     border border-white/25
+                     bg-white/5 text-white text-xs
+                     hover:bg-white/10 transition">
+        &larr; SolarGlobe
+      </button>
+
+      <div class="flex flex-wrap justify-center items-center
+                  gap-x-8 gap-y-2
+                  text-[clamp(0.55rem,0.8vw,0.7rem)]
+                  tracking-widest uppercase
+                  text-neutral-400">
+
+        <span class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+          &Eacute;tude cadr&eacute;e
+        </span>
+
+        <span class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+          Interlocuteur unique
+        </span>
+
+        <span class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+          Partenaires fiables
+        </span>
+
+        <span class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+          Suivi ma&icirc;tris&eacute;
+        </span>
+
+      </div>
+
+      <button type="button"
+              data-next
+              class="px-5 py-2 rounded-full
+                     bg-gold text-black font-semibold text-xs
+                     hover:scale-[1.04] transition">
+        Primes &rarr;
+      </button>
+
+    </footer>
+
+  </div>
+</section>
+
+
+<!-- ======================================================
+GRILLE PARTENAIRE &mdash; SLIDE (VERSION FINALE 13&quot; &rarr; 27&quot;)
+6&ndash;7,5 kWc FOND DOR&Eacute; + BOUTON TOUJOURS VISIBLE
+====================================================== -->
+<section id="primes"
+  class="sg-slide"
+>
+
+  <!-- FOND -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-connexion.webp"
+         alt="Grille partenaire Solarglobe"
+         class="w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-black/55"></div>
+    <div class="absolute inset-0 bg-gradient-to-b
+                from-black/25 via-black/35 to-black/70"></div>
+    <div class="absolute inset-0 opacity-[0.06]
+                bg-[url('/assets/images/grain.png')] bg-repeat"></div>
+  </div>
+
+  <!-- CONTENU -->
+  <div class="relative z-10 sg-slide-inner">
+
+    <!-- HEADER -->
+    <header class="max-w-4xl">
+      <p class="uppercase tracking-[0.28em]
+                text-neutral-300 text-xs mb-1">
+        Grille partenaire &middot;
+        <span class="text-gold">Avantage structur&eacute;</span>
+      </p>
+
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(1.5rem,3vw,2.6rem)]">
+        Une r&eacute;mun&eacute;ration claire,<br />
+        <span class="text-gold">pens&eacute;e pour durer</span>
+      </h2>
+
+      <p class="mt-1 text-neutral-200
+                text-[clamp(0.82rem,0.95vw,0.95rem)]
+                max-w-xl">
+        Une grille lisible imm&eacute;diatement, align&eacute;e avec
+        les configurations les plus r&eacute;pandues du r&eacute;sidentiel.
+      </p>
+    </header>
+
+    <!-- PANEL -->
+    <main class="w-full rounded-[2rem]
+                 border border-gold/30
+                 bg-black/30 backdrop-blur-md
+                 px-[clamp(1.8rem,3vw,2.6rem)]
+                 py-[clamp(1.8rem,3vh,2.4rem)]">
+
+      <h3 class="font-semibold text-base mb-5">
+        Grille de r&eacute;mun&eacute;ration partenaire
+      </h3>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3
+                  gap-[clamp(1rem,2vw,1.6rem)]
+                  items-end">
+
+        <!-- 3 &ndash; 4,5 -->
+        <div class="rounded-2xl
+                    bg-black/45 border border-white/20
+                    px-6 py-5 text-center">
+          <p class="text-neutral-300 text-sm mb-1">
+            3 &ndash; 4,5 kWc
+          </p>
+          <p class="text-white font-semibold text-[1.9rem]">
+            500&nbsp;&euro;
+          </p>
+          <p class="text-neutral-400 text-xs mt-1">
+            par vente
+          </p>
+        </div>
+
+        <!-- 6 &ndash; 7,5 (C&OElig;UR DE MARCH&Eacute; &ndash; FOND DOR&Eacute;) -->
+        <div class="relative rounded-3xl
+                    border-2 border-gold
+                    px-7 py-7
+                    text-center
+                    bg-gradient-to-b
+                    from-gold/30 via-gold/20 to-black/20
+                    shadow-[0_0_80px_rgba(195,152,71,0.45)]">
+
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2
+                       px-3 py-1 rounded-full
+                       bg-gold text-black
+                       text-[0.65rem]
+                       font-semibold tracking-wide">
+            Le plus courant
+          </span>
+
+          <p class="text-gold text-sm mb-1 mt-4">
+            6 &ndash; 7,5 kWc
+          </p>
+
+          <p class="text-white font-semibold
+                    text-[clamp(2.4rem,3.2vw,3rem)]
+                    leading-none">
+            1&nbsp;000&nbsp;&euro;
+          </p>
+
+          <p class="text-neutral-200 text-xs mt-1">
+            par vente
+          </p>
+        </div>
+
+        <!-- 9 &ndash; 12 -->
+        <div class="rounded-2xl
+                    bg-black/45 border border-white/20
+                    px-6 py-5 text-center">
+          <p class="text-neutral-300 text-sm mb-1">
+            9 &ndash; 12 kWc
+          </p>
+          <p class="text-white font-semibold text-[1.9rem]">
+            1&nbsp;200&nbsp;&euro;
+          </p>
+          <p class="text-neutral-400 text-xs mt-1">
+            par vente
+          </p>
+        </div>
+
+      </div>
+
+      <!-- LEVIER -->
+      <div class="rounded-xl border border-gold/40
+                  bg-gold/10
+                  px-5 py-3
+                  text-neutral-100 text-sm">
+        <strong class="text-gold">Lancement partenariat&nbsp;:</strong>
+        primes <strong>doubl&eacute;es (&times;2)</strong> pendant
+        les <strong>3 premiers mois</strong>.
+      </div>
+
+    </main>
+
+    <!-- FOOTER &mdash; TOUJOURS VISIBLE -->
+    <footer class="flex items-center justify-start mt-1">
+      <button type="button"
+              data-prev
+              class="px-4 py-1.5 rounded-full
+                     border border-white/25
+                     bg-white/5
+                     text-white text-xs
+                     hover:bg-white/10 transition">
+        &larr; Process
+      </button>
+    </footer>
+
+  </div>
+</section>
+
+
+
+  </main>
+<!-- ======================================================
+PILOTAGE SLIDES — PR&Eacute;C&Eacute;DENT / SUIVANT / MENU
+====================================================== -->
+<script>
+(function () {
+
+  const slides = Array.from(document.querySelectorAll('#slides > section'));
+  if (!slides.length) return;
+
+  let currentIndex = 0;
+
+  // === SYSTÈME D'ANIMATION CENTRALISÉ — RAPIDE, FLUIDE, ANNULABLE ===
+  const ANIM_TOKEN = { v: 0 };
+  const DUR = 480;
+  const STAGGER = 80;
+
+  function hideEl(el) {
+    if (!el) return;
+    el.style.transition = 'none';
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(18px)';
+    el.style.filter = 'blur(6px)';
+  }
+
+  function showEl(el, delay, tok, dur) {
+    if (!el) return;
+    setTimeout(() => {
+      if (tok !== ANIM_TOKEN.v) return;
+      el.style.transition = `opacity ${dur}ms ease-out, transform ${dur}ms ease-out, filter ${dur}ms ease-out`;
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+      el.style.filter = 'blur(0)';
+    }, delay);
+  }
+
+  function showElFade(el, delay, tok, dur) {
+    if (!el) return;
+    setTimeout(() => {
+      if (tok !== ANIM_TOKEN.v) return;
+      el.style.transition = `opacity ${dur}ms ease-out`;
+      el.style.opacity = '1';
+    }, delay);
+  }
+
+  function showElBg(el, delay, tok, dur) {
+    if (!el) return;
+    setTimeout(() => {
+      if (tok !== ANIM_TOKEN.v) return;
+      el.style.transition = `opacity ${dur}ms ease-out, transform ${dur}ms ease-out`;
+      el.style.opacity = '1';
+      el.style.transform = 'scale(1)';
+    }, delay);
+  }
+
+  const SLIDE_ANIMS = {};
+
+  SLIDE_ANIMS[0] = function(tok) {
+    const s = document.getElementById('intro');
+    if (!s || s.offsetParent === null) return;
+    const line1 = s.querySelector('.intro-line-1');
+    const line2 = s.querySelector('.intro-line-2');
+    const line3 = s.querySelector('.intro-line-3');
+    const pillars = s.querySelectorAll('.pillar');
+    const cta = s.querySelector('.intro-cta');
+    const all = [line1, line2, line3, ...(pillars || []), cta].filter(Boolean);
+    all.forEach(hideEl);
+    s.offsetHeight;
+    let d = 0;
+    [line1, line2, line3].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+    pillars.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+    showEl(cta, d, tok, DUR);
+  };
+
+  SLIDE_ANIMS[1] = function(tok) {
+    const s = document.getElementById('energie');
+    if (!s || s.offsetParent === null) return;
+    const inner = s.querySelector('.sg-slide-inner');
+    const bgWrap = s.querySelector('.absolute.inset-0');
+    const header = inner?.querySelector('header');
+    const main = inner?.querySelector('main');
+    const cols = main ? main.querySelectorAll(':scope > div') : [];
+    const footer = inner?.querySelector('footer');
+    const quotes = main ? main.querySelectorAll('.absolute') : [];
+    const all = [bgWrap, header, main, ...cols, ...quotes, footer].filter(Boolean);
+    all.forEach(el => {
+      el.style.transition = 'none';
+      el.style.opacity = '0';
+      el.style.transform = el === bgWrap ? 'scale(1.02)' : 'translateY(18px)';
+      el.style.filter = 'blur(0)';
+    });
+    s.offsetHeight;
+    let d = 0;
+    if (bgWrap) { showElBg(bgWrap, d, tok, DUR); d += STAGGER; }
+    [header, main].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+    cols.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+    quotes.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+    showEl(footer, d, tok, DUR);
+  };
+
+  SLIDE_ANIMS[2] = function(tok) {
+    const s = document.getElementById('terrain');
+    if (!s || s.offsetParent === null) return;
+    const header = s.querySelector('.terrain-header');
+    const panel = s.querySelector('.terrain-panel');
+    const left = s.querySelector('.terrain-left');
+    const quote = s.querySelector('.terrain-quote');
+    const footer = s.querySelector('.terrain-footer');
+    const items = s.querySelectorAll('.terrain-left li');
+    const qMarks = s.querySelectorAll('.terrain-quote .absolute');
+    const navBtns = s.querySelectorAll('#terrain [data-prev], #terrain [data-next]');
+    const all = [header, panel, left, quote, footer, ...items, ...qMarks, ...navBtns].filter(Boolean);
+    all.forEach(hideEl);
+    s.offsetHeight;
+    let d = 0;
+    [header, panel, left, quote].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+    items.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+    qMarks.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+    [footer, ...navBtns].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  };
+
+  SLIDE_ANIMS[3] = function(tok) {
+    const s = document.getElementById('solaire');
+    if (!s || s.offsetParent === null) return;
+    const bgWrap = s.querySelector(':scope > .absolute.inset-0');
+    const content = s.querySelector(':scope > .relative.z-10');
+    const header = s.querySelector('.solaire-header');
+    const panel = s.querySelector('.solaire-panel');
+    const left = s.querySelector('.solaire-left');
+    const quote = s.querySelector('.solaire-quote');
+    const footer = s.querySelector('.solaire-footer');
+    const items = s.querySelectorAll('.solaire-left ul li');
+    const marks = s.querySelectorAll('.solaire-quote .absolute');
+    const navBtns = s.querySelectorAll('#solaire [data-prev], #solaire [data-next]');
+    const all = [content, header, panel, left, quote, ...items, ...marks, footer, ...navBtns].filter(Boolean);
+    all.forEach(hideEl);
+    if (bgWrap) { bgWrap.style.transition = 'none'; bgWrap.style.opacity = '0'; bgWrap.style.transform = 'scale(1.03)'; }
+    s.offsetHeight;
+    let d = 0;
+    if (bgWrap) { showElBg(bgWrap, d, tok, DUR); d += STAGGER; }
+    [content, header, panel, left, quote].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+    items.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+    marks.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+    [footer, ...navBtns].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  };
+
+  SLIDE_ANIMS[4] = function(tok) {
+    const s = document.getElementById('levier');
+    if (!s || s.offsetParent === null) return;
+    const content = s.querySelector('.sg-slide-inner');
+    const bgWrap = s.querySelector('.absolute.inset-0');
+    const header = content?.querySelector('header');
+    const headerKicker = header?.querySelector('p');
+    const headerTitle = header?.querySelector('h2');
+    const headerLead = header?.querySelectorAll('p')[1];
+    const panel = content?.querySelector('main');
+    const left = panel?.querySelector(':scope > div:first-child');
+    const right = panel?.querySelector(':scope > div:last-child');
+    const callout = left?.querySelector('.rounded-xl.border');
+    const leftTitle = left?.querySelector('h3');
+    const leftLis = left?.querySelectorAll('ul li') || [];
+    const quoteMarks = right?.querySelectorAll('.absolute') || [];
+    const quoteText = right?.querySelector('div');
+    const footer = content?.querySelector('footer');
+    const navBtns = footer?.querySelectorAll('[data-prev],[data-next]') || [];
+    const all = [content, headerKicker, headerTitle, headerLead, panel, callout, leftTitle, ...leftLis, right, ...quoteMarks, quoteText, footer, ...navBtns].filter(Boolean);
+    all.forEach(hideEl);
+    if (bgWrap) { bgWrap.style.transition = 'none'; bgWrap.style.opacity = '0'; bgWrap.style.transform = 'scale(1.03)'; }
+    s.offsetHeight;
+    let d = 0;
+    if (bgWrap) { showElBg(bgWrap, d, tok, DUR); d += STAGGER; }
+    [content, headerKicker, headerTitle, headerLead, panel, callout, leftTitle].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+    leftLis.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+    [right, ...quoteMarks, quoteText, footer, ...navBtns].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  };
+
+  SLIDE_ANIMS[5] = function(tok) {
+    const s = document.getElementById('vendeur');
+    if (!s || s.offsetParent === null) return;
+    const content = s.querySelector('.sg-slide-inner');
+    const header = s.querySelector('header');
+    const headerKicker = header?.querySelector('p');
+    const headerTitle = header?.querySelector('h2');
+    const headerLead = header?.querySelectorAll('p')[1];
+    const panel = s.querySelector('main');
+    const left = panel?.querySelector(':scope > div:first-child');
+    const right = panel?.querySelector(':scope > div:last-child');
+    const leftTitle = left?.querySelector('h3');
+    const leftLis = left?.querySelectorAll('ul li') || [];
+    const example = left?.querySelector('.rounded-lg');
+    const quoteMarks = right?.querySelectorAll('.absolute') || [];
+    const quoteText = right?.querySelector('div');
+    const footer = s.querySelector('footer');
+    const navBtns = footer?.querySelectorAll('[data-prev],[data-next]') || [];
+    const all = [content, headerKicker, headerTitle, headerLead, panel, leftTitle, ...leftLis, example, right, ...quoteMarks, quoteText, footer, ...navBtns].filter(Boolean);
+    all.forEach(hideEl);
+    s.offsetHeight;
+    let d = 0;
+    all.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  };
+
+  SLIDE_ANIMS[6] = function(tok) {
+    const s = document.getElementById('acheteur');
+    if (!s || s.offsetParent === null) return;
+    const content = s.querySelector('.sg-slide-inner');
+    const bgWrap = s.querySelector('.absolute.inset-0');
+    const header = content?.querySelector('header');
+    const kicker = header?.querySelector('p');
+    const title = header?.querySelector('h2');
+    const lead = header?.querySelector('h2 + p');
+    const panel = content?.querySelector('main');
+    const leftCol = panel?.querySelector(':scope > div:first-child');
+    const rightCol = panel?.querySelector(':scope > div:last-child');
+    const leftH3 = leftCol?.querySelector('h3');
+    const leftLis = leftCol?.querySelectorAll('ul li') || [];
+    const leftCallout = leftCol?.querySelector('.rounded-lg.border');
+    const rightTexts = rightCol?.querySelectorAll('p, span') || [];
+    const footer = content?.querySelector('footer');
+    const navBtns = footer?.querySelectorAll('[data-prev],[data-next]') || [];
+    const all = [content, kicker, title, lead, panel, leftH3, ...leftLis, leftCallout, rightCol, ...rightTexts, footer, ...navBtns].filter(Boolean);
+    all.forEach(hideEl);
+    if (bgWrap) { bgWrap.style.transition = 'none'; bgWrap.style.opacity = '0'; bgWrap.style.transform = 'scale(1.03)'; }
+    s.offsetHeight;
+    let d = 0;
+    if (bgWrap) { showElBg(bgWrap, d, tok, DUR); d += STAGGER; }
+    [content, kicker, title, lead, panel, leftH3, ...leftLis, leftCallout, rightCol, ...rightTexts, footer, ...navBtns].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  };
+
+  SLIDE_ANIMS[7] = function(tok) {
+    const s = document.getElementById('SolarGlobe') || document.getElementById('solarglobe');
+    if (!s || s.offsetParent === null) return;
+    const content = s.querySelector('.sg-slide-inner');
+    const bgWrap = s.querySelector('.absolute.inset-0');
+    const header = content?.querySelector('header');
+    const kicker = header?.querySelector('p');
+    const title = header?.querySelector('h2');
+    const lead = header?.querySelector('h2 + p');
+    const panel = content?.querySelector('main');
+    const leftCol = panel?.querySelector(':scope > div:first-child');
+    const rightCol = panel?.querySelector(':scope > div:last-child');
+    const leftH3 = leftCol?.querySelector('h3');
+    const leftLis = leftCol ? Array.from(leftCol.querySelectorAll('ul li')) : [];
+    const leftBox = leftCol?.querySelector('.rounded-lg.border');
+    const rightInner = rightCol?.querySelector(':scope > div');
+    const rightPs = rightInner ? Array.from(rightInner.querySelectorAll('p')) : [];
+    const micro = content?.querySelector('main .flex.flex-wrap');
+    const microItems = micro ? Array.from(micro.querySelectorAll(':scope > span')) : [];
+    const footer = content?.querySelector('footer');
+    const navBtns = footer ? Array.from(footer.querySelectorAll('[data-prev],[data-next]')) : [];
+    const all = [content, kicker, title, lead, panel, leftCol, rightCol, leftH3, ...leftLis, leftBox, rightInner, ...rightPs, micro, ...microItems, footer, ...navBtns].filter(Boolean);
+    all.forEach(hideEl);
+    if (bgWrap) { bgWrap.style.transition = 'none'; bgWrap.style.opacity = '0'; bgWrap.style.transform = 'scale(1.03)'; }
+    s.offsetHeight;
+    let d = 0;
+    if (bgWrap) { showElBg(bgWrap, d, tok, DUR); d += STAGGER; }
+    [content, kicker, title, lead, panel, leftCol, rightCol, leftH3, ...leftLis, leftBox, rightInner, ...rightPs, micro, ...microItems, footer, ...navBtns].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  };
+
+  SLIDE_ANIMS[8] = function(tok) {
+    const s = document.getElementById('process');
+    if (!s || s.offsetParent === null) return;
+    const content = s.querySelector('.sg-slide-inner');
+    const bgWrap = s.querySelector('.absolute.inset-0');
+    const header = content?.querySelector('header');
+    const kicker = header?.querySelector('p');
+    const title = header?.querySelector('h2');
+    const lead = header?.querySelector('h2 + p');
+    const panel = content?.querySelector('main');
+    const leftCol = panel?.querySelector(':scope > div:first-child');
+    const rightCol = panel?.querySelector(':scope > div:last-child');
+    const leftH3 = leftCol?.querySelector('h3');
+    const leftLis = leftCol ? Array.from(leftCol.querySelectorAll('ul li')) : [];
+    const leftBox = leftCol?.querySelector('.rounded-lg.border');
+    const rightInner = rightCol?.querySelector(':scope > div');
+    const rightPs = rightInner ? Array.from(rightInner.querySelectorAll('p')) : [];
+    const micro = content?.querySelector('main .flex.flex-wrap');
+    const microItems = micro ? Array.from(micro.querySelectorAll(':scope > span')) : [];
+    const footer = content?.querySelector('footer');
+    const navBtns = footer ? Array.from(footer.querySelectorAll('[data-prev],[data-next]')) : [];
+    const all = [content, kicker, title, lead, panel, leftCol, rightCol, leftH3, ...leftLis, leftBox, rightInner, ...rightPs, micro, ...microItems, footer, ...navBtns].filter(Boolean);
+    all.forEach(hideEl);
+    if (bgWrap) { bgWrap.style.transition = 'none'; bgWrap.style.opacity = '0'; bgWrap.style.transform = 'scale(1.03)'; }
+    s.offsetHeight;
+    let d = 0;
+    if (bgWrap) { showElFade(bgWrap, d, tok, DUR); d += STAGGER; }
+    all.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  };
+
+  SLIDE_ANIMS[9] = function(tok) {
+    const s = document.getElementById('primes');
+    if (!s || s.offsetParent === null) return;
+    const content = s.querySelector('.sg-slide-inner');
+    const bgWrap = s.querySelector('.absolute.inset-0');
+    const header = content?.querySelector('header');
+    const kicker = header?.querySelector('p');
+    const title = header?.querySelector('h2');
+    const lead = header?.querySelector('p + p');
+    const panel = content?.querySelector('main');
+    const cards = panel ? Array.from(panel.querySelectorAll('.grid > div')) : [];
+    const heroCard = cards.length === 3 ? cards[1] : null;
+    const banner = content?.querySelector('.bg-gold\\/10');
+    const footer = content?.querySelector('footer');
+    const navBtn = footer?.querySelector('[data-prev]');
+    const all = [content, kicker, title, lead, panel, ...cards, banner, footer, navBtn].filter(Boolean);
+    all.forEach(hideEl);
+    if (bgWrap) { bgWrap.style.transition = 'none'; bgWrap.style.opacity = '0'; bgWrap.style.transform = 'scale(1.03)'; }
+    s.offsetHeight;
+    let d = 0;
+    if (bgWrap) { showElFade(bgWrap, d, tok, DUR); d += STAGGER; }
+    [content, kicker, title, lead, panel].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+    if (cards[0]) { showEl(cards[0], d, tok, DUR); d += STAGGER; }
+    if (cards[2]) { showEl(cards[2], d, tok, DUR); d += STAGGER; }
+    if (heroCard) { showEl(heroCard, d, tok, DUR); d += STAGGER; }
+    [banner, footer, navBtn].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  };
+
+  function playSlideAnim(idx) {
+    const fn = SLIDE_ANIMS[idx];
+    if (fn) {
+      ANIM_TOKEN.v++;
+      fn(ANIM_TOKEN.v);
+    }
+  }
+  window.playSlideAnim = playSlideAnim;
+
+  function showSlide(index) {
+    slides.forEach((s, i) => {
+      s.style.display = (i === index) ? 'flex' : 'none';
+    });
+    currentIndex = index;
+
+    document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+    const slideId = slides[index].id;
+    const mapReverse = {
+      intro: "Intro",
+      energie: "Énergie",
+      terrain: "Terrain",
+      solaire: "Solaire",
+      levier: "Levier",
+      vendeur: "Vendeur",
+      acheteur: "Acheteur",
+      SolarGlobe: "SolarGlobe",
+      process: "Process",
+      primes: "Primes"
+    };
+    document.querySelectorAll("nav a").forEach(a => {
+      if (a.textContent.trim() === mapReverse[slideId]) {
+        a.classList.add("active");
+      }
+    });
+
+    playSlideAnim(index);
+  }
+
+  /* INIT */
+  slides.forEach(s => { s.style.display = 'none'; });
+  showSlide(0);
+
+  /* BOUTONS SUIVANT */
+  document.querySelectorAll('[data-next]').forEach(btn => {
+    btn.addEventListener('click', function () {
+      if (currentIndex < slides.length - 1) {
+        showSlide(currentIndex + 1);
+      }
+    });
+  });
+
+  /* BOUTONS PR&Eacute;C&Eacute;DENT */
+  document.querySelectorAll('[data-prev]').forEach(btn => {
+    btn.addEventListener('click', function () {
+      if (currentIndex > 0) {
+        showSlide(currentIndex - 1);
+      }
+    });
+  });
+
+  /* MENU */
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const text = (link.textContent || '').trim().toLowerCase();
+
+      const map = {
+        'intro': 'intro',
+        'énergie': 'energie',
+        'terrain': 'terrain',
+        'solaire': 'solaire',
+        'levier': 'levier',
+        'vendeur': 'vendeur',
+        'acheteur': 'acheteur',
+        'solarglobe': 'SolarGlobe',
+        'process': 'process',
+        'primes': 'primes'
+      };
+
+      const targetId = map[text];
+      if (!targetId) return;
+
+      const idx = slides.findIndex(s => s.id === targetId);
+      if (idx !== -1) {
+        showSlide(idx);
+      }
+    });
+  });
+
+})();
+</script>
+
+  <!-- SCRIPT LOGIN -->
+  <script>
+  (function () {
+    const PASSWORD = 'SG-PART-2026';
+    const login = document.getElementById('login');
+    const app = document.getElementById('app');
+    const btn = document.getElementById('accessBtn');
+    const input = document.getElementById('passwordInput');
+    if (!login || !app || !btn || !input) return;
+    function showApp() {
+      login.classList.add('hidden');
+      app.classList.remove('hidden');
+    }
+    btn.addEventListener('click', function () {
+      if ((input.value || '') === PASSWORD) {
+        showApp();
+        setTimeout(function () {
+          if (window.playSlideAnim) window.playSlideAnim(0);
+        }, 50);
+      } else {
+        input.classList.remove('border-white/20');
+        input.classList.add('border-red-500');
+      }
+    });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') btn.click();
+    });
+  })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main stylisée : rectangle oblique -->
+  <polygon points="24,56 44,56 48,60 20,60" stroke="#C39847" stroke-width="2" fill="none"/>
+
+  <!-- Euro doré au-dessus -->
+  <text x="34" y="44" font-size="18" fill="#C39847" font-family="Arial, sans-serif" font-weight="bold">€</text>
+</svg>

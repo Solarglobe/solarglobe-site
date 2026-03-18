@@ -1,0 +1,67 @@
+/* ====== SOLARGLOBE SCROLL REVEAL PREMIUM ====== */
+/* Système unifié — Apple, Stripe, Vercel, Linear */
+
+/* --------------------------------------
+   BASE REVEAL — sans blur, texte net
+   -------------------------------------- */
+.sg-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sg-reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* --------------------------------------
+   CARTES PREMIUM — effet lift + scale
+   -------------------------------------- */
+.sg-reveal-card {
+  opacity: 0;
+  transform: translateY(32px) scale(0.98);
+  transition:
+    opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sg-reveal-card.sg-reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* --------------------------------------
+   HERO — animation au chargement
+   -------------------------------------- */
+.sg-hero-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sg-hero-reveal.sg-reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* --------------------------------------
+   RÉDUCTION MOTION
+   -------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .sg-reveal,
+  .sg-reveal-card,
+  .sg-hero-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .sg-reveal-visible {
+    opacity: 1;
+    transform: none;
+  }
+}

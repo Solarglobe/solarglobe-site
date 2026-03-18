@@ -1,0 +1,34 @@
+# Redirections permanentes (301) - URLs officielles SolarGlobe
+RewriteEngine On
+RewriteBase /
+
+# Anciennes URLs .html -> URLs propres avec slash final
+RewriteRule ^etude-solaire-gratuite\.html$ /etude-gratuite/ [R=301,L]
+RewriteRule ^qui-sommes-nous\.html$ /notre-methode/ [R=301,L]
+RewriteRule ^faq\.html$ /faq/ [R=301,L]
+RewriteRule ^blog\.html$ /blog/ [R=301,L]
+RewriteRule ^contact\.html$ /contact/ [R=301,L]
+RewriteRule ^produits\.html$ /produits/ [R=301,L]
+RewriteRule ^seo/etude-solaire-gratuite\.html$ /etude-gratuite/ [R=301,L]
+
+# Pages légales
+RewriteRule ^mentions-legales\.html$ /mentions-legales/ [R=301,L]
+RewriteRule ^politique-de-confidentialite\.html$ /politique-de-confidentialite/ [R=301,L]
+RewriteRule ^cookies\.html$ /cookies/ [R=301,L]
+RewriteRule ^votre-projet-de-a-a-z\.html$ /notre-methode/ [R=301,L]
+RewriteRule ^votre-projet-de-a-a-z/?$ /notre-methode/ [R=301,L]
+RewriteRule ^cgv\.html$ /cgv/ [R=301,L]
+RewriteRule ^C\.G\.V\.html$ /cgv/ [R=301,L]
+RewriteRule ^notre-methode/dimensionnement\.html$ /notre-methode/dimensionnement/ [R=301,L]
+
+# Réécriture : /section/page/ -> section/page.html (URLs propres sans .html)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^le-solaire/([a-z0-9-]+)/?$ le-solaire/$1.html [L]
+RewriteRule ^notre-methode/([a-z0-9-]+)/?$ notre-methode/$1.html [L]
+RewriteRule ^produits/([a-z0-9-]+)/?$ produits/$1.html [L]
+RewriteRule ^seo/([a-z0-9-]+)/?$ seo/$1.html [L]
+RewriteRule ^seo/villes/([a-z0-9-]+)/?$ seo/villes/$1.html [L]
+
+# DirectoryIndex pour servir index.html dans les dossiers
+DirectoryIndex index.html
