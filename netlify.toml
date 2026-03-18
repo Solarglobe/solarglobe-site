@@ -1,0 +1,10 @@
+# Configuration Netlify - SolarGlobe
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Site statique HTML : pas de commande de build
+  publish = "."
+  command = ""
+
+# Pretty URLs : activer dans Netlify UI si besoin
+# Project configuration > Build & deploy > Post processing > Pretty URLs

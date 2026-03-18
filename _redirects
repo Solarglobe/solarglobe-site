@@ -1,98 +1,32 @@
 # ============================================
-# Netlify - Redirections 301 (VERSION FINALE)
+# Netlify - Redirections explicites uniquement
+# Aucune règle globale (pas de /*)
+# Assets et components servis nativement
 # ============================================
-# Règle : 301 uniquement, aucune chaîne, aucune boucle
-# Toutes les destinations : canoniques, dans sitemap, slash final
-# ============================================
 
-# 1. PAGES LEGACY HTML → canoniques
-/qui-sommes-nous.html /notre-methode/ 301
-/etude-solaire-gratuite.html /etude-gratuite/ 301
-/faq.html /faq/ 301
-/blog.html /blog/ 301
-/contact.html /contact/ 301
-/produits.html /produits/ 301
-/mentions-legales.html /mentions-legales/ 301
-/politique-de-confidentialite.html /politique-de-confidentialite/ 301
-/cookies.html /cookies/ 301
-/cgv.html /cgv/ 301
-/C.G.V.html /cgv/ 301
-/votre-projet-de-a-a-z.html /notre-methode/ 301
-/votre-projet-de-a-a-z/ /notre-methode/ 301
-/notre-methode/dimensionnement.html /notre-methode/dimensionnement/ 301
+# Étude gratuite - placeholders et anciennes URLs
+/etude-gratuite.html /etude-gratuite/ 301
+/etude-solaire-gratuite/ /etude-gratuite/ 301
+/etude-solaire-gratuite /etude-gratuite/ 301
 
-# 2. PAGES DUPLIQUÉES / NON CANONIQUES (pages-expertise)
-/pages-expertise/rentabilite-solaire/ /rentabilite-solaire/ 301
-/pages-expertise/rentabilite-solaire /rentabilite-solaire/ 301
-/pages-expertise/etude-solaire/ /etude-solaire/ 301
-/pages-expertise/etude-solaire /etude-solaire/ 301
-/pages-expertise/dimensionnement-photovoltaique/ /dimensionnement-photovoltaique/ 301
-/pages-expertise/dimensionnement-photovoltaique /dimensionnement-photovoltaique/ 301
-/pages-expertise/bureau-etude-photovoltaique/ /bureau-etude-photovoltaique/ 301
-/pages-expertise/bureau-etude-photovoltaique /bureau-etude-photovoltaique/ 301
-
-# 3. PAGE SEO DUPLIQUÉE
-/seo/etude-solaire-gratuite.html /etude-gratuite/ 301
-/seo/etude-solaire-gratuite/ /etude-gratuite/ 301
-/seo/etude-solaire-gratuite /etude-gratuite/ 301
-
-# 4. NORMALISATION URLs SANS SLASH
-/etude-gratuite /etude-gratuite/ 301
-/contact /contact/ 301
-/notre-methode /notre-methode/ 301
-/produits /produits/ 301
-/blog /blog/ 301
-/faq /faq/ 301
-
-# 5. CONSERVATION /qui-sommes-nous/ (anciens liens, évite 404)
+# Qui sommes-nous
 /qui-sommes-nous/ /notre-methode/ 301
 /qui-sommes-nous /notre-methode/ 301
 
-# ============================================
-# Réécritures (200) - URLs canoniques → fichiers
-# ============================================
+# Pages-expertise → canoniques
+/pages-expertise/bureau-etude-photovoltaique/ /bureau-etude-photovoltaique/ 301
+/pages-expertise/bureau-etude-photovoltaique /bureau-etude-photovoltaique/ 301
+/pages-expertise/dimensionnement-photovoltaique/ /dimensionnement-photovoltaique/ 301
+/pages-expertise/dimensionnement-photovoltaique /dimensionnement-photovoltaique/ 301
+/pages-expertise/etude-solaire/ /etude-solaire/ 301
+/pages-expertise/etude-solaire /etude-solaire/ 301
+/pages-expertise/rentabilite-solaire/ /rentabilite-solaire/ 301
+/pages-expertise/rentabilite-solaire /rentabilite-solaire/ 301
 
-# Le solaire
-/le-solaire/autoconsommation-solaire/ /le-solaire/autoconsommation-solaire.html 200
-/le-solaire/rentabilite-panneaux-solaires/ /le-solaire/rentabilite-panneaux-solaires.html 200
-/le-solaire/rendement-panneaux-solaires/ /le-solaire/rendement-panneaux-solaires.html 200
-/le-solaire/puissance-installation-solaire/ /le-solaire/puissance-installation-solaire.html 200
-/le-solaire/batterie-solaire/ /le-solaire/batterie-solaire.html 200
-/le-solaire/aides-panneaux-solaires/ /le-solaire/aides-panneaux-solaires.html 200
+# Merci - page de remerciement formulaire
+/merci.html /merci/ 301
+/merci /merci/ 301
 
-# Notre méthode
-/notre-methode/etude-solaire/ /notre-methode/etude-solaire.html 200
-/notre-methode/etude-financiere/ /notre-methode/etude-financiere.html 200
-/notre-methode/dimensionnement/ /notre-methode/dimensionnement/index.html 200
-/notre-methode/calpinage/ /notre-methode/calpinage.html 200
-/notre-methode/installation/ /notre-methode/installation.html 200
-/notre-methode/demarches-administratives/ /notre-methode/demarches-administratives/index.html 200
-/notre-methode/suivi/ /notre-methode/suivi/index.html 200
-
-# Produits
-/produits/panneaux-solaires/ /produits/panneaux-solaires.html 200
-/produits/onduleurs/ /produits/onduleurs.html 200
-/produits/micro-onduleurs/ /produits/micro-onduleurs.html 200
-/produits/batteries-solaires/ /produits/batteries-solaires.html 200
-
-# Pages expertise (canoniques racine)
-/rentabilite-solaire/ /rentabilite-solaire/index.html 200
-/etude-solaire/ /etude-solaire/index.html 200
-/dimensionnement-photovoltaique/ /dimensionnement-photovoltaique/index.html 200
-/bureau-etude-photovoltaique/ /bureau-etude-photovoltaique/index.html 200
-
-# SEO (pages thématiques)
-/seo/panneaux-solaires/ /seo/panneaux-solaires.html 200
-/seo/autoconsommation-solaire/ /seo/autoconsommation-solaire.html 200
-/seo/batteries-solaires/ /seo/batteries-solaires.html 200
-/seo/onduleurs-solaires/ /seo/onduleurs-solaires.html 200
-/seo/installation-solaire/ /seo/installation-solaire.html 200
-/seo/aides-financements/ /seo/aides-financements.html 200
-/seo/rentabilite-panneaux-solaires/ /seo/rentabilite-panneaux-solaires.html 200
-/seo/production-solaire/ /seo/production-solaire.html 200
-/seo/solution-solaire-sur-mesure/ /seo/solution-solaire-sur-mesure.html 200
-/seo/panneaux-photovoltaiques/ /seo/panneaux-photovoltaiques.html 200
-/seo/energie-solaire-maison/ /seo/energie-solaire-maison.html 200
-
-# SEO (villes) - wildcard
-/seo/villes/* /seo/villes/:splat.html 200
+# SEO etude-solaire-gratuite
+/seo/etude-solaire-gratuite/ /etude-gratuite/ 301
+/seo/etude-solaire-gratuite /etude-gratuite/ 301

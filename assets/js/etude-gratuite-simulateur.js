@@ -10,7 +10,7 @@
     autocompleteUrl: 'https://api.geoapify.com/v1/geocode/autocomplete',
     debounceMs: 220,
     formAction: 'https://formsubmit.co/direction.solarglobe@gmail.com',
-    formNext: 'https://www.solarglobe.fr/merci',
+    formNext: '/merci/',
     stepVideos: [
       '/assets/videos/step1-carte.mp4',
       '/assets/videos/step2-maison.mp4',
