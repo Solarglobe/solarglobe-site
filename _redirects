@@ -26,3 +26,9 @@
 # SEO etude-solaire-gratuite
 /seo/etude-solaire-gratuite/ /etude-gratuite/ 301
 /seo/etude-solaire-gratuite /etude-gratuite/ 301
+
+# Pages .html → URLs propres (remplace redirections JS)
+/produits.html /produits/ 301
+/faq.html /faq/ 301
+/blog.html /blog/ 301
+/contact.html /contact/ 301
