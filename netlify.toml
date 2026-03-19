@@ -8,3 +8,11 @@
 
 # Pretty URLs : activer dans Netlify UI si besoin
 # Project configuration > Build & deploy > Post processing > Pretty URLs
+
+# Redirections — netlify.toml override les règles UI
+# Force /qui-sommes-nous/ à servir la page (priorité sur toute règle UI)
+[[redirects]]
+  from = "/qui-sommes-nous/"
+  to = "/qui-sommes-nous/index.html"
+  status = 200
+  force = true

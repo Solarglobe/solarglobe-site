@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const placeholder = document.getElementById("footer-placeholder");
   if (!placeholder) return;
 
-  fetch("/components/footer.html")
+  fetch("/components/footer.html?v=2")
     .then((res) => res.text())
     .then((html) => {
       placeholder.innerHTML = html;
