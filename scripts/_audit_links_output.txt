@@ -1,0 +1,161 @@
+=== INTERNAL LINK AUDIT (factuel, repo filesystem) ===
+Racine projet: C:\Users\Benoit\Desktop\Benoit\Site Solarglobe
+Fichiers HTML parcourus: 114
+Balises <a href> internes (hors mailto/tel/#/http externes): 1869
+Résolus vers un fichier existant: 1869
+Non résolus (cassés): 0
+OK mais chemin absolu sans slash final alors que cible = .../index.html: 1
+
+
+--- FOCUS index.html (65 liens) ---
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Obtenir mon &eacute;tude solaire gratuite
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Obtenir mon &eacute;tude solaire gratuite
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Obtenir mon &eacute;tude solaire gratuite
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Obtenir mon &eacute;tude solaire gratuite
+OK | '/notre-methode/' -> notre-methode/index.html
+     libellé: D&eacute;couvrir notre m&eacute;thode compl&egrave;te
+OK | '/produits/' -> produits/index.html
+     libellé: Voir nos &eacute;quipements
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Obtenir mon &eacute;tude solaire gratuite
+OK | '/qui-sommes-nous/' -> qui-sommes-nous/index.html
+     libellé: D&eacute;couvrir notre histoire
+OK | '/produits/panneaux-solaires/' -> produits/panneaux-solaires/index.html
+     libellé: Panneaux solaires
+OK | '/le-solaire/autoconsommation-solaire/' -> le-solaire/autoconsommation-solaire/index.html
+     libellé: Autoconsommation
+OK | '/produits/batteries-solaires/' -> produits/batteries-solaires/index.html
+     libellé: Batteries solaires
+OK | '/le-solaire/aides-panneaux-solaires/' -> le-solaire/aides-panneaux-solaires/index.html
+     libellé: Aides &amp; financements
+OK | '/seo/rentabilite-panneaux-solaires/' -> seo/rentabilite-panneaux-solaires/index.html
+     libellé: Rentabilit&eacute;
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: &Eacute;tude gratuite
+OK | '/panneaux-solaires-ile-de-france/' -> panneaux-solaires-ile-de-france/index.html
+     libellé: &Icirc;le-de-France
+OK | '/panneaux-solaires-paris/' -> panneaux-solaires-paris/index.html
+     libellé: Paris
+OK | '/panneaux-solaires-essonne/' -> panneaux-solaires-essonne/index.html
+     libellé: Essonne
+OK | '/panneaux-solaires-hauts-de-seine/' -> panneaux-solaires-hauts-de-seine/index.html
+     libellé: Hauts-de-Seine
+OK | '/panneaux-solaires-seine-et-marne/' -> panneaux-solaires-seine-et-marne/index.html
+     libellé: Seine-et-Marne
+OK | '/panneaux-solaires-seine-saint-denis/' -> panneaux-solaires-seine-saint-denis/index.html
+     libellé: Seine-Saint-Denis
+OK | '/panneaux-solaires-val-de-marne/' -> panneaux-solaires-val-de-marne/index.html
+     libellé: Val-de-Marne
+OK | '/panneaux-solaires-val-doise/' -> panneaux-solaires-val-doise/index.html
+     libellé: Val-d&rsquo;Oise
+OK | '/panneaux-solaires-yvelines/' -> panneaux-solaires-yvelines/index.html
+     libellé: Yvelines
+OK | '/panneaux-solaires-seine-et-marne/' -> panneaux-solaires-seine-et-marne/index.html
+     libellé: Lagny-sur-Marne
+OK | '/panneaux-solaires-meaux/' -> panneaux-solaires-meaux/index.html
+     libellé: Meaux
+OK | '/panneaux-solaires-fontainebleau/' -> panneaux-solaires-fontainebleau/index.html
+     libellé: Fontainebleau
+OK | '/panneaux-solaires-seine-et-marne/' -> panneaux-solaires-seine-et-marne/index.html
+     libellé: Provins
+OK | '/panneaux-solaires-melun/' -> panneaux-solaires-melun/index.html
+     libellé: Melun
+OK | '/panneaux-solaires-versailles/' -> panneaux-solaires-versailles/index.html
+     libellé: Versailles
+OK | '/panneaux-solaires-evry/' -> panneaux-solaires-evry/index.html
+     libellé: &Eacute;vry-Courcouronnes
+OK | '/panneaux-solaires-essonne/' -> panneaux-solaires-essonne/index.html
+     libellé: &Eacute;tampes
+OK | '/panneaux-solaires-essonne/' -> panneaux-solaires-essonne/index.html
+     libellé: Dourdan
+OK | '/panneaux-solaires-massy/' -> panneaux-solaires-massy/index.html
+     libellé: Massy
+OK | '/panneaux-solaires-nanterre/' -> panneaux-solaires-nanterre/index.html
+     libellé: Nanterre
+OK | '/panneaux-solaires-creteil/' -> panneaux-solaires-creteil/index.html
+     libellé: Cr&eacute;teil
+OK | '/panneaux-solaires-argenteuil/' -> panneaux-solaires-argenteuil/index.html
+     libellé: Argenteuil
+OK | '/panneaux-solaires-val-doise/' -> panneaux-solaires-val-doise/index.html
+     libellé: L&rsquo;Isle-Adam
+OK | '/panneaux-solaires-val-doise/' -> panneaux-solaires-val-doise/index.html
+     libellé: Magny-en-Vexin
+OK | '/panneaux-solaires-hauts-de-seine/' -> panneaux-solaires-hauts-de-seine/index.html
+     libellé: Montmorency
+OK | '/panneaux-solaires-cergy/' -> panneaux-solaires-cergy/index.html
+     libellé: Cergy
+OK | '/panneaux-solaires-compiegne/' -> panneaux-solaires-compiegne/index.html
+     libellé: Compi&egrave;gne
+OK | '/panneaux-solaires-beauvais/' -> panneaux-solaires-beauvais/index.html
+     libellé: Beauvais
+OK | '/panneaux-solaires-beauvais/' -> panneaux-solaires-beauvais/index.html
+     libellé: Senlis
+OK | '/panneaux-solaires-compiegne/' -> panneaux-solaires-compiegne/index.html
+     libellé: Nogent-sur-Oise
+OK | '/panneaux-solaires-soissons/' -> panneaux-solaires-soissons/index.html
+     libellé: Soissons
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Saint-Quentin
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Ch&acirc;teau-Thierry
+OK | '/panneaux-solaires-laon/' -> panneaux-solaires-laon/index.html
+     libellé: Laon
+OK | '/panneaux-solaires-reims/' -> panneaux-solaires-reims/index.html
+     libellé: Reims
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: &Eacute;pernay
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Ch&acirc;lons-en-Champagne
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Vitry-le-Fran&ccedil;ois
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Romilly-sur-Seine
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Sainte-Savine
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Bar-sur-Seine
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Sens
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Auxerre
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Joigny
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Migennes
+OK | '/panneaux-solaires-orleans/' -> panneaux-solaires-orleans/index.html
+     libellé: Orl&eacute;ans
+OK | '/panneaux-solaires-orleans/' -> panneaux-solaires-orleans/index.html
+     libellé: Montargis
+OK | '/panneaux-solaires-orleans/' -> panneaux-solaires-orleans/index.html
+     libellé: Gien
+OK | '/panneaux-solaires-orleans/' -> panneaux-solaires-orleans/index.html
+     libellé: Olivet
+OK | '/panneaux-solaires-ile-de-france/' -> panneaux-solaires-ile-de-france/index.html
+     libellé: Voir la page r&eacute;gionale et l&rsquo;ensemble des villes
+OK | '/cookies/' -> cookies/index.html
+     libellé: En savoir plus
+
+--- components/footer.html (19 liens) ---
+OK | '/' -> index.html
+OK | '/le-solaire/' -> le-solaire/index.html
+OK | '/notre-methode/' -> notre-methode/index.html
+OK | '/qui-sommes-nous/' -> qui-sommes-nous/index.html
+OK | '/contact/' -> contact/index.html
+OK | '/produits/' -> produits/index.html
+OK | '/faq/' -> faq/index.html
+OK | '/blog/' -> blog/index.html
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+OK | '/seo/panneaux-solaires/' -> seo/panneaux-solaires/index.html
+OK | '/seo/autoconsommation-solaire/' -> seo/autoconsommation-solaire/index.html
+OK | '/seo/batteries-solaires/' -> seo/batteries-solaires/index.html
+OK | '/seo/production-solaire/' -> seo/production-solaire/index.html
+OK | '/seo/rentabilite-panneaux-solaires/' -> seo/rentabilite-panneaux-solaires/index.html
+OK | '/seo/installation-solaire/' -> seo/installation-solaire/index.html
+OK | '/mentions-legales/' -> mentions-legales/index.html
+OK | '/politique-de-confidentialite/' -> politique-de-confidentialite/index.html
+OK | '/cookies/' -> cookies/index.html
+OK | '/cgv/' -> cgv/index.html
