@@ -1509,10 +1509,7 @@
         D&eacute;couvrez l&rsquo;&eacute;nergie solaire
       </button>
       <button type="button" id="btn-seo-villes" class="sg-btn sg-btn-outline text-sm py-2.5 px-5 rounded-lg border border-gold/25 hover:border-gold/50 hover:bg-gold/5 transition-colors text-gold font-medium" aria-expanded="false" aria-controls="bloc-seo-villes">
-        Nos zones d&rsquo;intervention
-      </button>
-      <button type="button" id="btn-panneaux-villes" class="sg-btn sg-btn-outline text-sm py-2.5 px-5 rounded-lg border border-gold/25 hover:border-gold/50 hover:bg-gold/5 transition-colors text-gold font-medium" aria-expanded="false" aria-controls="bloc-panneaux-villes">
-        Nos installations solaires par ville
+        Villes, d&eacute;partements &amp; r&eacute;gion
       </button>
     </div>
 
@@ -1544,90 +1541,101 @@
       </div>
     </div>
 
-    <!-- Grille villes — masqu&eacute;e par d&eacute;faut -->
+    <!-- Grille villes + d&eacute;partements — masqu&eacute;e par d&eacute;faut -->
     <div id="bloc-seo-villes" class="seo-toggle-content hidden overflow-hidden mt-16" aria-hidden="true">
-      <h3 class="text-xl font-semibold text-gold mb-6 text-center">
+      <h3 class="text-xl font-semibold text-gold mb-4 text-center">
         Nous intervenons en &Icirc;le-de-France et d&eacute;partements voisins
       </h3>
+      <p class="text-center text-neutral-400 text-sm max-w-2xl mx-auto mb-6">
+        Chaque nom renvoie vers une page locale (ville) ou vers la fiche du d&eacute;partement lorsque la commune n&rsquo;a pas de page d&eacute;di&eacute;e.
+      </p>
+
+      <nav class="flex flex-wrap justify-center gap-2 md:gap-3 mb-10 text-xs md:text-sm" aria-label="D&eacute;partements &Icirc;le-de-France">
+        <a href="/panneaux-solaires-ile-de-france/" class="px-3 py-1.5 rounded-lg border border-gold/30 text-gold hover:bg-gold/10 transition-colors">&Icirc;le-de-France</a>
+        <a href="/panneaux-solaires-paris/" class="px-3 py-1.5 rounded-lg border border-gold/20 text-neutral-200 hover:border-gold/40 hover:text-gold transition-colors">Paris</a>
+        <a href="/panneaux-solaires-essonne/" class="px-3 py-1.5 rounded-lg border border-gold/20 text-neutral-200 hover:border-gold/40 hover:text-gold transition-colors">Essonne</a>
+        <a href="/panneaux-solaires-hauts-de-seine/" class="px-3 py-1.5 rounded-lg border border-gold/20 text-neutral-200 hover:border-gold/40 hover:text-gold transition-colors">Hauts-de-Seine</a>
+        <a href="/panneaux-solaires-seine-et-marne/" class="px-3 py-1.5 rounded-lg border border-gold/20 text-neutral-200 hover:border-gold/40 hover:text-gold transition-colors">Seine-et-Marne</a>
+        <a href="/panneaux-solaires-seine-saint-denis/" class="px-3 py-1.5 rounded-lg border border-gold/20 text-neutral-200 hover:border-gold/40 hover:text-gold transition-colors">Seine-Saint-Denis</a>
+        <a href="/panneaux-solaires-val-de-marne/" class="px-3 py-1.5 rounded-lg border border-gold/20 text-neutral-200 hover:border-gold/40 hover:text-gold transition-colors">Val-de-Marne</a>
+        <a href="/panneaux-solaires-val-doise/" class="px-3 py-1.5 rounded-lg border border-gold/20 text-neutral-200 hover:border-gold/40 hover:text-gold transition-colors">Val-d&rsquo;Oise</a>
+        <a href="/panneaux-solaires-yvelines/" class="px-3 py-1.5 rounded-lg border border-gold/20 text-neutral-200 hover:border-gold/40 hover:text-gold transition-colors">Yvelines</a>
+      </nav>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 text-neutral-300 text-sm md:text-base">
 
         <!-- 77 -->
-        <span class="hover:text-gold transition-colors">Lagny-sur-Marne</span>
+        <a href="/panneaux-solaires-seine-et-marne/" class="hover:text-gold transition-colors">Lagny-sur-Marne</a>
         <a href="/panneaux-solaires-meaux/" class="hover:text-gold transition-colors">Meaux</a>
         <a href="/panneaux-solaires-fontainebleau/" class="hover:text-gold transition-colors">Fontainebleau</a>
-        <span class="hover:text-gold transition-colors">Provins</span>
+        <a href="/panneaux-solaires-seine-et-marne/" class="hover:text-gold transition-colors">Provins</a>
+        <a href="/panneaux-solaires-melun/" class="hover:text-gold transition-colors">Melun</a>
+
+        <!-- 78 -->
+        <a href="/panneaux-solaires-versailles/" class="hover:text-gold transition-colors">Versailles</a>
 
         <!-- 91 -->
         <a href="/panneaux-solaires-evry/" class="hover:text-gold transition-colors">&Eacute;vry-Courcouronnes</a>
-        <span class="hover:text-gold transition-colors">&Eacute;tampes</span>
-        <span class="hover:text-gold transition-colors">Dourdan</span>
+        <a href="/panneaux-solaires-essonne/" class="hover:text-gold transition-colors">&Eacute;tampes</a>
+        <a href="/panneaux-solaires-essonne/" class="hover:text-gold transition-colors">Dourdan</a>
         <a href="/panneaux-solaires-massy/" class="hover:text-gold transition-colors">Massy</a>
+
+        <!-- 92 -->
+        <a href="/panneaux-solaires-nanterre/" class="hover:text-gold transition-colors">Nanterre</a>
+
+        <!-- 94 -->
+        <a href="/panneaux-solaires-creteil/" class="hover:text-gold transition-colors">Cr&eacute;teil</a>
 
         <!-- 95 -->
         <a href="/panneaux-solaires-argenteuil/" class="hover:text-gold transition-colors">Argenteuil</a>
-        <span class="hover:text-gold transition-colors">L&rsquo;Isle-Adam</span>
-        <span class="hover:text-gold transition-colors">Magny-en-Vexin</span>
-        <span class="hover:text-gold transition-colors">Montmorency</span>
+        <a href="/panneaux-solaires-val-doise/" class="hover:text-gold transition-colors">L&rsquo;Isle-Adam</a>
+        <a href="/panneaux-solaires-val-doise/" class="hover:text-gold transition-colors">Magny-en-Vexin</a>
+        <a href="/panneaux-solaires-val-doise/" class="hover:text-gold transition-colors">Montmorency</a>
+        <a href="/panneaux-solaires-cergy/" class="hover:text-gold transition-colors">Cergy</a>
 
         <!-- 60 -->
         <a href="/panneaux-solaires-compiegne/" class="hover:text-gold transition-colors">Compi&egrave;gne</a>
         <a href="/panneaux-solaires-beauvais/" class="hover:text-gold transition-colors">Beauvais</a>
-        <span class="hover:text-gold transition-colors">Senlis</span>
-        <span class="hover:text-gold transition-colors">Nogent-sur-Oise</span>
+        <a href="/panneaux-solaires-beauvais/" class="hover:text-gold transition-colors">Senlis</a>
+        <a href="/panneaux-solaires-compiegne/" class="hover:text-gold transition-colors">Nogent-sur-Oise</a>
 
         <!-- 02 -->
         <a href="/panneaux-solaires-soissons/" class="hover:text-gold transition-colors">Soissons</a>
-        <span class="hover:text-gold transition-colors">Saint-Quentin</span>
-        <span class="hover:text-gold transition-colors">Ch&acirc;teau-Thierry</span>
+        <a href="/panneaux-solaires-laon/" class="hover:text-gold transition-colors">Saint-Quentin</a>
+        <a href="/panneaux-solaires-soissons/" class="hover:text-gold transition-colors">Ch&acirc;teau-Thierry</a>
         <a href="/panneaux-solaires-laon/" class="hover:text-gold transition-colors">Laon</a>
 
         <!-- 51 -->
         <a href="/panneaux-solaires-reims/" class="hover:text-gold transition-colors">Reims</a>
-        <span class="hover:text-gold transition-colors">&Eacute;pernay</span>
-        <span class="hover:text-gold transition-colors">Ch&acirc;lons-en-Champagne</span>
-        <span class="hover:text-gold transition-colors">Vitry-le-Fran&ccedil;ois</span>
+        <a href="/panneaux-solaires-reims/" class="hover:text-gold transition-colors">&Eacute;pernay</a>
+        <a href="/panneaux-solaires-reims/" class="hover:text-gold transition-colors">Ch&acirc;lons-en-Champagne</a>
+        <a href="/panneaux-solaires-reims/" class="hover:text-gold transition-colors">Vitry-le-Fran&ccedil;ois</a>
 
         <!-- 10 -->
-        <span class="hover:text-gold transition-colors">Troyes</span>
-        <span class="hover:text-gold transition-colors">Romilly-sur-Seine</span>
-        <span class="hover:text-gold transition-colors">Sainte-Savine</span>
-        <span class="hover:text-gold transition-colors">Bar-sur-Seine</span>
+        <a href="/panneaux-solaires-reims/" class="hover:text-gold transition-colors">Troyes</a>
+        <a href="/panneaux-solaires-reims/" class="hover:text-gold transition-colors">Romilly-sur-Seine</a>
+        <a href="/panneaux-solaires-reims/" class="hover:text-gold transition-colors">Sainte-Savine</a>
+        <a href="/panneaux-solaires-reims/" class="hover:text-gold transition-colors">Bar-sur-Seine</a>
 
         <!-- 89 -->
-        <span class="hover:text-gold transition-colors">Sens</span>
-        <span class="hover:text-gold transition-colors">Auxerre</span>
-        <span class="hover:text-gold transition-colors">Joigny</span>
-        <span class="hover:text-gold transition-colors">Migennes</span>
+        <a href="/panneaux-solaires-orleans/" class="hover:text-gold transition-colors">Sens</a>
+        <a href="/panneaux-solaires-chartres/" class="hover:text-gold transition-colors">Auxerre</a>
+        <a href="/panneaux-solaires-chartres/" class="hover:text-gold transition-colors">Joigny</a>
+        <a href="/panneaux-solaires-chartres/" class="hover:text-gold transition-colors">Migennes</a>
 
         <!-- 45 -->
         <a href="/panneaux-solaires-orleans/" class="hover:text-gold transition-colors">Orl&eacute;ans</a>
-        <span class="hover:text-gold transition-colors">Montargis</span>
-        <span class="hover:text-gold transition-colors">Gien</span>
-        <span class="hover:text-gold transition-colors">Olivet</span>
+        <a href="/panneaux-solaires-orleans/" class="hover:text-gold transition-colors">Montargis</a>
+        <a href="/panneaux-solaires-orleans/" class="hover:text-gold transition-colors">Gien</a>
+        <a href="/panneaux-solaires-orleans/" class="hover:text-gold transition-colors">Olivet</a>
 
       </div>
-    </div>
 
-    <!-- Nos installations solaires par ville — masqu&eacute; par d&eacute;faut -->
-    <div id="bloc-panneaux-villes" class="seo-toggle-content hidden overflow-hidden mt-16" aria-hidden="true">
-      <h3 class="text-xl font-semibold text-gold mb-6 text-center">
-        Nos installations solaires par ville
-      </h3>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 text-neutral-300 text-sm md:text-base">
-        <a href="/panneaux-solaires-argenteuil/" class="hover:text-gold transition-colors">Argenteuil</a>
-        <a href="/panneaux-solaires-meaux/" class="hover:text-gold transition-colors">Meaux</a>
-        <a href="/panneaux-solaires-fontainebleau/" class="hover:text-gold transition-colors">Fontainebleau</a>
-        <a href="/panneaux-solaires-versailles/" class="hover:text-gold transition-colors">Versailles</a>
-        <a href="/panneaux-solaires-reims/" class="hover:text-gold transition-colors">Reims</a>
-        <a href="/panneaux-solaires-orleans/" class="hover:text-gold transition-colors">Orl&eacute;ans</a>
-        <a href="/panneaux-solaires-massy/" class="hover:text-gold transition-colors">Massy</a>
-        <a href="/panneaux-solaires-cergy/" class="hover:text-gold transition-colors">Cergy</a>
-        <a href="/panneaux-solaires-melun/" class="hover:text-gold transition-colors">Melun</a>
-        <a href="/panneaux-solaires-nanterre/" class="hover:text-gold transition-colors">Nanterre</a>
-        <a href="/panneaux-solaires-evry/" class="hover:text-gold transition-colors">&Eacute;vry</a>
-        <a href="/panneaux-solaires-creteil/" class="hover:text-gold transition-colors">Cr&eacute;teil</a>
-      </div>
+      <p class="text-center mt-8">
+        <a href="/panneaux-solaires-ile-de-france/" class="text-gold hover:underline text-sm font-medium">
+          Voir la page r&eacute;gionale et l&rsquo;ensemble des villes couvertes
+        </a>
+      </p>
     </div>
 
   </div>
@@ -1637,10 +1645,8 @@
   (function() {
     const btnThemes = document.getElementById('btn-seo-themes');
     const btnVilles = document.getElementById('btn-seo-villes');
-    const btnPanneauxVilles = document.getElementById('btn-panneaux-villes');
     const blocThemes = document.getElementById('bloc-seo-themes');
     const blocVilles = document.getElementById('bloc-seo-villes');
-    const blocPanneauxVilles = document.getElementById('bloc-panneaux-villes');
 
     function toggleBloc(btn, bloc) {
       if (!btn || !bloc) return;
@@ -1652,7 +1658,6 @@
 
     if (btnThemes) btnThemes.addEventListener('click', function() { toggleBloc(btnThemes, blocThemes); });
     if (btnVilles) btnVilles.addEventListener('click', function() { toggleBloc(btnVilles, blocVilles); });
-    if (btnPanneauxVilles) btnPanneauxVilles.addEventListener('click', function() { toggleBloc(btnPanneauxVilles, blocPanneauxVilles); });
   })();
 </script>
 
