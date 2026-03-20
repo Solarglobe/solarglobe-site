@@ -28,7 +28,6 @@ RewriteRule ^le-solaire/([a-z0-9-]+)/?$ le-solaire/$1.html [L]
 RewriteRule ^notre-methode/([a-z0-9-]+)/?$ notre-methode/$1.html [L]
 RewriteRule ^produits/([a-z0-9-]+)/?$ produits/$1.html [L]
 RewriteRule ^seo/([a-z0-9-]+)/?$ seo/$1.html [L]
-RewriteRule ^seo/villes/([a-z0-9-]+)/?$ seo/villes/$1.html [L]
 
 # DirectoryIndex pour servir index.html dans les dossiers
 DirectoryIndex index.html

@@ -12,13 +12,6 @@ def get_title_and_desc(chemin_fichier):
     # Accueil
     if nom == "index.html":
         return TITLE_DEFAULT, DESC_DEFAULT, f"{DOMAINE}/"
-    # Ville
-    elif "/villes/" in chemin_fichier.replace("\\", "/"):
-        ville = nom.replace(".html", "").replace("-", " ").title()
-        title = f"Installation solaire à {ville} | Solarglobe"
-        desc = f"Installation de panneaux solaires à {ville} : étude gratuite, équipements haut de gamme, installateurs RGE."
-        url = f"{DOMAINE}/seo/villes/{nom}"
-        return title, desc, url
     # Page SEO
     elif "/seo/" in chemin_fichier.replace("\\", "/"):
         titre_simple = nom.replace(".html", "").replace("-", " ").capitalize()

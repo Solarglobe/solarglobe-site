@@ -46,7 +46,7 @@
 
 **Panneaux solaires par ville (36 pages) :** Toutes présentes et structurées (Boulogne-Billancourt, Ivry, Versailles, Nanterre, etc.)
 
-**SEO villes (28 pages) :** Toutes présentes dans `/seo/villes/`
+**Note (mise à jour dépôt)** : l’ancien silo HTML « villes » sous `seo` a été retiré ; le maillage local passe par `/panneaux-solaires-[ville]/`.
 
 ---
 
@@ -60,7 +60,7 @@
 | `notre-methode/calpinage.html` | Doublon avec calpinage/index.html — clarifier la version canonique |
 | `partenaires.html` | **13+ liens `href="#"`** — navigation interne non fonctionnelle (Intro, Énergie, Terrain, Solaire, etc.) |
 | Pages SEO `seo/*.html` | Liens relatifs sans `.html` (ex. `href="panneaux-solaires"`) — dépendent des redirections pour fonctionner |
-| `etude-solaire-gratuite.html` | Lien `seo/villes/l-isle-adam` en relatif — peut échouer selon le contexte |
+| `etude-solaire-gratuite.html` | *(Corrigé)* Maillage localités mis à jour vers `/panneaux-solaires-*` ou libellé seul |
 
 ---
 
@@ -68,9 +68,7 @@
 
 | Page | Problème |
 |------|----------|
-| **seo/villes/soissons.html** | **CASSÉE** : contenu HTML dupliqué, code template non rendu (`content="' + <!DOCTYPE html>`, `.Matches[0].Value.TrimEnd`), balises mal fermées. Page corrompue. |
-| **seo/villes/soissons.html** | **Double `<head>`, double `<title>`, double `<meta description>`** — structure HTML invalide |
-| **seo/villes/*.html** (multiples) | **Encodage UTF-8 défaillant** : caractères `�` à la place des accents (é, è, ê, etc.) — soissons, orleans, chalons-en-champagne, etc. |
+| ~~Anciennes pages localités (fichiers obsolètes)~~ | ~~Problèmes structure / encodage signalés à l’audit~~ — **fichiers supprimés du dépôt** |
 | **notre-methode/dimensionnement.html** | Placeholder "Contenu à venir" — page non prête pour la production |
 
 ---
@@ -79,7 +77,7 @@
 
 | Lien | Emplacement | Problème |
 |------|-------------|----------|
-| `href="../seo/villes/lisle-adam"` | seo/autoconsommation-solaire.html, panneaux-solaires.html, etude-solaire-gratuite.html, aides-financements.html, batteries-solaires.html, installation-solaire.html, onduleurs-solaires.html, energie-solaire-maison.html, panneaux-photovoltaiques.html, production-solaire.html, solution-solaire-sur-mesure.html, rentabilite-panneaux-solaires.html | **404** — le fichier est `l-isle-adam.html`, pas `lisle-adam.html` |
+| ~~`href` relatifs vers anciennes pages localités~~ | ~~Plusieurs `seo/*.html`~~ | **Corrigé** — liens mis à jour ou retirés |
 | `href="panneaux-solaires"` | seo/autoconsommation-solaire.html, seo/aides-financements.html | Lien relatif — résout vers `/seo/panneaux-solaires` (sans .html). Fonctionne si redirection configurée, sinon 404 |
 | `href="batteries-solaires"` | seo/autoconsommation-solaire.html | Idem |
 | `href="onduleurs-solaires"` | seo/autoconsommation-solaire.html, seo/aides-financements.html | Idem |
@@ -150,8 +148,7 @@ Aucune page structurelle manquante identifiée.
 | Page | Problème |
 |------|----------|
 | **notre-methode/dimensionnement.html** | Meta description absente |
-| **seo/villes/soissons.html** | Double `<title>`, double `<meta description>` — contenu dupliqué |
-| **seo/villes/*.html** | Encodage UTF-8 incorrect (caractères `�`) |
+| ~~Anciennes pages localités (fichiers obsolètes)~~ | ~~Doublons meta / encodage~~ — retirées du dépôt |
 | **Pages redirection** (blog.html, contact.html, faq.html, etc.) | `<title>Redirection – …` — acceptable pour des pages de redirection |
 | **Blog** | 5 images avec `alt=""` — à compléter pour le SEO |
 | **index.html** | og:image pointe vers og-image.jpg — fichier absent |
@@ -209,16 +206,16 @@ Aucune page structurelle manquante identifiée.
 
 **Raisons bloquantes :**
 
-1. **seo/villes/soissons.html** — page HTML corrompue (contenu dupliqué, code template non rendu)
+1. ~~**Ancienne page localités soissons (fichier obsolète)**~~ — retirée du dépôt
 2. **og-image.jpg** — image Open Graph manquante sur la page d’accueil
 3. **logo-solarglobe.png** — référencé dans le Schema.org mais absent (présence de logo-solarglobe-rect.png uniquement)
-4. **Lien lisle-adam** — 404 sur 12+ pages SEO (fichier correct : l-isle-adam.html)
+4. ~~**Lien lisle-adam**~~ — corrigé dans le maillage hub
 5. **notre-methode/dimensionnement.html** — page placeholder "Contenu à venir"
-6. **Encodage UTF-8** — caractères incorrects sur plusieurs pages SEO villes
+6. ~~**Encodage UTF-8** sur anciennes pages localités~~ — fichiers concernés retirés
 
 **Actions à réaliser avant mise en production :**
 
-1. Corriger ou régénérer `seo/villes/soissons.html`
+1. ~~Régénérer l’ancienne page localités soissons~~ — **fait** (retrait du silo + maillage `panneaux-solaires-*`)
 2. Créer ou ajouter `og-image.jpg` et `logo-solarglobe.png` (ou mettre à jour les références)
 3. Remplacer tous les liens `lisle-adam` par `l-isle-adam`
 4. Supprimer ou remplir `notre-methode/dimensionnement.html` (placeholder)

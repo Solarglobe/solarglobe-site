@@ -48,7 +48,7 @@ Remplacer les liens vers `/seo/` par les nouvelles URLs dans `/le-solaire/*`, `/
 ### Rapport
 - **Pages impactées** : index.html (racine), produits/index.html
 - **Liens corrigés** : 5 liens par page (cartes thématiques)
-- **Pages non modifiées** : /seo/villes/* (conformément à la consigne)
+- **Suite (hors périmètre 16)** : retrait du silo localités historique au profit exclusif des URLs `/panneaux-solaires-*/`
 
 ---
 

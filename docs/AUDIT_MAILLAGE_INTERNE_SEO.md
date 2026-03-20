@@ -20,7 +20,7 @@
 | Notre méthode | 8 | `/notre-methode/`, `/notre-methode/etude-solaire/`, `/notre-methode/dimensionnement/`, `/notre-methode/demarches-administratives/`, `/notre-methode/suivi/`, etc. |
 | Pages expertise (canonical) | 4 | `/rentabilite-solaire/`, `/etude-solaire/`, `/dimensionnement-photovoltaique/`, `/bureau-etude-photovoltaique/` |
 | SEO thématiques | 12 | `/seo/panneaux-solaires/`, `/seo/autoconsommation-solaire/`, etc. |
-| SEO villes | 36 | `/seo/villes/argenteuil/`, `/seo/villes/meaux/`, etc. |
+| Grilles localités (accueil, contact, pages SEO) | 36 intitulés | Lien vers `/panneaux-solaires-*` lorsqu’une page existe ; sinon libellé seul |
 | Panneaux par ville | 36 | `/panneaux-solaires-amiens/`, `/panneaux-solaires-meaux/`, etc. |
 | Blog | 5 | `/blog/`, `/blog/autonomie-solaire/`, etc. |
 | FAQ / Légal | 5 | `/faq/`, `/mentions-legales/`, `/cookies/`, `/cgv/`, `/politique-de-confidentialite/` |
@@ -48,7 +48,7 @@
 | Footer (composant partagé) | ~15 | components/footer.html |
 | Index home | ~50 | index.html |
 | Pages SEO thématiques | ~50/page × 12 | seo/*.html |
-| Pages SEO villes | ~20/page × 36 | seo/villes/*.html |
+| Grilles localités (hubs SEO / contact) | ~20 variantes × pages hub | seo/*.html, index.html, contact |
 | Panneaux par ville | ~15/page × 36 | panneaux-solaires-xxx/index.html |
 | Blog, méthode, produits, etc. | Variable | Autres pages |
 

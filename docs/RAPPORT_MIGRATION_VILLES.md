@@ -2,19 +2,19 @@
 
 **Date** : 13 mars 2025  
 **Pages cibles** : `/panneaux-solaires-[ville]/` (36 pages)  
-**Pages sources** : `seo/villes/[ville].html` (36 pages)
+**Pages sources (historique)** : ancien silo localités sous `seo` (36 gabarits) — **retiré du dépôt mars 2026**
 
 ---
 
 ## 1. Résumé
 
-Les 36 pages `/panneaux-solaires-[ville]` ont été enrichies avec un contenu crédible et des liens internes pertinents. Les anciennes pages `seo/villes/` n'ont **pas** été supprimées. Les redirections seront mises en place plus tard.
+Les 36 pages `/panneaux-solaires-[ville]` ont été enrichies avec un contenu crédible et des liens internes pertinents. L’ancien silo localités en fichiers sous `seo` a été **supprimé du dépôt** (mars 2026) pour supprimer la cannibalisation SEO ; les redirections HTTP seront traitées séparément.
 
 ---
 
 ## 2. Analyse des anciennes pages villes
 
-### Contenu identifié (sources seo/villes/)
+### Contenu identifié (sources — ancien silo localités)
 
 | Type | Élément | Décision |
 |------|---------|----------|
@@ -27,7 +27,7 @@ Les 36 pages `/panneaux-solaires-[ville]` ont été enrichies avec un contenu cr
 
 ### Contenu des anciennes pages
 
-Les pages `seo/villes/` étaient des templates quasi identiques avec :
+Ces pages étaient des templates quasi identiques avec :
 - Une phrase de keyword stuffing : « En combinant panneaux solaires, autoconsommation solaire, batteries solaires, onduleurs solaires... »
 - Aucune description spécifique de la ville
 - Aucun contexte énergétique local détaillé
@@ -138,7 +138,7 @@ Classes utilisées : `.sg-section`, `.sg-container`, `.sg-section-title`, `.sg-c
 
 ## 10. Correspondance anciennes / nouvelles pages
 
-Les anciennes pages `seo/villes/` utilisent des slugs différents de certaines nouvelles. Villes communes : meaux, fontainebleau, massy, argenteuil, compiegne, beauvais, reims, orleans, etc. Les nouvelles pages couvrent 36 villes ; les anciennes en couvrent 36 autres (lagny-sur-marne, provins, sens, etc.). La migration a porté sur l'enrichissement du **template des nouvelles pages**, et non sur une correspondance ville par ville avec les anciennes.
+Les anciennes URLs localités utilisaient des slugs différents de certaines pages `/panneaux-solaires-*`. Villes communes : meaux, fontainebleau, massy, argenteuil, compiegne, beauvais, reims, orleans, etc. Les pages « panneaux » couvrent 36 villes ; l’ancien silo en couvrait 36 autres (lagny-sur-marne, provins, sens, etc.). La migration a porté sur l'enrichissement du **template des nouvelles pages**, et non sur une correspondance ville par ville avec les anciennes.
 
 ---
 
@@ -150,4 +150,4 @@ Les pages `/panneaux-solaires-[ville]` sont désormais :
 - **Des pages SEO propres** sans keyword stuffing ni blocs villes
 - **Des pages utiles** avec FAQ enrichie et liens internes pertinents
 
-Les anciennes pages `seo/villes/` restent en ligne. Les redirections pourront être configurées ultérieurement.
+Les anciennes pages fichier ne sont plus dans le dépôt. Configurer les redirections HTTP au niveau hébergeur (chantier séparé).

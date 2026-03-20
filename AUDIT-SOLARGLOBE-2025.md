@@ -35,7 +35,7 @@ Accueil (index.html)
 │
 └── Silo SEO (/seo/)
     ├── 12 pages thématiques (panneaux, autoconsommation, batteries, etc.)
-    └── 36 pages villes (/seo/villes/)
+    └── Pages localités : `/panneaux-solaires-[ville]/` (ancien silo fichier retiré du dépôt)
 ```
 
 ---
@@ -212,7 +212,7 @@ Niveau 4 - Utilitaires
 | Problème | Détail |
 |----------|--------|
 | **C.G.V** | URL avec majuscules et points – peu recommandé |
-| **Profondeur** | Pages villes à 3 niveaux (/seo/villes/troyes) – acceptable |
+| **Profondeur** | Pages localités via `/panneaux-solaires-[slug]/` (structure plate) |
 | **Pages orphelines** | `contrat-apporteur-solarglobe.html` peu ou pas liée |
 | **aides-financieres** | Article blog à la racine – pourrait être dans /blog/ |
 
