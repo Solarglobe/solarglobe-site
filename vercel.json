@@ -1,15 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": true,
-  "cleanUrls": true,
-  "rewrites": [
-    {
-      "source": "/qui-sommes-nous",
-      "destination": "/qui-sommes-nous/index.html"
-    },
-    {
-      "source": "/qui-sommes-nous/",
-      "destination": "/qui-sommes-nous/index.html"
-    }
-  ]
+  "cleanUrls": true
 }
