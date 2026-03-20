@@ -1,7 +1,0 @@
-{
-  "name": "audit-scroll-reveal",
-  "private": true,
-  "dependencies": {
-    "playwright": "^1.40.0"
-  }
-}
