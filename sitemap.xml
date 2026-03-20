@@ -197,43 +197,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- SEO villes (0.7) -->
-  <url><loc>https://www.solarglobe.fr/seo/villes/argenteuil/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/auxerre/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/bar-sur-seine/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/beauvais/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/chalons-en-champagne/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/chateau-thierry/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/compiegne/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/dourdan/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/epernay/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/etampes/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/evry-courcouronnes/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/fontainebleau/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/gien/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/joigny/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/l-isle-adam/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/lagny-sur-marne/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/laon/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/magny-en-vexin/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/massy/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/meaux/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/migennes/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/montargis/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/montmorency/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/nogent-sur-oise/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/olivet/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/orleans/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/provins/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/reims/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/romilly-sur-seine/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/sainte-savine/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/saint-quentin/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/senlis/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/sens/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/soissons/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/troyes/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/seo/villes/vitry-le-francois/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <!-- Panneaux solaires par ville (0.7) -->
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-amiens/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-antony/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -250,8 +213,11 @@
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-corbeil-essonnes/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-creteil/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-drancy/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-essonne/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-evry/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-fontainebleau/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-hauts-de-seine/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-ile-de-france/</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-ivry-sur-seine/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-issy-les-moulineaux/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-laon/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -262,15 +228,21 @@
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-noisy-le-grand/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-orleans/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-palaiseau/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-paris/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-pontoise/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-rambouillet/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-reims/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-saint-denis/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-saint-maur-des-fosses/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-sarcelles/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-seine-et-marne/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-seine-saint-denis/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-soissons/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-val-de-marne/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-val-doise/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-versailles/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.solarglobe.fr/panneaux-solaires-vitry-sur-seine/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-yvelines/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <!-- Blog (0.6) -->
   <url>
     <loc>https://www.solarglobe.fr/blog/</loc>
