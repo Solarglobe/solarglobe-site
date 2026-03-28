@@ -254,3 +254,133 @@
   margin-top: 0.75rem;
   font-size: 0.7rem;
 }
+
+/* ----- Témoignages clients (cartes réelles · testimonials-section.js) ----- */
+.sg-testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 640px) {
+  .sg-testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sg-testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.sg-testimonial-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--sg-rev-border);
+  border-radius: 1rem;
+  padding: 1.25rem 1.2rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sg-testimonial-card:hover {
+  border-color: rgba(195, 152, 71, 0.38);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.sg-testimonial-card__quote {
+  margin: 0 0 0.85rem;
+  padding: 0;
+  border: none;
+  flex: 1 1 auto;
+}
+
+.sg-testimonial-card__quote p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82);
+  font-style: normal;
+}
+
+.sg-testimonial-card__long {
+  margin: 0 0 0.85rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.sg-testimonial-card__footer {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sg-testimonial__stars {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--sg-rev-gold);
+}
+
+.sg-testimonial__star {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex-shrink: 0;
+  opacity: 0.28;
+}
+
+.sg-testimonial__star--on {
+  opacity: 1;
+}
+
+.sg-testimonial-card__by {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.sg-testimonial-card__cite {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.sg-testimonial-card__meta {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Bandeau preuve sociale (mode banner · #sg-testimonials-banner-mount) */
+.sg-testimonials-banner__text {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.65);
+  text-align: center;
+}
+
+.sg-testimonials-banner__score {
+  font-weight: 800;
+  color: var(--sg-rev-gold);
+}
+
+.sg-testimonials-banner__link {
+  color: var(--sg-rev-gold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.sg-testimonials-banner__link:hover {
+  color: #d7b26a;
+}
