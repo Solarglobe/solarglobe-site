@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, follow" />
+  <title>Page introuvable | Solarglobe</title>
+  <meta name="description" content="La page demand&eacute;e n'existe pas ou n'est plus disponible. Retrouvez l'accueil Solarglobe, l'&eacute;tude gratuite et nos contenus sur le solaire." />
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link rel="stylesheet" href="/assets/css/montserrat-local.css" />
+  <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
+  <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/header-common.css" />
+  <link rel="stylesheet" href="/assets/css/footer-common.css" />
+  <style>
+    body { font-family: 'Montserrat', sans-serif; background: #0d0d0d; }
+    .sg-404-main {
+      min-height: 65vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem 3rem;
+    }
+    .sg-404-card {
+      max-width: 40rem;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(195, 152, 71, 0.2);
+      border-radius: 1.25rem;
+      padding: 2rem 1.5rem 2.25rem;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+    }
+    @media (min-width: 768px) {
+      .sg-404-card { padding: 2.5rem 2.25rem 2.75rem; }
+    }
+    .sg-404-nav a {
+      display: block;
+      text-align: center;
+      padding: 0.65rem 1rem;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(195, 152, 71, 0.25);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    }
+    .sg-404-nav a:hover {
+      border-color: rgba(195, 152, 71, 0.55);
+      background: rgba(195, 152, 71, 0.06);
+      box-shadow: 0 0 24px rgba(195, 152, 71, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-noir text-white min-h-screen flex flex-col">
+  <div id="header-placeholder"></div>
+  <script src="/assets/js/header.js"></script>
+
+  <main id="main-content" class="flex-1 sg-404-main">
+    <div class="sg-404-card">
+      <p class="text-center text-xs uppercase tracking-[0.2em] text-neutral-500 mb-3">Erreur 404</p>
+      <h1 class="text-center text-2xl md:text-3xl font-bold text-white mb-4">Page introuvable</h1>
+      <p class="text-center text-neutral-300 text-sm md:text-base leading-relaxed mb-4">
+        La page demand&eacute;e n&rsquo;existe pas ou n&rsquo;est plus disponible. L&rsquo;adresse peut &ecirc;tre incorrecte ou le contenu a &eacute;t&eacute; d&eacute;plac&eacute;.
+      </p>
+      <p class="text-center text-neutral-500 text-sm mb-8">
+        Vous pouvez continuer votre navigation normalement &agrave; partir des liens ci-dessous.
+      </p>
+
+      <div class="flex flex-col items-stretch sm:items-center gap-3 mb-10">
+        <a href="/etude-gratuite/" class="sg-btn sg-btn-primary text-center py-3.5 px-6 text-base font-semibold w-full sm:w-auto sm:min-w-[280px]">
+          Lancer mon &eacute;tude gratuite
+        </a>
+        <a href="/contact/" class="sg-btn sg-btn-outline text-center py-3 px-6 text-sm font-semibold w-full sm:w-auto sm:min-w-[280px]">
+          Parler de mon projet solaire
+        </a>
+      </div>
+
+      <p class="text-center text-xs text-neutral-500 uppercase tracking-wider mb-3">Navigation rapide</p>
+      <nav class="sg-404-nav grid grid-cols-1 sm:grid-cols-2 gap-2.5" aria-label="Pages principales">
+        <a href="/">Accueil</a>
+        <a href="/etude-gratuite/">&Eacute;tude gratuite</a>
+        <a href="/contact/">Contact</a>
+        <a href="/produits/">Produits</a>
+        <a href="/rentabilite-solaire/" class="sm:col-span-2">Rentabilit&eacute; solaire</a>
+      </nav>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="/assets/js/footer.js"></script>
+</body>
+</html>
