@@ -38,21 +38,17 @@
   <meta name="twitter:image" content="https://www.solarglobe.fr/assets/images/og-image.jpg" />
 
   <link rel="icon" href="/assets/images/favicon.png" />
+  <!-- Preload Montserrat (latin — corps + hero .sg-hero-title = 600 via le-solaire-editorial.css) -->
+  <link rel="preload" href="/assets/fonts/montserrat/montserrat-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/montserrat/montserrat-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/montserrat-local.css" />
   <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
   <link rel="stylesheet" href="/assets/css/le-solaire-editorial.css" />
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
-
   <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: {
-      colors: { gold:'#C39847', noir:'#0D0D0D' }
-    } } }
-  </script>
+  <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/home-google-reviews.css" />
 
   <style>
     body{font-family:'Montserrat',sans-serif;background:#0D0D0D;color:#fff;}
@@ -266,6 +262,39 @@
 
 <div class="sg-divider" aria-hidden="true"></div>
 
+<!-- Avis Google — version compacte -->
+<section class="sg-google-reviews sg-google-reviews--compact" aria-labelledby="sg-avis-google-contact-title">
+  <div class="sg-google-reviews__inner sg-container">
+    <div class="sg-google-reviews__intro">
+      <h2 id="sg-avis-google-contact-title" class="sg-google-reviews__title">Avis clients Google</h2>
+      <p class="sg-google-reviews__subtitle">
+        <strong class="text-white/90">5/5</strong> &mdash; <strong class="text-white/90">12 avis</strong> pour Solarglobe. Consultez les retours sur notre fiche Google.
+      </p>
+      <div class="sg-google-reviews__rating-row">
+        <div class="sg-google-reviews__stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <span class="sg-google-reviews__score">5/5</span>
+        <span class="sg-google-reviews__meta"><strong>12 avis</strong></span>
+      </div>
+      <div class="sg-google-reviews__actions">
+        <a href="/etude-gratuite/" class="sg-btn sg-btn-primary">Parler de mon projet solaire</a>
+        <a href="https://www.google.com/maps?cid=213577340699877457" class="sg-google-reviews__btn-google" target="_blank" rel="noopener noreferrer" title="Consulter les avis Google (nouvelle fen&ecirc;tre)">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Lire les avis sur Google
+        </a>
+      </div>
+      <p class="sg-google-reviews__disclaimer">Note et volume d&rsquo;avis : donn&eacute;es publiques Google au moment de la mise en ligne de cette page.</p>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
 <!-- SECTION CONTACT DIRECT -->
 <section class="sg-section sg-section-dark" id="contact-direct">
   <div class="sg-container">
@@ -414,12 +443,15 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://www.solarglobe.fr/#solarglobe",
+  "@type": [
+    "LocalBusiness",
+    "SolarEnergyContractor"
+  ],
+  "@id": "https://www.solarglobe.fr/#localbusiness",
   "name": "Solarglobe",
   "url": "https://www.solarglobe.fr/",
   "logo": "https://www.solarglobe.fr/assets/images/logo-solarglobe-rect.png",
-  "image": "https://www.solarglobe.fr/assets/images/logo-solarglobe-rect.png",
+  "image": "https://www.solarglobe.fr/assets/images/og-image.jpg",
   "description": "Solarglobe installe des systèmes photovoltaïques haut de gamme en Île-de-France et départements limitrophes, avec accompagnement complet et garanties longues.",
   "telephone": "+33 1 72 99 47 53",
   "email": "contact@solarglobe.fr",
@@ -435,12 +467,22 @@
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
-        "Monday","Tuesday","Wednesday","Thursday","Friday"
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
       ],
       "opens": "08:30",
       "closes": "16:30"
     }
   ],
+  "hasMap": "https://www.google.com/maps?cid=213577340699877457",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 5,
+    "reviewCount": 12
+  },
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61578264284164",
     "https://www.instagram.com/solarglobe.fr/",
@@ -465,7 +507,9 @@
     "telephone": "+33 1 72 99 47 53",
     "email": "contact@solarglobe.fr",
     "areaServed": "FR",
-    "availableLanguage": ["fr"]
+    "availableLanguage": [
+      "fr"
+    ]
   }
 }
 </script>

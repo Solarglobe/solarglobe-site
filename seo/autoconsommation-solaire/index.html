@@ -26,18 +26,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <meta name="description" content="Découvrez comment maximiser votre autoconsommation solaire pour réduire vos factures et gagner en indépendance énergétique avec Solarglobe." />
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link rel="stylesheet" href="/assets/css/montserrat-local.css" />
   <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { gold: '#C39847' }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="/assets/css/tailwind.css" />
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
 </head>
@@ -255,12 +246,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://www.solarglobe.fr/#solarglobe",
+  "@type": [
+    "LocalBusiness",
+    "SolarEnergyContractor"
+  ],
+  "@id": "https://www.solarglobe.fr/#localbusiness",
   "name": "Solarglobe",
   "url": "https://www.solarglobe.fr/",
   "logo": "https://www.solarglobe.fr/assets/images/logo-solarglobe-rect.png",
-  "image": "https://www.solarglobe.fr/assets/images/logo-solarglobe-rect.png",
+  "image": "https://www.solarglobe.fr/assets/images/og-image.jpg",
   "description": "Solarglobe installe des systèmes photovoltaïques haut de gamme en Île-de-France et départements limitrophes, avec accompagnement complet et garanties longues.",
   "telephone": "+33 1 72 99 47 53",
   "email": "contact@solarglobe.fr",
@@ -276,12 +270,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
-        "Monday","Tuesday","Wednesday","Thursday","Friday"
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
       ],
       "opens": "08:30",
       "closes": "16:30"
     }
   ],
+  "hasMap": "https://www.google.com/maps?cid=213577340699877457",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 5,
+    "reviewCount": 12
+  },
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61578264284164",
     "https://www.instagram.com/solarglobe.fr/",
@@ -306,7 +310,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     "telephone": "+33 1 72 99 47 53",
     "email": "contact@solarglobe.fr",
     "areaServed": "FR",
-    "availableLanguage": ["fr"]
+    "availableLanguage": [
+      "fr"
+    ]
   }
 }
 </script>

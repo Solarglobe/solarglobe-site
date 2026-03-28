@@ -14,12 +14,11 @@
   <meta property="og:url" content="https://www.solarglobe.fr/panneaux-solaires-essonne/" />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link rel="stylesheet" href="/assets/css/montserrat-local.css" />
   <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{gold:'#C39847'},fontFamily:{montserrat:['Montserrat','sans-serif']}}}}</script>
+  <link rel="stylesheet" href="/assets/css/tailwind.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}</style>
 </head>
 <body class="bg-black text-white">
@@ -127,6 +126,70 @@
 <div id="footer-placeholder"></div><script src="/assets/js/footer.js"></script>
 <script>document.querySelectorAll('.sg-faq-item').forEach(item=>{const btn=item.querySelector('.sg-faq-question'),answer=item.querySelector('.sg-faq-answer');if(!btn||!answer)return;btn.addEventListener('click',()=>{const o=!answer.classList.toggle('hidden');btn.setAttribute('aria-expanded',o);const i=btn.querySelector('.sg-faq-icon');if(i)i.style.transform=o?'rotate(45deg)':'none';});});</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.solarglobe.fr/"},{"@type":"ListItem","position":2,"name":"Le solaire","item":"https://www.solarglobe.fr/le-solaire/"},{"@type":"ListItem","position":3,"name":"Panneaux solaires en Essonne"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://www.solarglobe.fr/#solarglobe","name":"Solarglobe","url":"https://www.solarglobe.fr/","telephone":"+33 1 72 99 47 53","email":"contact@solarglobe.fr","address":{"@type":"PostalAddress","streetAddress":"19 avenue Pierre Curie","addressLocality":"Chelles","postalCode":"77500","addressRegion":"Île-de-France","addressCountry":"FR"},"areaServed":{"@type":"AdministrativeArea","name":"Essonne"}}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "LocalBusiness",
+    "SolarEnergyContractor"
+  ],
+  "@id": "https://www.solarglobe.fr/#localbusiness",
+  "name": "Solarglobe",
+  "url": "https://www.solarglobe.fr/",
+  "logo": "https://www.solarglobe.fr/assets/images/logo-solarglobe-rect.png",
+  "image": "https://www.solarglobe.fr/assets/images/og-image.jpg",
+  "description": "Solarglobe installe des systèmes photovoltaïques haut de gamme en Île-de-France et départements limitrophes, avec accompagnement complet et garanties longues.",
+  "telephone": "+33 1 72 99 47 53",
+  "email": "contact@solarglobe.fr",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "19 avenue Pierre Curie",
+    "addressLocality": "Chelles",
+    "postalCode": "77500",
+    "addressRegion": "Île-de-France",
+    "addressCountry": "FR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:30",
+      "closes": "16:30"
+    }
+  ],
+  "hasMap": "https://www.google.com/maps?cid=213577340699877457",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 5,
+    "reviewCount": 12
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61578264284164",
+    "https://www.instagram.com/solarglobe.fr/",
+    "https://www.linkedin.com/company/108327439/"
+  ],
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Essonne"
+  },
+  "priceRange": "€€",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Service client",
+    "telephone": "+33 1 72 99 47 53",
+    "email": "contact@solarglobe.fr",
+    "areaServed": "FR",
+    "availableLanguage": [
+      "fr"
+    ]
+  }
+}
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Est-ce rentable dans le 91 ?","acceptedAnswer":{"@type":"Answer","text":"Oui avec étude et pose RGE ; la densité impose un bon calpinage."}},{"@type":"Question","name":"Production moyenne attendue ?","acceptedAnswer":{"@type":"Answer","text":"Souvent 900 à 1100 kWh/kWc/an sur site favorable, à modéliser."}},{"@type":"Question","name":"Copropriété : est-ce possible ?","acceptedAnswer":{"@type":"Answer","text":"Oui avec parcours spécifique d’assemblée et faisabilité technique."}},{"@type":"Question","name":"Batterie obligatoire ?","acceptedAnswer":{"@type":"Answer","text":"Non ; dépend du profil horaire."}},{"@type":"Question","name":"Quelle puissance pour une maison du 91 ?","acceptedAnswer":{"@type":"Answer","text":"Souvent 3 à 9 kWc selon toiture et consommation."}},{"@type":"Question","name":"Travaux sans étude : risques ?","acceptedAnswer":{"@type":"Answer","text":"Surdimensionnement et ombrage sous-estimé ; l’étude limite ces écarts."}}]}</script>
 </body></html>

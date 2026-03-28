@@ -25,18 +25,7 @@ html = f"""<!DOCTYPE html>
   <title>{page['h1']}</title>
   <meta name="description" content="Solarglobe installe des batteries solaires haut de gamme. Stockage, autonomie, fiabilité. Étude gratuite, installateurs certifiés RGE.">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {{
-      theme: {{
-        extend: {{
-          colors: {{
-            gold: '#C39847',
-          }},
-        }}
-      }}
-    }}
-  </script>
+  <link rel="stylesheet" href="/assets/css/tailwind.css" />
 </head>
 <body class="bg-black text-white font-sans leading-relaxed">
   <header class="p-6 bg-black text-gold text-center text-3xl font-bold">

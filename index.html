@@ -49,27 +49,18 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
 
+  <!-- Preload Montserrat (latin — LCP : corps + titre hero font-extrabold) -->
+  <link rel="preload" href="/assets/fonts/montserrat/montserrat-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/montserrat/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+
   <!-- Header global -->
+  <link rel="stylesheet" href="/assets/css/montserrat-local.css" />
   <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
-
-  <!-- Google Fonts : Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;display=swap"
-        rel="stylesheet" />
-
   <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { gold: '#C39847' },
-          fontFamily: { montserrat: ['Montserrat', 'sans-serif'] },
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/home-google-reviews.css" />
 </head>
 
 
@@ -1461,6 +1452,60 @@
 <!-- BANDEAU DE TRANSITION -->
 <div class="sg-divider" aria-hidden="true"></div>
 
+<!-- Avis clients Google — preuve sociale avant CTA final -->
+<section id="bloc-avis-google" class="sg-google-reviews" aria-labelledby="sg-avis-google-title">
+  <div class="sg-google-reviews__inner sg-container">
+    <div class="sg-google-reviews__intro">
+      <p class="sg-google-reviews__kicker">Réputation locale</p>
+      <h2 id="sg-avis-google-title" class="sg-google-reviews__title">Ils nous font confiance sur Google</h2>
+      <p class="sg-google-reviews__subtitle">
+        Solarglobe est notée <strong class="text-white/90">5 sur 5</strong> sur la base de <strong class="text-white/90">12 avis</strong> — une exigence de transparence qui guide chaque projet.
+      </p>
+      <div class="sg-google-reviews__rating-row">
+        <div class="sg-google-reviews__stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <span class="sg-google-reviews__score">5/5</span>
+        <span class="sg-google-reviews__meta"><strong>12 avis</strong> &middot; Solarglobe sur Google</span>
+      </div>
+      <div class="sg-google-reviews__actions">
+        <a href="/etude-gratuite/" class="sg-btn sg-btn-primary">Demander mon &eacute;tude gratuite</a>
+        <a href="https://www.google.com/maps?cid=213577340699877457" class="sg-google-reviews__btn-google" target="_blank" rel="noopener noreferrer" title="Consulter les avis Google (nouvelle fen&ecirc;tre)">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Voir les avis sur Google
+        </a>
+      </div>
+      <p class="sg-google-reviews__disclaimer">
+        Les cartes ci-dessous d&eacute;crivent des <strong class="text-white/50">th&egrave;mes r&eacute;currents</strong> dans l&rsquo;accompagnement Solarglobe &mdash; ce ne sont pas des citations extraites d&rsquo;avis Google.
+      </p>
+    </div>
+    <div class="sg-google-reviews__grid" role="list">
+      <article class="sg-google-reviews__card" role="listitem">
+        <h3 class="sg-google-reviews__card-label">&Eacute;tude &amp; clart&eacute;</h3>
+        <p>Hypoth&egrave;ses et chiffrages pos&eacute;s lisiblement pour d&eacute;cider sans pr&eacute;cipitation.</p>
+      </article>
+      <article class="sg-google-reviews__card" role="listitem">
+        <h3 class="sg-google-reviews__card-label">Accompagnement</h3>
+        <p>Un interlocuteur d&eacute;di&eacute; qui suit le dossier et reste disponible aux &eacute;tapes cl&eacute;s.</p>
+      </article>
+      <article class="sg-google-reviews__card" role="listitem">
+        <h3 class="sg-google-reviews__card-label">Mise en &oelig;uvre</h3>
+        <p>Pose par un installateur certifi&eacute; RGE, avec une vision partag&eacute;e du chantier.</p>
+      </article>
+      <article class="sg-google-reviews__card" role="listitem">
+        <h3 class="sg-google-reviews__card-label">Suivi de projet</h3>
+        <p>Continuit&eacute; entre l&rsquo;&eacute;tude, les d&eacute;marches et la mise en service.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="sg-divider" aria-hidden="true"></div>
+
 <!-- BLOC 9 : CONCLUSION & CTA FINAL (identique au bloc RGE) -->
 <section id="bloc-cta-final" class="sg-section relative overflow-hidden gsap-bloc-cta">
   <div class="sg-container grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-40 items-center">
@@ -2175,13 +2220,16 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": [
+    "LocalBusiness",
+    "SolarEnergyContractor"
+  ],
   "@id": "https://www.solarglobe.fr/#localbusiness",
   "name": "Solarglobe",
   "url": "https://www.solarglobe.fr/",
   "logo": "https://www.solarglobe.fr/assets/images/logo-solarglobe-rect.png",
-  "image": "https://www.solarglobe.fr/assets/images/logo-solarglobe-rect.png",
-  "description": "Solarglobe installe des systèmes photovoltaïques premium en Île-de-France et départements voisins. Économies réelles, accompagnement complet et garanties longues pour une autonomie énergétique durable.",
+  "image": "https://www.solarglobe.fr/assets/images/og-image.jpg",
+  "description": "Solarglobe installe des systèmes photovoltaïques haut de gamme en Île-de-France et départements limitrophes, avec accompagnement complet et garanties longues.",
   "telephone": "+33 1 72 99 47 53",
   "email": "contact@solarglobe.fr",
   "address": {
@@ -2195,12 +2243,28 @@
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
       "opens": "08:30",
       "closes": "16:30"
     }
   ],
-  "priceRange": "€€",
+  "hasMap": "https://www.google.com/maps?cid=213577340699877457",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 5,
+    "reviewCount": 12
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61578264284164",
+    "https://www.instagram.com/solarglobe.fr/",
+    "https://www.linkedin.com/company/108327439/"
+  ],
   "areaServed": [
     "Île-de-France",
     "Seine-et-Marne (77)",
@@ -2213,19 +2277,17 @@
     "Yonne (89)",
     "Loiret (45)"
   ],
+  "priceRange": "€€",
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "Service client",
     "telephone": "+33 1 72 99 47 53",
     "email": "contact@solarglobe.fr",
     "areaServed": "FR",
-    "availableLanguage": ["fr"]
-  },
-  "sameAs": [
-    "https://www.facebook.com/profile.php?id=61578264284164",
-    "https://www.instagram.com/solarglobe.fr/",
-    "https://www.linkedin.com/company/108327439/"
-  ]
+    "availableLanguage": [
+      "fr"
+    ]
+  }
 }
 </script>
 

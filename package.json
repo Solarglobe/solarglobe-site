@@ -1,0 +1,11 @@
+{
+  "name": "solarglobe-site-vitrine",
+  "private": true,
+  "scripts": {
+    "build:tailwind": "tailwindcss -i ./assets/css/tailwind.input.css -o ./assets/css/tailwind.css --minify",
+    "watch:tailwind": "tailwindcss -i ./assets/css/tailwind.input.css -o ./assets/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
