@@ -821,6 +821,8 @@
   .sg-section .sg-section-intro{margin-bottom:24px;}
   .sg-cta-inline{margin-top:48px;}
   .sg-summary-box{margin-bottom:32px;}
+  .le-solaire-index-hero .le-solaire-index-bc{padding-top:0.75rem;padding-bottom:0.25rem;margin-bottom:0.25rem}
+  @media (min-width:768px){.le-solaire-index-hero .le-solaire-index-bc{margin-bottom:0.5rem}}
   </style>
 </head>
 <body class="bg-black text-white">
@@ -832,7 +834,7 @@
 <script src="/assets/js/header.js"></script>
 
 <!-- HERO -->
-<section class="sg-hero-solaire relative min-h-[85vh] flex items-center overflow-hidden -mt-[72px]">
+<section class="le-solaire-index-hero sg-hero-solaire relative min-h-[85vh] flex items-center overflow-hidden -mt-[72px]">
   <div class="absolute inset-0 z-0">
     <img
       src="/assets/images/solaire/hero-solaire.webp"
@@ -843,6 +845,12 @@
   <div class="absolute inset-0 bg-black/70 z-[1]"></div>
   <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-black z-[1]"></div>
   <div class="relative z-10 max-w-6xl mx-auto px-6 w-full">
+    <nav class="le-solaire-index-bc sg-breadcrumb sg-breadcrumb-dark sg-breadcrumb--compact sg-breadcrumb--align-start" aria-label="Fil d'Ariane">
+      <ol class="sg-breadcrumb-list">
+        <li><a href="/">Accueil</a></li>
+        <li aria-current="page">Le solaire</li>
+      </ol>
+    </nav>
     <span class="text-gold uppercase tracking-[0.25em] text-sm ps-reveal ps-reveal-title">Énergie solaire</span>
     <h1 class="mt-6 text-5xl md:text-6xl font-semibold leading-tight max-w-4xl text-white ps-reveal ps-reveal-title">
       Produisez votre propre électricité grâce au solaire

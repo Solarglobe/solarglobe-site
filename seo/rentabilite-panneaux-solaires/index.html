@@ -33,13 +33,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
 </head>
 <body class="bg-neutral-900 text-white font-sans">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N2ZQKS6F');</script>
-<!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2ZQKS6F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div id="header-placeholder"></div>
+  <script src="/assets/js/header.js"></script>
+
+<div class="sg-container">
+  <nav class="sg-breadcrumb sg-breadcrumb-dark sg-breadcrumb--compact" aria-label="Fil d'Ariane">
+    <ol class="sg-breadcrumb-list">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/le-solaire/">Le solaire</a></li>
+      <li aria-current="page">Rentabilité panneaux solaires</li>
+    </ol>
+  </nav>
+</div>
 
   <!-- Bloc 1 : Titre & intro -->
   <section class="sg-container py-20 text-center">
@@ -214,6 +223,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </section>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://www.solarglobe.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Le solaire",
+      "item": "https://www.solarglobe.fr/le-solaire/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Rentabilité panneaux solaires",
+      "item": "https://www.solarglobe.fr/seo/rentabilite-panneaux-solaires/"
+    }
+  ]
+}
+</script>
 <div id="footer-placeholder"></div>
 <script src="/assets/js/footer.js"></script>
 

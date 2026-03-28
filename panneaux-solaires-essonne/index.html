@@ -26,8 +26,12 @@
 <div id="header-placeholder"></div>
 <script src="/assets/js/header.js"></script>
 <div class="sg-container">
-  <nav class="sg-breadcrumb sg-breadcrumb-dark" aria-label="Fil d'Ariane">
-    <a href="/">Accueil</a><span aria-hidden="true">/</span><a href="/le-solaire/">Le solaire</a><span aria-hidden="true">/</span><span>Panneaux solaires en Essonne</span>
+  <nav class="sg-breadcrumb sg-breadcrumb-dark sg-breadcrumb--compact" aria-label="Fil d'Ariane">
+    <ol class="sg-breadcrumb-list">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/qui-sommes-nous/#zones">Zones d'intervention</a></li>
+      <li aria-current="page">Panneaux solaires en Essonne</li>
+    </ol>
   </nav>
 </div>
 <section class="sg-hero-premium">
@@ -125,7 +129,31 @@
 <section class="sg-cta sg-cta-dark"><div class="sg-container"><h2>Étude panneaux solaires dans l’Essonne</h2><p>Calpinage, dimensionnement, rentabilité — demandez votre analyse avant installation.</p><a href="/etude-gratuite/" class="sg-btn sg-btn-primary">Obtenir mon étude solaire gratuite</a></div></section>
 <div id="footer-placeholder"></div><script src="/assets/js/footer.js"></script>
 <script>document.querySelectorAll('.sg-faq-item').forEach(item=>{const btn=item.querySelector('.sg-faq-question'),answer=item.querySelector('.sg-faq-answer');if(!btn||!answer)return;btn.addEventListener('click',()=>{const o=!answer.classList.toggle('hidden');btn.setAttribute('aria-expanded',o);const i=btn.querySelector('.sg-faq-icon');if(i)i.style.transform=o?'rotate(45deg)':'none';});});</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.solarglobe.fr/"},{"@type":"ListItem","position":2,"name":"Le solaire","item":"https://www.solarglobe.fr/le-solaire/"},{"@type":"ListItem","position":3,"name":"Panneaux solaires en Essonne"}]}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://www.solarglobe.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Zones d'intervention",
+      "item": "https://www.solarglobe.fr/qui-sommes-nous/#zones"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Panneaux solaires en Essonne"
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

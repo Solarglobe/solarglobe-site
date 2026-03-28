@@ -3,85 +3,101 @@
   <!-- Home -->
   <url>
     <loc>https://www.solarglobe.fr/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <!-- Étude gratuite / Contact (0.9) -->
   <url>
     <loc>https://www.solarglobe.fr/etude-gratuite/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/contact/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- Qui sommes-nous (0.7) -->
   <url>
     <loc>https://www.solarglobe.fr/qui-sommes-nous/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- Produits (0.8) -->
   <url>
     <loc>https://www.solarglobe.fr/produits/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/produits/panneaux-solaires/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/produits/onduleurs/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/produits/micro-onduleurs/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/produits/batteries-solaires/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Le solaire (0.8) -->
   <url>
     <loc>https://www.solarglobe.fr/le-solaire/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/le-solaire/autoconsommation-solaire/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/le-solaire/rentabilite-panneaux-solaires/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/le-solaire/rendement-panneaux-solaires/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/le-solaire/puissance-installation-solaire/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/le-solaire/batterie-solaire/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/le-solaire/aides-panneaux-solaires/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -129,126 +145,141 @@
   <!-- Pages expertise (0.8) - URLs canoniques uniquement (pas de pages-expertise) -->
   <url>
     <loc>https://www.solarglobe.fr/bureau-etude-photovoltaique/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/etude-solaire/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/dimensionnement-photovoltaique/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/rentabilite-solaire/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- SEO thématiques (0.8) -->
   <url>
     <loc>https://www.solarglobe.fr/seo/panneaux-solaires/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/seo/autoconsommation-solaire/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/seo/batteries-solaires/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/seo/onduleurs-solaires/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/seo/installation-solaire/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/seo/aides-financements/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/seo/rentabilite-panneaux-solaires/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/seo/production-solaire/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/seo/solution-solaire-sur-mesure/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/seo/panneaux-photovoltaiques/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.solarglobe.fr/seo/energie-solaire-maison/</loc>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Panneaux solaires par ville (0.7) -->
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-amiens/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-antony/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-argenteuil/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-aulnay-sous-bois/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-beauvais/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-boulogne-billancourt/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-cergy/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-chartres/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-chelles/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-choisy-le-roi/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-colombes/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-compiegne/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-corbeil-essonnes/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-creteil/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-drancy/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-essonne/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-evry/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-fontainebleau/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-hauts-de-seine/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-ile-de-france/</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-ivry-sur-seine/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-issy-les-moulineaux/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-laon/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-massy/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-meaux/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-melun/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-nanterre/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-noisy-le-grand/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-orleans/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-palaiseau/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-paris/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-pontoise/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-rambouillet/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-reims/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-saint-denis/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-saint-maur-des-fosses/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-sarcelles/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-seine-et-marne/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-seine-saint-denis/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-soissons/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-val-de-marne/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-val-doise/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-versailles/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-vitry-sur-seine/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.solarglobe.fr/panneaux-solaires-yvelines/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-amiens/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-antony/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-argenteuil/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-aulnay-sous-bois/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-beauvais/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-boulogne-billancourt/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-cergy/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-chartres/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-chelles/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-choisy-le-roi/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-colombes/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-compiegne/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-corbeil-essonnes/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-creteil/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-drancy/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-essonne/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-evry/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-fontainebleau/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-hauts-de-seine/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-ile-de-france/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-ivry-sur-seine/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-issy-les-moulineaux/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-laon/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-massy/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-meaux/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-melun/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-nanterre/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-noisy-le-grand/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-orleans/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-palaiseau/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-paris/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-pontoise/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-rambouillet/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-reims/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-saint-denis/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-saint-maur-des-fosses/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-sarcelles/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-seine-et-marne/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-seine-saint-denis/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-soissons/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-val-de-marne/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-val-doise/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-versailles/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-vitry-sur-seine/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.solarglobe.fr/panneaux-solaires-yvelines/</loc><lastmod>2026-03-28</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <!-- Blog (0.6) -->
   <url>
     <loc>https://www.solarglobe.fr/blog/</loc>

@@ -56,9 +56,6 @@
     .sg-hero-editorial::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.5) 50%,rgba(0,0,0,.85) 100%);z-index:-1}
     .sg-hero-left,.sg-hero-right{position:relative;z-index:1}
     .sg-hero-badge{display:inline-block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);padding:4px 10px;margin-bottom:10px;background:rgba(255,255,255,.06)}
-    .sg-hero-bread{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:6px}
-    .sg-hero-bread a{color:rgba(255,255,255,.7);text-decoration:none}
-    .sg-hero-bread a:hover{color:var(--gold)}
     .sg-hero-title{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;line-height:1.25;color:#fff;margin-bottom:6px}
     .sg-hero-accroche{font-size:clamp(.85rem,1.1vw,.9rem);color:rgba(255,255,255,.85);line-height:1.5}
     .sg-hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
@@ -144,11 +141,20 @@
 
 <div class="h-20"></div>
 
+<div class="sg-art-wrap">
+  <nav class="sg-breadcrumb sg-breadcrumb-dark sg-breadcrumb--compact" aria-label="Fil d'Ariane">
+    <ol class="sg-breadcrumb-list">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li aria-current="page">Autonomie solaire</li>
+    </ol>
+  </nav>
+</div>
+
 <!-- HERO ÉDITORIAL ASYMÉTRIQUE -->
 <header class="sg-hero-editorial">
   <div class="sg-hero-left">
     <span class="sg-hero-badge">Guide expert</span>
-    <p class="sg-hero-bread"><a href="/">Accueil</a> / <a href="/blog/">Blog</a> / Autonomie solaire</p>
     <h1 class="sg-hero-title">Autonomie solaire : mythe vs réalité</h1>
     <p class="sg-hero-accroche">Quel niveau d'autonomie est intelligent pour votre projet ? Batterie, pilotage, dimensionnement. La vraie question n'est pas « comment devenir autonome » mais « quel équilibre choisir ».</p>
     <p class="sg-hero-meta">Par Solarglobe · 8 min</p>

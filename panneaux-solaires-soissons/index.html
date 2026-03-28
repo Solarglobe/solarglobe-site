@@ -33,12 +33,12 @@
 
 <!-- BREADCRUMB -->
 <div class="sg-container">
-  <nav class="sg-breadcrumb sg-breadcrumb-dark" aria-label="Fil d'Ariane">
-    <a href="/">Accueil</a>
-    <span aria-hidden="true">/</span>
-    <a href="/le-solaire/">Le solaire</a>
-    <span aria-hidden="true">/</span>
-    <span>Panneaux solaires à Soissons</span>
+  <nav class="sg-breadcrumb sg-breadcrumb-dark sg-breadcrumb--compact" aria-label="Fil d'Ariane">
+    <ol class="sg-breadcrumb-list">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/qui-sommes-nous/#zones">Zones d'intervention</a></li>
+      <li aria-current="page">Panneaux solaires à Soissons</li>
+    </ol>
   </nav>
 </div>
 
@@ -247,9 +247,23 @@ document.querySelectorAll('.sg-faq-item').forEach(item => {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.solarglobe.fr/"},
-    {"@type": "ListItem", "position": 2, "name": "Le solaire", "item": "https://www.solarglobe.fr/le-solaire/"},
-    {"@type": "ListItem", "position": 3, "name": "Panneaux solaires à Soissons"}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://www.solarglobe.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Zones d'intervention",
+      "item": "https://www.solarglobe.fr/qui-sommes-nous/#zones"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Panneaux solaires à Soissons"
+    }
   ]
 }
 </script>

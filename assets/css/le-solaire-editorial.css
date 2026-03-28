@@ -83,6 +83,14 @@
   color: #C39847;
 }
 
+/* Fil d'Ariane sémantique (nav + ol) dans le hero */
+.sg-hero-premium.sg-hero-solaire .sg-hero-inner > .sg-breadcrumb {
+  justify-content: center;
+  text-align: left;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
 .sg-hero-premium.sg-hero-solaire .sg-hero-kicker {
   display: block;
   font-size: 13px;

@@ -33,6 +33,7 @@
   .sg-hero-renta .sg-hero-breadcrumb{font-size:12px;letter-spacing:0.05em;color:rgba(255,255,255,0.55);margin-bottom:16px}
   .sg-hero-renta .sg-hero-breadcrumb a{color:rgba(255,255,255,0.7);text-decoration:none}
   .sg-hero-renta .sg-hero-breadcrumb a:hover{color:#C39847}
+  .sg-hero-renta .sg-hero-inner > .sg-breadcrumb{justify-content:center;margin-bottom:16px;padding:0}
   .sg-hero-renta .sg-hero-kicker{display:block;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#C39847;margin-bottom:12px}
   .sg-hero-renta .sg-hero-subtitle{font-size:1rem;line-height:1.65;margin-top:16px;color:rgba(255,255,255,0.9)}
   .sg-table-premium{width:100%;border-collapse:collapse;border:1px solid rgba(195,152,71,0.25);border-radius:12px;overflow:hidden}
@@ -74,7 +75,13 @@
   <div class="sg-hero-bg" aria-hidden="true"></div>
   <div class="sg-hero-content">
     <div class="sg-hero-inner">
-      <p class="sg-hero-breadcrumb ps-reveal"><a href="/">Accueil</a> <span aria-hidden="true">/</span> Rentabilité solaire</p>
+      <nav class="sg-breadcrumb sg-breadcrumb-dark sg-breadcrumb--compact ps-reveal" aria-label="Fil d'Ariane">
+        <ol class="sg-breadcrumb-list">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/bureau-etude-photovoltaique/">Expertise</a></li>
+          <li aria-current="page">Rentabilité solaire</li>
+        </ol>
+      </nav>
       <span class="sg-hero-kicker ps-reveal">Bureau d'étude photovoltaïque</span>
       <h1 class="sg-hero-title ps-reveal ps-reveal-title">La <span class="gold">rentabilité solaire</span></h1>
       <p class="sg-hero-subtitle ps-reveal">Économies, amortissement, autoconsommation et retour sur investissement : comprenez ce qui rend une installation photovoltaïque réellement rentable.</p>
