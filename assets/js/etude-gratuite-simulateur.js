@@ -1,5 +1,5 @@
 /**
- * Simulateur étude gratuite - SolarGlobe
+ * Simulateur étude gratuite - Solarglobe
  * Moteur isolé, CRM-ready, maintenable
  */
 (function () {
@@ -210,7 +210,7 @@
         <div id="etude-result-block" class="sim-result">
           <div class="sim-result__header">
             <h3 class="sim-result__title">Votre étude solaire est prête</h3>
-            <p class="sim-result__subtitle">Voici une estimation basée sur votre toiture et votre configuration. Elle sera affinée avec un expert SolarGlobe.</p>
+            <p class="sim-result__subtitle">Voici une estimation basée sur votre toiture et votre configuration. Elle sera affinée avec un expert Solarglobe.</p>
           </div>
           <p class="sim-result__hook">Vous pouvez produire jusqu'à <strong>${est.production.toLocaleString('fr-FR')} kWh</strong> par an</p>
           <div class="sim-result__grid">
@@ -256,7 +256,7 @@
           <div class="sim-result__cta">
             <div class="sim-result__form-intro">
               <h4 class="sim-result__form-intro-title">Finalisez votre étude personnalisée</h4>
-              <p class="sim-result__form-intro-text">Un expert SolarGlobe va analyser votre projet en détail et vous transmettre une étude fiable et adaptée à votre maison.</p>
+              <p class="sim-result__form-intro-text">Un expert Solarglobe va analyser votre projet en détail et vous transmettre une étude fiable et adaptée à votre maison.</p>
               <p class="sim-result__form-intro-sub">Sans engagement — réponse sous 24 à 48h</p>
             </div>
             <form id="etude-contact-form" class="sim-result__form" action="${CONFIG.formAction}" method="POST" autocomplete="off" novalidate>

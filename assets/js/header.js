@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!placeholder) return;
 
   const headerPath = window.location.origin + "/components/header.html";
-  console.log("SolarGlobe header loading:", headerPath);
+  console.log("Solarglobe header loading:", headerPath);
   fetch(headerPath)
     .then((response) => {
       if (!response.ok) {
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .then((html) => {
       placeholder.innerHTML = html;
-      console.log("SolarGlobe header injected");
+      console.log("Solarglobe header injected");
       initHeaderComponents();
       setActiveNav();
     })
@@ -27,22 +27,22 @@ function initHeaderComponents() {
   const menu = document.getElementById("mobile-menu");
   const overlay = document.getElementById("mobile-overlay");
 
-  console.log("SolarGlobe header init", {
+  console.log("Solarglobe header init", {
     btn: !!btn,
     menu: !!menu,
     overlay: !!overlay
   });
 
   if (!btn) {
-    console.error("SolarGlobe header error: mobile-menu-button missing");
+    console.error("Solarglobe header error: mobile-menu-button missing");
     return;
   }
   if (!menu) {
-    console.error("SolarGlobe header error: mobile-menu missing");
+    console.error("Solarglobe header error: mobile-menu missing");
     return;
   }
   if (!overlay) {
-    console.error("SolarGlobe header error: mobile-overlay missing");
+    console.error("Solarglobe header error: mobile-overlay missing");
     return;
   }
 
