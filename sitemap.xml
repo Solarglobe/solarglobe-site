@@ -17,6 +17,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  <!-- Qui sommes-nous (0.7) -->
+  <url>
+    <loc>https://www.solarglobe.fr/qui-sommes-nous/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <!-- Produits (0.8) -->
   <url>
     <loc>https://www.solarglobe.fr/produits/</loc>
