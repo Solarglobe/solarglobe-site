@@ -110,6 +110,7 @@
     if (!container || !data) return;
     var n = data.googleTotalReviewCount || getTextReviews(data).length;
     var maps = data.googleMapsUrl || '#';
+    var leave = data.googleLeaveReviewUrl || '#';
     container.innerHTML =
       '<p class="sg-testimonials-banner__text">' +
       '<span class="sg-testimonials-banner__score">5/5</span> sur Google' +
@@ -118,7 +119,10 @@
       ' avis</strong> clients' +
       ' · <a class="sg-testimonials-banner__link" href="' +
       esc(maps) +
-      '" target="_blank" rel="noopener noreferrer">Voir sur Google</a>' +
+      '" target="_blank" rel="noopener noreferrer">Voir nos avis</a>' +
+      ' · <a class="sg-testimonials-banner__link" href="' +
+      esc(leave) +
+      '" target="_blank" rel="noopener noreferrer">Laisser un avis</a>' +
       '</p>';
   }
 

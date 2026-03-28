@@ -30,6 +30,34 @@
 /seo/etude-solaire-gratuite/ /etude-gratuite/ 301
 /seo/etude-solaire-gratuite /etude-gratuite/ 301
 
+# Consolidation SEO lot 1
+/seo/panneaux-solaires /produits/panneaux-solaires/ 301
+/seo/panneaux-solaires/ /produits/panneaux-solaires/ 301
+/seo/panneaux-photovoltaiques /produits/panneaux-solaires/ 301
+/seo/panneaux-photovoltaiques/ /produits/panneaux-solaires/ 301
+/seo/rentabilite-panneaux-solaires /rentabilite-solaire/ 301
+/seo/rentabilite-panneaux-solaires/ /rentabilite-solaire/ 301
+
+# Consolidation SEO lot 2
+/seo/autoconsommation-solaire /le-solaire/autoconsommation-solaire/ 301
+/seo/autoconsommation-solaire/ /le-solaire/autoconsommation-solaire/ 301
+/seo/aides-financements /le-solaire/aides-panneaux-solaires/ 301
+/seo/aides-financements/ /le-solaire/aides-panneaux-solaires/ 301
+/seo/installation-solaire /notre-methode/installation/ 301
+/seo/installation-solaire/ /notre-methode/installation/ 301
+/seo/production-solaire /le-solaire/rendement-panneaux-solaires/ 301
+/seo/production-solaire/ /le-solaire/rendement-panneaux-solaires/ 301
+
+# Consolidation SEO lot 3
+/seo/batteries-solaires /le-solaire/batterie-solaire/ 301
+/seo/batteries-solaires/ /le-solaire/batterie-solaire/ 301
+/seo/onduleurs-solaires /produits/onduleurs/ 301
+/seo/onduleurs-solaires/ /produits/onduleurs/ 301
+/seo/energie-solaire-maison /le-solaire/ 301
+/seo/energie-solaire-maison/ /le-solaire/ 301
+/seo/solution-solaire-sur-mesure /notre-methode/ 301
+/seo/solution-solaire-sur-mesure/ /notre-methode/ 301
+
 # Pages .html → URLs propres (remplace redirections JS)
 /produits.html /produits/ 301
 /faq.html /faq/ 301

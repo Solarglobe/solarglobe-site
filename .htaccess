@@ -2,6 +2,23 @@
 RewriteEngine On
 RewriteBase /
 
+# Consolidation SEO lot 1 — panneaux + rentabilité (/seo/ → pages gagnantes)
+RewriteRule ^seo/panneaux-solaires/?$ /produits/panneaux-solaires/ [R=301,L]
+RewriteRule ^seo/panneaux-photovoltaiques/?$ /produits/panneaux-solaires/ [R=301,L]
+RewriteRule ^seo/rentabilite-panneaux-solaires/?$ /rentabilite-solaire/ [R=301,L]
+
+# Consolidation SEO lot 2 — /seo/ → silos Le solaire / Notre méthode
+RewriteRule ^seo/autoconsommation-solaire/?$ /le-solaire/autoconsommation-solaire/ [R=301,L]
+RewriteRule ^seo/aides-financements/?$ /le-solaire/aides-panneaux-solaires/ [R=301,L]
+RewriteRule ^seo/installation-solaire/?$ /notre-methode/installation/ [R=301,L]
+RewriteRule ^seo/production-solaire/?$ /le-solaire/rendement-panneaux-solaires/ [R=301,L]
+
+# Consolidation SEO lot 3 — batteries, onduleurs, énergie maison, solution sur mesure
+RewriteRule ^seo/batteries-solaires/?$ /le-solaire/batterie-solaire/ [R=301,L]
+RewriteRule ^seo/onduleurs-solaires/?$ /produits/onduleurs/ [R=301,L]
+RewriteRule ^seo/energie-solaire-maison/?$ /le-solaire/ [R=301,L]
+RewriteRule ^seo/solution-solaire-sur-mesure/?$ /notre-methode/ [R=301,L]
+
 # Anciennes URLs .html -> URLs propres avec slash final
 RewriteRule ^etude-solaire-gratuite\.html$ /etude-gratuite/ [R=301,L]
 RewriteRule ^qui-sommes-nous\.html$ /notre-methode/ [R=301,L]

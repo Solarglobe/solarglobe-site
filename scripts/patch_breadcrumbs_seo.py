@@ -9,18 +9,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 # Libellé courant (cohérent avec les H1) + URL canonique
 SEO_PAGES: list[tuple[str, str, str]] = [
-    ("aides-financements", "Aides et financements", "https://www.solarglobe.fr/seo/aides-financements/"),
-    ("autoconsommation-solaire", "Autoconsommation solaire", "https://www.solarglobe.fr/seo/autoconsommation-solaire/"),
-    ("batteries-solaires", "Batteries solaires", "https://www.solarglobe.fr/seo/batteries-solaires/"),
-    ("energie-solaire-maison", "Énergie solaire maison", "https://www.solarglobe.fr/seo/energie-solaire-maison/"),
     ("etude-solaire-gratuite", "Étude solaire gratuite", "https://www.solarglobe.fr/seo/etude-solaire-gratuite/"),
-    ("installation-solaire", "Installation solaire", "https://www.solarglobe.fr/seo/installation-solaire/"),
-    ("onduleurs-solaires", "Onduleurs solaires", "https://www.solarglobe.fr/seo/onduleurs-solaires/"),
-    ("panneaux-photovoltaiques", "Panneaux photovoltaïques", "https://www.solarglobe.fr/seo/panneaux-photovoltaiques/"),
-    ("panneaux-solaires", "Panneaux solaires", "https://www.solarglobe.fr/seo/panneaux-solaires/"),
-    ("production-solaire", "Production solaire", "https://www.solarglobe.fr/seo/production-solaire/"),
-    ("rentabilite-panneaux-solaires", "Rentabilité panneaux solaires", "https://www.solarglobe.fr/seo/rentabilite-panneaux-solaires/"),
-    ("solution-solaire-sur-mesure", "Solution solaire sur-mesure", "https://www.solarglobe.fr/seo/solution-solaire-sur-mesure/"),
 ]
 
 NAV_SNIP = """<div class="sg-container">

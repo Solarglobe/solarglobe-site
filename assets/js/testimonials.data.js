@@ -6,7 +6,10 @@
 (function (w) {
   w.SG_TESTIMONIALS_DATA = {
     googleTotalReviewCount: 12,
-    googleMapsUrl: 'https://www.google.com/maps?cid=213577340699877457',
+    /** Fiche Google / consulter les avis */
+    googleMapsUrl: 'https://maps.app.goo.gl/zPK1i92kwCHySPHp7',
+    /** Page dédiée pour rédiger un avis */
+    googleLeaveReviewUrl: 'https://g.page/r/CbEg9WD5YfYCEBM/review',
 
     items: [
       {

@@ -152,6 +152,17 @@
   opacity: 0.85;
 }
 
+/* Secondaire : rédiger un avis (URL distincte de la fiche / lecture des avis) */
+.sg-google-reviews__btn-google--leave {
+  border-color: rgba(195, 152, 71, 0.35);
+  background: rgba(195, 152, 71, 0.05);
+}
+
+.sg-google-reviews__btn-google--leave:hover {
+  border-color: rgba(195, 152, 71, 0.5);
+  background: rgba(195, 152, 71, 0.09);
+}
+
 .sg-google-reviews__disclaimer {
   font-size: 0.75rem;
   line-height: 1.45;
