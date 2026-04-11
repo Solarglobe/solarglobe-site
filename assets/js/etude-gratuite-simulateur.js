@@ -22,7 +22,7 @@
     ],
     images: {
       longi: '/assets/images/final-longi.webp',
-      dualsun: '/assets/images/final-dualsun.webp'
+      aiko: '/assets/images/logo/aiko-logo.png'
     }
   };
 
@@ -190,7 +190,7 @@
       render: () => `
         <div class="sim-choice-grid sim-choice-grid--2">
           <button type="button" class="sim-choice-btn" data-pan="longi">Longi Hi-MO 10 Explorer</button>
-          <button type="button" class="sim-choice-btn" data-pan="dualsun">Dualsun Flash 500</button>
+          <button type="button" class="sim-choice-btn" data-pan="aiko">Aiko Neostar 2S+</button>
         </div>
       `,
       onMount: initPanneauxStep
