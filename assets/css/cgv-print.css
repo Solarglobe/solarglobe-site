@@ -108,17 +108,28 @@
     print-color-adjust: exact;
   }
 
-  .sg-cgv-print-docmeta .sg-cgv-print-lead {
+  .sg-cgv-print-docmeta .sg-cgv-print-title {
     font-family: "Montserrat", system-ui, sans-serif;
-    font-size: 9.5pt;
-    color: rgba(209, 213, 219, 0.92) !important;
-    margin: 0;
-    line-height: 1.45;
+    font-size: 18pt;
+    font-weight: 600;
+    color: #fff !important;
+    margin: 0 0 3mm;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
   }
 
-  .sg-cgv-print-docmeta .sg-cgv-print-lead strong {
-    font-weight: 600;
+  .sg-cgv-print-docmeta .sg-cgv-print-title-accent {
     color: #c39847 !important;
+    font-weight: 600;
+  }
+
+  .sg-cgv-print-docmeta .sg-cgv-print-meta {
+    font-family: "Montserrat", system-ui, sans-serif;
+    font-size: 9pt;
+    color: rgba(209, 213, 219, 0.75) !important;
+    margin: 0;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
   }
 
   .sg-cgv-article {
