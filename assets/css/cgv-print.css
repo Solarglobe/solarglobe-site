@@ -98,9 +98,12 @@
   }
 
   .sg-cgv-print-docmeta {
-    display: block !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
     margin: 0 0 8mm;
     padding: 10mm 0 5mm;
+    text-align: center;
     border-bottom: 1px solid rgba(195, 152, 71, 0.35);
     break-after: avoid;
     page-break-after: avoid;
@@ -109,6 +112,9 @@
   }
 
   .sg-cgv-print-docmeta .sg-cgv-print-title {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
     font-family: "Montserrat", system-ui, sans-serif;
     font-size: 18pt;
     font-weight: 600;
@@ -116,6 +122,8 @@
     margin: 0 0 3mm;
     line-height: 1.2;
     letter-spacing: -0.02em;
+    text-align: center;
+    white-space: nowrap;
   }
 
   .sg-cgv-print-docmeta .sg-cgv-print-title-accent {
@@ -124,6 +132,8 @@
   }
 
   .sg-cgv-print-docmeta .sg-cgv-print-meta {
+    width: 100%;
+    text-align: center;
     font-family: "Montserrat", system-ui, sans-serif;
     font-size: 9pt;
     color: rgba(209, 213, 219, 0.75) !important;
