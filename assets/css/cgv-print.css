@@ -1,0 +1,242 @@
+/**
+ * CGV Solarglobe — styles impression / export PDF uniquement.
+ * Réservé à cgv/index.html (import dédié).
+ */
+
+/* Bloc titre / méta : uniquement à l’impression */
+.sg-cgv-print-docmeta {
+  display: none !important;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 24mm 14mm 20mm 14mm;
+    @top-left {
+      content: "Conditions Générales de Vente – Solarglobe";
+      font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+      font-size: 8pt;
+      font-weight: 500;
+      color: #444;
+      vertical-align: bottom;
+      padding-bottom: 1mm;
+    }
+    @top-right {
+      content: counter(page);
+      font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: #333;
+      vertical-align: bottom;
+      padding-bottom: 1mm;
+    }
+  }
+
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  html,
+  body.sg-cgv-page {
+    height: auto !important;
+  }
+
+  body.sg-cgv-page {
+    background: #fff !important;
+    color: #1a1a1a !important;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+  }
+
+  /* Masquer tout sauf le contenu juridique */
+  body.sg-cgv-page #header-placeholder,
+  body.sg-cgv-page #footer-placeholder,
+  body.sg-cgv-page > noscript,
+  body.sg-cgv-page .sg-hero-premium,
+  body.sg-cgv-page #sommaire,
+  body.sg-cgv-page > .sg-divider,
+  body.sg-cgv-page main .sg-divider {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  body.sg-cgv-page > script {
+    display: none !important;
+  }
+
+  main.sg-cgv-wrap {
+    display: block !important;
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 0 6mm !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .sg-cgv-print-docmeta {
+    display: block !important;
+    margin: 0 0 8mm;
+    padding: 0 0 5mm;
+    border-bottom: 1px solid #ccc;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .sg-cgv-print-docmeta .sg-cgv-print-lead {
+    font-family: "Montserrat", system-ui, sans-serif;
+    font-size: 9.5pt;
+    color: #444;
+    margin: 0;
+    line-height: 1.45;
+  }
+
+  .sg-cgv-print-docmeta .sg-cgv-print-lead strong {
+    font-weight: 600;
+    color: #111;
+  }
+
+  .sg-cgv-article {
+    display: block;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+    margin: 0 0 7mm !important;
+    padding: 4.5mm 5.5mm !important;
+    background: #f9f9f9 !important;
+    border: 1px solid #d0d0d0 !important;
+    border-radius: 1px !important;
+    orphans: 3;
+    widows: 3;
+  }
+
+  .sg-cgv-article .sg-cgk {
+    color: #6b5a2a !important;
+    font-size: 8pt !important;
+    letter-spacing: 0.1em;
+    margin-bottom: 5px !important;
+  }
+
+  .sg-cgv-article h2.sg-cgv-h {
+    color: #111 !important;
+    font-size: 11.5pt !important;
+    margin: 0 0 7px !important;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .sg-cgv-article .sg-cgv-sub {
+    color: #5c4a1e !important;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .sg-cgv-article p,
+  .sg-cgv-article li {
+    color: #222 !important;
+    font-size: 10pt !important;
+    line-height: 1.58 !important;
+  }
+
+  .sg-cgv-article p.text-sm {
+    font-size: 9pt !important;
+  }
+
+  /* Listes longues : coupure autorisée à l’intérieur de l’article */
+  .sg-cgv-article ul {
+    break-inside: auto;
+    page-break-inside: auto;
+    margin: 4px 0 7px !important;
+  }
+
+  .sg-cgv-article li {
+    margin-bottom: 2px;
+  }
+
+  .sg-cgv-article a {
+    color: #1a1a1a !important;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* Liens externes : URL lisible sur PDF */
+  .sg-cgv-article a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #555;
+    word-break: break-all;
+  }
+
+  .sg-cgv-article a[href^="/"]::after,
+  .sg-cgv-article a[href^="mailto:"]::after,
+  .sg-cgv-article a[href^="tel:"]::after {
+    content: none !important;
+  }
+
+  .sg-cgv-annexe-fields {
+    background: #fff !important;
+    border: 1px solid #c8c8c8 !important;
+    border-radius: 1px !important;
+    padding: 4mm !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .sg-cgv-article ul.sg-cgv-contact-list li {
+    margin-bottom: 5px;
+  }
+
+  main.sg-cgv-wrap > p.text-center {
+    display: block !important;
+    margin-top: 8mm !important;
+    padding-top: 4mm !important;
+    border-top: 1px solid #ccc;
+    font-size: 8.5pt !important;
+    color: #555 !important;
+    text-align: center !important;
+  }
+
+  main.sg-cgv-wrap > p.text-center .text-gold {
+    color: #5c4a1e !important;
+  }
+
+  .text-white,
+  .text-neutral-400 {
+    color: inherit !important;
+  }
+
+  strong.text-gold,
+  .text-gold {
+    color: #5c4a1e !important;
+  }
+
+  .sg-cgv-article .mb-4 {
+    margin-bottom: 8px !important;
+  }
+
+  .sg-cgv-article .mt-4 {
+    margin-top: 8px !important;
+  }
+
+  .sg-cgv-article .my-12 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+  }
+
+  *::before,
+  *::after {
+    animation: none !important;
+  }
+}
