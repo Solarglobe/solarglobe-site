@@ -74,6 +74,16 @@
     display: none !important;
   }
 
+  /* Pied « CGV à jour » : affiché sur le site uniquement */
+  .sg-cgv-site-only {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
   main.sg-cgv-wrap {
     display: block !important;
     max-width: none !important;
@@ -90,7 +100,7 @@
   .sg-cgv-print-docmeta {
     display: block !important;
     margin: 0 0 8mm;
-    padding: 0 0 5mm;
+    padding: 10mm 0 5mm;
     border-bottom: 1px solid rgba(195, 152, 71, 0.35);
     break-after: avoid;
     page-break-after: avoid;
@@ -206,20 +216,6 @@
   .sg-cgv-article ul.sg-cgv-contact-list li {
     margin-bottom: 5px;
     color: rgba(209, 213, 219, 0.95) !important;
-  }
-
-  main.sg-cgv-wrap > p.text-center {
-    display: block !important;
-    margin-top: 8mm !important;
-    padding-top: 4mm !important;
-    border-top: 1px solid rgba(195, 152, 71, 0.25);
-    font-size: 8.5pt !important;
-    color: rgba(163, 163, 163, 0.95) !important;
-    text-align: center !important;
-  }
-
-  main.sg-cgv-wrap > p.text-center .text-gold {
-    color: #c39847 !important;
   }
 
   .sg-cgv-article .text-white {
