@@ -1,6 +1,7 @@
 /**
  * CGV Solarglobe — styles impression / export PDF uniquement.
- * Réservé à cgv/index.html (import dédié).
+ * Identité visuelle alignée sur la page écran (fond sombre, accents or).
+ * Utiliser « Graphiques d’arrière-plan » dans la boîte d’impression si besoin.
  */
 
 /* Bloc titre / méta : uniquement à l’impression */
@@ -12,12 +13,13 @@
   @page {
     size: A4;
     margin: 24mm 14mm 20mm 14mm;
+    /* Zones de marge : papier blanc → texte foncé lisible */
     @top-left {
       content: "Conditions Générales de Vente – Solarglobe";
       font-family: "Montserrat", system-ui, -apple-system, sans-serif;
       font-size: 8pt;
       font-weight: 500;
-      color: #444;
+      color: #3a3a3a;
       vertical-align: bottom;
       padding-bottom: 1mm;
     }
@@ -26,7 +28,7 @@
       font-family: "Montserrat", system-ui, -apple-system, sans-serif;
       font-size: 8.5pt;
       font-weight: 600;
-      color: #333;
+      color: #2a2a2a;
       vertical-align: bottom;
       padding-bottom: 1mm;
     }
@@ -43,13 +45,15 @@
   }
 
   body.sg-cgv-page {
-    background: #fff !important;
-    color: #1a1a1a !important;
+    background: #0b0b0b !important;
+    color: #fff !important;
     font-size: 10.5pt;
     line-height: 1.55;
     margin: 0 !important;
     padding: 0 !important;
     min-height: 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   /* Masquer tout sauf le contenu juridique */
@@ -79,28 +83,32 @@
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .sg-cgv-print-docmeta {
     display: block !important;
     margin: 0 0 8mm;
     padding: 0 0 5mm;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(195, 152, 71, 0.35);
     break-after: avoid;
     page-break-after: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .sg-cgv-print-docmeta .sg-cgv-print-lead {
     font-family: "Montserrat", system-ui, sans-serif;
     font-size: 9.5pt;
-    color: #444;
+    color: rgba(209, 213, 219, 0.92) !important;
     margin: 0;
     line-height: 1.45;
   }
 
   .sg-cgv-print-docmeta .sg-cgv-print-lead strong {
     font-weight: 600;
-    color: #111;
+    color: #c39847 !important;
   }
 
   .sg-cgv-article {
@@ -109,22 +117,24 @@
     page-break-inside: avoid;
     margin: 0 0 7mm !important;
     padding: 4.5mm 5.5mm !important;
-    background: #f9f9f9 !important;
-    border: 1px solid #d0d0d0 !important;
-    border-radius: 1px !important;
+    background: rgba(18, 18, 20, 0.92) !important;
+    border: 1px solid rgba(195, 152, 71, 0.28) !important;
+    border-radius: 8px !important;
     orphans: 3;
     widows: 3;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .sg-cgv-article .sg-cgk {
-    color: #6b5a2a !important;
+    color: #c9a54c !important;
     font-size: 8pt !important;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     margin-bottom: 5px !important;
   }
 
   .sg-cgv-article h2.sg-cgv-h {
-    color: #111 !important;
+    color: #fff !important;
     font-size: 11.5pt !important;
     margin: 0 0 7px !important;
     break-after: avoid;
@@ -132,23 +142,23 @@
   }
 
   .sg-cgv-article .sg-cgv-sub {
-    color: #5c4a1e !important;
+    color: #c39847 !important;
     break-after: avoid;
     page-break-after: avoid;
   }
 
   .sg-cgv-article p,
   .sg-cgv-article li {
-    color: #222 !important;
+    color: rgba(209, 213, 219, 0.95) !important;
     font-size: 10pt !important;
     line-height: 1.58 !important;
   }
 
   .sg-cgv-article p.text-sm {
     font-size: 9pt !important;
+    color: rgba(209, 213, 219, 0.88) !important;
   }
 
-  /* Listes longues : coupure autorisée à l’intérieur de l’article */
   .sg-cgv-article ul {
     break-inside: auto;
     page-break-inside: auto;
@@ -160,16 +170,15 @@
   }
 
   .sg-cgv-article a {
-    color: #1a1a1a !important;
+    color: #c39847 !important;
     text-decoration: underline;
-    text-underline-offset: 2px;
+    text-underline-offset: 3px;
   }
 
-  /* Liens externes : URL lisible sur PDF */
   .sg-cgv-article a[href^="http"]::after {
     content: " (" attr(href) ")";
     font-size: 8pt;
-    color: #555;
+    color: rgba(180, 180, 180, 0.95) !important;
     word-break: break-all;
   }
 
@@ -180,40 +189,50 @@
   }
 
   .sg-cgv-annexe-fields {
-    background: #fff !important;
-    border: 1px solid #c8c8c8 !important;
-    border-radius: 1px !important;
+    background: rgba(12, 12, 14, 0.85) !important;
+    border: 1px solid rgba(195, 152, 71, 0.25) !important;
+    border-radius: 8px !important;
     padding: 4mm !important;
     break-inside: avoid;
     page-break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .sg-cgv-article ul.sg-cgv-contact-list a {
+    color: #c39847 !important;
   }
 
   .sg-cgv-article ul.sg-cgv-contact-list li {
     margin-bottom: 5px;
+    color: rgba(209, 213, 219, 0.95) !important;
   }
 
   main.sg-cgv-wrap > p.text-center {
     display: block !important;
     margin-top: 8mm !important;
     padding-top: 4mm !important;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid rgba(195, 152, 71, 0.25);
     font-size: 8.5pt !important;
-    color: #555 !important;
+    color: rgba(163, 163, 163, 0.95) !important;
     text-align: center !important;
   }
 
   main.sg-cgv-wrap > p.text-center .text-gold {
-    color: #5c4a1e !important;
+    color: #c39847 !important;
   }
 
-  .text-white,
-  .text-neutral-400 {
-    color: inherit !important;
+  .sg-cgv-article .text-white {
+    color: #fff !important;
+  }
+
+  .sg-cgv-article .text-neutral-400 {
+    color: rgba(163, 163, 163, 0.95) !important;
   }
 
   strong.text-gold,
   .text-gold {
-    color: #5c4a1e !important;
+    color: #c39847 !important;
   }
 
   .sg-cgv-article .mb-4 {
@@ -227,6 +246,12 @@
   .sg-cgv-article .my-12 {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+  }
+
+  .sg-cgv-article *,
+  main.sg-cgv-wrap * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   * {
