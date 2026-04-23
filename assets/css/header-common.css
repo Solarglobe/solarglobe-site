@@ -42,13 +42,13 @@ body {
 
 #solarglobe-header .header-logo img,
 #solarglobe-header .header-logo-link img {
-  height: 104px;
+  height: 112px;
   width: auto;
   max-height: none;
   object-fit: contain;
-  object-position: left center;
-  transform: scale(1.32);
-  transform-origin: left center;
+  object-position: left top;
+  transform: scale(1.38);
+  transform-origin: left top;
   transition: opacity 0.3s ease;
 }
 
@@ -383,18 +383,18 @@ body.menu-open {
 
 /* Logo hors bandeau global (présentations, gabarits) — même traitement que le header */
 img.sg-site-logo-aux {
-  height: 104px;
+  height: 112px;
   width: auto;
   object-fit: contain;
-  object-position: left center;
-  transform: scale(1.28);
-  transform-origin: left center;
+  object-position: left top;
+  transform: scale(1.32);
+  transform-origin: left top;
   display: block;
 }
 
 img.sg-site-logo-aux--hero {
-  height: 152px;
-  transform: scale(1.18);
+  height: 168px;
+  transform: scale(1.2);
 }
 
 img.sg-site-logo-aux--center {
@@ -405,12 +405,12 @@ img.sg-site-logo-aux--center {
 
 @media (max-width: 1024px) {
   img.sg-site-logo-aux {
-    height: 90px;
-    transform: scale(1.16);
+    height: 96px;
+    transform: scale(1.2);
   }
   img.sg-site-logo-aux--hero {
-    height: 120px;
-    transform: scale(1.12);
+    height: 132px;
+    transform: scale(1.14);
   }
 }
 
@@ -441,7 +441,7 @@ main {
 
   #solarglobe-header .header-logo img,
   #solarglobe-header .header-logo-link img {
-    height: 90px;
-    transform: scale(1.18);
+    height: 96px;
+    transform: scale(1.24);
   }
 }
