@@ -18,14 +18,30 @@
   align-items: start;
 }
 
+#solarglobe-footer .footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 #solarglobe-footer .footer-brand img {
-  height: 76px;
+  height: 118px;
   width: auto;
-  max-height: 76px;
+  max-width: min(100%, 420px);
+  max-height: none;
   object-fit: contain;
+  object-position: left center;
   display: block;
-  margin-bottom: 12px;
+  margin: 0 0 8px 0;
   filter: brightness(1.05);
+  transform: scale(1.24);
+  transform-origin: left center;
+}
+
+@media (max-width: 640px) {
+  #solarglobe-footer .footer-brand img {
+    transform-origin: center center;
+  }
 }
 
 #solarglobe-footer .footer-brand p,

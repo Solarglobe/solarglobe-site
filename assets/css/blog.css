@@ -25,14 +25,14 @@ body.sg-blog .sg-divider {
 .sg-hero-blog {
   position: relative;
   min-height: 42vh;
-  margin-top: -96px;
-  padding-top: 112px;
+  margin-top: -120px;
+  padding-top: 136px;
   padding-bottom: 40px;
   overflow: hidden;
 }
 @media (min-width: 768px) {
   .sg-hero-blog {
-    padding-top: 124px;
+    padding-top: 148px;
     padding-bottom: 48px;
   }
 }

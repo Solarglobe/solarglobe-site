@@ -331,13 +331,13 @@
   Largeur noble, halo doré, rendu luxueux
   ====================================== */
   /* CORRECTION CIBLÉE : supprimer le vide header→hero
-  Cause : body padding-top 96px + #header-placeholder min-height 96px = 192px
+  Cause : body padding-top 120px + #header-placeholder min-height 120px = 240px
   Solution : margin-top négatif pour remonter le hero sous le header */
   .sg-hero-premium.sg-hero-solaire{
   position:relative;
   min-height:78vh;
-  margin-top:-96px;
-  padding-top:48px;
+  margin-top:-120px;
+  padding-top:72px;
   padding-bottom:100px;
   overflow:visible;
   }
@@ -461,8 +461,8 @@
   @media (max-width:1200px){
   .sg-hero-premium.sg-hero-solaire{
   min-height:74vh;
-  margin-top:-96px;
-  padding-top:48px;
+  margin-top:-120px;
+  padding-top:72px;
   padding-bottom:90px;
   }
   .sg-hero-premium.sg-hero-solaire .sg-hero-content{
@@ -486,8 +486,8 @@
   @media (max-width:768px){
   .sg-hero-premium.sg-hero-solaire{
   min-height:68vh;
-  margin-top:-96px;
-  padding-top:44px;
+  margin-top:-120px;
+  padding-top:68px;
   padding-bottom:80px;
   }
   .sg-hero-premium.sg-hero-solaire .sg-hero-content{
@@ -528,8 +528,8 @@
   @media (max-width:480px){
   .sg-hero-premium.sg-hero-solaire{
   min-height:auto;
-  margin-top:-96px;
-  padding-top:48px;
+  margin-top:-120px;
+  padding-top:72px;
   padding-bottom:64px;
   }
   .sg-hero-premium.sg-hero-solaire .sg-hero-content{
@@ -834,7 +834,7 @@
 <script src="/assets/js/header.js"></script>
 
 <!-- HERO -->
-<section class="le-solaire-index-hero sg-hero-solaire relative min-h-[85vh] flex items-center overflow-hidden -mt-[96px] pt-20 md:pt-24">
+<section class="le-solaire-index-hero sg-hero-solaire relative min-h-[85vh] flex items-center overflow-hidden -mt-[120px] pt-24 md:pt-32">
   <div class="absolute inset-0 z-0">
     <img
       src="/assets/images/solaire/hero-solaire.webp"
