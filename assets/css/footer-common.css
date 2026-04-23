@@ -18,7 +18,7 @@
   align-items: start;
 }
 
-/* Bloc marque : ancrage haut-gauche de la cellule (pas d’étirement 1.2fr + pas de padding parasite) */
+/* Bloc marque : ancrage gauche strict */
 #solarglobe-footer .footer-brand {
   display: flex;
   flex-direction: column;
@@ -26,9 +26,9 @@
   align-self: start;
   justify-self: start;
   margin: 0;
-  margin-left: 0;
+  margin-left: 0 !important;
   padding: 0;
-  padding-left: 0;
+  padding-left: 0 !important;
   width: fit-content;
   max-width: 100%;
   min-width: 0;
@@ -36,21 +36,13 @@
   box-sizing: border-box;
 }
 
-/* Alignement optique : haut du glyphe ≈ ligne des h4 (NAVIGATION, etc.) — transparence haute du PNG */
+/* Image = titre visuel : alignement optique vs h4 texte (NAVIGATION, etc.) — pas de transform / object-fit */
 #solarglobe-footer .footer-logo {
-  height: 136px;
-  width: auto;
-  max-width: 100%;
-  max-height: none;
-  object-fit: contain;
-  object-position: left top;
   display: block;
-  margin: -20px 0 16px 0;
-  padding: 0;
-  filter: brightness(1.05);
-  transform: scale(1.28);
-  transform-origin: left top;
-  flex-shrink: 0;
+  height: 120px;
+  width: auto;
+  margin-top: -28px;
+  margin-bottom: 16px;
 }
 
 #solarglobe-footer .footer-tagline {
