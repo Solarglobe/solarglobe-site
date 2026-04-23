@@ -13,80 +13,70 @@
   margin: 0 auto;
   padding: 48px 32px 32px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr;
   gap: 40px;
   align-items: start;
 }
 
+/* Bloc marque : aligné en haut avec les h4 des autres colonnes, respiration à droite */
 #solarglobe-footer .footer-brand {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   align-self: start;
-  gap: 12px;
-  margin-top: 0;
+  margin: 0;
   width: 100%;
-  max-width: 460px;
+  min-width: 0;
   text-align: left;
+  padding-right: 40px;
+  padding-left: 4px;
+  box-sizing: border-box;
 }
 
-#solarglobe-footer .footer-brand img {
+#solarglobe-footer .footer-logo {
   height: 136px;
   width: auto;
-  max-width: min(100%, 460px);
+  max-width: 100%;
   max-height: none;
   object-fit: contain;
   object-position: left top;
   display: block;
-  margin: 0;
+  margin: 0 0 16px 0;
   filter: brightness(1.05);
   transform: scale(1.28);
   transform-origin: left top;
   flex-shrink: 0;
 }
 
-/* Colonnes voisines : un h4 + gap avant les liens ; ici le logo remonte pour s’aligner sur la ligne des titres dorés */
-@media (min-width: 1025px) {
-  #solarglobe-footer .footer-brand img {
-    margin-top: calc(-1 * (0.85rem * 1.2 + 4px + 8px + 1px + 12px));
-  }
-}
-
-@media (max-width: 640px) {
-  #solarglobe-footer .footer-brand img {
-    margin-top: 0;
-    transform-origin: left top;
-  }
-}
-
-#solarglobe-footer .footer-brand p,
-#solarglobe-footer .footer-brand-tagline {
+#solarglobe-footer .footer-tagline {
   font-size: 0.9rem;
   line-height: 1.5;
   color: #a3a3a3;
-  max-width: min(100%, 460px);
-  margin: 0;
+  margin: 0 0 16px 0;
+  opacity: 0.8;
   width: 100%;
+  max-width: 100%;
 }
 
-#solarglobe-footer .footer-brand-services {
-  margin: 0;
+#solarglobe-footer .footer-features {
+  margin: 8px 0 0 0;
   padding: 0 0 0 12px;
   list-style: none;
-  max-width: min(100%, 460px);
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   font-size: 0.8rem;
   line-height: 1.6;
   color: #737373;
+  opacity: 0.7;
 }
 
-#solarglobe-footer .footer-brand-services li {
+#solarglobe-footer .footer-features li {
   position: relative;
   margin-bottom: 1px;
 }
 
-#solarglobe-footer .footer-brand-services li::before {
+#solarglobe-footer .footer-features li::before {
   content: "";
   position: absolute;
   left: -10px;
@@ -230,23 +220,20 @@
   #solarglobe-footer .footer-brand {
     align-items: flex-start;
     text-align: left;
+    padding-right: 0;
+    padding-left: 0;
   }
 
-  #solarglobe-footer .footer-brand img {
+  #solarglobe-footer .footer-logo {
     margin-left: 0;
     margin-right: 0;
   }
 
-  #solarglobe-footer .footer-brand p,
-  #solarglobe-footer .footer-brand-tagline {
-    max-width: min(100%, 460px);
-    margin: 0;
+  #solarglobe-footer .footer-tagline {
     text-align: left;
   }
 
-  #solarglobe-footer .footer-brand-services {
-    margin-left: 0;
-    margin-right: 0;
+  #solarglobe-footer .footer-features {
     text-align: left;
   }
 
