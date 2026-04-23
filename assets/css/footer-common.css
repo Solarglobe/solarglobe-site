@@ -18,18 +18,19 @@
   align-items: start;
 }
 
-/* Bloc marque : aligné en haut avec les h4 des autres colonnes, respiration à droite */
+/* Bloc marque : ancrage haut-gauche de la cellule (pas d’étirement 1.2fr + pas de padding parasite) */
 #solarglobe-footer .footer-brand {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   align-self: start;
+  justify-self: start;
   margin: 0;
-  width: 100%;
+  padding: 0;
+  width: fit-content;
+  max-width: 100%;
   min-width: 0;
   text-align: left;
-  padding-right: 40px;
-  padding-left: 4px;
   box-sizing: border-box;
 }
 
@@ -42,6 +43,7 @@
   object-position: left top;
   display: block;
   margin: 0 0 16px 0;
+  padding: 0;
   filter: brightness(1.05);
   transform: scale(1.28);
   transform-origin: left top;
@@ -52,14 +54,17 @@
   font-size: 0.9rem;
   line-height: 1.5;
   color: #a3a3a3;
-  margin: 0 0 16px 0;
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
   opacity: 0.8;
   width: 100%;
   max-width: 100%;
 }
 
 #solarglobe-footer .footer-features {
-  margin: 8px 0 0 0;
+  margin: 0;
+  margin-top: 8px;
   padding: 0 0 0 12px;
   list-style: none;
   width: 100%;
