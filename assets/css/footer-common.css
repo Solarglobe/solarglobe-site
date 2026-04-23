@@ -41,16 +41,17 @@
   display: block;
   height: 176px;
   width: auto;
-  margin-top: -28px;
-  margin-bottom: 16px;
+  margin-top: -44px;
+  margin-bottom: 4px;
 }
 
 #solarglobe-footer .footer-tagline {
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.35;
   color: #a3a3a3;
   margin: 0;
-  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 10px;
   padding: 0;
   opacity: 0.8;
   width: 100%;
@@ -59,7 +60,7 @@
 
 #solarglobe-footer .footer-features {
   margin: 0;
-  margin-top: 8px;
+  margin-top: 4px;
   padding: 0 0 0 12px;
   list-style: none;
   width: 100%;
