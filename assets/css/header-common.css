@@ -36,7 +36,7 @@ body {
 
 #solarglobe-header .header-logo img,
 #solarglobe-header .header-logo-link img {
-  height: 42px;
+  height: 56px;
   width: auto;
   transition: opacity 0.3s ease;
 }
