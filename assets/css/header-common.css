@@ -8,7 +8,7 @@ body {
 #solarglobe-header {
   position: relative;
   width: 100%;
-  height: 72px;
+  height: 96px;
   z-index: 1000;
   background: #000;
   border-bottom: 1px solid rgba(200,167,90,0.2);
@@ -16,7 +16,7 @@ body {
 
 #solarglobe-header .header-container {
   max-width: 1400px;
-  height: 72px;
+  height: 96px;
   margin: 0 auto;
   padding: 0 32px;
   display: grid;
@@ -36,8 +36,10 @@ body {
 
 #solarglobe-header .header-logo img,
 #solarglobe-header .header-logo-link img {
-  height: 56px;
+  height: 78px;
   width: auto;
+  max-height: 78px;
+  object-fit: contain;
   transition: opacity 0.3s ease;
 }
 
@@ -241,7 +243,7 @@ body {
 #solarglobe-header .mobile-overlay {
   display: none;
   position: fixed;
-  inset: 72px 0 0 0;
+  inset: 96px 0 0 0;
   background: rgba(0,0,0,0.55);
   z-index: 1001;
 }
@@ -249,7 +251,7 @@ body {
 #solarglobe-header .mobile-menu {
   display: none;
   position: fixed;
-  top: 72px;
+  top: 96px;
   left: 0;
   right: 0;
   background: rgba(0,0,0,0.96);
@@ -354,7 +356,7 @@ body {
 }
 
 #header-placeholder {
-  min-height: 72px;
+  min-height: 96px;
 }
 
 .text-gold {

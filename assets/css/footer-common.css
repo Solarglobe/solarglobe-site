@@ -19,8 +19,10 @@
 }
 
 #solarglobe-footer .footer-brand img {
-  height: 52px;
+  height: 76px;
   width: auto;
+  max-height: 76px;
+  object-fit: contain;
   display: block;
   margin-bottom: 12px;
   filter: brightness(1.05);

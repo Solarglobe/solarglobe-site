@@ -9,8 +9,8 @@
 .sg-hero-premium.sg-hero-solaire {
   position: relative;
   min-height: 78vh;
-  margin-top: -72px;
-  padding-top: 96px;
+  margin-top: -96px;
+  padding-top: 120px;
   padding-bottom: 100px;
   overflow: visible;
 }
@@ -724,7 +724,7 @@
     padding: 56px 20px;
   }
   .sg-section-editorial {
-    padding-top: 72px;
+    padding-top: 96px;
     padding-bottom: 32px;
   }
 }
