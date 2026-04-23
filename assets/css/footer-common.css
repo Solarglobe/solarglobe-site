@@ -26,7 +26,9 @@
   align-self: start;
   justify-self: start;
   margin: 0;
+  margin-left: 0;
   padding: 0;
+  padding-left: 0;
   width: fit-content;
   max-width: 100%;
   min-width: 0;
@@ -34,6 +36,7 @@
   box-sizing: border-box;
 }
 
+/* Alignement optique : haut du glyphe ≈ ligne des h4 (NAVIGATION, etc.) — transparence haute du PNG */
 #solarglobe-footer .footer-logo {
   height: 136px;
   width: auto;
@@ -42,7 +45,7 @@
   object-fit: contain;
   object-position: left top;
   display: block;
-  margin: 0 0 16px 0;
+  margin: -20px 0 16px 0;
   padding: 0;
   filter: brightness(1.05);
   transform: scale(1.28);
@@ -125,8 +128,7 @@
   gap: 12px;
 }
 
-#solarglobe-footer h4,
-#solarglobe-footer .footer-title {
+#solarglobe-footer h4 {
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -135,12 +137,6 @@
   margin: 0 0 4px 0;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(195, 152, 71, 0.3);
-}
-
-/* Même hiérarchie que les autres h4 ; le titre précède le logo dans le flux flex (gap du parent) */
-#solarglobe-footer .footer-brand > .footer-title {
-  width: 100%;
-  max-width: 100%;
 }
 
 #solarglobe-footer .footer-links a,
@@ -234,10 +230,6 @@
     text-align: left;
     padding-right: 0;
     padding-left: 0;
-  }
-
-  #solarglobe-footer .footer-brand > .footer-title {
-    text-align: left;
   }
 
   #solarglobe-footer .footer-logo {
