@@ -218,9 +218,9 @@
 <!-- GRID ARTICLES -->
 <section class="sg-section-editorial sg-section-dark">
   <div class="sg-container">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div id="sg-blog-articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-      <article class="sg-blog-card sg-blog-card-lead ps-reveal ps-reveal-delay-1" data-tags="prix budget rentabilite autoconsommation aides rendement">
+      <article class="sg-blog-card ps-reveal ps-reveal-delay-1" data-tags="prix budget rentabilite autoconsommation aides rendement" data-blog-slug="prix-panneaux-solaires">
         <a href="/blog/prix-panneaux-solaires/" class="block">
           <div class="sg-blog-card-img">
             <img src="/assets/images/blog/blog-prix-panneaux-solaires.webp" width="800" height="450" loading="lazy" alt="Maison équipée de panneaux solaires full black sur toiture" />
@@ -385,9 +385,22 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const chips = document.querySelectorAll('.sg-blog-chip[data-filter]');
-  const posts = document.querySelectorAll('.sg-blog-card[data-tags]');
+  const grid = document.getElementById('sg-blog-articles-grid');
+  const posts = grid
+    ? grid.querySelectorAll('article.sg-blog-card[data-tags]')
+    : document.querySelectorAll('article.sg-blog-card[data-tags]');
   const search = document.getElementById('search');
   const __blogFilterDebug = /[?&]debug=1(?:&|$)/.test(location.search);
+
+  if (__blogFilterDebug) {
+    const allCards = document.querySelectorAll('.sg-blog-card');
+    console.log('[blog] querySelectorAll(.sg-blog-card) count=', allCards.length, allCards);
+    console.log('[blog] scoped article.sg-blog-card[data-tags] count=', posts.length, posts);
+  }
+
+  document.querySelectorAll('#sg-blog-articles-grid article.sg-blog-card.ps-reveal').forEach(function (el) {
+    el.classList.add('ps-visible');
+  });
 
   function applyFilters() {
     const active = document.querySelector('.sg-blog-chip.active')?.dataset.filter || 'all';
