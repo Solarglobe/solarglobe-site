@@ -22,10 +22,11 @@
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/sg-animations.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}
 
-  /* Scroll reveal – lent, futuriste, premium (comme produits/index.html) */
-  .ps-reveal {
+  /* Scroll reveal (sg-animations.js → .sg-visible) */
+  .sg-reveal {
     opacity: 0;
     transform: translateY(56px) scale(0.98);
     filter: blur(4px);
@@ -35,19 +36,19 @@
                 filter 2s ease-out,
                 box-shadow 2s ease;
   }
-  .ps-reveal.ps-visible {
+  .sg-reveal.sg-visible {
     opacity: 1;
     transform: translateY(0) scale(1);
     filter: blur(0);
   }
-  .ps-reveal-title.ps-visible {
+  .sg-reveal.sg-reveal-title-le.sg-visible {
     text-shadow: 0 0 40px rgba(195, 152, 71, 0.15);
   }
-  .ps-reveal-card.ps-visible {
+  .sg-reveal.sg-reveal-card-le.sg-visible {
     box-shadow: 0 0 0 1px rgba(195, 152, 71, 0.08);
   }
   @media (prefers-reduced-motion: reduce) {
-    .ps-reveal { transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
+    .sg-reveal { transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
   }
 
   /* ======================================
@@ -851,18 +852,18 @@
         <li aria-current="page">Le solaire</li>
       </ol>
     </nav>
-    <span class="text-gold uppercase tracking-[0.25em] text-sm ps-reveal ps-reveal-title">Énergie solaire</span>
-    <h1 class="mt-6 text-5xl md:text-6xl font-semibold leading-tight max-w-4xl text-white ps-reveal ps-reveal-title">
+    <span class="text-gold uppercase tracking-[0.25em] text-sm sg-reveal sg-reveal-title-le">Énergie solaire</span>
+    <h1 class="mt-6 text-5xl md:text-6xl font-semibold leading-tight max-w-4xl text-white sg-reveal sg-reveal-title-le">
       Produisez votre propre électricité grâce au solaire
     </h1>
-    <p class="mt-6 text-lg text-white/80 max-w-2xl ps-reveal">
+    <p class="mt-6 text-lg text-white/80 max-w-2xl sg-reveal">
       Une installation photovoltaïque bien dimensionnée permet de réduire fortement votre facture d'électricité et de sécuriser votre énergie pendant des décennies.
     </p>
-    <div class="mt-10 flex gap-6 flex-wrap ps-reveal">
+    <div class="mt-10 flex gap-6 flex-wrap sg-reveal">
       <a href="/etude-gratuite/" class="sg-btn sg-btn-primary">Obtenir mon étude solaire gratuite</a>
       <a href="/produits/" class="sg-btn sg-btn-secondary">Voir nos produits</a>
     </div>
-    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 max-w-4xl ps-reveal">
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 max-w-4xl sg-reveal">
       <div>
         <div class="text-3xl font-semibold text-gold">1200€</div>
         <p class="text-white/70 text-sm mt-2">
@@ -890,17 +891,17 @@
   <div class="sg-divider" id="sgsep00" aria-hidden="true"></div>
   <div class="sg-container">
     <div class="max-w-3xl mb-16 sg-text-readable">
-      <span class="sg-section-kicker ps-reveal">Rentabilité</span>
-      <h2 class="sg-section-title ps-reveal">Les panneaux solaires sont-ils rentables ?</h2>
-      <p class="sg-section-intro ps-reveal">Découvrez combien une installation photovoltaïque peut vous faire économiser sur votre facture d'électricité.</p>
+      <span class="sg-section-kicker sg-reveal">Rentabilité</span>
+      <h2 class="sg-section-title sg-reveal">Les panneaux solaires sont-ils rentables ?</h2>
+      <p class="sg-section-intro sg-reveal">Découvrez combien une installation photovoltaïque peut vous faire économiser sur votre facture d'électricité.</p>
     </div>
-    <div class="sg-text-readable ps-reveal">
+    <div class="sg-text-readable sg-reveal">
     <p>Oui, à condition d'un bon dimensionnement et de la prise en compte des aides. Le coût d'une installation varie entre 8 000 et 20 000 € selon la puissance (3 à 6 kWc) et les équipements (batterie, micro-onduleurs). Les économies réalisables dépendent de votre taux d'autoconsommation : comptez 700 à 1 200 € par an pour une installation de 6 kWc bien dimensionnée.</p>
     <p class="mt-4">La durée de retour sur investissement se situe en moyenne entre 8 et 12 ans avec les aides (prime à l'autoconsommation, TVA réduite). Au-delà, vous profitez d'électricité à faible coût pendant 15 à 20 ans. Découvrez notre guide détaillé sur la <a href="/rentabilite-solaire/" class="text-gold hover:text-gold underline">rentabilité solaire</a>.</p>
     <p class="text-lg text-gray-300 mb-6">Une installation solaire bien dimensionnée permet généralement de générer <span class="text-gold font-semibold">plus de 40 000 € d'économies</span> sur 25 ans, tout en réduisant fortement votre dépendance au réseau électrique.</p>
     </div>
     <div class="grid md:grid-cols-2 gap-16 items-center mt-12">
-      <div class="ps-reveal">
+      <div class="sg-reveal">
         <h3 class="text-xl font-semibold text-gold mb-6">Combien pouvez-vous réellement économiser avec le solaire ?</h3>
         <p class="text-gray-300 mb-4">Une installation photovoltaïque permet de produire une partie de votre électricité et de réduire durablement votre facture.</p>
         <p class="text-gray-300 mb-4">Le graphique ci-contre montre l'évolution estimée de votre facture d'électricité sur 25 ans avec et sans installation solaire.</p>
@@ -915,7 +916,7 @@
         </div>
         <p class="sg-highlight-stat">Sur 25 ans, une installation solaire permet souvent d'économiser plusieurs dizaines de milliers d'euros sur la facture d'électricité.</p>
       </div>
-      <div class="ps-reveal">
+      <div class="sg-reveal">
         <div class="sg-img-premium-wrap sg-img-premium-wrap--graph">
           <img src="/assets/images/solaire/evolution-economies-solaire-25-ans.jpg" alt="Graphique évolution des économies cumulées sur 25 ans - installation photovoltaïque 6 kWc, autoconsommation 70 %">
         </div>
@@ -938,11 +939,11 @@
   <div class="sg-divider" id="sgsep01" aria-hidden="true"></div>
   <div class="sg-container">
     <div class="max-w-3xl mb-16 sg-text-readable">
-      <span class="sg-section-kicker ps-reveal">Durabilité</span>
-      <h2 class="sg-section-title ps-reveal">Quelle est la durée de vie des panneaux solaires</h2>
-      <p class="sg-section-intro ps-reveal">Durée de vie des panneaux, garanties fabricant et choix des composants.</p>
+      <span class="sg-section-kicker sg-reveal">Durabilité</span>
+      <h2 class="sg-section-title sg-reveal">Quelle est la durée de vie des panneaux solaires</h2>
+      <p class="sg-section-intro sg-reveal">Durée de vie des panneaux, garanties fabricant et choix des composants.</p>
     </div>
-    <div class="sg-text-readable ps-reveal">
+    <div class="sg-text-readable sg-reveal">
     <p>Les panneaux photovoltaïques sont conçus pour fonctionner pendant plusieurs décennies. Les technologies actuelles permettent d'atteindre une durée de vie moyenne de <span class="text-gold font-semibold">30 à 40 ans</span>, avec une production qui diminue très lentement au fil du temps.</p>
     <p class="mt-4">La plupart des fabricants garantissent encore <span class="text-gold font-semibold">80 à 85 % de la puissance initiale après 25 ans</span>. Cela signifie que même après deux décennies, les panneaux continuent de produire une grande partie de leur électricité.</p>
     <p class="mt-4">Sur les installations classiques, l'électronique repose souvent sur un onduleur central, qui doit généralement être remplacé après 10 à 15 ans.</p>
@@ -958,11 +959,11 @@
   <div class="sg-divider" id="sgsep02" aria-hidden="true"></div>
   <div class="sg-container">
     <div class="max-w-3xl mb-16 sg-text-readable">
-      <span class="sg-section-kicker ps-reveal">Contexte</span>
-      <h2 class="sg-section-title ps-reveal">Pourquoi le solaire se développe</h2>
-      <p class="sg-section-intro ps-reveal">Le solaire photovoltaïque connaît un essor sans précédent en France.</p>
+      <span class="sg-section-kicker sg-reveal">Contexte</span>
+      <h2 class="sg-section-title sg-reveal">Pourquoi le solaire se développe</h2>
+      <p class="sg-section-intro sg-reveal">Le solaire photovoltaïque connaît un essor sans précédent en France.</p>
     </div>
-    <div class="sg-text-readable ps-reveal">
+    <div class="sg-text-readable sg-reveal">
     <p>La hausse du prix de l'électricité, les objectifs de transition énergétique et les progrès techniques des panneaux rendent l'investissement de plus en plus attractif pour les particuliers. Produire sa propre électricité n'est plus réservé à quelques pionniers : c'est devenu une solution accessible, rentable et pérenne.</p>
     <p class="mt-4">Les particuliers s'y intéressent pour trois raisons principales : réduire leurs factures, anticiper les hausses tarifaires et valoriser leur patrimoine immobilier. Mais avant d'installer des panneaux, il est essentiel de bien comprendre le fonctionnement du solaire, la rentabilité réelle et les étapes clés du projet. Cette page vous guide à travers tout ce qu'il faut savoir.</p>
     </div>
@@ -974,12 +975,12 @@
   <div class="sg-divider" id="sgsep03" aria-hidden="true"></div>
   <div class="sg-container">
     <div class="max-w-3xl mb-16 sg-text-readable">
-      <span class="sg-section-kicker ps-reveal">Fonctionnement</span>
-      <h2 class="sg-section-title ps-reveal">Comment fonctionne une installation solaire photovoltaïque</h2>
-      <p class="sg-section-intro ps-reveal">Comprendre les trois piliers : production, autoconsommation et revente du surplus.</p>
+      <span class="sg-section-kicker sg-reveal">Fonctionnement</span>
+      <h2 class="sg-section-title sg-reveal">Comment fonctionne une installation solaire photovoltaïque</h2>
+      <p class="sg-section-intro sg-reveal">Comprendre les trois piliers : production, autoconsommation et revente du surplus.</p>
     </div>
     <div class="sg-two-columns mt-12">
-      <div class="ps-reveal">
+      <div class="sg-reveal">
         <p class="text-gray-300 mb-6">Une installation photovoltaïque repose sur un principe simple : <span class="text-gold font-semibold">produire</span> de l'électricité avec les panneaux, <span class="text-gold font-semibold">consommer</span> directement cette énergie dans la maison, et <span class="text-gold font-semibold">revendre</span> l'éventuel surplus au réseau.</p>
         <h3 class="text-xl font-semibold text-gold mb-3">Production d'électricité solaire</h3>
         <p>Les panneaux photovoltaïques captent les photons de la lumière et les convertissent en courant continu. L'onduleur (ou les micro-onduleurs) transforme ce courant en 230 V alternatif, compatible avec votre tableau électrique et vos appareils.</p>
@@ -988,7 +989,7 @@
         <h3 class="text-xl font-semibold text-gold mt-6 mb-3">Revente du surplus</h3>
         <p>Quand vous produisez plus que vous ne consommez, l'excédent est injecté sur le réseau et racheté par votre fournisseur à 0,04 €/kWh. Un complément de revenus, moins intéressant que l'autoconsommation mais utile pour optimiser la production.</p>
       </div>
-      <div class="w-full sg-img-premium-wrap sg-img-premium-wrap--graph ps-reveal">
+      <div class="w-full sg-img-premium-wrap sg-img-premium-wrap--graph sg-reveal">
         <img src="/assets/images/solaire/schema-installation.jpg" alt="Schéma installation photovoltaïque : panneaux, onduleur, compteur et autoconsommation">
       </div>
     </div>
@@ -1000,24 +1001,24 @@
   <div class="sg-divider" id="sgsep04" aria-hidden="true"></div>
   <div class="sg-container">
     <div class="max-w-3xl mb-16 sg-text-readable">
-      <span class="sg-section-kicker ps-reveal">Production</span>
-      <h2 class="sg-section-title ps-reveal">Combien produit une installation solaire en France</h2>
-      <p class="sg-section-intro ps-reveal">La production dépend de l'orientation, l'inclinaison et l'ensoleillement de votre région.</p>
+      <span class="sg-section-kicker sg-reveal">Production</span>
+      <h2 class="sg-section-title sg-reveal">Combien produit une installation solaire en France</h2>
+      <p class="sg-section-intro sg-reveal">La production dépend de l'orientation, l'inclinaison et l'ensoleillement de votre région.</p>
     </div>
-    <div class="sg-text-readable ps-reveal">
+    <div class="sg-text-readable sg-reveal">
     <p>La production d'une installation photovoltaïque dépend de plusieurs facteurs : l'orientation du toit, son inclinaison, la puissance installée et l'ensoleillement de la région.</p>
     <p class="mt-4">En moyenne en France, une installation produit entre <span class="text-gold font-semibold">900 et 1 200 kWh par kWc installé</span>.</p>
     </div>
     <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 sg-card-grid">
-      <div class="p-6 border border-gray-800 ps-reveal ps-reveal-card sg-card-production">
+      <div class="p-6 border border-gray-800 sg-reveal sg-reveal-card-le sg-card-production">
         <h3 class="text-gold font-semibold mb-2">Installation 3 kWc</h3>
         <p class="text-sm text-gray-300">Production annuelle moyenne :<br>≈ 2 700 à 3 600 kWh</p>
       </div>
-      <div class="p-6 border border-gray-800 ps-reveal ps-reveal-card sg-card-production">
+      <div class="p-6 border border-gray-800 sg-reveal sg-reveal-card-le sg-card-production">
         <h3 class="text-gold font-semibold mb-2">Installation 6 kWc</h3>
         <p class="text-sm text-gray-300">Production annuelle moyenne :<br>≈ 5 400 à 7 200 kWh</p>
       </div>
-      <div class="p-6 border border-gray-800 ps-reveal ps-reveal-card sg-card-production">
+      <div class="p-6 border border-gray-800 sg-reveal sg-reveal-card-le sg-card-production">
         <h3 class="text-gold font-semibold mb-2">Installation 9 kWc</h3>
         <p class="text-sm text-gray-300">Production annuelle moyenne :<br>≈ 8 100 à 10 800 kWh</p>
       </div>
@@ -1030,16 +1031,16 @@
   <div class="sg-divider" id="sgsep05" aria-hidden="true"></div>
   <div class="sg-container">
     <div class="max-w-3xl mb-16 sg-text-readable">
-      <span class="sg-section-kicker ps-reveal">Étude</span>
-      <h2 class="sg-section-title ps-reveal">Pourquoi une étude solaire est indispensable</h2>
-      <p class="sg-section-intro ps-reveal">Une analyse complète de votre toiture pour optimiser votre projet.</p>
+      <span class="sg-section-kicker sg-reveal">Étude</span>
+      <h2 class="sg-section-title sg-reveal">Pourquoi une étude solaire est indispensable</h2>
+      <p class="sg-section-intro sg-reveal">Une analyse complète de votre toiture pour optimiser votre projet.</p>
     </div>
     <div class="sg-two-columns mt-12">
-      <div class="ps-reveal">
+      <div class="sg-reveal">
         <p>Avant d'investir, une étude solaire analyse votre projet sous tous les angles. L'orientation du toit (sud idéal, sud-est et sud-ouest corrects) détermine la production. L'inclinaison optimale se situe entre 30° et 35°. L'ombrage (arbres, cheminées, bâtiments voisins) peut réduire la production de 10 à 30 % : il doit être identifié et intégré dans la simulation.</p>
         <p class="mt-4">La consommation du foyer est tout aussi importante : elle permet de dimensionner l'installation pour maximiser l'autoconsommation. Sans étude, vous investissez à l'aveugle. Découvrez notre page dédiée à l'<a href="/etude-solaire/" class="text-gold hover:text-gold underline">étude solaire</a> et notre <a href="/notre-methode/" class="text-gold hover:text-gold underline">méthode d'accompagnement</a>.</p>
       </div>
-      <div class="w-full sg-img-premium-wrap ps-reveal">
+      <div class="w-full sg-img-premium-wrap sg-reveal">
         <img src="/assets/images/solaire/analyse-toiture.jpg" alt="Analyse toiture solaire : orientation, inclinaison et potentiel photovoltaïque">
       </div>
     </div>
@@ -1051,15 +1052,15 @@
   <div class="sg-divider" id="sgsep06" aria-hidden="true"></div>
   <div class="sg-container">
     <div class="max-w-3xl mb-16 sg-text-readable">
-      <span class="sg-section-kicker ps-reveal">Dimensionnement</span>
-      <h2 class="sg-section-title ps-reveal">Combien de panneaux solaires faut-il pour une maison</h2>
-      <p class="sg-section-intro ps-reveal">La puissance idéale dépend de votre consommation et de votre toiture.</p>
+      <span class="sg-section-kicker sg-reveal">Dimensionnement</span>
+      <h2 class="sg-section-title sg-reveal">Combien de panneaux solaires faut-il pour une maison</h2>
+      <p class="sg-section-intro sg-reveal">La puissance idéale dépend de votre consommation et de votre toiture.</p>
     </div>
     <div class="sg-two-columns mt-12">
-      <div class="order-2 lg:order-1 w-full sg-img-premium-wrap ps-reveal">
+      <div class="order-2 lg:order-1 w-full sg-img-premium-wrap sg-reveal">
         <img src="/assets/images/solaire/calpinage-toiture.jpg" alt="Calpinage panneaux solaires sur toiture maison">
       </div>
-      <div class="order-1 lg:order-2 ps-reveal">
+      <div class="order-1 lg:order-2 sg-reveal">
         <p>La puissance nécessaire dépend de trois facteurs : votre consommation annuelle (kWh), la surface de toiture disponible et l'orientation. Une maison type consomme 3 000 à 5 000 kWh/an ; une installation de 3 à 6 kWc couvre une part significative de ces besoins. Comptez environ 15 panneaux de 400 Wc pour 6 kWc, soit 25 à 30 m² de toiture.</p>
         <p class="mt-4">Le dimensionnement optimal maximise l'autoconsommation sans surdimensionner. Trop de panneaux = surplus important revendu à bas prix. Trop peu = économies limitées. Notre guide <a href="/dimensionnement-photovoltaique/" class="text-gold hover:text-gold underline">dimensionnement photovoltaïque</a> vous explique tout.</p>
       </div>
@@ -1072,11 +1073,11 @@
   <div class="sg-divider" id="sgsep07" aria-hidden="true"></div>
   <div class="sg-container">
     <div class="max-w-3xl mb-16 sg-text-readable">
-      <span class="sg-section-kicker ps-reveal">Expertise</span>
-      <h2 class="sg-section-title ps-reveal">Le rôle du bureau d'étude photovoltaïque</h2>
-      <p class="sg-section-intro ps-reveal">Une conception sur mesure pour maximiser votre retour sur investissement.</p>
+      <span class="sg-section-kicker sg-reveal">Expertise</span>
+      <h2 class="sg-section-title sg-reveal">Le rôle du bureau d'étude photovoltaïque</h2>
+      <p class="sg-section-intro sg-reveal">Une conception sur mesure pour maximiser votre retour sur investissement.</p>
     </div>
-    <div class="ps-reveal">
+    <div class="sg-reveal">
     <p>Un bureau d'étude photovoltaïque conçoit votre projet avant la pose. Il réalise l'analyse technique (toiture, ombrages, zone géographique), la simulation de production (kWh/an attendus) et l'optimisation du dimensionnement. Cette étape garantit que votre installation correspond à votre profil et maximise votre retour sur investissement.</p>
     <p class="mt-4">Solarglobe intègre cette expertise dès la phase de conseil. Chaque projet bénéficie d'une étude personnalisée réalisée par des professionnels formés aux outils de simulation. Découvrez le <a href="/bureau-etude-photovoltaique/" class="text-gold hover:text-gold underline">rôle du bureau d'étude photovoltaïque</a>.</p>
     </div>
@@ -1088,12 +1089,12 @@
   <div class="sg-divider" id="sgsep08" aria-hidden="true"></div>
   <div class="sg-container">
     <div class="max-w-3xl mb-16 sg-text-readable">
-      <span class="sg-section-kicker ps-reveal">Guides solaire</span>
-      <h2 class="sg-section-title ps-reveal">Comprendre le solaire</h2>
-      <p class="sg-section-intro ps-reveal">Approfondissez vos connaissances avec nos guides détaillés sur chaque aspect du photovoltaïque.</p>
+      <span class="sg-section-kicker sg-reveal">Guides solaire</span>
+      <h2 class="sg-section-title sg-reveal">Comprendre le solaire</h2>
+      <p class="sg-section-intro sg-reveal">Approfondissez vos connaissances avec nos guides détaillés sur chaque aspect du photovoltaïque.</p>
     </div>
     <div class="sg-guides-grid mt-12">
-      <article class="sg-guide-card ps-reveal ps-reveal-card">
+      <article class="sg-guide-card sg-reveal sg-reveal-card-le">
         <a href="/le-solaire/autoconsommation-solaire/">
           <div class="sg-guide-media">
             <img src="/assets/images/solaire/autoconsommation.jpg" alt="Autoconsommation solaire : produire et consommer sa propre électricité">
@@ -1106,7 +1107,7 @@
           </div>
         </a>
       </article>
-      <article class="sg-guide-card ps-reveal ps-reveal-card">
+      <article class="sg-guide-card sg-reveal sg-reveal-card-le">
         <a href="/rentabilite-solaire/">
           <div class="sg-guide-media">
             <img src="/assets/images/solaire/rentabilite.jpg" alt="Rentabilité des panneaux solaires et retour sur investissement">
@@ -1119,7 +1120,7 @@
           </div>
         </a>
       </article>
-      <article class="sg-guide-card ps-reveal ps-reveal-card">
+      <article class="sg-guide-card sg-reveal sg-reveal-card-le">
         <a href="/le-solaire/rendement-panneaux-solaires/">
           <div class="sg-guide-media">
             <img src="/assets/images/solaire/rendement.jpg" alt="Rendement des panneaux solaires photovoltaïques">
@@ -1132,7 +1133,7 @@
           </div>
         </a>
       </article>
-      <article class="sg-guide-card ps-reveal ps-reveal-card">
+      <article class="sg-guide-card sg-reveal sg-reveal-card-le">
         <a href="/le-solaire/puissance-installation-solaire/">
           <div class="sg-guide-media">
             <img src="/assets/images/solaire/puissance-installation.jpg" alt="Puissance d'une installation solaire photovoltaïque">
@@ -1145,7 +1146,7 @@
           </div>
         </a>
       </article>
-      <article class="sg-guide-card ps-reveal ps-reveal-card">
+      <article class="sg-guide-card sg-reveal sg-reveal-card-le">
         <a href="/le-solaire/aides-panneaux-solaires/">
           <div class="sg-guide-media">
             <img src="/assets/images/solaire/aides-solaire.jpg" alt="Aides et subventions pour panneaux solaires">
@@ -1158,7 +1159,7 @@
           </div>
         </a>
       </article>
-      <article class="sg-guide-card ps-reveal ps-reveal-card">
+      <article class="sg-guide-card sg-reveal sg-reveal-card-le">
         <a href="/le-solaire/batterie-solaire/">
           <div class="sg-guide-media">
             <img src="/assets/images/solaire/batterie.jpg" alt="Batterie solaire et stockage de l'électricité">
@@ -1188,12 +1189,12 @@
   <div class="sg-divider" id="sgsep09" aria-hidden="true"></div>
   <div class="sg-container">
     <div class="max-w-3xl mb-16 sg-text-readable">
-      <span class="sg-section-kicker ps-reveal">Guides photovoltaïques</span>
-      <h2 class="sg-section-title ps-reveal">Explorez nos guides expertise</h2>
-      <p class="sg-section-intro ps-reveal">Des ressources complètes pour comprendre le photovoltaïque et réussir votre projet solaire.</p>
+      <span class="sg-section-kicker sg-reveal">Guides photovoltaïques</span>
+      <h2 class="sg-section-title sg-reveal">Explorez nos guides expertise</h2>
+      <p class="sg-section-intro sg-reveal">Des ressources complètes pour comprendre le photovoltaïque et réussir votre projet solaire.</p>
     </div>
     <div class="sg-guides-grid mt-12">
-      <article class="sg-guide-card ps-reveal ps-reveal-card">
+      <article class="sg-guide-card sg-reveal sg-reveal-card-le">
         <a href="/etude-solaire/">
           <div class="sg-guide-media">
             <img src="/assets/images/solaire/etude-solaire.jpg" alt="Étude solaire maison et potentiel toiture">
@@ -1206,7 +1207,7 @@
           </div>
         </a>
       </article>
-      <article class="sg-guide-card ps-reveal ps-reveal-card">
+      <article class="sg-guide-card sg-reveal sg-reveal-card-le">
         <a href="/rentabilite-solaire/">
           <div class="sg-guide-media">
             <img src="/assets/images/solaire/rentabilite.jpg" alt="Rentabilité panneaux solaires et retour sur investissement">
@@ -1219,7 +1220,7 @@
           </div>
         </a>
       </article>
-      <article class="sg-guide-card ps-reveal ps-reveal-card">
+      <article class="sg-guide-card sg-reveal sg-reveal-card-le">
         <a href="/dimensionnement-photovoltaique/">
           <div class="sg-guide-media">
             <img src="/assets/images/solaire/dimensionnement.jpg" alt="Dimensionnement installation panneaux solaires maison">
@@ -1232,7 +1233,7 @@
           </div>
         </a>
       </article>
-      <article class="sg-guide-card ps-reveal ps-reveal-card">
+      <article class="sg-guide-card sg-reveal sg-reveal-card-le">
         <a href="/bureau-etude-photovoltaique/">
           <div class="sg-guide-media">
             <img src="/assets/images/solaire/bureau-etude.jpg" alt="Bureau d'étude photovoltaïque analyse toiture">
@@ -1262,11 +1263,11 @@
   <div class="sg-divider" id="sgsep10" aria-hidden="true"></div>
   <div class="sg-container">
     <div class="max-w-3xl mb-16 sg-text-readable">
-      <span class="sg-section-kicker ps-reveal">Avantages</span>
-      <h2 class="sg-section-title ps-reveal">Les avantages des panneaux solaires</h2>
-      <p class="sg-section-intro ps-reveal">Réduisez votre facture, protégez-vous des hausses et valorisez votre bien.</p>
+      <span class="sg-section-kicker sg-reveal">Avantages</span>
+      <h2 class="sg-section-title sg-reveal">Les avantages des panneaux solaires</h2>
+      <p class="sg-section-intro sg-reveal">Réduisez votre facture, protégez-vous des hausses et valorisez votre bien.</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 ps-reveal">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 sg-reveal">
       <div>
         <h3 class="text-gold font-semibold mb-2">Réduction de la facture d'électricité</h3>
         <p class="text-sm text-gray-300">L'autoconsommation permet d'utiliser directement l'électricité produite par les panneaux et de réduire significativement la facture énergétique.</p>
@@ -1288,9 +1289,9 @@
   <div class="sg-divider" id="sgsep11" aria-hidden="true"></div>
   <div class="sg-container">
     <div class="max-w-3xl mb-16 sg-text-readable">
-      <span class="sg-section-kicker ps-reveal">FAQ</span>
-      <h2 class="sg-section-title ps-reveal">Questions fréquentes</h2>
-      <p class="sg-section-intro ps-reveal">Les réponses aux questions les plus posées sur le solaire photovoltaïque.</p>
+      <span class="sg-section-kicker sg-reveal">FAQ</span>
+      <h2 class="sg-section-title sg-reveal">Questions fréquentes</h2>
+      <p class="sg-section-intro sg-reveal">Les réponses aux questions les plus posées sur le solaire photovoltaïque.</p>
     </div>
     <div class="sg-faq mt-12">
       <div class="sg-faq-item">
@@ -1337,11 +1338,11 @@
   <div class="sg-divider" id="sgsep13" aria-hidden="true"></div>
   <div class="sg-container">
     <div class="max-w-3xl mb-16 sg-text-readable">
-      <span class="sg-section-kicker ps-reveal">Éligibilité</span>
-      <h2 class="sg-section-title ps-reveal">Le solaire est-il adapté à votre maison ?</h2>
-      <p class="sg-section-intro ps-reveal">Vérifiez les critères essentiels pour une installation réussie.</p>
+      <span class="sg-section-kicker sg-reveal">Éligibilité</span>
+      <h2 class="sg-section-title sg-reveal">Le solaire est-il adapté à votre maison ?</h2>
+      <p class="sg-section-intro sg-reveal">Vérifiez les critères essentiels pour une installation réussie.</p>
     </div>
-    <div class="sg-text-readable ps-reveal">
+    <div class="sg-text-readable sg-reveal">
     <p>Plusieurs critères permettent de savoir si votre maison est adaptée à une installation photovoltaïque :</p>
     <ul class="mt-6 space-y-3 text-gray-300">
       <li>• une toiture bien orientée (sud, sud-est ou sud-ouest)</li>
@@ -1382,20 +1383,7 @@ document.querySelectorAll('.sg-faq-item').forEach(item => {
 });
 </script>
 
-<!-- Scroll reveal – IntersectionObserver (comme produits/index.html) -->
-<script>
-(function() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const els = document.querySelectorAll('.ps-reveal');
-  if (!els.length) return;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('ps-visible');
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  els.forEach(el => io.observe(el));
-})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 
 <script type="application/ld+json">
 {

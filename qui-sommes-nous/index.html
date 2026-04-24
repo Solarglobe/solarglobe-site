@@ -22,13 +22,14 @@
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/sg-animations.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}
-  /* Scroll reveal – premium (comme produits/faq) */
-  .ps-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
-  .ps-reveal.ps-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
-  .ps-reveal-title.ps-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
-  .ps-reveal-card.ps-visible{box-shadow:0 0 0 1px rgba(195,152,71,0.08)}
-  @media (prefers-reduced-motion:reduce){.ps-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
+  /* Scroll reveal (sg-animations.js → .sg-visible) */
+  .sg-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
+  .sg-reveal.sg-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+  .sg-reveal.sg-reveal-title-le.sg-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
+  .sg-reveal.sg-reveal-card-le.sg-visible{box-shadow:0 0 0 1px rgba(195,152,71,0.08)}
+  @media (prefers-reduced-motion:reduce){.sg-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
   .sg-hero-premium.sg-hero-solaire{padding-top:120px}
   @media (min-width:768px){.sg-hero-premium.sg-hero-solaire{padding-top:120px}}
   /* Cartes premium – hover glow gold */
@@ -47,7 +48,7 @@
 <section class="sg-hero-premium sg-hero-solaire">
   <div class="sg-hero-bg" aria-hidden="true"></div>
   <div class="sg-hero-content">
-    <div class="sg-hero-inner ps-reveal ps-reveal-title">
+    <div class="sg-hero-inner sg-reveal sg-reveal-title-le">
       <p class="sg-hero-breadcrumb"><a href="/">Accueil</a> <span aria-hidden="true">/</span> Qui sommes-nous</p>
       <span class="sg-hero-kicker">SOLARGLOBE</span>
       <h1 class="sg-hero-title">Plus qu'un installateur. Un <span class="gold">partenaire solaire</span>.</h1>
@@ -69,16 +70,16 @@
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div class="ps-reveal">
+      <div class="sg-reveal">
         <span class="sg-section-kicker text-gold uppercase tracking-widest text-sm">Qui sommes-nous</span>
-        <h2 class="sg-section-title text-white mt-2 mb-6 ps-reveal ps-reveal-title">Qui est Solarglobe</h2>
+        <h2 class="sg-section-title text-white mt-2 mb-6 sg-reveal sg-reveal-title-le">Qui est Solarglobe</h2>
         <p class="text-neutral-300 leading-relaxed mb-4">Solarglobe est un bureau d'études photovoltaïque indépendant, spécialisé dans la conception d'installations solaires performantes, durables et esthétiques. Fondée par Benoît et Nicolas, notre mission est simple : vous aider à produire votre énergie dans les meilleures conditions.</p>
         <h3 class="text-gold font-semibold text-lg mt-6 mb-2">Ce qui ne va pas sur le marché</h3>
         <p class="text-neutral-300 leading-relaxed mb-4">Trop souvent, le marché souffre de dimensionnements approximatifs, de matériels moyens et de poses bâclées. Les promesses exagérées et les devis opaques nuisent à la confiance des propriétaires.</p>
         <h3 class="text-gold font-semibold text-lg mt-6 mb-2">Ce que Solarglobe fait différemment</h3>
         <p class="text-neutral-300 leading-relaxed">Une étude sérieuse, un dimensionnement sur mesure et une sélection d'équipements haut de gamme (panneaux, onduleurs, batteries), pour des résultats réellement atteignables. Nous croyons que le solaire doit être rentable, fiable et sans promesses exagérées.</p>
       </div>
-      <div class="ps-reveal" style="transition-delay:0.1s">
+      <div class="sg-reveal" style="transition-delay:0.1s">
         <img src="/assets/images/solaire/hero-solaire.webp" alt="Installation solaire premium Solarglobe" class="w-full rounded-2xl shadow-2xl object-cover border border-gold/20" loading="lazy" width="720" height="480" onerror="this.src='/assets/images/og-image.jpg'">
       </div>
     </div>
@@ -90,26 +91,26 @@
 <!-- 3. SECTION "POURQUOI SOLARGLOBE" -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <div class="text-center mb-12 ps-reveal">
+    <div class="text-center mb-12 sg-reveal">
       <span class="sg-section-kicker text-gold uppercase tracking-widest text-sm">Nos atouts</span>
-      <h2 class="sg-section-title text-gold mt-2 ps-reveal ps-reveal-title">Pourquoi Solarglobe ?</h2>
+      <h2 class="sg-section-title text-gold mt-2 sg-reveal sg-reveal-title-le">Pourquoi Solarglobe ?</h2>
       <p class="text-neutral-300 max-w-2xl mx-auto mt-4">Des choix techniques et un accompagnement pensés pour des économies réelles — pas pour des promesses.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <article class="sg-card sg-card-dark p-6 border border-gold/20 sg-card-qui transition-all duration-300 ps-reveal ps-reveal-card" style="transition-delay:0.1s">
+      <article class="sg-card sg-card-dark p-6 border border-gold/20 sg-card-qui transition-all duration-300 sg-reveal sg-reveal-card-le" style="transition-delay:0.1s">
         <h3 class="text-gold font-bold text-lg mb-3">Matériel haut de gamme, prix maîtrisé</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Nous sélectionnons des équipements premium (performance, fiabilité, esthétique) et nous optimisons le projet pour éviter les surcoûts inutiles.</p>
       </article>
-      <article class="sg-card sg-card-dark p-6 border border-gold/20 sg-card-qui transition-all duration-300 ps-reveal ps-reveal-card" style="transition-delay:0.2s">
+      <article class="sg-card sg-card-dark p-6 border border-gold/20 sg-card-qui transition-all duration-300 sg-reveal sg-reveal-card-le" style="transition-delay:0.2s">
         <h3 class="text-gold font-bold text-lg mb-3">Économies réellement atteignables</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Le solaire, ce n'est pas seulement poser des panneaux : on vous accompagne pour piloter vos usages et maximiser l'autoconsommation au quotidien.</p>
       </article>
-      <article class="sg-card sg-card-dark p-6 border border-gold/20 sg-card-qui transition-all duration-300 ps-reveal ps-reveal-card" style="transition-delay:0.3s">
+      <article class="sg-card sg-card-dark p-6 border border-gold/20 sg-card-qui transition-all duration-300 sg-reveal sg-reveal-card-le" style="transition-delay:0.3s">
         <h3 class="text-gold font-bold text-lg mb-3">Conseil sur-mesure, sans pression</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Recommandations claires, chiffrées, et adaptées à votre foyer. Nous expliquons, vous décidez.</p>
       </article>
     </div>
-    <div class="text-center mt-10 ps-reveal">
+    <div class="text-center mt-10 sg-reveal">
       <a href="/produits/" class="sg-btn sg-btn-outline">Découvrir notre sélection produit</a>
     </div>
   </div>
@@ -121,12 +122,12 @@
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div class="order-2 lg:order-1 ps-reveal flex justify-center lg:justify-start">
+      <div class="order-2 lg:order-1 sg-reveal flex justify-center lg:justify-start">
         <img src="/assets/images/projetaaz/duo-benoit-nicolas.webp" alt="Benoît et Nicolas – Fondateurs Solarglobe" class="w-full max-w-[380px] rounded-2xl object-cover shadow-2xl border-2 border-gold/30" loading="lazy" width="400" height="400" onerror="this.style.display='none'">
       </div>
-      <div class="order-1 lg:order-2 ps-reveal" style="transition-delay:0.1s">
+      <div class="order-1 lg:order-2 sg-reveal" style="transition-delay:0.1s">
         <span class="sg-section-kicker text-gold uppercase tracking-widest text-sm">L'équipe</span>
-        <h2 class="sg-section-title text-white mt-2 mb-6 ps-reveal ps-reveal-title">Un duo exigeant et humain</h2>
+        <h2 class="sg-section-title text-white mt-2 mb-6 sg-reveal sg-reveal-title-le">Un duo exigeant et humain</h2>
         <p class="text-neutral-300 leading-relaxed mb-4">Benoît et Nicolas ont fondé Solarglobe avec une idée simple : remettre de l'exigence et du bon sens dans le solaire résidentiel. Là où beaucoup se contentent de vendre et poser des panneaux, ils ont choisi de penser chaque projet dans sa globalité.</p>
         <p class="text-neutral-300 leading-relaxed mb-4">Benoît est spécialisé dans le conseil, l'analyse des besoins et la relation client. Nicolas est le référent technique : dimensionnement, choix des équipements et contrôle de la qualité des installations. Cette complémentarité permet d'allier vision, rigueur technique et accompagnement humain.</p>
         <p class="text-gold font-semibold text-lg mt-6 mb-4">On ne vend pas simplement des panneaux. On construit des projets cohérents, durables et rentables.</p>
@@ -144,25 +145,25 @@
 <!-- 5. SECTION "NOS ENGAGEMENTS" -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <div class="text-center mb-10 ps-reveal">
+    <div class="text-center mb-10 sg-reveal">
       <span class="sg-section-kicker text-gold uppercase tracking-widest text-sm">Nos valeurs</span>
-      <h2 class="sg-section-title text-gold mt-2 ps-reveal ps-reveal-title">Nos engagements</h2>
+      <h2 class="sg-section-title text-gold mt-2 sg-reveal sg-reveal-title-le">Nos engagements</h2>
       <p class="text-neutral-300 max-w-2xl mx-auto mt-4">Les fondations de Solarglobe : des principes simples, appliqués chaque jour avec constance et responsabilité.</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 ps-reveal ps-reveal-card" style="transition-delay:0.1s">
+      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 sg-reveal sg-reveal-card-le" style="transition-delay:0.1s">
         <h3 class="text-gold font-semibold mb-2">Transparence totale</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Devis clairs et détaillés. Chaque composant, chaque étape et chaque coût sont expliqués. Aucune surprise, aucun frais caché.</p>
       </article>
-      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 ps-reveal ps-reveal-card" style="transition-delay:0.15s">
+      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 sg-reveal sg-reveal-card-le" style="transition-delay:0.15s">
         <h3 class="text-gold font-semibold mb-2">Exigence technique</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Sélection rigoureuse de matériel haut de gamme. Installations réalisées dans les règles de l'art, avec contrôle qualité à chaque étape.</p>
       </article>
-      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 ps-reveal ps-reveal-card" style="transition-delay:0.2s">
+      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 sg-reveal sg-reveal-card-le" style="transition-delay:0.2s">
         <h3 class="text-gold font-semibold mb-2">Accompagnement réel</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Suivi personnalisé avant, pendant et après la pose. Nous vous aidons à piloter vos usages pour des économies concrètes et durables.</p>
       </article>
-      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 ps-reveal ps-reveal-card" style="transition-delay:0.25s">
+      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 sg-reveal sg-reveal-card-le" style="transition-delay:0.25s">
         <h3 class="text-gold font-semibold mb-2">Éthique commerciale</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Pas de discours agressif ni de pression à la signature. Nous conseillons avec honnêteté, vous décidez en toute liberté.</p>
       </article>
@@ -175,34 +176,34 @@
 <!-- 6. SECTION "NOTRE FAÇON DE TRAVAILLER" (version résumée) -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <div class="text-center mb-10 ps-reveal">
+    <div class="text-center mb-10 sg-reveal">
       <span class="sg-section-kicker text-gold uppercase tracking-widest text-sm">Processus</span>
-      <h2 class="sg-section-title text-gold mt-2 ps-reveal ps-reveal-title">Notre façon de travailler</h2>
+      <h2 class="sg-section-title text-gold mt-2 sg-reveal sg-reveal-title-le">Notre façon de travailler</h2>
       <p class="text-neutral-300 max-w-2xl mx-auto mt-4">Un processus clair en 4 étapes. <a href="/notre-methode/" class="text-gold hover:underline">Découvrir le détail de notre accompagnement</a>.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 ps-reveal ps-reveal-card" style="transition-delay:0.1s">
+      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 sg-reveal sg-reveal-card-le" style="transition-delay:0.1s">
         <span class="text-gold font-bold text-sm">1</span>
         <h3 class="text-gold font-semibold mt-2 mb-2">Étude & simulation</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Analyse de votre toiture et consommation. Simulation chiffrée en kWh et euros.</p>
       </article>
-      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 ps-reveal ps-reveal-card" style="transition-delay:0.15s">
+      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 sg-reveal sg-reveal-card-le" style="transition-delay:0.15s">
         <span class="text-gold font-bold text-sm">2</span>
         <h3 class="text-gold font-semibold mt-2 mb-2">Dimensionnement & devis</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Plusieurs scénarios pour identifier la configuration la plus pertinente et rentable.</p>
       </article>
-      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 ps-reveal ps-reveal-card" style="transition-delay:0.2s">
+      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 sg-reveal sg-reveal-card-le" style="transition-delay:0.2s">
         <span class="text-gold font-bold text-sm">3</span>
         <h3 class="text-gold font-semibold mt-2 mb-2">Démarches & raccordement</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Prise en charge complète des formalités : Mairie, Enedis, Consuel. Nous pilotons tout.</p>
       </article>
-      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 ps-reveal ps-reveal-card" style="transition-delay:0.25s">
+      <article class="sg-card sg-card-dark p-5 border border-gold/20 sg-card-qui transition-all duration-300 sg-reveal sg-reveal-card-le" style="transition-delay:0.25s">
         <span class="text-gold font-bold text-sm">4</span>
         <h3 class="text-gold font-semibold mt-2 mb-2">Pose & mise en service</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Installation par nos partenaires certifiés RGE. Mise en service et monitoring.</p>
       </article>
     </div>
-    <div class="text-center mt-10 ps-reveal">
+    <div class="text-center mt-10 sg-reveal">
       <a href="/notre-methode/" class="sg-btn sg-btn-outline">Découvrir notre méthode en détail</a>
     </div>
   </div>
@@ -213,26 +214,26 @@
 <!-- 7. SECTION "ZONE D'INTERVENTION" -->
 <section class="sg-section sg-section-dark" id="zones">
   <div class="sg-container">
-    <div class="text-center mb-10 ps-reveal">
+    <div class="text-center mb-10 sg-reveal">
       <span class="sg-section-kicker text-gold uppercase tracking-widest text-sm">Couverture</span>
-      <h2 class="sg-section-title text-gold mt-2 ps-reveal ps-reveal-title">Zones d'intervention</h2>
+      <h2 class="sg-section-title text-gold mt-2 sg-reveal sg-reveal-title-le">Zones d'intervention</h2>
       <p class="text-neutral-300 max-w-2xl mx-auto mt-4">Basés en Île-de-France, nous accompagnons des clients partout en France grâce à un réseau de partenaires installateurs certifiés.</p>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <article class="sg-card sg-card-dark p-6 border border-gold/20 sg-card-qui transition-all duration-300 ps-reveal ps-reveal-card" style="transition-delay:0.1s">
+      <article class="sg-card sg-card-dark p-6 border border-gold/20 sg-card-qui transition-all duration-300 sg-reveal sg-reveal-card-le" style="transition-delay:0.1s">
         <h3 class="text-gold font-semibold mb-2">Île-de-France</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Notre zone historique et notre cœur d'activité. Une présence locale forte pour un suivi rapproché et une parfaite connaissance des contraintes réglementaires.</p>
       </article>
-      <article class="sg-card sg-card-dark p-6 border border-gold/20 sg-card-qui transition-all duration-300 ps-reveal ps-reveal-card" style="transition-delay:0.15s">
+      <article class="sg-card sg-card-dark p-6 border border-gold/20 sg-card-qui transition-all duration-300 sg-reveal sg-reveal-card-le" style="transition-delay:0.15s">
         <h3 class="text-gold font-semibold mb-2">Régions limitrophes</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Nous intervenons régulièrement dans les régions voisines, avec les mêmes standards de qualité et le même niveau d'exigence.</p>
       </article>
-      <article class="sg-card sg-card-dark p-6 border border-gold/20 sg-card-qui transition-all duration-300 ps-reveal ps-reveal-card" style="transition-delay:0.2s">
+      <article class="sg-card sg-card-dark p-6 border border-gold/20 sg-card-qui transition-all duration-300 sg-reveal sg-reveal-card-le" style="transition-delay:0.2s">
         <h3 class="text-gold font-semibold mb-2">Partout en France</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Grâce à notre réseau de partenaires certifiés et contrôlés, nous pilotons des projets solaires sur l'ensemble du territoire français.</p>
       </article>
     </div>
-    <div class="text-center mt-10 ps-reveal">
+    <div class="text-center mt-10 sg-reveal">
       <a href="/contact/" class="sg-btn sg-btn-primary">Vérifier ma ville</a>
     </div>
   </div>
@@ -247,7 +248,7 @@
     <div class="absolute inset-0 bg-[radial-gradient(60%_50%_at_80%_80%,rgba(195,152,71,0.05),transparent_65%)]"></div>
   </div>
   <div class="sg-container relative z-10">
-    <div class="max-w-3xl mx-auto text-center ps-reveal">
+    <div class="max-w-3xl mx-auto text-center sg-reveal">
       <h2 class="sg-section-title text-gold mb-4">Passez à l'action dès aujourd'hui</h2>
       <p class="text-neutral-300 text-lg leading-relaxed mb-8">Avec Solarglobe, vous bénéficiez d'un accompagnement premium, de matériels haut de gamme et d'une rentabilité optimisée. Nous concevons des projets solaires pensés pour durer et transformer votre toiture en source d'économies réelles.</p>
       <div class="flex flex-wrap justify-center gap-4 mb-8">
@@ -275,15 +276,7 @@
 <div id="footer-placeholder"></div>
 <script src="/assets/js/footer.js"></script>
 
-<!-- Scroll reveal script -->
-<script>
-(function(){
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('ps-visible')});
-  },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.ps-reveal').forEach(el=>observer.observe(el));
-})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 
 <!-- JSON-LD -->
 <script type="application/ld+json">

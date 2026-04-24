@@ -2,19 +2,25 @@
 /* Système unifié — Apple, Stripe, Vercel, Linear */
 
 /* --------------------------------------
-   BASE REVEAL — sans blur, texte net
+   BASE REVEAL — scroll (sg-animations.js → .sg-visible)
+   Défaut sobre ; les pages avec CSS inline plus spécifique restent prioritaires.
    -------------------------------------- */
 .sg-reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition:
-    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(30px);
 }
 
 .sg-reveal-visible {
   opacity: 1;
   transform: none;
+}
+
+.sg-reveal.sg-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* --------------------------------------
@@ -60,8 +66,10 @@
     transform: none;
     transition: none;
   }
-  .sg-reveal-visible {
+  .sg-reveal-visible,
+  .sg-reveal.sg-visible {
     opacity: 1;
     transform: none;
+    transition: none;
   }
 }

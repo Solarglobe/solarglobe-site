@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/sg-animations.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}</style>
   <style>
   .reveal{opacity:0;transform:translateY(30px);transition:opacity 1.2s cubic-bezier(0.22,1,0.36,1),transform 1.2s cubic-bezier(0.22,1,0.36,1)}
@@ -33,7 +34,7 @@
   .reveal-slow{transition:opacity 1.5s cubic-bezier(0.22,1,0.36,1),transform 1.5s cubic-bezier(0.22,1,0.36,1)}
   @media (prefers-reduced-motion:reduce){.reveal,.fade-up,.slide-left,.slide-right,.zoom-image{opacity:1;transform:none}}
   .sg-reveal{opacity:0;transform:translateY(40px);transition:opacity 1.2s cubic-bezier(0.22,1,0.36,1),transform 1.2s cubic-bezier(0.22,1,0.36,1)}
-  .sg-reveal.visible{opacity:1;transform:translateY(0)}
+  .sg-reveal.sg-visible{opacity:1;transform:translateY(0)}
   @media (prefers-reduced-motion:reduce){.sg-reveal{opacity:1;transform:none}}
   .hero-method{margin-top:0;min-height:55vh;display:flex;align-items:center;justify-content:center;padding:3rem 1.5rem}
   .hero-method::before{content:"";position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(195,152,71,0.18) 0%,transparent 70%);filter:blur(80px);pointer-events:none}
@@ -469,24 +470,7 @@
 <div id="footer-placeholder"></div>
 <script src="/assets/js/footer.js"></script>
 
-<script>
-(function(){
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(prefersReduced){
-    document.querySelectorAll('.sg-reveal,.reveal,.fade-up,.slide-left,.slide-right,.zoom-image,.sg-flow-arrow').forEach(el=>{el.classList.add('visible');el.classList.add('reveal-visible')});
-    return;
-  }
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      entry.target.classList.add('reveal-visible');
-      observer.unobserve(entry.target);
-    });
-  },{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
-  document.querySelectorAll('.sg-reveal,.reveal,.fade-up,.slide-left,.slide-right,.zoom-image,.sg-flow-arrow').forEach(el=>observer.observe(el));
-})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 
 </body>
 </html>

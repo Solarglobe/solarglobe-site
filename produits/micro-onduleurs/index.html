@@ -21,14 +21,15 @@
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/sg-animations.css" />
   <style>
   .text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}
-  /* Scroll reveal – lent, futuriste, premium (comme produits index) */
-  .ps-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
-  .ps-reveal.ps-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
-  .ps-reveal-title.ps-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
-  .ps-reveal-card.ps-visible{box-shadow:0 0 0 1px rgba(195,152,71,0.08)}
-  @media (prefers-reduced-motion:reduce){.ps-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
+  /* Scroll reveal – lent, futuriste, premium (sg-animations.js → .sg-visible) */
+  .sg-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
+  .sg-reveal.sg-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+  .sg-reveal.sg-reveal-title-le.sg-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
+  .sg-reveal.sg-reveal-card-le.sg-visible{box-shadow:0 0 0 1px rgba(195,152,71,0.08)}
+  @media (prefers-reduced-motion:reduce){.sg-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
   /* Hero micro-onduleurs : contenu remonté, moins haut, CTAs pleine largeur */
   #hero-micro-onduleurs.sg-hero-premium{padding-top:24px;padding-bottom:48px}
   #hero-micro-onduleurs .sg-hero-cta{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:100%}
@@ -64,7 +65,7 @@
 <section id="hero-micro-onduleurs" class="sg-hero-premium relative overflow-hidden">
   <div class="sg-hero-bg" aria-hidden="true"></div>
   <div class="sg-container sg-hero-content flex flex-col lg:flex-row lg:items-center lg:gap-12">
-    <div class="flex-1 ps-reveal ps-reveal-title">
+    <div class="flex-1 sg-reveal sg-reveal-title-le">
       <h1 class="sg-hero-title">Micro-onduleurs photovoltaïques haute performance</h1>
       <p class="sg-hero-subtitle">Les micro-onduleurs permettent d'optimiser la production de chaque panneau solaire individuellement et d'augmenter la performance globale de votre installation photovoltaïque.</p>
       <div class="sg-hero-badges">
@@ -75,7 +76,7 @@
         <a href="/etude-gratuite/" class="sg-btn sg-btn-primary">Obtenir mon étude solaire gratuite</a>
       </div>
     </div>
-    <div class="flex-1 mt-8 lg:mt-0 flex justify-center ps-reveal" style="transition-delay:0.2s">
+    <div class="flex-1 mt-8 lg:mt-0 flex justify-center sg-reveal" style="transition-delay:0.2s">
       <img src="/assets/images/produits/micro-onduleur-hero.avif" alt="Micro-onduleurs photovoltaïques haute performance" class="rounded-xl shadow-lg max-w-md w-full h-auto" loading="eager" />
     </div>
   </div>
@@ -84,24 +85,24 @@
 <!-- INTRODUCTION SEO MICRO-ONDULEURS -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Introduction aux micro-onduleurs photovoltaïques</h2>
-    <p class="ps-reveal" style="transition-delay:0.05s">Un <strong>micro-onduleur</strong> est un petit convertisseur électrique fixé directement sous chaque panneau solaire. Contrairement à l'<a href="/produits/onduleurs/" class="text-gold hover:text-gold underline">onduleur central</a> qui traite la production de tous les panneaux en série, le micro-onduleur convertit le courant continu (DC) en courant alternatif (AC) au niveau de chaque module. Cette architecture offre plusieurs avantages décisifs : optimisation individuelle, tolérance aux ombrages partiels, suivi précis par panneau et sécurité électrique renforcée.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.1s">Les micro-onduleurs sont devenus populaires ces dernières années, notamment pour les installations résidentielles. Leur coût initial est légèrement supérieur à celui d'un onduleur central, mais les gains de production en conditions réelles (ombrage, orientations multiples, salissure partielle) compensent souvent l'écart. Les fabricants premium comme ATMOCE proposent des garanties jusqu'à 25 ans, alignées sur la durée de vie des <a href="/produits/panneaux-solaires/" class="text-gold hover:text-gold underline">panneaux solaires</a>.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.15s">Ils sont particulièrement recommandés pour les toitures complexes : plusieurs orientations (Sud, Est, Ouest), zones partiellement ombragées par des arbres ou des cheminées, petites installations où chaque kWh compte. Solarglobe installe les micro-onduleurs ATMOCE MI500, sélectionnés pour leur rendement, leur fiabilité et leur compatibilité avec nos <a href="/produits/panneaux-solaires/" class="text-gold hover:text-gold underline">panneaux LONGi et Aiko</a> et <a href="/produits/batteries-solaires/" class="text-gold hover:text-gold underline">batteries</a>.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.2s">Notre <a href="/notre-methode/" class="text-gold hover:text-gold underline">méthode</a> d'accompagnement inclut le dimensionnement, le <a href="/notre-methode/calpinage/" class="text-gold hover:text-gold underline">calpinage</a> et l'installation complète. Une <a href="/etude-gratuite/" class="text-gold hover:text-gold underline">étude gratuite</a> vous permet d'évaluer si les micro-onduleurs sont adaptés à votre toiture et votre profil de consommation.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.25s">Historiquement, les installations photovoltaïques utilisaient un onduleur central unique. L'essor des micro-onduleurs date des années 2010, avec l'amélioration des rendements et la baisse des coûts. Aujourd'hui, ils représentent une part croissante du marché résidentiel, notamment en France où les toitures sont souvent complexes (lucarnes, cheminées, orientations multiples). Les fabricants comme Enphase, SolarEdge et ATMOCE proposent des gammes matures avec des garanties longues, rassurant les particuliers sur la durabilité de leur investissement.</p>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Introduction aux micro-onduleurs photovoltaïques</h2>
+    <p class="sg-reveal" style="transition-delay:0.05s">Un <strong>micro-onduleur</strong> est un petit convertisseur électrique fixé directement sous chaque panneau solaire. Contrairement à l'<a href="/produits/onduleurs/" class="text-gold hover:text-gold underline">onduleur central</a> qui traite la production de tous les panneaux en série, le micro-onduleur convertit le courant continu (DC) en courant alternatif (AC) au niveau de chaque module. Cette architecture offre plusieurs avantages décisifs : optimisation individuelle, tolérance aux ombrages partiels, suivi précis par panneau et sécurité électrique renforcée.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.1s">Les micro-onduleurs sont devenus populaires ces dernières années, notamment pour les installations résidentielles. Leur coût initial est légèrement supérieur à celui d'un onduleur central, mais les gains de production en conditions réelles (ombrage, orientations multiples, salissure partielle) compensent souvent l'écart. Les fabricants premium comme ATMOCE proposent des garanties jusqu'à 25 ans, alignées sur la durée de vie des <a href="/produits/panneaux-solaires/" class="text-gold hover:text-gold underline">panneaux solaires</a>.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.15s">Ils sont particulièrement recommandés pour les toitures complexes : plusieurs orientations (Sud, Est, Ouest), zones partiellement ombragées par des arbres ou des cheminées, petites installations où chaque kWh compte. Solarglobe installe les micro-onduleurs ATMOCE MI500, sélectionnés pour leur rendement, leur fiabilité et leur compatibilité avec nos <a href="/produits/panneaux-solaires/" class="text-gold hover:text-gold underline">panneaux LONGi et Aiko</a> et <a href="/produits/batteries-solaires/" class="text-gold hover:text-gold underline">batteries</a>.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.2s">Notre <a href="/notre-methode/" class="text-gold hover:text-gold underline">méthode</a> d'accompagnement inclut le dimensionnement, le <a href="/notre-methode/calpinage/" class="text-gold hover:text-gold underline">calpinage</a> et l'installation complète. Une <a href="/etude-gratuite/" class="text-gold hover:text-gold underline">étude gratuite</a> vous permet d'évaluer si les micro-onduleurs sont adaptés à votre toiture et votre profil de consommation.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.25s">Historiquement, les installations photovoltaïques utilisaient un onduleur central unique. L'essor des micro-onduleurs date des années 2010, avec l'amélioration des rendements et la baisse des coûts. Aujourd'hui, ils représentent une part croissante du marché résidentiel, notamment en France où les toitures sont souvent complexes (lucarnes, cheminées, orientations multiples). Les fabricants comme Enphase, SolarEdge et ATMOCE proposent des gammes matures avec des garanties longues, rassurant les particuliers sur la durabilité de leur investissement.</p>
   </div>
 </section>
 
 <!-- QU'EST-CE QU'UN MICRO-ONDULEUR -->
 <section id="quest-ce-quun-micro-onduleur" class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Qu'est-ce qu'un micro-onduleur solaire ?</h2>
-    <p class="ps-reveal" style="transition-delay:0.05s">Le micro-onduleur assure la <strong>conversion courant continu → alternatif</strong> au pied de chaque panneau. Les cellules photovoltaïques produisent du courant continu (DC), incompatible avec le réseau domestique et les appareils électriques qui fonctionnent en 230 V alternatif (AC). Le micro-onduleur transforme ce courant en temps réel, module par module.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.1s">Le <strong>fonctionnement par panneau</strong> signifie que chaque module travaille de manière indépendante. Si un panneau est à l'ombre ou légèrement sali, les autres continuent à produire à pleine capacité. Avec un onduleur central, un seul panneau défaillant peut impacter toute la chaîne connectée en série.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.15s">L'<strong>indépendance des modules</strong> offre aussi un suivi individuel : via une application ou un portail web, vous visualisez la production de chaque panneau. Un défaut ou une baisse de performance est immédiatement identifié, ce qui facilite la maintenance et le dépannage.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.2s">En résumé : conversion DC/AC au niveau du panneau, optimisation individuelle, et monitoring précis. Ces trois piliers font des micro-onduleurs une solution idéale pour maximiser l'<a href="/le-solaire/autoconsommation-solaire/" class="text-gold hover:text-gold underline">autoconsommation solaire</a> dans des conditions réelles souvent imparfaites.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.25s">La technologie MPPT (Maximum Power Point Tracking) intégrée à chaque micro-onduleur recherche en permanence le point de fonctionnement optimal du panneau. En cas de variation d'ensoleillement, de température ou d'ombrage, l'électronique s'adapte en quelques secondes. Cette réactivité limite les pertes et assure une production stable tout au long de la journée.</p>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Qu'est-ce qu'un micro-onduleur solaire ?</h2>
+    <p class="sg-reveal" style="transition-delay:0.05s">Le micro-onduleur assure la <strong>conversion courant continu → alternatif</strong> au pied de chaque panneau. Les cellules photovoltaïques produisent du courant continu (DC), incompatible avec le réseau domestique et les appareils électriques qui fonctionnent en 230 V alternatif (AC). Le micro-onduleur transforme ce courant en temps réel, module par module.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.1s">Le <strong>fonctionnement par panneau</strong> signifie que chaque module travaille de manière indépendante. Si un panneau est à l'ombre ou légèrement sali, les autres continuent à produire à pleine capacité. Avec un onduleur central, un seul panneau défaillant peut impacter toute la chaîne connectée en série.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.15s">L'<strong>indépendance des modules</strong> offre aussi un suivi individuel : via une application ou un portail web, vous visualisez la production de chaque panneau. Un défaut ou une baisse de performance est immédiatement identifié, ce qui facilite la maintenance et le dépannage.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.2s">En résumé : conversion DC/AC au niveau du panneau, optimisation individuelle, et monitoring précis. Ces trois piliers font des micro-onduleurs une solution idéale pour maximiser l'<a href="/le-solaire/autoconsommation-solaire/" class="text-gold hover:text-gold underline">autoconsommation solaire</a> dans des conditions réelles souvent imparfaites.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.25s">La technologie MPPT (Maximum Power Point Tracking) intégrée à chaque micro-onduleur recherche en permanence le point de fonctionnement optimal du panneau. En cas de variation d'ensoleillement, de température ou d'ombrage, l'électronique s'adapte en quelques secondes. Cette réactivité limite les pertes et assure une production stable tout au long de la journée.</p>
   </div>
 </section>
 
@@ -110,18 +111,18 @@
   <div class="sg-container">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       <div>
-        <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Installation simple et connexion sécurisée</h2>
-        <p class="ps-reveal" style="transition-delay:0.05s">Les micro-onduleurs modernes sont conçus pour simplifier au maximum l'installation des systèmes photovoltaïques. Contrairement aux onduleurs centraux, chaque micro-onduleur se connecte directement au panneau solaire.</p>
-        <p class="mt-4 ps-reveal" style="transition-delay:0.1s">Les connecteurs standards MC4 permettent un branchement rapide, fiable et parfaitement étanche. Ce système garantit une connexion électrique sécurisée, adaptée aux conditions extérieures et aux contraintes des installations photovoltaïques.</p>
-        <p class="mt-4 ps-reveal" style="transition-delay:0.15s">Cette architecture modulaire facilite également la maintenance et améliore la sécurité globale de l'installation. Chaque panneau fonctionne de manière indépendante, ce qui limite les risques électriques et optimise la production.</p>
-        <ul class="mt-6 space-y-2 ps-reveal" style="transition-delay:0.2s">
+        <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Installation simple et connexion sécurisée</h2>
+        <p class="sg-reveal" style="transition-delay:0.05s">Les micro-onduleurs modernes sont conçus pour simplifier au maximum l'installation des systèmes photovoltaïques. Contrairement aux onduleurs centraux, chaque micro-onduleur se connecte directement au panneau solaire.</p>
+        <p class="mt-4 sg-reveal" style="transition-delay:0.1s">Les connecteurs standards MC4 permettent un branchement rapide, fiable et parfaitement étanche. Ce système garantit une connexion électrique sécurisée, adaptée aux conditions extérieures et aux contraintes des installations photovoltaïques.</p>
+        <p class="mt-4 sg-reveal" style="transition-delay:0.15s">Cette architecture modulaire facilite également la maintenance et améliore la sécurité globale de l'installation. Chaque panneau fonctionne de manière indépendante, ce qui limite les risques électriques et optimise la production.</p>
+        <ul class="mt-6 space-y-2 sg-reveal" style="transition-delay:0.2s">
           <li class="flex gap-2"><span class="text-gold">•</span> connexion rapide et sécurisée</li>
           <li class="flex gap-2"><span class="text-gold">•</span> câblage simplifié</li>
           <li class="flex gap-2"><span class="text-gold">•</span> architecture modulaire</li>
           <li class="flex gap-2"><span class="text-gold">•</span> sécurité électrique renforcée</li>
         </ul>
       </div>
-      <div class="ps-reveal ps-reveal-card" style="transition-delay:0.1s">
+      <div class="sg-reveal sg-reveal-card-le" style="transition-delay:0.1s">
         <video autoplay loop muted playsinline preload="auto" class="w-full rounded-xl shadow-lg" aria-label="Démonstration du branchement d'un micro-onduleur ATMOCE avec connecteurs MC4">
           <source src="/assets/videos/atmoce.mp4" type="video/mp4">
           Votre navigateur ne supporte pas la lecture de vidéos.
@@ -135,10 +136,10 @@
 <!-- MICRO-ONDULEUR VS ONDULEUR CENTRAL -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Micro-onduleur vs onduleur central</h2>
-    <p class="mb-6 ps-reveal" style="transition-delay:0.05s">Le choix entre micro-onduleurs et onduleur central dépend de votre toiture, de votre budget et de vos priorités. Voici un comparatif synthétique pour vous aider à y voir clair.</p>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Micro-onduleur vs onduleur central</h2>
+    <p class="mb-6 sg-reveal" style="transition-delay:0.05s">Le choix entre micro-onduleurs et onduleur central dépend de votre toiture, de votre budget et de vos priorités. Voici un comparatif synthétique pour vous aider à y voir clair.</p>
 
-    <div class="overflow-x-auto ps-reveal ps-reveal-card" style="transition-delay:0.1s">
+    <div class="overflow-x-auto sg-reveal sg-reveal-card-le" style="transition-delay:0.1s">
       <table class="w-full border border-gold/25 rounded-xl overflow-hidden">
         <thead>
           <tr class="bg-white/5">
@@ -177,55 +178,55 @@
       </table>
     </div>
 
-    <p class="mt-6 ps-reveal" style="transition-delay:0.15s">Pour en savoir plus sur les onduleurs centraux et leurs cas d'usage, consultez notre page dédiée aux <a href="/produits/onduleurs/" class="text-gold hover:text-gold underline">onduleurs photovoltaïques</a>.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.2s">Le coût d'une installation avec micro-onduleurs est généralement 10 à 20 % plus élevé qu'avec un onduleur central, à puissance égale. Cet écart s'amortit souvent en quelques années grâce aux gains de production, surtout sur toitures complexes. L'argument du monitoring et de la sécurité électrique renforce le choix des micro-onduleurs pour les particuliers soucieux de la fiabilité et du suivi de leur installation.</p>
+    <p class="mt-6 sg-reveal" style="transition-delay:0.15s">Pour en savoir plus sur les onduleurs centraux et leurs cas d'usage, consultez notre page dédiée aux <a href="/produits/onduleurs/" class="text-gold hover:text-gold underline">onduleurs photovoltaïques</a>.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.2s">Le coût d'une installation avec micro-onduleurs est généralement 10 à 20 % plus élevé qu'avec un onduleur central, à puissance égale. Cet écart s'amortit souvent en quelques années grâce aux gains de production, surtout sur toitures complexes. L'argument du monitoring et de la sécurité électrique renforce le choix des micro-onduleurs pour les particuliers soucieux de la fiabilité et du suivi de leur installation.</p>
   </div>
 </section>
 
 <!-- AVANTAGES MICRO-ONDULEURS -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Avantages des micro-onduleurs</h2>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Avantages des micro-onduleurs</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-      <div class="border border-gold/25 rounded-xl p-6 bg-white/5 ps-reveal ps-reveal-card" style="transition-delay:0.1s">
+      <div class="border border-gold/25 rounded-xl p-6 bg-white/5 sg-reveal sg-reveal-card-le" style="transition-delay:0.1s">
         <h3 class="text-lg font-bold text-gold mb-2">Optimisation de chaque panneau</h3>
         <p class="text-neutral-300">Chaque module fonctionne à son point de puissance maximal (MPPT individuel). Aucune perte liée au déséquilibre entre panneaux. Production maximale même avec des orientations ou des inclinaisons différentes.</p>
       </div>
-      <div class="border border-gold/25 rounded-xl p-6 bg-white/5 ps-reveal ps-reveal-card" style="transition-delay:0.2s">
+      <div class="border border-gold/25 rounded-xl p-6 bg-white/5 sg-reveal sg-reveal-card-le" style="transition-delay:0.2s">
         <h3 class="text-lg font-bold text-gold mb-2">Meilleure production en cas d'ombre</h3>
         <p class="text-neutral-300">Un arbre, une cheminée ou une lucarne qui ombrage partiellement un panneau n'impacte que ce module. Les autres continuent à produire normalement. En série, un seul panneau à l'ombre réduirait la production de toute la chaîne.</p>
       </div>
-      <div class="border border-gold/25 rounded-xl p-6 bg-white/5 ps-reveal ps-reveal-card" style="transition-delay:0.3s">
+      <div class="border border-gold/25 rounded-xl p-6 bg-white/5 sg-reveal sg-reveal-card-le" style="transition-delay:0.3s">
         <h3 class="text-lg font-bold text-gold mb-2">Sécurité électrique</h3>
         <p class="text-neutral-300">La tension DC reste limitée au niveau du panneau (environ 40 V). Pas de câblage haute tension sur le toit. Risque d'arc électrique réduit. Conformité et sérénité pour les pompiers en cas d'intervention.</p>
       </div>
-      <div class="border border-gold/25 rounded-xl p-6 bg-white/5 ps-reveal ps-reveal-card" style="transition-delay:0.4s">
+      <div class="border border-gold/25 rounded-xl p-6 bg-white/5 sg-reveal sg-reveal-card-le" style="transition-delay:0.4s">
         <h3 class="text-lg font-bold text-gold mb-2">Évolutivité</h3>
         <p class="text-neutral-300">Ajout de panneaux possible sans modifier l'existant. Chaque micro-onduleur est autonome. Idéal pour les extensions progressives ou les toitures en plusieurs phases.</p>
       </div>
     </div>
-    <p class="mt-6 ps-reveal" style="transition-delay:0.05s">En complément, les micro-onduleurs facilitent le diagnostic en cas de panne : le monitoring indique précisément quel module est concerné. Pas besoin de mesurer chaque panneau manuellement. Le technicien intervient sur le bon équipement, ce qui réduit les délais et les coûts de maintenance.</p>
+    <p class="mt-6 sg-reveal" style="transition-delay:0.05s">En complément, les micro-onduleurs facilitent le diagnostic en cas de panne : le monitoring indique précisément quel module est concerné. Pas besoin de mesurer chaque panneau manuellement. Le technicien intervient sur le bon équipement, ce qui réduit les délais et les coûts de maintenance.</p>
   </div>
 </section>
 
 <!-- MICRO-ONDULEURS ATMOCE – FICHE PRODUIT -->
 <section id="produits-recommandes" class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Micro-onduleurs ATMOCE : performances et compatibilité photovoltaïque</h2>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Micro-onduleurs ATMOCE : performances et compatibilité photovoltaïque</h2>
 
-    <p class="mt-6 text-neutral-300 ps-reveal" style="transition-delay:0.05s">Solarglobe recommande les micro-onduleurs ATMOCE pour leur rendement élevé, leur monitoring panneau par panneau et leur garantie longue durée. Ces micro-onduleurs permettent d'optimiser la production solaire et de sécuriser les installations photovoltaïques résidentielles.</p>
+    <p class="mt-6 text-neutral-300 sg-reveal" style="transition-delay:0.05s">Solarglobe recommande les micro-onduleurs ATMOCE pour leur rendement élevé, leur monitoring panneau par panneau et leur garantie longue durée. Ces micro-onduleurs permettent d'optimiser la production solaire et de sécuriser les installations photovoltaïques résidentielles.</p>
 
     <!-- Bloc produit : image + tableau -->
     <div class="atmoce-produit-grid mt-10">
       <!-- Image micro-onduleur -->
-      <div class="ps-reveal" style="transition-delay:0.1s">
+      <div class="sg-reveal" style="transition-delay:0.1s">
         <figure class="atmoce-produit-img">
           <img src="/assets/images/produits/micro-onduleur-atmoce-mi500.avif" alt="Micro-onduleur ATMOCE – gamme photovoltaïque compatible Solarglobe" class="max-w-[320px] w-full h-auto object-contain" loading="lazy" decoding="async">
         </figure>
       </div>
 
       <!-- Tableau comparatif -->
-      <div class="overflow-x-auto ps-reveal ps-reveal-card" style="transition-delay:0.15s">
+      <div class="overflow-x-auto sg-reveal sg-reveal-card-le" style="transition-delay:0.15s">
         <table class="table-auto w-full text-left border border-gold/25 rounded-xl overflow-hidden atmoce-table">
           <thead>
             <tr class="bg-white/5">
@@ -285,11 +286,11 @@
     </div>
 
     <!-- Texte explicatif pleine largeur -->
-    <p class="mt-10 text-neutral-300 ps-reveal" style="transition-delay:0.2s">Les micro-onduleurs ATMOCE permettent d'optimiser la production solaire panneau par panneau. Chaque micro-onduleur fonctionne indépendamment, ce qui améliore le rendement global de l'installation solaire, notamment en cas d'ombrage partiel ou d'orientations différentes.</p>
-    <p class="mt-4 text-neutral-300 ps-reveal" style="transition-delay:0.25s">Cette architecture modulaire offre également une sécurité électrique renforcée et une grande évolutivité pour les installations photovoltaïques résidentielles.</p>
+    <p class="mt-10 text-neutral-300 sg-reveal" style="transition-delay:0.2s">Les micro-onduleurs ATMOCE permettent d'optimiser la production solaire panneau par panneau. Chaque micro-onduleur fonctionne indépendamment, ce qui améliore le rendement global de l'installation solaire, notamment en cas d'ombrage partiel ou d'orientations différentes.</p>
+    <p class="mt-4 text-neutral-300 sg-reveal" style="transition-delay:0.25s">Cette architecture modulaire offre également une sécurité électrique renforcée et une grande évolutivité pour les installations photovoltaïques résidentielles.</p>
 
     <!-- CTA -->
-    <div class="mt-8 flex flex-wrap gap-3 ps-reveal" style="transition-delay:0.3s">
+    <div class="mt-8 flex flex-wrap gap-3 sg-reveal" style="transition-delay:0.3s">
       <a href="/contact/" class="sg-btn sg-btn-primary">Demander un devis</a>
       <a href="/etude-gratuite/" class="sg-btn sg-btn-outline">Étude solaire gratuite</a>
     </div>
@@ -299,90 +300,90 @@
 <!-- INSTALLATION AVEC MICRO-ONDULEURS -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Installation avec micro-onduleurs</h2>
-    <p class="ps-reveal" style="transition-delay:0.05s">L'installation des micro-onduleurs suit un schéma précis. Chaque micro-onduleur est fixé <strong>sous le panneau</strong>, généralement sur le rail de fixation ou sur un support dédié. Le câblage relie les micro-onduleurs entre eux et au tableau électrique via un câble AC. Plus besoin de câbles DC haute tension sur le toit : la conversion se fait au niveau du panneau.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.1s">Le <strong>câblage</strong> est simplifié : connexion en parallèle des sorties AC, acheminement vers le coffret de protection et le compteur. La pose respecte les normes électriques en vigueur (NF C 15-100, guide UTE). Solarglobe assure une installation conforme et sécurisée.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.15s">Le <strong>monitoring</strong> s'effectue via une passerelle de communication connectée aux micro-onduleurs. Vous suivez la production de chaque panneau en temps réel sur smartphone ou ordinateur. En cas d'anomalie, l'alerte est immédiate.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.2s">La <strong>compatibilité batterie</strong> est assurée : les micro-onduleurs ATMOCE fonctionnent avec nos systèmes de stockage pour maximiser l'autoconsommation. L'énergie excédentaire peut être stockée puis restituée le soir. Pour plus de détails sur notre processus d'installation, consultez notre page <a href="/notre-methode/installation/" class="text-gold hover:text-gold underline">installation solaire</a>.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.25s">La pose des micro-onduleurs nécessite une intervention sur le toit pour fixer chaque unité. L'équipe Solarglobe utilise des équipements de sécurité adaptés (harnais, lignes de vie) et respecte les règles d'accès aux toitures. Le câblage est réalisé dans les règles de l'art, avec des connexions étanches et une mise à la terre conforme. Une fois l'installation terminée, la passerelle de monitoring est configurée et vous recevez l'accès à votre tableau de bord de production.</p>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Installation avec micro-onduleurs</h2>
+    <p class="sg-reveal" style="transition-delay:0.05s">L'installation des micro-onduleurs suit un schéma précis. Chaque micro-onduleur est fixé <strong>sous le panneau</strong>, généralement sur le rail de fixation ou sur un support dédié. Le câblage relie les micro-onduleurs entre eux et au tableau électrique via un câble AC. Plus besoin de câbles DC haute tension sur le toit : la conversion se fait au niveau du panneau.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.1s">Le <strong>câblage</strong> est simplifié : connexion en parallèle des sorties AC, acheminement vers le coffret de protection et le compteur. La pose respecte les normes électriques en vigueur (NF C 15-100, guide UTE). Solarglobe assure une installation conforme et sécurisée.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.15s">Le <strong>monitoring</strong> s'effectue via une passerelle de communication connectée aux micro-onduleurs. Vous suivez la production de chaque panneau en temps réel sur smartphone ou ordinateur. En cas d'anomalie, l'alerte est immédiate.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.2s">La <strong>compatibilité batterie</strong> est assurée : les micro-onduleurs ATMOCE fonctionnent avec nos systèmes de stockage pour maximiser l'autoconsommation. L'énergie excédentaire peut être stockée puis restituée le soir. Pour plus de détails sur notre processus d'installation, consultez notre page <a href="/notre-methode/installation/" class="text-gold hover:text-gold underline">installation solaire</a>.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.25s">La pose des micro-onduleurs nécessite une intervention sur le toit pour fixer chaque unité. L'équipe Solarglobe utilise des équipements de sécurité adaptés (harnais, lignes de vie) et respecte les règles d'accès aux toitures. Le câblage est réalisé dans les règles de l'art, avec des connexions étanches et une mise à la terre conforme. Une fois l'installation terminée, la passerelle de monitoring est configurée et vous recevez l'accès à votre tableau de bord de production.</p>
   </div>
 </section>
 
 <!-- PERFORMANCE ET OPTIMISATION -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Performance et optimisation solaire</h2>
-    <p class="ps-reveal" style="transition-delay:0.05s">La <strong>production panneau par panneau</strong> permet d'extraire le maximum de chaque module. En conditions idéales (toit Sud, pas d'ombre), la différence avec un onduleur central est minime. En conditions réelles – ombrage partiel, orientations multiples, salissure inégale – les micro-onduleurs peuvent gagner 5 à 15 % de production annuelle.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.1s">L'<strong>influence de l'ombrage</strong> est cruciale. Un panneau partiellement ombragé produit moins, mais avec des micro-onduleurs il ne pénalise pas les autres. Avec un onduleur central, toute la chaîne s'adapte au panneau le plus faible. Sur une toiture avec cheminée, arbre ou lucarne, l'écart de production peut être significatif.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.15s">Le <strong>monitoring individuel</strong> permet de détecter rapidement un panneau sous-performant (défaut, ombrage nouveau, salissure). Vous optimisez la maintenance et préservez la rentabilité de votre installation. Solarglobe réalise un <a href="/notre-methode/calpinage/" class="text-gold hover:text-gold underline">calpinage détaillé</a> pour positionner les panneaux de manière optimale et limiter les pertes.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.2s">En Île-de-France et régions limitrophes, une installation de 6 kWc avec micro-onduleurs produit en moyenne 5 700 à 6 600 kWh par an, selon l'orientation et l'ombrage. Les micro-onduleurs permettent de se rapprocher du haut de fourchette même sur des toitures non idéales. L'écart avec une installation en série peut atteindre plusieurs centaines de kWh par an, ce qui représente une économie significative sur la facture d'électricité.</p>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Performance et optimisation solaire</h2>
+    <p class="sg-reveal" style="transition-delay:0.05s">La <strong>production panneau par panneau</strong> permet d'extraire le maximum de chaque module. En conditions idéales (toit Sud, pas d'ombre), la différence avec un onduleur central est minime. En conditions réelles – ombrage partiel, orientations multiples, salissure inégale – les micro-onduleurs peuvent gagner 5 à 15 % de production annuelle.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.1s">L'<strong>influence de l'ombrage</strong> est cruciale. Un panneau partiellement ombragé produit moins, mais avec des micro-onduleurs il ne pénalise pas les autres. Avec un onduleur central, toute la chaîne s'adapte au panneau le plus faible. Sur une toiture avec cheminée, arbre ou lucarne, l'écart de production peut être significatif.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.15s">Le <strong>monitoring individuel</strong> permet de détecter rapidement un panneau sous-performant (défaut, ombrage nouveau, salissure). Vous optimisez la maintenance et préservez la rentabilité de votre installation. Solarglobe réalise un <a href="/notre-methode/calpinage/" class="text-gold hover:text-gold underline">calpinage détaillé</a> pour positionner les panneaux de manière optimale et limiter les pertes.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.2s">En Île-de-France et régions limitrophes, une installation de 6 kWc avec micro-onduleurs produit en moyenne 5 700 à 6 600 kWh par an, selon l'orientation et l'ombrage. Les micro-onduleurs permettent de se rapprocher du haut de fourchette même sur des toitures non idéales. L'écart avec une installation en série peut atteindre plusieurs centaines de kWh par an, ce qui représente une économie significative sur la facture d'électricité.</p>
   </div>
 </section>
 
 <!-- CAS D'USAGE IDÉAUX -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Cas d'usage idéaux pour les micro-onduleurs</h2>
-    <p class="ps-reveal" style="transition-delay:0.05s">Les micro-onduleurs sont particulièrement adaptés aux situations suivantes :</p>
-    <ul class="sg-list-premium sg-list-premium-dark space-y-2 mt-4 ps-reveal" style="transition-delay:0.1s">
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Cas d'usage idéaux pour les micro-onduleurs</h2>
+    <p class="sg-reveal" style="transition-delay:0.05s">Les micro-onduleurs sont particulièrement adaptés aux situations suivantes :</p>
+    <ul class="sg-list-premium sg-list-premium-dark space-y-2 mt-4 sg-reveal" style="transition-delay:0.1s">
       <li><strong>Toitures complexes</strong> : plusieurs pans, lucarnes, cheminées. Chaque zone peut avoir un ensoleillement différent. Les micro-onduleurs optimisent chaque panneau indépendamment.</li>
       <li><strong>Orientations multiples</strong> : panneaux au Sud, à l'Est et à l'Ouest sur la même installation. Un onduleur central subirait des pertes ; les micro-onduleurs gèrent chaque orientation au mieux.</li>
       <li><strong>Zones partiellement ombragées</strong> : arbres, bâtiments voisins, cheminées. Un ou plusieurs panneaux à l'ombre n'affectent pas le reste de l'installation.</li>
       <li><strong>Petites installations résidentielles</strong> : 3 à 6 kWc où chaque kWh compte. L'optimisation individuelle maximise la production et l'autoconsommation.</li>
     </ul>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.15s">Si votre toiture est simple, bien orientée Sud et sans ombrage, un <a href="/produits/onduleurs/" class="text-gold hover:text-gold underline">onduleur central</a> peut suffire. Notre étude gratuite vous aide à choisir la solution la plus adaptée.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay:0.2s">En résumé, les micro-onduleurs s'imposent dès que la toiture présente une complexité : plusieurs pans, ombrages partiels, orientations variées. Pour une maison avec un toit parfaitement exposé au Sud sans obstacle, les deux technologies sont envisageables. Solarglobe analyse votre projet lors de l'étude gratuite et vous recommande la solution la plus performante et la plus rentable pour votre cas.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.15s">Si votre toiture est simple, bien orientée Sud et sans ombrage, un <a href="/produits/onduleurs/" class="text-gold hover:text-gold underline">onduleur central</a> peut suffire. Notre étude gratuite vous aide à choisir la solution la plus adaptée.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay:0.2s">En résumé, les micro-onduleurs s'imposent dès que la toiture présente une complexité : plusieurs pans, ombrages partiels, orientations variées. Pour une maison avec un toit parfaitement exposé au Sud sans obstacle, les deux technologies sont envisageables. Solarglobe analyse votre projet lors de l'étude gratuite et vous recommande la solution la plus performante et la plus rentable pour votre cas.</p>
   </div>
 </section>
 
 <!-- FAQ MICRO-ONDULEURS -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">FAQ micro-onduleurs</h2>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">FAQ micro-onduleurs</h2>
     <div class="sg-faq">
-      <div class="sg-faq-item ps-reveal" style="transition-delay:0.05s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay:0.05s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Qu'est-ce qu'un micro-onduleur solaire ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
         </button>
         <div class="sg-faq-answer hidden">Un micro-onduleur est un petit onduleur installé directement sous chaque panneau solaire. Il convertit l'électricité produite par le panneau en courant alternatif directement au niveau du module.</div>
       </div>
-      <div class="sg-faq-item ps-reveal" style="transition-delay:0.1s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay:0.1s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Quels sont les avantages des micro-onduleurs ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
         </button>
         <div class="sg-faq-answer hidden">Les micro-onduleurs permettent d'optimiser la production de chaque panneau individuellement, ce qui améliore le rendement global de l'installation, notamment en cas d'ombre ou d'orientations différentes.</div>
       </div>
-      <div class="sg-faq-item ps-reveal" style="transition-delay:0.15s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay:0.15s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Les micro-onduleurs sont-ils plus performants ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
         </button>
         <div class="sg-faq-answer hidden">Dans certaines configurations, oui. Les micro-onduleurs peuvent être plus performants lorsque la toiture présente des orientations multiples ou des zones d'ombre partielle.</div>
       </div>
-      <div class="sg-faq-item ps-reveal" style="transition-delay:0.2s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay:0.2s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Combien de micro-onduleurs faut-il pour une installation solaire ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
         </button>
         <div class="sg-faq-answer hidden">En général, il faut un micro-onduleur par panneau solaire. Certains modèles peuvent toutefois gérer deux panneaux selon leur puissance.</div>
       </div>
-      <div class="sg-faq-item ps-reveal" style="transition-delay:0.25s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay:0.25s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Quelle est la durée de vie d'un micro-onduleur ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
         </button>
         <div class="sg-faq-answer hidden">Les micro-onduleurs modernes ont une durée de vie comparable à celle des panneaux solaires et bénéficient souvent d'une garantie de 20 à 25 ans.</div>
       </div>
-      <div class="sg-faq-item ps-reveal" style="transition-delay:0.3s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay:0.3s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Peut-on surveiller chaque panneau individuellement ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
         </button>
         <div class="sg-faq-answer hidden">Oui. Les systèmes équipés de micro-onduleurs permettent de suivre la production de chaque panneau séparément via une application de monitoring.</div>
       </div>
-      <div class="sg-faq-item ps-reveal" style="transition-delay:0.35s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay:0.35s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Micro-onduleur ou onduleur central : lequel choisir ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
@@ -395,7 +396,7 @@
 
 <!-- CTA FINAL -->
 <section id="cta-final" class="sg-cta sg-cta-dark">
-  <div class="sg-container ps-reveal ps-reveal-title">
+  <div class="sg-container sg-reveal sg-reveal-title-le">
     <h2>Estimez votre installation solaire gratuitement</h2>
     <p>Obtenez une étude personnalisée et une simulation précise avec micro-onduleurs adaptés à votre toiture.</p>
     <a href="/etude-gratuite/" class="sg-btn sg-btn-primary">Obtenir mon étude solaire gratuite</a>
@@ -448,18 +449,7 @@ document.querySelectorAll('.sg-faq-item').forEach(item => {
 });
 </script>
 
-<!-- Scroll reveal – IntersectionObserver -->
-<script>
-(function(){
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  const els=document.querySelectorAll('.ps-reveal');
-  if(!els.length)return;
-  const io=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('ps-visible')});
-  },{rootMargin:'0px 0px -8% 0px',threshold:0.05});
-  els.forEach(el=>io.observe(el));
-})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 
 </body>
 </html>

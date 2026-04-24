@@ -21,11 +21,12 @@
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/sg-animations.css" />
   <style>
   .text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}
 
-  /* Scroll reveal – lent, futuriste, premium */
-  .ps-reveal {
+  /* Scroll reveal – lent, futuriste, premium (sg-animations.js → .sg-visible) */
+  .sg-reveal {
     opacity: 0;
     transform: translateY(56px) scale(0.98);
     filter: blur(4px);
@@ -35,19 +36,19 @@
                 filter 2s ease-out,
                 box-shadow 2s ease;
   }
-  .ps-reveal.ps-visible {
+  .sg-reveal.sg-visible {
     opacity: 1;
     transform: translateY(0) scale(1);
     filter: blur(0);
   }
-  .ps-reveal-title.ps-visible {
+  .sg-reveal.sg-reveal-title-le.sg-visible {
     text-shadow: 0 0 40px rgba(195, 152, 71, 0.15);
   }
-  .ps-reveal-card.ps-visible {
+  .sg-reveal.sg-reveal-card-le.sg-visible {
     box-shadow: 0 0 0 1px rgba(195, 152, 71, 0.08);
   }
   @media (prefers-reduced-motion: reduce) {
-    .ps-reveal { transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
+    .sg-reveal { transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
   }
 
   /* Hero batteries : contenu + image, CTAs pleine largeur */
@@ -106,7 +107,7 @@
 <section id="hero-batteries" class="sg-hero-premium relative overflow-hidden">
   <div class="sg-hero-bg" aria-hidden="true"></div>
   <div class="sg-container sg-hero-content flex flex-col lg:flex-row lg:items-center lg:gap-12">
-    <div class="flex-1 ps-reveal ps-reveal-title">
+    <div class="flex-1 sg-reveal sg-reveal-title-le">
       <h1 class="sg-hero-title">Batteries solaires : stocker l'énergie pour consommer votre production</h1>
       <p class="sg-hero-subtitle">Les batteries solaires permettent de stocker l'électricité produite par les panneaux pour l'utiliser plus tard, notamment le soir lorsque la production diminue.</p>
       <p class="text-neutral-400 mt-4 text-base max-w-xl">Elles augmentent l'autoconsommation et permettent de tirer pleinement parti de l'énergie solaire produite par votre installation.</p>
@@ -118,7 +119,7 @@
         <a href="/etude-gratuite/" class="sg-btn sg-btn-primary">Étude solaire gratuite</a>
       </div>
     </div>
-    <div class="flex-1 mt-8 lg:mt-0 flex justify-center ps-reveal" style="transition-delay: 0.2s">
+    <div class="flex-1 mt-8 lg:mt-0 flex justify-center sg-reveal" style="transition-delay: 0.2s">
       <img src="/assets/images/produits/batterie-hero.avif" alt="Batteries solaires photovoltaïques pour stocker l'énergie" class="rounded-xl shadow-lg max-w-md w-full h-auto transition-transform duration-500 hover:scale-[1.02]" loading="eager" />
     </div>
   </div>
@@ -128,12 +129,12 @@
 <!-- 2 — EXPLICATION DU STOCKAGE -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Pourquoi installer une batterie solaire ?</h2>
-    <p class="ps-reveal" style="transition-delay: 0.1s">Dans une installation photovoltaïque classique, l'électricité produite par les <a href="/produits/panneaux-solaires/" class="text-gold hover:text-gold underline">panneaux solaires</a> est consommée directement dans la maison. Lorsque la production dépasse la consommation instantanée, l'énergie est injectée sur le réseau.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay: 0.15s">Une batterie photovoltaïque permet de stocker ce surplus d'électricité afin de l'utiliser plus tard, généralement le soir ou la nuit lorsque les panneaux ne produisent plus.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay: 0.2s">Cette solution permet d'augmenter fortement le taux d'<a href="/le-solaire/autoconsommation-solaire/" class="text-gold hover:text-gold underline">autoconsommation</a> et de réduire les achats d'électricité sur le réseau. Sans batterie, le surplus de production en journée est revendu à un tarif très bas (environ 0,04 €/kWh). Avec une batterie, vous consommez cette énergie le soir au lieu d'acheter au réseau à 0,20–0,25 €/kWh.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay: 0.25s">Les batteries modernes sont désormais capables de gérer intelligemment les flux d'énergie entre la production solaire, la consommation de la maison et le stockage. Elles s'intègrent parfaitement avec les <a href="/produits/onduleurs/" class="text-gold hover:text-gold underline">onduleurs</a> et <a href="/produits/micro-onduleurs/" class="text-gold hover:text-gold underline">micro-onduleurs</a> pour optimiser chaque kilowattheure produit.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay: 0.3s">La technologie lithium-ion utilisée dans les batteries résidentielles offre un excellent rendement de charge et de décharge (souvent supérieur à 90 %), une longue durée de vie (plusieurs milliers de cycles) et une maintenance quasi inexistante. Contrairement aux anciennes batteries au plomb, les batteries lithium-ion supportent des décharges profondes sans dégradation significative. Solarglobe sélectionne des solutions premium pour garantir une fiabilité sur le long terme et une rentabilité optimale de votre installation.</p>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Pourquoi installer une batterie solaire ?</h2>
+    <p class="sg-reveal" style="transition-delay: 0.1s">Dans une installation photovoltaïque classique, l'électricité produite par les <a href="/produits/panneaux-solaires/" class="text-gold hover:text-gold underline">panneaux solaires</a> est consommée directement dans la maison. Lorsque la production dépasse la consommation instantanée, l'énergie est injectée sur le réseau.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay: 0.15s">Une batterie photovoltaïque permet de stocker ce surplus d'électricité afin de l'utiliser plus tard, généralement le soir ou la nuit lorsque les panneaux ne produisent plus.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay: 0.2s">Cette solution permet d'augmenter fortement le taux d'<a href="/le-solaire/autoconsommation-solaire/" class="text-gold hover:text-gold underline">autoconsommation</a> et de réduire les achats d'électricité sur le réseau. Sans batterie, le surplus de production en journée est revendu à un tarif très bas (environ 0,04 €/kWh). Avec une batterie, vous consommez cette énergie le soir au lieu d'acheter au réseau à 0,20–0,25 €/kWh.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay: 0.25s">Les batteries modernes sont désormais capables de gérer intelligemment les flux d'énergie entre la production solaire, la consommation de la maison et le stockage. Elles s'intègrent parfaitement avec les <a href="/produits/onduleurs/" class="text-gold hover:text-gold underline">onduleurs</a> et <a href="/produits/micro-onduleurs/" class="text-gold hover:text-gold underline">micro-onduleurs</a> pour optimiser chaque kilowattheure produit.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay: 0.3s">La technologie lithium-ion utilisée dans les batteries résidentielles offre un excellent rendement de charge et de décharge (souvent supérieur à 90 %), une longue durée de vie (plusieurs milliers de cycles) et une maintenance quasi inexistante. Contrairement aux anciennes batteries au plomb, les batteries lithium-ion supportent des décharges profondes sans dégradation significative. Solarglobe sélectionne des solutions premium pour garantir une fiabilité sur le long terme et une rentabilité optimale de votre installation.</p>
   </div>
 </section>
 
@@ -141,11 +142,11 @@
 <!-- 3 — BATTERIES HUAWEI LUNA -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Huawei LUNA : la batterie solaire intelligente</h2>
-    <figure class="mt-8 mb-8 ps-reveal" style="transition-delay: 0.1s">
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Huawei LUNA : la batterie solaire intelligente</h2>
+    <figure class="mt-8 mb-8 sg-reveal" style="transition-delay: 0.1s">
       <img src="/assets/images/produits/onduleur-batterie-huawei.webp" alt="Onduleur et batterie Huawei LUNA pour installation photovoltaïque" class="rounded-xl w-full max-w-3xl mx-auto shadow-lg" loading="lazy" />
     </figure>
-    <div class="ps-reveal" style="transition-delay: 0.15s">
+    <div class="sg-reveal" style="transition-delay: 0.15s">
       <p>Les batteries Huawei LUNA sont conçues pour fonctionner en parfaite synergie avec les onduleurs Huawei SUN2000. Elles permettent de transformer une installation photovoltaïque classique en véritable système énergétique intelligent.</p>
       <p class="mt-4">La conception modulaire des batteries Huawei permet d'adapter la capacité de stockage en fonction des besoins du foyer. Les modules peuvent être empilés afin d'augmenter progressivement la capacité selon l'évolution de vos besoins ou de votre installation. Cette flexibilité est particulièrement appréciée des foyers qui souhaitent commencer avec une capacité réduite et étendre leur système au fil du temps, par exemple après l'achat d'un véhicule électrique ou l'installation d'une pompe à chaleur.</p>
       <p class="mt-4">Le système de gestion d'énergie Huawei (FusionSolar) permet de suivre en temps réel la production, la consommation et le niveau de charge de la batterie via une application dédiée. Cette transparence aide les utilisateurs à optimiser leurs habitudes de consommation et à maximiser l'autoconsommation.</p>
@@ -172,11 +173,11 @@
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-      <div class="ps-reveal" style="transition-delay: 0.1s">
+      <div class="sg-reveal" style="transition-delay: 0.1s">
         <p>Le système Huawei SUN2000 associé aux batteries LUNA permet de gérer automatiquement les flux d'énergie dans la maison. La vidéo ci-contre illustre le fonctionnement du système en conditions réelles.</p>
         <p class="mt-4">L'électricité produite par les panneaux solaires est d'abord utilisée pour alimenter la maison. Le surplus est stocké dans la batterie afin d'être utilisé plus tard lorsque la production solaire diminue. Cette logique prioritaire (maison → batterie → réseau) maximise l'autoconsommation sans aucune intervention de votre part : tout est géré automatiquement par l'électronique du système.</p>
       </div>
-      <div class="sg-video-wrapper ps-reveal" style="transition-delay: 0.2s">
+      <div class="sg-video-wrapper sg-reveal" style="transition-delay: 0.2s">
         <video autoplay muted loop playsinline>
           <source src="/assets/videos/batterie-huawei.mp4" type="video/mp4">
         </video>
@@ -189,12 +190,12 @@
 <!-- 5 — ÉTANCHÉITÉ HUAWEI -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Une batterie conçue pour durer</h2>
-    <figure class="mt-8 mb-8 ps-reveal" style="transition-delay: 0.1s">
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Une batterie conçue pour durer</h2>
+    <figure class="mt-8 mb-8 sg-reveal" style="transition-delay: 0.1s">
       <img src="/assets/images/produits/batterie-etanche-huawei.webp" alt="Batterie Huawei étanche pour installation intérieure ou extérieure" class="rounded-xl w-full max-w-2xl mx-auto shadow-lg" loading="lazy" />
     </figure>
-    <p class="ps-reveal" style="transition-delay: 0.15s">Les batteries Huawei sont conçues pour fonctionner dans des conditions extérieures exigeantes. Leur conception robuste et leur indice de protection élevé garantissent une excellente résistance à l'humidité, à la poussière et aux variations de température.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay: 0.2s">Cette robustesse permet une installation aussi bien en intérieur qu'en extérieur. Vous pouvez ainsi placer la batterie dans un garage, une cave technique ou à l'extérieur près du tableau électrique, selon la configuration de votre habitation. La durée de vie des batteries Huawei est conçue pour accompagner celle de votre installation photovoltaïque, avec des garanties constructeur alignées sur les standards du secteur.</p>
+    <p class="sg-reveal" style="transition-delay: 0.15s">Les batteries Huawei sont conçues pour fonctionner dans des conditions extérieures exigeantes. Leur conception robuste et leur indice de protection élevé garantissent une excellente résistance à l'humidité, à la poussière et aux variations de température.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay: 0.2s">Cette robustesse permet une installation aussi bien en intérieur qu'en extérieur. Vous pouvez ainsi placer la batterie dans un garage, une cave technique ou à l'extérieur près du tableau électrique, selon la configuration de votre habitation. La durée de vie des batteries Huawei est conçue pour accompagner celle de votre installation photovoltaïque, avec des garanties constructeur alignées sur les standards du secteur.</p>
   </div>
 </section>
 
@@ -202,11 +203,11 @@
 <!-- 6 — BATTERIE ATMOCE -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">ATMOCE : une solution de stockage performante</h2>
-    <figure class="mt-8 mb-8 ps-reveal flex justify-center" style="transition-delay: 0.1s">
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">ATMOCE : une solution de stockage performante</h2>
+    <figure class="mt-8 mb-8 sg-reveal flex justify-center" style="transition-delay: 0.1s">
       <img src="/assets/images/produits/batterie-atmoce.webp" alt="Batterie ATMOCE pour stockage d'énergie solaire résidentiel" class="rounded-xl shadow-lg max-h-[200px] w-auto object-contain" loading="lazy" />
     </figure>
-    <div class="ps-reveal" style="transition-delay: 0.15s">
+    <div class="sg-reveal" style="transition-delay: 0.15s">
       <p>Les batteries ATMOCE représentent une solution moderne et performante pour le stockage d'énergie solaire. Elles sont conçues pour fonctionner avec les systèmes photovoltaïques résidentiels et permettent d'optimiser l'autoconsommation. ATMOCE, partenaire privilégié de Solarglobe, propose des équipements pensés pour une intégration fluide avec les onduleurs et micro-onduleurs de la marque, offrant ainsi une solution cohérente et performante de bout en bout.</p>
       <p class="mt-4">Le design compact des batteries ATMOCE facilite leur installation dans des espaces restreints : garage, local technique, ou même dans un placard dédié. Cette compacité ne se fait pas au détriment des performances : la capacité de 7 kWh convient à la majorité des foyers équipés de panneaux solaires, couvrant typiquement les besoins du soir (éclairage, télévision, électroménager, recharge de téléphones et ordinateurs).</p>
       <p class="mt-4 font-semibold text-gold">Capacité principale : 7 kWh</p>
@@ -225,7 +226,7 @@
 <!-- 7 — VIDÉO ATMOCE (vidéo large centrée) -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <div class="max-w-4xl mx-auto ps-reveal">
+    <div class="max-w-4xl mx-auto sg-reveal">
       <div class="sg-video-wrapper">
         <video autoplay muted loop playsinline>
           <source src="/assets/videos/batterie-atmoce.mp4" type="video/mp4">
@@ -239,12 +240,12 @@
 <!-- 8 — ÉTANCHÉITÉ ATMOCE -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Protection et fiabilité</h2>
-    <figure class="mt-8 mb-8 ps-reveal" style="transition-delay: 0.1s">
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Protection et fiabilité</h2>
+    <figure class="mt-8 mb-8 sg-reveal" style="transition-delay: 0.1s">
       <img src="/assets/images/produits/batterie-atmoce-etanche.webp" alt="Batterie ATMOCE étanche et robuste" class="rounded-xl w-full max-w-2xl mx-auto shadow-lg" loading="lazy" />
     </figure>
-    <p class="ps-reveal" style="transition-delay: 0.15s">Les batteries ATMOCE sont conçues pour offrir une grande fiabilité dans le temps. Leur conception robuste garantit une protection efficace contre les conditions extérieures et permet une installation flexible.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay: 0.2s">Comme les batteries Huawei, les modèles ATMOCE peuvent être installés en intérieur ou en extérieur selon vos contraintes d'espace. Leur design compact facilite l'intégration dans des espaces techniques réduits. La protection contre les intempéries et les variations de température assure une longévité optimale, même dans des environnements exigeants comme un local non chauffé ou une zone exposée aux conditions climatiques.</p>
+    <p class="sg-reveal" style="transition-delay: 0.15s">Les batteries ATMOCE sont conçues pour offrir une grande fiabilité dans le temps. Leur conception robuste garantit une protection efficace contre les conditions extérieures et permet une installation flexible.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay: 0.2s">Comme les batteries Huawei, les modèles ATMOCE peuvent être installés en intérieur ou en extérieur selon vos contraintes d'espace. Leur design compact facilite l'intégration dans des espaces techniques réduits. La protection contre les intempéries et les variations de température assure une longévité optimale, même dans des environnements exigeants comme un local non chauffé ou une zone exposée aux conditions climatiques.</p>
   </div>
 </section>
 
@@ -252,9 +253,9 @@
 <!-- 9 — COMPARAISON DES SOLUTIONS -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Comparaison des solutions</h2>
-    <p class="mb-4 ps-reveal">Voici un tableau comparatif des deux solutions de stockage proposées par Solarglobe pour vous aider à choisir la batterie la plus adaptée à votre installation photovoltaïque. Le choix dépend de votre onduleur existant ou prévu : si vous optez pour un onduleur Huawei SUN2000, la batterie LUNA s'impose pour une compatibilité native. Si votre installation utilise des onduleurs ATMOCE ou d'autres marques compatibles, la batterie ATMOCE offre une excellente alternative. Notre <a href="/notre-methode/etude-solaire/" class="text-gold hover:text-gold underline">étude solaire</a> personnalisée vous oriente vers la solution la plus adaptée à votre projet.</p>
-    <div class="overflow-x-auto ps-reveal">
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Comparaison des solutions</h2>
+    <p class="mb-4 sg-reveal">Voici un tableau comparatif des deux solutions de stockage proposées par Solarglobe pour vous aider à choisir la batterie la plus adaptée à votre installation photovoltaïque. Le choix dépend de votre onduleur existant ou prévu : si vous optez pour un onduleur Huawei SUN2000, la batterie LUNA s'impose pour une compatibilité native. Si votre installation utilise des onduleurs ATMOCE ou d'autres marques compatibles, la batterie ATMOCE offre une excellente alternative. Notre <a href="/notre-methode/etude-solaire/" class="text-gold hover:text-gold underline">étude solaire</a> personnalisée vous oriente vers la solution la plus adaptée à votre projet.</p>
+    <div class="overflow-x-auto sg-reveal">
       <table class="w-full border-collapse border border-gold/30 rounded-xl overflow-hidden">
         <thead>
           <tr class="bg-gold/10">
@@ -290,15 +291,15 @@
 <!-- 10 — AVANTAGES DU STOCKAGE -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Les avantages d'une batterie solaire</h2>
-    <ul class="sg-list-premium sg-list-premium-dark space-y-3 ps-reveal" style="transition-delay: 0.1s">
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Les avantages d'une batterie solaire</h2>
+    <ul class="sg-list-premium sg-list-premium-dark space-y-3 sg-reveal" style="transition-delay: 0.1s">
       <li>• <strong>augmenter l'autoconsommation</strong> : consommez davantage de votre production solaire au lieu de la revendre à bas prix</li>
       <li>• <strong>réduire la facture d'électricité</strong> : moins d'achats au réseau, surtout en soirée et la nuit</li>
       <li>• <strong>utiliser l'énergie solaire le soir</strong> : éclairage, électroménager, recharge de véhicule électrique</li>
       <li>• <strong>sécuriser l'alimentation de la maison</strong> : certains systèmes offrent une alimentation de secours en cas de coupure</li>
       <li>• <strong>préparer l'autonomie énergétique</strong> : une étape vers une maison plus indépendante du réseau</li>
     </ul>
-    <p class="mt-6 ps-reveal" style="transition-delay: 0.15s">L'investissement dans une batterie solaire se rentabilise d'autant plus que votre profil de consommation est décalé par rapport à la production (consommation importante le soir). Les foyers qui travaillent à domicile ou qui sont présents en journée consomment déjà une grande partie de leur production en direct ; la batterie reste néanmoins utile pour lisser les pics et sécuriser l'alimentation. Pour une estimation précise de la rentabilité, demandez une <a href="/etude-gratuite/" class="text-gold hover:text-gold underline">étude solaire gratuite</a> à Solarglobe.</p>
+    <p class="mt-6 sg-reveal" style="transition-delay: 0.15s">L'investissement dans une batterie solaire se rentabilise d'autant plus que votre profil de consommation est décalé par rapport à la production (consommation importante le soir). Les foyers qui travaillent à domicile ou qui sont présents en journée consomment déjà une grande partie de leur production en direct ; la batterie reste néanmoins utile pour lisser les pics et sécuriser l'alimentation. Pour une estimation précise de la rentabilité, demandez une <a href="/etude-gratuite/" class="text-gold hover:text-gold underline">étude solaire gratuite</a> à Solarglobe.</p>
   </div>
 </section>
 
@@ -306,51 +307,51 @@
 <!-- 11 — FAQ -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">FAQ batteries solaires</h2>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">FAQ batteries solaires</h2>
     <div class="sg-faq">
-      <div class="sg-faq-item ps-reveal" style="transition-delay: 0.05s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay: 0.05s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Quelle capacité de batterie solaire choisir ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
         </button>
         <div class="sg-faq-answer hidden">La capacité d'une batterie dépend de la taille de l'installation photovoltaïque et de la consommation du foyer. Pour une maison équipée de panneaux solaires, une batterie de 5 à 10 kWh couvre généralement les besoins du soir et de la nuit.</div>
       </div>
-      <div class="sg-faq-item ps-reveal" style="transition-delay: 0.1s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay: 0.1s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Une batterie solaire permet-elle d'être autonome ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
         </button>
         <div class="sg-faq-answer hidden">Une batterie permet d'augmenter fortement l'autoconsommation, mais dans la majorité des cas une maison reste connectée au réseau électrique. Elle permet surtout de réduire l'achat d'électricité en utilisant l'énergie solaire stockée.</div>
       </div>
-      <div class="sg-faq-item ps-reveal" style="transition-delay: 0.15s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay: 0.15s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Peut-on ajouter une batterie après l'installation des panneaux ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
         </button>
         <div class="sg-faq-answer hidden">Oui. De nombreuses installations photovoltaïques permettent d'ajouter une batterie ultérieurement, notamment avec les onduleurs hybrides Huawei SUN2000 conçus pour intégrer facilement un système de stockage.</div>
       </div>
-      <div class="sg-faq-item ps-reveal" style="transition-delay: 0.2s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay: 0.2s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Combien de temps dure une batterie solaire ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
         </button>
         <div class="sg-faq-answer hidden">La durée de vie dépend de la technologie utilisée et du nombre de cycles de charge. Les batteries modernes lithium-ion ont généralement une durée de vie de 10 à 15 ans.</div>
       </div>
-      <div class="sg-faq-item ps-reveal" style="transition-delay: 0.25s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay: 0.25s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Où installer une batterie photovoltaïque ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
         </button>
         <div class="sg-faq-answer hidden">Une batterie solaire peut être installée dans un garage, un local technique ou parfois à l'extérieur selon son indice de protection. Les modèles modernes sont conçus pour fonctionner dans différentes conditions.</div>
       </div>
-      <div class="sg-faq-item ps-reveal" style="transition-delay: 0.3s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay: 0.3s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Quelle différence entre batterie solaire et batterie virtuelle ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
         </button>
         <div class="sg-faq-answer hidden">Une batterie physique stocke réellement l'énergie dans votre maison. Une batterie virtuelle consiste à stocker votre surplus d'électricité sur le réseau et à le récupérer plus tard via un système contractuel.</div>
       </div>
-      <div class="sg-faq-item ps-reveal" style="transition-delay: 0.35s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay: 0.35s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Les batteries solaires sont-elles sécurisées ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
@@ -364,7 +365,7 @@
 
 <!-- 12 — CTA FINAL -->
 <section class="sg-cta sg-cta-dark">
-  <div class="sg-container ps-reveal ps-reveal-title">
+  <div class="sg-container sg-reveal sg-reveal-title-le">
     <h2>Étudiez votre installation solaire avec batterie</h2>
     <p>Chaque installation photovoltaïque est différente. Une étude personnalisée permet de déterminer la puissance de batterie la plus adaptée à votre consommation et à votre production solaire.</p>
     <div class="flex flex-wrap justify-center gap-4 mt-6">
@@ -409,20 +410,7 @@ document.querySelectorAll('.sg-faq-item').forEach(item => {
 });
 </script>
 
-<!-- Scroll reveal – IntersectionObserver -->
-<script>
-(function() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const els = document.querySelectorAll('.ps-reveal');
-  if (!els.length) return;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('ps-visible');
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  els.forEach(el => io.observe(el));
-})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 
 </body>
 </html>

@@ -18,24 +18,23 @@
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/sg-animations.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}</style>
   <style>
-  .sg-reveal,.ps-reveal{opacity:0;transform:translateY(50px);filter:blur(6px);transition:opacity 1.3s cubic-bezier(0.22,1,0.36,1),transform 1.3s cubic-bezier(0.22,1,0.36,1),filter 1.3s cubic-bezier(0.22,1,0.36,1);will-change:transform,opacity}
-  .sg-reveal.visible,.ps-reveal.ps-visible{opacity:1;transform:translateY(0);filter:blur(0)}
-  .sg-reveal-slow,.ps-reveal-title{transition:opacity 1.6s cubic-bezier(0.22,1,0.36,1),transform 1.6s cubic-bezier(0.22,1,0.36,1),filter 1.6s cubic-bezier(0.22,1,0.36,1)}
-  .ps-reveal-title.ps-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
-  @media (prefers-reduced-motion:reduce){.sg-reveal,.ps-reveal{opacity:1;transform:none;filter:none}}
+  .sg-reveal{opacity:0;transform:translateY(50px);filter:blur(6px);transition:opacity 1.3s cubic-bezier(0.22,1,0.36,1),transform 1.3s cubic-bezier(0.22,1,0.36,1),filter 1.3s cubic-bezier(0.22,1,0.36,1);will-change:transform,opacity}
+  .sg-reveal.sg-visible{opacity:1;transform:translateY(0);filter:blur(0)}
+  .sg-reveal-slow{transition:opacity 1.6s cubic-bezier(0.22,1,0.36,1),transform 1.6s cubic-bezier(0.22,1,0.36,1),filter 1.6s cubic-bezier(0.22,1,0.36,1)}
+  @media (prefers-reduced-motion:reduce){.sg-reveal{opacity:1;transform:none;filter:none}}
   .hero-method{margin-top:0;min-height:55vh;display:flex;align-items:center;justify-content:center;padding:3rem 1.5rem}
   .hero-method::before{content:"";position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(195,152,71,0.18) 0%,transparent 70%);filter:blur(80px);pointer-events:none}
   .sg-flow-calpinage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px 8px;padding:2rem 0}
   .sg-flow-calpinage>div{padding:14px 24px;border-radius:12px;background:rgba(0,0,0,0.65);backdrop-filter:blur(10px);border:1px solid rgba(195,152,71,0.35);font-weight:600;font-size:15px;color:#fff;opacity:0;transform:translateY(20px);transition:opacity 1s,transform 1s}
-  .sg-flow-calpinage>div.ps-visible,.sg-flow-calpinage>div.visible{opacity:1;transform:translateY(0)}
-  .sg-flow-arrow.ps-visible,.sg-flow-arrow.visible{opacity:1}
+  .sg-flow-calpinage>div.sg-visible{opacity:1;transform:translateY(0)}
+  .sg-flow-arrow.sg-visible{opacity:1}
   .sg-flow-calpinage>div:nth-child(1){transition-delay:0.1s}.sg-flow-calpinage>div:nth-child(3){transition-delay:0.25s}.sg-flow-calpinage>div:nth-child(5){transition-delay:0.4s}.sg-flow-calpinage>div:nth-child(7){transition-delay:0.55s}.sg-flow-calpinage>div:nth-child(9){transition-delay:0.75s}
   .sg-flow-calpinage .sg-flow-arrow:nth-child(2){transition-delay:0.18s}.sg-flow-calpinage .sg-flow-arrow:nth-child(4){transition-delay:0.33s}.sg-flow-calpinage .sg-flow-arrow:nth-child(6){transition-delay:0.48s}.sg-flow-calpinage .sg-flow-arrow:nth-child(8){transition-delay:0.63s}
   .sg-flow-calpinage>div.highlight{background:rgba(195,152,71,0.2);border-color:#C39847;color:#C39847;box-shadow:0 0 24px rgba(195,152,71,0.25)}
   .sg-flow-arrow{color:rgba(195,152,71,0.7);font-size:20px;opacity:0;transition:opacity 0.8s ease}
-  .sg-flow-arrow.ps-visible{opacity:1}
   .sg-compare-calpinage{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:900px;margin:0 auto}
   .sg-compare-bad{background:rgba(80,40,40,0.4);backdrop-filter:blur(10px);border:1px solid rgba(220,80,80,0.5);border-radius:16px;padding:1.5rem}
   .sg-compare-bad h3{color:#e07a7a}
@@ -379,24 +378,7 @@
 <div id="footer-placeholder"></div>
 <script src="/assets/js/footer.js"></script>
 
-<script>
-(function(){
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(prefersReduced){
-    document.querySelectorAll('.sg-reveal, .ps-reveal').forEach(el=>{el.classList.add('visible');el.classList.add('ps-visible')});
-    return;
-  }
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      entry.target.classList.add('ps-visible');
-      observer.unobserve(entry.target);
-    });
-  },{threshold:0.15,rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('.sg-reveal, .ps-reveal').forEach(el=>observer.observe(el));
-})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 
 </body>
 </html>

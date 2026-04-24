@@ -45,13 +45,14 @@ f.parentNode.insertBefore(j,f);
 <link rel="stylesheet" href="/assets/css/header-common.css" />
 <link rel="stylesheet" href="/assets/css/footer-common.css" />
 <link rel="stylesheet" href="/assets/css/tailwind.css" />
+<link rel="stylesheet" href="/assets/css/sg-animations.css" />
 
 <style>
   body.menu-open { overflow: hidden; }
   .shadow-gold { box-shadow: 0 0 32px 0 #C39847bb; }
 
-  /* Scroll reveal – lent, futuriste, premium (comme panneaux-solaires.html) */
-  .ps-reveal {
+  /* Scroll reveal – lent, futuriste, premium (sg-animations.js → .sg-visible) */
+  .sg-reveal {
     opacity: 0;
     transform: translateY(56px) scale(0.98);
     filter: blur(4px);
@@ -61,19 +62,19 @@ f.parentNode.insertBefore(j,f);
                 filter 2s ease-out,
                 box-shadow 2s ease;
   }
-  .ps-reveal.ps-visible {
+  .sg-reveal.sg-visible {
     opacity: 1;
     transform: translateY(0) scale(1);
     filter: blur(0);
   }
-  .ps-reveal-title.ps-visible {
+  .sg-reveal.sg-reveal-title-le.sg-visible {
     text-shadow: 0 0 40px rgba(195, 152, 71, 0.15);
   }
-  .ps-reveal-card.ps-visible {
+  .sg-reveal.sg-reveal-card-le.sg-visible {
     box-shadow: 0 0 0 1px rgba(195, 152, 71, 0.08);
   }
   @media (prefers-reduced-motion: reduce) {
-    .ps-reveal { transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
+    .sg-reveal { transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
   }
 
   /* Hero produits : titre collé au header */
@@ -108,7 +109,7 @@ f.parentNode.insertBefore(j,f);
 <section id="hero-produits" class="sg-hero-premium relative overflow-hidden">
   <div class="sg-hero-bg" aria-hidden="true"></div>
   <div class="sg-container text-center sg-hero-content">
-    <div class="ps-reveal ps-reveal-title">
+    <div class="sg-reveal sg-reveal-title-le">
     <h1 class="sg-hero-title">
       Nos produits solaires <span class="sg-text-gold">haut de gamme</span>
     </h1>
@@ -121,24 +122,24 @@ f.parentNode.insertBefore(j,f);
     </div>
 
     <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
-      <div class="text-center ps-reveal ps-reveal-card" style="transition-delay: 0.1s">
+      <div class="text-center sg-reveal sg-reveal-card-le" style="transition-delay: 0.1s">
         <img src="/assets/images/produits/panneaux-hero.avif" alt="Panneaux solaires" class="mx-auto rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
         <h3 class="text-lg font-semibold text-gold mt-4">Panneaux Solaires</h3>
         <p class="text-neutral-300 text-sm">Haute performance pour une production durable.</p>
       </div>
-      <div class="text-center ps-reveal ps-reveal-card" style="transition-delay: 0.2s">
+      <div class="text-center sg-reveal sg-reveal-card-le" style="transition-delay: 0.2s">
         <img src="/assets/images/produits/micro-onduleur-hero.avif" alt="Micro-onduleur" class="mx-auto rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
         <h3 class="text-lg font-semibold text-gold mt-4">Micro-onduleurs</h3>
         <p class="text-neutral-300 text-sm">Optimisation par panneau, idéal sous ombrages.</p>
       </div>
-      <div class="text-center ps-reveal ps-reveal-card" style="transition-delay: 0.3s">
+      <div class="text-center sg-reveal sg-reveal-card-le" style="transition-delay: 0.3s">
         <img src="/assets/images/produits/batterie-hero.avif" alt="Batterie solaire" class="mx-auto rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
         <h3 class="text-lg font-semibold text-gold mt-4">Batterie Solaire</h3>
         <p class="text-neutral-300 text-sm">Stockage pour autonomie et confort énergétique.</p>
       </div>
     </div>
 
-    <div class="sg-hero-cta flex flex-wrap justify-center gap-3 ps-reveal" style="transition-delay: 0.4s">
+    <div class="sg-hero-cta flex flex-wrap justify-center gap-3 sg-reveal" style="transition-delay: 0.4s">
       <a href="/etude-gratuite/" class="sg-btn sg-btn-primary">Obtenir mon étude solaire gratuite</a>
       <a href="#categories-produits" class="sg-btn sg-btn-outline">Explorer les équipements</a>
     </div>
@@ -148,9 +149,9 @@ f.parentNode.insertBefore(j,f);
 <!-- 2. INTRODUCTION HUB COURTE -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Choisir les bons équipements pour son installation solaire</h2>
-    <p class="ps-reveal" style="transition-delay: 0.1s">Une installation photovoltaïque performante repose sur une combinaison adaptée de matériel. Toutes les maisons ne nécessitent pas la même configuration : selon votre consommation, votre toiture et vos objectifs, le dimensionnement varie.</p>
-    <p class="mt-4 ps-reveal" style="transition-delay: 0.15s">Solarglobe structure son offre en quatre familles d'équipements : <strong>panneaux solaires</strong>, <strong>onduleurs</strong>, <strong>micro-onduleurs</strong> et <strong>batteries</strong>. Chaque famille joue un rôle précis dans la production, la conversion et le stockage de l'énergie. Découvrez ci-dessous nos catégories et accédez directement aux pages détaillées.</p>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Choisir les bons équipements pour son installation solaire</h2>
+    <p class="sg-reveal" style="transition-delay: 0.1s">Une installation photovoltaïque performante repose sur une combinaison adaptée de matériel. Toutes les maisons ne nécessitent pas la même configuration : selon votre consommation, votre toiture et vos objectifs, le dimensionnement varie.</p>
+    <p class="mt-4 sg-reveal" style="transition-delay: 0.15s">Solarglobe structure son offre en quatre familles d'équipements : <strong>panneaux solaires</strong>, <strong>onduleurs</strong>, <strong>micro-onduleurs</strong> et <strong>batteries</strong>. Chaque famille joue un rôle précis dans la production, la conversion et le stockage de l'énergie. Découvrez ci-dessous nos catégories et accédez directement aux pages détaillées.</p>
   </div>
 </section>
 
@@ -160,9 +161,9 @@ f.parentNode.insertBefore(j,f);
 <!-- 3. CATÉGORIES PRODUITS (cœur du hub) -->
 <section id="categories-produits" class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Explorez nos équipements</h2>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Explorez nos équipements</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <a href="/produits/panneaux-solaires/" class="sg-card sg-card-dark block p-6 no-underline text-white hover:text-white border border-gold/20 hover:border-gold/40 transition-colors duration-300 ps-reveal ps-reveal-card" style="transition-delay: 0.1s">
+      <a href="/produits/panneaux-solaires/" class="sg-card sg-card-dark block p-6 no-underline text-white hover:text-white border border-gold/20 hover:border-gold/40 transition-colors duration-300 sg-reveal sg-reveal-card-le" style="transition-delay: 0.1s">
         <h3 class="text-lg font-bold text-gold mb-2">Panneaux solaires</h3>
         <p class="text-sm text-neutral-300 mb-4">Panneaux premium haut rendement : LONGi, Aiko et marques sélectionnées pour une production optimale.</p>
         <ul class="text-sm text-neutral-400 space-y-1 mb-4">
@@ -172,7 +173,7 @@ f.parentNode.insertBefore(j,f);
         </ul>
         <span class="inline-block px-4 py-2 rounded-lg border border-gold/50 text-gold text-sm font-semibold hover:bg-gold hover:text-black transition">Découvrir</span>
       </a>
-      <a href="/produits/onduleurs/" class="sg-card sg-card-dark block p-6 no-underline text-white hover:text-white border border-gold/20 hover:border-gold/40 transition-colors duration-300 ps-reveal ps-reveal-card" style="transition-delay: 0.2s">
+      <a href="/produits/onduleurs/" class="sg-card sg-card-dark block p-6 no-underline text-white hover:text-white border border-gold/20 hover:border-gold/40 transition-colors duration-300 sg-reveal sg-reveal-card-le" style="transition-delay: 0.2s">
         <h3 class="text-lg font-bold text-gold mb-2">Onduleurs</h3>
         <p class="text-sm text-neutral-300 mb-4">Conversion DC/AC et pilotage centralisé de l'installation pour une production électrique optimisée.</p>
         <ul class="text-sm text-neutral-400 space-y-1 mb-4">
@@ -182,7 +183,7 @@ f.parentNode.insertBefore(j,f);
         </ul>
         <span class="inline-block px-4 py-2 rounded-lg border border-gold/50 text-gold text-sm font-semibold hover:bg-gold hover:text-black transition">Découvrir</span>
       </a>
-      <a href="/produits/micro-onduleurs/" class="sg-card sg-card-dark block p-6 no-underline text-white hover:text-white border border-gold/20 hover:border-gold/40 transition-colors duration-300 ps-reveal ps-reveal-card" style="transition-delay: 0.3s">
+      <a href="/produits/micro-onduleurs/" class="sg-card sg-card-dark block p-6 no-underline text-white hover:text-white border border-gold/20 hover:border-gold/40 transition-colors duration-300 sg-reveal sg-reveal-card-le" style="transition-delay: 0.3s">
         <h3 class="text-lg font-bold text-gold mb-2">Micro-onduleurs</h3>
         <p class="text-sm text-neutral-300 mb-4">Optimisation par panneau, idéal pour toitures avec ombrages ou multi-orientations.</p>
         <ul class="text-sm text-neutral-400 space-y-1 mb-4">
@@ -192,7 +193,7 @@ f.parentNode.insertBefore(j,f);
         </ul>
         <span class="inline-block px-4 py-2 rounded-lg border border-gold/50 text-gold text-sm font-semibold hover:bg-gold hover:text-black transition">Découvrir</span>
       </a>
-      <a href="/produits/batteries-solaires/" class="sg-card sg-card-dark block p-6 no-underline text-white hover:text-white border border-gold/20 hover:border-gold/40 transition-colors duration-300 ps-reveal ps-reveal-card" style="transition-delay: 0.4s">
+      <a href="/produits/batteries-solaires/" class="sg-card sg-card-dark block p-6 no-underline text-white hover:text-white border border-gold/20 hover:border-gold/40 transition-colors duration-300 sg-reveal sg-reveal-card-le" style="transition-delay: 0.4s">
         <h3 class="text-lg font-bold text-gold mb-2">Batteries solaires</h3>
         <p class="text-sm text-neutral-300 mb-4">Stockage d'énergie pour maximiser l'autoconsommation et gagner en autonomie.</p>
         <ul class="text-sm text-neutral-400 space-y-1 mb-4">
@@ -209,32 +210,32 @@ f.parentNode.insertBefore(j,f);
 <!-- 4. COMMENT CHOISIR VOTRE SYSTÈME (assistant simplifié) -->
 <section id="assistant-choix" class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Quel système pour votre maison ?</h2>
-    <p class="mb-8 text-neutral-200 ps-reveal" style="transition-delay: 0.05s">Solarglobe installe une combinaison performante : panneaux LONGi Hi-MO X10 Explorer ou Aiko Neostar 2S+ et micro-onduleurs ATMOCE. Suivez les étapes ci-dessous pour affiner votre choix selon votre profil.</p>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Quel système pour votre maison ?</h2>
+    <p class="mb-8 text-neutral-200 sg-reveal" style="transition-delay: 0.05s">Solarglobe installe une combinaison performante : panneaux LONGi Hi-MO X10 Explorer ou Aiko Neostar 2S+ et micro-onduleurs ATMOCE. Suivez les étapes ci-dessous pour affiner votre choix selon votre profil.</p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <article class="rounded-2xl border border-gold/25 bg-white/5 p-5 flex flex-col ps-reveal ps-reveal-card" style="transition-delay: 0.1s">
+      <article class="rounded-2xl border border-gold/25 bg-white/5 p-5 flex flex-col sg-reveal sg-reveal-card-le" style="transition-delay: 0.1s">
         <span class="text-[11px] uppercase tracking-wider text-gold/90 font-semibold">Étape 1</span>
         <h3 class="mt-3 text-lg font-bold text-gold">Choisir la puissance (kWc)</h3>
         <p class="mt-2 text-sm text-neutral-300">Basez-vous sur votre consommation annuelle et votre surface de toiture. 3 kWc pour un petit foyer, 6 kWc pour une famille, 9 kWc pour les grandes consommations.</p>
         <a href="/etude-gratuite/" class="mt-4 inline-block px-4 py-2 rounded-lg bg-gold text-black font-semibold text-sm hover:bg-black hover:text-gold border border-gold transition">Voir les packs</a>
       </article>
 
-      <article class="rounded-2xl border border-gold/25 bg-white/5 p-5 flex flex-col ps-reveal ps-reveal-card" style="transition-delay: 0.2s">
+      <article class="rounded-2xl border border-gold/25 bg-white/5 p-5 flex flex-col sg-reveal sg-reveal-card-le" style="transition-delay: 0.2s">
         <span class="text-[11px] uppercase tracking-wider text-gold/90 font-semibold">Étape 2</span>
         <h3 class="mt-3 text-lg font-bold">Autoconsommation sans batterie</h3>
         <p class="mt-2 text-sm text-neutral-300">Meilleur ROI initial. Idéal si vous pouvez déplacer des usages le jour. Micro-onduleurs ATMOCE pour optimiser chaque module.</p>
         <a href="/produits/micro-onduleurs/" class="mt-4 inline-block px-4 py-2 rounded-lg bg-gold text-black font-semibold text-sm hover:bg-black hover:text-gold border border-gold transition">Découvrir les micro-onduleurs</a>
       </article>
 
-      <article class="rounded-2xl border border-gold/25 bg-white/5 p-5 flex flex-col ps-reveal ps-reveal-card" style="transition-delay: 0.3s">
+      <article class="rounded-2xl border border-gold/25 bg-white/5 p-5 flex flex-col sg-reveal sg-reveal-card-le" style="transition-delay: 0.3s">
         <span class="text-[11px] uppercase tracking-wider text-gold/90 font-semibold">Étape 3</span>
         <h3 class="mt-3 text-lg font-bold">Avec batterie – autonomie</h3>
         <p class="mt-2 text-sm text-neutral-300">Pour consommer votre énergie le soir. Capacités 7 à 21 kWh. Recommandé si vos usages sont majoritairement nocturnes.</p>
         <a href="/produits/batteries-solaires/" class="mt-4 inline-block px-4 py-2 rounded-lg bg-gold text-black font-semibold text-sm hover:bg-black hover:text-gold border border-gold transition">Voir les batteries</a>
       </article>
 
-      <article class="rounded-2xl border border-gold/25 bg-white/5 p-5 flex flex-col ps-reveal ps-reveal-card" style="transition-delay: 0.4s">
+      <article class="rounded-2xl border border-gold/25 bg-white/5 p-5 flex flex-col sg-reveal sg-reveal-card-le" style="transition-delay: 0.4s">
         <span class="text-[11px] uppercase tracking-wider text-gold/90 font-semibold">Étape 4</span>
         <h3 class="mt-3 text-lg font-bold">Ombres, multi-pans</h3>
         <p class="mt-2 text-sm text-neutral-300">Les micro-onduleurs ATMOCE optimisent chaque panneau indépendamment. Tolérant aux ombrages partiels et toitures multi-orientations.</p>
@@ -242,7 +243,7 @@ f.parentNode.insertBefore(j,f);
       </article>
     </div>
 
-    <div class="mt-8 rounded-2xl border border-gold/25 bg-white/5 p-5 md:p-6 ps-reveal" style="transition-delay: 0.05s">
+    <div class="mt-8 rounded-2xl border border-gold/25 bg-white/5 p-5 md:p-6 sg-reveal" style="transition-delay: 0.05s">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <h3 class="text-lg font-bold text-gold">Matériel sélectionné par Solarglobe</h3>
@@ -262,21 +263,21 @@ f.parentNode.insertBefore(j,f);
 <!-- 5. POURQUOI SOLARGLOBE SÉLECTIONNE CES TECHNOLOGIES -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Pourquoi Solarglobe sélectionne des équipements premium</h2>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Pourquoi Solarglobe sélectionne des équipements premium</h2>
     <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="border border-gold/20 rounded-xl p-5 bg-white/5 ps-reveal ps-reveal-card" style="transition-delay: 0.1s">
+      <div class="border border-gold/20 rounded-xl p-5 bg-white/5 sg-reveal sg-reveal-card-le" style="transition-delay: 0.1s">
         <h3 class="text-lg font-bold text-gold mb-2">Performance</h3>
         <p class="text-sm text-neutral-300">Nos <a href="/produits/panneaux-solaires/" class="text-gold hover:underline">panneaux</a> et <a href="/produits/micro-onduleurs/" class="text-gold hover:underline">micro-onduleurs</a> offrent un rendement maximal pour produire davantage de kWh par m² installé.</p>
       </div>
-      <div class="border border-gold/20 rounded-xl p-5 bg-white/5 ps-reveal ps-reveal-card" style="transition-delay: 0.2s">
+      <div class="border border-gold/20 rounded-xl p-5 bg-white/5 sg-reveal sg-reveal-card-le" style="transition-delay: 0.2s">
         <h3 class="text-lg font-bold text-gold mb-2">Fiabilité</h3>
         <p class="text-sm text-neutral-300">Équipements testés et éprouvés, résistants aux conditions extrêmes. Une installation durable pour 25 ans et plus.</p>
       </div>
-      <div class="border border-gold/20 rounded-xl p-5 bg-white/5 ps-reveal ps-reveal-card" style="transition-delay: 0.3s">
+      <div class="border border-gold/20 rounded-xl p-5 bg-white/5 sg-reveal sg-reveal-card-le" style="transition-delay: 0.3s">
         <h3 class="text-lg font-bold text-gold mb-2">Garanties longues</h3>
         <p class="text-sm text-neutral-300">Jusqu'à 25 ans sur les panneaux et micro-onduleurs, 15 ans sur les <a href="/produits/batteries-solaires/" class="text-gold hover:underline">batteries</a>. Sérénité sur la durée.</p>
       </div>
-      <div class="border border-gold/20 rounded-xl p-5 bg-white/5 ps-reveal ps-reveal-card" style="transition-delay: 0.4s">
+      <div class="border border-gold/20 rounded-xl p-5 bg-white/5 sg-reveal sg-reveal-card-le" style="transition-delay: 0.4s">
         <h3 class="text-lg font-bold text-gold mb-2">Compatibilité système</h3>
         <p class="text-sm text-neutral-300">Tous nos équipements sont conçus pour fonctionner ensemble : panneaux, onduleurs, micro-onduleurs et batteries.</p>
       </div>
@@ -287,9 +288,9 @@ f.parentNode.insertBefore(j,f);
 <!-- 6. LIENS RAPIDES VERS LES SOUS-PAGES -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Accéder directement à la bonne page</h2>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Accéder directement à la bonne page</h2>
     <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-      <a href="/produits/panneaux-solaires/" class="flex items-center gap-4 p-5 rounded-xl border border-gold/25 bg-white/5 hover:border-gold/50 hover:bg-white/10 transition ps-reveal ps-reveal-card" style="transition-delay: 0.1s">
+      <a href="/produits/panneaux-solaires/" class="flex items-center gap-4 p-5 rounded-xl border border-gold/25 bg-white/5 hover:border-gold/50 hover:bg-white/10 transition sg-reveal sg-reveal-card-le" style="transition-delay: 0.1s">
         <span class="text-2xl">☀️</span>
         <div>
           <h3 class="font-bold text-gold">Je cherche les meilleurs panneaux solaires</h3>
@@ -297,7 +298,7 @@ f.parentNode.insertBefore(j,f);
         </div>
         <svg class="h-5 w-5 text-gold ml-auto shrink-0" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg>
       </a>
-      <a href="/produits/micro-onduleurs/" class="flex items-center gap-4 p-5 rounded-xl border border-gold/25 bg-white/5 hover:border-gold/50 hover:bg-white/10 transition ps-reveal ps-reveal-card" style="transition-delay: 0.2s">
+      <a href="/produits/micro-onduleurs/" class="flex items-center gap-4 p-5 rounded-xl border border-gold/25 bg-white/5 hover:border-gold/50 hover:bg-white/10 transition sg-reveal sg-reveal-card-le" style="transition-delay: 0.2s">
         <span class="text-2xl">⚡</span>
         <div>
           <h3 class="font-bold text-gold">Je veux comprendre micro-onduleurs vs onduleur</h3>
@@ -305,7 +306,7 @@ f.parentNode.insertBefore(j,f);
         </div>
         <svg class="h-5 w-5 text-gold ml-auto shrink-0" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg>
       </a>
-      <a href="/produits/batteries-solaires/" class="flex items-center gap-4 p-5 rounded-xl border border-gold/25 bg-white/5 hover:border-gold/50 hover:bg-white/10 transition ps-reveal ps-reveal-card" style="transition-delay: 0.3s">
+      <a href="/produits/batteries-solaires/" class="flex items-center gap-4 p-5 rounded-xl border border-gold/25 bg-white/5 hover:border-gold/50 hover:bg-white/10 transition sg-reveal sg-reveal-card-le" style="transition-delay: 0.3s">
         <span class="text-2xl">🔋</span>
         <div>
           <h3 class="font-bold text-gold">Je veux stocker mon énergie</h3>
@@ -313,7 +314,7 @@ f.parentNode.insertBefore(j,f);
         </div>
         <svg class="h-5 w-5 text-gold ml-auto shrink-0" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5"/></svg>
       </a>
-      <a href="/etude-gratuite/" class="flex items-center gap-4 p-5 rounded-xl border border-gold/25 bg-white/5 hover:border-gold/50 hover:bg-white/10 transition ps-reveal ps-reveal-card" style="transition-delay: 0.4s">
+      <a href="/etude-gratuite/" class="flex items-center gap-4 p-5 rounded-xl border border-gold/25 bg-white/5 hover:border-gold/50 hover:bg-white/10 transition sg-reveal sg-reveal-card-le" style="transition-delay: 0.4s">
         <span class="text-2xl">🏠</span>
         <div>
           <h3 class="font-bold text-gold">Je veux être guidé selon ma maison</h3>
@@ -328,26 +329,26 @@ f.parentNode.insertBefore(j,f);
 <!-- Pilotage Shelly – bloc résumé -->
 <section class="sg-section sg-section-dark">
   <div class="sg-container text-center">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Pilotage intelligent de votre énergie</h2>
-    <p class="max-w-2xl mx-auto text-neutral-200 ps-reveal" style="transition-delay: 0.1s">Le système Shelly maximise l'utilisation de votre énergie solaire en activant vos équipements (chauffe-eau, borne de recharge, climatisation) lorsque le surplus est disponible. Confort total et économies optimisées.</p>
-    <a href="/etude-gratuite/" class="mt-4 inline-block sg-btn sg-btn-primary ps-reveal" style="transition-delay: 0.2s">Obtenir mon étude solaire gratuite</a>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Pilotage intelligent de votre énergie</h2>
+    <p class="max-w-2xl mx-auto text-neutral-200 sg-reveal" style="transition-delay: 0.1s">Le système Shelly maximise l'utilisation de votre énergie solaire en activant vos équipements (chauffe-eau, borne de recharge, climatisation) lorsque le surplus est disponible. Confort total et économies optimisées.</p>
+    <a href="/etude-gratuite/" class="mt-4 inline-block sg-btn sg-btn-primary sg-reveal" style="transition-delay: 0.2s">Obtenir mon étude solaire gratuite</a>
   </div>
 </section>
 
 <!-- Garanties – 3 cartes simplifiées -->
 <section id="garanties" class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Garanties & conformité</h2>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Garanties & conformité</h2>
     <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
-      <div class="border border-gold/20 rounded-xl p-5 text-center ps-reveal ps-reveal-card" style="transition-delay: 0.1s">
+      <div class="border border-gold/20 rounded-xl p-5 text-center sg-reveal sg-reveal-card-le" style="transition-delay: 0.1s">
         <span class="text-3xl font-bold text-gold">25 ans</span>
         <p class="mt-1 text-neutral-300">Panneaux & micro-onduleurs</p>
       </div>
-      <div class="border border-gold/20 rounded-xl p-5 text-center ps-reveal ps-reveal-card" style="transition-delay: 0.2s">
+      <div class="border border-gold/20 rounded-xl p-5 text-center sg-reveal sg-reveal-card-le" style="transition-delay: 0.2s">
         <span class="text-3xl font-bold text-gold">15 ans</span>
         <p class="mt-1 text-neutral-300">Batteries</p>
       </div>
-      <div class="border border-gold/20 rounded-xl p-5 text-center ps-reveal ps-reveal-card" style="transition-delay: 0.3s">
+      <div class="border border-gold/20 rounded-xl p-5 text-center sg-reveal sg-reveal-card-le" style="transition-delay: 0.3s">
         <span class="text-3xl font-bold text-gold">10 ans</span>
         <p class="mt-1 text-neutral-300">Pose & garantie décennale</p>
       </div>
@@ -356,14 +357,14 @@ f.parentNode.insertBefore(j,f);
 </section>
 
 <!-- BANDEAU DE TRANSITION -->
-<div class="sg-transition-block sg-transition-block-dark ps-reveal"></div>
+<div class="sg-transition-block sg-transition-block-dark sg-reveal"></div>
 
 <!-- 7. FAQ COURTE HUB (3 questions) -->
 <section id="faq-produits" class="sg-section sg-section-dark">
   <div class="sg-container">
-    <h2 class="sg-section-title text-gold ps-reveal ps-reveal-title">Questions sur nos équipements</h2>
+    <h2 class="sg-section-title text-gold sg-reveal sg-reveal-title-le">Questions sur nos équipements</h2>
     <div class="sg-faq">
-      <div class="sg-faq-item ps-reveal" style="transition-delay: 0.05s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay: 0.05s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Quelles marques de panneaux installez-vous ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
@@ -377,7 +378,7 @@ f.parentNode.insertBefore(j,f);
         </button>
         <div class="sg-faq-answer hidden">Les micro-onduleurs optimisent chaque panneau individuellement, idéal pour toitures avec ombrages ou multi-orientations. Consultez notre <a href="/produits/micro-onduleurs/" class="text-gold hover:underline">page micro-onduleurs</a> pour plus de détails.</div>
       </div>
-      <div class="sg-faq-item ps-reveal" style="transition-delay: 0.15s">
+      <div class="sg-faq-item sg-reveal" style="transition-delay: 0.15s">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Une batterie est-elle indispensable ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
@@ -390,7 +391,7 @@ f.parentNode.insertBefore(j,f);
 
 <!-- 8. CTA FINAL -->
 <section id="cta-final" class="sg-cta sg-cta-dark">
-  <div class="sg-container ps-reveal ps-reveal-title">
+  <div class="sg-container sg-reveal sg-reveal-title-le">
     <h2>Faites étudier votre projet solaire</h2>
     <p>Obtenez une étude personnalisée et gratuite par nos experts.</p>
     <a href="/etude-gratuite/" class="sg-btn sg-btn-primary">Obtenir mon étude solaire gratuite</a>
@@ -542,20 +543,7 @@ document.querySelectorAll('.sg-faq-item').forEach(item => {
 });
 </script>
 
-<!-- Scroll reveal – IntersectionObserver (comme panneaux-solaires.html) -->
-<script>
-(function() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const els = document.querySelectorAll('.ps-reveal');
-  if (!els.length) return;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('ps-visible');
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  els.forEach(el => io.observe(el));
-})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 
 </body>
 </html>

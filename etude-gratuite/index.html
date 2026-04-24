@@ -24,11 +24,16 @@
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/sg-animations.css" />
   <link rel="stylesheet" href="/assets/css/etude-gratuite-simulateur.css" />
   <link rel="stylesheet" href="/assets/css/home-google-reviews.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}
   .sg-hero-premium.sg-hero-solaire{padding-top:120px}
   @media (min-width:768px){.sg-hero-premium.sg-hero-solaire{padding-top:120px}}
+  .sg-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
+  .sg-reveal.sg-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+  .sg-reveal.sg-reveal-title-le.sg-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
+  @media (prefers-reduced-motion:reduce){.sg-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
   </style>
 </head>
 <body class="bg-black text-white sg-editorial">
@@ -42,7 +47,7 @@
 <section class="sg-hero-premium sg-hero-solaire">
   <div class="sg-hero-bg" aria-hidden="true"></div>
   <div class="sg-hero-content">
-    <div class="sg-hero-inner ps-reveal ps-reveal-title">
+    <div class="sg-hero-inner sg-reveal sg-reveal-title-le">
       <p class="sg-hero-breadcrumb"><a href="/">Accueil</a> <span aria-hidden="true">/</span> Étude gratuite</p>
       <span class="sg-hero-kicker">Bureau d'étude photovoltaïque</span>
       <h1 class="sg-hero-title">Étude <span class="text-gold">solaire</span> gratuite</h1>
@@ -141,19 +146,7 @@
 </script>
 <script src="/assets/js/etude-gratuite-simulateur.js"></script>
 
-<script>
-(function() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const els = document.querySelectorAll('.ps-reveal');
-  if (!els.length) return;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('ps-visible');
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  els.forEach(el => io.observe(el));
-})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 
 </body>
 </html>

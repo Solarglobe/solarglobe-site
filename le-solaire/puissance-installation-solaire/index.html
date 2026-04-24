@@ -22,12 +22,13 @@
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/sg-animations.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}
-  .ps-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
-  .ps-reveal.ps-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
-  .ps-reveal-title.ps-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
-  .ps-reveal-card.ps-visible{box-shadow:0 0 0 1px rgba(195,152,71,0.08)}
-  @media (prefers-reduced-motion:reduce){.ps-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
+  .sg-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
+  .sg-reveal.sg-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+  .sg-reveal.sg-reveal-title-le.sg-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
+  .sg-reveal.sg-reveal-card-le.sg-visible{box-shadow:0 0 0 1px rgba(195,152,71,0.08)}
+  @media (prefers-reduced-motion:reduce){.sg-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
   </style>
 </head>
 <body class="bg-black text-white sg-editorial">
@@ -43,7 +44,7 @@
 <section class="sg-hero-premium sg-hero-solaire">
   <div class="sg-hero-bg" aria-hidden="true"></div>
   <div class="sg-hero-content">
-    <div class="sg-hero-inner ps-reveal ps-reveal-title">
+    <div class="sg-hero-inner sg-reveal sg-reveal-title-le">
       <nav class="sg-breadcrumb sg-breadcrumb-dark sg-breadcrumb--compact" aria-label="Fil d'Ariane">
         <ol class="sg-breadcrumb-list">
           <li><a href="/">Accueil</a></li>
@@ -69,7 +70,7 @@
 
 <!-- SECTION INTRODUCTION -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <h2 class="sg-section-title text-gold">Introduction</h2>
     <p>On ne choisit pas une puissance au hasard. On vise un <strong>taux d'autoconsommation élevé</strong> sans brider la production utile. Le bon choix dépend de vos horaires, de vos usages (PAC, ballon ECS, borne EV), et de votre toit.</p>
     <p class="mt-4">Chez Solarglobe, nous privilégions les modules <a href="/produits/panneaux-solaires/" class="text-gold hover:text-gold underline">LONGi Hi-MO X10 Explorer et Aiko Neostar 2S+</a> (jusqu'à 25 % de rendement grâce à la technologie all back contact) montés sur micro-onduleurs. Objectif : une production stable, durable — et une puissance adaptée à votre profil de consommation.</p>
@@ -78,7 +79,7 @@
 
 <!-- SECTION COMPRENDRE -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <h2 class="sg-section-title text-gold">Comprendre le dimensionnement</h2>
     <p>La méthode Solarglobe repose sur cinq étapes :</p>
     <ol class="sg-list-premium sg-list-premium-dark space-y-2 mt-4">
@@ -93,7 +94,7 @@
 
 <!-- SECTION FONCTIONNEMENT -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <h2 class="sg-section-title text-gold">Comment cela fonctionne : 6 kWc vs 9 kWc</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
       <div class="sg-card sg-card-dark p-6">
@@ -123,7 +124,7 @@
 
 <!-- SECTION SURFACE -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <h2 class="sg-section-title text-gold">Surface, calepinage et contraintes de toit</h2>
     <p>Le dimensionnement réel dépend de la surface utile (hors chemin de circulation, aérations, velux), de l'orientation, de l'inclinaison et des ombrages. Nous calepinons votre toit et validons la faisabilité.</p>
     <div class="sg-card sg-card-dark p-6 mt-6 overflow-x-auto">
@@ -147,7 +148,7 @@
 
 <!-- SECTION USAGES -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <h2 class="sg-section-title text-gold">Usages clés : PAC, eau chaude, borne EV</h2>
     <ul class="sg-list-premium sg-list-premium-dark space-y-2">
       <li><strong>PAC</strong> : ajoute une base conso significative l'hiver. 9 kWc se justifie si la maison est souvent occupée en journée, sinon 6 kWc + pilotage peut suffire.</li>
@@ -159,7 +160,7 @@
 
 <!-- SECTION PRODUCTION -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <h2 class="sg-section-title text-gold">Production estimative et saisonnalité</h2>
     <p>À titre indicatif en Nord/Île-de-France, avec modules haut rendement bien orientés :</p>
     <div class="sg-card sg-card-dark p-6 mt-6 overflow-x-auto">
@@ -184,7 +185,7 @@
 
 <!-- SECTION AVANTAGES ET LIMITES -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <h2 class="sg-section-title text-gold">Avantages et limites</h2>
     <h3 class="sg-section-subtitle text-gold mt-6 mb-2">Faut-il une batterie ?</h3>
     <p>Ça dépend de vos soirées. Si votre consommation majeure est la nuit (famille tardive, chauffage d'appoint nocturne, véhicule EV la nuit), une batterie peut augmenter l'autoconsommation. Sinon, commencez sans : 6 kWc ou 9 kWc bien pilotés font déjà le job. On dimensionne au cas par cas pendant l'<a href="/etude-gratuite/" class="text-gold hover:text-gold underline">étude gratuite</a>.</p>
@@ -193,7 +194,7 @@
 
 <!-- SECTION FAQ -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <h2 class="sg-section-title text-gold">Questions fréquentes</h2>
     <div class="sg-faq">
       <div class="sg-faq-item">
@@ -223,7 +224,7 @@
 
 <!-- CTA FINAL UNIFIÉ -->
 <section class="sg-cta-editorial">
-  <div class="sg-cta-inner ps-reveal ps-reveal-title">
+  <div class="sg-cta-inner sg-reveal sg-reveal-title-le">
     <h2>Passez à l'énergie solaire</h2>
     <p>Nos experts réalisent gratuitement l'étude de votre toiture et estiment vos économies.</p>
     <a href="/etude-gratuite/" class="sg-btn-cta-primary">Obtenir mon étude solaire gratuite</a>
@@ -248,8 +249,6 @@ document.querySelectorAll('.sg-faq-item').forEach(item => {
   });
 });
 </script>
-<script>
-(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const els=document.querySelectorAll('.ps-reveal');if(!els.length)return;const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('ps-visible')})},{rootMargin:'0px 0px -8% 0px',threshold:0.05});els.forEach(el=>io.observe(el))})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 </body>
 </html>

@@ -22,12 +22,13 @@
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/sg-animations.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}
-  .ps-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
-  .ps-reveal.ps-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
-  .ps-reveal-title.ps-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
-  .ps-reveal-card.ps-visible{box-shadow:0 0 0 1px rgba(195,152,71,0.08)}
-  @media (prefers-reduced-motion:reduce){.ps-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
+  .sg-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
+  .sg-reveal.sg-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+  .sg-reveal.sg-reveal-title-le.sg-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
+  .sg-reveal.sg-reveal-card-le.sg-visible{box-shadow:0 0 0 1px rgba(195,152,71,0.08)}
+  @media (prefers-reduced-motion:reduce){.sg-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
   </style>
 </head>
 <body class="bg-black text-white sg-editorial">
@@ -42,7 +43,7 @@
 <section class="sg-hero-premium sg-hero-solaire">
   <div class="sg-hero-bg" aria-hidden="true"></div>
   <div class="sg-hero-content">
-    <div class="sg-hero-inner ps-reveal ps-reveal-title">
+    <div class="sg-hero-inner sg-reveal sg-reveal-title-le">
       <nav class="sg-breadcrumb sg-breadcrumb-dark sg-breadcrumb--compact" aria-label="Fil d'Ariane">
         <ol class="sg-breadcrumb-list">
           <li><a href="/">Accueil</a></li>
@@ -68,7 +69,7 @@
 
 <!-- INTRODUCTION -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable mb-12">
       <span class="sg-section-kicker">Les aides en 2025</span>
       <h2 class="sg-section-title">Ce qu'il faut savoir sur les aides</h2>
@@ -86,7 +87,7 @@
 
 <!-- PRIME À L'AUTOCONSOMMATION -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable">
       <span class="sg-section-kicker">Prime à l'autoconsommation</span>
       <h2 class="sg-section-title">Barème 2025</h2>
@@ -137,7 +138,7 @@
 
 <!-- VENTE DU SURPLUS -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable">
       <span class="sg-section-kicker">Vente du surplus</span>
       <h2 class="sg-section-title">Tarif 2025</h2>
@@ -151,7 +152,7 @@
 
 <!-- TVA RÉDUITE -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable">
       <span class="sg-section-kicker">TVA réduite</span>
       <h2 class="sg-section-title">TVA à 5,5 % (≤ 9 kWc)</h2>
@@ -165,7 +166,7 @@
 
 <!-- FISCALITÉ -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable">
       <span class="sg-section-kicker">Fiscalité</span>
       <h2 class="sg-section-title">Revenus de revente</h2>
@@ -182,7 +183,7 @@
 
 <!-- AIDES LOCALES -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable">
       <span class="sg-section-kicker">Aides locales</span>
       <h2 class="sg-section-title">Collectivités</h2>
@@ -195,7 +196,7 @@
 
 <!-- FAUT-IL COMPTER SUR LES AIDES ? -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable">
       <span class="sg-section-kicker">Rentabilité</span>
       <h2 class="sg-section-title">Faut-il compter sur les aides pour rentabiliser ?</h2>
@@ -213,7 +214,7 @@
 
 <!-- OPTIMISER VOTRE PROJET -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable">
       <span class="sg-section-kicker">Optimisation</span>
       <h2 class="sg-section-title">Optimiser votre projet</h2>
@@ -234,7 +235,7 @@
 
 <!-- FAQ -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable mb-8">
       <span class="sg-section-kicker">Questions fréquentes</span>
       <h2 class="sg-section-title">Réponses à vos questions</h2>
@@ -295,7 +296,7 @@
 
 <!-- CTA FINAL UNIFIÉ -->
 <section class="sg-cta-editorial">
-  <div class="sg-cta-inner ps-reveal ps-reveal-title">
+  <div class="sg-cta-inner sg-reveal sg-reveal-title-le">
     <h2>Passez à l'énergie solaire</h2>
     <p>Nos experts réalisent gratuitement l'étude de votre toiture et estiment vos économies.</p>
     <a href="/etude-gratuite/" class="sg-btn-cta-primary">Obtenir mon étude solaire gratuite</a>
@@ -320,8 +321,6 @@ document.querySelectorAll('.sg-faq-item').forEach(item => {
   });
 });
 </script>
-<script>
-(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const els=document.querySelectorAll('.ps-reveal');if(!els.length)return;const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('ps-visible')})},{rootMargin:'0px 0px -8% 0px',threshold:0.05});els.forEach(el=>io.observe(el))})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 </body>
 </html>

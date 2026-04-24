@@ -18,10 +18,11 @@
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/sg-animations.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}</style>
   <style>
-  /* Scroll reveal – comme produits/index.html */
-  .ps-reveal {
+  /* Scroll reveal unifié (sg-animations.js → .sg-visible) */
+  .sg-reveal {
     opacity: 0;
     transform: translateY(56px) scale(0.98);
     filter: blur(4px);
@@ -31,23 +32,33 @@
                 filter 2s ease-out,
                 box-shadow 2s ease;
   }
-  .ps-reveal.ps-visible {
+  .sg-reveal.sg-visible {
     opacity: 1;
     transform: translateY(0) scale(1);
     filter: blur(0);
   }
-  .ps-reveal-title.ps-visible {
+  .sg-reveal.sg-reveal-title-le.sg-visible {
     text-shadow: 0 0 40px rgba(195, 152, 71, 0.15);
   }
-  .ps-reveal-card.ps-visible {
+  .sg-reveal.sg-reveal-card-le.sg-visible {
     box-shadow: 0 0 0 1px rgba(195, 152, 71, 0.08);
   }
   @media (prefers-reduced-motion: reduce) {
-    .ps-reveal { transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
+    .sg-reveal { transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
   }
-  .sg-reveal{opacity:0;transform:translateY(40px);transition:opacity 1.2s cubic-bezier(0.22,1,0.36,1),transform 1.2s cubic-bezier(0.22,1,0.36,1)}
-  .sg-reveal.visible{opacity:1;transform:translateY(0)}
-  @media (prefers-reduced-motion:reduce){.sg-reveal{opacity:1;transform:none}}
+  .hero-method .sg-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: none;
+    transition: opacity 1.2s cubic-bezier(0.22,1,0.36,1), transform 1.2s cubic-bezier(0.22,1,0.36,1);
+  }
+  .hero-method .sg-reveal.sg-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion:reduce) {
+    .hero-method .sg-reveal { opacity: 1 !important; transform: none !important; }
+  }
   .hero-method{margin-top:0;min-height:55vh;display:flex;align-items:center;justify-content:center;padding:3rem 1.5rem}
   .hero-method::before{content:"";position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(195,152,71,0.18) 0%,transparent 70%);filter:blur(80px);pointer-events:none}
   .sg-card-dim{background:rgba(0,0,0,0.6);backdrop-filter:blur(12px);border:1px solid rgba(195,152,71,0.4);transition:transform 0.8s cubic-bezier(0.22,1,0.36,1),box-shadow 0.6s ease,border-color 0.5s ease}
@@ -58,12 +69,12 @@
   .sg-card-dim.sg-good:hover{box-shadow:0 0 56px rgba(195,152,71,0.3)}
   .sg-flow{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px 8px;padding:2rem 0}
   .sg-flow>div{padding:14px 24px;border-radius:12px;background:rgba(0,0,0,0.65);backdrop-filter:blur(10px);border:1px solid rgba(195,152,71,0.35);font-weight:600;font-size:15px;color:#fff;opacity:0;transform:translateY(20px);transition:opacity 1s,transform 1s}
-  .sg-flow>div.ps-visible{opacity:1;transform:translateY(0)}
+  .sg-flow>div.sg-visible{opacity:1;transform:translateY(0)}
   .sg-flow>div:nth-child(1){transition-delay:0.1s}.sg-flow>div:nth-child(3){transition-delay:0.25s}.sg-flow>div:nth-child(5){transition-delay:0.4s}.sg-flow>div:nth-child(7){transition-delay:0.55s}.sg-flow>div:nth-child(9){transition-delay:0.75s}
   .sg-flow-arrow:nth-child(2){transition-delay:0.18s}.sg-flow-arrow:nth-child(4){transition-delay:0.33s}.sg-flow-arrow:nth-child(6){transition-delay:0.48s}.sg-flow-arrow:nth-child(8){transition-delay:0.63s}
   .sg-flow>div.highlight{background:rgba(195,152,71,0.2);border-color:#C39847;color:#C39847;box-shadow:0 0 24px rgba(195,152,71,0.25)}
   .sg-flow-arrow{color:rgba(195,152,71,0.7);font-size:20px;opacity:0;transition:opacity 0.8s ease}
-  .sg-flow-arrow.ps-visible{opacity:1}
+  .sg-flow-arrow.sg-visible{opacity:1}
   .sg-scenarios{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:1.5rem}
   .sg-scenarios>div{padding:16px 28px;border-radius:14px;background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);border:1px solid rgba(195,152,71,0.4);font-weight:600;color:#fff;transition:all 0.5s ease}
   .sg-scenarios>div:hover{border-color:rgba(195,152,71,0.7);box-shadow:0 0 32px rgba(195,152,71,0.2)}
@@ -120,14 +131,14 @@
 <!-- BLOC SIGNATURE — TROUVER LA BONNE PUISSANCE -->
 <section class="relative bg-[#0a0a0a] py-20 md:py-28">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="ps-reveal ps-reveal-title text-3xl md:text-4xl font-bold text-white text-center mb-4">
+    <h2 class="sg-reveal sg-reveal-title-le text-3xl md:text-4xl font-bold text-white text-center mb-4">
       Trouver la bonne puissance, c&rsquo;&eacute;viter 80&nbsp;% des erreurs
     </h2>
-    <p class="ps-reveal text-neutral-300 text-center max-w-2xl mx-auto mb-12 text-lg">
+    <p class="sg-reveal text-neutral-300 text-center max-w-2xl mx-auto mb-12 text-lg">
       Un mauvais dimensionnement peut ruiner la rentabilit&eacute; d&rsquo;un projet solaire.
     </p>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="ps-reveal sg-card-dim sg-bad rounded-2xl p-6 backdrop-blur-sm" style="transition-delay: 0.05s">
+      <div class="sg-reveal sg-card-dim sg-bad rounded-2xl p-6 backdrop-blur-sm" style="transition-delay: 0.05s">
         <h3 class="text-lg font-bold mb-4">Trop petit</h3>
         <ul class="space-y-2 text-neutral-300 text-sm">
           <li>&bull; Pas assez d&rsquo;&eacute;conomies</li>
@@ -135,7 +146,7 @@
           <li>&bull; Rentabilit&eacute; limit&eacute;e</li>
         </ul>
       </div>
-      <div class="ps-reveal sg-card-dim sg-good rounded-2xl p-6 backdrop-blur-sm" style="transition-delay: 0.15s">
+      <div class="sg-reveal sg-card-dim sg-good rounded-2xl p-6 backdrop-blur-sm" style="transition-delay: 0.15s">
         <h3 class="text-lg font-bold text-gold mb-4">Dimensionnement optimal</h3>
         <ul class="space-y-2 text-neutral-200 text-sm">
           <li>&bull; Production &eacute;quilibr&eacute;e</li>
@@ -143,7 +154,7 @@
           <li>&bull; ROI maximis&eacute;</li>
         </ul>
       </div>
-      <div class="ps-reveal sg-card-dim sg-bad rounded-2xl p-6 backdrop-blur-sm" style="transition-delay: 0.25s">
+      <div class="sg-reveal sg-card-dim sg-bad rounded-2xl p-6 backdrop-blur-sm" style="transition-delay: 0.25s">
         <h3 class="text-lg font-bold mb-4">Trop grand</h3>
         <ul class="space-y-2 text-neutral-300 text-sm">
           <li>&bull; Surplus mal valoris&eacute;</li>
@@ -160,11 +171,11 @@
 <!-- SECTION 2 — POURQUOI LE DIMENSIONNEMENT EST DÉCISIF -->
 <section class="relative bg-[#0a0a0a] py-20 md:py-28">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="ps-reveal ps-reveal-title text-3xl md:text-4xl font-bold text-white text-center mb-16">
+    <h2 class="sg-reveal sg-reveal-title-le text-3xl md:text-4xl font-bold text-white text-center mb-16">
       Pourquoi le dimensionnement ne doit jamais &ecirc;tre approximatif
     </h2>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
-      <div class="ps-reveal flex flex-col gap-6" style="transition-delay: 0.05s">
+      <div class="sg-reveal flex flex-col gap-6" style="transition-delay: 0.05s">
         <p class="text-neutral-200 leading-relaxed text-base md:text-lg font-medium">
           La plupart des installations en France sont mal dimensionn&eacute;es.
           Soit volontairement, soit par manque d&rsquo;analyse.
@@ -183,15 +194,15 @@
         </p>
       </div>
       <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="ps-reveal ps-reveal-card rounded-2xl bg-[#0f0f0f]/80 backdrop-blur-sm p-6 border border-gold/30 shadow-[0_0_24px_rgba(195,152,71,0.08)] hover:shadow-[0_0_36px_rgba(195,152,71,0.18)] hover:border-gold/50 transition-all duration-300" style="transition-delay: 0.1s">
+        <div class="sg-reveal sg-reveal-card-le rounded-2xl bg-[#0f0f0f]/80 backdrop-blur-sm p-6 border border-gold/30 shadow-[0_0_24px_rgba(195,152,71,0.08)] hover:shadow-[0_0_36px_rgba(195,152,71,0.18)] hover:border-gold/50 transition-all duration-300" style="transition-delay: 0.1s">
           <h3 class="text-lg font-bold text-gold mb-3">Puissance utile</h3>
           <p class="text-neutral-300 text-sm leading-relaxed">La puissance en kWc correspondant r&eacute;ellement &agrave; vos besoins et &agrave; votre toiture.</p>
         </div>
-        <div class="ps-reveal ps-reveal-card rounded-2xl bg-[#0f0f0f]/80 backdrop-blur-sm p-6 border border-gold/30 shadow-[0_0_24px_rgba(195,152,71,0.08)] hover:shadow-[0_0_36px_rgba(195,152,71,0.18)] hover:border-gold/50 transition-all duration-300" style="transition-delay: 0.15s">
+        <div class="sg-reveal sg-reveal-card-le rounded-2xl bg-[#0f0f0f]/80 backdrop-blur-sm p-6 border border-gold/30 shadow-[0_0_24px_rgba(195,152,71,0.08)] hover:shadow-[0_0_36px_rgba(195,152,71,0.18)] hover:border-gold/50 transition-all duration-300" style="transition-delay: 0.15s">
           <h3 class="text-lg font-bold text-gold mb-3">Production r&eacute;aliste</h3>
           <p class="text-neutral-300 text-sm leading-relaxed">Une estimation de production bas&eacute;e sur des donn&eacute;es r&eacute;elles, pas des hypoth&egrave;ses optimistes.</p>
         </div>
-        <div class="ps-reveal ps-reveal-card rounded-2xl bg-[#0f0f0f]/80 backdrop-blur-sm p-6 border border-gold/30 shadow-[0_0_24px_rgba(195,152,71,0.08)] hover:shadow-[0_0_36px_rgba(195,152,71,0.18)] hover:border-gold/50 transition-all duration-300" style="transition-delay: 0.2s">
+        <div class="sg-reveal sg-reveal-card-le rounded-2xl bg-[#0f0f0f]/80 backdrop-blur-sm p-6 border border-gold/30 shadow-[0_0_24px_rgba(195,152,71,0.08)] hover:shadow-[0_0_36px_rgba(195,152,71,0.18)] hover:border-gold/50 transition-all duration-300" style="transition-delay: 0.2s">
           <h3 class="text-lg font-bold text-gold mb-3">Investissement coh&eacute;rent</h3>
           <p class="text-neutral-300 text-sm leading-relaxed">Un co&ucirc;t align&eacute; avec la valeur r&eacute;elle de l&rsquo;installation et votre profil.</p>
         </div>
@@ -205,19 +216,19 @@
 <!-- MINI SCHÉMA — COMMENT ON DÉTERMINE LA BONNE PUISSANCE -->
 <section class="relative bg-black py-20 md:py-28">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="ps-reveal ps-reveal-title text-3xl md:text-4xl font-bold text-white text-center mb-4">
+    <h2 class="sg-reveal sg-reveal-title-le text-3xl md:text-4xl font-bold text-white text-center mb-4">
       Comment on d&eacute;termine la bonne puissance
     </h2>
     <div class="sg-flow">
-      <div class="ps-reveal">Consommation</div>
-      <span class="sg-flow-arrow ps-reveal" aria-hidden="true">&#8594;</span>
-      <div class="ps-reveal">Surface toiture</div>
-      <span class="sg-flow-arrow ps-reveal" aria-hidden="true">&#8594;</span>
-      <div class="ps-reveal">Orientation</div>
-      <span class="sg-flow-arrow ps-reveal" aria-hidden="true">&#8594;</span>
-      <div class="ps-reveal">Objectif</div>
-      <span class="sg-flow-arrow ps-reveal" aria-hidden="true">&#8594;</span>
-      <div class="ps-reveal highlight">Puissance finale</div>
+      <div class="sg-reveal">Consommation</div>
+      <span class="sg-flow-arrow sg-reveal" aria-hidden="true">&#8594;</span>
+      <div class="sg-reveal">Surface toiture</div>
+      <span class="sg-flow-arrow sg-reveal" aria-hidden="true">&#8594;</span>
+      <div class="sg-reveal">Orientation</div>
+      <span class="sg-flow-arrow sg-reveal" aria-hidden="true">&#8594;</span>
+      <div class="sg-reveal">Objectif</div>
+      <span class="sg-flow-arrow sg-reveal" aria-hidden="true">&#8594;</span>
+      <div class="sg-reveal highlight">Puissance finale</div>
     </div>
   </div>
 </section>
@@ -227,11 +238,11 @@
 <!-- SECTION 3 — COMMENT DÉTERMINER LA BONNE PUISSANCE (DÉTAILS) -->
 <section class="relative bg-[#0a0a0a] py-20 md:py-28">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="ps-reveal ps-reveal-title text-3xl md:text-4xl font-bold text-white text-center mb-16">
+    <h2 class="sg-reveal sg-reveal-title-le text-3xl md:text-4xl font-bold text-white text-center mb-16">
       Les crit&egrave;res qui d&eacute;finissent votre puissance
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-      <div class="ps-reveal ps-reveal-card sg-card-dim rounded-2xl p-8 backdrop-blur-sm" style="transition-delay: 0.05s">
+      <div class="sg-reveal sg-reveal-card-le sg-card-dim rounded-2xl p-8 backdrop-blur-sm" style="transition-delay: 0.05s">
         <h3 class="text-xl font-bold text-gold mb-4">Consommation du foyer</h3>
         <p class="text-neutral-200 leading-relaxed">
           Votre consommation &eacute;lectrique annuelle (en kWh) est le premier crit&egrave;re. Nous analysons
@@ -239,7 +250,7 @@
           une part significative de vos besoins sans produire un surplus excessif.
         </p>
       </div>
-      <div class="ps-reveal sg-card-dim rounded-2xl p-8 backdrop-blur-sm">
+      <div class="sg-reveal sg-card-dim rounded-2xl p-8 backdrop-blur-sm">
         <h3 class="text-xl font-bold text-gold mb-4">Surface r&eacute;ellement exploitable</h3>
         <p class="text-neutral-200 leading-relaxed">
           La surface de toiture disponible, d&eacute;duction faite des zones d&rsquo;ombrage, des chemin&eacute;es
@@ -247,7 +258,7 @@
           Une toiture limit&eacute;e impose un dimensionnement pr&eacute;cis.
         </p>
       </div>
-      <div class="ps-reveal ps-reveal-card sg-card-dim rounded-2xl p-8 backdrop-blur-sm" style="transition-delay: 0.15s">
+      <div class="sg-reveal sg-reveal-card-le sg-card-dim rounded-2xl p-8 backdrop-blur-sm" style="transition-delay: 0.15s">
         <h3 class="text-xl font-bold text-gold mb-4">Orientation et inclinaison</h3>
         <p class="text-neutral-200 leading-relaxed">
           L&rsquo;orientation (sud, sud-ouest, sud-est) et l&rsquo;inclinaison de votre toiture influencent
@@ -255,7 +266,7 @@
           nous ajustons la puissance en cons&eacute;quence.
         </p>
       </div>
-      <div class="ps-reveal ps-reveal-card sg-card-dim rounded-2xl p-8 backdrop-blur-sm" style="transition-delay: 0.2s">
+      <div class="sg-reveal sg-reveal-card-le sg-card-dim rounded-2xl p-8 backdrop-blur-sm" style="transition-delay: 0.2s">
         <h3 class="text-xl font-bold text-gold mb-4">Objectif &eacute;conomique du projet</h3>
         <p class="text-neutral-200 leading-relaxed">
           Autoconsommation pure, revente du surplus, batterie&nbsp;: vos objectifs d&eacute;finissent
@@ -272,19 +283,19 @@
 <!-- SECTION ERREURS — LES ERREURS DE DIMENSIONNEMENT LES PLUS FRÉQUENTES -->
 <section class="relative bg-black py-20 md:py-28">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="ps-reveal ps-reveal-title text-3xl md:text-4xl font-bold text-white text-center mb-12">
+    <h2 class="sg-reveal sg-reveal-title-le text-3xl md:text-4xl font-bold text-white text-center mb-12">
       Les erreurs de dimensionnement les plus fr&eacute;quentes
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="ps-reveal sg-card-dim rounded-2xl p-6 backdrop-blur-sm" style="transition-delay: 0.05s">
+      <div class="sg-reveal sg-card-dim rounded-2xl p-6 backdrop-blur-sm" style="transition-delay: 0.05s">
         <h3 class="text-lg font-bold text-gold mb-3">Surdimensionner pour vendre plus</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Certains installateurs augmentent volontairement la puissance.</p>
       </div>
-      <div class="ps-reveal sg-card-dim rounded-2xl p-6 backdrop-blur-sm" style="transition-delay: 0.15s">
+      <div class="sg-reveal sg-card-dim rounded-2xl p-6 backdrop-blur-sm" style="transition-delay: 0.15s">
         <h3 class="text-lg font-bold text-gold mb-3">Copier une installation standard</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Chaque maison est diff&eacute;rente. Copier est une erreur.</p>
       </div>
-      <div class="ps-reveal sg-card-dim rounded-2xl p-6 backdrop-blur-sm" style="transition-delay: 0.25s">
+      <div class="sg-reveal sg-card-dim rounded-2xl p-6 backdrop-blur-sm" style="transition-delay: 0.25s">
         <h3 class="text-lg font-bold text-gold mb-3">Ignorer votre consommation r&eacute;elle</h3>
         <p class="text-neutral-300 text-sm leading-relaxed">Sans analyse, impossible d&rsquo;optimiser.</p>
       </div>
@@ -297,11 +308,11 @@
 <!-- SECTION 4 — COMBIEN DE PANNEAUX FAUT-IL -->
 <section class="relative bg-[#0a0a0a] py-20 md:py-28">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="ps-reveal ps-reveal-title text-3xl md:text-4xl font-bold text-white text-center mb-16">
+    <h2 class="sg-reveal sg-reveal-title-le text-3xl md:text-4xl font-bold text-white text-center mb-16">
       Combien de panneaux faut-il installer&nbsp;?
     </h2>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div class="ps-reveal space-y-6">
+      <div class="sg-reveal space-y-6">
         <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
           Le nombre de panneaux d&eacute;pend de la <strong class="text-gold">puissance vis&eacute;e</strong> en kWc.
           Une installation de 6&nbsp;kWc n&eacute;cessite environ 14 &agrave; 16 panneaux de 400&nbsp;Wc,
@@ -316,7 +327,7 @@
           une implantation coh&eacute;rente, esth&eacute;tique et performante prime sur le nombre maximal de panneaux.
         </p>
       </div>
-      <div class="ps-reveal rounded-2xl bg-[#191919] p-8 border border-gold/30">
+      <div class="sg-reveal rounded-2xl bg-[#191919] p-8 border border-gold/30">
         <h3 class="text-lg font-bold text-gold mb-4">Exemple indicatif</h3>
         <p class="text-neutral-200 text-sm leading-relaxed">
           Pour 6&nbsp;kWc avec des panneaux de 400&nbsp;Wc&nbsp;: 15 panneaux. Surface n&eacute;cessaire&nbsp;:
@@ -336,20 +347,20 @@
     <div class="absolute bottom-0 -right-24 w-[360px] h-[360px] rounded-full bg-gold/10 blur-3xl"></div>
   </div>
   <div class="relative max-w-7xl mx-auto px-6">
-    <h2 class="ps-reveal ps-reveal-title text-3xl md:text-4xl font-bold text-gold text-center mb-6">
+    <h2 class="sg-reveal sg-reveal-title-le text-3xl md:text-4xl font-bold text-gold text-center mb-6">
       Plusieurs sc&eacute;narios sont compar&eacute;s avant de chiffrer votre projet
     </h2>
-    <p class="ps-reveal text-neutral-300 text-center max-w-2xl mx-auto mb-8 text-lg">
+    <p class="sg-reveal text-neutral-300 text-center max-w-2xl mx-auto mb-8 text-lg">
       Nous ne proposons jamais une seule solution.<br>
       Nous testons plusieurs sc&eacute;narios pour trouver le meilleur &eacute;quilibre.
     </p>
     <div class="sg-scenarios">
-      <div class="ps-reveal">Sc&eacute;nario A</div>
-      <div class="ps-reveal">Sc&eacute;nario B</div>
-      <div class="ps-reveal">Sc&eacute;nario C</div>
+      <div class="sg-reveal">Sc&eacute;nario A</div>
+      <div class="sg-reveal">Sc&eacute;nario B</div>
+      <div class="sg-reveal">Sc&eacute;nario C</div>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-16">
-      <div class="ps-reveal flex justify-center order-2 lg:order-1">
+      <div class="sg-reveal flex justify-center order-2 lg:order-1">
         <div class="relative rounded-2xl bg-[#0f0f0f] border border-gold/30 shadow-[0_0_32px_rgba(195,152,71,0.25)] p-4 max-w-md w-full">
           <img src="/assets/images/etude/gains-cumules-25-ans.webp" alt="Projection des gains solaires sur 25 ans" class="w-full rounded-xl object-cover" loading="lazy">
           <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-gold text-black px-6 py-2 rounded-xl text-xs font-bold shadow-xl">
@@ -357,7 +368,7 @@
           </div>
         </div>
       </div>
-      <div class="ps-reveal flex flex-col gap-6 order-1 lg:order-2">
+      <div class="sg-reveal flex flex-col gap-6 order-1 lg:order-2">
         <p class="text-neutral-200 leading-relaxed text-base md:text-lg">
           Plusieurs configurations sont &eacute;tudi&eacute;es&nbsp;: puissance install&eacute;e,
           taux d&rsquo;autoconsommation, ajout ou non d&rsquo;une batterie.
@@ -386,8 +397,8 @@
 
 <!-- CTA INTERMÉDIAIRE -->
 <section class="sg-cta-mid">
-  <h2 class="ps-reveal ps-reveal-title">Quelle puissance est id&eacute;ale pour votre maison&nbsp;?</h2>
-  <a href="/etude-gratuite/" class="ps-reveal btn-gold">Obtenir mon &eacute;tude solaire gratuite</a>
+  <h2 class="sg-reveal sg-reveal-title-le">Quelle puissance est id&eacute;ale pour votre maison&nbsp;?</h2>
+  <a href="/etude-gratuite/" class="sg-reveal btn-gold">Obtenir mon &eacute;tude solaire gratuite</a>
 </section>
 
 <div class="sg-divider" aria-hidden="true"></div>
@@ -395,10 +406,10 @@
 <!-- SECTION 6 — OPTIMISER LA PRODUCTION -->
 <section class="relative bg-[#0a0a0a] py-20 md:py-28 ">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="ps-reveal ps-reveal-title text-3xl md:text-4xl font-bold text-white text-center mb-16">
+    <h2 class="sg-reveal sg-reveal-title-le text-3xl md:text-4xl font-bold text-white text-center mb-16">
       Optimiser la production solaire, pas seulement ajouter des panneaux
     </h2>
-    <div class="ps-reveal mb-12">
+    <div class="sg-reveal mb-12">
       <p class="text-neutral-200 leading-relaxed text-base md:text-lg max-w-3xl mx-auto text-center">
         L&rsquo;orientation, l&rsquo;inclinaison, le <a href="/notre-methode/calpinage/" class="text-gold hover:underline">calpinage</a> et les ombrages jouent un r&ocirc;le d&eacute;cisif.
         Une installation bien implant&eacute;e produit plus qu&rsquo;une installation mal plac&eacute;e,
@@ -406,19 +417,19 @@
       </p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="ps-reveal rounded-2xl bg-[#191919] p-6 border border-gold/30">
+      <div class="sg-reveal rounded-2xl bg-[#191919] p-6 border border-gold/30">
         <h3 class="text-lg font-bold text-gold mb-3">Orientation</h3>
         <p class="text-neutral-200 text-sm leading-relaxed">Exposition au soleil optimale pour maximiser les heures de production utile.</p>
       </div>
-      <div class="ps-reveal ps-reveal-card rounded-2xl bg-[#191919] p-6 border border-gold/30" style="transition-delay: 0.15s">
+      <div class="sg-reveal sg-reveal-card-le rounded-2xl bg-[#191919] p-6 border border-gold/30" style="transition-delay: 0.15s">
         <h3 class="text-lg font-bold text-gold mb-3">Inclinaison</h3>
         <p class="text-neutral-200 text-sm leading-relaxed">Angle de pente adapt&eacute; pour capter le rayonnement tout au long de l&rsquo;ann&eacute;e.</p>
       </div>
-      <div class="ps-reveal rounded-2xl bg-[#191919] p-6 border border-gold/30">
+      <div class="sg-reveal rounded-2xl bg-[#191919] p-6 border border-gold/30">
         <h3 class="text-lg font-bold text-gold mb-3">Implantation</h3>
         <p class="text-neutral-200 text-sm leading-relaxed">Calpinage pr&eacute;cis pour &eacute;viter les ombrages et optimiser l&rsquo;espace.</p>
       </div>
-      <div class="ps-reveal ps-reveal-card rounded-2xl bg-[#191919] p-6 border border-gold/30" style="transition-delay: 0.25s">
+      <div class="sg-reveal sg-reveal-card-le rounded-2xl bg-[#191919] p-6 border border-gold/30" style="transition-delay: 0.25s">
         <h3 class="text-lg font-bold text-gold mb-3">Rendement global</h3>
         <p class="text-neutral-200 text-sm leading-relaxed">Coh&eacute;rence de l&rsquo;ensemble pour une production r&eacute;elle maximale.</p>
       </div>
@@ -431,10 +442,10 @@
 <!-- SECTION 7 — EXEMPLE CONCRET -->
 <section class="relative bg-black py-20 md:py-28 ">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="ps-reveal ps-reveal-title text-3xl md:text-4xl font-bold text-white text-center mb-16">
+    <h2 class="sg-reveal sg-reveal-title-le text-3xl md:text-4xl font-bold text-white text-center mb-16">
       Exemple de dimensionnement solaire
     </h2>
-    <div class="ps-reveal max-w-3xl mx-auto rounded-2xl bg-[#191919] p-8 md:p-10 border border-gold/30">
+    <div class="sg-reveal max-w-3xl mx-auto rounded-2xl bg-[#191919] p-8 md:p-10 border border-gold/30">
       <h3 class="text-xl font-bold text-gold mb-6">Maison individuelle</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="space-y-4">
@@ -474,28 +485,28 @@
 <!-- SECTION 8 — CE QUE VOUS OBTENEZ À LA FIN -->
 <section class="relative bg-[#0a0a0a] py-20 md:py-28 ">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="ps-reveal ps-reveal-title text-3xl md:text-4xl font-bold text-white text-center mb-16">
+    <h2 class="sg-reveal sg-reveal-title-le text-3xl md:text-4xl font-bold text-white text-center mb-16">
       &Agrave; la fin, vous savez exactement quoi installer et pourquoi
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-      <div class="ps-reveal ps-reveal-card rounded-2xl bg-[#191919] p-6 border border-gold/30" style="transition-delay: 0.05s">
+      <div class="sg-reveal sg-reveal-card-le rounded-2xl bg-[#191919] p-6 border border-gold/30" style="transition-delay: 0.05s">
         <h3 class="text-lg font-bold text-gold mb-3">Puissance recommand&eacute;e</h3>
         <p class="text-neutral-200 text-sm leading-relaxed">La puissance en kWc id&eacute;ale pour votre projet, ni surdimensionn&eacute;e ni sous-dimensionn&eacute;e.</p>
       </div>
-      <div class="ps-reveal ps-reveal-card rounded-2xl bg-[#191919] p-6 border border-gold/30" style="transition-delay: 0.1s">
+      <div class="sg-reveal sg-reveal-card-le rounded-2xl bg-[#191919] p-6 border border-gold/30" style="transition-delay: 0.1s">
         <h3 class="text-lg font-bold text-gold mb-3">Nombre de panneaux conseill&eacute;</h3>
         <p class="text-neutral-200 text-sm leading-relaxed">Le nombre de modules adapt&eacute; &agrave; la puissance et &agrave; votre toiture.</p>
       </div>
-      <div class="ps-reveal ps-reveal-card rounded-2xl bg-[#191919] p-6 border border-gold/30" style="transition-delay: 0.15s">
+      <div class="sg-reveal sg-reveal-card-le rounded-2xl bg-[#191919] p-6 border border-gold/30" style="transition-delay: 0.15s">
         <h3 class="text-lg font-bold text-gold mb-3">Projection de production</h3>
         <p class="text-neutral-200 text-sm leading-relaxed">Estimation annuelle en kWh et &eacute;conomies pr&eacute;vues sur la facture.</p>
       </div>
-      <div class="ps-reveal ps-reveal-card rounded-2xl bg-[#191919] p-6 border border-gold/30" style="transition-delay: 0.2s">
+      <div class="sg-reveal sg-reveal-card-le rounded-2xl bg-[#191919] p-6 border border-gold/30" style="transition-delay: 0.2s">
         <h3 class="text-lg font-bold text-gold mb-3">Devis clair et justifi&eacute;</h3>
         <p class="text-neutral-200 text-sm leading-relaxed">Un devis lisible, d&eacute;taill&eacute; et coh&eacute;rent avec les sc&eacute;narios &eacute;tudi&eacute;s.</p>
       </div>
     </div>
-    <div class="ps-reveal text-center">
+    <div class="sg-reveal text-center">
       <p class="text-neutral-300 text-base md:text-lg max-w-2xl mx-auto">
         Le devis est clair, lisible et compr&eacute;hensible.
         <br>
@@ -511,7 +522,7 @@
 <!-- BLOC IMPACT — AVANT CTA FINAL -->
 <section class="relative bg-[#0a0a0a] py-16 md:py-20">
   <div class="max-w-3xl mx-auto px-6 text-center">
-    <p class="ps-reveal text-neutral-200 text-lg md:text-xl leading-relaxed">
+    <p class="sg-reveal text-neutral-200 text-lg md:text-xl leading-relaxed">
       Dans 90&nbsp;% des cas, la puissance install&eacute;e est mal choisie.<br>
       <span class="text-gold font-semibold">C&rsquo;est exactement ce que notre &eacute;tude corrige.</span>
     </p>
@@ -523,14 +534,14 @@
 <!-- SECTION 9 — CTA FINAL -->
 <section class="relative bg-black py-24 md:py-32">
   <div class="max-w-4xl mx-auto px-6 text-center">
-    <h2 class="ps-reveal ps-reveal-title text-3xl md:text-4xl font-bold text-white mb-6">Lancez votre &eacute;tude solaire gratuite</h2>
-    <p class="ps-reveal text-gray-300 text-base md:text-lg mb-8">
+    <h2 class="sg-reveal sg-reveal-title-le text-3xl md:text-4xl font-bold text-white mb-6">Lancez votre &eacute;tude solaire gratuite</h2>
+    <p class="sg-reveal text-gray-300 text-base md:text-lg mb-8">
       Nous analysons votre toiture, votre consommation et la configuration la plus coh&eacute;rente pour votre projet.
     </p>
-    <a href="/etude-gratuite/" class="ps-reveal inline-block bg-gold text-black font-bold py-4 px-10 rounded-2xl shadow-xl hover:scale-105 transition text-lg">
+    <a href="/etude-gratuite/" class="sg-reveal inline-block bg-gold text-black font-bold py-4 px-10 rounded-2xl shadow-xl hover:scale-105 transition text-lg">
       Obtenir mon &eacute;tude solaire gratuite
     </a>
-    <p class="ps-reveal text-xs text-neutral-400 mt-8">Sans engagement &ndash; R&eacute;ponse sous 24&nbsp;h &ndash; &Eacute;tude personnalis&eacute;e</p>
+    <p class="sg-reveal text-xs text-neutral-400 mt-8">Sans engagement &ndash; R&eacute;ponse sous 24&nbsp;h &ndash; &Eacute;tude personnalis&eacute;e</p>
   </div>
 </section>
 
@@ -539,26 +550,7 @@
 <div id="footer-placeholder"></div>
 <script src="/assets/js/footer.js"></script>
 
-<!-- Scroll reveal -->
-<script>
-(function() {
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefersReduced) {
-    document.querySelectorAll('.sg-reveal').forEach(el => el.classList.add('visible'));
-    document.querySelectorAll('.ps-reveal').forEach(el => el.classList.add('ps-visible'));
-    return;
-  }
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        e.target.classList.add('ps-visible');
-      }
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  document.querySelectorAll('.sg-reveal, .ps-reveal').forEach(el => io.observe(el));
-})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 
 </body>
 </html>

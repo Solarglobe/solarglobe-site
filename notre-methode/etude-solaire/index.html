@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/sg-animations.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}</style>
   <style>
   .sg-reveal{
@@ -29,7 +30,7 @@
       filter 1.2s cubic-bezier(0.22,1,0.36,1);
     will-change: transform, opacity;
   }
-  .sg-reveal.visible{
+  .sg-reveal.sg-visible{
     opacity:1;
     transform:translateY(0);
     filter:blur(0);
@@ -58,7 +59,7 @@
     border-color: rgba(195,152,71,0.6) !important;
   }
   .sg-etape-progressive { opacity: 0; transform: translateY(30px); }
-  .sg-etape-progressive.visible { opacity: 1; transform: translateY(0); }
+  .sg-etape-progressive.sg-visible { opacity: 1; transform: translateY(0); }
   @media (prefers-reduced-motion: reduce) {
     .sg-etape-progressive { opacity: 1; transform: none; }
   }
@@ -448,30 +449,7 @@ Si un projet n'est pas pertinent,
 <div id="footer-placeholder"></div>
 <script src="/assets/js/footer.js"></script>
 
-<script>
-(function(){
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(prefersReduced){
-    document.querySelectorAll('.sg-reveal').forEach(el=>{
-      el.classList.add('visible');
-    });
-    return;
-  }
-  const elements = document.querySelectorAll('.sg-reveal, .sg-etape-progressive');
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(!entry.isIntersecting) return;
-      const el = entry.target;
-      el.classList.add('visible');
-      observer.unobserve(el);
-    });
-  },{
-    threshold:0.18,
-    rootMargin:"0px 0px -10% 0px"
-  });
-  elements.forEach(el=>observer.observe(el));
-})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 
 </body>
 </html>

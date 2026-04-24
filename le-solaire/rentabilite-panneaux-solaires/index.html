@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/sg-animations.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}
   .sg-hero-premium.sg-hero-solaire{padding-top:120px}
   @media (min-width:768px){.sg-hero-premium.sg-hero-solaire{padding-top:120px}}
@@ -30,12 +31,12 @@
   .sg-renta-intro{max-width:900px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px;text-align:left}
   .sg-renta-full{max-width:1100px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px;text-align:left}
   .sg-renta-img{width:100%;height:100%;object-fit:cover;border-radius:12px;border:1px solid rgba(195,152,71,0.2)}
-  /* Scroll reveal – lent, futuriste, premium (comme produits/index.html) */
-  .ps-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
-  .ps-reveal.ps-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
-  .ps-reveal-title.ps-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
-  .ps-reveal-card.ps-visible{box-shadow:0 0 0 1px rgba(195,152,71,0.08)}
-  @media (prefers-reduced-motion:reduce){.ps-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
+  /* Scroll reveal (sg-animations.js → .sg-visible) */
+  .sg-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
+  .sg-reveal.sg-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+  .sg-reveal.sg-reveal-title-le.sg-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
+  .sg-reveal.sg-reveal-card-le.sg-visible{box-shadow:0 0 0 1px rgba(195,152,71,0.08)}
+  @media (prefers-reduced-motion:reduce){.sg-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
   </style>
 </head>
 <body class="bg-black text-white sg-editorial">
@@ -50,7 +51,7 @@
 <section class="sg-hero-premium sg-hero-solaire">
   <div class="sg-hero-bg" aria-hidden="true"></div>
   <div class="sg-hero-content">
-    <div class="sg-hero-inner ps-reveal ps-reveal-title">
+    <div class="sg-hero-inner sg-reveal sg-reveal-title-le">
       <nav class="sg-breadcrumb sg-breadcrumb-dark sg-breadcrumb--compact" aria-label="Fil d'Ariane">
         <ol class="sg-breadcrumb-list">
           <li><a href="/">Accueil</a></li>
@@ -76,7 +77,7 @@
 
 <!-- 1. INTRODUCTION LARGE -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-renta-intro ps-reveal">
+  <div class="sg-renta-intro sg-reveal">
     <span class="sg-section-kicker">Introduction</span>
     <h2 class="sg-section-title text-left">Les panneaux solaires sont-ils réellement rentables ?</h2>
     <p class="sg-lead text-left">La question de la rentabilité revient systématiquement. Oui, le solaire est rentable, mais à condition que plusieurs paramètres soient correctement pris en compte.</p>
@@ -93,9 +94,9 @@
 
 <!-- 2. SECTION 2 COLONNES (texte gauche, image droite) -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal" style="max-width:1100px;margin-left:auto;margin-right:auto">
+  <div class="sg-container sg-reveal" style="max-width:1100px;margin-left:auto;margin-right:auto">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-      <div class="ps-reveal ps-reveal-card">
+      <div class="sg-reveal sg-reveal-card-le">
         <span class="sg-section-kicker">Comprendre</span>
         <h2 class="sg-section-title text-left">Comment fonctionne la rentabilité d'une installation solaire</h2>
         <p class="text-left">La rentabilité photovoltaïque repose sur quatre leviers principaux qui se combinent pour générer un retour sur investissement.</p>
@@ -103,7 +104,7 @@
         <p class="mt-4 text-left">L'électricité non consommée est rachetée via l'obligation d'achat (environ 0,04 €/kWh). Ce revenu complète les économies mais reste cinq à six fois moins intéressant que l'autoconsommation.</p>
         <p class="mt-4 text-left">Les aides de l'État (prime à l'autoconsommation, TVA réduite, aides locales) peuvent représenter plusieurs milliers d'euros et raccourcissent le délai d'amortissement.</p>
       </div>
-      <div class="flex justify-center md:justify-end ps-reveal ps-reveal-card" style="transition-delay:0.1s">
+      <div class="flex justify-center md:justify-end sg-reveal sg-reveal-card-le" style="transition-delay:0.1s">
         <img src="/assets/images/solaire/rentabilite.jpg" alt="Rentabilité des panneaux solaires et retour sur investissement" class="sg-renta-img max-w-md w-full aspect-[4/3]" loading="lazy" />
       </div>
     </div>
@@ -114,7 +115,7 @@
 
 <!-- 3. SECTION PLEINE LARGEUR -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-renta-full ps-reveal">
+  <div class="sg-renta-full sg-reveal">
     <span class="sg-section-kicker">Levier principal</span>
     <h2 class="sg-section-title text-left">Pourquoi l'autoconsommation est le levier principal de rentabilité</h2>
     <p>L'autoconsommation n'est pas un simple détail : c'est le cœur de la rentabilité en France.</p>
@@ -130,12 +131,12 @@
 
 <!-- 4. SECTION INVERSE (image gauche, texte droite) -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal" style="max-width:1100px;margin-left:auto;margin-right:auto">
+  <div class="sg-container sg-reveal" style="max-width:1100px;margin-left:auto;margin-right:auto">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-      <div class="flex justify-center md:justify-start order-2 md:order-1 ps-reveal ps-reveal-card">
+      <div class="flex justify-center md:justify-start order-2 md:order-1 sg-reveal sg-reveal-card-le">
         <img src="/assets/images/solaire/autoconsommation.jpg" alt="Autoconsommation solaire : produire et consommer sa propre électricité" class="sg-renta-img max-w-md w-full aspect-[4/3]" loading="lazy" />
       </div>
-      <div class="order-1 md:order-2 ps-reveal ps-reveal-card" style="transition-delay:0.1s">
+      <div class="order-1 md:order-2 sg-reveal sg-reveal-card-le" style="transition-delay:0.1s">
         <span class="sg-section-kicker">Dimensionnement</span>
         <h2 class="sg-section-title text-left">Pourquoi le dimensionnement est essentiel</h2>
         <p class="text-left">Ni trop petit, ni trop grand : le juste équilibre dépend de votre consommation et de votre toiture.</p>
@@ -150,23 +151,23 @@
 
 <!-- 5. SECTION GRILLE 3 COLONNES -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal" style="max-width:1100px;margin-left:auto;margin-right:auto">
+  <div class="sg-container sg-reveal" style="max-width:1100px;margin-left:auto;margin-right:auto">
     <div class="mb-12">
       <span class="sg-section-kicker">Leviers</span>
       <h2 class="sg-section-title text-left">Les trois piliers de la rentabilité solaire</h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="sg-card-pedagogique ps-reveal ps-reveal-card">
+      <div class="sg-card-pedagogique sg-reveal sg-reveal-card-le">
         <svg class="sg-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0-5v2m0 14v2m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
         <h3>Économies</h3>
         <p>Chaque kWh autoconsommé vous évite d'acheter au réseau. À 0,22 €/kWh, 3000 kWh = 660 € économisés par an. Ces économies s'accumulent sur 25 ans.</p>
       </div>
-      <div class="sg-card-pedagogique ps-reveal ps-reveal-card" style="transition-delay:0.05s">
+      <div class="sg-card-pedagogique sg-reveal sg-reveal-card-le" style="transition-delay:0.05s">
         <svg class="sg-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
         <h3>Production</h3>
         <p>En France, 1 kWc produit 900 à 1 200 kWh/an selon la région. Une installation de 6 kWc génère 5 400 à 7 200 kWh/an. Une installation bien dimensionnée reste rentable partout.</p>
       </div>
-      <div class="sg-card-pedagogique ps-reveal ps-reveal-card" style="transition-delay:0.1s">
+      <div class="sg-card-pedagogique sg-reveal sg-reveal-card-le" style="transition-delay:0.1s">
         <svg class="sg-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         <h3>Durée de vie</h3>
         <p>Les panneaux ont une durée de vie de plus de 30 ans. Garantie 80-85 % de puissance après 25 ans. Une installation amortie en 10 ans produit encore 15 à 20 ans : économies nettes.</p>
@@ -179,12 +180,12 @@
 
 <!-- 6. SECTION TABLEAU -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal" style="max-width:1100px;margin-left:auto;margin-right:auto">
+  <div class="sg-container sg-reveal" style="max-width:1100px;margin-left:auto;margin-right:auto">
     <div class="mb-10">
       <span class="sg-section-kicker">Références</span>
       <h2 class="sg-section-title text-left">Puissance, production et économies estimées</h2>
     </div>
-    <div class="overflow-x-auto ps-reveal ps-reveal-card">
+    <div class="overflow-x-auto sg-reveal sg-reveal-card-le">
       <table class="sg-table-premium w-full">
         <thead>
           <tr>
@@ -221,12 +222,12 @@
 
 <!-- 7. SECTION FAQ (sans script) -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal" style="max-width:900px;margin-left:auto;margin-right:auto">
+  <div class="sg-container sg-reveal" style="max-width:900px;margin-left:auto;margin-right:auto">
     <div class="mb-10">
       <span class="sg-section-kicker">Questions fréquentes</span>
       <h2 class="sg-section-title text-left">Réponses à vos questions sur la rentabilité</h2>
     </div>
-    <div class="sg-faq-premium max-w-3xl ps-reveal ps-reveal-card" style="transition-delay:0.05s">
+    <div class="sg-faq-premium max-w-3xl sg-reveal sg-reveal-card-le" style="transition-delay:0.05s">
       <div class="sg-faq-item">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Les panneaux solaires sont-ils rentables en France ?</span>
@@ -288,7 +289,7 @@
 <div class="sg-divider" aria-hidden="true"></div>
 
 <!-- 8. CTA FINAL -->
-<section class="sg-cta-editorial ps-reveal">
+<section class="sg-cta-editorial sg-reveal">
   <div class="sg-cta-inner">
     <h2>Passez à l'énergie solaire</h2>
     <p>Nos experts réalisent gratuitement l'étude de votre toiture et estiment vos économies.</p>
@@ -315,19 +316,6 @@ document.querySelectorAll('.sg-faq-item').forEach(item => {
 });
 </script>
 
-<!-- Scroll reveal – IntersectionObserver (comme produits/index.html) -->
-<script>
-(function() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const els = document.querySelectorAll('.ps-reveal');
-  if (!els.length) return;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('ps-visible');
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  els.forEach(el => io.observe(el));
-})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 </body>
 </html>

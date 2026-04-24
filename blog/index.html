@@ -48,6 +48,7 @@
 <link rel="alternate" hreflang="fr" href="https://www.solarglobe.fr/blog/">
 <link rel="alternate" type="application/rss+xml" title="Blog Solarglobe – RSS" href="/blog.xml">
 <link rel="stylesheet" href="/assets/css/tailwind.css" />
+<link rel="stylesheet" href="/assets/css/sg-animations.css" />
 
 <style>
   .text-gold{color:#C39847!important}
@@ -120,7 +121,7 @@
   </div>
   <div class="sg-hero-overlay" aria-hidden="true"></div>
   <div class="sg-hero-content max-w-[1100px] mx-auto px-6 md:px-10 text-center">
-    <div class="sg-hero-inner ps-reveal ps-reveal-title">
+    <div class="sg-hero-inner sg-reveal sg-reveal-title-le">
       <nav class="sg-breadcrumb sg-breadcrumb-dark sg-breadcrumb--compact" aria-label="Fil d'Ariane">
         <ol class="sg-breadcrumb-list">
           <li><a href="/">Accueil</a></li>
@@ -147,7 +148,7 @@
 <section class="sg-section-editorial sg-section-dark">
   <div class="sg-container">
     <span class="sg-section-kicker">Article à la une</span>
-    <a href="/blog/autonomie-solaire/" class="sg-blog-featured block grid grid-cols-1 lg:grid-cols-2 gap-0 ps-reveal">
+    <a href="/blog/autonomie-solaire/" class="sg-blog-featured block grid grid-cols-1 lg:grid-cols-2 gap-0 sg-reveal">
       <div class="sg-blog-featured-img order-2 lg:order-1">
         <img src="/assets/images/blog/blog-autonomie-solaire.webp" alt="Panneaux solaires et batterie pour autonomie énergétique" width="800" height="450" loading="eager" />
       </div>
@@ -166,7 +167,7 @@
 
 <!-- SECTION COMMENCER PAR L'ESSENTIEL -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <span class="sg-section-kicker">Parcours</span>
     <h2 class="sg-section-title mb-8">Commencer par l'essentiel</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -196,7 +197,7 @@
 
 <!-- FILTRES + SEARCH -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="flex flex-col md:flex-row md:items-center gap-4 justify-between">
       <div class="flex flex-wrap gap-3">
         <button class="sg-blog-chip active" data-filter="all" aria-pressed="true">Tous</button>
@@ -218,7 +219,7 @@
   <div class="sg-container">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-      <article class="sg-blog-card sg-blog-card-lead ps-reveal ps-reveal-delay-1" data-tags="rendement autoconsommation">
+      <article class="sg-blog-card sg-blog-card-lead sg-reveal sg-reveal-delay-1" data-tags="rendement autoconsommation">
         <a href="/blog/rendement-panneaux/" class="block">
           <div class="sg-blog-card-img">
             <img src="/assets/images/blog/blog-rendement-panneaux.webp" width="800" height="450" loading="lazy" alt="Panneaux solaires bien orientés pour un rendement optimal" />
@@ -236,7 +237,7 @@
         </a>
       </article>
 
-      <article class="sg-blog-card ps-reveal ps-reveal-delay-2" data-tags="aides autoconsommation">
+      <article class="sg-blog-card sg-reveal sg-reveal-delay-2" data-tags="aides autoconsommation">
         <a href="/blog/aides-financieres/" class="block">
           <div class="sg-blog-card-img sg-blog-card-img-tall">
             <img src="/assets/images/blog/blog-aides-financieres.webp" width="800" height="450" loading="lazy" alt="Panneaux solaires noirs premium et symboles d'aides financières" />
@@ -254,7 +255,7 @@
         </a>
       </article>
 
-      <article class="sg-blog-card ps-reveal ps-reveal-delay-3" data-tags="dimensionnement autoconsommation pac">
+      <article class="sg-blog-card sg-reveal sg-reveal-delay-3" data-tags="dimensionnement autoconsommation pac">
         <a href="/blog/choisir-puissance-solaire/" class="block">
           <div class="sg-blog-card-img">
             <img src="/assets/images/blog/blog-choisir-puissance.webp" width="800" height="450" loading="lazy" alt="Comparaison 6 kWc et 9 kWc pour une maison équipée d'une PAC" />
@@ -272,7 +273,7 @@
         </a>
       </article>
 
-      <article class="sg-blog-card ps-reveal ps-reveal-delay-4" data-tags="autoconsommation batteries">
+      <article class="sg-blog-card sg-reveal sg-reveal-delay-4" data-tags="autoconsommation batteries">
         <a href="/blog/autonomie-solaire/" class="block">
           <div class="sg-blog-card-img sg-blog-card-img-tall">
             <img src="/assets/images/blog/blog-autonomie-solaire.webp" width="800" height="450" loading="lazy" alt="Panneaux + batterie domestique pour autonomie" />
@@ -290,7 +291,7 @@
         </a>
       </article>
 
-      <article class="sg-blog-card ps-reveal ps-reveal-delay-5 opacity-70" aria-disabled="true" data-tags="pilotage shelly autoconsommation">
+      <article class="sg-blog-card sg-reveal sg-reveal-delay-5 opacity-70" aria-disabled="true" data-tags="pilotage shelly autoconsommation">
         <div class="sg-blog-card-img bg-neutral-800 flex items-center justify-center">
           <span class="text-white/40 text-sm italic">Article en préparation</span>
         </div>
@@ -313,7 +314,7 @@
 
 <!-- SECTION EXPERTISE -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <span class="sg-section-kicker">Notre crédibilité</span>
     <h2 class="sg-section-title mb-8">Pourquoi nos conseils sont fiables ?</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -345,7 +346,7 @@
 
 <!-- CTA CONVERSION -->
 <section class="sg-blog-cta py-20">
-  <div class="sg-cta-inner relative z-10 max-w-2xl mx-auto px-6 text-center ps-reveal">
+  <div class="sg-cta-inner relative z-10 max-w-2xl mx-auto px-6 text-center sg-reveal">
     <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">Passez à l'action</h2>
     <p class="text-white/90 text-base mb-6">Nous analysons gratuitement votre projet solaire</p>
     <div class="sg-blog-cta-btns flex flex-col sm:flex-row gap-3 justify-center">
@@ -397,18 +398,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 </script>
-<script>
-(function() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const els = document.querySelectorAll('.ps-reveal');
-  if (!els.length) return;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('ps-visible');
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  els.forEach(el => io.observe(el));
-})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 </body>
 </html>

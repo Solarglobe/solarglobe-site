@@ -22,13 +22,14 @@
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/sg-animations.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}
-  /* Scroll reveal – lent, futuriste, premium (comme produits/index.html) */
-  .ps-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
-  .ps-reveal.ps-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
-  .ps-reveal-title.ps-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
-  .ps-reveal-card.ps-visible{box-shadow:0 0 0 1px rgba(195,152,71,0.08)}
-  @media (prefers-reduced-motion:reduce){.ps-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
+  /* Scroll reveal (sg-animations.js → .sg-visible) */
+  .sg-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
+  .sg-reveal.sg-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+  .sg-reveal.sg-reveal-title-le.sg-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
+  .sg-reveal.sg-reveal-card-le.sg-visible{box-shadow:0 0 0 1px rgba(195,152,71,0.08)}
+  @media (prefers-reduced-motion:reduce){.sg-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
   /* Hero : descendre le contenu pour le rendre bien visible sous le header */
   .sg-hero-premium.sg-hero-solaire{padding-top:120px}
   @media (min-width:768px){.sg-hero-premium.sg-hero-solaire{padding-top:120px}}
@@ -48,7 +49,7 @@
 <section class="sg-hero-premium sg-hero-solaire">
   <div class="sg-hero-bg" aria-hidden="true"></div>
   <div class="sg-hero-content">
-    <div class="sg-hero-inner ps-reveal ps-reveal-title">
+    <div class="sg-hero-inner sg-reveal sg-reveal-title-le">
       <p class="sg-hero-breadcrumb"><a href="/">Accueil</a> <span aria-hidden="true">/</span> FAQ</p>
       <span class="sg-hero-kicker">Bureau d'étude photovoltaïque</span>
       <h1 class="sg-hero-title">Questions fréquentes sur les <span class="gold">panneaux solaires</span></h1>
@@ -68,10 +69,10 @@
 
 <!-- INTRODUCTION -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable">
       <span class="sg-section-kicker">Introduction</span>
-      <h2 class="sg-section-title ps-reveal ps-reveal-title">Pourquoi se poser des questions avant d'installer du solaire</h2>
+      <h2 class="sg-section-title sg-reveal sg-reveal-title-le">Pourquoi se poser des questions avant d'installer du solaire</h2>
       <p class="sg-lead">Installer des panneaux solaires est une décision importante. Les propriétaires souhaitent comprendre la rentabilité du projet, le fonctionnement de l'installation, les démarches administratives ou encore la durée de vie des équipements.</p>
       <p>Chaque maison est différente : orientation du toit, inclinaison, consommation électrique, ombrages environnants… Tous ces éléments influencent la production d'électricité et la rentabilité de l'installation.</p>
       <p class="mt-6">C'est pour cette raison que Solarglobe fonctionne comme un bureau d'étude photovoltaïque. Notre rôle est d'analyser précisément chaque projet afin de dimensionner une installation réellement adaptée à votre maison.</p>
@@ -83,12 +84,12 @@
 
 <!-- NAVIGATION CATÉGORIES -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable mb-8">
       <span class="sg-section-kicker">Navigation</span>
-      <h2 class="sg-section-title ps-reveal ps-reveal-title">Accéder aux catégories</h2>
+      <h2 class="sg-section-title sg-reveal sg-reveal-title-le">Accéder aux catégories</h2>
     </div>
-    <nav class="flex flex-wrap gap-3 justify-center md:justify-start ps-reveal" aria-label="Navigation FAQ" style="transition-delay:0.1s">
+    <nav class="flex flex-wrap gap-3 justify-center md:justify-start sg-reveal" aria-label="Navigation FAQ" style="transition-delay:0.1s">
       <a href="#installation" class="inline-block px-5 py-3 border border-[rgba(195,152,71,0.4)] rounded-full text-sm font-semibold text-white hover:bg-[rgba(195,152,71,0.12)] transition">Installation solaire</a>
       <a href="#rentabilite" class="inline-block px-5 py-3 border border-[rgba(195,152,71,0.4)] rounded-full text-sm font-semibold text-white hover:bg-[rgba(195,152,71,0.12)] transition">Rentabilité</a>
       <a href="#autoconsommation" class="inline-block px-5 py-3 border border-[rgba(195,152,71,0.4)] rounded-full text-sm font-semibold text-white hover:bg-[rgba(195,152,71,0.12)] transition">Autoconsommation</a>
@@ -102,12 +103,12 @@
 
 <!-- FAQ INSTALLATION SOLAIRE -->
 <section class="sg-section-editorial sg-section-dark" id="installation">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable mb-10">
       <span class="sg-section-kicker">Installation</span>
-      <h2 class="sg-section-title ps-reveal ps-reveal-title">FAQ <span class="text-gold font-semibold">Installation solaire</span></h2>
+      <h2 class="sg-section-title sg-reveal sg-reveal-title-le">FAQ <span class="text-gold font-semibold">Installation solaire</span></h2>
     </div>
-    <div class="sg-faq-premium ps-reveal ps-reveal-card" style="transition-delay:0.05s">
+    <div class="sg-faq-premium sg-reveal sg-reveal-card-le" style="transition-delay:0.05s">
       <div class="sg-faq-item">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Combien de panneaux solaires faut-il pour une maison ?</span>
@@ -190,12 +191,12 @@
 
 <!-- FAQ RENTABILITÉ -->
 <section class="sg-section-editorial sg-section-dark" id="rentabilite">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable mb-10">
       <span class="sg-section-kicker">Rentabilité</span>
-      <h2 class="sg-section-title ps-reveal ps-reveal-title">FAQ <span class="text-gold font-semibold">Rentabilité</span></h2>
+      <h2 class="sg-section-title sg-reveal sg-reveal-title-le">FAQ <span class="text-gold font-semibold">Rentabilité</span></h2>
     </div>
-    <div class="sg-faq-premium ps-reveal ps-reveal-card" style="transition-delay:0.05s">
+    <div class="sg-faq-premium sg-reveal sg-reveal-card-le" style="transition-delay:0.05s">
       <div class="sg-faq-item">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Les panneaux solaires sont-ils rentables ?</span>
@@ -252,12 +253,12 @@
 
 <!-- FAQ AUTOCONSOMMATION -->
 <section class="sg-section-editorial sg-section-dark" id="autoconsommation">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable mb-10">
       <span class="sg-section-kicker">Autoconsommation</span>
-      <h2 class="sg-section-title ps-reveal ps-reveal-title">FAQ <span class="text-gold font-semibold">Autoconsommation</span></h2>
+      <h2 class="sg-section-title sg-reveal sg-reveal-title-le">FAQ <span class="text-gold font-semibold">Autoconsommation</span></h2>
     </div>
-    <div class="sg-faq-premium ps-reveal ps-reveal-card" style="transition-delay:0.05s">
+    <div class="sg-faq-premium sg-reveal sg-reveal-card-le" style="transition-delay:0.05s">
       <div class="sg-faq-item">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Qu'est-ce que l'autoconsommation solaire ?</span>
@@ -335,12 +336,12 @@
 
 <!-- FAQ BATTERIES -->
 <section class="sg-section-editorial sg-section-dark" id="batteries">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable mb-10">
       <span class="sg-section-kicker">Batteries</span>
-      <h2 class="sg-section-title ps-reveal ps-reveal-title">FAQ <span class="text-gold font-semibold">Batteries</span></h2>
+      <h2 class="sg-section-title sg-reveal sg-reveal-title-le">FAQ <span class="text-gold font-semibold">Batteries</span></h2>
     </div>
-    <div class="sg-faq-premium ps-reveal ps-reveal-card" style="transition-delay:0.05s">
+    <div class="sg-faq-premium sg-reveal sg-reveal-card-le" style="transition-delay:0.05s">
       <div class="sg-faq-item">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>À quoi sert une batterie dans une installation solaire ?</span>
@@ -416,12 +417,12 @@
 
 <!-- FAQ ADMINISTRATIF -->
 <section class="sg-section-editorial sg-section-dark" id="administratif">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable mb-10">
       <span class="sg-section-kicker">Administratif</span>
-      <h2 class="sg-section-title ps-reveal ps-reveal-title">FAQ <span class="text-gold font-semibold">Administratif</span></h2>
+      <h2 class="sg-section-title sg-reveal sg-reveal-title-le">FAQ <span class="text-gold font-semibold">Administratif</span></h2>
     </div>
-    <div class="sg-faq-premium ps-reveal ps-reveal-card" style="transition-delay:0.05s">
+    <div class="sg-faq-premium sg-reveal sg-reveal-card-le" style="transition-delay:0.05s">
       <div class="sg-faq-item">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
           <span>Qu'est-ce que la déclaration préalable ?</span>
@@ -495,30 +496,30 @@
 
 <!-- SECTION PÉDAGOGIQUE -->
 <section class="sg-section-editorial sg-section-dark" id="fonctionnement">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable mb-12">
       <span class="sg-section-kicker">Comprendre</span>
-      <h2 class="sg-section-title ps-reveal ps-reveal-title">Comment fonctionne réellement une installation solaire</h2>
+      <h2 class="sg-section-title sg-reveal sg-reveal-title-le">Comment fonctionne réellement une installation solaire</h2>
       <p class="sg-lead">Une installation photovoltaïque repose sur plusieurs composants qui transforment la lumière du soleil en électricité utilisable chez vous.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="sg-card-pedagogique ps-reveal ps-reveal-card" style="transition-delay:0.1s">
+      <div class="sg-card-pedagogique sg-reveal sg-reveal-card-le" style="transition-delay:0.1s">
         <svg class="sg-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
         <h3>Les panneaux</h3>
         <p>Installés sur la toiture, les panneaux captent la lumière et produisent du courant continu (DC) grâce à l'effet photovoltaïque.</p>
       </div>
-      <div class="sg-card-pedagogique ps-reveal ps-reveal-card" style="transition-delay:0.2s">
+      <div class="sg-card-pedagogique sg-reveal sg-reveal-card-le" style="transition-delay:0.2s">
         <svg class="sg-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
         <h3>L'onduleur</h3>
         <p>L'onduleur ou les micro-onduleurs convertissent le courant continu en courant alternatif 230 V, utilisable par vos appareils.</p>
       </div>
-      <div class="sg-card-pedagogique ps-reveal ps-reveal-card" style="transition-delay:0.3s">
+      <div class="sg-card-pedagogique sg-reveal sg-reveal-card-le" style="transition-delay:0.3s">
         <svg class="sg-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
         <h3>La production</h3>
         <p>La production varie selon l'ensoleillement, l'orientation et l'heure. Elle est maximale en milieu de journée.</p>
       </div>
     </div>
-    <div class="sg-encadre-premium mt-10 ps-reveal ps-reveal-card" style="transition-delay:0.15s">
+    <div class="sg-encadre-premium mt-10 sg-reveal sg-reveal-card-le" style="transition-delay:0.15s">
       <span class="sg-encadre-titre">Autoconsommation et réseau</span>
       <p>L'électricité produite alimente en priorité vos appareils : c'est l'<strong>autoconsommation</strong>. Le surplus est injecté sur le <strong>réseau</strong> et racheté, ou stocké dans une batterie si vous en avez une. La nuit ou lorsque la production est insuffisante, vous puisez sur le réseau comme avant. La bascule est automatique, sans action de votre part.</p>
     </div>
@@ -529,10 +530,10 @@
 
 <!-- SECTION BUREAU D'ÉTUDE -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable">
       <span class="sg-section-kicker">Notre approche</span>
-      <h2 class="sg-section-title ps-reveal ps-reveal-title">Pourquoi passer par un bureau d'étude solaire ?</h2>
+      <h2 class="sg-section-title sg-reveal sg-reveal-title-le">Pourquoi passer par un bureau d'étude solaire ?</h2>
       <p class="sg-lead">Chaque toiture est unique. Un dimensionnement approximatif peut conduire à une installation sous-dimensionnée ou surdimensionnée, et donc moins rentable.</p>
       <p>Un bureau d'étude photovoltaïque analyse précisément votre projet avant toute installation. Cette approche garantit une solution adaptée à votre situation réelle.</p>
       <p class="mt-6"><strong>L'analyse de la toiture</strong> : orientation, inclinaison, surface disponible, ombrages (arbres, cheminées, bâtiments voisins). Ces paramètres influencent directement la production annuelle.</p>
@@ -548,7 +549,7 @@
 
 <!-- CTA FINAL -->
 <section class="sg-cta-editorial">
-  <div class="sg-cta-inner ps-reveal ps-reveal-title">
+  <div class="sg-cta-inner sg-reveal sg-reveal-title-le">
     <h2>Faites étudier votre projet solaire gratuitement</h2>
     <p>Chaque maison est différente. Notre bureau d'étude analyse précisément votre toiture afin de déterminer la solution solaire la plus performante.</p>
     <a href="/etude-gratuite/" class="sg-btn-cta-primary">Obtenir mon étude solaire gratuite</a>
@@ -573,20 +574,7 @@ document.querySelectorAll('.sg-faq-item').forEach(item => {
 });
 </script>
 
-<!-- Scroll reveal – IntersectionObserver (comme produits/index.html) -->
-<script>
-(function() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const els = document.querySelectorAll('.ps-reveal');
-  if (!els.length) return;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('ps-visible');
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  els.forEach(el => io.observe(el));
-})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[

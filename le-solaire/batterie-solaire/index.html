@@ -22,12 +22,13 @@
   <link rel="stylesheet" href="/assets/css/header-common.css" />
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  <link rel="stylesheet" href="/assets/css/sg-animations.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}
-  .ps-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
-  .ps-reveal.ps-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
-  .ps-reveal-title.ps-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
-  .ps-reveal-card.ps-visible{box-shadow:0 0 0 1px rgba(195,152,71,0.08)}
-  @media (prefers-reduced-motion:reduce){.ps-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
+  .sg-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
+  .sg-reveal.sg-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+  .sg-reveal.sg-reveal-title-le.sg-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
+  .sg-reveal.sg-reveal-card-le.sg-visible{box-shadow:0 0 0 1px rgba(195,152,71,0.08)}
+  @media (prefers-reduced-motion:reduce){.sg-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
   </style>
 </head>
 <body class="bg-black text-white sg-editorial">
@@ -42,7 +43,7 @@
 <section class="sg-hero-premium sg-hero-solaire">
   <div class="sg-hero-bg" aria-hidden="true"></div>
   <div class="sg-hero-content">
-    <div class="sg-hero-inner ps-reveal ps-reveal-title">
+    <div class="sg-hero-inner sg-reveal sg-reveal-title-le">
       <nav class="sg-breadcrumb sg-breadcrumb-dark sg-breadcrumb--compact" aria-label="Fil d'Ariane">
         <ol class="sg-breadcrumb-list">
           <li><a href="/">Accueil</a></li>
@@ -68,7 +69,7 @@
 
 <!-- SECTION 1 — INTRO PUISSANTE -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable">
       <span class="sg-section-kicker">Introduction</span>
       <h2 class="sg-section-title">Pourquoi ajouter une <span class="text-gold font-semibold">batterie solaire</span> à votre installation ?</h2>
@@ -87,7 +88,7 @@
 <section class="sg-section-editorial sg-section-dark">
   <div class="sg-container" style="max-width:1100px;margin:0 auto;padding:0 24px">
     <div class="sg-batterie-2col">
-      <div class="ps-reveal ps-reveal-card">
+      <div class="sg-reveal sg-reveal-card-le">
         <span class="sg-section-kicker">Fonctionnement</span>
         <h2 class="sg-section-title text-left">Comment fonctionne une batterie solaire ?</h2>
         <p class="text-left">Le principe est simple : produire, stocker, restituer.</p>
@@ -96,7 +97,7 @@
         <p class="mt-4 text-left"><strong>3. Restitution le soir et la nuit</strong> — Quand le soleil baisse ou disparaît, la batterie se décharge pour alimenter votre maison. Vous consommez ainsi votre propre électricité au lieu d'acheter au réseau. Le taux d'autoconsommation peut passer de 40 % à 70 ou 80 %.</p>
         <p class="mt-6 text-left">En résumé : la batterie décale dans le temps l'utilisation du <span class="sg-num-gold">surplus photovoltaïque</span>. Elle ne crée pas d'énergie, elle la reporte.</p>
       </div>
-      <div class="ps-reveal ps-reveal-card flex justify-center md:justify-end" style="transition-delay:0.1s">
+      <div class="sg-reveal sg-reveal-card-le flex justify-center md:justify-end" style="transition-delay:0.1s">
         <img src="/assets/images/solaire/schema-stockage.webp" alt="Schéma du stockage d'énergie solaire : production, stockage, restitution" class="sg-batterie-img max-w-md w-full aspect-[4/3]" loading="lazy" onerror="if(this.nextElementSibling){this.style.display='none';this.nextElementSibling.style.display='flex'}" />
         <div class="sg-batterie-img-placeholder max-w-md w-full" style="display:none" aria-hidden="true">Schema stockage</div>
       </div>
@@ -108,14 +109,14 @@
 
 <!-- SECTION 3 — LES 2 TYPES DE BATTERIES -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable mb-12">
       <span class="sg-section-kicker">Choix stratégique</span>
       <h2 class="sg-section-title">Les 2 types de batteries : physique vs virtuelle</h2>
       <p class="sg-lead">Batterie physique ou batterie virtuelle ? Ce n'est pas la même chose. Voici les différences essentielles.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="sg-card-batterie ps-reveal ps-reveal-card">
+      <div class="sg-card-batterie sg-reveal sg-reveal-card-le">
         <h3><span class="sg-card-badge">Physique</span> Batterie physique</h3>
         <ul>
           <li><strong>Stockage réel chez vous</strong> — L'électricité est stockée dans des cellules lithium-ion installées dans votre garage ou cave.</li>
@@ -125,7 +126,7 @@
           <li><strong>Durée de vie</strong> — 10 à 15 ans, avec dégradation progressive de la capacité.</li>
         </ul>
       </div>
-      <div class="sg-card-batterie ps-reveal ps-reveal-card" style="transition-delay:0.1s">
+      <div class="sg-card-batterie sg-reveal sg-reveal-card-le" style="transition-delay:0.1s">
         <h3><span class="sg-card-badge">Virtuelle</span> Batterie virtuelle (Urban Solar, etc.)</h3>
         <ul>
           <li><strong>Stockage sur le réseau</strong> — Votre surplus est « stocké » virtuellement. Vous récupérez l'équivalent en kWh plus tard.</li>
@@ -145,7 +146,7 @@
 
 <!-- SECTION 4 — COMPARATIF CLAIR -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable mb-8">
       <span class="sg-section-kicker">Comparatif</span>
       <h2 class="sg-section-title">Batterie physique vs batterie virtuelle : tableau comparatif</h2>
@@ -200,7 +201,7 @@
 
 <!-- SECTION 5 — RENTABILITÉ RÉELLE -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable">
       <span class="sg-section-kicker">Vérité terrain</span>
       <h2 class="sg-section-title">La rentabilité réelle d'une batterie solaire</h2>
@@ -218,7 +219,7 @@
 
 <!-- SECTION 6 — DANS QUEL CAS C'EST INTÉRESSANT -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable mb-8">
       <span class="sg-section-kicker">Cas d'usage</span>
       <h2 class="sg-section-title">Dans quel cas une batterie est-elle intéressante ?</h2>
@@ -239,7 +240,7 @@
 
 <!-- SECTION 7 — DANS QUEL CAS CE N'EST PAS INTÉRESSANT -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable">
       <span class="sg-section-kicker">Crédibilité</span>
       <h2 class="sg-section-title">Dans quel cas une batterie n'est pas intéressante</h2>
@@ -258,7 +259,7 @@
 
 <!-- SECTION 8 — CE QUE NOUS FAISONS CHEZ SOLARGLOBE -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable">
       <span class="sg-section-kicker">Notre méthode</span>
       <h2 class="sg-section-title">Ce que nous faisons chez Solarglobe</h2>
@@ -274,7 +275,7 @@
 
 <!-- SECTION 9 — CTA INTERMÉDIAIRE -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-cta-intermediaire">
       <div class="sg-cta-inter-inner">
         <h2>Faut-il une batterie dans votre cas ?</h2>
@@ -289,7 +290,7 @@
 
 <!-- SECTION 10 — FAQ SEO -->
 <section class="sg-section-editorial sg-section-dark">
-  <div class="sg-container ps-reveal">
+  <div class="sg-container sg-reveal">
     <div class="sg-text-readable mb-8">
       <span class="sg-section-kicker">Questions fréquentes</span>
       <h2 class="sg-section-title">FAQ batterie solaire</h2>
@@ -350,7 +351,7 @@
 
 <!-- SECTION 11 — CTA FINAL -->
 <section class="sg-cta-editorial">
-  <div class="sg-cta-inner ps-reveal ps-reveal-title">
+  <div class="sg-cta-inner sg-reveal sg-reveal-title-le">
     <h2>Passez à l'énergie solaire</h2>
     <p>Nos experts réalisent gratuitement l'étude de votre toiture et estiment vos économies.</p>
     <a href="/etude-gratuite/" class="sg-btn-cta-primary">Obtenir mon étude solaire gratuite</a>
@@ -375,8 +376,6 @@ document.querySelectorAll('.sg-faq-item').forEach(item => {
   });
 });
 </script>
-<script>
-(function(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const els=document.querySelectorAll('.ps-reveal');if(!els.length)return;const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('ps-visible')})},{rootMargin:'0px 0px -8% 0px',threshold:0.05});els.forEach(el=>io.observe(el))})();
-</script>
+<script src="/assets/js/sg-animations.js"></script>
 </body>
 </html>
