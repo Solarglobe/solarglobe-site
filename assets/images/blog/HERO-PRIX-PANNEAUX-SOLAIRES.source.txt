@@ -1,0 +1,6 @@
+Image hero : blog-prix-panneaux-solaires.webp (1920×1080, WebP).
+Source photo brute : Pexels (pexels.com) — cliché toiture / panneaux photovoltaïques, recadré 16:9 et traité légèrement (contraste, saturation) pour cohérence éditoriale Solarglobe.
+
+Pour régénérer une image équivalente en externe (Midjourney, Flux, etc.), prompt suggéré :
+
+"Photorealistic editorial photograph, modern upscale suburban house in France, dark full-black monocrystalline solar panels flush-mounted on pitched roof, soft natural daylight late morning, clear sky, warm neutral tones, subtle golden hour rim light on roof edge, architectural photography, 16:9, high resolution, no text, no watermark, no cartoon, no illustration — premium solar installation catalogue style."
