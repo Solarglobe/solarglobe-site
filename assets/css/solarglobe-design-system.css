@@ -1,6 +1,7 @@
 /* ====== DESIGN SYSTEM GLOBAL SOLARGLOBE ====== */
 /* Source officielle du style du site - ne pas dupliquer */
 /*
+  Scroll reveal : .ps-reveal / .sg-reveal — styles + /assets/js/sg-ps-reveal.js (chargé via header.js)
   COMPOSANTS DISPONIBLES :
   - Boutons : .sg-btn .sg-btn-primary | .sg-btn-secondary | .sg-btn-outline
   - Cartes : .sg-card | .sg-card-dark
@@ -907,4 +908,77 @@ li {
 
 .sg-shadow-medium {
   box-shadow: var(--sg-shadow-medium);
+}
+
+/* -------------------------------------------
+   PS-REVEAL — scroll reveal global (sûr sans JS)
+   Visible par défaut ; animation si js-enabled + .ps-animate
+   ------------------------------------------- */
+.ps-reveal {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  will-change: auto;
+  transition: none;
+}
+
+.sg-reveal {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  will-change: auto;
+  transition: none;
+}
+
+.js-enabled .ps-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  filter: none;
+  will-change: opacity, transform;
+  transition: opacity 2.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 2.2s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 1.8s ease-out,
+    box-shadow 2s ease;
+}
+
+.js-enabled .sg-reveal.ps-animate {
+  filter: blur(6px);
+}
+
+.js-enabled .ps-animate.ps-visible,
+.js-enabled .ps-animate.visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+.js-enabled .ps-animate.ps-reveal-title.ps-visible {
+  text-shadow: 0 0 40px rgba(195, 152, 71, 0.15);
+}
+
+.js-enabled .ps-animate.ps-reveal-card.ps-visible {
+  box-shadow: 0 0 0 1px rgba(195, 152, 71, 0.08);
+}
+
+.js-enabled .ps-animate.ps-reveal-delay-1 { transition-delay: 0.08s; }
+.js-enabled .ps-animate.ps-reveal-delay-2 { transition-delay: 0.16s; }
+.js-enabled .ps-animate.ps-reveal-delay-3 { transition-delay: 0.24s; }
+.js-enabled .ps-animate.ps-reveal-delay-4 { transition-delay: 0.32s; }
+.js-enabled .ps-animate.ps-reveal-delay-5 { transition-delay: 0.4s; }
+.js-enabled .ps-animate.ps-reveal-delay-6 { transition-delay: 0.48s; }
+
+.js-enabled .sg-reveal-slow.ps-animate,
+.js-enabled .ps-reveal-title.ps-animate {
+  transition-duration: 2.8s, 2.6s, 2.2s, 2.4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ps-reveal,
+  .sg-reveal,
+  .js-enabled .ps-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
 }

@@ -23,31 +23,6 @@
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}</style>
   <style>
-  /* Scroll reveal – comme produits/index.html */
-  .ps-reveal {
-    opacity: 0;
-    transform: translateY(56px) scale(0.98);
-    filter: blur(4px);
-    will-change: opacity, transform, filter;
-    transition: opacity 2.2s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 2.4s cubic-bezier(0.16, 1, 0.3, 1),
-                filter 2s ease-out,
-                box-shadow 2s ease;
-  }
-  .ps-reveal.ps-visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
-  }
-  .ps-reveal-title.ps-visible {
-    text-shadow: 0 0 40px rgba(195, 152, 71, 0.15);
-  }
-  .ps-reveal-card.ps-visible {
-    box-shadow: 0 0 0 1px rgba(195, 152, 71, 0.08);
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .ps-reveal { transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
-  }
   /* Hero bureau d'étude – style étude solaire */
   .hero-bureau-etude {
     min-height: 70vh;
@@ -265,21 +240,6 @@ document.querySelectorAll('.sg-faq-item').forEach(item => {
     if (icon) icon.style.transform = isOpen ? 'rotate(45deg)' : 'none';
   });
 });
-</script>
-
-<!-- Scroll reveal – IntersectionObserver (comme produits/index.html) -->
-<script>
-(function() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const els = document.querySelectorAll('.ps-reveal');
-  if (!els.length) return;
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('ps-visible');
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  els.forEach(el => io.observe(el));
-})();
 </script>
 
 </body>

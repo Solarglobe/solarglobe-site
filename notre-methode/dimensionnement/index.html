@@ -20,34 +20,6 @@
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}</style>
   <style>
-  /* Scroll reveal – comme produits/index.html */
-  .ps-reveal {
-    opacity: 0;
-    transform: translateY(56px) scale(0.98);
-    filter: blur(4px);
-    will-change: opacity, transform, filter;
-    transition: opacity 2.2s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 2.4s cubic-bezier(0.16, 1, 0.3, 1),
-                filter 2s ease-out,
-                box-shadow 2s ease;
-  }
-  .ps-reveal.ps-visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
-  }
-  .ps-reveal-title.ps-visible {
-    text-shadow: 0 0 40px rgba(195, 152, 71, 0.15);
-  }
-  .ps-reveal-card.ps-visible {
-    box-shadow: 0 0 0 1px rgba(195, 152, 71, 0.08);
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .ps-reveal { transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
-  }
-  .sg-reveal{opacity:0;transform:translateY(40px);transition:opacity 1.2s cubic-bezier(0.22,1,0.36,1),transform 1.2s cubic-bezier(0.22,1,0.36,1)}
-  .sg-reveal.visible{opacity:1;transform:translateY(0)}
-  @media (prefers-reduced-motion:reduce){.sg-reveal{opacity:1;transform:none}}
   .hero-method{margin-top:0;min-height:55vh;display:flex;align-items:center;justify-content:center;padding:3rem 1.5rem}
   .hero-method::before{content:"";position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(195,152,71,0.18) 0%,transparent 70%);filter:blur(80px);pointer-events:none}
   .sg-card-dim{background:rgba(0,0,0,0.6);backdrop-filter:blur(12px);border:1px solid rgba(195,152,71,0.4);transition:transform 0.8s cubic-bezier(0.22,1,0.36,1),box-shadow 0.6s ease,border-color 0.5s ease}
@@ -538,27 +510,6 @@
 
 <div id="footer-placeholder"></div>
 <script src="/assets/js/footer.js"></script>
-
-<!-- Scroll reveal -->
-<script>
-(function() {
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefersReduced) {
-    document.querySelectorAll('.sg-reveal').forEach(el => el.classList.add('visible'));
-    document.querySelectorAll('.ps-reveal').forEach(el => el.classList.add('ps-visible'));
-    return;
-  }
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        e.target.classList.add('ps-visible');
-      }
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  document.querySelectorAll('.sg-reveal, .ps-reveal').forEach(el => io.observe(el));
-})();
-</script>
 
 </body>
 </html>

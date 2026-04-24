@@ -20,11 +20,6 @@
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}</style>
   <style>
-  .sg-reveal,.ps-reveal{opacity:0;transform:translateY(50px);filter:blur(6px);transition:opacity 1.3s cubic-bezier(0.22,1,0.36,1),transform 1.3s cubic-bezier(0.22,1,0.36,1),filter 1.3s cubic-bezier(0.22,1,0.36,1);will-change:transform,opacity}
-  .sg-reveal.visible,.ps-reveal.ps-visible{opacity:1;transform:translateY(0);filter:blur(0)}
-  .sg-reveal-slow,.ps-reveal-title{transition:opacity 1.6s cubic-bezier(0.22,1,0.36,1),transform 1.6s cubic-bezier(0.22,1,0.36,1),filter 1.6s cubic-bezier(0.22,1,0.36,1)}
-  .ps-reveal-title.ps-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
-  @media (prefers-reduced-motion:reduce){.sg-reveal,.ps-reveal{opacity:1;transform:none;filter:none}}
   .hero-method{margin-top:0;min-height:55vh;display:flex;align-items:center;justify-content:center;padding:3rem 1.5rem}
   .hero-method::before{content:"";position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(195,152,71,0.18) 0%,transparent 70%);filter:blur(80px);pointer-events:none}
   .sg-flow-calpinage{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px 8px;padding:2rem 0}
@@ -378,25 +373,6 @@
 
 <div id="footer-placeholder"></div>
 <script src="/assets/js/footer.js"></script>
-
-<script>
-(function(){
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(prefersReduced){
-    document.querySelectorAll('.sg-reveal, .ps-reveal').forEach(el=>{el.classList.add('visible');el.classList.add('ps-visible')});
-    return;
-  }
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      entry.target.classList.add('ps-visible');
-      observer.unobserve(entry.target);
-    });
-  },{threshold:0.15,rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('.sg-reveal, .ps-reveal').forEach(el=>observer.observe(el));
-})();
-</script>
 
 </body>
 </html>

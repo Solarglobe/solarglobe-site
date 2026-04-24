@@ -1,4 +1,15 @@
+document.documentElement.classList.add("js-enabled");
+
 document.addEventListener("DOMContentLoaded", function () {
+  (function loadSgPsReveal() {
+    if (document.querySelector("script[data-sg-ps-reveal]")) return;
+    var s = document.createElement("script");
+    s.src = "/assets/js/sg-ps-reveal.js";
+    s.async = true;
+    s.setAttribute("data-sg-ps-reveal", "1");
+    document.head.appendChild(s);
+  })();
+
   const placeholder = document.getElementById("header-placeholder");
   if (!placeholder) return;
 

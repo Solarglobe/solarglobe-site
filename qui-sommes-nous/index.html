@@ -24,11 +24,6 @@
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
   <style>.text-gold{color:#C39847!important}.bg-gold{background-color:#C39847!important}.border-gold{border-color:#C39847!important}body.menu-open{overflow:hidden}
   /* Scroll reveal – premium (comme produits/faq) */
-  .ps-reveal{opacity:0;transform:translateY(56px) scale(0.98);filter:blur(4px);will-change:opacity,transform,filter;transition:opacity 2.2s cubic-bezier(0.16,1,0.3,1),transform 2.4s cubic-bezier(0.16,1,0.3,1),filter 2s ease-out,box-shadow 2s ease}
-  .ps-reveal.ps-visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
-  .ps-reveal-title.ps-visible{text-shadow:0 0 40px rgba(195,152,71,0.15)}
-  .ps-reveal-card.ps-visible{box-shadow:0 0 0 1px rgba(195,152,71,0.08)}
-  @media (prefers-reduced-motion:reduce){.ps-reveal{transition:none!important;opacity:1!important;transform:none!important;filter:none!important}}
   .sg-hero-premium.sg-hero-solaire{padding-top:120px}
   @media (min-width:768px){.sg-hero-premium.sg-hero-solaire{padding-top:120px}}
   /* Cartes premium – hover glow gold */
@@ -274,16 +269,6 @@
 
 <div id="footer-placeholder"></div>
 <script src="/assets/js/footer.js"></script>
-
-<!-- Scroll reveal script -->
-<script>
-(function(){
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('ps-visible')});
-  },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.ps-reveal').forEach(el=>observer.observe(el));
-})();
-</script>
 
 <!-- JSON-LD -->
 <script type="application/ld+json">
