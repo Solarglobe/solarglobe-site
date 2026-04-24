@@ -109,6 +109,7 @@
 </head>
 <body class="bg-black text-white sg-editorial sg-blog">
 
+<script>document.documentElement.classList.add('js-enabled');</script>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2ZQKS6F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div id="header-placeholder"></div>
@@ -398,10 +399,6 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log('[blog] scoped article.sg-blog-card[data-tags] count=', posts.length, posts);
   }
 
-  document.querySelectorAll('#sg-blog-articles-grid article.sg-blog-card.ps-reveal').forEach(function (el) {
-    el.classList.add('ps-visible');
-  });
-
   function applyFilters() {
     const active = document.querySelector('.sg-blog-chip.active')?.dataset.filter || 'all';
     const q = (search?.value || '').toLowerCase();
@@ -447,6 +444,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const els = document.querySelectorAll('.ps-reveal');
   if (!els.length) return;
+  els.forEach(function (el) {
+    el.classList.add('ps-animate');
+  });
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) e.target.classList.add('ps-visible');
