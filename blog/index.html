@@ -220,7 +220,7 @@
   <div class="sg-container">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-      <article class="sg-blog-card sg-blog-card-lead ps-reveal ps-reveal-delay-1" data-tags="prix budget rentabilite">
+      <article class="sg-blog-card sg-blog-card-lead ps-reveal ps-reveal-delay-1" data-tags="prix budget rentabilite autoconsommation aides rendement">
         <a href="/blog/prix-panneaux-solaires/" class="block">
           <div class="sg-blog-card-img">
             <img src="/assets/images/blog/blog-prix-panneaux-solaires.webp" width="800" height="450" loading="lazy" alt="Maison équipée de panneaux solaires full black sur toiture" />
@@ -387,16 +387,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const chips = document.querySelectorAll('.sg-blog-chip[data-filter]');
   const posts = document.querySelectorAll('.sg-blog-card[data-tags]');
   const search = document.getElementById('search');
+  const __blogFilterDebug = /[?&]debug=1(?:&|$)/.test(location.search);
 
   function applyFilters() {
     const active = document.querySelector('.sg-blog-chip.active')?.dataset.filter || 'all';
     const q = (search?.value || '').toLowerCase();
+    if (__blogFilterDebug) {
+      console.log('[blog-filters] active=', active, 'search=', JSON.stringify(q));
+    }
     posts.forEach(p => {
       const tags = (p.dataset.tags || '').toLowerCase();
       const text = p.textContent.toLowerCase();
       const tagOk = active === 'all' || tags.includes(active);
       const searchOk = !q || text.includes(q);
-      p.style.display = (tagOk && searchOk) ? '' : 'none';
+      const visible = tagOk && searchOk;
+      if (__blogFilterDebug) {
+        const href = p.querySelector('a[href]')?.getAttribute('href') || '(sans lien)';
+        console.log('[blog-filters]', { href, tags, tagOk, searchOk, visible });
+      }
+      p.style.display = visible ? '' : 'none';
     });
   }
 
@@ -416,6 +425,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); search.focus(); }
     });
   }
+
+  applyFilters();
 });
 </script>
 <script>
