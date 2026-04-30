@@ -72,6 +72,114 @@
     .nav-btn.active {
       color: #C39847;
     }
+
+    .presentation-nav {
+      display: none;
+    }
+
+    .slide-09-product-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(150px, 190px);
+    }
+
+    .slide-09-title {
+      font-size: clamp(1.7rem, 2.6vw, 2.45rem);
+    }
+
+    .slide-09-main {
+      align-items: flex-start !important;
+    }
+
+    .slide-09-card {
+      padding: clamp(1rem, 2vh, 1.6rem) clamp(1.25rem, 2.6vw, 2.2rem) !important;
+      gap: clamp(1rem, 2vw, 1.8rem) !important;
+    }
+
+    .slide-09-copy {
+      font-size: clamp(0.72rem, 0.92vw, 0.84rem) !important;
+      line-height: 1.36 !important;
+    }
+
+    .slide-09-copy > * + * {
+      margin-top: clamp(0.35rem, 0.85vh, 0.65rem) !important;
+    }
+
+    .slide-09-product-images {
+      max-height: calc(100vh - 305px);
+      overflow: hidden;
+    }
+
+    .slide-09-product-button {
+      width: min(100%, 145px);
+      height: clamp(100px, 18vh, 155px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide-09-product-image {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    @media (max-width: 760px) {
+      .slide-09-product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .slide-09-product-images {
+        max-height: none;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    @media (max-height: 760px) {
+      .slide-09-title {
+        font-size: clamp(1.45rem, 2.35vw, 2rem);
+      }
+
+      .slide-09-header .bg-gold {
+        margin-top: 0.65rem !important;
+      }
+
+      .slide-09-card {
+        padding: 0.85rem 1.25rem !important;
+      }
+
+      .slide-09-copy {
+        font-size: clamp(0.64rem, 0.82vw, 0.74rem) !important;
+        line-height: 1.24 !important;
+      }
+
+      .slide-09-copy > * + * {
+        margin-top: 0.32rem !important;
+      }
+
+      .slide-09-product-images {
+        gap: 0.55rem !important;
+      }
+
+      .slide-09-product-button {
+        height: clamp(78px, 14vh, 118px);
+      }
+
+      .slide-09-footer {
+        padding-top: 0.7rem !important;
+        padding-bottom: 0.9rem !important;
+      }
+
+      .slide-09-footer p {
+        font-size: 0.82rem !important;
+      }
+
+      .slide-09-footer button {
+        padding: 0.6rem 1.35rem !important;
+      }
+    }
   </style>
   <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
   <link rel="stylesheet" href="/assets/css/header-common.css" />
@@ -124,7 +232,7 @@ APP
 <!-- ======================================================
 MENU FIXE — 00 → 16 (COMME PARTENAIRES)
 ====================================================== -->
-<header class="fixed top-0 left-0 w-full z-40">
+<header class="presentation-nav fixed top-0 left-0 w-full z-40">
   <div class="mx-auto max-w-7xl px-10 py-4 flex justify-between items-center
               bg-black/45 backdrop-blur-md border-b border-gold/20">
 
@@ -1410,9 +1518,8 @@ HTML SAFE · IMAGE CONTENUE · PREMIUM
     <!-- ======================
     HEADER
     ======================= -->
-    <header class="max-w-6xl">
-      <h2 class="font-semibold leading-tight
-                 text-[clamp(2rem,3.1vw,2.9rem)]">
+    <header class="max-w-6xl slide-09-header">
+      <h2 class="slide-09-title font-semibold leading-tight">
         Performance &amp; esth&eacute;tique&nbsp;:<br>
         <span class="text-gold">LONGi Hi-MO X10 Explorer &amp; Aiko Neostar 2S+</span>
       </h2>
@@ -1423,16 +1530,15 @@ HTML SAFE · IMAGE CONTENUE · PREMIUM
     <!-- ======================
     CONTENU CENTRAL
     ======================= -->
-    <main class="flex items-center">
-      <div class="w-full max-w-[1200px] mx-auto
+    <main class="slide-09-main flex items-center">
+      <div class="slide-09-card w-full max-w-[1200px] mx-auto
                   bg-black/65 backdrop-blur-md
                   border border-gold/25 rounded-2xl
-                  px-10 py-9
-                  grid grid-cols-1 lg:grid-cols-[1fr_1fr_0.5fr]
+                  slide-09-product-grid grid grid-cols-1
                   gap-10 items-start">
 
         <!-- LONGI ARGUMENTAIRE -->
-        <div class="space-y-3 text-neutral-200 text-[0.9rem] leading-relaxed">
+        <div class="slide-09-copy space-y-3 text-neutral-200 text-[0.9rem] leading-relaxed">
           <div class="flex items-center gap-3 mb-3">
             <img src="/assets/images/logo/longi.avif" alt="Logo LONGi" style="height:22px;width:auto;filter:brightness(0) invert(1);opacity:0.9;" />
           </div>
@@ -1440,38 +1546,29 @@ HTML SAFE · IMAGE CONTENUE · PREMIUM
           <p>
             <span class="text-gold font-semibold">Technologie HPBC&nbsp;2.0 (Back&nbsp;Contact)</span>
             : cellules sans busbars, connexions arri&egrave;re &rarr;
-            plus de lumi&egrave;re capt&eacute;e, moins de pertes.
+            plus de lumi&egrave;re capt&eacute;e et moins de pertes.
           </p>
 
           <p>
-            <span class="text-gold font-semibold">Rendement jusqu&rsquo;&agrave; 24,8&nbsp;%</span>
-            gr&acirc;ce &agrave; la cellule N-Type busbar-free.
-          </p>
-
-          <p>
-            <span class="text-gold font-semibold">Performance en faible luminosit&eacute;</span>,
+            <span class="text-gold font-semibold">Rendement jusqu&rsquo;&agrave; 24,8&nbsp;%</span>,
+            avec une excellente performance en faible luminosit&eacute;,
             id&eacute;ale pour le nord de la France.
           </p>
 
           <p>
             <span class="text-gold font-semibold">Design full black</span>
-            : verre / backsheet noir + cadre aluminium noir (≈&nbsp;22,5&nbsp;kg).
+            : verre / backsheet noir + cadre aluminium noir.
           </p>
 
           <p>
             <span class="text-gold font-semibold">Garantie 25&nbsp;ans</span>
-            + performance <strong>30&nbsp;ans</strong>
-            (d&eacute;gradation ≤&nbsp;0,4&nbsp;% / an).
+            + performance <strong>30&nbsp;ans</strong>.
           </p>
 
-          <p>
-            N&deg;1 mondial du photovolta&iuml;que,
-            plus de <strong>100&nbsp;GW</strong> install&eacute;s dans le monde.
-          </p>
         </div>
 
         <!-- AIKO ARGUMENTAIRE -->
-        <div class="space-y-3 text-neutral-200 text-[0.9rem] leading-relaxed">
+        <div class="slide-09-copy space-y-3 text-neutral-200 text-[0.9rem] leading-relaxed">
           <div class="flex items-center gap-3 mb-3">
             <img src="/assets/images/logo/aiko-logo.png" alt="Logo Aiko" style="height:22px;width:auto;filter:brightness(0) invert(1);opacity:0.9;" />
           </div>
@@ -1484,12 +1581,8 @@ HTML SAFE · IMAGE CONTENUE · PREMIUM
 
           <p>
             <span class="text-gold font-semibold">Rendement jusqu&rsquo;&agrave; 25&nbsp;%</span>
-            — parmi les plus &eacute;lev&eacute;s du march&eacute; r&eacute;sidentiel.
-          </p>
-
-          <p>
-            <span class="text-gold font-semibold">Coefficient de temp&eacute;rature excellent</span>
-            : perd moins de puissance lors des chaleurs estivales.
+            — parmi les plus &eacute;lev&eacute;s du march&eacute; r&eacute;sidentiel,
+            avec un excellent coefficient de temp&eacute;rature.
           </p>
 
           <p>
@@ -1502,28 +1595,24 @@ HTML SAFE · IMAGE CONTENUE · PREMIUM
             produit &amp; performance lin&eacute;aire.
           </p>
 
-          <p>
-            Technologie ABC de pointe, reconnue pour sa
-            <strong>fiabilit&eacute; et sa longévit&eacute;</strong>.
-          </p>
         </div>
 
         <!-- IMAGES PRODUITS -->
-        <div class="flex flex-col items-center gap-6">
+        <div class="slide-09-product-images flex flex-col items-center gap-4">
           <button onclick="openLightbox('assets/images/produits/longi-x10-explorer.avif')"
-                  class="focus:outline-none">
+                  class="slide-09-product-button focus:outline-none">
             <img src="/assets/images/produits/longi-x10-explorer.avif"
                  alt="Panneau LONGi Hi-MO X10 Explorer"
-                 class="w-full max-w-[160px]
+                 class="slide-09-product-image
                         object-contain
                         drop-shadow-[0_0_20px_rgba(195,152,71,0.22)]
                         transition-transform hover:scale-[1.03]" />
           </button>
           <button onclick="openLightbox('assets/images/produits/AIKO-Neostar-2PS.webp')"
-                  class="focus:outline-none">
+                  class="slide-09-product-button focus:outline-none">
             <img src="/assets/images/produits/AIKO-Neostar-2PS.webp"
                  alt="Panneau Aiko Neostar 2S+"
-                 class="w-full max-w-[160px]
+                 class="slide-09-product-image
                         object-contain
                         drop-shadow-[0_0_20px_rgba(195,152,71,0.22)]
                         transition-transform hover:scale-[1.03]" />
@@ -1538,7 +1627,7 @@ HTML SAFE · IMAGE CONTENUE · PREMIUM
     </div>
   </div>
 
-  <footer class="sg-slide-footer flex items-center justify-between gap-6 flex-wrap">
+  <footer class="slide-09-footer sg-slide-footer flex items-center justify-between gap-6 flex-wrap">
 
       <p class="italic text-neutral-200
                 text-[clamp(0.9rem,1.2vw,1.05rem)]
