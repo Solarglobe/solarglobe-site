@@ -74,11 +74,23 @@
     }
 
     .presentation-nav {
-      display: none;
+      pointer-events: none;
+    }
+
+    .presentation-nav-inner {
+      background: transparent !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      border-bottom: 0 !important;
+    }
+
+    .presentation-nav img,
+    .presentation-nav nav {
+      pointer-events: auto;
     }
 
     .slide-09-product-grid {
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(150px, 190px);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(210px, 260px);
     }
 
     .slide-09-title {
@@ -109,8 +121,8 @@
     }
 
     .slide-09-product-button {
-      width: min(100%, 145px);
-      height: clamp(100px, 18vh, 155px);
+      width: min(100%, 210px);
+      height: clamp(145px, 21vh, 230px);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -118,9 +130,9 @@
 
     .slide-09-product-image {
       display: block;
-      width: auto;
+      width: 100%;
       max-width: 100%;
-      height: auto;
+      height: 100%;
       max-height: 100%;
       object-fit: contain;
     }
@@ -134,6 +146,22 @@
         max-height: none;
         flex-direction: row;
         justify-content: center;
+      }
+    }
+
+    @media (min-width: 1280px) and (min-height: 760px) {
+      .slide-09-product-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(300px, 360px);
+      }
+
+      .slide-09-product-images {
+        max-height: calc(100vh - 285px);
+        gap: 1rem !important;
+      }
+
+      .slide-09-product-button {
+        width: min(100%, 300px);
+        height: clamp(180px, 24vh, 245px);
       }
     }
 
@@ -165,6 +193,7 @@
 
       .slide-09-product-button {
         height: clamp(78px, 14vh, 118px);
+        width: min(100%, 150px);
       }
 
       .slide-09-footer {
@@ -233,7 +262,7 @@ APP
 MENU FIXE — 00 → 16 (COMME PARTENAIRES)
 ====================================================== -->
 <header class="presentation-nav fixed top-0 left-0 w-full z-40">
-  <div class="mx-auto max-w-7xl px-10 py-4 flex justify-between items-center
+  <div class="presentation-nav-inner mx-auto max-w-7xl px-10 py-4 flex justify-between items-center
               bg-black/45 backdrop-blur-md border-b border-gold/20">
 
     <img src="/assets/images/logo-solarglobe-rect.png" class="sg-site-logo-aux w-auto" alt="Solarglobe" />
