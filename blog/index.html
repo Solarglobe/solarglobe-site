@@ -102,6 +102,10 @@
   .sg-blog-index-modern .sg-blog-card .p-3{padding:9px 10px}
   .sg-blog-index-modern .sg-blog-card p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:4px}
   .sg-blog-index-modern .sg-blog-card-micro{display:none}
+  .sg-blog-index-modern .sg-blog-pagination{display:flex;align-items:center;justify-content:center;gap:8px;margin:22px 0 8px}
+  .sg-blog-index-modern .sg-blog-page-btn{min-width:36px;height:36px;padding:0 12px;border:1px solid rgba(195,152,71,.25);border-radius:8px;background:rgba(255,255,255,.035);color:rgba(255,255,255,.75);font-size:13px;font-weight:650}
+  .sg-blog-index-modern .sg-blog-page-btn.active{background:#C39847;border-color:#C39847;color:#0B0B0B}
+  .sg-blog-index-modern .sg-blog-page-btn[aria-disabled="true"]{opacity:.45;cursor:not-allowed}
   .sg-blog-index-modern .sg-blog-proof{padding:30px 0 54px;background:#0B0B0B}
   .sg-blog-index-modern .sg-blog-proof-grid{display:grid;gap:10px}
   @media (min-width:760px){.sg-blog-index-modern .sg-blog-proof-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
@@ -132,7 +136,8 @@
     {"@type":"BlogPosting","headline":"Comprendre le rendement réel de vos panneaux","url":"https://www.solarglobe.fr/blog/rendement-panneaux/"},
     {"@type":"BlogPosting","headline":"Aides financières 2026 : comprendre et optimiser votre projet","url":"https://www.solarglobe.fr/blog/aides-financieres/"},
     {"@type":"BlogPosting","headline":"6 kWc ou 9 kWc : comment choisir la bonne puissance ?","url":"https://www.solarglobe.fr/blog/choisir-puissance-solaire/"},
-    {"@type":"BlogPosting","headline":"Pilotage intelligent Shelly : +20 % d'autoconsommation","url":"https://www.solarglobe.fr/blog/pilotage-intelligent-shelly/"}
+    {"@type":"BlogPosting","headline":"Pilotage intelligent Shelly : +20 % d'autoconsommation","url":"https://www.solarglobe.fr/blog/pilotage-intelligent-shelly/"},
+    {"@type":"BlogPosting","headline":"Surdimensionnement solaire : l'erreur qui détruit la rentabilité","url":"https://www.solarglobe.fr/blog/surdimensionnement-solaire/"}
   ]
 }
 </script>
@@ -187,8 +192,8 @@
         <a href="#articles" data-filter-link="rendement">Rendement<span>Production réelle</span></a>
         <a href="#articles" data-filter-link="aides">Aides<span>Prime, TVA, surplus</span></a>
         <a href="#articles" data-filter-link="dimensionnement">Puissance<span>3, 6 ou 9 kWc</span></a>
+        <a href="#articles" data-filter-link="roi">ROI<span>Éviter le surdimensionnement</span></a>
         <a href="#articles" data-filter-link="pilotage">Pilotage<span>Shelly, usages, borne</span></a>
-        <a href="/etude-gratuite/">Étude gratuite<span>Projet chiffré</span></a>
       </div>
     </div>
   </div>
@@ -203,6 +208,7 @@
         <button class="sg-blog-chip" data-filter="aides">Aides</button>
         <button class="sg-blog-chip" data-filter="rendement">Rendement</button>
         <button class="sg-blog-chip" data-filter="dimensionnement">Puissance</button>
+        <button class="sg-blog-chip" data-filter="roi">ROI</button>
         <button class="sg-blog-chip" data-filter="pilotage">Pilotage</button>
         <button class="sg-blog-chip" data-filter="batteries">Batteries</button>
       </div>
@@ -250,6 +256,10 @@
           <img src="/assets/images/blog/blog-choisir-puissance.webp" alt="" width="224" height="156" loading="lazy" />
           <div><strong>6 kWc ou 9 kWc : choisir la bonne puissance</strong><span>Profil conso, PAC, toiture et dimensionnement.</span></div>
         </a>
+        <a href="/blog/surdimensionnement-solaire/" class="sg-blog-side-item">
+          <img src="/assets/images/solaire/dimensionnement.jpg" alt="" width="224" height="156" loading="lazy" />
+          <div><strong>Surdimensionnement solaire : l'erreur qui détruit la rentabilité</strong><span>Pourquoi plus de panneaux ne veut pas toujours dire meilleur ROI.</span></div>
+        </a>
         <a href="/blog/pilotage-intelligent-shelly/" class="sg-blog-side-item">
           <img src="/assets/images/shelly/chauffe-eau.avif" alt="" width="224" height="156" loading="lazy" />
           <div><strong>Pilotage intelligent Shelly : +20 % d'autoconsommation</strong><span>Chauffe-eau, clim, batterie, borne EV.</span></div>
@@ -266,6 +276,13 @@
     </div>
 
     <div class="sg-blog-library">
+      <article class="sg-blog-card sg-reveal sg-reveal-delay-1" data-tags="dimensionnement roi rentabilite autoconsommation">
+        <a href="/blog/surdimensionnement-solaire/" class="block">
+          <div class="sg-blog-card-img"><img src="/assets/images/solaire/dimensionnement.jpg" width="800" height="450" loading="lazy" alt="Dimensionnement photovoltaïque et analyse de rentabilité solaire" /></div>
+          <div class="p-3"><div class="flex flex-wrap gap-1.5 mb-2"><span class="sg-blog-card-badge">ROI</span><span class="sg-blog-card-badge">Dimensionnement</span></div><h2 class="sg-blog-card-title font-semibold text-gold mb-1.5">Surdimensionnement solaire : l'erreur qui détruit la rentabilité</h2><p class="text-white/75 text-xs leading-tight mb-2">Pourquoi une installation trop puissante peut produire plus, mais rapporter moins.</p><span class="text-gold font-semibold text-xs">Lire l'article →</span></div>
+        </a>
+      </article>
+
       <article class="sg-blog-card sg-reveal sg-reveal-delay-1" data-tags="rendement autoconsommation">
         <a href="/blog/rendement-panneaux/" class="block">
           <div class="sg-blog-card-img"><img src="/assets/images/blog/blog-rendement-panneaux.webp" width="800" height="450" loading="lazy" alt="Panneaux solaires bien orientés pour un rendement optimal" /></div>
@@ -301,6 +318,12 @@
         </a>
       </article>
     </div>
+
+    <nav class="sg-blog-pagination" aria-label="Pagination des articles">
+      <span class="sg-blog-page-btn" aria-disabled="true">Préc.</span>
+      <span class="sg-blog-page-btn active" aria-current="page">1</span>
+      <span class="sg-blog-page-btn" aria-disabled="true">Suiv.</span>
+    </nav>
   </div>
 </main>
 

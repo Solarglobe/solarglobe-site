@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="canonical" href="https://www.solarglobe.fr/blog/surdimensionnement-solaire/" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Surdimensionnement solaire : l'erreur qui détruit la rentabilité | Solarglobe</title>
+  <meta name="description" content="Pourquoi une installation photovoltaïque trop puissante peut dégrader le retour sur investissement. Méthode bureau d'étude pour dimensionner au ROI, pas au nombre de panneaux." />
+  <meta name="robots" content="index, follow" />
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{ ad_storage:'denied', analytics_storage:'denied', wait_for_update:500 });
+  </script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N2ZQKS6F');</script>
+
+  <meta property="og:title" content="Surdimensionnement solaire : l'erreur qui détruit la rentabilité | Solarglobe" />
+  <meta property="og:description" content="Plus de panneaux ne signifie pas toujours plus de rentabilité. Découvrez la méthode pro pour dimensionner une installation solaire au ROI." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.solarglobe.fr/blog/surdimensionnement-solaire/" />
+  <meta property="og:image" content="https://www.solarglobe.fr/assets/images/solaire/dimensionnement.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Surdimensionnement solaire : l'erreur qui détruit le ROI" />
+  <meta name="twitter:description" content="La puissance idéale n'est pas la plus grande. C'est celle qui maximise l'autoconsommation et le retour sur investissement." />
+  <meta name="twitter:image" content="https://www.solarglobe.fr/assets/images/solaire/dimensionnement.jpg" />
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link rel="stylesheet" href="/assets/css/montserrat-local.css" />
+  <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
+  <link rel="stylesheet" href="/assets/css/le-solaire-editorial.css" />
+  <link rel="stylesheet" href="/assets/css/blog.css" />
+  <link rel="stylesheet" href="/assets/css/header-common.css" />
+  <link rel="stylesheet" href="/assets/css/footer-common.css" />
+  <link rel="stylesheet" href="/assets/css/tailwind.css" />
+
+  <style>
+    :root{--bg:#0D0D0D;--gold:#C39847;--narrow:580px;--wide:960px}
+    body{font-family:'Montserrat',sans-serif;background:var(--bg);color:#fff}
+    .text-gold{color:var(--gold)!important}
+    .sg-art-wrap{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+    .sg-art-main{display:grid;gap:2rem}
+    @media (min-width:1024px){.sg-art-main{grid-template-columns:1fr 240px;align-items:start}.sg-art-sidebar{position:sticky;top:100px}}
+    .sg-art-narrow{max-width:var(--narrow)}
+    .sg-art-wide{max-width:var(--wide)}
+    .sg-art-full{max-width:100%}
+    .sg-art-body section{margin-bottom:4rem}
+    .sg-zone-sombre{background:rgba(0,0,0,.22);padding:2.5rem 1.5rem;border-radius:12px}
+    .sg-zone-claire{background:rgba(255,255,255,.04);padding:2.5rem 1.5rem;border-radius:12px}
+    .sg-hero-editorial{position:relative;min-height:280px;display:grid;grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,#0D0D0D 100%)}
+    @media (min-width:768px){.sg-hero-editorial{grid-template-columns:1.2fr 1fr;align-items:end;min-height:250px;padding:2rem 2rem 2.5rem}}
+    .sg-hero-editorial::before{content:"";position:absolute;inset:0;background:url(/assets/images/solaire/dimensionnement.jpg) center/cover;z-index:-2}
+    .sg-hero-editorial::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.56) 52%,rgba(0,0,0,.92) 100%);z-index:-1}
+    .sg-hero-left,.sg-hero-right{position:relative;z-index:1}
+    .sg-hero-badge{display:inline-block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);padding:4px 10px;margin-bottom:10px;background:rgba(255,255,255,.06)}
+    .sg-hero-title{font-size:clamp(1.45rem,2.8vw,2.1rem);font-weight:700;line-height:1.22;color:#fff;margin-bottom:8px}
+    .sg-hero-accroche{font-size:.92rem;color:rgba(255,255,255,.85);line-height:1.55}
+    .sg-hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .sg-hero-stat{background:rgba(0,0,0,.25);border-radius:6px;padding:10px 12px;text-align:center}
+    .sg-hero-stat-num{font-size:1.05rem;font-weight:700;color:var(--gold);line-height:1.2}
+    .sg-hero-stat-label{font-size:10px;color:rgba(255,255,255,.62);margin-top:2px;text-transform:uppercase;letter-spacing:.04em}
+    .sg-hero-meta{font-size:11px;color:rgba(255,255,255,.55);margin-top:12px}
+    .sg-sidebar{background:rgba(0,0,0,.15);border-radius:6px;padding:1rem;margin-bottom:1rem}
+    .sg-sidebar-title{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;margin-bottom:10px}
+    .sg-sidebar ol{list-style:none;padding:0;margin:0}
+    .sg-sidebar li{margin-bottom:6px}
+    .sg-sidebar a{font-size:12px;color:rgba(255,255,255,.8);text-decoration:none}
+    .sg-sidebar a:hover{color:var(--gold)}
+    .sg-maj-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start;padding:1rem 1.25rem;background:rgba(0,0,0,.15);border-radius:10px;margin-bottom:2.5rem}
+    .sg-maj-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;flex-shrink:0}
+    .sg-maj-bar p{margin:0;font-size:12px;color:rgba(255,255,255,.8);line-height:1.5}
+    .sg-art-body h2{font-size:1.4rem;font-weight:700;color:#fff;margin:0 0 1.25rem 0;letter-spacing:-.02em}
+    .sg-art-body p{margin-bottom:1rem;line-height:1.65;color:rgba(255,255,255,.88);font-size:15px}
+    .sg-art-body p.lead{font-size:1rem;font-weight:600;color:rgba(255,255,255,.95)}
+    .sg-punch-full{padding:1.5rem 0;margin:3.5rem 0;font-size:1.08rem;font-weight:650;color:rgba(255,255,255,.95);border-left:3px solid var(--gold);padding-left:1.5rem}
+    .sg-2col{display:grid;gap:1.5rem}
+    @media (min-width:768px){.sg-2col{grid-template-columns:1fr 1fr}}
+    .sg-card{background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.4));border:1px solid rgba(195,152,71,.15);border-radius:10px;padding:1.5rem;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+    .sg-card h4{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;margin-bottom:10px}
+    .sg-card ul{list-style:none;padding:0;margin:0;font-size:14px;line-height:1.8;color:rgba(255,255,255,.86)}
+    .sg-block-h{display:grid;gap:1rem;padding:1.25rem 1.5rem;background:rgba(0,0,0,.1);border-radius:10px;margin:1.25rem 0}
+    @media (min-width:640px){.sg-block-h{grid-template-columns:auto 1fr;align-items:start}}
+    .sg-block-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:700;min-width:100px}
+    .sg-chiffre-fort-wrap{padding:5rem 3rem;margin:5rem 0;text-align:center;background:linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(195,152,71,.03) 50%,rgba(0,0,0,.2) 100%);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+    .sg-chiffre-fort{font-size:clamp(5rem,14vw,9rem);font-weight:700;color:var(--gold);line-height:1;letter-spacing:-.05em;text-shadow:0 0 60px rgba(195,152,71,.25)}
+    .sg-chiffre-fort-sub{font-size:15px;color:rgba(255,255,255,.58);margin-top:1.5rem;max-width:540px;margin-left:auto;margin-right:auto;line-height:1.5}
+    .sg-article-photo{width:100%;height:auto;border-radius:10px;display:block}
+    .sg-cta-bar{display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between;padding:3rem 3.5rem;margin:5rem 0;background:linear-gradient(135deg,rgba(195,152,71,.08) 0%,rgba(0,0,0,.2) 100%);border:1px solid rgba(195,152,71,.4);border-radius:12px}
+    .sg-cta-bar h3{font-size:1.5rem;font-weight:700;color:#fff;margin:0 0 8px 0}
+    .sg-cta-bar p{margin:0;font-size:1rem;color:rgba(255,255,255,.9);line-height:1.5}
+    .sg-cta-bar .btn{display:inline-block;background:var(--gold);color:#0D0D0D;font-weight:700;padding:16px 32px;border-radius:8px;text-decoration:none;transition:all .3s;font-size:16px}
+    .sg-cta-bar .btn:hover{background:#D4A84E;transform:translateY(-2px)}
+    .sg-related{display:grid;grid-template-columns:1fr;gap:.75rem;margin-top:2rem}
+    @media (min-width:640px){.sg-related{grid-template-columns:1fr 1fr}}
+    .sg-related a{display:flex;gap:1rem;align-items:center;padding:1rem 1.25rem;background:rgba(0,0,0,.08);border-radius:10px;text-decoration:none;transition:background .25s ease,transform .2s ease}
+    .sg-related a:hover{background:rgba(0,0,0,.14);transform:translateX(4px)}
+    .sg-related img{width:72px;height:54px;object-fit:cover;border-radius:6px;flex-shrink:0}
+    .sg-related strong{color:rgba(255,255,255,.95);font-size:13px}
+    .sg-related span{font-size:12px;color:rgba(255,255,255,.55)}
+    :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2ZQKS6F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="header-placeholder"></div>
+<script src="/assets/js/header.js"></script>
+
+<div class="h-20"></div>
+
+<div class="sg-art-wrap">
+  <nav class="sg-breadcrumb sg-breadcrumb-dark sg-breadcrumb--compact" aria-label="Fil d'Ariane">
+    <ol class="sg-breadcrumb-list">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li aria-current="page">Surdimensionnement solaire</li>
+    </ol>
+  </nav>
+</div>
+
+<header class="sg-hero-editorial">
+  <div class="sg-hero-left">
+    <span class="sg-hero-badge">Bureau d'étude & ROI</span>
+    <h1 class="sg-hero-title">Surdimensionnement solaire : l'erreur qui détruit la rentabilité</h1>
+    <p class="sg-hero-accroche">Plus de panneaux ne signifie pas toujours plus d'économies. Une installation trop puissante peut augmenter le coût initial, baisser le taux d'autoconsommation et allonger le retour sur investissement.</p>
+    <p class="sg-hero-meta">Par Solarglobe · 13 mai 2026 · 7 min</p>
+  </div>
+  <div class="sg-hero-right">
+    <div class="sg-hero-stats">
+      <div class="sg-hero-stat"><div class="sg-hero-stat-num">ROI</div><div class="sg-hero-stat-label">Priorité</div></div>
+      <div class="sg-hero-stat"><div class="sg-hero-stat-num">6/9 kWc</div><div class="sg-hero-stat-label">À comparer</div></div>
+      <div class="sg-hero-stat"><div class="sg-hero-stat-num">Usage réel</div><div class="sg-hero-stat-label">Point clé</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="sg-art-wrap">
+  <div class="sg-maj-bar">
+    <span class="sg-maj-label">En bref</span>
+    <p>Une puissance solaire rentable n'est pas la puissance maximale que votre toit peut accepter. C'est la puissance qui colle à votre consommation, à vos horaires et à votre capacité à utiliser l'énergie produite.</p>
+  </div>
+
+  <div class="sg-art-main">
+    <article class="sg-art-body">
+      <section id="intro" class="sg-art-narrow">
+        <p class="lead">Le surdimensionnement est l'une des erreurs les plus fréquentes dans les projets photovoltaïques résidentiels. Elle est discrète, séduisante, et parfois très coûteuse.</p>
+        <p>Sur un devis, passer de 6 kWc à 9 kWc semble logique : plus de panneaux, donc plus de production, donc plus d'économies. En réalité, le calcul est plus fin. Si la maison ne consomme pas cette production au bon moment, une grande partie du surplus est injectée sur le réseau à faible valeur. Le projet produit plus, mais ne rapporte pas forcément plus.</p>
+        <p>Un bon bureau d'étude ne commence donc pas par demander combien de panneaux peuvent tenir sur la toiture. Il commence par analyser la consommation réelle : chauffage, pompe à chaleur, eau chaude, véhicule électrique, présence en journée, batterie éventuelle et possibilité de pilotage. C'est cette lecture globale qui permet de dimensionner une installation rentable.</p>
+      </section>
+
+      <div class="sg-art-full">
+        <p class="sg-punch-full">La bonne puissance n'est pas celle qui remplit le toit. C'est celle qui maximise la valeur de chaque kWh produit.</p>
+      </div>
+
+      <section id="mecanique" class="sg-art-wide sg-zone-sombre">
+        <h2>Pourquoi trop de puissance peut réduire le ROI</h2>
+        <p>Une installation photovoltaïque a deux sources principales de valeur : l'électricité autoconsommée, qui évite d'acheter des kWh au réseau, et le surplus revendu, généralement beaucoup moins valorisé. Plus le taux d'autoconsommation baisse, plus le projet dépend de la revente. C'est là que le surdimensionnement devient dangereux.</p>
+        <p>Imaginez une maison qui consomme surtout le matin et le soir. En ajoutant trop de panneaux, la production de midi augmente fortement, mais les usages de la maison ne suivent pas. Sans batterie, sans borne de recharge, sans pilotage du chauffe-eau ou de la climatisation, le surplus grossit. Le client paie plus cher son installation, mais valorise moins bien chaque kWh supplémentaire.</p>
+        <div class="sg-card" style="padding:0;overflow:hidden;margin-top:1.5rem">
+          <img src="/assets/images/etude/optimisation-production-solaire-solarglobe.webp" alt="Analyse de production solaire et optimisation photovoltaïque Solarglobe" width="1200" height="720" loading="lazy" class="sg-article-photo" />
+        </div>
+      </section>
+
+      <section id="comparatif" class="sg-art-wide">
+        <h2>6 kWc ou 9 kWc : la vraie question</h2>
+        <div class="sg-2col">
+          <div class="sg-card">
+            <h4>6 kWc intelligent</h4>
+            <ul>
+              <li>→ Investissement plus maîtrisé</li>
+              <li>→ Meilleur taux d'autoconsommation</li>
+              <li>→ ROI souvent plus rapide</li>
+              <li>→ Pertinent sans gros usage en journée</li>
+            </ul>
+          </div>
+          <div class="sg-card">
+            <h4>9 kWc pertinent</h4>
+            <ul>
+              <li>→ PAC, piscine ou recharge EV</li>
+              <li>→ Batterie ou pilotage énergétique</li>
+              <li>→ Surface bien exposée et peu ombragée</li>
+              <li>→ Besoins futurs clairement identifiés</li>
+            </ul>
+          </div>
+        </div>
+        <p style="margin-top:1.5rem">Le 9 kWc n'est pas un mauvais choix. Il devient mauvais lorsqu'il est proposé sans scénario d'usage. Une famille avec pompe à chaleur, véhicule électrique et pilotage du chauffe-eau peut très bien valoriser une puissance élevée. Une maison absente toute la journée, sans batterie ni pilotage, risque au contraire de revendre trop de surplus.</p>
+      </section>
+
+      <div class="sg-art-full">
+        <div class="sg-chiffre-fort-wrap">
+          <p class="sg-chiffre-fort">ROI</p>
+          <p class="sg-chiffre-fort-sub">Le bon dimensionnement se juge sur le retour sur investissement, pas sur la puissance installée. Un 6 kWc très bien autoconsommé peut battre un 9 kWc sous-exploité.</p>
+        </div>
+      </div>
+
+      <section id="methode" class="sg-art-wide sg-zone-claire">
+        <h2>La méthode Solarglobe : dimensionner au rendement économique</h2>
+        <p>Notre approche consiste à construire plusieurs scénarios. Nous ne comparons pas seulement la production annuelle. Nous comparons la valeur de cette production : part consommée directement, part revendue, économies générées, coût du matériel, évolution probable des usages et impact d'une batterie ou d'un pilotage intelligent.</p>
+        <p>Une étude sérieuse doit aussi intégrer les contraintes du toit : orientation, inclinaison, ombrage, zones techniques, esthétique et sécurité. Ajouter des panneaux sur une zone peu productive peut donner une impression de puissance, mais dégrader la performance moyenne de l'installation. Le calepinage n'est pas un puzzle : c'est une décision économique.</p>
+        <div class="sg-block-h">
+          <span class="sg-block-label">À retenir</span>
+          <p class="mb-0">Une installation premium n'est pas forcément la plus grande. C'est celle dont chaque panneau a une utilité claire dans la stratégie énergétique de la maison.</p>
+        </div>
+      </section>
+
+      <section id="signaux" class="sg-art-narrow">
+        <h2>Les signaux d'alerte dans un devis solaire</h2>
+        <p>Un devis devient suspect lorsqu'il pousse immédiatement la puissance maximale sans expliquer le taux d'autoconsommation attendu. Il doit aussi être capable de justifier le choix entre 3, 6 et 9 kWc avec des chiffres simples : production estimée, consommation couverte, surplus annuel, économies et délai d'amortissement.</p>
+        <p>Méfiez-vous aussi des comparaisons basées uniquement sur la production annuelle. Produire 11 000 kWh n'a pas la même valeur si 70 % sont consommés par la maison ou si 55 % sont revendus. La rentabilité n'est pas une ligne de puissance : c'est un équilibre entre usage, matériel et prix de l'énergie évitée.</p>
+        <p>Le bon réflexe est de demander un scénario alternatif. Si on vous propose 9 kWc, demandez ce que donnerait 6 kWc. Si on vous propose une batterie, demandez le ROI sans batterie. Si on vous parle uniquement de panneaux, demandez ce que le pilotage du chauffe-eau ou de la borne peut changer. Un vrai professionnel saura répondre.</p>
+      </section>
+
+      <div class="sg-cta-bar" id="cta">
+        <div>
+          <h3>Votre puissance idéale, chiffrée en 48 h</h3>
+          <p>Nous comparons plusieurs scénarios de puissance, avec ou sans batterie, avec pilotage éventuel, pour identifier le projet le plus rentable pour votre maison.</p>
+        </div>
+        <a href="/etude-gratuite/" class="btn">Obtenir mon étude solaire gratuite</a>
+      </div>
+
+      <div class="sg-related">
+        <a href="/blog/choisir-puissance-solaire/">
+          <img src="/assets/images/blog/blog-choisir-puissance.webp" alt="" width="80" height="60" loading="lazy" />
+          <div><strong>6 kWc ou 9 kWc</strong><br><span>Choisir la bonne puissance</span></div>
+        </a>
+        <a href="/blog/pilotage-intelligent-shelly/">
+          <img src="/assets/images/shelly/chauffe-eau.avif" alt="" width="80" height="60" loading="lazy" />
+          <div><strong>Pilotage intelligent Shelly</strong><br><span>Augmenter l'autoconsommation</span></div>
+        </a>
+      </div>
+    </article>
+
+    <aside class="sg-art-sidebar">
+      <div class="sg-sidebar">
+        <div class="sg-sidebar-title">Sommaire</div>
+        <ol>
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#mecanique">Pourquoi le ROI baisse</a></li>
+          <li><a href="#comparatif">6 kWc ou 9 kWc</a></li>
+          <li><a href="#methode">Méthode Solarglobe</a></li>
+          <li><a href="#signaux">Signaux d'alerte</a></li>
+          <li><a href="#cta">Étude gratuite</a></li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="/assets/js/footer.js"></script>
+
+<script>
+document.querySelectorAll('.sg-sidebar a').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const href=a.getAttribute('href');
+    if(href&&href.startsWith('#')){
+      e.preventDefault();
+      document.querySelector(href)?.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  });
+});
+window.dataLayer=window.dataLayer||[];
+window.dataLayer.push({event:'blog_article_view',article_slug:'surdimensionnement-solaire'});
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Surdimensionnement solaire : l'erreur qui détruit la rentabilité","description":"Pourquoi une installation photovoltaïque trop puissante peut dégrader le retour sur investissement. Méthode bureau d'étude pour dimensionner au ROI, pas au nombre de panneaux.","image":"https://www.solarglobe.fr/assets/images/solaire/dimensionnement.jpg","datePublished":"2026-05-13","dateModified":"2026-05-13","keywords":["surdimensionnement solaire","dimensionnement photovoltaïque","rentabilité solaire","6 kWc ou 9 kWc","retour sur investissement photovoltaïque"],"author":{"@type":"Organization","name":"Solarglobe","url":"https://www.solarglobe.fr/"},"publisher":{"@type":"Organization","name":"Solarglobe","logo":{"@type":"ImageObject","url":"https://www.solarglobe.fr/assets/images/logo-solarglobe-rect.png"}}}
+</script>
+</body>
+</html>
