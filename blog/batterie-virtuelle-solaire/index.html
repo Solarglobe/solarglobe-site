@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="canonical" href="https://www.solarglobe.fr/blog/batterie-virtuelle-solaire/" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Batterie virtuelle solaire : MyLight, Urban Solar, vraie bonne idée ? | Solarglobe</title>
+  <meta name="description" content="Batterie virtuelle solaire : fonctionnement, limites, MyLight, Urban Solar, batterie physique et revente du surplus. Le guide pro pour calculer le vrai gain net." />
+  <meta name="robots" content="index, follow" />
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent','default',{ ad_storage:'denied', analytics_storage:'denied', wait_for_update:500 });
+  </script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N2ZQKS6F');</script>
+
+  <meta property="og:title" content="Batterie virtuelle solaire : vraie solution ou simple optimisation de facture ? | Solarglobe" />
+  <meta property="og:description" content="MyLight, Urban Solar, batterie physique, revente du surplus : ce qu'il faut vraiment calculer avant de signer." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.solarglobe.fr/blog/batterie-virtuelle-solaire/" />
+  <meta property="og:image" content="https://www.solarglobe.fr/assets/images/solaire/schema-stockage.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Batterie virtuelle solaire : ce qu'il faut vraiment calculer" />
+  <meta name="twitter:description" content="La batterie virtuelle n'est pas une batterie. C'est un contrat de valorisation du surplus. Voici quand elle devient pertinente." />
+  <meta name="twitter:image" content="https://www.solarglobe.fr/assets/images/solaire/schema-stockage.webp" />
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link rel="stylesheet" href="/assets/css/montserrat-local.css" />
+  <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
+  <link rel="stylesheet" href="/assets/css/le-solaire-editorial.css" />
+  <link rel="stylesheet" href="/assets/css/blog.css" />
+  <link rel="stylesheet" href="/assets/css/header-common.css" />
+  <link rel="stylesheet" href="/assets/css/footer-common.css" />
+  <link rel="stylesheet" href="/assets/css/tailwind.css" />
+
+  <style>
+    :root{--bg:#0D0D0D;--gold:#C39847;--narrow:580px;--wide:960px}
+    body{font-family:'Montserrat',sans-serif;background:var(--bg);color:#fff}
+    .text-gold{color:var(--gold)!important}
+    .sg-art-wrap{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+    .sg-art-main{display:grid;gap:2rem}
+    @media (min-width:1024px){.sg-art-main{grid-template-columns:1fr 240px;align-items:start}.sg-art-sidebar{position:sticky;top:100px}}
+    .sg-art-narrow{max-width:var(--narrow)}
+    .sg-art-wide{max-width:var(--wide)}
+    .sg-art-full{max-width:100%}
+    .sg-art-body section{margin-bottom:4rem}
+    .sg-zone-sombre{background:rgba(0,0,0,.22);padding:2.5rem 1.5rem;border-radius:12px}
+    .sg-zone-claire{background:rgba(255,255,255,.04);padding:2.5rem 1.5rem;border-radius:12px}
+    .sg-hero-editorial{position:relative;min-height:280px;display:grid;grid-template-columns:1fr;gap:1.5rem;padding:2rem 1.5rem;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,#0D0D0D 100%)}
+    @media (min-width:768px){.sg-hero-editorial{grid-template-columns:1.2fr 1fr;align-items:end;min-height:250px;padding:2rem 2rem 2.5rem}}
+    .sg-hero-editorial::before{content:"";position:absolute;inset:0;background:url(/assets/images/solaire/schema-stockage.webp) center/cover;z-index:-2}
+    .sg-hero-editorial::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.84) 0%,rgba(0,0,0,.58) 50%,rgba(0,0,0,.94) 100%);z-index:-1}
+    .sg-hero-left,.sg-hero-right{position:relative;z-index:1}
+    .sg-hero-badge{display:inline-block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);padding:4px 10px;margin-bottom:10px;background:rgba(255,255,255,.06)}
+    .sg-hero-title{font-size:clamp(1.45rem,2.8vw,2.1rem);font-weight:700;line-height:1.22;color:#fff;margin-bottom:8px}
+    .sg-hero-accroche{font-size:.92rem;color:rgba(255,255,255,.85);line-height:1.55}
+    .sg-hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .sg-hero-stat{background:rgba(0,0,0,.25);border-radius:6px;padding:10px 12px;text-align:center}
+    .sg-hero-stat-num{font-size:1.05rem;font-weight:700;color:var(--gold);line-height:1.2}
+    .sg-hero-stat-label{font-size:10px;color:rgba(255,255,255,.62);margin-top:2px;text-transform:uppercase;letter-spacing:.04em}
+    .sg-hero-meta{font-size:11px;color:rgba(255,255,255,.55);margin-top:12px}
+    .sg-sidebar{background:rgba(0,0,0,.15);border-radius:6px;padding:1rem;margin-bottom:1rem}
+    .sg-sidebar-title{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;margin-bottom:10px}
+    .sg-sidebar ol{list-style:none;padding:0;margin:0}
+    .sg-sidebar li{margin-bottom:6px}
+    .sg-sidebar a{font-size:12px;color:rgba(255,255,255,.8);text-decoration:none}
+    .sg-sidebar a:hover{color:var(--gold)}
+    .sg-maj-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start;padding:1rem 1.25rem;background:rgba(0,0,0,.15);border-radius:10px;margin-bottom:2.5rem}
+    .sg-maj-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;flex-shrink:0}
+    .sg-maj-bar p{margin:0;font-size:12px;color:rgba(255,255,255,.8);line-height:1.5}
+    .sg-art-body h2{font-size:1.4rem;font-weight:700;color:#fff;margin:0 0 1.25rem 0;letter-spacing:-.02em}
+    .sg-art-body p{margin-bottom:1rem;line-height:1.65;color:rgba(255,255,255,.88);font-size:15px}
+    .sg-art-body p.lead{font-size:1rem;font-weight:600;color:rgba(255,255,255,.95)}
+    .sg-punch-full{padding:1.5rem 0;margin:3.5rem 0;font-size:1.08rem;font-weight:650;color:rgba(255,255,255,.95);border-left:3px solid var(--gold);padding-left:1.5rem}
+    .sg-2col{display:grid;gap:1.5rem}
+    @media (min-width:768px){.sg-2col{grid-template-columns:1fr 1fr}}
+    .sg-card{background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.4));border:1px solid rgba(195,152,71,.15);border-radius:10px;padding:1.5rem;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+    .sg-card h4{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;margin-bottom:10px}
+    .sg-card ul{list-style:none;padding:0;margin:0;font-size:14px;line-height:1.8;color:rgba(255,255,255,.86)}
+    .sg-block-h{display:grid;gap:1rem;padding:1.25rem 1.5rem;background:rgba(0,0,0,.1);border-radius:10px;margin:1.25rem 0}
+    @media (min-width:640px){.sg-block-h{grid-template-columns:auto 1fr;align-items:start}}
+    .sg-block-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:700;min-width:100px}
+    .sg-chiffre-fort-wrap{padding:5rem 3rem;margin:5rem 0;text-align:center;background:linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(195,152,71,.03) 50%,rgba(0,0,0,.2) 100%);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+    .sg-chiffre-fort{font-size:clamp(5rem,14vw,9rem);font-weight:700;color:var(--gold);line-height:1;letter-spacing:-.05em;text-shadow:0 0 60px rgba(195,152,71,.25)}
+    .sg-chiffre-fort-sub{font-size:15px;color:rgba(255,255,255,.58);margin-top:1.5rem;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.5}
+    .sg-article-photo{width:100%;height:auto;border-radius:10px;display:block}
+    .sg-cta-bar{display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between;padding:3rem 3.5rem;margin:5rem 0;background:linear-gradient(135deg,rgba(195,152,71,.08) 0%,rgba(0,0,0,.2) 100%);border:1px solid rgba(195,152,71,.4);border-radius:12px}
+    .sg-cta-bar h3{font-size:1.5rem;font-weight:700;color:#fff;margin:0 0 8px 0}
+    .sg-cta-bar p{margin:0;font-size:1rem;color:rgba(255,255,255,.9);line-height:1.5}
+    .sg-cta-bar .btn{display:inline-block;background:var(--gold);color:#0D0D0D;font-weight:700;padding:16px 32px;border-radius:8px;text-decoration:none;transition:all .3s;font-size:16px}
+    .sg-cta-bar .btn:hover{background:#D4A84E;transform:translateY(-2px)}
+    .sg-related{display:grid;grid-template-columns:1fr;gap:.75rem;margin-top:2rem}
+    @media (min-width:640px){.sg-related{grid-template-columns:1fr 1fr}}
+    .sg-related a{display:flex;gap:1rem;align-items:center;padding:1rem 1.25rem;background:rgba(0,0,0,.08);border-radius:10px;text-decoration:none;transition:background .25s ease,transform .2s ease}
+    .sg-related a:hover{background:rgba(0,0,0,.14);transform:translateX(4px)}
+    .sg-related img{width:72px;height:54px;object-fit:cover;border-radius:6px;flex-shrink:0}
+    .sg-related strong{color:rgba(255,255,255,.95);font-size:13px}
+    .sg-related span{font-size:12px;color:rgba(255,255,255,.55)}
+    :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2ZQKS6F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="header-placeholder"></div>
+<script src="/assets/js/header.js"></script>
+
+<div class="h-20"></div>
+
+<div class="sg-art-wrap">
+  <nav class="sg-breadcrumb sg-breadcrumb-dark sg-breadcrumb--compact" aria-label="Fil d'Ariane">
+    <ol class="sg-breadcrumb-list">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li aria-current="page">Batterie virtuelle solaire</li>
+    </ol>
+  </nav>
+</div>
+
+<header class="sg-hero-editorial">
+  <div class="sg-hero-left">
+    <span class="sg-hero-badge">Stockage virtuel & ROI</span>
+    <h1 class="sg-hero-title">Batterie virtuelle solaire : vraie solution ou simple optimisation de facture ?</h1>
+    <p class="sg-hero-accroche">MyLight, Urban Solar, batterie physique, revente du surplus : la bonne question n'est pas "quelle offre est la meilleure ?", mais "quel mécanisme valorise le mieux votre surplus ?".</p>
+    <p class="sg-hero-meta">Par Solarglobe · 13 mai 2026 · 8 min</p>
+  </div>
+  <div class="sg-hero-right">
+    <div class="sg-hero-stats">
+      <div class="sg-hero-stat"><div class="sg-hero-stat-num">Surplus</div><div class="sg-hero-stat-label">Point clé</div></div>
+      <div class="sg-hero-stat"><div class="sg-hero-stat-num">Contrat</div><div class="sg-hero-stat-label">À lire</div></div>
+      <div class="sg-hero-stat"><div class="sg-hero-stat-num">ROI net</div><div class="sg-hero-stat-label">À calculer</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="sg-art-wrap">
+  <div class="sg-maj-bar">
+    <span class="sg-maj-label">En bref</span>
+    <p>La batterie virtuelle ne stocke pas physiquement vos électrons. Elle transforme votre surplus solaire en crédit d'énergie, selon les règles d'un contrat fournisseur. C'est puissant, mais pas universel.</p>
+  </div>
+
+  <div class="sg-art-main">
+    <article class="sg-art-body">
+      <section id="intro" class="sg-art-narrow">
+        <p class="lead">La batterie virtuelle est l'une des promesses les plus séduisantes du solaire résidentiel : ne plus perdre son surplus, le récupérer le soir, l'hiver ou quand les panneaux produisent moins.</p>
+        <p>Sur le papier, l'idée paraît parfaite. Vos panneaux produisent trop en journée, ce surplus part sur le réseau, puis il est comptabilisé comme un crédit que vous pouvez utiliser plus tard. Pas de batterie physique à installer, pas de lithium dans le garage, pas de maintenance, et une logique de stockage souvent présentée comme simple et illimitée.</p>
+        <p>Mais il faut être précis : une batterie virtuelle n'est pas une batterie. C'est un service contractuel. Le surplus est injecté, mesuré, puis valorisé selon des règles propres au fournisseur. MyLight et Urban Solar ne vendent donc pas seulement du "stockage" : ils vendent une manière différente de valoriser votre production non consommée.</p>
+      </section>
+
+      <div class="sg-art-full">
+        <p class="sg-punch-full">Une batterie virtuelle peut être excellente. Mais seulement si le surplus existe, si les frais sont compris, et si le gain net dépasse la revente classique.</p>
+      </div>
+
+      <section id="fonctionnement" class="sg-art-wide sg-zone-sombre">
+        <h2>Comment fonctionne vraiment une batterie virtuelle ?</h2>
+        <p>Le fonctionnement est comptable. D'abord, la maison consomme directement l'énergie produite par les panneaux. Ensuite, si la production dépasse les besoins instantanés, le surplus est injecté sur le réseau. Dans une offre de batterie virtuelle, ce surplus est enregistré dans un compte énergétique, en kWh ou en valeur équivalente selon le contrat.</p>
+        <p>Plus tard, lorsque la maison consomme depuis le réseau, le fournisseur applique ce crédit selon les conditions prévues : restitution, prix coûtant, frais d'acheminement, taxes, abonnement, capacité ou non de stockage. C'est cette mécanique qui fait toute la différence. Deux offres peuvent utiliser le même mot "batterie virtuelle" mais ne pas produire le même résultat économique.</p>
+        <div class="sg-card" style="padding:0;overflow:hidden;margin-top:1.5rem">
+          <img src="/assets/images/solaire/flux-solaire.webp" alt="Flux d'énergie solaire entre production, consommation et réseau" width="1200" height="720" loading="lazy" class="sg-article-photo" />
+        </div>
+      </section>
+
+      <section id="comparatif" class="sg-art-wide">
+        <h2>MyLight, Urban Solar, batterie physique : ce qu'il faut comparer</h2>
+        <div class="sg-2col">
+          <div class="sg-card">
+            <h4>Batterie virtuelle</h4>
+            <ul>
+              <li>→ Pas de stockage physique à installer</li>
+              <li>→ Surplus transformé en crédit d'énergie</li>
+              <li>→ Dépend du contrat et du fournisseur</li>
+              <li>→ Frais, taxes et acheminement à vérifier</li>
+            </ul>
+          </div>
+          <div class="sg-card">
+            <h4>Batterie physique</h4>
+            <ul>
+              <li>→ Stockage réel dans la maison</li>
+              <li>→ Peut aider en soirée et parfois en secours</li>
+              <li>→ Investissement initial élevé</li>
+              <li>→ Capacité limitée et durée de vie à intégrer</li>
+            </ul>
+          </div>
+        </div>
+        <p style="margin-top:1.5rem">MyLight met en avant des offres de stockage virtuel comme MySmartBattery ou MyBattery, avec une logique de pilotage, de suivi et de restitution selon la formule choisie. Urban Solar propose aussi du stockage virtuel, avec des conditions qui incluent notamment abonnement, activation ou frais d'acheminement selon l'offre. Ces paramètres peuvent évoluer : il faut donc toujours vérifier les grilles à jour avant de signer.</p>
+      </section>
+
+      <div class="sg-art-full">
+        <div class="sg-chiffre-fort-wrap">
+          <p class="sg-chiffre-fort">net</p>
+          <p class="sg-chiffre-fort-sub">Le seul chiffre qui compte n'est pas le kWh "stocké". C'est le gain net après abonnement, activation, acheminement, taxes, perte éventuelle de revente du surplus et changement de fournisseur.</p>
+        </div>
+      </div>
+
+      <section id="profils" class="sg-art-wide sg-zone-claire">
+        <h2>Quand la batterie virtuelle devient pertinente</h2>
+        <p>Elle devient intéressante quand l'installation produit un surplus significatif et que ce surplus serait mal valorisé autrement. C'est souvent le cas des maisons qui consomment peu en journée, qui produisent beaucoup l'été, ou qui ont une consommation importante le soir et en hiver. Dans ces profils, récupérer une partie du surplus sous forme de crédit peut améliorer la rentabilité.</p>
+        <p>Elle est aussi pertinente pour les foyers qui ne veulent pas de batterie physique : pas de place, pas de coût initial important, pas d'entretien, pas de sujet de durée de vie. La batterie virtuelle peut alors devenir une solution d'optimisation, surtout si elle s'accompagne d'un bon pilotage des usages : chauffe-eau, pompe à chaleur, climatisation, borne de recharge.</p>
+        <div class="sg-block-h">
+          <span class="sg-block-label">À retenir</span>
+          <p class="mb-0">Une batterie virtuelle ne corrige pas un mauvais dimensionnement. Si l'installation produit trop par rapport aux usages, elle peut améliorer la valorisation du surplus, mais elle ne rend pas automatiquement le projet rentable.</p>
+        </div>
+      </section>
+
+      <section id="limites" class="sg-art-narrow">
+        <h2>Les limites à connaître avant de signer</h2>
+        <p>La première limite est simple : vous restez dépendant du réseau. En cas de coupure, une batterie virtuelle ne peut pas alimenter la maison comme une batterie physique compatible backup. Elle ne stocke pas d'énergie chez vous, elle comptabilise une énergie injectée et restituée contractuellement.</p>
+        <p>La deuxième limite concerne le contrat. Certains dispositifs impliquent de changer de fournisseur, de renoncer à un contrat de revente, de payer des frais fixes ou des frais variables. Un abonnement faible peut devenir moins intéressant si le surplus est trop petit. À l'inverse, une offre plus structurée peut être pertinente si le profil de consommation est bien aligné.</p>
+        <p>La troisième limite est stratégique : si votre taux d'autoconsommation directe est déjà très élevé grâce au pilotage, la batterie virtuelle apporte parfois moins de valeur. Il faut donc comparer trois scénarios : revente du surplus, batterie virtuelle, batterie physique. Sans ce calcul, on choisit une promesse au lieu de choisir une rentabilité.</p>
+      </section>
+
+      <section id="methode" class="sg-art-wide sg-zone-sombre">
+        <h2>La méthode Solarglobe : arbitrer sans dogme</h2>
+        <p>Chez Solarglobe, nous ne partons pas du principe qu'une batterie virtuelle est bonne ou mauvaise. Nous regardons le profil. Quelle puissance installée ? Quel surplus annuel ? Quelle part consommée directement ? Quels usages peuvent être déplacés ? Quelle consommation reste le soir ou l'hiver ? Quel coût de l'offre sur 10 ans ?</p>
+        <p>À partir de là, on calcule le vrai gain net. Parfois la meilleure solution est la revente simple du surplus. Parfois c'est une batterie virtuelle. Parfois c'est une batterie physique. Et parfois, le meilleur investissement n'est pas du stockage : c'est un meilleur dimensionnement ou un pilotage intelligent qui augmente l'autoconsommation avant même de parler de batterie.</p>
+      </section>
+
+      <div class="sg-cta-bar" id="cta">
+        <div>
+          <h3>Votre stratégie de stockage, chiffrée proprement</h3>
+          <p>Nous comparons revente, batterie virtuelle, batterie physique et pilotage pour identifier la solution qui améliore réellement votre retour sur investissement.</p>
+        </div>
+        <a href="/etude-gratuite/" class="btn">Obtenir mon étude solaire gratuite</a>
+      </div>
+
+      <div class="sg-related">
+        <a href="/blog/autonomie-solaire/">
+          <img src="/assets/images/blog/blog-autonomie-solaire.webp" alt="" width="80" height="60" loading="lazy" />
+          <div><strong>Autonomie solaire</strong><br><span>Batterie, usage et équilibre</span></div>
+        </a>
+        <a href="/blog/pilotage-intelligent-shelly/">
+          <img src="/assets/images/shelly/chauffe-eau.avif" alt="" width="80" height="60" loading="lazy" />
+          <div><strong>Pilotage intelligent Shelly</strong><br><span>Valoriser plus de solaire</span></div>
+        </a>
+      </div>
+    </article>
+
+    <aside class="sg-art-sidebar">
+      <div class="sg-sidebar">
+        <div class="sg-sidebar-title">Sommaire</div>
+        <ol>
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#fonctionnement">Fonctionnement</a></li>
+          <li><a href="#comparatif">Comparatif</a></li>
+          <li><a href="#profils">Profils pertinents</a></li>
+          <li><a href="#limites">Limites</a></li>
+          <li><a href="#methode">Méthode Solarglobe</a></li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="/assets/js/footer.js"></script>
+
+<script>
+document.querySelectorAll('.sg-sidebar a').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const href=a.getAttribute('href');
+    if(href&&href.startsWith('#')){
+      e.preventDefault();
+      document.querySelector(href)?.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  });
+});
+window.dataLayer=window.dataLayer||[];
+window.dataLayer.push({event:'blog_article_view',article_slug:'batterie-virtuelle-solaire'});
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Batterie virtuelle solaire : vraie solution ou simple optimisation de facture ?","description":"Batterie virtuelle solaire : fonctionnement, limites, MyLight, Urban Solar, batterie physique et revente du surplus. Le guide pro pour calculer le vrai gain net.","image":"https://www.solarglobe.fr/assets/images/solaire/schema-stockage.webp","datePublished":"2026-05-13","dateModified":"2026-05-13","keywords":["batterie virtuelle solaire","MyLight batterie virtuelle","Urban Solar stockage virtuel","batterie physique solaire","autoconsommation photovoltaïque"],"author":{"@type":"Organization","name":"Solarglobe","url":"https://www.solarglobe.fr/"},"publisher":{"@type":"Organization","name":"Solarglobe","logo":{"@type":"ImageObject","url":"https://www.solarglobe.fr/assets/images/logo-solarglobe-rect.png"}}}
+</script>
+</body>
+</html>
