@@ -348,7 +348,7 @@ Solution : conserver un bloc canonique coherent, idéalement identique, et evite
 
 4. Verifier l'encodage.
 
-Plusieurs sorties terminal affichent des caracteres mal interpretes (`Ã©`, `â€“`, etc.). Cela peut venir de l'affichage PowerShell, mais certains fichiers JSON ou commentaires semblent contenir du mojibake. A verifier dans le navigateur et dans le HTML source live.
+Plusieurs sorties terminal peuvent afficher des caracteres mal interpretes selon l'encodage de la console. Il faut distinguer cet affichage du contenu reel des fichiers, qui doit etre verifie en UTF-8 dans le navigateur et dans le HTML source live.
 
 Priorite : moyenne a haute.
 
