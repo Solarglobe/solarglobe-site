@@ -1,25 +1,31 @@
 === INTERNAL LINK AUDIT (factuel, repo filesystem) ===
 Racine projet: C:\Users\Benoit\Desktop\Benoit\Site Solarglobe
-Fichiers HTML parcourus: 114
-Balises <a href> internes (hors mailto/tel/#/http externes): 1869
-Résolus vers un fichier existant: 1869
+Fichiers HTML parcourus: 119
+Balises <a href> internes (hors mailto/tel/#/http externes): 1710
+Résolus vers un fichier existant: 1710
 Non résolus (cassés): 0
-OK mais chemin absolu sans slash final alors que cible = .../index.html: 1
+OK mais chemin absolu sans slash final alors que cible = .../index.html: 0
 
 
---- FOCUS index.html (65 liens) ---
+--- FOCUS index.html (70 liens) ---
 OK | '/etude-gratuite/' -> etude-gratuite/index.html
      libellé: Obtenir mon &eacute;tude solaire gratuite
 OK | '/etude-gratuite/' -> etude-gratuite/index.html
      libellé: Obtenir mon &eacute;tude solaire gratuite
 OK | '/etude-gratuite/' -> etude-gratuite/index.html
      libellé: Obtenir mon &eacute;tude solaire gratuite
+OK | '/produits/panneaux-solaires/' -> produits/panneaux-solaires/index.html
+OK | '/produits/panneaux-solaires/' -> produits/panneaux-solaires/index.html
+OK | '/produits/panneaux-solaires/' -> produits/panneaux-solaires/index.html
 OK | '/etude-gratuite/' -> etude-gratuite/index.html
      libellé: Obtenir mon &eacute;tude solaire gratuite
 OK | '/notre-methode/' -> notre-methode/index.html
      libellé: D&eacute;couvrir notre m&eacute;thode compl&egrave;te
+OK | '/produits/panneaux-solaires/' -> produits/panneaux-solaires/index.html
 OK | '/produits/' -> produits/index.html
      libellé: Voir nos &eacute;quipements
+OK | '/etude-gratuite/' -> etude-gratuite/index.html
+     libellé: Demander mon &eacute;tude gratuite
 OK | '/etude-gratuite/' -> etude-gratuite/index.html
      libellé: Obtenir mon &eacute;tude solaire gratuite
 OK | '/qui-sommes-nous/' -> qui-sommes-nous/index.html
@@ -32,7 +38,7 @@ OK | '/produits/batteries-solaires/' -> produits/batteries-solaires/index.html
      libellé: Batteries solaires
 OK | '/le-solaire/aides-panneaux-solaires/' -> le-solaire/aides-panneaux-solaires/index.html
      libellé: Aides &amp; financements
-OK | '/seo/rentabilite-panneaux-solaires/' -> seo/rentabilite-panneaux-solaires/index.html
+OK | '/rentabilite-solaire/' -> rentabilite-solaire/index.html
      libellé: Rentabilit&eacute;
 OK | '/etude-gratuite/' -> etude-gratuite/index.html
      libellé: &Eacute;tude gratuite
@@ -84,7 +90,7 @@ OK | '/panneaux-solaires-val-doise/' -> panneaux-solaires-val-doise/index.html
      libellé: L&rsquo;Isle-Adam
 OK | '/panneaux-solaires-val-doise/' -> panneaux-solaires-val-doise/index.html
      libellé: Magny-en-Vexin
-OK | '/panneaux-solaires-hauts-de-seine/' -> panneaux-solaires-hauts-de-seine/index.html
+OK | '/panneaux-solaires-val-doise/' -> panneaux-solaires-val-doise/index.html
      libellé: Montmorency
 OK | '/panneaux-solaires-cergy/' -> panneaux-solaires-cergy/index.html
      libellé: Cergy
@@ -139,7 +145,7 @@ OK | '/panneaux-solaires-ile-de-france/' -> panneaux-solaires-ile-de-france/inde
 OK | '/cookies/' -> cookies/index.html
      libellé: En savoir plus
 
---- components/footer.html (19 liens) ---
+--- components/footer.html (20 liens) ---
 OK | '/' -> index.html
 OK | '/le-solaire/' -> le-solaire/index.html
 OK | '/notre-methode/' -> notre-methode/index.html
@@ -149,13 +155,14 @@ OK | '/produits/' -> produits/index.html
 OK | '/faq/' -> faq/index.html
 OK | '/blog/' -> blog/index.html
 OK | '/etude-gratuite/' -> etude-gratuite/index.html
-OK | '/seo/panneaux-solaires/' -> seo/panneaux-solaires/index.html
-OK | '/seo/autoconsommation-solaire/' -> seo/autoconsommation-solaire/index.html
-OK | '/seo/batteries-solaires/' -> seo/batteries-solaires/index.html
-OK | '/seo/production-solaire/' -> seo/production-solaire/index.html
-OK | '/seo/rentabilite-panneaux-solaires/' -> seo/rentabilite-panneaux-solaires/index.html
-OK | '/seo/installation-solaire/' -> seo/installation-solaire/index.html
+OK | '/produits/panneaux-solaires/' -> produits/panneaux-solaires/index.html
+OK | '/le-solaire/autoconsommation-solaire/' -> le-solaire/autoconsommation-solaire/index.html
+OK | '/le-solaire/batterie-solaire/' -> le-solaire/batterie-solaire/index.html
+OK | '/le-solaire/rendement-panneaux-solaires/' -> le-solaire/rendement-panneaux-solaires/index.html
+OK | '/rentabilite-solaire/' -> rentabilite-solaire/index.html
+OK | '/notre-methode/installation/' -> notre-methode/installation/index.html
 OK | '/mentions-legales/' -> mentions-legales/index.html
 OK | '/politique-de-confidentialite/' -> politique-de-confidentialite/index.html
 OK | '/cookies/' -> cookies/index.html
 OK | '/cgv/' -> cgv/index.html
+OK | '/page-de-presentation/' -> page-de-presentation/index.html
