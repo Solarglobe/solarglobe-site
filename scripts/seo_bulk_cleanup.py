@@ -77,6 +77,11 @@ TITLE_OVERRIDES = {
     "le-solaire/rendement-panneaux-solaires/index.html": "Rendement panneaux solaires | Production reelle",
     "blog/aides-financieres/index.html": "Aides photovoltaiques 2026 | Prime, TVA, surplus",
     "blog/batterie-virtuelle-solaire/index.html": "Batterie virtuelle solaire | Analyse et limites",
+    "le-solaire/cout-installation-solaire-ile-de-france/index.html": "Prix panneaux solaires Ile-de-France | Solarglobe",
+    "le-solaire/3kwc-6kwc-9kwc/index.html": "3 kWc, 6 kWc ou 9 kWc | Quelle puissance choisir",
+    "le-solaire/batterie-ou-revente-surplus/index.html": "Batterie solaire ou revente du surplus | Comparatif",
+    "produits/micro-onduleur-ou-onduleur-central/index.html": "Micro-onduleur ou onduleur central | Comparatif solaire",
+    "le-solaire/panneaux-solaires-zone-abf-copropriete/index.html": "Panneaux solaires ABF et copropriete | Guide",
 }
 
 DESC_OVERRIDES = {
@@ -96,6 +101,11 @@ DESC_OVERRIDES = {
     "politique-de-confidentialite/index.html": "Politique de confidentialite Solarglobe : donnees personnelles, finalites de traitement, conservation, droits et contact.",
     "cookies/index.html": "Politique cookies Solarglobe : mesure d'audience, consentement, traceurs utilises et gestion de vos preferences.",
     "cgv/index.html": "Conditions generales de vente Solarglobe : commande, paiement, installation, garanties, retractation et obligations contractuelles.",
+    "le-solaire/cout-installation-solaire-ile-de-france/index.html": "Combien coute une installation solaire en Ile-de-France ? Prix 3, 6 et 9 kWc, aides, TVA, rentabilite et points de vigilance.",
+    "le-solaire/3kwc-6kwc-9kwc/index.html": "Comparez 3 kWc, 6 kWc et 9 kWc pour une maison : consommation, toiture, autoconsommation, batterie, surplus et rentabilite.",
+    "le-solaire/batterie-ou-revente-surplus/index.html": "Batterie solaire ou revente du surplus : comparez cout, autoconsommation, ROI, usages du soir et limites avant de choisir.",
+    "produits/micro-onduleur-ou-onduleur-central/index.html": "Micro-onduleur ou onduleur central : comparez rendement, ombrage, suivi, maintenance, cout et choix selon votre toiture.",
+    "le-solaire/panneaux-solaires-zone-abf-copropriete/index.html": "Panneaux solaires en zone ABF ou copropriete : faisabilite, autorisations, esthetique, AG, toiture et methode d'etude.",
 }
 
 AI_BLOCKS = {
