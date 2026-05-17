@@ -9,16 +9,16 @@ OK mais chemin absolu sans slash final alors que cible = .../index.html: 0
 
 --- FOCUS index.html (70 liens) ---
 OK | '/etude-gratuite/' -> etude-gratuite/index.html
-     libellé: Obtenir mon &eacute;tude solaire gratuite
+     libellé: Faire vérifier mon projet solaire
 OK | '/etude-gratuite/' -> etude-gratuite/index.html
-     libellé: Obtenir mon &eacute;tude solaire gratuite
+     libellé: Faire vérifier mon projet solaire
 OK | '/etude-gratuite/' -> etude-gratuite/index.html
-     libellé: Obtenir mon &eacute;tude solaire gratuite
+     libellé: Faire vérifier mon projet solaire
 OK | '/produits/panneaux-solaires/' -> produits/panneaux-solaires/index.html
 OK | '/produits/panneaux-solaires/' -> produits/panneaux-solaires/index.html
 OK | '/produits/panneaux-solaires/' -> produits/panneaux-solaires/index.html
 OK | '/etude-gratuite/' -> etude-gratuite/index.html
-     libellé: Obtenir mon &eacute;tude solaire gratuite
+     libellé: Faire vérifier mon projet solaire
 OK | '/notre-methode/' -> notre-methode/index.html
      libellé: D&eacute;couvrir notre m&eacute;thode compl&egrave;te
 OK | '/produits/panneaux-solaires/' -> produits/panneaux-solaires/index.html
@@ -27,7 +27,7 @@ OK | '/produits/' -> produits/index.html
 OK | '/etude-gratuite/' -> etude-gratuite/index.html
      libellé: Demander mon &eacute;tude gratuite
 OK | '/etude-gratuite/' -> etude-gratuite/index.html
-     libellé: Obtenir mon &eacute;tude solaire gratuite
+     libellé: Faire vérifier mon projet solaire
 OK | '/qui-sommes-nous/' -> qui-sommes-nous/index.html
      libellé: D&eacute;couvrir notre histoire
 OK | '/produits/panneaux-solaires/' -> produits/panneaux-solaires/index.html
