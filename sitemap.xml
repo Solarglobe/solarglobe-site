@@ -103,6 +103,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.solarglobe.fr/le-solaire/3kwc-6kwc-9kwc/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.solarglobe.fr/le-solaire/aides-panneaux-solaires/</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -115,13 +121,31 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.solarglobe.fr/le-solaire/batterie-ou-revente-surplus/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.solarglobe.fr/le-solaire/batterie-solaire/</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.solarglobe.fr/le-solaire/cout-installation-solaire-ile-de-france/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.solarglobe.fr/le-solaire/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solarglobe.fr/le-solaire/panneaux-solaires-zone-abf-copropriete/</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -476,6 +500,12 @@
   </url>
   <url>
     <loc>https://www.solarglobe.fr/produits/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solarglobe.fr/produits/micro-onduleur-ou-onduleur-central/</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
