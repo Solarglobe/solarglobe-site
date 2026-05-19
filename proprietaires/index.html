@@ -310,24 +310,27 @@ SLIDE 00 — INTRO PREMIUM
         <p class="p0-eyebrow text-gold font-semibold text-sm mb-2">
           Bureau d&rsquo;&eacute;tude solaire
         </p>
-        <h1 class="p0-title font-semibold leading-tight text-[clamp(2rem,3.7vw,3.6rem)]">
+        <h1 class="p0-title font-semibold leading-[0.98] text-[clamp(2.8rem,5.7vw,6rem)] max-w-6xl">
           Passer au solaire<br>
           <span class="text-gold">sans devoir faire confiance au hasard.</span>
         </h1>
-        <p class="p0-lead mt-3 italic text-neutral-300 text-[clamp(0.95rem,1.2vw,1.15rem)] max-w-4xl">
-          Une approche claire, structur&eacute;e et ind&eacute;pendante pour construire un projet
-          photovolta&iuml;que coh&eacute;rent.
+        <p class="p0-lead mt-6 italic text-neutral-300 text-[clamp(1rem,1.25vw,1.18rem)] max-w-4xl leading-relaxed">
+          SolarGlobe accompagne les propri&eacute;taires qui veulent un projet photovolta&iuml;que
+          clair, coh&eacute;rent et r&eacute;ellement ma&icirc;tris&eacute;.
         </p>
-        <div class="w-16 h-px bg-gold mt-4"></div>
+        <div class="w-16 h-px bg-gold mt-6"></div>
       </header>
 
-      <main class="flex items-center">
-        <div class="w-full max-w-6xl mx-auto
-                    bg-black/70 backdrop-blur-md
-                    border border-gold/35 rounded-2xl
-                    px-8 xl:px-12 py-8 xl:py-10">
-          <p class="p0-quote text-neutral-300 text-sm md:text-base tracking-[0.18em] uppercase">
-            &Eacute;tude &bull; Dimensionnement &bull; Mat&eacute;riel &bull; Installateur &bull; Suivi
+      <main class="flex items-end pb-8">
+        <div class="p0-card w-full max-w-4xl mx-auto
+                    bg-black/55 backdrop-blur-md
+                    border border-gold/25 rounded-2xl
+                    px-7 xl:px-9 py-5 xl:py-6">
+          <p class="p0-quote text-neutral-300 text-xs md:text-sm tracking-[0.18em] uppercase">
+            &Eacute;tude &bull; Dimensionnement &bull; Mat&eacute;riel &bull; Installateur s&eacute;lectionn&eacute; &bull; Suivi
+          </p>
+          <p class="p0-signature text-white text-[clamp(1rem,1.25vw,1.2rem)] leading-relaxed mt-3">
+            Un projet solaire s&eacute;rieux commence par une &eacute;tude s&eacute;rieuse.
           </p>
         </div>
       </main>
@@ -2342,7 +2345,7 @@ SLIDE_ANIMS[0] = function(tok) {
   const s = document.querySelectorAll('.slide')[0];
   if (!s) return;
   const bg = s.querySelector('.p0-bg-img');
-  const els = s.querySelectorAll('.p0-eyebrow, .p0-title, .p0-lead, .p0-quote, .p0-footer');
+  const els = s.querySelectorAll('.p0-eyebrow, .p0-title, .p0-lead, header .bg-gold, .p0-card, .p0-quote, .p0-signature, footer button');
 
   if (bg) {
     bg.style.transition = 'none';
@@ -2356,17 +2359,17 @@ SLIDE_ANIMS[0] = function(tok) {
   if (bg) {
     setTimeout(() => {
       if (tok !== ANIM_TOKEN.v) return;
-      bg.style.transition = 'opacity 900ms ease, transform 2600ms ease';
+      bg.style.transition = 'opacity 1300ms ease, transform 3800ms ease';
       bg.style.opacity = '1';
       bg.style.transform = 'scale(1)';
       bg.style.filter = 'none';
     }, 80);
   }
 
-  let d = 620;
+  let d = 520;
   els.forEach(el => {
-    showEl(el, d, tok, 1180);
-    d += 230;
+    showEl(el, d, tok, 1280);
+    d += 260;
   });
 };
 
