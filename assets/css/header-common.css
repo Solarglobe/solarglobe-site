@@ -445,8 +445,7 @@ main {
   }
 }
 
-@media (max-width: 1500px) and (min-width: 1361px) {
-  #solarglobe-header .desktop-menu > a[href="/contact/"],
+@media (max-width: 1480px) and (min-width: 1361px) {
   #solarglobe-header .desktop-menu .nav-dropdown-wrapper--seo {
     display: none;
   }
