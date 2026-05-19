@@ -427,11 +427,11 @@ main {
   }
 
   #solarglobe-header .header-menu {
-    gap: clamp(8px, 0.85vw, 16px);
+    gap: clamp(12px, 1vw, 18px);
   }
 
   #solarglobe-header .header-menu a {
-    font-size: clamp(13px, 0.86vw, 15px);
+    font-size: clamp(14px, 0.9vw, 15.5px);
   }
 
   #solarglobe-header .header-logo-link {
@@ -440,7 +440,7 @@ main {
 
   #solarglobe-header .header-cta {
     padding: 9px 13px;
-    font-size: clamp(13px, 0.86vw, 15px);
+    font-size: clamp(14px, 0.9vw, 15px);
     border-radius: 9px;
   }
 }
