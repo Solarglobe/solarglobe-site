@@ -427,11 +427,11 @@ main {
   }
 
   #solarglobe-header .header-menu {
-    gap: clamp(12px, 1vw, 18px);
+    gap: clamp(14px, 1.05vw, 20px);
   }
 
   #solarglobe-header .header-menu a {
-    font-size: clamp(14px, 0.9vw, 15.5px);
+    font-size: clamp(15px, 0.96vw, 16px);
   }
 
   #solarglobe-header .header-logo-link {
@@ -439,13 +439,13 @@ main {
   }
 
   #solarglobe-header .header-cta {
-    padding: 9px 13px;
-    font-size: clamp(14px, 0.9vw, 15px);
+    padding: 10px 15px;
+    font-size: clamp(15px, 0.96vw, 16px);
     border-radius: 9px;
   }
 }
 
-@media (max-width: 1480px) and (min-width: 1361px) {
+@media (max-width: 1560px) and (min-width: 1361px) {
   #solarglobe-header .desktop-menu .nav-dropdown-wrapper--seo {
     display: none;
   }
