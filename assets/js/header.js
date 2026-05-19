@@ -70,7 +70,7 @@ function initHeaderComponents() {
   const accordions = [
     { trigger: "mobile-solaire-trigger", content: "mobile-solaire-submenu" },
     { trigger: "mobile-methode-trigger", content: "mobile-methode-submenu" },
-    { trigger: "mobile-produits-trigger", content: "mobile-produits-submenu" }
+    { trigger: "mobile-materiel-trigger", content: "mobile-materiel-submenu" }
   ];
   accordions.forEach(function (item) {
     const trigger = document.getElementById(item.trigger);
