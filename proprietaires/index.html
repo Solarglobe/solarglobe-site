@@ -261,7 +261,7 @@ APP
 <div id="app" class="hidden">
 
 <!-- ======================================================
-MENU FIXE - PRESENTATION RENDEZ-VOUS
+MENU FIXE — 00 → 16 (COMME PARTENAIRES)
 ====================================================== -->
 <header class="presentation-nav fixed top-0 left-0 w-full z-40">
   <div class="presentation-nav-inner mx-auto max-w-7xl px-10 py-4 flex justify-between items-center
@@ -271,217 +271,2043 @@ MENU FIXE - PRESENTATION RENDEZ-VOUS
 
     <nav>
       <ul class="flex gap-4 text-[10px] tracking-widest text-neutral-300">
-<li><button onclick="showSlide(0)" class="nav-btn hover:text-gold" data-slide="0">00</button></li>
-<li><button onclick="showSlide(1)" class="nav-btn hover:text-gold" data-slide="1">01</button></li>
-<li><button onclick="showSlide(2)" class="nav-btn hover:text-gold" data-slide="2">02</button></li>
-<li><button onclick="showSlide(3)" class="nav-btn hover:text-gold" data-slide="3">03</button></li>
-<li><button onclick="showSlide(4)" class="nav-btn hover:text-gold" data-slide="4">04</button></li>
-<li><button onclick="showSlide(5)" class="nav-btn hover:text-gold" data-slide="5">05</button></li>
-<li><button onclick="showSlide(6)" class="nav-btn hover:text-gold" data-slide="6">06</button></li>
-<li><button onclick="showSlide(7)" class="nav-btn hover:text-gold" data-slide="7">07</button></li>
-<li><button onclick="showSlide(8)" class="nav-btn hover:text-gold" data-slide="8">08</button></li>
-<li><button onclick="showSlide(9)" class="nav-btn hover:text-gold" data-slide="9">09</button></li>
+<li><button onclick="showSlide(0)"  class="nav-btn hover:text-gold" data-slide="0">00</button></li>
+<li><button onclick="showSlide(1)"  class="nav-btn hover:text-gold" data-slide="1">01</button></li>
+<li><button onclick="showSlide(2)"  class="nav-btn hover:text-gold" data-slide="2">02</button></li>
+<li><button onclick="showSlide(3)"  class="nav-btn hover:text-gold" data-slide="3">03</button></li>
+<li><button onclick="showSlide(6)"  class="nav-btn hover:text-gold" data-slide="6">04</button></li>
+<li><button onclick="showSlide(7)"  class="nav-btn hover:text-gold" data-slide="7">05</button></li>
+<li><button onclick="showSlide(8)"  class="nav-btn hover:text-gold" data-slide="8">06</button></li>
+<li><button onclick="showSlide(9)"  class="nav-btn hover:text-gold" data-slide="9">07</button></li>
+<li><button onclick="showSlide(10)" class="nav-btn hover:text-gold" data-slide="10">08</button></li>
+<li><button onclick="showSlide(11)" class="nav-btn hover:text-gold" data-slide="11">09</button></li>
+<li><button onclick="showSlide(12)" class="nav-btn hover:text-gold" data-slide="12">10</button></li>
+<li><button onclick="showSlide(13)" class="nav-btn hover:text-gold" data-slide="13">11</button></li>
+<li><button onclick="showSlide(14)" class="nav-btn hover:text-gold" data-slide="14">12</button></li>
+
       </ul>
     </nav>
   </div>
 </header>
 
 <!-- ======================================================
-SLIDE 00 - INTRO SOLARGLOBE
+SLIDE 00 — INTRO PREMIUM
 ====================================================== -->
-<section class="slide"><div class="sg-slide-hero"><div class="absolute inset-0">
-      <img src="/assets/images/partenaire/maison-photovoltaique.webp" class="w-full h-full object-cover object-center" alt="Maison solaire SolarGlobe" />
-      <div class="absolute inset-0 bg-black/92"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/76 to-black"></div>
+<section class="slide p0-slide">
+  <div class="sg-slide-hero">
+    <div class="absolute inset-0 p0-bg">
+      <img src="/assets/images/partenaire/maison-photovoltaique.webp"
+           class="w-full h-full object-cover object-center p0-bg-img"
+           alt="Maison familiale moderne accompagn&eacute;e par SolarGlobe" />
+      <div class="absolute inset-0 bg-black/72"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/25"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/90"></div>
+      <div class="absolute left-[8vw] top-[18vh] w-[28rem] h-[28rem] rounded-full bg-gold/10 blur-[110px]"></div>
     </div>
-  <div class="relative z-10 flex-1 min-h-0 flex flex-col justify-center px-10 xl:px-20 pt-24">
-    <p class="text-gold tracking-[0.42em] uppercase text-xs mb-6">SolarGlobe &middot; Bureau d&rsquo;&eacute;tude solaire</p>
-    <h1 class="text-5xl xl:text-7xl font-semibold leading-tight max-w-6xl">Le solaire, oui.<br><span class="text-gold">Pas n&rsquo;importe comment.</span></h1>
-    <p class="mt-8 text-white text-3xl leading-tight max-w-5xl">Avant de signer, vous devez savoir si le projet est juste : puissance, prix, mat&eacute;riel, pose, garanties.</p>
-    <div class="mt-10 grid md:grid-cols-3 gap-5 max-w-6xl">
-      <div class="bg-gold text-black rounded-2xl p-7 min-h-[170px]"><p class="uppercase tracking-[0.28em] text-xs font-semibold opacity-70 mb-5">01</p><h3 class="text-2xl font-semibold leading-tight mb-4">Une &eacute;tude r&eacute;elle</h3><p class="text-[0.98rem] leading-relaxed opacity-85">Pas une estimation rapide. Une lecture de votre maison et de vos usages.</p></div>
-      <div class="bg-gold text-black rounded-2xl p-7 min-h-[170px]"><p class="uppercase tracking-[0.28em] text-xs font-semibold opacity-70 mb-5">02</p><h3 class="text-2xl font-semibold leading-tight mb-4">Une s&eacute;lection assum&eacute;e</h3><p class="text-[0.98rem] leading-relaxed opacity-85">Mat&eacute;riel et installateur externe choisis pour votre projet.</p></div>
-      <div class="bg-gold text-black rounded-2xl p-7 min-h-[170px]"><p class="uppercase tracking-[0.28em] text-xs font-semibold opacity-70 mb-5">03</p><h3 class="text-2xl font-semibold leading-tight mb-4">Une signature logique</h3><p class="text-[0.98rem] leading-relaxed opacity-85">Vous validez parce que tout est expliqu&eacute;, pas parce qu&rsquo;on force.</p></div>
+
+    <div class="relative z-10 flex-1 min-h-0 flex flex-col justify-between
+                px-8 md:px-14 xl:px-20 pt-28 pb-10">
+
+      <div class="max-w-6xl">
+        <p class="p0-eyebrow text-gold tracking-[0.42em] uppercase text-xs mb-8">
+          Bureau d&rsquo;&eacute;tude solaire
+        </p>
+
+        <h1 class="p0-title text-[clamp(3.2rem,7vw,7.4rem)] font-semibold leading-[0.96] max-w-6xl">
+          Passer au solaire<br>
+          <span class="text-gold">sans devoir faire confiance au hasard.</span>
+        </h1>
+
+        <p class="p0-lead mt-8 text-neutral-200 text-[clamp(1.05rem,1.55vw,1.45rem)] leading-relaxed max-w-3xl">
+          SolarGlobe accompagne les projets photovolta&iuml;ques avec une approche claire,
+          structur&eacute;e et ind&eacute;pendante.
+        </p>
+
+        <div class="p0-quote mt-12 max-w-2xl rounded-2xl border border-gold/25 bg-black/38
+                    backdrop-blur-md px-8 py-7 shadow-[0_0_45px_rgba(195,152,71,0.08)]">
+          <p class="text-gold text-sm uppercase tracking-[0.28em] mb-4">M&eacute;thode SolarGlobe</p>
+          <p class="text-white text-[clamp(1.15rem,1.55vw,1.45rem)] leading-relaxed">
+            &ldquo;Un projet solaire s&eacute;rieux commence par une &eacute;tude s&eacute;rieuse.&rdquo;
+          </p>
+        </div>
+      </div>
+
+      <div class="p0-footer flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <p class="text-neutral-300 text-sm md:text-base tracking-[0.18em] uppercase">
+          &Eacute;tude &bull; Dimensionnement &bull; S&eacute;lection mat&eacute;riel &bull; Installateur &bull; Suivi
+        </p>
+        <button onclick="showSlide(1)"
+                class="w-fit px-9 py-3.5 rounded-full border border-gold/45 text-gold
+                       hover:bg-gold hover:text-black transition">
+          D&eacute;marrer
+        </button>
+      </div>
     </div>
-    <button onclick="showSlide(1)" class="mt-10 w-fit px-12 py-4 bg-gold text-black rounded-full font-semibold">D&eacute;marrer &rarr;</button>
-  </div></div></section>
+  </div>
+</section>
+
 
 <!-- ======================================================
-SLIDE 01 - SOLARGLOBE
+SLIDE 01 — RENDEZ-VOUS
 ====================================================== -->
-<section class="slide"><div class="sg-slide-hero"><div class="absolute inset-0">
-      <img src="/assets/images/partenaire/maison-photovoltaique.webp" class="w-full h-full object-cover object-center" alt="Bureau d&rsquo;&eacute;tude solaire" />
-      <div class="absolute inset-0 bg-black/92"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/76 to-black"></div>
+
+<section class="slide">
+  <div class="sg-slide-hero">
+    <div class="absolute inset-0">
+      <img src="/assets/images/partenaire/maison-photovoltaique.webp"
+           class="w-full h-full object-cover"
+           alt="Maison photovolta&iuml;que SolarGlobe" />
+      <div class="absolute inset-0 bg-black/45"></div>
     </div>
-  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner px-8 xl:px-16 pt-24">
-    <header class="max-w-6xl"><p class="text-gold uppercase tracking-[0.35em] text-xs mb-4">01 &middot; Notre r&ocirc;le</p><h2 class="font-semibold leading-tight text-[clamp(2.4rem,4.2vw,4.2rem)]">Votre filtre entre le march&eacute; solaire et votre maison.</h2><p class="mt-4 text-neutral-300 text-xl max-w-4xl">SolarGlobe ne vient pas vendre une pose. Nous venons vous aider &agrave; choisir sans subir le flou du march&eacute;.</p><div class="w-16 h-px bg-gold mt-5"></div></header>
-    <main class="flex items-center"><div class="w-full max-w-6xl mx-auto grid md:grid-cols-[1fr_1fr_1fr] gap-6">
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">Nous v&eacute;rifions</p><h3 class="text-white text-xl font-semibold mb-3">L&rsquo;&eacute;tude</h3><p class="text-neutral-300 leading-relaxed">Toiture, consommation, contraintes, objectif et coh&eacute;rence de puissance.</p></div>
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">Nous choisissons</p><h3 class="text-white text-xl font-semibold mb-3">La solution</h3><p class="text-neutral-300 leading-relaxed">Mat&eacute;riel adapt&eacute;, prix lisible, installateur externe s&eacute;lectionn&eacute;.</p></div>
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">Nous pilotons</p><h3 class="text-white text-xl font-semibold mb-3">Le cadre</h3><p class="text-neutral-300 leading-relaxed">Dossier, d&eacute;marches, garanties, planning et suivi apr&egrave;s lancement.</p></div>
-    </div></main>
-  </div></div><footer class="sg-slide-footer flex items-center justify-between gap-4">
-    <div></div>
-    <button onclick="showSlide(2)" class="px-8 py-3 rounded-full bg-gold text-black font-semibold hover:scale-[1.03] transition">Suivant &rarr;</button>
-  </footer></section>
+
+    <div class="relative z-10 flex-1 min-h-0 sg-slide-inner px-12 pt-28">
+
+      <!-- TITRE -->
+      <header>
+      <h2 class="text-5xl font-semibold mb-4">
+        Comment va se d&eacute;rouler<br>
+        <span class="text-gold">notre rendez-vous</span>
+      </h2>
+
+      <p class="text-neutral-300 italic text-xl max-w-4xl">
+        Un &eacute;change structur&eacute;, transparent et factuel,
+        pour poser les bonnes bases avant toute d&eacute;cision.
+      </p>
+    </header>
+
+    <!-- CONTENU -->
+    <main class="flex items-center justify-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-20
+                  bg-black/55 border border-gold/40 rounded-2xl
+                  px-14 py-16 max-w-6xl w-full">
+
+        <div class="space-y-10">
+          <div>
+            <h3 class="text-gold font-semibold mb-2">
+              01 &mdash; Situation r&eacute;elle
+            </h3>
+            <p class="text-neutral-300">
+              Analyse de votre maison, de votre environnement
+              et de vos usages r&eacute;els.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-gold font-semibold mb-2">
+              03 &mdash; Comparer les sc&eacute;narios
+            </h3>
+            <p class="text-neutral-300">
+              Recherche de l&rsquo;&eacute;quilibre le plus coh&eacute;rent
+              entre performance, budget et durabilit&eacute;.
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-10">
+          <div>
+            <h3 class="text-gold font-semibold mb-2">
+              02 &mdash; Simuler &eacute;conomies
+            </h3>
+            <p class="text-neutral-300">
+              Donn&eacute;es concr&egrave;tes, expliqu&eacute;es simplement,
+              sans promesses irr&eacute;alistes.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-gold font-semibold mb-2">
+              04 &mdash; D&eacute;cider sereinement
+            </h3>
+            <p class="text-neutral-300">
+              Vous restez ma&icirc;tre de la d&eacute;cision,
+              en toute connaissance de cause.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    </div>
+  </div>
+
+  <footer class="sg-slide-footer flex items-center justify-end">
+    <button onclick="showSlide(2)"
+            class="px-8 py-3 rounded-full
+                   bg-gold text-black text-sm font-semibold
+                   hover:scale-[1.03] transition">
+      Suivant &rarr;
+    </button>
+  </footer>
+
+</section>
+
 
 <!-- ======================================================
-SLIDE 02 - MARCHE SOLAIRE
+SLIDE 2 — SOLARGLOBE / BUREAU D’ÉTUDE
+RESPONSIVE COMPACT · 13" → 27"
 ====================================================== -->
-<section class="slide"><div class="sg-slide-hero"><div class="absolute inset-0">
-      <img src="/assets/images/partenaire/maison-photovoltaique.webp" class="w-full h-full object-cover object-center" alt="March&eacute; solaire" />
-      <div class="absolute inset-0 bg-black/92"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/76 to-black"></div>
+<section class="slide fixed inset-0 w-full text-white overflow-hidden">
+
+  <div class="sg-slide-hero">
+    <!-- FOND -->
+    <div class="absolute inset-0">
+      <img src="/assets/images/partenaire/maison-photovoltaique.webp"
+           class="w-full h-full object-cover object-center"
+           alt="Maison photovolta&iuml;que SolarGlobe" />
+      <div class="absolute inset-0 bg-black/55"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-black/75"></div>
     </div>
-  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner px-8 xl:px-16 pt-24">
-    <header class="max-w-6xl"><p class="text-gold uppercase tracking-[0.35em] text-xs mb-4">02 &middot; Pourquoi c&rsquo;est difficile</p><h2 class="font-semibold leading-tight text-[clamp(2.4rem,4.2vw,4.1rem)]">Deux devis peuvent se ressembler. Leur qualit&eacute;, non.</h2><p class="mt-4 text-neutral-300 text-xl max-w-4xl">Le vrai sujet n&rsquo;est pas seulement le prix. C&rsquo;est ce qu&rsquo;il y a derri&egrave;re le prix.</p><div class="w-16 h-px bg-gold mt-5"></div></header>
-    <main class="flex items-center"><div class="w-full max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">Doute 01</p><h3 class="text-white text-xl font-semibold mb-3">Le prix est-il juste ?</h3><p class="text-neutral-300 leading-relaxed">Un total bas ou haut ne dit rien sans lecture du dimensionnement.</p></div>
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">Doute 02</p><h3 class="text-white text-xl font-semibold mb-3">L&rsquo;&eacute;tude est-elle fiable ?</h3><p class="text-neutral-300 leading-relaxed">Une mauvaise hypoth&egrave;se suffit &agrave; fausser toute la rentabilit&eacute;.</p></div>
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">Doute 03</p><h3 class="text-white text-xl font-semibold mb-3">Qui va poser ?</h3><p class="text-neutral-300 leading-relaxed">La qualit&eacute; finale d&eacute;pend de l&rsquo;installateur externe retenu.</p></div>
-    </div></main>
-  </div></div><footer class="sg-slide-footer flex items-center justify-between gap-4">
-    <button onclick="showSlide(1)" class="px-7 py-3 rounded-full border border-gold/40 text-gold hover:bg-gold/10 transition">&larr; Pr&eacute;c&eacute;dent</button>
-    <button onclick="showSlide(3)" class="px-8 py-3 rounded-full bg-gold text-black font-semibold hover:scale-[1.03] transition">Suivant &rarr;</button>
-  </footer></section>
+
+    <!-- STRUCTURE -->
+    <div class="relative z-10 flex-1 min-h-0 sg-slide-inner
+                px-6 md:px-10 xl:px-16 pt-24">
+
+      <!-- ===== HEADER ===== -->
+    <header class="max-w-6xl">
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(1.8rem,3vw,2.8rem)]">
+        SolarGlobe, bureau d&rsquo;&eacute;tude sp&eacute;cialis&eacute;<br>
+        <span class="text-gold">
+          en solutions photovolta&iuml;ques intelligentes
+        </span>
+      </h2>
+
+      <p class="mt-3 italic text-neutral-300
+                text-[clamp(0.95rem,1.2vw,1.15rem)]
+                max-w-4xl">
+        Une approche technique, humaine et rentable
+        de l&rsquo;autoconsommation solaire.
+      </p>
+
+      <div class="w-16 h-px bg-gold mt-4"></div>
+    </header>
+
+    <!-- ===== CONTENU ===== -->
+    <main class="flex items-center">
+      <div class="w-full max-w-6xl mx-auto
+                  bg-black/70 backdrop-blur-md
+                  border border-gold/35 rounded-2xl
+                  px-8 xl:px-12 py-8 xl:py-10
+                  grid grid-cols-1 lg:grid-cols-2
+                  gap-x-14 gap-y-6">
+
+        <!-- GAUCHE -->
+        <div class="space-y-5">
+
+          <div>
+            <h3 class="text-gold font-semibold text-sm mb-1">
+              01 &mdash; Notre r&ocirc;le
+            </h3>
+            <p class="text-neutral-300 text-sm leading-relaxed">
+              Bureau d&rsquo;&eacute;tude expert en performance solaire.
+              Projets optimis&eacute;s sur mesure, fiables et rentables.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-gold font-semibold text-sm mb-1">
+              02 &mdash; M&eacute;thode d&rsquo;analyse pr&eacute;cise
+            </h3>
+            <p class="text-neutral-300 text-sm leading-relaxed">
+  Dimensionnement au <strong>kWh pr&egrave;s</strong> gr&acirc;ce &agrave; notre
+  <strong>logiciel interne propri&eacute;taire</strong>,
+  d&eacute;velopp&eacute; sp&eacute;cifiquement pour l&rsquo;&eacute;tude solaire r&eacute;sidentielle.
+</p>
+
+          </div>
+
+          <div>
+            <h3 class="text-gold font-semibold text-sm mb-1">
+              03 &mdash; Mat&eacute;riel s&eacute;lectionn&eacute; avec exigence
+            </h3>
+            <p class="text-neutral-300 text-sm leading-relaxed">
+              LONGi, Aiko, ATMOCE, Shelly&nbsp;: performance,
+              fiabilit&eacute; et garanties jusqu&rsquo;&agrave; 25&nbsp;ans.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- DROITE -->
+        <div class="space-y-5">
+
+          <div>
+            <h3 class="text-gold font-semibold text-sm mb-1">
+              04 &mdash; Accompagnement humain
+            </h3>
+            <p class="text-neutral-300 text-sm leading-relaxed">
+              Un interlocuteur unique.
+              Z&eacute;ro sous-traitance commerciale.
+              Z&eacute;ro discours creux.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-gold font-semibold text-sm mb-1">
+              05 &mdash; R&eacute;seau RGE certifi&eacute;
+            </h3>
+            <p class="text-neutral-300 text-sm leading-relaxed">
+              Installateurs tri&eacute;s, encadr&eacute;s,
+              chantiers suivis et valid&eacute;s par nos soins.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-gold font-semibold text-sm mb-1">
+              06 &mdash; Philosophie
+            </h3>
+            <p class="text-neutral-300 text-sm leading-relaxed">
+              Faire du solaire un
+              <strong>investissement intelligent et durable</strong>,
+              pas une vente forc&eacute;e.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    </div>
+  </div>
+
+  <footer class="sg-slide-footer flex items-center justify-between gap-6">
+
+    <p class="italic text-neutral-200
+              text-[clamp(0.95rem,1.1vw,1.1rem)]
+              max-w-3xl">
+      <span class="text-gold font-medium">Notre mission&nbsp;:</span>
+      vous rendre autonome, simplement et durablement.
+    </p>
+
+    <div class="flex gap-3">
+      <button onclick="showSlide(1)"
+              class="px-6 py-2.5 rounded-full
+                     border border-gold/40 text-gold text-sm
+                     hover:bg-gold/10 transition">
+        &larr; Pr&eacute;c&eacute;dent
+      </button>
+
+      <button onclick="showSlide(3)"
+              class="px-8 py-3 rounded-full
+                     bg-gold text-black text-sm font-semibold
+                     hover:scale-[1.03] transition">
+        Suivant &rarr;
+      </button>
+    </div>
+
+  </footer>
+</section>
+
 
 <!-- ======================================================
-SLIDE 03 - RISQUE
+SLIDE 3 — POURQUOI AGIR MAINTENANT ?
+FUSION DES SLIDES 3, 4 ET 5
 ====================================================== -->
-<section class="slide"><div class="sg-slide-hero"><div class="absolute inset-0">
-      <img src="/assets/images/partenaire/maison-photovoltaique.webp" class="w-full h-full object-cover object-center" alt="Risques projet solaire" />
-      <div class="absolute inset-0 bg-black/92"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/76 to-black"></div>
+<section class="slide">
+
+  <div class="sg-slide-hero">
+    <!-- FOND -->
+    <div class="absolute inset-0">
+      <img src="/assets/images/partenaire/maison-photovoltaique.webp"
+           alt="Pourquoi le solaire aujourd&rsquo;hui"
+           class="w-full h-full object-cover object-center" />
+      <div class="absolute inset-0 bg-black/55"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/70"></div>
     </div>
-  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner px-8 xl:px-16 pt-24">
-    <header class="max-w-6xl"><p class="text-gold uppercase tracking-[0.35em] text-xs mb-4">03 &middot; Ce que nous &eacute;vitons</p><h2 class="font-semibold leading-tight text-[clamp(2.4rem,4.2vw,4.1rem)]">Le mauvais choix ne se voit pas toujours le jour de la signature.</h2><p class="mt-4 text-neutral-300 text-xl max-w-4xl">Il se voit plus tard : production d&eacute;cevante, prix trop haut, pose moyenne, suivi absent.</p><div class="w-16 h-px bg-gold mt-5"></div></header>
-    <main class="flex items-center"><div class="w-full max-w-6xl mx-auto bg-black/80 border border-gold/25 rounded-2xl p-8">
-      <div class="grid md:grid-cols-4 gap-4 text-center"><div class="border border-gold/25 rounded-xl p-5"><p class="text-gold text-4xl font-semibold">01</p><p class="text-white mt-3">Puissance vendue</p><p class="text-neutral-400 text-sm mt-2">au lieu d&rsquo;&ecirc;tre calcul&eacute;e</p></div><div class="border border-gold/25 rounded-xl p-5"><p class="text-gold text-4xl font-semibold">02</p><p class="text-white mt-3">Prix subi</p><p class="text-neutral-400 text-sm mt-2">au lieu d&rsquo;&ecirc;tre compris</p></div><div class="border border-gold/25 rounded-xl p-5"><p class="text-gold text-4xl font-semibold">03</p><p class="text-white mt-3">Mat&eacute;riel impos&eacute;</p><p class="text-neutral-400 text-sm mt-2">au lieu d&rsquo;&ecirc;tre justifi&eacute;</p></div><div class="border border-gold/25 rounded-xl p-5"><p class="text-gold text-4xl font-semibold">04</p><p class="text-white mt-3">Pose inconnue</p><p class="text-neutral-400 text-sm mt-2">au lieu d&rsquo;&ecirc;tre s&eacute;lectionn&eacute;e</p></div></div>
-      <p class="mt-8 text-2xl text-white leading-relaxed">Notre travail est de transformer ces zones grises en d&eacute;cision lisible.</p>
-    </div></main>
-  </div></div><footer class="sg-slide-footer flex items-center justify-between gap-4">
-    <button onclick="showSlide(2)" class="px-7 py-3 rounded-full border border-gold/40 text-gold hover:bg-gold/10 transition">&larr; Pr&eacute;c&eacute;dent</button>
-    <button onclick="showSlide(4)" class="px-8 py-3 rounded-full bg-gold text-black font-semibold hover:scale-[1.03] transition">Suivant &rarr;</button>
-  </footer></section>
+
+    <!-- CONTENEUR -->
+    <div class="relative z-10 flex-1 min-h-0 sg-slide-inner
+                px-8 xl:px-14 pt-24">
+
+      <!-- ======================
+      TITRE
+      ======================= -->
+      <header class="max-w-6xl">
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(2rem,3.2vw,3rem)]">
+        Pourquoi le solaire devient<br>
+        <span class="text-gold">une d&eacute;cision logique aujourd&rsquo;hui&nbsp;?</span>
+      </h2>
+
+      <p class="mt-3 text-neutral-300 italic
+                text-[clamp(0.95rem,1.3vw,1.15rem)]
+                max-w-4xl">
+        L&rsquo;&eacute;lectricit&eacute; augmente, le r&eacute;seau devient moins pr&eacute;visible,
+        et rester totalement d&eacute;pendant co&ucirc;te de plus en plus cher.
+      </p>
+
+      <div class="w-16 h-px bg-gold mt-5"></div>
+    </header>
+
+    <!-- ======================
+    CONTENU CENTRAL
+    ======================= -->
+    <main class="flex items-center">
+      <div class="w-full max-w-[1120px] mx-auto
+                  bg-black/65 backdrop-blur-md
+                  border border-gold/25 rounded-2xl
+                  px-8 py-8
+                  grid grid-cols-1 md:grid-cols-2
+                  gap-x-12 gap-y-7">
+
+        <!-- COLONNE GAUCHE -->
+        <div class="space-y-7">
+
+          <div>
+            <h3 class="text-gold font-semibold text-[0.95rem] mb-1 tracking-wide">
+              01 &mdash; L&rsquo;&eacute;lectricit&eacute; augmente durablement
+            </h3>
+            <p class="text-neutral-300 text-[0.9rem] leading-relaxed">
+              Les factures ne d&eacute;pendent plus seulement de votre consommation :
+              tarifs, taxes et co&ucirc;ts r&eacute;seau progressent dans la dur&eacute;e.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-gold font-semibold text-[0.95rem] mb-1 tracking-wide">
+              02 &mdash; Vous subissez un prix que vous ne ma&icirc;trisez pas
+            </h3>
+            <p class="text-neutral-300 text-[0.9rem] leading-relaxed">
+              Sans production locale, chaque kWh consomm&eacute; reste achet&eacute;
+              au tarif impos&eacute; du moment, sans vraie protection long terme.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- COLONNE DROITE -->
+        <div class="space-y-7">
+
+          <div>
+            <h3 class="text-gold font-semibold text-[0.95rem] mb-1 tracking-wide">
+              03 &mdash; Ne rien faire devient un choix co&ucirc;teux
+            </h3>
+            <p class="text-neutral-300 text-[0.9rem] leading-relaxed">
+              Plus les ann&eacute;es passent, plus la facture cumul&eacute;e augmente
+              sans cr&eacute;er de valeur pour votre maison.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-gold font-semibold text-[0.95rem] mb-1 tracking-wide">
+              04 &mdash; Le solaire transforme une charge en actif
+            </h3>
+            <p class="text-neutral-300 text-[0.9rem] leading-relaxed">
+              Votre toiture produit une partie de votre &eacute;nergie,
+              r&eacute;duit votre exposition aux hausses et valorise le logement.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <!-- ======================
+    BAS DE SLIDE
+    ======================= -->
+    </div>
+  </div>
+
+  <footer class="sg-slide-footer flex items-center justify-between gap-6 flex-wrap">
+
+    <p class="italic text-neutral-200
+              text-[clamp(0.9rem,1.2vw,1.05rem)]
+              max-w-3xl">
+      &laquo;&nbsp;Aujourd&rsquo;hui, ne rien faire n&rsquo;est plus neutre&nbsp;:
+        <span class="text-gold font-medium">
+          c&rsquo;est laisser une charge augmenter sans reprendre le contr&ocirc;le.
+        </span>&nbsp;&raquo;
+      </p>
+
+      <div class="flex gap-4">
+        <button onclick="showSlide(2)"
+                class="px-8 py-3 rounded-full border border-gold/40
+                       text-gold font-semibold hover:bg-gold/10 transition">
+          &larr; Pr&eacute;c&eacute;dent
+        </button>
+
+        <button onclick="showSlide(6)"
+                class="px-8 py-3 rounded-full bg-gold text-black
+                       font-semibold hover:scale-[1.04] transition">
+          Suivant &rarr;
+        </button>
+      </div>
+
+  </footer>
+</section>
+
 
 <!-- ======================================================
-SLIDE 04 - METHODE
+SLIDE 4 — LES PRIX DE L’ÉLECTRICITÉ AUGMENTENT
+CLIENT · CONSTAT FACTUEL & DÉCLENCHEUR RATIONNEL
 ====================================================== -->
-<section class="slide"><div class="sg-slide-hero"><div class="absolute inset-0">
-      <img src="/assets/images/partenaire/maison-photovoltaique.webp" class="w-full h-full object-cover object-center" alt="M&eacute;thode SolarGlobe" />
-      <div class="absolute inset-0 bg-black/92"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/76 to-black"></div>
+
+
+<section class="slide">
+
+  <div class="sg-slide-hero">
+  <!-- FOND -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-photovoltaique.webp"
+         alt="Hausse des prix de l&rsquo;&eacute;lectricit&eacute;"
+         class="w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80"></div>
+  </div>
+
+  <!-- CONTENEUR -->
+  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner
+              px-8 xl:px-14 pt-24">
+
+    <!-- ======================
+    TITRE
+    ======================= -->
+    <header class="max-w-6xl">
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(2.1rem,3.4vw,3.2rem)]">
+        Le prix ne redescendra plus. La seule question, c&rsquo;est combien vous allez encore payer.
+      </h2>
+
+      <p class="mt-3 text-neutral-300 italic
+                text-[clamp(0.95rem,1.3vw,1.15rem)]
+                max-w-4xl">
+        Ce n&rsquo;est plus une hausse temporaire. C&rsquo;est votre nouvelle r&eacute;alit&eacute;.
+      </p>
+
+      <div class="w-16 h-px bg-gold mt-5"></div>
+    </header>
+
+    <!-- ======================
+    CONTENU CENTRAL
+    ======================= -->
+    <main class="flex items-center">
+      <div class="w-full max-w-[1100px] mx-auto
+                  bg-black/65 backdrop-blur-md
+                  border border-gold/25 rounded-2xl
+                  px-8 py-6">
+
+        <!-- TEXTE + GRAPH -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+
+          <!-- TEXTE -->
+          <div class="space-y-4">
+            <p class="text-neutral-200 text-[1rem] leading-relaxed">
+              En France, le prix de l&rsquo;&eacute;lectricit&eacute;
+              a augment&eacute; de fa&ccedil;on continue
+              depuis plus de 20&nbsp;ans.
+            </p>
+
+            <p class="text-neutral-200 text-[1rem] leading-relaxed">
+              Malgr&eacute; les dispositifs temporaires,
+              le co&ucirc;t r&eacute;el de l&rsquo;&eacute;nergie reste orient&eacute;
+              &agrave; la hausse, sous l&rsquo;effet des investissements
+              r&eacute;seau, des contraintes europ&eacute;ennes
+              et de la fin progressive des m&eacute;canismes
+              de r&eacute;gulation.
+            </p>
+
+            <p class="text-neutral-300 italic text-[0.95rem]">
+              Projection 2026 volontairement prudente,
+              bas&eacute;e sur les donn&eacute;es CRE / Eurostat.
+            </p>
+          </div>
+
+          <!-- GRAPHIQUE -->
+          <div>
+            <canvas id="électricitéChart"
+                    class="w-full h-[min(340px,32vh)]"></canvas>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+
     </div>
-  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner px-8 xl:px-16 pt-24">
-    <header class="max-w-6xl"><p class="text-gold uppercase tracking-[0.35em] text-xs mb-4">04 &middot; La m&eacute;thode SolarGlobe</p><h2 class="font-semibold leading-tight text-[clamp(2.4rem,4.2vw,4.1rem)]">On ne commence pas par vendre. On commence par v&eacute;rifier.</h2><p class="mt-4 text-neutral-300 text-xl max-w-4xl">Chaque &eacute;tape doit rendre le projet plus clair, plus solide, plus d&eacute;cidable.</p><div class="w-16 h-px bg-gold mt-5"></div></header>
-    <main class="flex items-center"><div class="w-full max-w-6xl mx-auto grid md:grid-cols-4 gap-5">
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">01</p><h3 class="text-white text-xl font-semibold mb-3">Analyser</h3><p class="text-neutral-300 leading-relaxed">Maison, toiture, ombrage, habitudes, consommation.</p></div>
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">02</p><h3 class="text-white text-xl font-semibold mb-3">Comparer</h3><p class="text-neutral-300 leading-relaxed">Plusieurs sc&eacute;narios, pas une solution impos&eacute;e.</p></div>
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">03</p><h3 class="text-white text-xl font-semibold mb-3">S&eacute;lectionner</h3><p class="text-neutral-300 leading-relaxed">Mat&eacute;riel et installateur externe selon le projet.</p></div>
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">04</p><h3 class="text-white text-xl font-semibold mb-3">Recommander</h3><p class="text-neutral-300 leading-relaxed">Une solution &agrave; lancer, ajuster ou refuser.</p></div>
-    </div></main>
-  </div></div><footer class="sg-slide-footer flex items-center justify-between gap-4">
-    <button onclick="showSlide(3)" class="px-7 py-3 rounded-full border border-gold/40 text-gold hover:bg-gold/10 transition">&larr; Pr&eacute;c&eacute;dent</button>
-    <button onclick="showSlide(5)" class="px-8 py-3 rounded-full bg-gold text-black font-semibold hover:scale-[1.03] transition">Suivant &rarr;</button>
-  </footer></section>
+  </div>
+
+  <footer class="sg-slide-footer flex items-center justify-between gap-6 flex-wrap">
+
+      <p class="italic text-neutral-200
+                text-[clamp(0.9rem,1.2vw,1.05rem)]
+                max-w-3xl">
+        &laquo;&nbsp;Tant que vous d&eacute;pendez &agrave; 100&nbsp;% du r&eacute;seau,
+        <span class="text-gold font-medium">
+          vous subissez cette &eacute;volution.
+        </span>&nbsp;&raquo;
+      </p>
+
+      <div class="flex gap-4">
+        <button onclick="showSlide(3)"
+                class="px-8 py-3 rounded-full border border-gold/40
+                       text-gold font-semibold hover:bg-gold/10 transition">
+          &larr; Pr&eacute;c&eacute;dent
+        </button>
+
+        <button onclick="showSlide(5)"
+                class="px-8 py-3 rounded-full bg-gold text-black
+                       font-semibold hover:scale-[1.04] transition">
+          Suivant &rarr;
+        </button>
+      </div>
+
+  </footer>
+</section>
+
+
+<!-- ======================
+GRAPHIQUE — PRIX &Eacute;LECTRICIT&Eacute;
+======================= -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+(function () {
+
+  const canvas = document.getElementById('électricitéChart');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+
+  const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+  gradient.addColorStop(0, 'rgba(195,152,71,0.45)');
+  gradient.addColorStop(1, 'rgba(195,152,71,0.02)');
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['2000','2005','2010','2015','2020','2023','2026'],
+      datasets: [{
+        label: 'Prix de l’électricité',
+        data: [0.12, 0.13, 0.15, 0.17, 0.19, 0.20, 0.21],
+        borderColor: '#C39847',
+        backgroundColor: gradient,
+        fill: true,
+        tension: 0.5,
+        borderWidth: 3,
+        pointRadius: 4,
+        pointHoverRadius: 6,
+        pointBackgroundColor: '#C39847',
+        pointBorderColor: '#111',
+        pointBorderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: 'rgba(0,0,0,0.85)',
+          titleColor: '#C39847',
+          bodyColor: '#fff',
+          padding: 12,
+          displayColors: false,
+          callbacks: {
+            label: ctx => ctx.parsed.y.toFixed(2) + ' \u20AC / kWh'
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            color: 'rgba(255,255,255,0.65)'
+          },
+          grid: { display: false }
+        },
+        y: {
+          beginAtZero: false,
+          ticks: {
+            color: 'rgba(255,255,255,0.55)',
+            callback: v => v.toFixed(2) + ' \u20AC'
+          },
+          grid: {
+            color: 'rgba(255,255,255,0.06)',
+            drawBorder: false
+          }
+        }
+      }
+    }
+  });
+
+})();
+</script>
+
+
+
 
 <!-- ======================================================
-SLIDE 05 - ENGAGEMENT
+SLIDE 5 — RESTER DÉPENDANT DU RÉSEAU : 4 RISQUES MAJEURS
+CLIENT · PRISE DE CONSCIENCE · CINÉ
 ====================================================== -->
-<section class="slide"><div class="sg-slide-hero"><div class="absolute inset-0">
-      <img src="/assets/images/partenaire/maison-photovoltaique.webp" class="w-full h-full object-cover object-center" alt="Engagement SolarGlobe" />
-      <div class="absolute inset-0 bg-black/92"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/76 to-black"></div>
+<section class="slide">
+
+  <div class="sg-slide-hero">
+  <!-- FOND STANDARD -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-photovoltaique.webp"
+         alt="D&eacute;pendance au r&eacute;seau &eacute;lectrique"
+         class="w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-black/65"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80"></div>
+  </div>
+
+  <!-- CONTENEUR -->
+  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner
+              px-8 xl:px-14 pt-24">
+
+    <!-- ======================
+    TITRE
+    ======================= -->
+    <header class="max-w-6xl">
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(2.1rem,3.4vw,3.2rem)]">
+        Rester d&eacute;pendant du r&eacute;seau,
+        <span class="text-gold">c&rsquo;est prendre 4 risques majeurs</span>
+      </h2>
+
+      <p class="mt-3 text-neutral-300 italic
+                text-[clamp(0.95rem,1.3vw,1.15rem)]
+                max-w-4xl">
+        Tant que votre maison ne produit rien,
+        vous subissez des contraintes qui ne d&eacute;pendent pas de vous.
+      </p>
+
+      <div class="w-16 h-px bg-gold mt-5"></div>
+    </header>
+
+    <!-- ======================
+    CONTENU CENTRAL
+    ======================= -->
+    <main class="flex items-center">
+      <div class="w-full max-w-[1200px] mx-auto
+                  bg-black/65 backdrop-blur-md
+                  border border-gold/25 rounded-2xl
+                  px-8 py-8
+                  grid grid-cols-1 md:grid-cols-2
+                  gap-8">
+
+        <!-- RISQUE 1 -->
+        <div class="flex gap-5">
+          <div class="shrink-0">
+            <svg width="46" height="46" viewBox="0 0 24 24"
+                 fill="none" stroke="#C39847" stroke-width="1.5">
+              <path d="M2 12h20" />
+              <path d="M6 8v8" />
+              <path d="M18 8v8" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-gold font-semibold text-[1rem] mb-1">
+              Aucune autonomie
+            </h3>
+            <p class="text-neutral-300 text-[0.95rem] leading-relaxed">
+              En cas de coupure, de panne ou de tension r&eacute;seau,
+              votre maison reste
+              <strong>100&nbsp;% d&eacute;pendante</strong>
+              de l&rsquo;&eacute;lectricit&eacute; publique.
+            </p>
+          </div>
+        </div>
+
+        <!-- RISQUE 2 -->
+        <div class="flex gap-5">
+          <div class="shrink-0">
+            <svg width="46" height="46" viewBox="0 0 24 24"
+                 fill="none" stroke="#C39847" stroke-width="1.5">
+              <path d="M3 12h18" />
+              <path d="M12 3v18" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-gold font-semibold text-[1rem] mb-1">
+              D&eacute;pendance aux d&eacute;cisions ext&eacute;rieures
+            </h3>
+            <p class="text-neutral-300 text-[0.95rem] leading-relaxed">
+              Tarifs, taxes, choix politiques ou europ&eacute;ens :
+              votre facture &eacute;volue
+              <strong>sans que vous puissiez agir</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- RISQUE 3 -->
+        <div class="flex gap-5">
+          <div class="shrink-0">
+            <svg width="46" height="46" viewBox="0 0 24 24"
+                 fill="none" stroke="#C39847" stroke-width="1.5">
+              <path d="M3 17l6-6 4 4 7-7" />
+              <path d="M21 17V7h-10" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-gold font-semibold text-[1rem] mb-1">
+              Vos factures ne vont pas s&rsquo;arr&ecirc;ter d&rsquo;augmenter
+            </h3>
+            <p class="text-neutral-300 text-[0.95rem] leading-relaxed">
+              Vous achetez
+              <strong>100&nbsp;% de votre &eacute;nergie</strong>,
+              sans stabilit&eacute; de co&ucirc;t
+              ni vision long terme.
+            </p>
+          </div>
+        </div>
+
+        <!-- RISQUE 4 -->
+        <div class="flex gap-5">
+          <div class="shrink-0">
+            <svg width="46" height="46" viewBox="0 0 24 24"
+                 fill="none" stroke="#C39847" stroke-width="1.5">
+              <rect x="3" y="6" width="18" height="12" rx="2" />
+              <path d="M3 10h18" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-gold font-semibold text-[1rem] mb-1">
+              Chaque facture, c&rsquo;est de l&rsquo;argent que vous ne reverrez jamais
+            </h3>
+            <p class="text-neutral-300 text-[0.95rem] leading-relaxed">
+              En 20&nbsp;ans, une maison moyenne verse
+              <strong>des dizaines de milliers d&rsquo;euros</strong>.
+              Vous payez&hellip; sans jamais r&eacute;cup&eacute;rer quoi que ce soit.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+
     </div>
-  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner px-8 xl:px-16 pt-24">
-    <header class="max-w-6xl"><p class="text-gold uppercase tracking-[0.35em] text-xs mb-4">05 &middot; Notre engagement</p><h2 class="font-semibold leading-tight text-[clamp(2.4rem,4.2vw,4.1rem)]">Si le projet n&rsquo;est pas bon, il ne doit pas partir.</h2><p class="mt-4 text-neutral-300 text-xl max-w-4xl">C&rsquo;est ce qui rend la signature saine : elle arrive apr&egrave;s la v&eacute;rification, pas avant.</p><div class="w-16 h-px bg-gold mt-5"></div></header>
-    <main class="flex items-center"><div class="w-full max-w-6xl mx-auto grid md:grid-cols-2 gap-7">
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-9"><p class="text-gold text-4xl font-semibold mb-6">On valide</p><p class="text-neutral-200 text-xl leading-relaxed">quand l&rsquo;&eacute;tude, le prix, le mat&eacute;riel et la pose forment un ensemble coh&eacute;rent.</p></div>
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-9"><p class="text-gold text-4xl font-semibold mb-6">On arr&ecirc;te</p><p class="text-neutral-200 text-xl leading-relaxed">si la toiture, le budget, les usages ou les hypoth&egrave;ses ne justifient pas le projet.</p></div>
-    </div></main>
-  </div></div><footer class="sg-slide-footer flex items-center justify-between gap-4">
-    <button onclick="showSlide(4)" class="px-7 py-3 rounded-full border border-gold/40 text-gold hover:bg-gold/10 transition">&larr; Pr&eacute;c&eacute;dent</button>
-    <button onclick="showSlide(6)" class="px-8 py-3 rounded-full bg-gold text-black font-semibold hover:scale-[1.03] transition">Suivant &rarr;</button>
-  </footer></section>
+  </div>
+
+  <footer class="sg-slide-footer flex items-center justify-between gap-6 flex-wrap">
+
+      <p class="italic text-neutral-200
+                text-[clamp(0.9rem,1.2vw,1.05rem)]
+                max-w-3xl">
+        &laquo;&nbsp;Ne rien faire aujourd&rsquo;hui,
+        <span class="text-gold font-medium">
+          c&rsquo;est payer toute votre vie.
+        </span>&nbsp;&raquo;
+      </p>
+
+      <div class="flex gap-4">
+        <button onclick="showSlide(4)"
+                class="px-8 py-3 rounded-full border border-gold/40
+                       text-gold font-semibold hover:bg-gold/10 transition">
+          &larr; Pr&eacute;c&eacute;dent
+        </button>
+
+        <button onclick="showSlide(6)"
+                class="px-8 py-3 rounded-full bg-gold text-black
+                       font-semibold hover:scale-[1.04] transition">
+          Suivant &rarr;
+        </button>
+      </div>
+
+  </footer>
+</section>
+
 
 <!-- ======================================================
-SLIDE 06 - MATERIEL
+SLIDE 6 — LES VRAIS PROBLÈMES DU MARCHÉ SOLAIRE
+CLIENT · DÉSILLUSION CONTRÔLÉE · CINÉ
 ====================================================== -->
-<section class="slide"><div class="sg-slide-hero"><div class="absolute inset-0">
-      <img src="/assets/images/partenaire/maison-photovoltaique.webp" class="w-full h-full object-cover object-center" alt="Mat&eacute;riel solaire" />
-      <div class="absolute inset-0 bg-black/92"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/76 to-black"></div>
+<section class="slide">
+
+  <div class="sg-slide-hero">
+  <!-- FOND STANDARD -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-photovoltaique.webp"
+         alt="Les vrais probl&egrave;mes du march&eacute; solaire"
+         class="w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-transparent to-black/85"></div>
+  </div>
+
+  <!-- CONTENEUR -->
+  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner
+              px-8 xl:px-14 pt-24">
+
+    <!-- ======================
+    TITRE
+    ======================= -->
+    <header class="max-w-6xl">
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(2.1rem,3.2vw,3rem)]">
+        Les vrais probl&egrave;mes
+        <span class="text-gold">du march&eacute; solaire</span>
+      </h2>
+
+      <p class="mt-3 text-neutral-300 italic
+                text-[clamp(0.95rem,1.25vw,1.1rem)]
+                max-w-4xl">
+        Parce qu&rsquo;avant de parler solutions,
+        il faut comprendre pourquoi tant de projets
+        se passent mal.
+      </p>
+
+      <div class="w-16 h-px bg-gold mt-5"></div>
+    </header>
+
+    <!-- ======================
+    CONTENU CENTRAL
+    ======================= -->
+    <main class="flex items-center">
+      <div class="w-full max-w-[980px] mx-auto
+                  bg-black/65 backdrop-blur-md
+                  border border-gold/25 rounded-2xl
+                  px-8 py-6
+                  grid grid-cols-1 gap-3">
+
+        <!-- INTRO COURTE -->
+        <p class="text-neutral-200 text-[0.98rem] leading-relaxed">
+          Promesses spectaculaires, devis impossibles &agrave; comparer,
+          discours rassurants mais peu v&eacute;rifiables&hellip;
+        </p>
+
+        <p class="text-neutral-200 text-[0.98rem] leading-relaxed">
+          En pratique, de nombreux projets solaires
+          souffrent des m&ecirc;mes d&eacute;rives r&eacute;currentes&nbsp;:
+        </p>
+
+        <!-- LISTE DES PROBLÈMES (COMPACTE) -->
+        <ul class="mt-3 space-y-3">
+
+          <li class="flex gap-4">
+            <span class="text-gold font-semibold">—</span>
+            <span class="text-neutral-300">
+              Promesses d&rsquo;&eacute;conomies
+              <strong>irr&eacute;alistes</strong>.
+            </span>
+          </li>
+
+          <li class="flex gap-4">
+            <span class="text-gold font-semibold">—</span>
+            <span class="text-neutral-300">
+              Devis <strong>flous ou incomparables</strong>.
+            </span>
+          </li>
+
+          <li class="flex gap-4">
+            <span class="text-gold font-semibold">—</span>
+            <span class="text-neutral-300">
+              Mat&eacute;riel standard
+              <strong>rebaptis&eacute; &laquo;&nbsp;haut rendement&nbsp;&raquo;</strong>.
+            </span>
+          </li>
+
+          <li class="flex gap-4">
+            <span class="text-gold font-semibold">—</span>
+            <span class="text-neutral-300">
+              <strong>Prix excessifs</strong>
+              pour du mat&eacute;riel courant,
+              sans justification technique r&eacute;elle.
+            </span>
+          </li>
+
+          <li class="flex gap-4">
+            <span class="text-gold font-semibold">—</span>
+            <span class="text-neutral-300">
+              Installateurs sans
+              <strong>suivi ni garantie long terme</strong>.
+            </span>
+          </li>
+
+          <li class="flex gap-4">
+            <span class="text-gold font-semibold">—</span>
+            <span class="text-neutral-300">
+              Absence d&rsquo;<strong>&eacute;tude technique s&eacute;rieuse</strong>
+              avant signature.
+            </span>
+          </li>
+
+        </ul>
+
+        <!-- POSITIONNEMENT -->
+        <p class="mt-3 italic text-neutral-200 text-[0.95rem]">
+          Chez SolarGlobe, chaque projet est
+          <span class="text-gold font-medium">
+            audit&eacute;, chiffr&eacute; et valid&eacute;
+          </span>
+          avant toute signature.
+        </p>
+
+      </div>
+    </main>
+
+
     </div>
-  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner px-8 xl:px-16 pt-24">
-    <header class="max-w-6xl"><p class="text-gold uppercase tracking-[0.35em] text-xs mb-4">06 &middot; Mat&eacute;riel s&eacute;lectionn&eacute;</p><h2 class="font-semibold leading-tight text-[clamp(2rem,3.6vw,3.2rem)]">Nous choisissons le mat&eacute;riel pour une raison, pas pour remplir un devis.</h2><p class="mt-4 text-neutral-300 text-xl max-w-4xl">Vous devez savoir pourquoi cette solution est retenue, pas seulement voir une marque.</p><div class="w-16 h-px bg-gold mt-5"></div></header>
-    <main class="flex items-center"><div class="w-full max-w-6xl mx-auto bg-black/80 border border-gold/25 rounded-2xl p-7 grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
-      <div class="grid md:grid-cols-2 gap-5"><div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">Panneaux</p><h3 class="text-white text-xl font-semibold mb-3">Produire mieux</h3><p class="text-neutral-300 leading-relaxed">Rendement, design full black, garanties longues.</p></div><div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">Micro-onduleurs</p><h3 class="text-white text-xl font-semibold mb-3">Suivre mieux</h3><p class="text-neutral-300 leading-relaxed">Production lisible panneau par panneau.</p></div><div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">Batterie</p><h3 class="text-white text-xl font-semibold mb-3">Stocker si utile</h3><p class="text-neutral-300 leading-relaxed">Propos&eacute;e seulement si les usages le justifient.</p></div><div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">Coffret</p><h3 class="text-white text-xl font-semibold mb-3">Piloter demain</h3><p class="text-neutral-300 leading-relaxed">Protection, supervision et &eacute;volutivit&eacute;.</p></div></div>
-      <div class="grid grid-cols-2 gap-5 place-items-center"><img src="/assets/images/produits/longi-x10-explorer.avif" class="h-28 max-w-[120px] object-contain" alt="Panneau LONGi" /><img src="/assets/images/produits/AIKO-Neostar-2PS.webp" class="h-28 max-w-[120px] object-contain" alt="Panneau Aiko" /><img src="/assets/images/produits/micro-onduleur-atmoce-mi500.avif" class="h-24 max-w-[115px] object-contain" alt="Micro-onduleur ATMOCE" /><img src="/assets/images/produits/batterie-atmoce-7kwh.avif" class="h-28 max-w-[115px] object-contain" alt="Batterie ATMOCE" /></div>
-    </div></main>
-  </div></div><footer class="sg-slide-footer flex items-center justify-between gap-4">
-    <button onclick="showSlide(5)" class="px-7 py-3 rounded-full border border-gold/40 text-gold hover:bg-gold/10 transition">&larr; Pr&eacute;c&eacute;dent</button>
-    <button onclick="showSlide(7)" class="px-8 py-3 rounded-full bg-gold text-black font-semibold hover:scale-[1.03] transition">Suivant &rarr;</button>
-  </footer></section>
+  </div>
+
+  <footer class="sg-slide-footer flex items-center justify-between gap-6 flex-wrap">
+
+      <div></div>
+
+      <div class="flex gap-4">
+        <button onclick="showSlide(3)"
+                class="px-8 py-3 rounded-full border border-gold/40
+                       text-gold font-semibold hover:bg-gold/10 transition">
+          &larr; Pr&eacute;c&eacute;dent
+        </button>
+
+        <button onclick="showSlide(7)"
+                class="px-8 py-3 rounded-full bg-gold text-black
+                       font-semibold hover:scale-[1.04] transition">
+          Suivant &rarr;
+        </button>
+      </div>
+
+
+
+  </footer>
+</section>
+
 
 <!-- ======================================================
-SLIDE 07 - INSTALLATEURS
+SLIDE 7 — NOTRE MÉTHODE SOLARGLOBE
+CLIENT · STRUCTURE · RASSURANCE
 ====================================================== -->
-<section class="slide"><div class="sg-slide-hero"><div class="absolute inset-0">
-      <img src="/assets/images/partenaire/maison-photovoltaique.webp" class="w-full h-full object-cover object-center" alt="Installateurs s&eacute;lectionn&eacute;s" />
-      <div class="absolute inset-0 bg-black/92"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/76 to-black"></div>
+<section class="slide">
+
+  <div class="sg-slide-hero">
+  <!-- FOND STANDARD -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-photovoltaique.webp"
+         alt="M&eacute;thode SolarGlobe"
+         class="w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-black/65"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80"></div>
+  </div>
+
+  <!-- CONTENEUR -->
+  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner
+              px-8 xl:px-14 pt-24">
+
+    <!-- ======================
+    TITRE
+    ======================= -->
+    <header class="max-w-6xl">
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(2.1rem,3.3vw,3.1rem)]">
+        Notre m&eacute;thode SolarGlobe&nbsp;:
+        <span class="text-gold">un cadre clair et ma&icirc;tris&eacute;</span>
+      </h2>
+
+      <p class="mt-3 text-neutral-300 italic
+                text-[clamp(0.95rem,1.25vw,1.1rem)]
+                max-w-4xl">
+        Une approche structur&eacute;e pour garantir
+        un projet coh&eacute;rent, rentable et durable.
+      </p>
+
+      <div class="w-16 h-px bg-gold mt-5"></div>
+    </header>
+
+    <!-- ======================
+    CONTENU CENTRAL
+    ======================= -->
+    <main class="flex items-center">
+      <div class="w-full max-w-[1100px] mx-auto
+                  bg-black/65 backdrop-blur-md
+                  border border-gold/25 rounded-2xl
+                  px-8 py-6
+                  grid grid-cols-1 md:grid-cols-2
+                  gap-6">
+
+        <!-- ÉTAPE 1 -->
+        <div class="flex gap-4">
+          <div class="text-gold font-semibold text-[1.1rem]">
+            01
+          </div>
+          <div>
+            <h3 class="text-gold font-semibold text-[1rem] mb-1">
+              Audit &amp; diagnostic pr&eacute;cis
+            </h3>
+            <p class="text-neutral-300 text-[0.95rem] leading-relaxed">
+              Analyse de votre consommation,
+              de votre maison et de vos usages
+              pour d&eacute;finir un potentiel solaire r&eacute;aliste.
+            </p>
+          </div>
+        </div>
+
+        <!-- ÉTAPE 2 -->
+        <div class="flex gap-4">
+          <div class="text-gold font-semibold text-[1.1rem]">
+            02
+          </div>
+          <div>
+            <h3 class="text-gold font-semibold text-[1rem] mb-1">
+              Conception technique sur mesure
+            </h3>
+            <p class="text-neutral-300 text-[0.95rem] leading-relaxed">
+              Dimensionnement adapt&eacute; &agrave; votre profil,
+              sans sur&eacute;quipement ni promesse artificielle.
+            </p>
+          </div>
+        </div>
+
+        <!-- ÉTAPE 3 -->
+        <div class="flex gap-4">
+          <div class="text-gold font-semibold text-[1.1rem]">
+            03
+          </div>
+          <div>
+            <h3 class="text-gold font-semibold text-[1rem] mb-1">
+              &Eacute;tude &eacute;conomique r&eacute;aliste
+            </h3>
+            <p class="text-neutral-300 text-[0.95rem] leading-relaxed">
+              Projection chiffr&eacute;e claire&nbsp;:
+              production, &eacute;conomies, retour sur investissement
+              et coh&eacute;rence financi&egrave;re.
+            </p>
+          </div>
+        </div>
+
+        <!-- ÉTAPE 4 -->
+        <div class="flex gap-4">
+          <div class="text-gold font-semibold text-[1.1rem]">
+            04
+          </div>
+          <div>
+            <h3 class="text-gold font-semibold text-[1rem] mb-1">
+              Suivi &amp; optimisation dans le temps
+            </h3>
+            <p class="text-neutral-300 text-[0.95rem] leading-relaxed">
+              Un accompagnement durable
+              pour ajuster, piloter et maintenir
+              la performance de votre installation.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+
     </div>
-  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner px-8 xl:px-16 pt-24">
-    <header class="max-w-6xl"><p class="text-gold uppercase tracking-[0.35em] text-xs mb-4">07 &middot; Pose externe s&eacute;lectionn&eacute;e</p><h2 class="font-semibold leading-tight text-[clamp(2.4rem,4.2vw,4.1rem)]">Nous ne posons pas. Nous gardons l&rsquo;exigence.</h2><p class="mt-4 text-neutral-300 text-xl max-w-4xl">La pose est confi&eacute;e &agrave; des installateurs externes s&eacute;lectionn&eacute;s. SolarGlobe reste le cadre technique du projet.</p><div class="w-16 h-px bg-gold mt-5"></div></header>
-    <main class="flex items-center"><div class="w-full max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">S&eacute;lection</p><h3 class="text-white text-xl font-semibold mb-3">Avant chantier</h3><p class="text-neutral-300 leading-relaxed">Qualifications, assurances, exp&eacute;rience, s&eacute;rieux.</p></div>
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">Ex&eacute;cution</p><h3 class="text-white text-xl font-semibold mb-3">Pendant chantier</h3><p class="text-neutral-300 leading-relaxed">Pose propre, respect maison, conformit&eacute; technique.</p></div>
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">Continuit&eacute;</p><h3 class="text-white text-xl font-semibold mb-3">Apr&egrave;s chantier</h3><p class="text-neutral-300 leading-relaxed">Suivi, mise en service, lecture de production.</p></div>
-    </div></main>
-  </div></div><footer class="sg-slide-footer flex items-center justify-between gap-4">
-    <button onclick="showSlide(6)" class="px-7 py-3 rounded-full border border-gold/40 text-gold hover:bg-gold/10 transition">&larr; Pr&eacute;c&eacute;dent</button>
-    <button onclick="showSlide(8)" class="px-8 py-3 rounded-full bg-gold text-black font-semibold hover:scale-[1.03] transition">Suivant &rarr;</button>
-  </footer></section>
+  </div>
+
+  <footer class="sg-slide-footer flex items-center justify-between gap-6 flex-wrap">
+
+      <p class="italic text-neutral-200
+                text-[clamp(0.9rem,1.2vw,1.05rem)]
+                max-w-3xl">
+        Chez SolarGlobe, vous ne signez pas un devis&nbsp;:
+        <span class="text-gold font-medium">
+          vous d&eacute;marrez un projet structur&eacute; et suivi.
+        </span>
+      </p>
+
+      <div class="flex gap-4">
+        <button onclick="showSlide(6)"
+                class="px-8 py-3 rounded-full border border-gold/40
+                       text-gold font-semibold hover:bg-gold/10 transition">
+          &larr; Pr&eacute;c&eacute;dent
+        </button>
+
+        <button onclick="showSlide(8)"
+                class="px-8 py-3 rounded-full bg-gold text-black
+                       font-semibold hover:scale-[1.04] transition">
+          Suivant &rarr;
+        </button>
+      </div>
+
+  </footer>
+</section>
+
 
 <!-- ======================================================
-SLIDE 08 - PROJET CLIENT
+SLIDE 08 — VOTRE MAISON PEUT DEVENIR PRODUCTIVE
+TEXTE CONSERVÉ · IMAGE RÉÉQUILIBRÉE
 ====================================================== -->
-<section class="slide"><div class="sg-slide-hero"><div class="absolute inset-0">
-      <img src="/assets/images/partenaire/maison-photovoltaique.webp" class="w-full h-full object-cover object-center" alt="Projet client" />
-      <div class="absolute inset-0 bg-black/92"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/76 to-black"></div>
+<section class="slide">
+
+  <div class="sg-slide-hero">
+  <!-- FOND -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-photovoltaique.webp"
+         alt="Maison solaire SolarGlobe"
+         class="w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70"></div>
+  </div>
+
+  <!-- CONTENEUR -->
+  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner
+              px-8 xl:px-14 pt-24">
+
+    <!-- ======================
+    HEADER
+    ======================= -->
+    <header class="max-w-6xl">
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(2rem,3.4vw,3.1rem)]">
+        Votre maison peut devenir<br>
+        <span class="text-gold">productive</span>
+      </h2>
+
+      <p class="mt-3 text-neutral-300 italic
+                text-[clamp(0.95rem,1.3vw,1.15rem)]
+                max-w-4xl">
+        Et si votre logement ne subissait plus l’énergie,
+        mais la produisait et l’utilisait intelligemment&nbsp;?
+      </p>
+
+      <div class="w-16 h-px bg-gold mt-5"></div>
+    </header>
+
+    <!-- ======================
+    CONTENU CENTRAL
+    ======================= -->
+    <main class="flex items-center">
+      <div class="w-full max-w-[1200px] mx-auto
+                  bg-black/65 backdrop-blur-md
+                  border border-gold/25 rounded-2xl
+                  px-10 py-8
+                  grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr]
+                  gap-10 items-center">
+
+        <!-- TEXTE (INCHANGÉ) -->
+        <div class="space-y-6 text-neutral-200 text-[0.95rem] leading-relaxed">
+
+          <p>
+            Grâce à l’approche <span class="text-gold font-medium">SolarGlobe</span>,
+            votre maison ne subit plus les hausses d’électricité&nbsp;:
+            elle <strong>produit</strong>, <strong>utilise</strong> et
+            <strong>optimise</strong> sa propre énergie.
+          </p>
+
+          <p>
+            Chaque kilowattheure produit est un kilowattheure
+            que vous ne payez plus au réseau.
+          </p>
+
+          <p>
+            Votre toiture devient alors un
+            <strong class="text-gold">actif énergétique</strong>,
+            au service de votre confort, de votre budget
+            et de la valeur de votre maison.
+          </p>
+
+        </div>
+
+        <!-- IMAGE (FORMAT CORRIGÉ) -->
+        <!-- IMAGE (FORMAT ULTRA CONTENU – VERSION FINALE) -->
+<div class="flex justify-center items-center">
+  <img src="/assets/images/partenaire/maison_produit.webp"
+       alt="Maison qui produit, stocke et consomme son énergie"
+       class="w-full max-w-[240px] xl:max-w-[260px]
+              object-contain
+              opacity-90
+              drop-shadow-[0_0_20px_rgba(195,152,71,0.18)]" />
+</div>
+
+
+      </div>
+    </main>
+
+
     </div>
-  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner px-8 xl:px-16 pt-24">
-    <header class="max-w-6xl"><p class="text-gold uppercase tracking-[0.35em] text-xs mb-4">08 &middot; Votre maison</p><h2 class="font-semibold leading-tight text-[clamp(2.4rem,4.2vw,4.1rem)]">Maintenant, la seule question compte : est-ce pertinent chez vous ?</h2><p class="mt-4 text-neutral-300 text-xl max-w-4xl">Pas une promesse g&eacute;n&eacute;rale. Une recommandation sur votre toiture, votre consommation et vos objectifs.</p><div class="w-16 h-px bg-gold mt-5"></div></header>
-    <main class="flex items-center"><div class="w-full max-w-6xl mx-auto bg-black/80 border border-gold/25 rounded-2xl p-8">
-      <div class="grid md:grid-cols-4 gap-4 text-center"><div class="border border-gold/25 rounded-xl p-5"><p class="text-gold font-semibold">Consommation</p><p class="text-neutral-300 text-sm mt-2">ce que vous utilisez</p></div><div class="border border-gold/25 rounded-xl p-5"><p class="text-gold font-semibold">Toiture</p><p class="text-neutral-300 text-sm mt-2">ce qu&rsquo;elle permet</p></div><div class="border border-gold/25 rounded-xl p-5"><p class="text-gold font-semibold">Budget</p><p class="text-neutral-300 text-sm mt-2">ce qui est juste</p></div><div class="border border-gold/25 rounded-xl p-5"><p class="text-gold font-semibold">Objectif</p><p class="text-neutral-300 text-sm mt-2">ce que vous attendez</p></div></div>
-      <p class="mt-8 text-2xl text-white leading-relaxed">La bonne installation est celle qui tombe juste. Pas celle qu&rsquo;on vend &agrave; tout le monde.</p>
-    </div></main>
-  </div></div><footer class="sg-slide-footer flex items-center justify-between gap-4">
-    <button onclick="showSlide(7)" class="px-7 py-3 rounded-full border border-gold/40 text-gold hover:bg-gold/10 transition">&larr; Pr&eacute;c&eacute;dent</button>
-    <button onclick="showSlide(9)" class="px-8 py-3 rounded-full bg-gold text-black font-semibold hover:scale-[1.03] transition">Suivant &rarr;</button>
-  </footer></section>
+  </div>
+
+  <footer class="sg-slide-footer flex items-center justify-between gap-6 flex-wrap">
+
+      <p class="italic text-neutral-200
+                text-[clamp(0.9rem,1.2vw,1.05rem)]
+                max-w-3xl">
+        « L’énergie que vous produisez est celle que vous maîtrisez. »
+      </p>
+
+      <div class="flex gap-4">
+        <button onclick="showSlide(7)"
+                class="px-8 py-3 rounded-full border border-gold/40
+                       text-gold font-semibold hover:bg-gold/10 transition">
+          ← Précédent
+        </button>
+
+        <button onclick="showSlide(9)"
+                class="px-8 py-3 rounded-full bg-gold text-black
+                       font-semibold hover:scale-[1.04] transition">
+          Suivant →
+        </button>
+      </div>
+
+  </footer>
+</section>
+
 
 <!-- ======================================================
-SLIDE 09 - DECISION
+SLIDE 09 — PERFORMANCE & ESTHÉTIQUE : LONGi & Aiko
+HTML SAFE · IMAGE CONTENUE · PREMIUM
 ====================================================== -->
-<section class="slide"><div class="sg-slide-hero"><div class="absolute inset-0">
-      <img src="/assets/images/partenaire/maison-photovoltaique.webp" class="w-full h-full object-cover object-center" alt="D&eacute;cision solaire" />
-      <div class="absolute inset-0 bg-black/92"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/76 to-black"></div>
+<section class="slide">
+
+  <div class="sg-slide-hero">
+  <!-- FOND -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-photovoltaique.webp"
+         alt="Toiture solaire premium"
+         class="w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-black/65"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70"></div>
+  </div>
+
+  <!-- CONTENEUR -->
+  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner
+              px-8 xl:px-14 pt-24">
+
+    <!-- ======================
+    HEADER
+    ======================= -->
+    <header class="max-w-6xl slide-09-header">
+      <h2 class="slide-09-title font-semibold leading-tight">
+        Performance &amp; esth&eacute;tique&nbsp;:<br>
+        <span class="text-gold">LONGi Hi-MO X10 Explorer &amp; Aiko Neostar 2S+</span>
+      </h2>
+
+      <div class="w-16 h-px bg-gold mt-5"></div>
+    </header>
+
+    <!-- ======================
+    CONTENU CENTRAL
+    ======================= -->
+    <main class="slide-09-main flex items-center">
+      <div class="slide-09-card w-full max-w-[1200px] mx-auto
+                  bg-black/65 backdrop-blur-md
+                  border border-gold/25 rounded-2xl
+                  slide-09-product-grid grid grid-cols-1
+                  gap-10 items-start">
+
+        <!-- LONGI ARGUMENTAIRE -->
+        <div class="slide-09-copy space-y-3 text-neutral-200 text-[0.9rem] leading-relaxed">
+          <div class="flex items-center gap-3 mb-3">
+            <img src="/assets/images/logo/longi.avif" alt="Logo LONGi" style="height:22px;width:auto;filter:brightness(0) invert(1);opacity:0.9;" />
+          </div>
+
+          <p>
+            <span class="text-gold font-semibold">Technologie HPBC&nbsp;2.0 (Back&nbsp;Contact)</span>
+            : cellules sans busbars, connexions arri&egrave;re &rarr;
+            plus de lumi&egrave;re capt&eacute;e et moins de pertes.
+          </p>
+
+          <p>
+            <span class="text-gold font-semibold">Rendement jusqu&rsquo;&agrave; 24,8&nbsp;%</span>,
+            avec une excellente performance en faible luminosit&eacute;,
+            id&eacute;ale pour le nord de la France.
+          </p>
+
+          <p>
+            <span class="text-gold font-semibold">Design full black</span>
+            : face avant noire + cadre aluminium noir.
+          </p>
+
+          <p>
+            <span class="text-gold font-semibold">Garantie 25&nbsp;ans</span>
+            + performance <strong>30&nbsp;ans</strong>.
+          </p>
+
+        </div>
+
+        <!-- AIKO ARGUMENTAIRE -->
+        <div class="slide-09-copy space-y-3 text-neutral-200 text-[0.9rem] leading-relaxed">
+          <div class="flex items-center gap-3 mb-3">
+            <img src="/assets/images/logo/aiko-logo.png" alt="Logo Aiko" style="height:22px;width:auto;filter:brightness(0) invert(1);opacity:0.9;" />
+          </div>
+
+          <p>
+            <span class="text-gold font-semibold">Technologie All Back Contact (ABC)</span>
+            : 100&nbsp;% des contacts en face arri&egrave;re &rarr;
+            z&eacute;ro perte par ombrage de grilles.
+          </p>
+
+          <p>
+            <span class="text-gold font-semibold">Rendement jusqu&rsquo;&agrave; 25&nbsp;%</span>
+            — parmi les plus &eacute;lev&eacute;s du march&eacute; r&eacute;sidentiel,
+            avec un excellent coefficient de temp&eacute;rature.
+          </p>
+
+          <p>
+            <span class="text-gold font-semibold">Design ultra black tout-en-un</span>
+            : esth&eacute;tique incomparable sur toiture.
+          </p>
+
+          <p>
+            <span class="text-gold font-semibold">Garantie 25&nbsp;ans</span>
+            produit &amp; performance lin&eacute;aire.
+          </p>
+
+        </div>
+
+        <!-- IMAGES PRODUITS -->
+        <div class="slide-09-product-images flex flex-col items-center gap-4">
+          <button onclick="openLightbox('assets/images/produits/longi-x10-explorer.avif')"
+                  class="slide-09-product-button focus:outline-none">
+            <img src="/assets/images/produits/longi-x10-explorer.avif"
+                 alt="Panneau LONGi Hi-MO X10 Explorer"
+                 class="slide-09-product-image
+                        object-contain
+                        drop-shadow-[0_0_20px_rgba(195,152,71,0.22)]
+                        transition-transform hover:scale-[1.03]" />
+          </button>
+          <button onclick="openLightbox('assets/images/produits/AIKO-Neostar-2PS.webp')"
+                  class="slide-09-product-button focus:outline-none">
+            <img src="/assets/images/produits/AIKO-Neostar-2PS.webp"
+                 alt="Panneau Aiko Neostar 2S+"
+                 class="slide-09-product-image
+                        object-contain
+                        drop-shadow-[0_0_20px_rgba(195,152,71,0.22)]
+                        transition-transform hover:scale-[1.03]" />
+          </button>
+          <p class="text-xs italic text-neutral-400">Cliquer pour agrandir</p>
+        </div>
+
+      </div>
+    </main>
+
+
     </div>
-  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner px-8 xl:px-16 pt-24">
-    <header class="max-w-6xl"><p class="text-gold uppercase tracking-[0.35em] text-xs mb-4">09 &middot; Lancement</p><h2 class="font-semibold leading-tight text-[clamp(2.4rem,4.2vw,4.1rem)]">Quand le projet est juste, signer devient simple.</h2><p class="mt-4 text-neutral-300 text-xl max-w-4xl">Pas une pression. Une suite logique : tout est compris, le cadre est pos&eacute;, le risque est r&eacute;duit.</p><div class="w-16 h-px bg-gold mt-5"></div></header>
-    <main class="flex items-center"><div class="w-full max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">01</p><h3 class="text-white text-xl font-semibold mb-3">Valider</h3><p class="text-neutral-300 leading-relaxed">Solution, puissance, mat&eacute;riel, prix, installateur externe.</p></div>
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">02</p><h3 class="text-white text-xl font-semibold mb-3">Cadrer</h3><p class="text-neutral-300 leading-relaxed">Dossier, d&eacute;marches, planning, garanties, interlocuteur.</p></div>
-      <div class="bg-black/80 border border-gold/25 rounded-2xl p-6 min-h-[150px]"><p class="text-gold/80 text-xs uppercase tracking-[0.28em] mb-4">03</p><h3 class="text-white text-xl font-semibold mb-3">Lancer</h3><p class="text-neutral-300 leading-relaxed">Un projet propre, sans flou, sans signature forc&eacute;e.</p></div>
-    </div></main>
-  </div></div><footer class="sg-slide-footer flex items-center justify-between gap-4">
-    <button onclick="showSlide(8)" class="px-7 py-3 rounded-full border border-gold/40 text-gold hover:bg-gold/10 transition">&larr; Pr&eacute;c&eacute;dent</button>
-    <div></div>
-  </footer></section>
+  </div>
+
+  <footer class="slide-09-footer sg-slide-footer flex items-center justify-between gap-6 flex-wrap">
+
+      <p class="italic text-neutral-200
+                text-[clamp(0.9rem,1.2vw,1.05rem)]
+                max-w-3xl">
+        Un panneau n&rsquo;est pas un d&eacute;tail&nbsp;:
+        c&rsquo;est le c&oelig;ur de la performance de votre installation.
+      </p>
+
+      <div class="flex gap-4">
+        <button onclick="showSlide(8)"
+                class="px-8 py-3 rounded-full border border-gold/40
+                       text-gold font-semibold hover:bg-gold/10 transition">
+          &larr; Pr&eacute;c&eacute;dent
+        </button>
+
+        <button onclick="showSlide(10)"
+                class="px-8 py-3 rounded-full bg-gold text-black
+                       font-semibold hover:scale-[1.04] transition">
+          Suivant &rarr;
+        </button>
+      </div>
+
+
+
+  </footer>
+</section>
+
+
+<!-- LIGHTBOX IMAGE -->
+<div id="lightbox"
+     class="fixed inset-0 bg-black/90 hidden items-center justify-center z-[9999]"
+     onclick="closeLightbox()">
+  <img id="lightbox-img"
+       class="max-w-[90vw] max-h-[90vh] object-contain" />
+</div>
+
+<script>
+function openLightbox(src) {
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.src = src;
+  lb.classList.remove('hidden');
+  lb.classList.add('flex');
+}
+
+function closeLightbox() {
+  const lb = document.getElementById('lightbox');
+  lb.classList.add('hidden');
+  lb.classList.remove('flex');
+}
+</script>
+
+<!-- ======================================================
+SLIDE 10 — SOLUTION TECHNIQUE GLOBALE : ATMOCE
+MICRO-ONDULEUR · BATTERIE · COFFRET INTELLIGENT
+PREMIUM · LISIBLE · IMAGE DISCRÈTE
+====================================================== -->
+<section class="slide">
+
+  <div class="sg-slide-hero">
+  <!-- FOND -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-photovoltaique.webp"
+         alt="Installation solaire premium"
+         class="w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-black/65"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70"></div>
+  </div>
+
+  <!-- CONTENEUR -->
+  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner
+              px-8 xl:px-14 pt-24">
+
+    <!-- HEADER -->
+    <header class="max-w-6xl">
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(2rem,3.1vw,2.9rem)]">
+        Solution technique globale&nbsp;:<br>
+        <span class="text-gold">ATMOCE &mdash; production, pilotage et s&eacute;curit&eacute;</span>
+      </h2>
+      <div class="w-16 h-px bg-gold mt-5"></div>
+    </header>
+
+    <!-- CONTENU -->
+    <main class="flex items-center">
+   <div class="w-full max-w-[1200px] mx-auto
+            bg-black/65 backdrop-blur-md
+            border border-gold/25 rounded-2xl
+            px-10 py-6
+            grid grid-cols-1 lg:grid-cols-3
+            gap-10 items-start">
+
+
+        <!-- MICRO-ONDULEUR -->
+        <div class="space-y-4 text-neutral-200 text-[0.95rem]">
+          <h3 class="text-gold font-semibold">Micro-onduleur ATMOCE</h3>
+
+          <p>
+            Production optimis&eacute;e panneau par panneau,
+            avec surveillance individuelle et s&eacute;curit&eacute; AC.
+          </p>
+
+          <p>
+            Architecture <strong>fiable et &eacute;volutive</strong>,
+            limitant les pertes et les pannes globales.
+          </p>
+
+          <button onclick="openLightbox('assets/images/produits/micro-onduleur-atmoce-mi500.avif')"
+                  class="mt-3">
+            <img src="/assets/images/produits/micro-onduleur-atmoce-mi500.avif"
+                 alt="Micro-onduleur ATMOCE"
+                 class="max-w-[110px] mx-auto object-contain
+                        drop-shadow-[0_0_16px_rgba(195,152,71,0.22)]
+                        hover:scale-[1.04] transition" />
+          </button>
+        </div>
+
+        <!-- BATTERIE -->
+        <div class="space-y-4 text-neutral-200 text-[0.95rem]">
+          <h3 class="text-gold font-semibold">Batterie ATMOCE</h3>
+
+          <p>
+            Stockage intelligent de votre surplus solaire
+            pour une consommation d&eacute;cal&eacute;e et optimis&eacute;e.
+          </p>
+
+          <p>
+            Gestion dynamique selon vos usages,
+            sans surdimensionnement inutile.
+          </p>
+
+          <button onclick="openLightbox('assets/images/produits/batterie-atmoce-7kwh.avif')"
+                  class="mt-3">
+            <img src="/assets/images/produits/batterie-atmoce-7kwh.avif"
+                 alt="Batterie ATMOCE"
+                 class="max-w-[110px] mx-auto object-contain
+                        drop-shadow-[0_0_16px_rgba(195,152,71,0.22)]
+                        hover:scale-[1.04] transition" />
+          </button>
+        </div>
+
+        <!-- COFFRET -->
+        <div class="space-y-4 text-neutral-200 text-[0.95rem]">
+          <h3 class="text-gold font-semibold">Coffret &amp; pilotage central</h3>
+
+          <p>
+            V&eacute;ritable <strong>cerveau de l&rsquo;installation</strong>,
+            il int&egrave;gre protection, communication et supervision.
+          </p>
+
+          <p>
+            Passerelle pr&ecirc;te pour le pilotage intelligent
+            (chauffe-eau, usages pilotables, &eacute;volutions futures).
+          </p>
+
+          <button onclick="openLightbox('assets/images/produits/m-combiner-atmoce.avif')"
+                  class="mt-3">
+            <img src="/assets/images/produits/m-combiner-atmoce.avif"
+                 alt="Coffret ATMOCE"
+                 class="max-w-[110px] mx-auto object-contain
+                        drop-shadow-[0_0_16px_rgba(195,152,71,0.22)]
+                        hover:scale-[1.04] transition" />
+          </button>
+        </div>
+
+      </div>
+    </main>
+
+
+    </div>
+  </div>
+
+  <footer class="sg-slide-footer flex items-center justify-between gap-6 flex-wrap">
+
+      <p class="italic text-neutral-200
+                text-[clamp(0.9rem,1.2vw,1.05rem)]
+                max-w-3xl">
+        Une solution technique coh&eacute;rente, s&eacute;curis&eacute;e
+        et pr&ecirc;te pour les usages &eacute;nerg&eacute;tiques de demain.
+      </p>
+
+      <div class="flex gap-4">
+        <button onclick="showSlide(9)"
+                class="px-8 py-3 rounded-full border border-gold/40
+                       text-gold font-semibold hover:bg-gold/10 transition">
+          &larr; Pr&eacute;c&eacute;dent
+        </button>
+
+        <button onclick="showSlide(11)"
+                class="px-8 py-3 rounded-full bg-gold text-black
+                       font-semibold hover:scale-[1.04] transition">
+          Suivant &rarr;
+        </button>
+      </div>
+
+
+
+  </footer>
+</section>
+
+
+<!-- ======================================================
+SLIDE 11 — L’ÉTUDE PERSONNALISÉE COMMENCE ICI
+BASCULE · MOMENT CLÉ · CLIENT
+====================================================== -->
+<section class="slide">
+
+  <div class="sg-slide-hero">
+  <!-- FOND -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-photovoltaique.webp"
+         alt="Étude solaire personnalisée"
+         class="w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/75"></div>
+  </div>
+
+  <!-- CONTENEUR -->
+  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner
+              px-8 xl:px-14 pt-24">
+
+    <!-- ======================
+    HEADER
+    ======================= -->
+    <header class="max-w-6xl">
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(2rem,3.2vw,3rem)]">
+        Votre &eacute;tude<br>
+        <span class="text-gold">personnalis&eacute;e commence ici</span>
+      </h2>
+
+      <p class="mt-4 text-neutral-300 italic
+                text-[clamp(0.95rem,1.3vw,1.15rem)]
+                max-w-4xl">
+        &Agrave; partir de maintenant, nous allons analyser votre situation
+        <strong>ensemble</strong>, de mani&egrave;re concr&egrave;te et chiffr&eacute;e.
+      </p>
+
+      <div class="w-16 h-px bg-gold mt-5"></div>
+    </header>
+
+    <!-- ======================
+    CONTENU CENTRAL
+    ======================= -->
+    <main class="flex items-center">
+      <div class="w-full max-w-[1050px] mx-auto
+                  bg-black/65 backdrop-blur-md
+                  border border-gold/25 rounded-2xl
+                  px-10 py-10
+                  grid grid-cols-1 md:grid-cols-2
+                  gap-10">
+
+        <!-- COLONNE GAUCHE -->
+        <div class="space-y-4 text-neutral-200 text-[0.95rem] leading-relaxed">
+          <p>
+            Nous allons maintenant nous baser sur
+            <span class="text-gold font-semibold">votre maison</span>,
+            <span class="text-gold font-semibold">vos usages</span>
+            et <span class="text-gold font-semibold">vos objectifs</span>.
+          </p>
+
+          <p>
+            Cette &eacute;tude n&rsquo;est
+            <strong>ni automatique</strong>,
+            <strong>ni standardis&eacute;e</strong> :
+            elle est construite sp&eacute;cifiquement pour vous.
+          </p>
+
+          <p>
+            Chaque donn&eacute;e est analys&eacute;e pour garantir
+            <strong>coh&eacute;rence</strong>,
+            <strong>rentabilit&eacute;</strong>
+            et <strong>pertinence technique</strong>.
+          </p>
+        </div>
+
+        <!-- COLONNE DROITE -->
+        <div class="space-y-4 text-neutral-200 text-[0.95rem] leading-relaxed">
+          <p class="text-gold font-semibold">
+            Concr&egrave;tement, nous allons regarder :
+          </p>
+
+          <ul class="space-y-3">
+            <li>— Votre consommation r&eacute;elle et vos habitudes</li>
+            <li>— Les caract&eacute;ristiques de votre toiture</li>
+            <li>— Le dimensionnement optimal de l&rsquo;installation</li>
+            <li>— Les &eacute;conomies r&eacute;alistes &agrave; long terme</li>
+          </ul>
+
+          <p class="italic text-neutral-300">
+            L&rsquo;objectif n&rsquo;est pas de vendre vite,
+            mais de <strong>prendre la bonne d&eacute;cision</strong>.
+          </p>
+        </div>
+
+      </div>
+    </main>
+
+
+    </div>
+  </div>
+
+  <footer class="sg-slide-footer flex items-center justify-between gap-6 flex-wrap">
+
+      <p class="italic text-neutral-200
+                text-[clamp(0.9rem,1.2vw,1.05rem)]
+                max-w-3xl">
+        Une &eacute;tude bien faite, c&rsquo;est un projet s&eacute;curis&eacute;
+        avant m&ecirc;me de parler de devis.
+      </p>
+
+      <div class="flex gap-4">
+        <button onclick="showSlide(10)"
+                class="px-8 py-3 rounded-full border border-gold/40
+                       text-gold font-semibold hover:bg-gold/10 transition">
+          &larr; Pr&eacute;c&eacute;dent
+        </button>
+
+        <button onclick="showSlide(12)"
+                class="px-8 py-3 rounded-full bg-gold text-black
+                       font-semibold hover:scale-[1.04] transition">
+          Lancer mon &eacute;tude personnalis&eacute;e &rarr;
+        </button>
+      </div>
+
+
+
+  </footer>
+</section>
+
+
+<!-- ======================================================
+SLIDE 12 — GARANTIES & PÉRENNITÉ DU PROJET
+STRUCTURE ALIGNÉE SLIDE 11 · 100 % VIEWPORT
+====================================================== -->
+<section class="slide">
+
+  <div class="sg-slide-hero">
+  <!-- FOND -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-photovoltaique.webp"
+         alt="Garanties et pérennité SolarGlobe"
+         class="w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80"></div>
+  </div>
+
+  <!-- CONTENEUR -->
+  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner
+              px-8 xl:px-14 pt-24">
+
+    <!-- HEADER (COMPACT) -->
+    <header class="max-w-6xl">
+      <p class="text-neutral-300 uppercase tracking-wide
+                text-[clamp(0.75rem,0.9vw,0.85rem)]">
+        Sécurité · Conformité · Long terme
+      </p>
+
+      <h2 class="mt-2 font-semibold leading-tight
+                 text-[clamp(2rem,3.1vw,2.9rem)]">
+        Un projet ma&icirc;tris&eacute; de A &agrave; Z, sans mauvaise surprise
+      </h2>
+
+      <div class="w-16 h-px bg-gold mt-4"></div>
+    </header>
+
+    <!-- CONTENU CENTRAL -->
+    <main class="flex items-center">
+      <div class="w-full max-w-[1050px] mx-auto
+                  bg-black/65 backdrop-blur-md
+                  border border-gold/25 rounded-2xl
+                  px-10 py-8
+                  grid grid-cols-1 md:grid-cols-2
+                  gap-10">
+
+        <!-- COLONNE GAUCHE -->
+        <div class="space-y-4 text-neutral-200 text-[0.95rem] leading-relaxed">
+          <h3 class="text-gold font-semibold">Cadre &amp; équipements</h3>
+
+          <ul class="space-y-3">
+            <li>— Installateurs partenaires <strong>RGE QualiPV</strong></li>
+            <li>— Respect des <strong>normes électriques</strong> &amp; DTU</li>
+            <li>— Panneaux <strong>LONGi</strong> et <strong>Aiko</strong> haut de gamme</li>
+            <li>— Micro-onduleurs <strong>ATMOCE</strong> (panneau par panneau)</li>
+            <li>— Coffret &amp; supervision intégrés</li>
+          </ul>
+        </div>
+
+        <!-- COLONNE DROITE -->
+        <div class="space-y-4 text-neutral-200 text-[0.95rem] leading-relaxed">
+          <h3 class="text-gold font-semibold">Vous n&rsquo;&ecirc;tes jamais seul, &agrave; aucune &eacute;tape</h3>
+
+          <ul class="space-y-3">
+            <li>— Un <strong>r&eacute;f&eacute;rent de projet SolarGlobe</strong>,
+    pr&eacute;sent avant, pendant et apr&egrave;s l&rsquo;installation</li>
+            <li>— Dossier clair, traçabilité, chantier suivi</li>
+            <li>— Prise en main &amp; suivi de production</li>
+            <li>— Conseils d’optimisation dans le temps</li>
+            <li>— Support humain, réactif, local</li>
+          </ul>
+        </div>
+
+      </div>
+    </main>
+
+
+    </div>
+  </div>
+
+  <footer class="sg-slide-footer flex items-center justify-between gap-6 flex-wrap">
+
+      <p class="italic text-neutral-200
+                text-[clamp(0.9rem,1.1vw,1.05rem)]
+                max-w-3xl">
+        Un projet sérieux, lisible et sécurisé &mdash;
+        avant même de parler de chiffres.
+      </p>
+
+      <div class="flex gap-4">
+        <button onclick="showSlide(11)"
+                class="px-8 py-3 rounded-full border border-gold/40
+                       text-gold font-semibold hover:bg-gold/10 transition">
+          &larr; Précédent
+        </button>
+
+        <button onclick="showSlide(13)"
+                class="px-8 py-3 rounded-full bg-gold text-black
+                       font-semibold hover:scale-[1.04] transition">
+          Suivant &rarr;
+        </button>
+      </div>
+
+
+
+  </footer>
+</section>
+
+
+<!-- ======================================================
+SLIDE 13 — POURQUOI CETTE APPROCHE CHANGE LA DONNE
+MISE EN VALEUR SOLARGLOBE · DÉCISION LONG TERME
+STRUCTURE ALIGNÉE SLIDES 11 & 12
+====================================================== -->
+<section class="slide">
+
+  <div class="sg-slide-hero">
+  <!-- FOND -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-photovoltaique.webp"
+         alt="Approche solaire SolarGlobe"
+         class="w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80"></div>
+  </div>
+
+  <!-- CONTENEUR -->
+  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner
+              px-8 xl:px-14 pt-24">
+
+    <!-- HEADER -->
+    <header class="max-w-6xl">
+      <p class="text-neutral-300 uppercase tracking-wide
+                text-[clamp(0.75rem,0.9vw,0.85rem)]">
+        M&eacute;thode · Vision long terme · D&eacute;cision &eacute;clair&eacute;e
+      </p>
+
+      <h2 class="mt-2 font-semibold leading-tight
+                 text-[clamp(2rem,3.1vw,2.9rem)]">
+        Pourquoi cette approche<br>
+        <span class="text-gold">change vraiment la donne</span>
+      </h2>
+
+      <div class="w-16 h-px bg-gold mt-4"></div>
+    </header>
+
+    <!-- CONTENU CENTRAL -->
+    <main class="flex items-center">
+      <div class="w-full max-w-[1050px] mx-auto
+                  bg-black/65 backdrop-blur-md
+                  border border-gold/25 rounded-2xl
+                  px-10 py-8
+                  grid grid-cols-1 md:grid-cols-2
+                  gap-10">
+
+        <!-- COLONNE GAUCHE -->
+        <div class="space-y-4 text-neutral-200 text-[0.95rem] leading-relaxed">
+          <h3 class="text-neutral-300 font-semibold">
+  La plupart des projets solaires
+</h3>
+
+<ul class="space-y-3">
+  <li>— Une proposition rapide, souvent standardis&eacute;e</li>
+  <li>— Une vente de kW, pas une logique de projet rentable</li>
+  <li>— Des promesses globales difficiles &agrave; v&eacute;rifier</li>
+  <li>— Peu d&rsquo;analyse r&eacute;elle avant d&rsquo;avancer</li>
+</ul>
+
+        </div>
+
+        <!-- COLONNE DROITE -->
+        <div class="space-y-4 text-neutral-200 text-[0.95rem] leading-relaxed">
+          <h3 class="text-gold font-semibold">
+            L&rsquo;approche SolarGlobe
+          </h3>
+
+          <p class="text-neutral-200">
+            Chez SolarGlobe, le solaire n&rsquo;est pas une vente rapide,
+            mais un <strong>projet &eacute;nerg&eacute;tique pens&eacute; sur le long terme</strong>.
+          </p>
+
+          <ul class="space-y-3">
+            <li>— Une <strong>&eacute;tude approfondie</strong> avant toute d&eacute;cision</li>
+            <li>— Un dimensionnement <strong>coh&eacute;rent avec vos usages r&eacute;els</strong></li>
+            <li>— Des choix techniques <strong>expliqu&eacute;s, justifi&eacute;s, assum&eacute;s</strong></li>
+            <li>— Un projet <strong>pens&eacute; pour durer et &eacute;voluer</strong></li>
+          </ul>
+
+          <p class="text-gold font-semibold">
+            C&rsquo;est cette m&eacute;thode qui s&eacute;curise votre d&eacute;cision.
+          </p>
+        </div>
+
+      </div>
+    </main>
+
+
+    </div>
+  </div>
+
+  <footer class="sg-slide-footer flex items-center justify-between gap-6 flex-wrap">
+
+      <p class="italic text-neutral-200
+                text-[clamp(0.9rem,1.1vw,1.05rem)]
+                max-w-3xl">
+        Deux projets peuvent sembler similaires au d&eacute;part.
+        <span class="text-gold font-semibold">La m&eacute;thode</span>
+        fait toute la diff&eacute;rence dans le temps.
+      </p>
+
+      <div class="flex gap-4">
+        <button onclick="showSlide(12)"
+                class="px-8 py-3 rounded-full border border-gold/40
+                       text-gold font-semibold hover:bg-gold/10 transition">
+          &larr; Pr&eacute;c&eacute;dent
+        </button>
+
+        <button onclick="showSlide(14)"
+                class="px-8 py-3 rounded-full bg-gold text-black
+                       font-semibold hover:scale-[1.04] transition">
+          Suivant &rarr;
+        </button>
+      </div>
+
+
+
+  </footer>
+</section>
+
+
+<!-- ======================================================
+SLIDE 14 — CADRE FINAL DU PROJET
+DERNIER SLIDE · POSÉ · NON COMMERCIAL
+====================================================== -->
+<section class="slide">
+
+  <div class="sg-slide-hero">
+  <!-- FOND -->
+  <div class="absolute inset-0">
+    <img src="/assets/images/partenaire/maison-photovoltaique.webp"
+         alt="Cadre final du projet solaire"
+         class="w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80"></div>
+  </div>
+
+  <!-- CONTENEUR -->
+  <div class="relative z-10 flex-1 min-h-0 sg-slide-inner
+              px-8 xl:px-14 pt-24">
+
+    <!-- HEADER -->
+    <header class="max-w-6xl">
+      <h2 class="font-semibold leading-tight
+                 text-[clamp(2rem,3.1vw,2.9rem)]">
+        Le <span class="text-gold">cadre</span> du projet<br>
+        est d&eacute;sormais <span class="text-gold">pos&eacute;</span>
+      </h2>
+
+      <div class="w-16 h-px bg-gold mt-4"></div>
+    </header>
+
+    <!-- CONTENU CENTRAL -->
+    <main class="flex items-center">
+      <div class="w-full max-w-[900px] mx-auto
+                  bg-black/60 backdrop-blur-md
+                  border border-gold/25 rounded-2xl
+                  px-10 py-10
+                  text-neutral-200 text-[clamp(1rem,1.3vw,1.15rem)]
+                  leading-relaxed">
+
+        <p>
+          Notre r&ocirc;le est de poser un
+          <span class="text-gold font-semibold">cadre clair</span>.
+        </p>
+
+        <p class="mt-4">
+          Les <span class="text-gold">choix</span> ont &eacute;t&eacute; expliqu&eacute;s,
+          les <span class="text-gold">implications</span> sont connues,
+          et le projet est d&eacute;sormais
+          <span class="text-gold font-semibold">lisible dans son ensemble</span>.
+        </p>
+
+        <p class="mt-4 italic text-neutral-300">
+          La suite du projet
+          <span class="text-gold">s&rsquo;inscrit dans cette continuit&eacute;</span>.
+        </p>
+
+      </div>
+    </main>
+
+
+    </div>
+  </div>
+
+  <footer class="sg-slide-footer flex items-center justify-end">
+
+      <button onclick="showSlide(13)"
+              class="px-8 py-3 rounded-full border border-gold/40
+                     text-gold font-semibold hover:bg-gold/10 transition">
+        &larr; Pr&eacute;c&eacute;dent
+      </button>
+
+  </footer>
+</section>
+
 
 <!-- ======================================================
 SCRIPTS
@@ -499,43 +2325,432 @@ SCRIPTS
     }
   }
 
-// === ANIMATION GENERIQUE - SUPPORT RENDEZ-VOUS ===
+// === SYSTÈME D'ANIMATION CENTRALISÉ — RAPIDE, FLUIDE, ANNULABLE ===
 const ANIM_TOKEN = { v: 0 };
-const DUR = 420;
-const STAGGER = 55;
+const DUR = 480;
+const STAGGER = 80;
 
 function hideEl(el) {
   if (!el) return;
   el.style.transition = 'none';
   el.style.opacity = '0';
-  el.style.transform = 'translateY(14px)';
-  el.style.filter = 'blur(5px)';
+  el.style.transform = 'translateY(18px)';
+  el.style.filter = 'blur(6px)';
 }
 
-function showEl(el, delay, tok) {
+function showEl(el, delay, tok, dur) {
   if (!el) return;
   setTimeout(() => {
     if (tok !== ANIM_TOKEN.v) return;
-    el.style.transition = `opacity ${DUR}ms ease, transform ${DUR}ms ease, filter ${DUR}ms ease`;
+    el.style.transition = `opacity ${dur}ms ease, transform ${dur}ms ease, filter ${dur}ms ease`;
     el.style.opacity = '1';
     el.style.transform = 'translateY(0)';
     el.style.filter = 'blur(0)';
   }, delay);
 }
 
-function playSlideAnim(index) {
-  ANIM_TOKEN.v++;
-  const tok = ANIM_TOKEN.v;
-  const slide = document.querySelectorAll('.slide')[index];
-  if (!slide) return;
-  const els = slide.querySelectorAll('h1, h2, header p, header .bg-gold, main > div, main h3, main p, main li, main img, footer p, footer button');
+const SLIDE_ANIMS = {};
+
+SLIDE_ANIMS[0] = function(tok) {
+  const s = document.querySelectorAll('.slide')[0];
+  if (!s) return;
+  const bg = s.querySelector('.p0-bg-img');
+  const els = s.querySelectorAll('.p0-eyebrow, .p0-title, .p0-lead, .p0-quote, .p0-footer');
+
+  if (bg) {
+    bg.style.transition = 'none';
+    bg.style.opacity = '0';
+    bg.style.transform = 'scale(1.035)';
+    bg.style.filter = 'saturate(0.88) contrast(1.02)';
+  }
   els.forEach(hideEl);
-  slide.offsetHeight;
-  let d = 0;
+  s.offsetHeight;
+
+  if (bg) {
+    setTimeout(() => {
+      if (tok !== ANIM_TOKEN.v) return;
+      bg.style.transition = 'opacity 1400ms ease, transform 5200ms ease, filter 2200ms ease';
+      bg.style.opacity = '1';
+      bg.style.transform = 'scale(1)';
+      bg.style.filter = 'saturate(0.96) contrast(1.06)';
+    }, 80);
+  }
+
+  let d = 520;
   els.forEach(el => {
-    showEl(el, d, tok);
-    d += STAGGER;
+    showEl(el, d, tok, 980);
+    d += 180;
   });
+};
+
+SLIDE_ANIMS[1] = function(tok) {
+  const s = document.querySelectorAll('.slide')[1];
+  if (!s) return;
+  const els = s.querySelectorAll('header > *, main h3, main p, footer p, footer button');
+  els.forEach(hideEl);
+  s.offsetHeight;
+  let d = 0;
+  els.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+};
+
+SLIDE_ANIMS[2] = function(tok) {
+  const s = document.querySelectorAll('.slide')[2];
+  if (!s) return;
+  const headerTitle = s.querySelectorAll('header h2');
+  const headerLead = s.querySelectorAll('header p');
+  const headerLine = s.querySelectorAll('header .bg-gold');
+  const card = s.querySelectorAll('main > div');
+  const blocks = s.querySelectorAll('main h3, main p');
+  const footerText = s.querySelectorAll('footer p');
+  const footerBtns = s.querySelectorAll('footer button');
+  const seq = [...headerTitle, ...headerLead, ...headerLine, ...card, ...blocks, ...footerText, ...footerBtns];
+  seq.forEach(hideEl);
+  s.offsetHeight;
+  let d = 0;
+  headerTitle.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  headerLead.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  headerLine.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  card.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  blocks.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  footerText.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  footerBtns.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+};
+
+SLIDE_ANIMS[3] = function(tok) {
+  const s = document.querySelectorAll('.slide')[3];
+  if (!s) return;
+  const bgImg = s.querySelector('img');
+  const overlay = s.querySelector('.bg-black\\/55');
+  const header = s.querySelector('header');
+  const title = header?.querySelector('h2');
+  const lead = header?.querySelector('p');
+  const line = header?.querySelector('.bg-gold');
+  const card = s.querySelector('main > div');
+  const leftItems = card?.children[0]?.children || [];
+  const rightItems = card?.children[1]?.children || [];
+  const quote = s.querySelector('footer p');
+  const prevBtn = s.querySelector('footer button:nth-child(1)');
+  const nextBtn = s.querySelector('footer button:nth-child(2)');
+  const all = [bgImg, overlay, title, lead, line, card, ...leftItems, ...rightItems, quote, prevBtn, nextBtn];
+  all.forEach(hideEl);
+  s.offsetHeight;
+  let d = 0;
+  [bgImg, overlay].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  [title, lead, line].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  showEl(card, d, tok, DUR); d += STAGGER;
+  [...leftItems, ...rightItems].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  [quote, prevBtn, nextBtn].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+};
+
+SLIDE_ANIMS[4] = function(tok) {
+  const s = document.querySelectorAll('.slide')[4];
+  if (!s) return;
+  const bgImg = s.querySelector('img');
+  const overlay1 = s.querySelector('.bg-black\\/60');
+  const overlay2 = s.querySelector('.bg-gradient-to-b');
+  const header = s.querySelector('header');
+  const title = header?.querySelector('h2');
+  const lead = header?.querySelector('p');
+  const line = header?.querySelector('.bg-gold');
+  const card = s.querySelector('main > div');
+  const textCol = card?.querySelector('div.grid > div:first-child');
+  const textItems = textCol ? Array.from(textCol.children) : [];
+  const graphWrap = card?.querySelector('canvas')?.parentElement;
+  const quote = s.querySelector('footer p');
+  const prevBtn = s.querySelector('footer button:nth-child(1)');
+  const nextBtn = s.querySelector('footer button:nth-child(2)');
+  const all = [bgImg, overlay1, overlay2, title, lead, line, card, ...textItems, graphWrap, quote, prevBtn, nextBtn];
+  all.forEach(hideEl);
+  s.offsetHeight;
+  let d = 0;
+  [bgImg, overlay1, overlay2].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  [title, lead, line].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  showEl(card, d, tok, DUR); d += STAGGER;
+  textItems.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  showEl(graphWrap, d, tok, DUR);
+  d += STAGGER;
+  if (typeof Chart !== 'undefined' && graphWrap) {
+    setTimeout(() => {
+      if (tok !== ANIM_TOKEN.v) return;
+      try {
+        const chart = Chart.getChart(graphWrap.querySelector('canvas'));
+        if (chart) { chart.reset(); chart.update(); }
+      } catch (e) {}
+    }, d + 50);
+  }
+  [quote, prevBtn, nextBtn].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+};
+
+SLIDE_ANIMS[5] = function(tok) {
+  const s = document.querySelectorAll('.slide')[5];
+  if (!s) return;
+  const bgImg = s.querySelector('img');
+  const overlay1 = s.querySelector('.bg-black\\/65');
+  const overlay2 = s.querySelector('.bg-gradient-to-b');
+  const header = s.querySelector('header');
+  const title = header?.querySelector('h2');
+  const lead = header?.querySelector('p');
+  const line = header?.querySelector('.bg-gold');
+  const card = s.querySelector('main > div');
+  const riskBlocks = card ? Array.from(card.children) : [];
+  const quote = s.querySelector('footer p');
+  const prevBtn = s.querySelector('footer button:nth-child(1)');
+  const nextBtn = s.querySelector('footer button:nth-child(2)');
+  const all = [bgImg, overlay1, overlay2, title, lead, line, card, ...riskBlocks, quote, prevBtn, nextBtn];
+  all.forEach(hideEl);
+  s.offsetHeight;
+  let d = 0;
+  [bgImg, overlay1, overlay2, title, lead, line, card].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  riskBlocks.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  [quote, prevBtn, nextBtn].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+};
+
+SLIDE_ANIMS[6] = function(tok) {
+  const s = document.querySelectorAll('.slide')[6];
+  if (!s) return;
+  const bgImg = s.querySelector('img');
+  const overlay1 = s.querySelector('.bg-black\\/70');
+  const overlay2 = s.querySelector('.bg-gradient-to-b');
+  const header = s.querySelector('header');
+  const title = header?.querySelector('h2');
+  const lead = header?.querySelector('p');
+  const line = header?.querySelector('.bg-gold');
+  const card = s.querySelector('main > div');
+  const introTexts = card ? Array.from(card.querySelectorAll('p')).slice(0, 2) : [];
+  const problems = card ? Array.from(card.querySelectorAll('ul li')) : [];
+  const position = card ? card.querySelector('p.italic') : null;
+  const prevBtn = s.querySelector('footer button:nth-child(1)');
+  const nextBtn = s.querySelector('footer button:nth-child(2)');
+  const all = [bgImg, overlay1, overlay2, title, lead, line, card, ...introTexts, ...problems, position, prevBtn, nextBtn];
+  all.forEach(hideEl);
+  s.offsetHeight;
+  let d = 0;
+  [bgImg, overlay1, overlay2, title, lead, line, card].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  introTexts.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  problems.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  [position, prevBtn, nextBtn].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+};
+
+SLIDE_ANIMS[7] = function(tok) {
+  const s = document.querySelectorAll('.slide')[7];
+  if (!s) return;
+  const bgImg = s.querySelector('img');
+  const overlay1 = s.querySelector('.bg-black\\/65');
+  const overlay2 = s.querySelector('.bg-gradient-to-b');
+  const header = s.querySelector('header');
+  const title = header?.querySelector('h2');
+  const lead = header?.querySelector('p');
+  const line = header?.querySelector('.bg-gold');
+  const card = s.querySelector('main > div');
+  const steps = card ? Array.from(card.children) : [];
+  const quote = s.querySelector('footer p');
+  const prevBtn = s.querySelector('footer button:nth-child(1)');
+  const nextBtn = s.querySelector('footer button:nth-child(2)');
+  const all = [bgImg, overlay1, overlay2, title, lead, line, card, ...steps, quote, prevBtn, nextBtn];
+  all.forEach(hideEl);
+  s.offsetHeight;
+  let d = 0;
+  [bgImg, overlay1, overlay2, title, lead, line, card].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  steps.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  [quote, prevBtn, nextBtn].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+};
+
+SLIDE_ANIMS[8] = function(tok) {
+  const s = document.querySelectorAll('.slide')[8];
+  if (!s) return;
+  const bgImg = s.querySelector('img');
+  const overlay1 = s.querySelector('.bg-black\\/60');
+  const overlay2 = s.querySelector('.bg-gradient-to-b');
+  const header = s.querySelector('header');
+  const title = header?.querySelector('h2');
+  const lead = header?.querySelector('p');
+  const line = header?.querySelector('.bg-gold');
+  const card = s.querySelector('main > div');
+  const textEls = card ? Array.from(card.querySelectorAll('p')) : [];
+  const image = card?.querySelector('img');
+  const quote = s.querySelector('footer p');
+  const prevBtn = s.querySelector('footer button:nth-child(1)');
+  const nextBtn = s.querySelector('footer button:nth-child(2)');
+  const all = [bgImg, overlay1, overlay2, title, lead, line, card, ...textEls, image, quote, prevBtn, nextBtn];
+  all.forEach(hideEl);
+  s.offsetHeight;
+  let d = 0;
+  [bgImg, overlay1, overlay2, title, lead, line, card].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  textEls.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  [image, quote, prevBtn, nextBtn].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+};
+
+SLIDE_ANIMS[9] = function(tok) {
+  const s = document.querySelectorAll('.slide')[9];
+  if (!s) return;
+  const bgWrap = s.querySelector('.sg-slide-hero .absolute.inset-0');
+  const bgImg = bgWrap?.querySelector('img');
+  const overlay1 = bgWrap?.querySelector('.bg-black\\/65');
+  const overlay2 = bgWrap?.querySelector('.bg-gradient-to-b');
+  const header = s.querySelector('header');
+  const title = header?.querySelector('h2');
+  const line = header?.querySelector('.bg-gold');
+  const card = s.querySelector('main > div');
+  const textEls = card ? Array.from(card.querySelectorAll('div.space-y-4 p')) : [];
+  const imgCol = card?.querySelector(':scope > div:last-child');
+  const productImg = imgCol?.querySelector('img');
+  const zoomHint = imgCol?.querySelector('p.text-xs');
+  const quote = s.querySelector('footer p');
+  const prevBtn = s.querySelector('footer button:nth-child(1)');
+  const nextBtn = s.querySelector('footer button:nth-child(2)');
+  const all = [bgImg, overlay1, overlay2, title, line, card, ...textEls, productImg, zoomHint, quote, prevBtn, nextBtn];
+  all.forEach(hideEl);
+  s.offsetHeight;
+  let d = 0;
+  [bgImg, overlay1, overlay2, title, line, card].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  textEls.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  [productImg, zoomHint, quote, prevBtn, nextBtn].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+};
+
+SLIDE_ANIMS[10] = function(tok) {
+  const s = document.querySelectorAll('.slide')[10];
+  if (!s) return;
+  const bgWrap = s.querySelector('.sg-slide-hero .absolute.inset-0');
+  const bgImg = bgWrap?.querySelector('img');
+  const overlay1 = bgWrap?.querySelector('.bg-black\\/65');
+  const overlay2 = bgWrap?.querySelector('.bg-gradient-to-b');
+  const header = s.querySelector('header');
+  const title = header?.querySelector('h2');
+  const line = header?.querySelector('.bg-gold');
+  const card = s.querySelector('main > div');
+  const blocks = card ? Array.from(card.children) : [];
+  const images = card ? Array.from(card.querySelectorAll('img')) : [];
+  const footerText = s.querySelector('footer p');
+  const prevBtn = s.querySelector('footer button:nth-child(1)');
+  const nextBtn = s.querySelector('footer button:nth-child(2)');
+  const all = [bgImg, overlay1, overlay2, title, line, card, ...blocks, ...images, footerText, prevBtn, nextBtn];
+  all.forEach(hideEl);
+  s.offsetHeight;
+  let d = 0;
+  [bgImg, overlay1, overlay2, title, line, card].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  blocks.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  images.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  [footerText, prevBtn, nextBtn].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+};
+
+SLIDE_ANIMS[11] = function(tok) {
+  const s = document.querySelectorAll('.slide')[11];
+  if (!s) return;
+  const bgWrap = s.querySelector('.sg-slide-hero .absolute.inset-0');
+  const bgImg = bgWrap?.querySelector('img');
+  const overlay1 = bgWrap?.querySelector('.bg-black\\/70');
+  const overlay2 = bgWrap?.querySelector('.bg-gradient-to-b');
+  const header = s.querySelector('header');
+  const title = header?.querySelector('h2');
+  const lead = header?.querySelector('p');
+  const line = header?.querySelector('.bg-gold');
+  const card = s.querySelector('main > div');
+  const leftText = card ? Array.from(card.children[0]?.querySelectorAll('p') || []) : [];
+  const rightEls = card ? Array.from(card.children[1]?.querySelectorAll('p, li') || []) : [];
+  const quote = s.querySelector('footer p');
+  const prevBtn = s.querySelector('footer button:nth-child(1)');
+  const nextBtn = s.querySelector('footer button:nth-child(2)');
+  const all = [bgImg, overlay1, overlay2, title, lead, line, card, ...leftText, ...rightEls, quote, prevBtn, nextBtn];
+  all.forEach(hideEl);
+  s.offsetHeight;
+  let d = 0;
+  [bgImg, overlay1, overlay2, title, lead, line, card].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  leftText.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  rightEls.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  [quote, prevBtn, nextBtn].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+};
+
+SLIDE_ANIMS[12] = function(tok) {
+  const s = document.querySelectorAll('.slide')[12];
+  if (!s) return;
+  const bgWrap = s.querySelector('.sg-slide-hero .absolute.inset-0');
+  const bgImg = bgWrap?.querySelector('img');
+  const overlay1 = bgWrap?.querySelector('.bg-black\\/70');
+  const overlay2 = bgWrap?.querySelector('.bg-gradient-to-b');
+  const header = s.querySelector('header');
+  const kicker = header?.querySelector('p');
+  const title = header?.querySelector('h2');
+  const line = header?.querySelector('.bg-gold');
+  const card = s.querySelector('main > div');
+  const leftItems = card ? Array.from(card.children[0]?.querySelectorAll('li') || []) : [];
+  const rightItems = card ? Array.from(card.children[1]?.querySelectorAll('li') || []) : [];
+  const leftTitle = card?.children[0]?.querySelector('h3');
+  const rightTitle = card?.children[1]?.querySelector('h3');
+  const quote = s.querySelector('footer p');
+  const prevBtn = s.querySelector('footer button:nth-child(1)');
+  const nextBtn = s.querySelector('footer button:nth-child(2)');
+  const all = [bgImg, overlay1, overlay2, kicker, title, line, card, leftTitle, rightTitle, ...leftItems, ...rightItems, quote, prevBtn, nextBtn];
+  all.forEach(hideEl);
+  s.offsetHeight;
+  let d = 0;
+  [bgImg, overlay1, overlay2, kicker, title, line, card, leftTitle, rightTitle].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  leftItems.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  rightItems.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  [quote, prevBtn, nextBtn].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+};
+
+SLIDE_ANIMS[13] = function(tok) {
+  const s = document.querySelectorAll('.slide')[13];
+  if (!s) return;
+  const bgWrap = s.querySelector('.sg-slide-hero .absolute.inset-0');
+  const bgImg = bgWrap?.querySelector('img');
+  const overlay1 = bgWrap?.querySelector('.bg-black\\/70');
+  const overlay2 = bgWrap?.querySelector('.bg-gradient-to-b');
+  const header = s.querySelector('header');
+  const kicker = header?.querySelector('p');
+  const title = header?.querySelector('h2');
+  const line = header?.querySelector('.bg-gold');
+  const card = s.querySelector('main > div');
+  const leftCol = card?.children[0];
+  const rightCol = card?.children[1];
+  const leftTitle = leftCol?.querySelector('h3');
+  const leftItems = leftCol ? Array.from(leftCol.querySelectorAll('li')) : [];
+  const rightTitle = rightCol?.querySelector('h3');
+  const rightLead = rightCol?.querySelector('p:not(.text-gold)');
+  const rightItems = rightCol ? Array.from(rightCol.querySelectorAll('li')) : [];
+  const rightOutro = rightCol?.querySelector('.text-gold');
+  const quote = s.querySelector('footer p');
+  const prevBtn = s.querySelector('footer button:nth-child(1)');
+  const nextBtn = s.querySelector('footer button:nth-child(2)');
+  const all = [bgImg, overlay1, overlay2, kicker, title, line, card, leftTitle, ...leftItems, rightTitle, rightLead, ...rightItems, rightOutro, quote, prevBtn, nextBtn];
+  all.forEach(hideEl);
+  s.offsetHeight;
+  let d = 0;
+  [bgImg, overlay1, overlay2, kicker, title, line, card, leftTitle].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  leftItems.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  [rightTitle, rightLead].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  rightItems.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  [rightOutro, quote, prevBtn, nextBtn].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+};
+
+SLIDE_ANIMS[14] = function(tok) {
+  const s = document.querySelectorAll('.slide')[14];
+  if (!s) return;
+  const bgWrap = s.querySelector('.sg-slide-hero .absolute.inset-0');
+  const bgImg = bgWrap?.querySelector('img');
+  const overlay1 = bgWrap?.querySelector('.bg-black\\/70');
+  const overlay2 = bgWrap?.querySelector('.bg-gradient-to-b');
+  const header = s.querySelector('header');
+  const title = header?.querySelector('h2');
+  const line = header?.querySelector('.bg-gold');
+  const card = s.querySelector('main > div');
+  const texts = card ? Array.from(card.querySelectorAll('p')) : [];
+  const prevBtn = s.querySelector('footer button');
+  const all = [bgImg, overlay1, overlay2, title, line, card, ...texts, prevBtn];
+  all.forEach(hideEl);
+  s.offsetHeight;
+  let d = 0;
+  [bgImg, overlay1, overlay2, title, line, card].forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  texts.forEach(el => { showEl(el, d, tok, DUR); d += STAGGER; });
+  showEl(prevBtn, d, tok, DUR);
+};
+
+function playSlideAnim(idx) {
+  const fn = SLIDE_ANIMS[idx];
+  if (fn) {
+    ANIM_TOKEN.v++;
+    fn(ANIM_TOKEN.v);
+  }
 }
 
 function showSlide(index) {
