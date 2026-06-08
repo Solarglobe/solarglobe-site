@@ -48,10 +48,6 @@
   <link rel="preload" href="/assets/fonts/montserrat/montserrat-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/montserrat/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Fontes premium Phase 1 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700;6..72,800&display=swap" />
   <!-- Header global -->
   <link rel="stylesheet" href="/assets/css/montserrat-local.css" />
   <link rel="stylesheet" href="/assets/css/solarglobe-design-system.css" />
@@ -98,7 +94,7 @@
     #modal-overlay { background: rgba(15, 11, 3, 0.88); }
     /* Bloc Partenaires V2 Ultra Premium */
     #bloc-partenaires {
-      background: radial-gradient(circle at center, rgba(195,152,71,0.08), transparent 70%), var(--sg-bg);
+      background: radial-gradient(circle at center, rgba(195,152,71,0.08), transparent 70%), #050505;
       padding: 60px 20px;
       margin-top: 40px;
       margin-bottom: 40px;
@@ -173,7 +169,7 @@
     }
     /* Bloc RGE V2 Ultra Pro */
     #bloc-certif {
-      background: var(--sg-bg);
+      background: #050505;
       padding: 60px 20px;
       border-top: 1px solid rgba(255,255,255,0.05);
       border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -239,7 +235,7 @@
     #bloc-certif .gsap-rge-accompagnement { opacity: 0; }
     /* Bloc CTA Final — identique au bloc RGE */
     #bloc-cta-final {
-      background: var(--sg-bg);
+      background: #050505;
       padding: 60px 20px;
       border-top: 1px solid rgba(255,255,255,0.05);
       border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -262,7 +258,7 @@
       #bloc-produits .bloc5-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
     }
     .produit-card {
-      background: var(--sg-surface);
+      background: #0A0A0A;
       border: 1px solid rgba(195,152,71,0.18);
       border-radius: 20px;
       height: 260px;
@@ -467,7 +463,7 @@
 
     /* Bloc 2 — comparatif premium + visuel maison */
     .bloc2-card-compare {
-      background: var(--sg-surface);
+      background: #0a0a0a;
       border: 1px solid rgba(195,152,71,0.2);
       border-radius: 24px;
       box-shadow: 0 12px 48px rgba(0,0,0,0.5);
@@ -475,7 +471,7 @@
       overflow: hidden;
     }
     .bloc2-card-visual {
-      background: var(--sg-surface);
+      background: #0a0a0a;
       border: 1px solid rgba(195,152,71,0.18);
       border-radius: 28px;
       box-shadow: 0 12px 48px rgba(0,0,0,0.5), 0 0 24px rgba(195,152,71,0.04);
@@ -507,7 +503,7 @@
     .bloc3-premium {
       width: 100%;
       padding: 50px 20px;
-      background: var(--sg-bg);
+      background: #0B0B0B;
       position: relative;
     }
     @media (min-width: 768px) {
@@ -525,7 +521,7 @@
       font-size: 28px;
       font-weight: 700;
       text-align: center;
-      color: var(--sg-title);
+      color: #ffffff;
       margin: 0 0 16px;
     }
     @media (min-width: 768px) {
@@ -630,14 +626,14 @@
     }
 
     /* Bloc 4 Pro Max — Packs solaires */
-    #bloc-tarifs { background: var(--sg-bg) !important; }
+    #bloc-tarifs { background: #070707 !important; }
     #bloc-tarifs .sg-section-padding { padding: 60px 20px; }
     #bloc-tarifs .bloc4-card {
       padding: 20px;
       min-height: auto !important;
       display: flex;
       flex-direction: column;
-      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(195,152,71,0.04) 0%, transparent 60%), var(--sg-surface) !important;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(195,152,71,0.04) 0%, transparent 60%), #0A0A0A !important;
       border: 1px solid rgba(195,152,71,0.18) !important;
     }
     #bloc-tarifs .bloc4-card.bloc4-card-featured {
@@ -677,10 +673,10 @@
     #bloc-tarifs .bloc4-price-value {
       font-size: 22px;
       font-weight: 800;
-      color: #1A1206; font-variant-numeric: tabular-nums;
+      color: #ffffff;
       letter-spacing: -0.5px;
     }
-    #bloc-tarifs .bloc4-price-ttc { font-size: 13px; font-weight: 700; color: #2A1E0A; }
+    #bloc-tarifs .bloc4-price-ttc { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.95); }
     #bloc-tarifs .bloc4-price-sub { font-size: 11px; }
     #bloc-tarifs .bloc4-list {
       list-style: none;
@@ -768,7 +764,7 @@
       <!-- H1 — ligne 1 blanc, ligne 2 accent or -->
       <h1 class="font-extrabold leading-[1.12] tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] hero-ani" data-ani-order="1">
         <span class="text-white block">Vous voulez du solaire,</span>
-        <span class="text-gold block mt-1">mais vous ne savez pas à qui faire confiance&nbsp;?</span>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold via-yellow-200/95 to-gold block mt-1">mais vous ne savez pas à qui faire confiance&nbsp;?</span>
       </h1>
 
       <!-- Sous-titre — max-width, lisibilité -->
@@ -863,7 +859,7 @@
   <div class="sg-container">
     <div class="max-w-3xl mx-auto text-center mb-12">
       <span class="text-gold uppercase tracking-[0.25em] text-xs">Positionnement SolarGlobe</span>
-      <h2 id="sg-trust-title" class="sg-section-title mt-3">Le tiers de confiance entre vous et le marché solaire</h2>
+      <h2 id="sg-trust-title" class="sg-section-title text-gold mt-3">Le tiers de confiance entre vous et le marché solaire</h2>
       <p class="text-neutral-300 text-lg leading-relaxed mt-4">Notre valeur n'est pas de poser des panneaux. Notre valeur est de vous éviter le mauvais choix avant que vous ne signiez : mauvaise puissance, matériel moyen, batterie inutile, prix opaque ou installateur mal adapté.</p>
     </div>
     <div class="grid md:grid-cols-3 gap-6">
@@ -892,7 +888,7 @@
   <div class="sg-container grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
     <div>
       <span class="text-gold uppercase tracking-[0.25em] text-xs">Preuves à rendre visibles</span>
-      <h2 id="sg-proof-title" class="sg-section-title mt-3">Ce que vous devez pouvoir vérifier avant d'avancer</h2>
+      <h2 id="sg-proof-title" class="sg-section-title text-gold mt-3">Ce que vous devez pouvoir vérifier avant d'avancer</h2>
       <p class="text-neutral-300 leading-relaxed mt-4">Un projet solaire premium n'est pas une promesse. C'est une suite de preuves : hypothèses, critères de choix, chiffrage, limites, puis exécution par le bon partenaire.</p>
       <a href="/etude-gratuite/" class="sg-btn sg-btn-primary inline-block mt-6">Demander une étude solaire</a>
     </div>
@@ -1121,7 +1117,7 @@
 
   <!-- Titre -->
   <div class="sg-container relative z-10 text-center mb-6 md:mb-8 gsap-tarifs-header">
-    <h2 class="gsap-tarifs-titre text-2xl sm:text-3xl md:text-4xl font-extrabold sg-h-light leading-snug">
+    <h2 class="gsap-tarifs-titre text-2xl sm:text-3xl md:text-4xl font-extrabold text-gold leading-snug">
       Des repères de prix, pas des devis imposés
       <span class="block text-white mt-1">
         Prix visibles, projet ajusté, décisions expliquées.
@@ -1284,7 +1280,7 @@
   <div class="sg-container text-center">
     <div class="gsap-methode-header">
       <span class="text-gold text-xs uppercase tracking-[0.2em] font-semibold block mb-4">Notre m&eacute;thode</span>
-      <h2 class="sg-section-title mb-6">
+      <h2 class="sg-section-title text-gold mb-6">
         Un accompagnement structur&eacute; de A &agrave; Z
       </h2>
       <p class="sg-section-subtitle text-base md:text-lg max-w-2xl mx-auto mb-12">
@@ -1292,22 +1288,22 @@
       </p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-      <div class="rounded-2xl sg-surface border border-gold/20 p-6 text-left hover:border-gold/40 transition-colors gsap-methode-card">
+      <div class="rounded-2xl bg-[#0f0f0f] border border-gold/20 p-6 text-left hover:border-gold/40 transition-colors gsap-methode-card">
         <span class="text-gold font-bold text-lg">1.</span>
         <h3 class="text-white font-semibold mt-2 mb-1">&Eacute;tude solaire</h3>
         <p class="text-neutral-300 text-sm">Analyse de votre toiture et simulation de production.</p>
       </div>
-      <div class="rounded-2xl sg-surface border border-gold/20 p-6 text-left hover:border-gold/40 transition-colors gsap-methode-card">
+      <div class="rounded-2xl bg-[#0f0f0f] border border-gold/20 p-6 text-left hover:border-gold/40 transition-colors gsap-methode-card">
         <span class="text-gold font-bold text-lg">2.</span>
         <h3 class="text-white font-semibold mt-2 mb-1">Dimensionnement</h3>
         <p class="text-neutral-300 text-sm">Puissance optimale selon votre consommation.</p>
       </div>
-      <div class="rounded-2xl sg-surface border border-gold/20 p-6 text-left hover:border-gold/40 transition-colors gsap-methode-card">
+      <div class="rounded-2xl bg-[#0f0f0f] border border-gold/20 p-6 text-left hover:border-gold/40 transition-colors gsap-methode-card">
         <span class="text-gold font-bold text-lg">3.</span>
         <h3 class="text-white font-semibold mt-2 mb-1">Calpinage</h3>
         <p class="text-neutral-300 text-sm">Implantation pr&eacute;cise des panneaux sur votre toit.</p>
       </div>
-      <div class="rounded-2xl sg-surface border border-gold/20 p-6 text-left hover:border-gold/40 transition-colors gsap-methode-card">
+      <div class="rounded-2xl bg-[#0f0f0f] border border-gold/20 p-6 text-left hover:border-gold/40 transition-colors gsap-methode-card">
         <span class="text-gold font-bold text-lg">4.</span>
         <h3 class="text-white font-semibold mt-2 mb-1">Installation</h3>
         <p class="text-neutral-300 text-sm">Pose par des partenaires externes certifi&eacute;s RGE.</p>
@@ -1330,7 +1326,7 @@
       </span>
     </div>
 
-    <h2 class="sg-section-title mb-3">
+    <h2 class="sg-section-title text-gold mb-3">
       Le matériel que nous sélectionnons pour vous
     </h2>
 
@@ -1482,7 +1478,7 @@
 <!-- BLOC 6 : Partenaires techniques -->
 <section id="bloc-partenaires" class="sg-section relative overflow-hidden gsap-bloc5">
   <div class="sg-container text-center mb-10">
-    <h2 class="text-[28px] font-bold sg-h-light mb-3">
+    <h2 class="text-[28px] font-bold text-[#C39847] mb-3">
       Nos choix techniques sont assumés
     </h2>
     <p class="text-sm text-white/70 max-w-2xl mx-auto">
@@ -1538,7 +1534,7 @@
 
     <!-- Contenu -->
     <div class="order-1 md:order-2">
-      <h2 class="gsap-rge-header text-[26px] font-bold sg-h-light mb-4">
+      <h2 class="gsap-rge-header text-[26px] font-bold text-[#C39847] mb-4">
         Pose par des professionnels externes sélectionnés
       </h2>
       <div class="gsap-rge-content">
@@ -1632,7 +1628,7 @@
 
     <!-- Contenu -->
     <div class="order-1 md:order-2">
-      <h2 class="gsap-cta-header text-[26px] font-bold sg-h-light mb-4">
+      <h2 class="gsap-cta-header text-[26px] font-bold text-[#C39847] mb-4">
         Ne choisissez pas votre projet solaire à l’aveugle
       </h2>
       <div class="gsap-cta-content">
@@ -1677,7 +1673,7 @@
 
     <!-- Liens th&eacute;matiques — masqu&eacute; par d&eacute;faut -->
     <div id="bloc-seo-themes" class="seo-toggle-content hidden overflow-hidden" aria-hidden="true">
-      <h2 class="text-2xl md:text-3xl font-bold sg-h-light mb-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-gold mb-8 text-center">
         D&eacute;couvrez l&rsquo;&eacute;nergie solaire
       </h2>
 
