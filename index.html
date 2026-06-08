@@ -481,6 +481,69 @@
       justify-content: center;
       overflow: hidden;
     }
+    .bloc2-visual-frame {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      max-width: 100%;
+    }
+    .bloc2-visual-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 18px;
+      pointer-events: none;
+      box-shadow: inset 0 0 80px rgba(0,0,0,0.28);
+    }
+    .bloc2-visual-badge {
+      position: absolute;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.48rem 0.68rem;
+      border: 1px solid rgba(195,152,71,0.42);
+      border-radius: 999px;
+      background: rgba(8,8,8,0.48);
+      color: #f2d28a;
+      font-size: clamp(0.66rem, 0.8vw, 0.78rem);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.32), 0 0 18px rgba(195,152,71,0.12);
+      white-space: nowrap;
+    }
+    .bloc2-visual-badge svg {
+      width: 17px;
+      height: 17px;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      fill: none;
+      flex: 0 0 auto;
+    }
+    .bloc2-visual-badge--rge { top: 9%; left: 9%; }
+    .bloc2-visual-badge--warranty { top: 9%; right: 9%; }
+    .bloc2-visual-badge--price { left: 7%; top: 43%; }
+    .bloc2-visual-badge--battery { right: 7%; bottom: 21%; }
+    .bloc2-visual-badge--follow { left: 10%; bottom: 12%; }
+    @media (max-width: 767px) {
+      .bloc2-visual-badge {
+        padding: 0.4rem 0.52rem;
+        font-size: 0.62rem;
+      }
+      .bloc2-visual-badge svg {
+        width: 14px;
+        height: 14px;
+      }
+      .bloc2-visual-badge--price,
+      .bloc2-visual-badge--follow {
+        display: none;
+      }
+    }
     .bloc2-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -968,10 +1031,37 @@
       </div>
       <!-- Colonne droite : grand visuel maison -->
       <div class="gsap-bloc2-photo bloc2-card-visual min-h-[320px] md:min-h-[520px]">
-        <img src="/assets/images/accueil/visuel-energie-waouh-fullblack.avif"
-             alt="Maison &eacute;quip&eacute;e de panneaux solaires, projet SolarGlobe"
-             class="max-w-full max-h-[320px] md:max-h-[520px] w-auto h-auto object-contain"
-             loading="lazy" />
+        <div class="bloc2-visual-frame">
+          <img src="/assets/images/accueil/visuel-energie-waouh-fullblack.avif"
+               alt="Maison &eacute;quip&eacute;e de panneaux solaires, projet SolarGlobe"
+               class="max-w-full max-h-[320px] md:max-h-[520px] w-auto h-auto object-contain"
+               loading="lazy" />
+
+          <span class="bloc2-visual-badge bloc2-visual-badge--rge" aria-label="Pose par partenaires externes RGE">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12.5l3 3 7-7"/><circle cx="12" cy="12" r="9"/></svg>
+            RGE
+          </span>
+
+          <span class="bloc2-visual-badge bloc2-visual-badge--warranty" aria-label="Garantie 25 ans">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.4-2.8 8.4-7 10-4.2-1.6-7-5.6-7-10V6l7-3z"/></svg>
+            25 ans
+          </span>
+
+          <span class="bloc2-visual-badge bloc2-visual-badge--price" aria-label="Prix et rentabilité vérifiés">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 7.5a5 5 0 1 0 0 9"/><path d="M5 10h9"/><path d="M5 14h8"/></svg>
+            Prix clair
+          </span>
+
+          <span class="bloc2-visual-badge bloc2-visual-badge--battery" aria-label="Batterie étudiée selon la rentabilité">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="16" height="10" rx="2"/><path d="M19 10h2v4h-2"/><path d="M7 12h6"/></svg>
+            Batterie
+          </span>
+
+          <span class="bloc2-visual-badge bloc2-visual-badge--follow" aria-label="Projet suivi jusqu'à la mise en service">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l4 4 4-8 4 8 4-4"/></svg>
+            Suivi
+          </span>
+        </div>
       </div>
     </div>
 
