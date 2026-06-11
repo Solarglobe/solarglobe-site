@@ -755,21 +755,45 @@
       display: flex;
       justify-content: space-between;
       margin-top: 14px;
-      padding-top: 12px;
+      gap: 6px;
+      padding-top: 10px;
       border-top: 1px solid rgba(255,255,255,0.1);
     }
-    #bloc-tarifs .bloc4-stats > span { text-align: center; flex: 1; }
+    #bloc-tarifs .bloc4-stats > span {
+      text-align: center;
+      flex: 1;
+      min-width: 0;
+      padding: 6px 4px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.035);
+    }
     #bloc-tarifs .bloc4-stats .bloc4-stats-label {
-      font-size: 13px;
+      font-size: 10px;
       font-weight: 500;
       color: rgba(255,255,255,0.65);
       display: block;
       margin-bottom: 2px;
+      line-height: 1.1;
     }
     #bloc-tarifs .bloc4-stats .bloc4-stats-value {
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 700;
       color: #C39847;
+      line-height: 1.15;
+      overflow-wrap: anywhere;
+    }
+    @media (max-width: 640px) {
+      #bloc-tarifs .bloc4-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      #bloc-tarifs .bloc4-stats > span:first-child {
+        grid-column: 1 / -1;
+      }
+      #bloc-tarifs .bloc4-stats .bloc4-stats-value {
+        font-size: 13px;
+        overflow-wrap: normal;
+      }
     }
     /* État initial avant GSAP — évite flash visible */
     #bloc-tarifs .gsap-tarifs-header,
@@ -1243,9 +1267,8 @@
       </figure>
 
       <div class="bloc4-price-wrap mt-2">
-        <span class="bloc4-price-label block">Prix tout compris</span>
+        <span class="bloc4-price-label block">&Agrave; partir de</span>
         <span class="bloc4-price-value block">6&nbsp;390&nbsp;&euro; <span class="bloc4-price-ttc">TTC</span></span>
-        <span class="bloc4-price-sub block text-neutral-800 mt-0.5">Prime Autoconso d&eacute;duite (240&nbsp;&euro;)</span>
       </div>
 
       <ul class="bloc4-list mt-3">
@@ -1283,9 +1306,8 @@
       </figure>
 
       <div class="bloc4-price-wrap mt-2 relative">
-        <span class="bloc4-price-label block">Prix tout compris</span>
-        <span class="bloc4-price-value block">11&nbsp;340&nbsp;&euro; <span class="bloc4-price-ttc">TTC</span></span>
-        <span class="bloc4-price-sub block text-neutral-800 mt-0.5">Prime Autoconso d&eacute;duite (480&nbsp;&euro;)</span>
+        <span class="bloc4-price-label block">&Agrave; partir de</span>
+        <span class="bloc4-price-value block">9&nbsp;750&nbsp;&euro; <span class="bloc4-price-ttc">TTC</span></span>
       </div>
 
       <ul class="bloc4-list mt-3 relative">
@@ -1323,9 +1345,8 @@
       </figure>
 
       <div class="bloc4-price-wrap mt-2">
-        <span class="bloc4-price-label block">Prix tout compris</span>
-        <span class="bloc4-price-value block">14&nbsp;960&nbsp;&euro; <span class="bloc4-price-ttc">TTC</span></span>
-        <span class="bloc4-price-sub block text-neutral-800 mt-0.5">Prime Autoconso d&eacute;duite (1&nbsp;660&nbsp;&euro;)</span>
+        <span class="bloc4-price-label block">&Agrave; partir de</span>
+        <span class="bloc4-price-value block">13&nbsp;400&nbsp;&euro; <span class="bloc4-price-ttc">TTC</span></span>
       </div>
 
       <ul class="bloc4-list mt-3">
