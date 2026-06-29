@@ -283,7 +283,7 @@ document.querySelectorAll('.sg-faq-item').forEach(item => {
     "addressRegion": "Île-de-France",
     "addressCountry": "FR"
   },
-  "areaServed": ["{nom}"]
+  "areaServed": "{nom}"
 }
 </script>
 <script type="application/ld+json">

@@ -26,8 +26,8 @@ def preserve_area_served(old: dict) -> Optional[Any]:
     asv = old.get("areaServed")
     if asv is None:
         return None
-    if isinstance(asv, list) and len(asv) == 1:
-        return asv
+    if isinstance(asv, list) and len(asv) == 1 and isinstance(asv[0], str):
+        return asv[0]
     if isinstance(asv, dict) and asv.get("@type") == "AdministrativeArea":
         return asv
     return None

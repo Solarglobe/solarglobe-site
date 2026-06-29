@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build:tailwind": "tailwindcss -i ./assets/css/tailwind.input.css -o ./assets/css/tailwind.css --minify",
+    "test:jsonld": "node scripts/validate-jsonld.js",
     "watch:tailwind": "tailwindcss -i ./assets/css/tailwind.input.css -o ./assets/css/tailwind.css --watch"
   },
   "devDependencies": {
