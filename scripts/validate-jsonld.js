@@ -212,6 +212,9 @@ function main() {
     const html = fs.readFileSync(file, "utf8");
     let match;
     let scriptIndex = 0;
+    const openScriptCount = (
+      html.match(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>/gi) || []
+    ).length;
     scriptRe.lastIndex = 0;
 
     while ((match = scriptRe.exec(html))) {
@@ -224,6 +227,16 @@ function main() {
       } catch (error) {
         addIssue(issues, file, scriptIndex, "JSON.parse", error.message);
       }
+    }
+
+    if (scriptIndex !== openScriptCount) {
+      addIssue(
+        issues,
+        file,
+        scriptIndex + 1,
+        "script",
+        `${openScriptCount} ouverture(s) application/ld+json mais ${scriptIndex} script(s) ferme(s)`,
+      );
     }
   }
 

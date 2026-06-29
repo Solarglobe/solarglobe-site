@@ -1,7 +1,7 @@
 # Audit des donnees structurees JSON-LD
 
 Inventaire genere depuis les fichiers HTML du repo. Chaque script `application/ld+json` est parse avec `JSON.parse` par `npm run test:jsonld`.
-Total: 183 scripts JSON-LD, 195 objets schema.org.
+Total: 184 scripts JSON-LD, 196 objets schema.org.
 
 
 ## blog/aides-financieres/index.html
@@ -32,6 +32,9 @@ Total: 183 scripts JSON-LD, 195 objets schema.org.
 
 ## blog/surdimensionnement-solaire/index.html
 - Script 1: BlogPosting - Surdimensionnement solaire : l'erreur qui détruit la rentabilité
+
+## cgv/index.html
+- Script 1: SolarEnergyContractor - SolarGlobe
 
 ## contact/index.html
 - Script 1: SolarEnergyContractor - SolarGlobe
