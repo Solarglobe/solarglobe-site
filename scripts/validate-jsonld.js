@@ -151,8 +151,28 @@ function validateValue(issues, file, scriptIndex, value, jsonPath = "$") {
 
   validateBreadcrumb(issues, file, scriptIndex, value, jsonPath);
 
+  if (hasType(value, "AggregateRating") || hasType(value, "Review")) {
+    addIssue(
+      issues,
+      file,
+      scriptIndex,
+      jsonPath,
+      "schema d'avis/des notes supprime du site: risque Search Console Extraits d'avis",
+    );
+  }
+
   for (const [key, child] of Object.entries(value)) {
     const childPath = `${jsonPath}.${key}`;
+
+    if (key === "aggregateRating" || key === "review") {
+      addIssue(
+        issues,
+        file,
+        scriptIndex,
+        childPath,
+        "champ d'avis/des notes supprime du site: risque Search Console Extraits d'avis",
+      );
+    }
 
     if (["telephone", "priceRange", "postalCode"].includes(key) && typeof child !== "string") {
       addIssue(
