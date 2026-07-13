@@ -1,0 +1,1 @@
+function e(t){let r=String(t).trim();return r?(r=r.replace(/\/$/,""),r.endsWith("/api/v1")&&(r=r.slice(0,-7)),r):""}function n(){return e("https://api.solarnext-crm.fr")}function s(){const t=n();return t||""}function a(t){const r=n(),i=t.startsWith("/")?t:`/${t}`;return r?`${r.replace(/\/$/,"")}${i}`:i}export{s as a,a as b,n as g};
