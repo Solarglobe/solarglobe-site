@@ -201,6 +201,160 @@
       font-size: 12px;
       color: rgba(255,255,255,0.5);
     }
+    /* Bloc realisations clients */
+    #bloc-realisations {
+      background: radial-gradient(circle at 20% 0%, rgba(195,152,71,0.08), transparent 34%), var(--sg-bg);
+      padding: 72px 20px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .sg-realisations-head {
+      max-width: 760px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+    .sg-realisations-kicker {
+      display: block;
+      margin-bottom: 12px;
+      color: #C39847;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .sg-realisations-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+    @media (min-width: 1024px) {
+      .sg-realisations-grid { grid-template-columns: 1.08fr 0.92fr; }
+    }
+    .sg-realisation-card {
+      overflow: hidden;
+      border: 1px solid rgba(195,152,71,0.16);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.025);
+      box-shadow: 0 24px 70px -48px rgba(0,0,0,0.85);
+    }
+    .sg-realisation-media {
+      display: grid;
+      gap: 8px;
+      padding: 8px;
+      background: rgba(0,0,0,0.28);
+    }
+    .sg-realisation-media img {
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      display: block;
+      object-fit: cover;
+      border-radius: 12px;
+      background: #080808;
+    }
+    .sg-realisation-media--cachan {
+      grid-template-columns: 1fr 0.34fr;
+      grid-template-rows: repeat(3, 112px);
+    }
+    .sg-realisation-media--cachan .sg-realisation-main {
+      grid-row: 1 / 4;
+      min-height: 344px;
+    }
+    .sg-realisation-media--lagny {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      height: 352px;
+    }
+    @media (max-width: 640px) {
+      .sg-realisation-media--cachan {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+      .sg-realisation-media--cachan .sg-realisation-main {
+        grid-row: auto;
+        min-height: 260px;
+      }
+      .sg-realisation-media--cachan img:not(.sg-realisation-main) { display: none; }
+      .sg-realisation-media--lagny { height: 300px; }
+    }
+    .sg-realisation-content {
+      padding: 24px;
+    }
+    .sg-realisation-topline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .sg-realisation-city {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0;
+    }
+    .sg-realisation-power {
+      color: #111;
+      background: #C39847;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .sg-realisation-desc {
+      color: rgba(255,255,255,0.74);
+      font-size: 14px;
+      line-height: 1.65;
+      margin: 0 0 18px;
+    }
+    .sg-realisation-specs {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 0 0 18px;
+    }
+    @media (min-width: 560px) {
+      .sg-realisation-specs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    .sg-realisation-spec {
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 12px;
+      background: rgba(0,0,0,0.22);
+    }
+    .sg-realisation-spec span {
+      display: block;
+      color: rgba(255,255,255,0.44);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .sg-realisation-spec strong {
+      display: block;
+      color: rgba(255,255,255,0.88);
+      margin-top: 4px;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+    .sg-realisation-note {
+      border-left: 2px solid rgba(195,152,71,0.75);
+      padding-left: 14px;
+      color: rgba(255,255,255,0.78);
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .sg-realisations-footer {
+      margin-top: 24px;
+      text-align: center;
+      color: rgba(255,255,255,0.58);
+      font-size: 13px;
+      line-height: 1.6;
+    }
     .rge-accompagnement {
       background: rgba(255,255,255,0.02);
       border: 1px solid rgba(195,152,71,0.15);
@@ -1687,6 +1841,103 @@
 </section>
 
 <!-- BANDEAU DE TRANSITION -->
+<div class="sg-divider" aria-hidden="true"></div>
+
+<!-- BLOC REALISATIONS CLIENTS -->
+<section id="bloc-realisations" aria-labelledby="sg-realisations-title">
+  <div class="sg-container">
+    <div class="sg-realisations-head">
+      <span class="sg-realisations-kicker">Chantiers r&eacute;alis&eacute;s</span>
+      <h2 id="sg-realisations-title" class="sg-section-title mb-4">Deux installations solaires concr&egrave;tes, suivies de bout en bout</h2>
+      <p class="sg-section-subtitle text-base md:text-lg max-w-3xl mx-auto">
+        Des projets r&eacute;els avec mat&eacute;riel s&eacute;lectionn&eacute;, protections adapt&eacute;es et batterie virtuelle Urban Solar pour valoriser le surplus.
+      </p>
+    </div>
+
+    <div class="sg-realisations-grid">
+      <article class="sg-realisation-card">
+        <div class="sg-realisation-media sg-realisation-media--cachan">
+          <img class="sg-realisation-main" src="/assets/images/installations/Cachan-longi-explorer.jpeg" alt="Installation solaire multi-pan de toit &agrave; Cachan avec panneaux LONGi Explorer X10" loading="lazy" decoding="async" width="1600" height="1200">
+          <img src="/assets/images/installations/Cachan-longi-explorer2.jpeg" alt="Vue lat&eacute;rale des panneaux solaires LONGi Explorer X10 &agrave; Cachan" loading="lazy" decoding="async" width="1600" height="1204">
+          <img src="/assets/images/installations/Cachan-longi-explorer3.jpeg" alt="Panneaux photovolta&iuml;ques sur toiture &agrave; Cachan" loading="lazy" decoding="async" width="1600" height="1204">
+          <img src="/assets/images/installations/Cachan-longi-explorer4.jpeg" alt="Installation photovolta&iuml;que Cachan avec plusieurs pans de toiture" loading="lazy" decoding="async" width="1600" height="1204">
+        </div>
+        <div class="sg-realisation-content">
+          <div class="sg-realisation-topline">
+            <h3 class="sg-realisation-city">Cachan</h3>
+            <span class="sg-realisation-power">8,73 kWc</span>
+          </div>
+          <p class="sg-realisation-desc">
+            Projet r&eacute;sidentiel en multi-pan de toit, pens&eacute; pour exploiter plusieurs surfaces disponibles tout en gardant une architecture &eacute;lectrique lisible.
+          </p>
+          <div class="sg-realisation-specs">
+            <div class="sg-realisation-spec">
+              <span>Panneaux</span>
+              <strong>LONGi Explorer X10</strong>
+            </div>
+            <div class="sg-realisation-spec">
+              <span>Architecture</span>
+              <strong>Full ATMOCE</strong>
+            </div>
+            <div class="sg-realisation-spec">
+              <span>Configuration</span>
+              <strong>Multi-pan de toit</strong>
+            </div>
+            <div class="sg-realisation-spec">
+              <span>Surplus</span>
+              <strong>Batterie virtuelle Urban Solar</strong>
+            </div>
+          </div>
+          <p class="sg-realisation-note">
+            Un chantier utile pour montrer le travail de calpinage : plusieurs pans, une puissance importante et une solution pens&eacute;e pour suivre la production dans la dur&eacute;e.
+          </p>
+        </div>
+      </article>
+
+      <article class="sg-realisation-card">
+        <div class="sg-realisation-media sg-realisation-media--lagny">
+          <img src="/assets/images/installations/lagny-aiko1.jpeg" alt="Installation solaire &agrave; Lagny avec panneaux AIKO Neostar Back Contact" loading="lazy" decoding="async" width="747" height="1599">
+          <img src="/assets/images/installations/lagny-aiko2.jpeg" alt="Panneaux AIKO Neostar Back Contact pos&eacute;s sur toiture &agrave; Lagny" loading="lazy" decoding="async" width="1200" height="1600">
+        </div>
+        <div class="sg-realisation-content">
+          <div class="sg-realisation-topline">
+            <h3 class="sg-realisation-city">Lagny</h3>
+            <span class="sg-realisation-power">4 kWc</span>
+          </div>
+          <p class="sg-realisation-desc">
+            Installation compacte et esth&eacute;tique avec panneaux noirs back contact, micro-onduleurs et protections ATMOCE.
+          </p>
+          <div class="sg-realisation-specs">
+            <div class="sg-realisation-spec">
+              <span>Panneaux</span>
+              <strong>AIKO Neostar Back Contact</strong>
+            </div>
+            <div class="sg-realisation-spec">
+              <span>Micro-onduleurs</span>
+              <strong>ATMOCE</strong>
+            </div>
+            <div class="sg-realisation-spec">
+              <span>Protection</span>
+              <strong>Coffret et s&eacute;curit&eacute; ATMOCE</strong>
+            </div>
+            <div class="sg-realisation-spec">
+              <span>Surplus</span>
+              <strong>Batterie virtuelle Urban Solar</strong>
+            </div>
+          </div>
+          <p class="sg-realisation-note">
+            Un exemple clair de projet dimensionn&eacute; juste : puissance ma&icirc;tris&eacute;e, pose propre et choix technique coh&eacute;rent avec la toiture.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <p class="sg-realisations-footer">
+      Les retours clients publics sont pr&eacute;sent&eacute;s juste en dessous via les avis Google. Un t&eacute;moignage d&eacute;di&eacute; pourra &ecirc;tre ajout&eacute; sous chaque chantier d&egrave;s qu'il est valid&eacute; par le client.
+    </p>
+  </div>
+</section>
+
 <div class="sg-divider" aria-hidden="true"></div>
 
 <!-- Témoignages clients (avis Google) — preuve sociale avant CTA final -->
