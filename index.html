@@ -473,6 +473,64 @@
       background: rgba(18,18,18,0.92);
       outline: none;
     }
+    .sg-photo-lightbox__nav {
+      position: fixed;
+      left: 50%;
+      bottom: 22px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transform: translateX(-50%);
+    }
+    .sg-photo-lightbox__arrow {
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      background: rgba(0,0,0,0.68);
+      color: #fff;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+    .sg-photo-lightbox__arrow:hover,
+    .sg-photo-lightbox__arrow:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(195,152,71,0.65);
+      background: rgba(18,18,18,0.92);
+      outline: none;
+    }
+    .sg-photo-lightbox__arrow svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .sg-photo-lightbox__count {
+      min-width: 58px;
+      color: rgba(255,255,255,0.78);
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+    }
+    @media (max-width: 640px) {
+      .sg-photo-lightbox {
+        padding: 16px;
+        padding-bottom: 92px;
+      }
+      .sg-photo-lightbox__img { max-height: 74vh; }
+      .sg-photo-lightbox__nav { bottom: 18px; }
+      .sg-photo-lightbox__arrow {
+        width: 48px;
+        height: 48px;
+      }
+    }
     .rge-accompagnement {
       background: rgba(255,255,255,0.02);
       border: 1px solid rgba(195,152,71,0.15);
@@ -2074,6 +2132,15 @@
     <img class="sg-photo-lightbox__img" src="" alt="">
     <figcaption class="sg-photo-lightbox__caption"></figcaption>
   </figure>
+  <div class="sg-photo-lightbox__nav" aria-label="Navigation photos">
+    <button type="button" class="sg-photo-lightbox__arrow" data-lightbox-prev aria-label="Photo pr&eacute;c&eacute;dente">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <span class="sg-photo-lightbox__count" aria-live="polite">1 / 1</span>
+    <button type="button" class="sg-photo-lightbox__arrow" data-lightbox-next aria-label="Photo suivante">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+  </div>
 </div>
 
 <div class="sg-divider" aria-hidden="true"></div>
@@ -2683,22 +2750,45 @@
     const image = lightbox.querySelector('.sg-photo-lightbox__img');
     const caption = lightbox.querySelector('.sg-photo-lightbox__caption');
     const closeButton = lightbox.querySelector('.sg-photo-lightbox__close');
+    const prevButton = lightbox.querySelector('[data-lightbox-prev]');
+    const nextButton = lightbox.querySelector('[data-lightbox-next]');
+    const count = lightbox.querySelector('.sg-photo-lightbox__count');
     const triggers = Array.from(document.querySelectorAll('.sg-realisation-photo[data-lightbox-src]'));
     let lastFocused = null;
     let closeTimer = null;
+    let currentIndex = 0;
 
-    function openLightbox(trigger) {
+    function showPhoto(index) {
+      if (!triggers.length) return;
+      currentIndex = (index + triggers.length) % triggers.length;
+      const trigger = triggers[currentIndex];
       const src = trigger.getAttribute('data-lightbox-src');
       if (!src) return;
 
       const img = trigger.querySelector('img');
       const text = trigger.getAttribute('data-lightbox-caption') || (img ? img.alt : '');
 
-      lastFocused = trigger;
-      window.clearTimeout(closeTimer);
       image.src = src;
       image.alt = img ? img.alt : text;
       caption.textContent = text;
+      if (count) count.textContent = String(currentIndex + 1) + ' / ' + String(triggers.length);
+
+      const figure = lightbox.querySelector('.sg-photo-lightbox__figure');
+      if (figure) {
+        figure.animate(
+          [
+            { transform: 'scale(0.965)', opacity: 0.86 },
+            { transform: 'scale(1)', opacity: 1 }
+          ],
+          { duration: 220, easing: 'cubic-bezier(0.16,1,0.3,1)' }
+        );
+      }
+    }
+
+    function openLightbox(trigger) {
+      lastFocused = trigger;
+      window.clearTimeout(closeTimer);
+      showPhoto(Math.max(0, triggers.indexOf(trigger)));
       lightbox.classList.remove('is-closing');
       lightbox.classList.add('is-open');
       lightbox.setAttribute('aria-hidden', 'false');
@@ -2730,11 +2820,24 @@
     });
 
     closeButton.addEventListener('click', closeLightbox);
+    if (prevButton) {
+      prevButton.addEventListener('click', function () {
+        showPhoto(currentIndex - 1);
+      });
+    }
+    if (nextButton) {
+      nextButton.addEventListener('click', function () {
+        showPhoto(currentIndex + 1);
+      });
+    }
     lightbox.addEventListener('click', function (event) {
       if (event.target === lightbox) closeLightbox();
     });
     document.addEventListener('keydown', function (event) {
+      if (!lightbox.classList.contains('is-open')) return;
       if (event.key === 'Escape') closeLightbox();
+      if (event.key === 'ArrowLeft') showPhoto(currentIndex - 1);
+      if (event.key === 'ArrowRight') showPhoto(currentIndex + 1);
     });
   })();
 </script>
