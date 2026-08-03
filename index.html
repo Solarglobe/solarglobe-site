@@ -474,16 +474,14 @@
       outline: none;
     }
     .sg-photo-lightbox__nav {
-      position: fixed;
-      left: 50%;
-      bottom: 22px;
+      position: absolute;
+      inset: 0;
       z-index: 2;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      transform: translateX(-50%);
+      pointer-events: none;
     }
     .sg-photo-lightbox__arrow {
+      position: absolute;
+      top: 50%;
       width: 52px;
       height: 52px;
       border: 1px solid rgba(255,255,255,0.18);
@@ -494,11 +492,15 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      transform: translateY(-50%);
       transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      pointer-events: auto;
     }
+    .sg-photo-lightbox__arrow[data-lightbox-prev] { left: -74px; }
+    .sg-photo-lightbox__arrow[data-lightbox-next] { right: -74px; }
     .sg-photo-lightbox__arrow:hover,
     .sg-photo-lightbox__arrow:focus-visible {
-      transform: translateY(-2px);
+      transform: translateY(-50%) scale(1.06);
       border-color: rgba(195,152,71,0.65);
       background: rgba(18,18,18,0.92);
       outline: none;
@@ -513,23 +515,34 @@
       stroke-linejoin: round;
     }
     .sg-photo-lightbox__count {
+      position: absolute;
+      left: 50%;
+      bottom: -34px;
       min-width: 58px;
       color: rgba(255,255,255,0.78);
       font-size: 13px;
       font-weight: 700;
       text-align: center;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+    @media (max-width: 1280px) {
+      .sg-photo-lightbox__arrow[data-lightbox-prev] { left: 14px; }
+      .sg-photo-lightbox__arrow[data-lightbox-next] { right: 14px; }
     }
     @media (max-width: 640px) {
       .sg-photo-lightbox {
         padding: 16px;
-        padding-bottom: 92px;
+        padding-bottom: 58px;
       }
       .sg-photo-lightbox__img { max-height: 74vh; }
-      .sg-photo-lightbox__nav { bottom: 18px; }
       .sg-photo-lightbox__arrow {
         width: 48px;
         height: 48px;
       }
+      .sg-photo-lightbox__arrow[data-lightbox-prev] { left: 8px; }
+      .sg-photo-lightbox__arrow[data-lightbox-next] { right: 8px; }
+      .sg-photo-lightbox__count { bottom: -30px; }
     }
     .rge-accompagnement {
       background: rgba(255,255,255,0.02);
