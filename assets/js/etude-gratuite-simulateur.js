@@ -210,9 +210,9 @@
         <div id="etude-result-block" class="sim-result">
           <div class="sim-result__header">
             <h3 class="sim-result__title">Votre étude solaire est prête</h3>
-            <p class="sim-result__subtitle">Voici une estimation basée sur votre toiture et votre configuration. Elle sera affinée avec un expert Solarglobe.</p>
+            <p class="sim-result__subtitle">Voici une estimation indicative basée sur votre toiture et votre configuration. Elle sera affinée avec SolarGlobe selon votre consommation et vos usages.</p>
           </div>
-          <p class="sim-result__hook">Vous pouvez produire jusqu'à <strong>${est.production.toLocaleString('fr-FR')} kWh</strong> par an</p>
+          <p class="sim-result__hook">Production annuelle estimée : <strong>${est.production.toLocaleString('fr-FR')} kWh</strong></p>
           <div class="sim-result__grid">
             <div class="sim-result__summary">
               <h4 class="sim-result__card-title">Résumé du projet</h4>
@@ -236,27 +236,27 @@
                 <span class="sim-result__stat-label">Production annuelle</span>
               </div>
               <div class="sim-result__stat sim-result__stat--highlight">
-                <span class="sim-result__stat-value">Jusqu'à ${est.economies.toLocaleString('fr-FR')} €</span>
-                <span class="sim-result__stat-unit">économisés chaque année</span>
-                <span class="sim-result__stat-sublabel">Soit environ ${economies20.toLocaleString('fr-FR')} € sur 20 ans</span>
+                <span class="sim-result__stat-value">${est.economies.toLocaleString('fr-FR')} €</span>
+                <span class="sim-result__stat-unit">d'économies annuelles indicatives</span>
+                <span class="sim-result__stat-sublabel">Projection indicative sur 20 ans : ${economies20.toLocaleString('fr-FR')} €</span>
               </div>
             </div>
           </div>
           <div class="sim-result__projection-future">
-            <p>Dans 5 ans, votre installation pourrait déjà être en grande partie amortie.</p>
+            <p>Cette projection dépendra de votre consommation, de l'autoconsommation réelle, de la production et de l'évolution du prix de l'électricité.</p>
           </div>
           <div class="sim-result__benefits">
             <ul class="sim-result__benefits-list">
-              <li>Réduction immédiate de votre facture</li>
+              <li>Réduction possible de votre facture</li>
               <li>Valorisation de votre bien</li>
-              <li>Protection contre la hausse de l'électricité</li>
+              <li>Scénario comparé face à l'évolution du prix de l'électricité</li>
               <li>Projet optimisé selon votre toiture</li>
             </ul>
           </div>
           <div class="sim-result__cta">
             <div class="sim-result__form-intro">
               <h4 class="sim-result__form-intro-title">Finalisez votre étude personnalisée</h4>
-              <p class="sim-result__form-intro-text">Un expert Solarglobe va analyser votre projet en détail et vous transmettre une étude fiable et adaptée à votre maison.</p>
+              <p class="sim-result__form-intro-text">SolarGlobe analyse votre projet en détail et vous transmet une étude adaptée à votre maison.</p>
               <p class="sim-result__form-intro-sub">Sans engagement — réponse sous 24 à 48h</p>
             </div>
             <form id="etude-contact-form" class="sim-result__form" action="${CONFIG.formAction}" method="POST" autocomplete="off" novalidate>
@@ -267,22 +267,22 @@
               <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
               <div class="sim-form-grid">
                 <div class="sim-field">
-                  <span class="sim-label">Prénom</span>
+                  <label class="sim-label" for="form-prenom">Prénom</label>
                   <input id="form-prenom" required name="prenom" type="text" placeholder="Votre prénom" class="sim-input" autocomplete="given-name" />
                   <span class="sim-form-error" id="err-prenom" role="alert"></span>
                 </div>
                 <div class="sim-field">
-                  <span class="sim-label">Nom</span>
+                  <label class="sim-label" for="form-nom">Nom</label>
                   <input id="form-nom" required name="nom" type="text" placeholder="Votre nom" class="sim-input" autocomplete="family-name" />
                   <span class="sim-form-error" id="err-nom" role="alert"></span>
                 </div>
                 <div class="sim-field">
-                  <span class="sim-label">Email</span>
+                  <label class="sim-label" for="form-email">Email</label>
                   <input id="form-email" required name="email" type="email" placeholder="votre@email.fr" class="sim-input" autocomplete="email" />
                   <span class="sim-form-error" id="err-email" role="alert"></span>
                 </div>
                 <div class="sim-field">
-                  <span class="sim-label">Téléphone</span>
+                  <label class="sim-label" for="form-tel">Téléphone</label>
                   <input id="form-tel" required name="tel" type="tel" placeholder="06 12 34 56 78" class="sim-input" autocomplete="tel" />
                   <span class="sim-form-error" id="err-tel" role="alert"></span>
                 </div>
@@ -306,7 +306,7 @@
               <input type="hidden" name="Panneaux" id="formPanneaux" />
               <div class="sim-result__submit-wrap">
                 <button type="submit" class="sim-result__submit" id="etude-form-submit" disabled>
-                  <span class="sim-result__submit-text">Recevoir mon étude gratuite</span>
+                  <span class="sim-result__submit-text">Faire vérifier mon projet solaire</span>
                   <span class="sim-result__submit-loader" aria-hidden="true"></span>
                 </button>
                 <p class="sim-result__submit-hint">Réponse sous 24 à 48h</p>

@@ -50,7 +50,7 @@ const replacements = [
   ["Pose par des partenaires certifi&eacute;s RGE.", "Pose par des partenaires externes certifi&eacute;s RGE."],
   ["installation par des partenaires RGE QualiPV et suivi", "pose par des partenaires externes RGE / QualiPV sélectionnés et suivi"],
 
-  ["Les modèles installés par SolarGlobe respectent les normes en vigueur.", "Les modèles sélectionnés par SolarGlobe respectent les normes en vigueur ; la pose est confiée à un partenaire externe RGE."],
+  ["Les modèles installés par SolarGlobe respectent les normes en vigueur.", "Les modèles sélectionnés par SolarGlobe respectent les normes en vigueur ; la pose est réalisée par un professionnel RGE sélectionné."],
   ["Le dimensionnement se fait au cas par cas lors de l'étude.", "Le dimensionnement se fait au cas par cas lors de l'étude SolarGlobe."],
 
   ["retours publics reformulés pour le web, sans en modifier le sens.", "avis publics consultables sur Google."],

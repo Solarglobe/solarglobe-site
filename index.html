@@ -55,7 +55,6 @@
   <link rel="stylesheet" href="/assets/css/footer-common.css" />
   <!-- Tailwind CSS -->
   <link rel="stylesheet" href="/assets/css/tailwind.css" />
-  <link rel="stylesheet" href="/assets/css/home-google-reviews.css" />
 
   <!-- Styles personnalisés -->
   <style>
@@ -64,6 +63,7 @@
     @keyframes zoomInModal {0% {transform: scale(0.85) translateY(60px); opacity: 0;} 100% {transform: scale(1) translateY(0); opacity: 1;}}
     @keyframes pulseGold {0%,100% {opacity: 0.18;} 40% {opacity: 0.42;} 80% {opacity: 0.18;}}
 
+    body { overflow-x: hidden; }
     body.menu-open { overflow: hidden; }
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -759,6 +759,50 @@
     @keyframes heroFadeIn {
       to { opacity: 1; transform: translateY(0); }
     }
+    .hero-left-inner {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+    .hero-left-inner h1 span,
+    .hero-left-inner p {
+      white-space: normal;
+    }
+    .hero-badge-pill {
+      max-width: 100%;
+      white-space: normal;
+      line-height: 1.25;
+    }
+    @media (max-width: 767px) {
+      .hero-left-inner {
+        width: calc(100vw - 64px) !important;
+        max-width: calc(100vw - 64px) !important;
+      }
+      .hero-left-inner h1 {
+        font-size: 1.45rem;
+        line-height: 1.18;
+      }
+      .hero-left-inner p { line-height: 1.55; }
+      .sg-home-hero { min-height: auto; }
+      .sg-home-hero-text {
+        align-items: flex-start;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+      .sg-home-hero .hero-left-inner { gap: 1.25rem; }
+      .sg-home-hero .hero-badge-pill {
+        width: fit-content;
+        max-width: 100%;
+      }
+      .sg-home-hero .hero-left-inner .hero-ani[data-ani-order="3"] {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .sg-home-hero-media,
+      .sg-home-hero-media > div,
+      .sg-home-hero-media img {
+        min-height: 34vh;
+      }
+    }
     @media (prefers-reduced-motion: reduce) {
       .hero-ani { animation: none; opacity: 1; transform: none; }
       /* Accueil — état final sans GSAP / ScrollTrigger */
@@ -1174,13 +1218,13 @@
 
 
 <!-- HERO SPLIT SIGNATURE — Bureau d'études solaire indépendant -->
-<section class="flex flex-col md:flex-row w-full min-h-[85vh] bg-black relative overflow-hidden pt-4 md:pt-6">
+<section class="sg-home-hero flex flex-col md:flex-row w-full min-h-[85vh] bg-black relative overflow-hidden pt-4 md:pt-6">
 
   <!-- Halo léger derrière bloc texte gauche -->
   <div class="absolute left-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(195,152,71,0.08)_0%,transparent_70%)] blur-3xl pointer-events-none z-0" aria-hidden="true"></div>
 
   <!-- Colonne texte gauche -->
-  <div class="md:w-2/5 w-full flex items-center justify-center py-14 md:py-0 px-6 md:pl-14 md:pr-10 z-10">
+  <div class="sg-home-hero-text md:w-2/5 w-full flex items-center justify-center py-14 md:py-0 px-6 md:pl-14 md:pr-10 z-10">
     <div class="w-full max-w-md flex flex-col justify-center text-left space-y-8 hero-left-inner">
 
       <!-- Kicker — séparateur doré + typo réduite -->
@@ -1194,12 +1238,13 @@
       <!-- H1 — ligne 1 blanc, ligne 2 accent or -->
       <h1 class="font-extrabold leading-[1.12] tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] hero-ani" data-ani-order="1">
         <span class="text-white block">Vous voulez du solaire,</span>
-        <span class="text-gold block mt-1">mais vous ne savez pas à qui faire confiance&nbsp;?</span>
+        <span class="text-gold block mt-1">mais vous ne savez pas</span>
+        <span class="text-gold block">à qui faire confiance&nbsp;?</span>
       </h1>
 
       <!-- Sous-titre — max-width, lisibilité -->
       <p class="text-neutral-300 text-base md:text-lg leading-[1.7] max-w-sm opacity-[0.85] hero-ani" data-ani-order="2">
-        SolarGlobe est le bureau d&rsquo;&eacute;tude qui sécurise votre projet&nbsp;: vraie analyse, prix clair, matériel sélectionné et pose confiée à des installateurs externes sélectionnés pour leur professionnalisme.
+        Un installateur défend sa solution. <strong class="text-white font-semibold">SolarGlobe défend votre projet.</strong> Nous étudions votre maison avant de parler puissance, matériel ou devis.
       </p>
 
       <!-- Badges premium — pills label qualité -->
@@ -1211,7 +1256,7 @@
           <span class="text-gold">&#10003;</span> Choix des &eacute;quipements
         </span>
         <span class="hero-badge-pill inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm text-neutral-200">
-          <span class="text-gold">&#10003;</span> Installateurs externes s&eacute;lectionn&eacute;s
+          <span class="text-gold">&#10003;</span> Professionnels RGE s&eacute;lectionn&eacute;s
         </span>
       </div>
 
@@ -1233,7 +1278,7 @@
   </div>
 
   <!-- Colonne image droite — cinématique -->
-  <div class="md:w-3/5 w-full relative min-h-[45vh] md:min-h-[85vh] flex items-center justify-center">
+  <div class="sg-home-hero-media md:w-3/5 w-full relative min-h-[45vh] md:min-h-[85vh] flex items-center justify-center">
 
     <!-- Halo radial centre image -->
     <div class="absolute inset-0 pointer-events-none z-0" aria-hidden="true">
@@ -1257,9 +1302,9 @@
       <!-- Badge RGE — bloc premium -->
       <div class="absolute bottom-6 right-6 md:bottom-8 md:right-8 z-20 m-2 hero-rge-badge rounded-xl p-2 flex items-center gap-2">
         <img src="/assets/images/logo-rge.png"
-             alt="Partenaires de pose externes RGE QualiPV"
+             alt="Partenaires de pose RGE QualiPV"
              class="h-11 md:h-14 rounded-lg" />
-        <span class="hidden sm:inline text-[11px] leading-tight text-white/80 max-w-[95px]">Pose par partenaires externes RGE</span>
+        <span class="hidden sm:inline text-[11px] leading-tight text-white/80 max-w-[95px]">Pose par partenaires RGE</span>
       </div>
     </div>
   </div>
@@ -1271,12 +1316,12 @@
 <section class="sg-section sg-section-dark sg-ai-answer" aria-labelledby="reponse-courte">
   <div class="sg-container">
     <div class="sg-encadre-premium max-w-5xl mx-auto text-center">
-      <span class="sg-encadre-titre" id="reponse-courte">SolarGlobe en bref</span>
-      <p>SolarGlobe est un bureau d&rsquo;étude solaire basé à Chelles. Notre rôle est simple&nbsp;: vous éviter de choisir seul entre des devis difficiles à comparer. Nous analysons votre maison, dimensionnons la bonne puissance, sélectionnons le matériel adapté, puis confions la pose à des installateurs externes sélectionnés pour leur professionnalisme. SolarGlobe ne pose pas directement&nbsp;: nous cadrons, sélectionnons et pilotons.</p>
+      <span class="sg-encadre-titre" id="reponse-courte">SolarGlobe défend votre projet</span>
+      <p>Le marché photovoltaïque multiplie les offres difficiles à comparer. SolarGlobe existe pour remettre l&rsquo;étude du besoin avant la vente de matériel&nbsp;: consommation, toiture, puissance, options, prix, cohérence économique et qualité de pose sont vérifiés avant engagement.</p>
       <ul class="sg-list-premium sg-list-premium-dark mt-4 max-w-4xl mx-auto text-left">
       <li>Zone principale&nbsp;: Île-de-France et départements limitrophes.</li>
       <li>Expertise&nbsp;: étude, dimensionnement, rentabilité, matériel, installateurs et démarches.</li>
-      <li>Promesse&nbsp;: un projet clair, cohérent et sécurisé avant toute décision.</li>
+      <li>Modèle transparent&nbsp;: SolarGlobe conçoit le projet puis sélectionne le professionnel de pose adapté au dossier.</li>
       </ul>
     </div>
   </div>
@@ -1289,24 +1334,24 @@
   <div class="sg-container">
     <div class="max-w-3xl mx-auto text-center mb-12">
       <span class="text-gold uppercase tracking-[0.25em] text-xs">Positionnement SolarGlobe</span>
-      <h2 id="sg-trust-title" class="sg-section-title mt-3">Le tiers de confiance entre vous et le marché solaire</h2>
-      <p class="text-neutral-300 text-lg leading-relaxed mt-4">Notre valeur n'est pas de poser des panneaux. Notre valeur est de vous éviter le mauvais choix avant que vous ne signiez : mauvaise puissance, matériel moyen, batterie inutile, prix opaque ou installateur mal adapté.</p>
+      <h2 id="sg-trust-title" class="sg-section-title mt-3">Un tiers de confiance entre votre maison et le marché solaire</h2>
+      <p class="text-neutral-300 text-lg leading-relaxed mt-4">Nous ne faisons pas entrer votre maison dans une solution prédéterminée. Nous construisons la solution autour de vos besoins, puis nous sélectionnons le matériel et le professionnel de pose qui correspondent au projet.</p>
     </div>
     <div class="grid md:grid-cols-3 gap-6">
       <article class="sg-encadre-premium">
         <span class="text-gold text-sm uppercase tracking-widest">01 - Vérification</span>
         <h3 class="text-xl font-bold text-white mt-3 mb-3">Nous cadrons le projet</h3>
-        <p class="text-neutral-300 leading-relaxed">Toiture, consommation, puissance, ombrages, rentabilité, aides et budget sont vérifiés avant toute recommandation. Le devis ne pilote pas l'étude : l'étude pilote la décision.</p>
+        <p class="text-neutral-300 leading-relaxed">Toiture, consommation, puissance, ombrages, cohérence économique, aides et budget sont vérifiés avant toute recommandation. Le devis ne pilote pas l'étude : l'étude pilote la décision.</p>
       </article>
       <article class="sg-encadre-premium">
         <span class="text-gold text-sm uppercase tracking-widest">02 - Sélection</span>
-        <h3 class="text-xl font-bold text-white mt-3 mb-3">Nous choisissons le matériel utile</h3>
-        <p class="text-neutral-300 leading-relaxed">Panneaux, onduleurs, micro-onduleurs ou batterie sont sélectionnés selon votre maison et votre usage. Pas de catalogue poussé par habitude, pas d'option vendue sans intérêt mesurable.</p>
+        <h3 class="text-xl font-bold text-white mt-3 mb-3">Nous choisissons les solutions utiles</h3>
+        <p class="text-neutral-300 leading-relaxed">Panneaux, onduleurs, micro-onduleurs ou batterie sont sélectionnés selon votre maison et votre usage. Le matériel doit servir le projet, pas l’inverse.</p>
       </article>
       <article class="sg-encadre-premium">
         <span class="text-gold text-sm uppercase tracking-widest">03 - Pilotage</span>
-        <h3 class="text-xl font-bold text-white mt-3 mb-3">Nous sélectionnons l'installateur externe</h3>
-        <p class="text-neutral-300 leading-relaxed">SolarGlobe ne pose pas directement. La pose est confiée à un partenaire externe sélectionné selon le dossier, la zone, la certification RGE / QualiPV et la qualité d'exécution attendue.</p>
+        <h3 class="text-xl font-bold text-white mt-3 mb-3">Nous pilotons l’exécution</h3>
+        <p class="text-neutral-300 leading-relaxed">SolarGlobe ne possède pas d’équipes de pose salariées. C’est un avantage&nbsp;: nous ne sommes prisonniers ni d’un stock, ni d’une marque, ni d’une équipe à faire travailler.</p>
       </article>
     </div>
   </div>
@@ -1315,29 +1360,27 @@
 <div class="sg-divider" aria-hidden="true"></div>
 
 <section class="sg-section sg-section-dark" aria-labelledby="sg-proof-title">
-  <div class="sg-container grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
-    <div>
-      <span class="text-gold uppercase tracking-[0.25em] text-xs">Preuves à rendre visibles</span>
-      <h2 id="sg-proof-title" class="sg-section-title mt-3">Ce que vous devez pouvoir vérifier avant d'avancer</h2>
-      <p class="text-neutral-300 leading-relaxed mt-4">Un projet solaire premium n'est pas une promesse. C'est une suite de preuves : hypothèses, critères de choix, chiffrage, limites, puis exécution par le bon partenaire.</p>
-      <a href="/etude-gratuite/" class="sg-btn sg-btn-primary inline-block mt-6">Demander une étude solaire</a>
+  <div class="sg-container">
+    <div class="max-w-3xl mx-auto text-center mb-8">
+      <span class="text-gold uppercase tracking-[0.25em] text-xs">Preuves de confiance</span>
+      <h2 id="sg-proof-title" class="sg-section-title mt-3">Des projets réels, des avis publics, une pose encadrée</h2>
+      <p class="text-neutral-300 leading-relaxed mt-4">SolarGlobe n’est pas seulement une méthode. Les réalisations, les avis Google et les qualifications de pose permettent de vérifier que le modèle fonctionne sur des dossiers concrets.</p>
     </div>
-    <div class="grid sm:grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <a href="https://maps.app.goo.gl/zPK1i92kwCHySPHp7" target="_blank" rel="noopener noreferrer" class="sg-encadre-premium no-underline block">
+        <span class="text-gold text-sm uppercase tracking-widest">Avis Google</span>
+        <strong class="block text-white text-2xl mt-2">5/5</strong>
+        <p class="text-neutral-300 text-sm leading-relaxed mt-2">12 avis publics consultables sur Google, sans citation inventée.</p>
+      </a>
+      <a href="#bloc-realisations" class="sg-encadre-premium no-underline block">
+        <span class="text-gold text-sm uppercase tracking-widest">Réalisations</span>
+        <strong class="block text-white text-2xl mt-2">Cachan &amp; Lagny</strong>
+        <p class="text-neutral-300 text-sm leading-relaxed mt-2">Photos de chantiers réels avec puissance, matériel et architecture visibles.</p>
+      </a>
       <div class="sg-encadre-premium">
-        <h3 class="text-gold font-semibold mb-2">Livrable clair</h3>
-        <p class="text-neutral-300 text-sm leading-relaxed">Puissance conseillée, prix cible, matériel recommandé, rentabilité estimée et points de vigilance avant engagement.</p>
-      </div>
-      <div class="sg-encadre-premium">
-        <h3 class="text-gold font-semibold mb-2">Critères installateur</h3>
-        <p class="text-neutral-300 text-sm leading-relaxed">Certification, zone, expérience toiture, qualité d'exécution, assurance, délais et cohérence avec le dossier technique.</p>
-      </div>
-      <div class="sg-encadre-premium">
-        <h3 class="text-gold font-semibold mb-2">Refus de survente</h3>
-        <p class="text-neutral-300 text-sm leading-relaxed">Batterie, puissance élevée ou option technique sont écartées si elles dégradent le retour sur investissement.</p>
-      </div>
-      <div class="sg-encadre-premium">
-        <h3 class="text-gold font-semibold mb-2">Projet pilotable</h3>
-        <p class="text-neutral-300 text-sm leading-relaxed">Le client comprend ce qui est inclus, ce qui reste à confirmer et pourquoi la solution retenue est défendable.</p>
+        <span class="text-gold text-sm uppercase tracking-widest">Pose</span>
+        <strong class="block text-white text-2xl mt-2">RGE / QualiPV</strong>
+        <p class="text-neutral-300 text-sm leading-relaxed mt-2">Professionnels sélectionnés et contrôlés selon le projet, la zone et les conditions d’éligibilité.</p>
       </div>
     </div>
   </div>
@@ -1352,11 +1395,11 @@
     <!-- A. Titre principal + sous-texte -->
     <header class="text-center mb-10 md:mb-12">
       <h2 id="bloc2-title" class="gsap-bloc2-titre text-2xl md:text-3xl lg:text-[2rem] font-bold text-white leading-tight mb-3 max-w-2xl mx-auto">
-        Beaucoup vendent des kilowatts.<br>
-        <span class="text-gold">Nous concevons des projets r&eacute;ellement rentables.</span>
+        Deux approches, deux rôles.<br>
+        <span class="text-gold">SolarGlobe commence par votre besoin.</span>
       </h2>
       <p class="gsap-bloc2-texte text-neutral-400 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
-        Le bon projet n&rsquo;est pas celui qui vous vend le plus de panneaux, mais celui qui vous évite le mauvais choix.
+        Un installateur travaille naturellement avec ses équipes, ses habitudes et ses fournisseurs. SolarGlobe étudie d’abord votre maison, puis sélectionne la solution adaptée.
       </p>
     </header>
 
@@ -1369,31 +1412,31 @@
         </h3>
         <div class="bloc2-row bloc2-header">
           <div class="bloc2-cell bloc2-cell-solar">SolarGlobe, bureau d&rsquo;étude</div>
-          <div class="bloc2-cell bloc2-cell-install">Devis solaire classique</div>
+          <div class="bloc2-cell bloc2-cell-install">Approche installateur directe</div>
         </div>
         <div class="bloc2-row">
           <div class="bloc2-cell bloc2-cell-solar">Dimensionnement basé sur votre maison et vos usages réels</div>
-          <div class="bloc2-cell bloc2-cell-install">Puissance standard propos&eacute;e (3, 6, 9&nbsp;kW&hellip;)</div>
+          <div class="bloc2-cell bloc2-cell-install">Puissance souvent cadrée par les offres et habitudes disponibles</div>
         </div>
         <div class="bloc2-row">
-          <div class="bloc2-cell bloc2-cell-solar">Objectif&nbsp;: maximiser l&rsquo;autoconsommation et le retour sur investissement</div>
-          <div class="bloc2-cell bloc2-cell-install">Objectif&nbsp;: faire signer un devis</div>
+          <div class="bloc2-cell bloc2-cell-solar">Objectif&nbsp;: défendre la cohérence technique et économique du projet</div>
+          <div class="bloc2-cell bloc2-cell-install">Objectif&nbsp;: proposer une solution que l’entreprise sait poser et suivre</div>
         </div>
         <div class="bloc2-row">
-          <div class="bloc2-cell bloc2-cell-solar">Batterie &eacute;tudi&eacute;e uniquement si elle am&eacute;liore la rentabilit&eacute;</div>
-          <div class="bloc2-cell bloc2-cell-install">Batterie absente ou ajout&eacute;e sans vraie justification</div>
+          <div class="bloc2-cell bloc2-cell-solar">Batterie &eacute;tudi&eacute;e uniquement si elle am&eacute;liore les hypothèses économiques</div>
+          <div class="bloc2-cell bloc2-cell-install">Batterie proposée selon le catalogue, les usages ou la demande initiale</div>
         </div>
         <div class="bloc2-row">
           <div class="bloc2-cell bloc2-cell-solar">Matériel sélectionné selon performance, fiabilité et intérêt économique</div>
-          <div class="bloc2-cell bloc2-cell-install">Matériel parfois dicté par le stock, l’habitude ou la marge</div>
+          <div class="bloc2-cell bloc2-cell-install">Matériel lié aux fournisseurs, aux stocks et aux technologies maîtrisées</div>
         </div>
         <div class="bloc2-row">
-          <div class="bloc2-cell bloc2-cell-solar">Prix juste pour un projet optimis&eacute;, sans surdimensionnement inutile</div>
-          <div class="bloc2-cell bloc2-cell-install">Prix parfois gonfl&eacute; par des kW superflus</div>
+          <div class="bloc2-cell bloc2-cell-solar">Prix expliqué avec ses hypothèses, ses limites et ses options utiles</div>
+          <div class="bloc2-cell bloc2-cell-install">Prix à comparer vous-même avec des périmètres parfois différents</div>
         </div>
         <div class="bloc2-row">
-          <div class="bloc2-cell bloc2-cell-solar">Installateur externe sélectionné et projet piloté jusqu’à la mise en service</div>
-          <div class="bloc2-cell bloc2-cell-install">Vous devez souvent comparer seul des offres incomparables</div>
+          <div class="bloc2-cell bloc2-cell-solar">Professionnel de pose sélectionné et projet piloté jusqu’à la mise en service</div>
+          <div class="bloc2-cell bloc2-cell-install">Vous échangez directement avec l’entreprise retenue pour son offre</div>
         </div>
       </div>
       <!-- Colonne droite : grand visuel maison -->
@@ -1404,7 +1447,7 @@
                class="max-w-full max-h-[320px] md:max-h-[520px] w-auto h-auto object-contain"
                loading="lazy" />
 
-          <span class="bloc2-visual-badge bloc2-visual-badge--rge" aria-label="Pose par partenaires externes RGE">
+          <span class="bloc2-visual-badge bloc2-visual-badge--rge" aria-label="Pose par partenaires RGE">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12.5l3 3 7-7"/><circle cx="12" cy="12" r="9"/></svg>
             RGE
           </span>
@@ -1414,12 +1457,12 @@
             25 ans
           </span>
 
-          <span class="bloc2-visual-badge bloc2-visual-badge--price" aria-label="Prix et rentabilité vérifiés">
+          <span class="bloc2-visual-badge bloc2-visual-badge--price" aria-label="Prix et cohérence économique vérifiés">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 7.5a5 5 0 1 0 0 9"/><path d="M5 10h9"/><path d="M5 14h8"/></svg>
             Prix clair
           </span>
 
-          <span class="bloc2-visual-badge bloc2-visual-badge--battery" aria-label="Batterie étudiée selon la rentabilité">
+          <span class="bloc2-visual-badge bloc2-visual-badge--battery" aria-label="Batterie étudiée selon les hypothèses économiques">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="16" height="10" rx="2"/><path d="M19 10h2v4h-2"/><path d="M7 12h6"/></svg>
             Batterie
           </span>
@@ -1434,7 +1477,7 @@
 
     <!-- Paragraphe SEO discret -->
     <p class="text-neutral-500 text-sm md:text-base leading-relaxed max-w-3xl mx-auto text-center mb-8 md:mb-10">
-      Un projet solaire fiable ne repose pas sur une promesse commerciale, mais sur une étude vérifiable. SolarGlobe fait le tri pour vous&nbsp;: puissance, matériel, prix, installateur et rentabilité sont contrôlés avant engagement.
+      Un projet solaire fiable ne repose pas sur une promesse commerciale, mais sur une étude vérifiable. SolarGlobe fait le tri pour vous&nbsp;: puissance, matériel, prix, professionnel de pose et cohérence économique sont contrôlés avant engagement.
     </p>
 
     <!-- C. 4 points cl&eacute;s compacts -->
@@ -1449,7 +1492,7 @@
       </div>
       <div class="flex items-center gap-2.5 text-neutral-200 text-sm">
         <span class="text-gold shrink-0 font-medium">&#10003;</span>
-        <span>Un prix coh&eacute;rent avec une rentabilit&eacute; r&eacute;elle</span>
+        <span>Un prix coh&eacute;rent avec des hypoth&egrave;ses expliqu&eacute;es</span>
       </div>
       <div class="flex items-center gap-2.5 text-neutral-200 text-sm">
         <span class="text-gold shrink-0 font-medium">&#10003;</span>
@@ -1480,7 +1523,7 @@
         Pourquoi passer par <span class="sg-highlight">SolarGlobe</span> avant de choisir&nbsp;?
       </h2>
       <p class="bloc3-subtitle sg-subtitle">
-        Parce que le plus grand risque dans le photovoltaïque n&rsquo;est pas le soleil&nbsp;: c&rsquo;est de choisir le mauvais devis. Nous sécurisons chaque décision avant la pose.
+        Parce que le plus grand risque dans le photovoltaïque n&rsquo;est pas le soleil&nbsp;: c&rsquo;est de signer sans savoir si la puissance, le matériel, le prix et la pose correspondent vraiment à votre maison.
       </p>
     </header>
 
@@ -1509,8 +1552,8 @@
           <img src="/assets/icons/accueil/icon-garantie.avif" alt="Garanties" />
         </div>
         <div class="bloc3-card-content">
-          <h3 class="bloc3-card-title">Installateurs externes sélectionnés</h3>
-          <p class="bloc3-card-text">La pose est confiée à des installateurs externes sélectionnés selon leur professionnalisme, la zone, la toiture et le niveau d’exigence du dossier.<br><br>Vous ne cherchez pas seul à qui faire confiance&nbsp;: nous faisons ce tri pour vous.</p>
+          <h3 class="bloc3-card-title">Professionnel adapté au dossier</h3>
+          <p class="bloc3-card-text">Le partenaire de pose est sélectionné selon son professionnalisme, la zone, la toiture et le niveau d’exigence du dossier.<br><br>Vous ne cherchez pas seul à qui faire confiance&nbsp;: nous faisons ce tri pour vous.</p>
         </div>
       </article>
       <article class="bloc3-card why-card">
@@ -1553,13 +1596,13 @@
     <!-- Bloc RGE / Preuve -->
     <div class="bloc3-rge">
       <div class="bloc3-rge-badges">
-        <img src="/assets/images/logo-rge.png" alt="Partenaires de pose externes RGE QualiPV" />
+        <img src="/assets/images/logo-rge.png" alt="Partenaires de pose RGE QualiPV" />
         <span class="text-white/75 text-sm">&#10003; Partenaires RGE</span>
         <span class="text-white/75 text-sm">&#10003; Assurance d&eacute;cennale</span>
         <span class="text-white/75 text-sm">&#10003; Conformit&eacute; normes</span>
       </div>
       <p class="bloc3-rge-text">
-        Pose confi&eacute;e &agrave; des partenaires externes RGE / QualiPV, v&eacute;rifi&eacute;s dossier par dossier pour la conformit&eacute; et la qualit&eacute; d'ex&eacute;cution.
+        Pose réalisée par des partenaires RGE / QualiPV, vérifiés dossier par dossier pour la conformité et la qualit&eacute; d'ex&eacute;cution.
       </p>
     </div>
 
@@ -1582,7 +1625,7 @@
     </h2>
 
     <p class="mt-2 text-sm sm:text-base text-neutral-200/90 max-w-2xl mx-auto font-medium">
-      Matériel sélectionné, prix expliqué, pose par professionnels externes sélectionnés et projet encadré par SolarGlobe.
+      Matériel sélectionné, prix expliqué, pose par professionnels RGE sélectionnés et projet encadré par SolarGlobe.
     </p>
 
     <p class="mt-3 text-sm sm:text-base sg-container font-semibold text-[#C39847]">
@@ -1597,7 +1640,7 @@
     <article class="sg-card sg-card-dark bloc4-card h-full gsap-tarifs-card">
       <header class="text-center">
         <h3>Pack 3 kWc &ndash; Id&eacute;al petits foyers</h3>
-        <p class="text-white/80 text-xs mt-0.5">Jusqu&rsquo;&agrave; 50&nbsp;% d&rsquo;autonomie &bull; ~13&nbsp;m&sup2; toiture</p>
+        <p class="text-white/80 text-xs mt-0.5">Repère indicatif &bull; ~13&nbsp;m&sup2; toiture</p>
       </header>
 
       <div class="flex justify-between items-center mt-2 mb-2">
@@ -1617,7 +1660,7 @@
       <ul class="bloc4-list mt-3">
         <li>6 panneaux LONGi haute performance</li>
         <li>Micro-onduleurs ATMOCE</li>
-        <li>Pose RGE par partenaire externe sélectionné</li>
+        <li>Pose RGE par partenaire sélectionné</li>
         <li>Garantie 25 ans</li>
       </ul>
       <a href="/produits/panneaux-solaires/" class="mt-3 flex items-center gap-2 text-xs text-gold hover:text-gold/70 transition no-underline border border-gold/30 hover:border-gold/60 rounded-lg px-3 py-2 bg-gold/5">
@@ -1626,9 +1669,9 @@
       </a>
 
       <div class="bloc4-stats mt-auto">
-        <span><span class="bloc4-stats-label">&Eacute;conomie</span><span class="bloc4-stats-value">~16&nbsp;000 &agrave; 22&nbsp;000&nbsp;&euro;</span></span>
-        <span><span class="bloc4-stats-label">ROI</span><span class="bloc4-stats-value">9&ndash;13&nbsp;ans</span></span>
-        <span><span class="bloc4-stats-label">CO&#8322;</span><span class="bloc4-stats-value">15&nbsp;t</span></span>
+        <span><span class="bloc4-stats-label">&Eacute;conomie estimée</span><span class="bloc4-stats-value">~16&nbsp;000 &agrave; 22&nbsp;000&nbsp;&euro;</span></span>
+        <span><span class="bloc4-stats-label">ROI estimé</span><span class="bloc4-stats-value">9&ndash;13&nbsp;ans</span></span>
+        <span><span class="bloc4-stats-label">CO&#8322; estimé</span><span class="bloc4-stats-value">15&nbsp;t</span></span>
       </div>
     </article>
 
@@ -1636,7 +1679,7 @@
     <article class="sg-card sg-card-dark bloc4-card bloc4-card-featured h-full relative gsap-tarifs-card">
       <header class="text-center relative">
         <h3>6 kWc &ndash; Maison familiale</h3>
-        <p class="text-white/80 text-xs mt-0.5">Jusqu&rsquo;&agrave; 70&nbsp;% d&rsquo;autonomie &bull; ~26&nbsp;m&sup2; toiture</p>
+        <p class="text-white/80 text-xs mt-0.5">Repère indicatif &bull; ~26&nbsp;m&sup2; toiture</p>
       </header>
 
       <div class="flex justify-between items-center mt-2 mb-2 relative">
@@ -1656,7 +1699,7 @@
       <ul class="bloc4-list mt-3 relative">
         <li>12 panneaux LONGi haute performance</li>
         <li>Micro-onduleurs ATMOCE</li>
-        <li>Pose RGE par partenaire externe sélectionné</li>
+        <li>Pose RGE par partenaire sélectionné</li>
         <li>Garantie 25 ans</li>
       </ul>
       <a href="/produits/panneaux-solaires/" class="mt-3 flex items-center gap-2 text-xs text-gold hover:text-gold/70 transition no-underline border border-gold/30 hover:border-gold/60 rounded-lg px-3 py-2 bg-gold/5 relative">
@@ -1665,17 +1708,17 @@
       </a>
 
       <div class="bloc4-stats mt-auto relative">
-        <span><span class="bloc4-stats-label">&Eacute;conomie</span><span class="bloc4-stats-value">~28&nbsp;000 &agrave; 36&nbsp;000&nbsp;&euro;</span></span>
-        <span><span class="bloc4-stats-label">ROI</span><span class="bloc4-stats-value">8&ndash;12&nbsp;ans</span></span>
-        <span><span class="bloc4-stats-label">CO&#8322;</span><span class="bloc4-stats-value">30&nbsp;t</span></span>
+        <span><span class="bloc4-stats-label">&Eacute;conomie estimée</span><span class="bloc4-stats-value">~28&nbsp;000 &agrave; 36&nbsp;000&nbsp;&euro;</span></span>
+        <span><span class="bloc4-stats-label">ROI estimé</span><span class="bloc4-stats-value">8&ndash;12&nbsp;ans</span></span>
+        <span><span class="bloc4-stats-label">CO&#8322; estimé</span><span class="bloc4-stats-value">30&nbsp;t</span></span>
       </div>
     </article>
 
-    <!-- PACK 9,215 kWc -->
+    <!-- PACK 9 kWc -->
     <article class="sg-card sg-card-dark bloc4-card h-full gsap-tarifs-card">
       <header class="text-center">
-        <h3>9,215 kWc &ndash; Grandes consommations</h3>
-        <p class="text-white/80 text-xs mt-0.5">Jusqu&rsquo;&agrave; 90&nbsp;% d&rsquo;autonomie &bull; ~40&nbsp;m&sup2; toiture</p>
+        <h3>9 kWc &ndash; Grandes consommations</h3>
+        <p class="text-white/80 text-xs mt-0.5">Repère indicatif &bull; ~40&nbsp;m&sup2; toiture</p>
       </header>
 
       <div class="flex justify-between items-center mt-2 mb-2">
@@ -1684,7 +1727,7 @@
       </div>
 
       <figure class="my-2">
-        <img src="/assets/images/accueil/bloctarifs/9kwc.avif" alt="Maison &eacute;quip&eacute;e 9,215 kWc" />
+        <img src="/assets/images/accueil/bloctarifs/9kwc.avif" alt="Maison &eacute;quip&eacute;e 9 kWc" />
       </figure>
 
       <div class="bloc4-price-wrap mt-2">
@@ -1695,7 +1738,7 @@
       <ul class="bloc4-list mt-3">
         <li>19 panneaux LONGi haute performance</li>
         <li>Micro-onduleurs ATMOCE</li>
-        <li>Pose RGE par partenaire externe sélectionné</li>
+        <li>Pose RGE par partenaire sélectionné</li>
         <li>Garantie 25 ans</li>
       </ul>
       <a href="/produits/panneaux-solaires/" class="mt-3 flex items-center gap-2 text-xs text-gold hover:text-gold/70 transition no-underline border border-gold/30 hover:border-gold/60 rounded-lg px-3 py-2 bg-gold/5">
@@ -1704,9 +1747,9 @@
       </a>
 
       <div class="bloc4-stats mt-auto">
-        <span><span class="bloc4-stats-label">&Eacute;conomie</span><span class="bloc4-stats-value">~45&nbsp;000 &agrave; 55&nbsp;000&nbsp;&euro;</span></span>
-        <span><span class="bloc4-stats-label">ROI</span><span class="bloc4-stats-value">7&ndash;11&nbsp;ans</span></span>
-        <span><span class="bloc4-stats-label">CO&#8322;</span><span class="bloc4-stats-value">45&nbsp;t</span></span>
+        <span><span class="bloc4-stats-label">&Eacute;conomie estimée</span><span class="bloc4-stats-value">~45&nbsp;000 &agrave; 55&nbsp;000&nbsp;&euro;</span></span>
+        <span><span class="bloc4-stats-label">ROI estimé</span><span class="bloc4-stats-value">7&ndash;11&nbsp;ans</span></span>
+        <span><span class="bloc4-stats-label">CO&#8322; estimé</span><span class="bloc4-stats-value">45&nbsp;t</span></span>
       </div>
     </article>
   </div>
@@ -1723,6 +1766,7 @@
   <div class="sg-container relative z-10 mt-10 md:mt-12 text-center gsap-tarifs-footer">
     <p class="text-sm text-neutral-400">
       <span class="font-bold text-gold">Prix lisible</span> : matériel, pose, mise en service, garanties et dossier d’aides sont expliqués avant engagement. L’étude vérifie ce qui est inclus, ce qui dépend de votre toiture et ce qui ne doit pas être vendu inutilement.
+      Les économies, ROI, surfaces et productions restent des estimations indicatives&nbsp;: ils dépendent notamment de la consommation, de la localisation, de l’orientation, de la production, de l’autoconsommation, des équipements du foyer et de l’évolution du prix de l’électricité.
     </p>
   </div>
 </section>
@@ -1738,7 +1782,7 @@
         Un accompagnement structur&eacute; de A &agrave; Z
       </h2>
       <p class="sg-section-subtitle text-base md:text-lg max-w-2xl mx-auto mb-12">
-        &Eacute;tude, dimensionnement, calpinage et installation : chaque &eacute;tape est pilot&eacute;e avec rigueur pour garantir un projet performant et durable.
+        &Eacute;tude, dimensionnement, sélection du matériel et pose&nbsp;: chaque &eacute;tape reste lisible, avec un interlocuteur qui suit le dossier du premier échange à la mise en service.
       </p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -1754,13 +1798,13 @@
       </div>
       <div class="rounded-2xl sg-surface border border-gold/20 p-6 text-left hover:border-gold/40 transition-colors gsap-methode-card">
         <span class="text-gold font-bold text-lg">3.</span>
-        <h3 class="text-white font-semibold mt-2 mb-1">Calpinage</h3>
-        <p class="text-neutral-300 text-sm">Implantation pr&eacute;cise des panneaux sur votre toit.</p>
+        <h3 class="text-white font-semibold mt-2 mb-1">Sélection</h3>
+        <p class="text-neutral-300 text-sm">Matériel, options et professionnel de pose adaptés au dossier.</p>
       </div>
       <div class="rounded-2xl sg-surface border border-gold/20 p-6 text-left hover:border-gold/40 transition-colors gsap-methode-card">
         <span class="text-gold font-bold text-lg">4.</span>
-        <h3 class="text-white font-semibold mt-2 mb-1">Installation</h3>
-        <p class="text-neutral-300 text-sm">Pose par des partenaires externes certifi&eacute;s RGE.</p>
+        <h3 class="text-white font-semibold mt-2 mb-1">Pilotage</h3>
+        <p class="text-neutral-300 text-sm">Suivi des démarches, de la pose et de la mise en service.</p>
       </div>
     </div>
     <a href="/notre-methode/" class="sg-btn sg-btn-outline text-base gsap-methode-cta">
@@ -1776,23 +1820,20 @@
   <div class="sg-container text-center gsap-produits-header">
     <div class="mb-3 flex items-center justify-center gap-3">
       <span class="inline-block bg-black/80 text-gold font-semibold px-3 py-1 rounded-full uppercase text-xs tracking-wide border border-gold/50">
-        Exclusivit&eacute; SolarGlobe
+        Sélection actuelle
       </span>
     </div>
 
     <h2 class="sg-section-title mb-3">
-      Le matériel que nous sélectionnons pour vous
+      Le matériel doit servir le projet, pas l’inverse
     </h2>
 
     <p class="sg-section-subtitle text-base md:text-lg sg-container font-medium leading-relaxed max-w-2xl mx-auto">
-      Chez SolarGlobe, chaque produit est s&eacute;lectionn&eacute; pour offrir un
-      <span class="text-gold font-bold">design sans compromis</span>, des
-      <span class="text-gold font-bold">performances record</span> et une
-      <span class="text-gold font-bold">fiabilit&eacute; extr&ecirc;me</span>.
+      SolarGlobe suit en permanence l’évolution des panneaux, micro-onduleurs, onduleurs, batteries et solutions de pilotage pour recommander ce qui convient au projet.
     </p>
 
     <p class="mt-3 text-sm sg-container font-semibold text-neutral-300">
-      S&eacute;lectionn&eacute;s uniquement lorsqu&rsquo;ils am&eacute;liorent la performance &eacute;conomique du projet.
+      Les marques présentées ici sont des solutions actuellement sélectionnées ou privilégiées lorsque le dossier s’y prête.
     </p>
   </div>
 
@@ -1877,7 +1918,7 @@
 
   <div class="sg-container mt-6 mb-2 text-center gsap-produits-footer">
     <span class="inline-block text-neutral-400 text-sm">
-      Tous nos &eacute;quipements sont garantis 25 ans<sup>*</sup> et test&eacute;s par nos &eacute;quipes. Livraison rapide depuis la France.
+      Notre veille technique et commerciale permet de faire évoluer la recommandation lorsqu’une solution plus pertinente apparaît.
     </span>
   </div>
 </section>
@@ -1933,30 +1974,30 @@
 <section id="bloc-partenaires" class="sg-section relative overflow-hidden gsap-bloc5">
   <div class="sg-container text-center mb-10">
     <h2 class="text-[28px] font-bold sg-h-light mb-3">
-      Nos choix techniques sont assumés
+      Une sélection qui évolue avec le marché
     </h2>
     <p class="text-sm text-white/70 max-w-2xl mx-auto">
-      Nous s&eacute;lectionnons uniquement des fabricants reconnus pour leur fiabilit&eacute;, leurs performances et leur durabilit&eacute;.
+      Nous surveillons les fabricants, les garanties, les disponibilités et les évolutions de prix pour garder une recommandation défendable.
     </p>
   </div>
 
   <div class="sg-container grid grid-cols-2 md:grid-cols-4 gap-16 gsap-logos-partners">
     <div class="partner-card">
       <img src="/assets/images/logo/longi.avif" alt="Logo Longi" loading="lazy" decoding="async" />
-      <p class="partner-label">Fabricant panneaux</p>
+      <p class="partner-label">Panneaux suivis</p>
     </div>
     <div class="partner-card">
       <img src="/assets/images/logo/aiko-logo.png" alt="Logo Aiko" loading="lazy" decoding="async" />
-      <p class="partner-label">Panneaux sélectionnés haut rendement</p>
+      <p class="partner-label">Panneaux sélectionnés selon projet</p>
     </div>
     <div class="partner-card partner-main">
-      <span class="partner-badge">Partenaire principal</span>
+      <span class="partner-badge">Sélection actuelle</span>
       <img src="/assets/images/logo/atmoce.avif" alt="Logo Atmoce" loading="lazy" decoding="async" />
-      <p class="partner-label">Micro-onduleurs &amp; batteries</p>
+      <p class="partner-label">Micro-onduleurs &amp; batteries selon dossier</p>
     </div>
     <div class="partner-card">
       <img src="/assets/images/logo/ecoflow.avif" alt="Logo Ecoflow" loading="lazy" decoding="async" />
-      <p class="partner-label">Stockage</p>
+      <p class="partner-label">Stockage étudié si utile</p>
     </div>
     <div class="partner-card">
       <img src="/assets/images/logo/isypv.avif" alt="Logo Isypv" loading="lazy" decoding="async" />
@@ -1965,41 +2006,41 @@
     <div class="partner-card">
       <span class="partner-badge-secondary">Fournisseur</span>
       <img src="/assets/images/logo/domos.avif" alt="Logo Domos" loading="lazy" decoding="async" />
-      <p class="partner-label">&Eacute;quipements</p>
+      <p class="partner-label">&Eacute;quipements selon besoin</p>
     </div>
   </div>
 
   <p class="partners-seo sg-container text-center text-sm text-white/60 mt-10 max-w-3xl mx-auto">
-    Nous sélectionnons les panneaux, micro-onduleurs, batteries et équipements selon votre toiture, votre consommation et votre rentabilité. Le matériel doit servir le projet, pas l’inverse.
+    Nous sélectionnons les panneaux, micro-onduleurs, batteries et équipements selon votre toiture, votre consommation, votre budget et les solutions disponibles au moment de l’étude. Le matériel doit servir le projet, pas l’inverse.
   </p>
 </section>
 
 <div class="sg-divider" aria-hidden="true"></div>
 
-<!-- BLOC 7 : Partenaires externes RGE / QualiPV -->
+<!-- BLOC 7 : Partenaires de pose RGE / QualiPV -->
 <section id="bloc-certif" class="sg-section relative overflow-hidden gsap-bloc6">
   <div class="sg-container grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-40 items-center">
     <!-- Visuel RGE -->
     <div class="rge-visual gsap-rge-visual order-2 md:order-1">
       <img src="/assets/images/logo-rge.avif"
-        alt="Partenaires externes RGE QualiPV pour la pose photovolta&iuml;que"
+        alt="Partenaires de pose RGE QualiPV pour la pose photovolta&iuml;que"
         loading="lazy" decoding="async" />
     </div>
 
     <!-- Contenu -->
     <div class="order-1 md:order-2">
       <h2 class="gsap-rge-header text-[26px] font-bold sg-h-light mb-4">
-        Pose par des professionnels externes sélectionnés
+        Pose par des professionnels RGE sélectionnés
       </h2>
       <div class="gsap-rge-content">
         <p class="text-sm leading-relaxed" style="color: rgba(255,255,255,0.75);">
-          SolarGlobe cadre l’étude et sélectionne des installateurs externes RGE / QualiPV pour leur professionnalisme lorsque la pose est lancée. Le client bénéficie d’un projet étudié en amont, d’un matériel choisi et d’une exécution confiée à des professionnels externes adaptés au dossier.
+          SolarGlobe conçoit le projet et sélectionne le professionnel RGE / QualiPV adapté lorsque la pose est lancée. Le client bénéficie d’un dossier étudié en amont, d’un matériel choisi pour son usage et d’une exécution confiée à un partenaire contrôlé.
         </p>
         <ul class="rge-benefits list-none pl-0">
           <li>&#10003; Pose conforme aux normes</li>
           <li>&#10003; Acc&egrave;s aux aides de l&rsquo;&Eacute;tat</li>
           <li>&#10003; Mat&eacute;riel certifi&eacute; et durable</li>
-          <li>&#10003; Intervention par un partenaire externe sélectionné</li>
+          <li>&#10003; Intervention par un partenaire sélectionné pour le dossier</li>
         </ul>
       </div>
       <div class="rge-proof gsap-rge-proof">
@@ -2037,9 +2078,9 @@
   <div class="sg-container">
     <div class="sg-realisations-head">
       <span class="sg-realisations-kicker">Chantiers r&eacute;alis&eacute;s</span>
-      <h2 id="sg-realisations-title" class="sg-section-title mb-4">Deux exemples d'installation avec nos panneaux LONGi et AIKO</h2>
+      <h2 id="sg-realisations-title" class="sg-section-title mb-4">Deux exemples de projets étudiés puis réalisés</h2>
       <p class="sg-section-subtitle text-base md:text-lg max-w-3xl mx-auto">
-        Des projets r&eacute;els avec mat&eacute;riel s&eacute;lectionn&eacute;, protections adapt&eacute;es et batterie virtuelle Urban Solar pour valoriser le surplus.
+        Des projets r&eacute;els avec mat&eacute;riel s&eacute;lectionn&eacute;, protections adapt&eacute;es et batterie virtuelle Urban Solar lorsque la valorisation du surplus le justifie.
       </p>
     </div>
 
@@ -2086,7 +2127,7 @@
             </div>
           </div>
           <p class="sg-realisation-note">
-            Un chantier utile pour montrer le travail de calpinage : plusieurs pans, une puissance importante et une solution pens&eacute;e pour suivre la production dans la dur&eacute;e.
+            Données disponibles&nbsp;: puissance, matériel, architecture et photos. Le besoin client détaillé pourra être ajouté ultérieurement sans inventer d’informations.
           </p>
         </div>
       </article>
@@ -2127,14 +2168,14 @@
             </div>
           </div>
           <p class="sg-realisation-note">
-            Un exemple clair de projet dimensionn&eacute; juste : puissance ma&icirc;tris&eacute;e, pose propre et choix technique coh&eacute;rent avec la toiture.
+            Données disponibles&nbsp;: puissance, matériel, protections et photos. Le besoin client détaillé pourra être ajouté ultérieurement sans inventer d’informations.
           </p>
         </div>
       </article>
     </div>
 
     <p class="sg-realisations-footer">
-      Les retours clients publics sont pr&eacute;sent&eacute;s juste en dessous via les avis Google. Un t&eacute;moignage d&eacute;di&eacute; pourra &ecirc;tre ajout&eacute; sous chaque chantier d&egrave;s qu'il est valid&eacute; par le client.
+      Un t&eacute;moignage d&eacute;di&eacute; pourra &ecirc;tre ajout&eacute; sous chaque chantier d&egrave;s qu'il est valid&eacute; par le client.
     </p>
   </div>
 </section>
@@ -2158,44 +2199,6 @@
 
 <div class="sg-divider" aria-hidden="true"></div>
 
-<!-- Témoignages clients (avis Google) — preuve sociale avant CTA final -->
-<section id="bloc-avis-google" class="sg-google-reviews" aria-labelledby="sg-avis-google-title">
-  <div class="sg-google-reviews__inner sg-container">
-    <div class="sg-google-reviews__intro">
-      <p class="sg-google-reviews__kicker">Témoignages clients</p>
-      <h2 id="sg-avis-google-title" class="sg-google-reviews__title">Ils nous font confiance sur Google</h2>
-      <p class="sg-google-reviews__subtitle">
-        SolarGlobe est notée <strong class="text-white/90">5 sur 5</strong> sur la base de <strong class="text-white/90">12 avis</strong> — avis publics consultables sur Google.
-      </p>
-      <div class="sg-google-reviews__rating-row">
-        <div class="sg-google-reviews__stars" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <span class="sg-google-reviews__score">5/5</span>
-        <span class="sg-google-reviews__meta"><strong>12 avis</strong> &middot; SolarGlobe sur Google</span>
-      </div>
-      <div class="sg-google-reviews__actions">
-        <a href="/etude-gratuite/" class="sg-btn sg-btn-primary">Demander mon &eacute;tude gratuite</a>
-        <a href="https://maps.app.goo.gl/zPK1i92kwCHySPHp7" class="sg-google-reviews__btn-google" target="_blank" rel="noopener noreferrer" title="Voir la fiche Google et les avis (nouvel onglet)">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          Voir nos avis sur Google
-        </a>
-
-      </div>
-      <p class="sg-google-reviews__disclaimer">
-        Avis publics consultables sur Google. Les avis sans texte sont inclus dans le total affich&eacute; (12), sans citation.
-      </p>
-    </div>
-    <div id="sg-testimonials-grid-mount" class="sg-testimonials-grid" role="list"></div>
-  </div>
-</section>
-
-<div class="sg-divider" aria-hidden="true"></div>
-
 <!-- BLOC 9 : CONCLUSION & CTA FINAL (identique au bloc RGE) -->
 <section id="bloc-cta-final" class="sg-section relative overflow-hidden gsap-bloc-cta">
   <div class="sg-container grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-40 items-center">
@@ -2209,11 +2212,11 @@
     <!-- Contenu -->
     <div class="order-1 md:order-2">
       <h2 class="gsap-cta-header text-[26px] font-bold sg-h-light mb-4">
-        Ne choisissez pas votre projet solaire à l’aveugle
+        Faites défendre votre projet avant de signer
       </h2>
       <div class="gsap-cta-content">
         <p class="text-sm leading-relaxed mb-4" style="color: rgba(255,255,255,0.75);">
-          Faites vérifier votre toiture, votre puissance, votre matériel et votre prix avant de vous engager.
+          Faites vérifier votre toiture, votre consommation, la puissance proposée, le matériel, les options et le prix avant de vous engager.
         </p>
         <a href="/etude-gratuite/" class="sg-btn sg-btn-primary text-base">
           Faire vérifier mon projet solaire
@@ -2226,8 +2229,8 @@
 
 <!-- Bloc identité express, juste avant le footer -->
 <div class="sg-container text-center sg-identite-express">
-  <p class="text-lg text-gold font-bold">
-    SolarGlobe, bureau d’étude solaire indépendant, fondé pour redonner confiance dans le photovoltaïque.<br>
+  <p class="text-lg text-gold font-bold max-w-4xl mx-auto">
+    SolarGlobe a été créé pour redonner de la confiance dans l’achat photovoltaïque&nbsp;: remettre l’étude du besoin avant la vente de matériel, garder un interlocuteur qui suit réellement le dossier et aider chaque client à prendre une décision compréhensible.<br>
     <a href="/qui-sommes-nous/" class="underline hover:text-yellow-300 transition">
       D&eacute;couvrir notre histoire
     </a>
@@ -2403,13 +2406,6 @@
 
 <div id="footer-placeholder"></div>
 <script src="/assets/js/footer.js"></script>
-<script src="/assets/js/testimonials.data.js"></script>
-<script src="/assets/js/testimonials-section.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    if (window.SG_TestimonialsSection) window.SG_TestimonialsSection.initHomeSection();
-  });
-</script>
 
 <!-- GSAP & ScrollTrigger (une seule inclusion sur la page) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -2585,7 +2581,7 @@
         scrollTrigger: { trigger: ".gsap-bloc5", start: "top 85%", once: true }
       });
 
-    // ---------------------- BLOC 6 : partenaires externes RGE (m&ecirc;me script que bloc 4 packs) ----------------------
+    // ---------------------- BLOC 6 : partenaires RGE (m&ecirc;me script que bloc 4 packs) ----------------------
     const rgeHeader = document.querySelector('#bloc-certif .gsap-rge-header');
     const rgeVisual = document.querySelector('#bloc-certif .gsap-rge-visual');
     const rgeContent = document.querySelector('#bloc-certif .gsap-rge-content');
@@ -2695,7 +2691,7 @@
 
     gsap.from(".gsap-bloc2-tableau", {
       opacity: 0,
-      x: -60,
+      y: 36,
       duration: 0.8,
       delay: 0.3,
       ease: "power2.out",
@@ -2707,7 +2703,7 @@
 
     gsap.from(".gsap-bloc2-photo", {
       opacity: 0,
-      x: 60,
+      y: 36,
       duration: 0.8,
       delay: 0.4,
       ease: "power2.out",
@@ -2856,10 +2852,11 @@
 </script>
 
 <!-- BANDEAU COOKIES SOLARGLOBE PREMIUM -->
-<div id="cookie-banner-solarglobe" style="display:none; position:fixed; left:0; right:0; bottom:0; z-index:9999; width:100vw;">
+<div id="cookie-banner-solarglobe" style="display:none; position:fixed; left:0; right:0; bottom:0; z-index:9999; width:auto; box-sizing:border-box;">
   <div style="
     max-width:600px;
-    width:94vw;
+    width:calc(100% - 32px);
+    box-sizing:border-box;
     margin: 0 auto 2.5vw auto;
     background:#101010;
     border:2px solid #C39847;
@@ -2872,11 +2869,11 @@
     align-items:center;
     pointer-events:auto;
   ">
-<span style="font-size:1.2rem; font-weight:700; color:#C39847; margin-bottom:0.6rem;">
+<span style="display:block; max-width:260px; text-align:center; font-size:1rem; line-height:1.35; font-weight:700; color:#C39847; margin-bottom:0.6rem; white-space:normal;">
   Cookies &amp; vie priv&eacute;e&nbsp;: notre priorit&eacute;.
 </span>
 
-<span style="text-align:center; font-size:1rem; color:#fff; margin-bottom:1.2rem;">
+<span style="display:block; max-width:240px; text-align:center; font-size:0.95rem; line-height:1.55; color:#fff; margin-bottom:1.2rem; white-space:normal;">
   Chez SolarGlobe, aucun cookie non essentiel ne sera d&eacute;pos&eacute; sans votre accord.<br>
   Vous pouvez tout accepter, tout refuser ou personnaliser vos choix &agrave; tout moment.<br>
   <a href="/cookies/" style="color:#C39847; text-decoration:underline;" target="_blank">
@@ -2944,7 +2941,7 @@
     "@id": "https://www.solarglobe.fr/#website",
     "url": "https://www.solarglobe.fr/",
     "name": "SolarGlobe",
-    "description": "SolarGlobe sécurise les projets photovoltaïques résidentiels : étude, dimensionnement, sélection du matériel, installateurs externes sélectionnés pour leur professionnalisme et prix clair.",
+    "description": "SolarGlobe défend les projets photovoltaïques résidentiels : étude indépendante, dimensionnement réel, sélection du matériel, professionnels RGE adaptés au dossier et prix clair.",
     "publisher": {
       "@type": "Organization",
       "@id": "https://www.solarglobe.fr/#organization",
@@ -2961,7 +2958,7 @@
     "@id": "https://www.solarglobe.fr/#webpage",
     "url": "https://www.solarglobe.fr/",
     "name": "Accueil – SolarGlobe",
-    "description": "Passez au solaire sans choisir à l'aveugle : étude gratuite, projet vérifié, matériel sélectionné, prix clair et installateurs externes sélectionnés pour leur professionnalisme.",
+    "description": "Passez au solaire sans choisir à l'aveugle : étude indépendante, projet vérifié, matériel sélectionné, prix clair et professionnels RGE adaptés au dossier.",
     "inLanguage": "fr",
     "isPartOf": {
       "@id": "https://www.solarglobe.fr/#website"
