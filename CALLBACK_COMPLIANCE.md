@@ -2,7 +2,7 @@
 
 Date : 26/08/2026
 
-Ce dépôt contient le site public statique. Il ne contient pas le CRM d’appel ni le backend de scoring des prospects achetés. Les formulaires publics ont été durcis pour transmettre une preuve minimale horodatable, mais le blocage opérationnel des appels doit être implémenté dans le CRM qui consomme ces demandes.
+Ce dépôt contient le site public statique. Il ne contient pas le CRM d’appel ni le backend de scoring des prospects achetés. Les formulaires publics transmettent une preuve minimale horodatable, mais cette preuve reste constituée côté navigateur puis envoyée via FormSubmit. Elle ne remplace donc pas une preuve serveur robuste : le `request_id`, le calcul des cinq jours ouvrables, le stockage de l’instantané, le hash de preuve, les statuts d’appel et le blocage opérationnel doivent être recalculés, validés et conservés côté serveur ou dans le CRM qui consomme ces demandes.
 
 ## Payload minimal attendu
 
@@ -46,6 +46,8 @@ Je demande expressément à SolarGlobe de me rappeler au sujet de mon projet pho
 `callback_deadline = demande + 5 jours ouvrables`, fuseau Europe/Paris. Le samedi compte comme jour ouvrable, le dimanche et les jours fériés habituellement non travaillés ne comptent pas. Le calcul commence le jour ouvrable suivant la demande.
 
 Téléphone bloqué si statut : `proof_missing`, `expired`, `withdrawn`, `do_not_call`, `legal_review_required`. Tout déblocage manuel doit être journalisé avec utilisateur, date, justification et preuve.
+
+Les champs cachés transmis par le site ne doivent pas être considérés comme une source d’autorisation suffisante à eux seuls. Le CRM doit vérifier ou reconstruire la preuve à partir d’un enregistrement serveur, puis bloquer par défaut tout prospect dont la preuve est absente, expirée, retirée, ambiguë ou non rattachée explicitement à SolarGlobe.
 
 ## Prospects achetés
 
