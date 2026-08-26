@@ -3,130 +3,636 @@
   "trailingSlash": true,
   "cleanUrls": true,
   "redirects": [
-    { "source": "/aides-financieres.html", "destination": "/blog/aides-financieres/", "statusCode": 301 },
-    { "source": "/aides-financieres", "destination": "/blog/aides-financieres/", "statusCode": 301 },
-    { "source": "/aides-financieres/", "destination": "/blog/aides-financieres/", "statusCode": 301 },
-    { "source": "/autonomie-solaire.html", "destination": "/blog/autonomie-solaire/", "statusCode": 301 },
-    { "source": "/autonomie-solaire", "destination": "/blog/autonomie-solaire/", "statusCode": 301 },
-    { "source": "/autonomie-solaire/", "destination": "/blog/autonomie-solaire/", "statusCode": 301 },
-    { "source": "/choisir-puissance-solaire.html", "destination": "/le-solaire/3kwc-6kwc-9kwc/", "statusCode": 301 },
-    { "source": "/choisir-puissance-solaire", "destination": "/le-solaire/3kwc-6kwc-9kwc/", "statusCode": 301 },
-    { "source": "/choisir-puissance-solaire/", "destination": "/le-solaire/3kwc-6kwc-9kwc/", "statusCode": 301 },
-    { "source": "/rendement-panneaux.html", "destination": "/blog/rendement-panneaux/", "statusCode": 301 },
-    { "source": "/rendement-panneaux", "destination": "/blog/rendement-panneaux/", "statusCode": 301 },
-    { "source": "/rendement-panneaux/", "destination": "/blog/rendement-panneaux/", "statusCode": 301 },
-    { "source": "/C.G.V.html", "destination": "/cgv/", "statusCode": 301 },
-    { "source": "/C.G.V", "destination": "/cgv/", "statusCode": 301 },
-    { "source": "/C.G.V/", "destination": "/cgv/", "statusCode": 301 },
-    { "source": "/etude-solaire-gratuite", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/etude-solaire-gratuite/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/pages-expertise/bureau-etude-photovoltaique", "destination": "/bureau-etude-photovoltaique/", "statusCode": 301 },
-    { "source": "/pages-expertise/bureau-etude-photovoltaique/", "destination": "/bureau-etude-photovoltaique/", "statusCode": 301 },
-    { "source": "/pages-expertise/dimensionnement-photovoltaique", "destination": "/dimensionnement-photovoltaique/", "statusCode": 301 },
-    { "source": "/pages-expertise/dimensionnement-photovoltaique/", "destination": "/dimensionnement-photovoltaique/", "statusCode": 301 },
-    { "source": "/pages-expertise/etude-solaire", "destination": "/etude-solaire/", "statusCode": 301 },
-    { "source": "/pages-expertise/etude-solaire/", "destination": "/etude-solaire/", "statusCode": 301 },
-    { "source": "/pages-expertise/rentabilite-solaire", "destination": "/rentabilite-solaire/", "statusCode": 301 },
-    { "source": "/pages-expertise/rentabilite-solaire/", "destination": "/rentabilite-solaire/", "statusCode": 301 },
-    { "source": "/le-solaire/rentabilite-panneaux-solaires", "destination": "/rentabilite-solaire/", "statusCode": 301 },
-    { "source": "/le-solaire/rentabilite-panneaux-solaires/", "destination": "/rentabilite-solaire/", "statusCode": 301 },
-    { "source": "/seo/panneaux-solaires", "destination": "/produits/panneaux-solaires/", "statusCode": 301 },
-    { "source": "/seo/panneaux-solaires/", "destination": "/produits/panneaux-solaires/", "statusCode": 301 },
-    { "source": "/seo/panneaux-photovoltaiques", "destination": "/produits/panneaux-solaires/", "statusCode": 301 },
-    { "source": "/seo/panneaux-photovoltaiques/", "destination": "/produits/panneaux-solaires/", "statusCode": 301 },
-    { "source": "/seo/rentabilite-panneaux-solaires", "destination": "/rentabilite-solaire/", "statusCode": 301 },
-    { "source": "/seo/rentabilite-panneaux-solaires/", "destination": "/rentabilite-solaire/", "statusCode": 301 },
-    { "source": "/seo/autoconsommation-solaire", "destination": "/le-solaire/autoconsommation-solaire/", "statusCode": 301 },
-    { "source": "/seo/autoconsommation-solaire/", "destination": "/le-solaire/autoconsommation-solaire/", "statusCode": 301 },
-    { "source": "/seo/aides-financements", "destination": "/le-solaire/aides-panneaux-solaires/", "statusCode": 301 },
-    { "source": "/seo/aides-financements/", "destination": "/le-solaire/aides-panneaux-solaires/", "statusCode": 301 },
-    { "source": "/seo/installation-solaire", "destination": "/notre-methode/installation/", "statusCode": 301 },
-    { "source": "/seo/installation-solaire/", "destination": "/notre-methode/installation/", "statusCode": 301 },
-    { "source": "/seo/production-solaire", "destination": "/le-solaire/rendement-panneaux-solaires/", "statusCode": 301 },
-    { "source": "/seo/production-solaire/", "destination": "/le-solaire/rendement-panneaux-solaires/", "statusCode": 301 },
-    { "source": "/seo/batteries-solaires", "destination": "/le-solaire/batterie-solaire/", "statusCode": 301 },
-    { "source": "/seo/batteries-solaires/", "destination": "/le-solaire/batterie-solaire/", "statusCode": 301 },
-    { "source": "/seo/onduleurs-solaires", "destination": "/produits/micro-onduleurs/", "statusCode": 301 },
-    { "source": "/seo/onduleurs-solaires/", "destination": "/produits/micro-onduleurs/", "statusCode": 301 },
-    { "source": "/seo/energie-solaire-maison", "destination": "/le-solaire/", "statusCode": 301 },
-    { "source": "/seo/energie-solaire-maison/", "destination": "/le-solaire/", "statusCode": 301 },
-    { "source": "/seo/solution-solaire-sur-mesure", "destination": "/notre-methode/", "statusCode": 301 },
-    { "source": "/seo/solution-solaire-sur-mesure/", "destination": "/notre-methode/", "statusCode": 301 },
-    { "source": "/seo/villes/meaux", "destination": "/panneaux-solaires-meaux/", "statusCode": 301 },
-    { "source": "/seo/villes/meaux/", "destination": "/panneaux-solaires-meaux/", "statusCode": 301 },
-    { "source": "/seo/villes/chelles", "destination": "/panneaux-solaires-chelles/", "statusCode": 301 },
-    { "source": "/seo/villes/chelles/", "destination": "/panneaux-solaires-chelles/", "statusCode": 301 },
-    { "source": "/seo/villes/fontainebleau", "destination": "/panneaux-solaires-fontainebleau/", "statusCode": 301 },
-    { "source": "/seo/villes/fontainebleau/", "destination": "/panneaux-solaires-fontainebleau/", "statusCode": 301 },
-    { "source": "/seo/villes/evry", "destination": "/panneaux-solaires-evry/", "statusCode": 301 },
-    { "source": "/seo/villes/evry/", "destination": "/panneaux-solaires-evry/", "statusCode": 301 },
-    { "source": "/seo/villes/evry-courcouronnes", "destination": "/panneaux-solaires-evry/", "statusCode": 301 },
-    { "source": "/seo/villes/evry-courcouronnes/", "destination": "/panneaux-solaires-evry/", "statusCode": 301 },
-    { "source": "/seo/villes/massy", "destination": "/panneaux-solaires-massy/", "statusCode": 301 },
-    { "source": "/seo/villes/massy/", "destination": "/panneaux-solaires-massy/", "statusCode": 301 },
-    { "source": "/seo/villes/argenteuil", "destination": "/panneaux-solaires-argenteuil/", "statusCode": 301 },
-    { "source": "/seo/villes/argenteuil/", "destination": "/panneaux-solaires-argenteuil/", "statusCode": 301 },
-    { "source": "/seo/villes/compiegne", "destination": "/panneaux-solaires-compiegne/", "statusCode": 301 },
-    { "source": "/seo/villes/compiegne/", "destination": "/panneaux-solaires-compiegne/", "statusCode": 301 },
-    { "source": "/seo/villes/beauvais", "destination": "/panneaux-solaires-beauvais/", "statusCode": 301 },
-    { "source": "/seo/villes/beauvais/", "destination": "/panneaux-solaires-beauvais/", "statusCode": 301 },
-    { "source": "/seo/villes/soissons", "destination": "/panneaux-solaires-soissons/", "statusCode": 301 },
-    { "source": "/seo/villes/soissons/", "destination": "/panneaux-solaires-soissons/", "statusCode": 301 },
-    { "source": "/seo/villes/laon", "destination": "/panneaux-solaires-laon/", "statusCode": 301 },
-    { "source": "/seo/villes/laon/", "destination": "/panneaux-solaires-laon/", "statusCode": 301 },
-    { "source": "/seo/villes/reims", "destination": "/panneaux-solaires-reims/", "statusCode": 301 },
-    { "source": "/seo/villes/reims/", "destination": "/panneaux-solaires-reims/", "statusCode": 301 },
-    { "source": "/seo/villes/orleans", "destination": "/panneaux-solaires-orleans/", "statusCode": 301 },
-    { "source": "/seo/villes/orleans/", "destination": "/panneaux-solaires-orleans/", "statusCode": 301 },
-    { "source": "/seo/villes/auxerre", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/auxerre/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/bar-sur-seine", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/bar-sur-seine/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/chalons-en-champagne", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/chalons-en-champagne/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/chateau-thierry", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/chateau-thierry/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/dourdan", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/dourdan/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/epernay", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/epernay/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/etampes", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/etampes/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/gien", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/gien/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/joigny", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/joigny/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/l-isle-adam", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/l-isle-adam/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/lagny-sur-marne", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/lagny-sur-marne/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/magny-en-vexin", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/magny-en-vexin/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/migennes", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/migennes/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/montargis", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/montargis/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/montmorency", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/montmorency/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/nogent-sur-oise", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/nogent-sur-oise/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/olivet", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/olivet/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/provins", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/provins/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/romilly-sur-seine", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/romilly-sur-seine/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/sainte-savine", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/sainte-savine/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/saint-quentin", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/saint-quentin/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/senlis", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/senlis/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/sens", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/sens/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/troyes", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/troyes/", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/vitry-le-francois", "destination": "/etude-gratuite/", "statusCode": 301 },
-    { "source": "/seo/villes/vitry-le-francois/", "destination": "/etude-gratuite/", "statusCode": 301 }
+    {
+      "source": "/aides-financieres.html",
+      "destination": "/blog/aides-financieres/",
+      "statusCode": 301
+    },
+    {
+      "source": "/aides-financieres",
+      "destination": "/blog/aides-financieres/",
+      "statusCode": 301
+    },
+    {
+      "source": "/aides-financieres/",
+      "destination": "/blog/aides-financieres/",
+      "statusCode": 301
+    },
+    {
+      "source": "/autonomie-solaire.html",
+      "destination": "/blog/autonomie-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/autonomie-solaire",
+      "destination": "/blog/autonomie-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/autonomie-solaire/",
+      "destination": "/blog/autonomie-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/choisir-puissance-solaire.html",
+      "destination": "/le-solaire/3kwc-6kwc-9kwc/",
+      "statusCode": 301
+    },
+    {
+      "source": "/choisir-puissance-solaire",
+      "destination": "/le-solaire/3kwc-6kwc-9kwc/",
+      "statusCode": 301
+    },
+    {
+      "source": "/choisir-puissance-solaire/",
+      "destination": "/le-solaire/3kwc-6kwc-9kwc/",
+      "statusCode": 301
+    },
+    {
+      "source": "/rendement-panneaux.html",
+      "destination": "/blog/rendement-panneaux/",
+      "statusCode": 301
+    },
+    {
+      "source": "/rendement-panneaux",
+      "destination": "/blog/rendement-panneaux/",
+      "statusCode": 301
+    },
+    {
+      "source": "/rendement-panneaux/",
+      "destination": "/blog/rendement-panneaux/",
+      "statusCode": 301
+    },
+    {
+      "source": "/C.G.V.html",
+      "destination": "/cgv/",
+      "statusCode": 301
+    },
+    {
+      "source": "/C.G.V",
+      "destination": "/cgv/",
+      "statusCode": 301
+    },
+    {
+      "source": "/C.G.V/",
+      "destination": "/cgv/",
+      "statusCode": 301
+    },
+    {
+      "source": "/etude-solaire-gratuite",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/etude-solaire-gratuite/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pages-expertise/bureau-etude-photovoltaique",
+      "destination": "/bureau-etude-photovoltaique/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pages-expertise/bureau-etude-photovoltaique/",
+      "destination": "/bureau-etude-photovoltaique/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pages-expertise/dimensionnement-photovoltaique",
+      "destination": "/dimensionnement-photovoltaique/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pages-expertise/dimensionnement-photovoltaique/",
+      "destination": "/dimensionnement-photovoltaique/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pages-expertise/etude-solaire",
+      "destination": "/etude-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pages-expertise/etude-solaire/",
+      "destination": "/etude-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pages-expertise/rentabilite-solaire",
+      "destination": "/rentabilite-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pages-expertise/rentabilite-solaire/",
+      "destination": "/rentabilite-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/le-solaire/rentabilite-panneaux-solaires",
+      "destination": "/rentabilite-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/le-solaire/rentabilite-panneaux-solaires/",
+      "destination": "/rentabilite-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/panneaux-solaires",
+      "destination": "/produits/panneaux-solaires/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/panneaux-solaires/",
+      "destination": "/produits/panneaux-solaires/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/panneaux-photovoltaiques",
+      "destination": "/produits/panneaux-solaires/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/panneaux-photovoltaiques/",
+      "destination": "/produits/panneaux-solaires/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/rentabilite-panneaux-solaires",
+      "destination": "/rentabilite-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/rentabilite-panneaux-solaires/",
+      "destination": "/rentabilite-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/autoconsommation-solaire",
+      "destination": "/le-solaire/autoconsommation-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/autoconsommation-solaire/",
+      "destination": "/le-solaire/autoconsommation-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/aides-financements",
+      "destination": "/le-solaire/aides-panneaux-solaires/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/aides-financements/",
+      "destination": "/le-solaire/aides-panneaux-solaires/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/installation-solaire",
+      "destination": "/notre-methode/installation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/installation-solaire/",
+      "destination": "/notre-methode/installation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/production-solaire",
+      "destination": "/le-solaire/rendement-panneaux-solaires/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/production-solaire/",
+      "destination": "/le-solaire/rendement-panneaux-solaires/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/batteries-solaires",
+      "destination": "/le-solaire/batterie-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/batteries-solaires/",
+      "destination": "/le-solaire/batterie-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/onduleurs-solaires",
+      "destination": "/produits/micro-onduleurs/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/onduleurs-solaires/",
+      "destination": "/produits/micro-onduleurs/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/energie-solaire-maison",
+      "destination": "/le-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/energie-solaire-maison/",
+      "destination": "/le-solaire/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/solution-solaire-sur-mesure",
+      "destination": "/notre-methode/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/solution-solaire-sur-mesure/",
+      "destination": "/notre-methode/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/meaux",
+      "destination": "/panneaux-solaires-meaux/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/meaux/",
+      "destination": "/panneaux-solaires-meaux/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/chelles",
+      "destination": "/panneaux-solaires-chelles/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/chelles/",
+      "destination": "/panneaux-solaires-chelles/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/fontainebleau",
+      "destination": "/panneaux-solaires-fontainebleau/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/fontainebleau/",
+      "destination": "/panneaux-solaires-fontainebleau/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/evry",
+      "destination": "/panneaux-solaires-evry/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/evry/",
+      "destination": "/panneaux-solaires-evry/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/evry-courcouronnes",
+      "destination": "/panneaux-solaires-evry/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/evry-courcouronnes/",
+      "destination": "/panneaux-solaires-evry/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/massy",
+      "destination": "/panneaux-solaires-massy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/massy/",
+      "destination": "/panneaux-solaires-massy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/argenteuil",
+      "destination": "/panneaux-solaires-argenteuil/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/argenteuil/",
+      "destination": "/panneaux-solaires-argenteuil/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/compiegne",
+      "destination": "/panneaux-solaires-compiegne/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/compiegne/",
+      "destination": "/panneaux-solaires-compiegne/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/beauvais",
+      "destination": "/panneaux-solaires-beauvais/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/beauvais/",
+      "destination": "/panneaux-solaires-beauvais/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/soissons",
+      "destination": "/panneaux-solaires-soissons/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/soissons/",
+      "destination": "/panneaux-solaires-soissons/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/laon",
+      "destination": "/panneaux-solaires-laon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/laon/",
+      "destination": "/panneaux-solaires-laon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/reims",
+      "destination": "/panneaux-solaires-reims/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/reims/",
+      "destination": "/panneaux-solaires-reims/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/orleans",
+      "destination": "/panneaux-solaires-orleans/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/orleans/",
+      "destination": "/panneaux-solaires-orleans/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/auxerre",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/auxerre/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/bar-sur-seine",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/bar-sur-seine/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/chalons-en-champagne",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/chalons-en-champagne/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/chateau-thierry",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/chateau-thierry/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/dourdan",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/dourdan/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/epernay",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/epernay/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/etampes",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/etampes/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/gien",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/gien/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/joigny",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/joigny/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/l-isle-adam",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/l-isle-adam/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/lagny-sur-marne",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/lagny-sur-marne/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/magny-en-vexin",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/magny-en-vexin/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/migennes",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/migennes/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/montargis",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/montargis/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/montmorency",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/montmorency/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/nogent-sur-oise",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/nogent-sur-oise/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/olivet",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/olivet/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/provins",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/provins/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/romilly-sur-seine",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/romilly-sur-seine/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/sainte-savine",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/sainte-savine/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/saint-quentin",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/saint-quentin/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/senlis",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/senlis/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/sens",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/sens/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/troyes",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/troyes/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/vitry-le-francois",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/seo/villes/vitry-le-francois/",
+      "destination": "/etude-gratuite/",
+      "statusCode": 301
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/assets/guide-parcours-solarglobe.pdf",
+      "destination": "/api/gone-guide"
+    }
   ]
 }

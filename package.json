@@ -4,7 +4,8 @@
   "scripts": {
     "build:tailwind": "tailwindcss -i ./assets/css/tailwind.input.css -o ./assets/css/tailwind.css --minify",
     "test:jsonld": "node scripts/validate-jsonld.js",
-    "watch:tailwind": "tailwindcss -i ./assets/css/tailwind.input.css -o ./assets/css/tailwind.css --watch"
+    "watch:tailwind": "tailwindcss -i ./assets/css/tailwind.input.css -o ./assets/css/tailwind.css --watch",
+    "test:public-compliance": "node scripts/check-public-compliance.js"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"

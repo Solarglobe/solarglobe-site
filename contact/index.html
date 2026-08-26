@@ -184,6 +184,11 @@
         <form class="space-y-6" action="https://formsubmit.co/contact@solarglobe.fr" method="POST">
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value="/merci/" />
+          <input type="hidden" name="form_version" value="callback-request-2026-08-26" />
+          <input type="hidden" name="source_type" value="website_contact_form" />
+          <input type="hidden" name="source_url" value="https://www.solarglobe.fr/contact/" />
+          <input type="hidden" name="exact_request_text" value="Je demande expressément à SolarGlobe de me rappeler au sujet de mon projet photovoltaïque et des services que j’ai sélectionnés." />
+          <input type="hidden" name="requested_services" value="demande_contact_libre" />
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <label for="contact-nom" class="sg-label text-neutral-300 block mb-2">Nom</label>
@@ -224,7 +229,7 @@
           <div class="flex items-start gap-3 text-sm text-neutral-300">
             <input id="contact-consent" type="checkbox" name="consent" required class="mt-1 rounded border-gold/40">
             <span>
-              <label for="contact-consent">J'accepte que mes données soient utilisées pour me recontacter au sujet de ma demande.</label>
+              <label for="contact-consent">Je demande expressément à SolarGlobe de me rappeler au sujet de mon projet photovoltaïque et des services que j’ai sélectionnés.</label>
               <a href="/cookies/" class="text-gold underline underline-offset-2">En savoir plus</a>.
             </span>
           </div>

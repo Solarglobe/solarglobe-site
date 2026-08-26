@@ -287,6 +287,14 @@
                   <span class="sim-form-error" id="err-tel" role="alert"></span>
                 </div>
               </div>
+              
+              <div class="sim-field sim-field--consent">
+                <label class="sim-result__form-rgpd" style="display:flex;gap:.65rem;align-items:flex-start">
+                  <input id="form-callback-consent" type="checkbox" name="callback_consent" required style="margin-top:.25rem" />
+                  <span>Je demande expressément à SolarGlobe de me rappeler au sujet de mon projet photovoltaïque et des services que j’ai sélectionnés.</span>
+                </label>
+                <span class="sim-form-error" id="err-callback-consent" role="alert"></span>
+              </div>
               <ul class="sim-result__form-reassurance">
                 <li>Vos données restent confidentielles</li>
                 <li>Aucun démarchage abusif</li>
@@ -304,6 +312,13 @@
               <input type="hidden" name="Inclinaison" id="formInclinaison" />
               <input type="hidden" name="Obstacles" id="formObstacles" />
               <input type="hidden" name="Panneaux" id="formPanneaux" />
+              <input type="hidden" name="request_timestamp" id="formRequestTimestamp" />
+              <input type="hidden" name="source_type" value="website_study_form" />
+              <input type="hidden" name="source_url" value="https://www.solarglobe.fr/etude-gratuite/" />
+              <input type="hidden" name="form_version" value="study-callback-request-2026-08-26" />
+              <input type="hidden" name="exact_request_text" value="Je demande expressément à SolarGlobe de me rappeler au sujet de mon projet photovoltaïque et des services que j’ai sélectionnés." />
+              <input type="hidden" name="requested_services" id="formRequestedServices" />
+              <input type="hidden" name="evidence_status" value="callback_request_valid" />
               <div class="sim-result__submit-wrap">
                 <button type="submit" class="sim-result__submit" id="etude-form-submit" disabled>
                   <span class="sim-result__submit-text">Faire vérifier mon projet solaire</span>
@@ -335,6 +350,8 @@
     set('formInclinaison', state.inclinaison);
     set('formObstacles', state.obstacles);
     set('formPanneaux', state.panneaux);
+    set('formRequestTimestamp', new Date().toISOString());
+    set('formRequestedServices', ['étude photovoltaïque','panneaux photovoltaïques', state.panneaux === 'aiko' ? 'configuration AIKO' : 'configuration LONGi'].join(', '));
   }
 
   function updateIllustration(stepIdx) {
@@ -595,7 +612,8 @@
     const nom = (form.querySelector('[name="nom"]') || {}).value.trim();
     const email = (form.querySelector('[name="email"]') || {}).value.trim();
     const tel = (form.querySelector('[name="tel"]') || {}).value.trim();
-    const allFilled = prenom && nom && email && tel && isValidEmail(email);
+    const callbackConsent = !!form.querySelector('[name="callback_consent"]')?.checked;
+    const allFilled = prenom && nom && email && tel && isValidEmail(email) && callbackConsent;
     btn.disabled = !allFilled;
   }
 
@@ -614,11 +632,13 @@
     const nom = (form.querySelector('[name="nom"]') || {}).value.trim();
     const email = (form.querySelector('[name="email"]') || {}).value.trim();
     const tel = (form.querySelector('[name="tel"]') || {}).value.trim();
+    const callbackConsent = !!form.querySelector('[name="callback_consent"]')?.checked;
 
     showFieldError('prenom', '');
     showFieldError('nom', '');
     showFieldError('email', '');
     showFieldError('tel', '');
+    showFieldError('callback-consent', '');
 
     if (!prenom) {
       showFieldError('prenom', 'Merci de renseigner votre prénom');
@@ -639,6 +659,10 @@
       showFieldError('tel', 'Merci de renseigner votre téléphone');
       valid = false;
     }
+    if (!callbackConsent) {
+      showFieldError('callback-consent', 'Merci de confirmer explicitement la demande de rappel SolarGlobe.');
+      valid = false;
+    }
     return valid;
   }
 
@@ -649,6 +673,9 @@
 
     const inputs = form.querySelectorAll('.sim-input');
     const btn = root.querySelector('#etude-form-submit');
+
+    const consentInput = form.querySelector('[name="callback_consent"]');
+    if (consentInput) consentInput.addEventListener('change', updateFormSubmitState);
 
     inputs.forEach((inp) => {
       inp.addEventListener('input', () => {

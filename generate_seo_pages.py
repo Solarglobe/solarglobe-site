@@ -107,7 +107,7 @@ for page in pages:
   </main>
 
   <footer class="text-center text-sm text-gray-500 mt-10 mb-4">
-    © 2025 Solarglobe. Tous droits réservés.
+    © 2026 Solarglobe. Tous droits réservés.
   </footer>
 </body>
 </html>"""
