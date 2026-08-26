@@ -50,7 +50,7 @@ Priorite globale : nettoyer les signaux techniques avant d'ajouter de nouvelles 
 
 Le site utilise deja plusieurs schemas pertinents :
 
-- `LocalBusiness` / `SolarEnergyContractor`
+- `LocalBusiness` / `Organization`
 - `Organization`
 - `BreadcrumbList`
 - `FAQPage`
@@ -322,7 +322,7 @@ Priorite : haute pour les pages argent, aides et rentabilite.
 Le site exploite deja les schemas qui comptent pour ce secteur :
 
 - `LocalBusiness` pour le local ;
-- `SolarEnergyContractor` pour l'activite ;
+- `Organization` pour l'activite ;
 - `FAQPage` pour les questions ;
 - `BreadcrumbList` pour la navigation ;
 - `Product` pour les equipements ;

@@ -86,7 +86,7 @@ def patch_home() -> None:
     s = replace(s, 'Choix dict&eacute;s par le mat&eacute;riel en stock ou la marge',
                 'Matériel parfois dicté par le stock, l’habitude ou la marge')
     s = replace(s, 'D&eacute;cision bas&eacute;e sur la rentabilit&eacute; r&eacute;elle du client',
-                'Installateur qualifié sélectionné et projet piloté jusqu’à la mise en service')
+                'Installateur qualifié sélectionné et dossier accompagné jusqu’à la mise en service, sans direction technique du chantier')
     s = replace(s, 'D&eacute;cision bas&eacute;e sur le devis &agrave; signer',
                 'Vous devez souvent comparer seul des offres incomparables')
     s = replace(s,
@@ -148,7 +148,7 @@ def patch_home() -> None:
     # JSON-LD descriptions
     s = s.replace("Solarglobe installe des panneaux solaires premium en Île-de-France et départements voisins, avec garanties longues et accompagnement complet.",
                   "SolarGlobe sécurise les projets photovoltaïques résidentiels : étude, dimensionnement, sélection du matériel, installateurs qualifiés et prix clair.")
-    s = s.replace("Produisez votre propre électricité avec Solarglobe. Étude gratuite, installation certifiée RGE, garanties jusqu’à 25 ans et suivi après la pose.",
+    s = s.replace("Produisez votre propre électricité avec Solarglobe. Étude gratuite, matériel sélectionné, travaux par installateur RGE indépendant et suivi documentaire.",
                   "Passez au solaire sans choisir à l'aveugle : étude gratuite, projet vérifié, matériel sélectionné, prix clair et installateurs qualifiés.")
     s = s.replace("Solarglobe installe des systèmes photovoltaïques haut de gamme en Île-de-France et départements limitrophes, avec accompagnement complet et garanties longues.",
                   "SolarGlobe est un bureau d'étude solaire qui sécurise les projets photovoltaïques en Île-de-France et alentours.")
@@ -176,7 +176,7 @@ def patch_header_footer() -> None:
     s = s.replace("Obtenir mon &eacute;tude solaire gratuite", "Faire vérifier mon projet solaire")
     s = s.replace("Produits", "Matériel")
     s = s.replace("Prix panneaux solaires", "Prix clair")
-    s = s.replace("Installation photovolta&iuml;que", "Pose encadrée")
+    s = s.replace("Installation photovolta&iuml;que", "Pose confiée à un installateur RGE indépendant")
     write("components/footer.html", s)
 
 
@@ -207,7 +207,7 @@ def patch_strategic_pages() -> None:
 
     patch_page("qui-sommes-nous/index.html", {
         'content="Decouvrez Solarglobe, specialiste des installations solaires premium en Ile-de-France : methode, engagements, garanties et expertise."': 'content="Découvrez SolarGlobe, bureau d’étude solaire indépendant : étude fiable, prix clair, matériel sélectionné et installateurs qualifiés."',
-        "Plus qu'un installateur. Un <span class=\"gold\">partenaire solaire</span>.": "Le bureau d’étude qui <span class=\"gold\">sécurise votre projet solaire</span>.",
+        "Ancienne promesse d'installation intégrée.": "Le bureau d’étude qui <span class=\"gold\">sécurise votre projet solaire</span>.",
         "Nous concevons des projets photovoltaïques premium avec exigence, transparence et logique de rentabilité réelle.": "Nous aidons les particuliers à passer au solaire sans choisir seuls entre des devis opaques, du matériel incompréhensible et des promesses difficiles à vérifier.",
         "Matériel haut de gamme</span><span class=\"sg-badge-sep\">•</span><span>Économies réelles</span><span class=\"sg-badge-sep\">•</span><span>Conseil sans pression": "Prix clair</span><span class=\"sg-badge-sep\">•</span><span>Matériel sélectionné</span><span class=\"sg-badge-sep\">•</span><span>Installateurs qualifiés",
         "Lancer mon étude gratuite": "Faire vérifier mon projet",
@@ -232,7 +232,7 @@ def patch_strategic_pages() -> None:
         "Pourquoi passer par un bureau d'étude solaire ?": "Pourquoi passer par SolarGlobe avant de choisir ?",
         "Un bureau d'étude photovoltaïque analyse précisément votre projet avant toute installation. Cette approche garantit une solution adaptée à votre situation réelle.": "Un bureau d'étude photovoltaïque vous évite de choisir à l’aveugle. SolarGlobe compare les options, vérifie les hypothèses du devis, sélectionne le matériel adapté et sécurise le choix de l’installateur.",
         "Faites étudier votre projet solaire gratuitement": "Faites vérifier votre projet solaire gratuitement",
-        "Chaque maison est différente. Notre bureau d'étude analyse précisément votre toiture afin de déterminer la solution solaire la plus performante.": "Chaque maison est différente. Notre bureau d'étude vérifie la toiture, la puissance, le prix, le matériel et la cohérence du projet avant engagement.",
+        "Chaque maison est différente. Notre bureau d'étude réalise une pré-analyse de votre toiture à confirmer sur site afin de déterminer la solution solaire la plus performante.": "Chaque maison est différente. Notre bureau d'étude vérifie la toiture, la puissance, le prix, le matériel et la cohérence du projet avant engagement.",
         "Obtenir mon étude solaire gratuite": "Faire vérifier mon projet solaire",
     })
 

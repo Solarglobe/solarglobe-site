@@ -112,7 +112,7 @@ TEMPLATE = '''<!DOCTYPE html>
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
     <p>{intro_variation} Comme partout dans {region_dans}, la hausse du prix de l'électricité pousse de plus en plus de propriétaires à produire leur propre énergie en <a href="/le-solaire/autoconsommation-solaire/" class="text-gold hover:text-gold underline">autoconsommation</a>.</p>
-    <p class="mt-4">Solarglobe vous accompagne pour une <a href="/notre-methode/etude-solaire/" class="text-gold hover:text-gold underline">étude solaire</a> personnalisée et une installation adaptée à votre toiture. Nos installateurs locaux sont certifiés RGE QualiPV, indispensable pour bénéficier des aides de l'État.</p>
+    <p class="mt-4">Solarglobe vous accompagne pour une <a href="/notre-methode/etude-solaire/" class="text-gold hover:text-gold underline">étude solaire</a> personnalisée et une installation adaptée à votre toiture. Les installateurs RGE indépendants retenus pour les travaux disposent de leur propre qualification RGE ou QualiPV, indispensable pour bénéficier des aides de l'État.</p>
   </div>
 </section>
 
@@ -167,7 +167,7 @@ TEMPLATE = '''<!DOCTYPE html>
 <section class="sg-section sg-section-dark">
   <div class="sg-container">
     <h2 class="sg-section-title text-gold">Faut-il une autorisation pour installer des panneaux solaires à {nom} ?</h2>
-    <p>Pour une installation en toiture en autoconsommation avec revente du surplus, une <strong>déclaration préalable en mairie</strong> suffit généralement. L'installation sur toiture est le plus souvent autorisée sans permis de construire. Solarglobe vous accompagne dans ces démarches et vérifie les règles spécifiques à votre secteur (sites protégés, ABF). Demandez votre <a href="/etude-gratuite/" class="text-gold hover:text-gold underline">étude gratuite</a> pour un conseil personnalisé.</p>
+    <p>Pour une installation en toiture en autoconsommation avec revente du surplus, une <strong>déclaration préalable en mairie</strong> suffit généralement. L'installation sur toiture est le plus souvent autorisée sans permis de construire. Solarglobe vous accompagne dans ces démarches et prépare l’analyse des règles spécifiques à votre secteur (sites protégés, ABF). Demandez votre <a href="/etude-gratuite/" class="text-gold hover:text-gold underline">étude gratuite</a> pour un conseil personnalisé.</p>
   </div>
 </section>
 
@@ -202,7 +202,7 @@ TEMPLATE = '''<!DOCTYPE html>
           <span>Qui installe les panneaux solaires à {nom} ?</span>
           <svg class="sg-faq-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
         </button>
-        <div class="sg-faq-answer hidden">Solarglobe travaille avec des installateurs certifiés RGE QualiPV dans la région. L'éligibilité aux aides (prime, TVA réduite) impose une pose par un professionnel RGE.</div>
+        <div class="sg-faq-answer hidden">Solarglobe peut orienter vers un installateur RGE indépendant dans la région. L’éligibilité aux aides impose que la pose soit réalisée et facturée par ce professionnel RGE, dans le cadre de son propre contrat.</div>
       </div>
       <div class="sg-faq-item">
         <button class="sg-faq-question w-full text-left" type="button" aria-expanded="false">
@@ -294,7 +294,7 @@ document.querySelectorAll('.sg-faq-item').forEach(item => {
     {"@type": "Question", "name": "Est-il rentable d'installer des panneaux solaires à {nom} ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. L'ensoleillement de {nom} et de {region_dans} permet une production photovoltaïque intéressante. Avec la prime à l'autoconsommation et la TVA réduite (5,5 %), la rentabilité est généralement bonne. Une étude gratuite vous donnera une estimation précise."}},
     {"@type": "Question", "name": "Quelle puissance solaire pour une maison à {nom} ?", "acceptedAnswer": {"@type": "Answer", "text": "La puissance dépend de votre consommation (kWh/an) et de la surface de toiture disponible. En moyenne, une maison consomme 3 000 à 5 000 kWh/an. Une installation de 3 à 6 kWc est souvent adaptée. Notre étude gratuite définit la puissance idéale."}},
     {"@type": "Question", "name": "Combien coûte une installation solaire à {nom} ?", "acceptedAnswer": {"@type": "Answer", "text": "Le coût varie selon la puissance (kWc) et les équipements (batterie, micro-onduleurs). Comptez environ 1 500 à 2 500 €/kWc hors aides. La prime à l'autoconsommation et la TVA à 5,5 % réduisent significativement la facture. Demandez une étude gratuite pour un devis personnalisé."}},
-    {"@type": "Question", "name": "Qui installe les panneaux solaires à {nom} ?", "acceptedAnswer": {"@type": "Answer", "text": "Solarglobe travaille avec des installateurs certifiés RGE QualiPV dans la région. L'éligibilité aux aides (prime, TVA réduite) impose une pose par un professionnel RGE."}},
+    {"@type": "Question", "name": "Qui installe les panneaux solaires à {nom} ?", "acceptedAnswer": {"@type": "Answer", "text": "Solarglobe peut orienter vers un installateur RGE indépendant dans la région. L’éligibilité aux aides impose que la pose soit réalisée et facturée par ce professionnel RGE, dans le cadre de son propre contrat."}},
     {"@type": "Question", "name": "Faut-il un permis de construire pour des panneaux à {nom} ?", "acceptedAnswer": {"@type": "Answer", "text": "En général, non. Pour une installation en toiture en autoconsommation avec revente du surplus, une déclaration préalable suffit si les panneaux sont intégrés au bâti ou en surimposition. Les règles peuvent varier selon les secteurs protégés."}},
     {"@type": "Question", "name": "Faut-il une autorisation en mairie à {nom} ?", "acceptedAnswer": {"@type": "Answer", "text": "Une déclaration préalable suffit le plus souvent pour une installation en toiture. L'installation sur toiture est généralement autorisée sans permis de construire. Solarglobe vous accompagne pour vérifier les règles spécifiques à votre secteur."}}
   ]

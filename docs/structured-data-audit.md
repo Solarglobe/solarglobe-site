@@ -34,10 +34,10 @@ Total: 182 scripts JSON-LD, 193 objets schema.org.
 - Script 1: BlogPosting - Surdimensionnement solaire : l'erreur qui détruit la rentabilité
 
 ## contact/index.html
-- Script 1: SolarEnergyContractor - SolarGlobe
+- Script 1: Organization - SolarGlobe
 
 ## cookies/index.html
-- Script 1: SolarEnergyContractor - SolarGlobe
+- Script 1: Organization - SolarGlobe
 
 ## faq/index.html
 - Script 1: FAQPage
@@ -69,10 +69,10 @@ Total: 182 scripts JSON-LD, 193 objets schema.org.
 - Script 1: FAQPage
 
 ## mentions-legales/index.html
-- Script 1: SolarEnergyContractor - SolarGlobe
+- Script 1: Organization - SolarGlobe
 
 ## merci/index.html
-- Script 1: SolarEnergyContractor - SolarGlobe
+- Script 1: Organization - SolarGlobe
 
 ## notre-methode/index.html
 - Script 1: HowTo - Méthode SolarGlobe en 7 étapes
@@ -82,231 +82,231 @@ Total: 182 scripts JSON-LD, 193 objets schema.org.
 
 ## panneaux-solaires-amiens/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-antony/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-argenteuil/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-aulnay-sous-bois/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-beauvais/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-boulogne-billancourt/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-cergy/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-chartres/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-chelles/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-choisy-le-roi/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-colombes/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-compiegne/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-corbeil-essonnes/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-creteil/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-drancy/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-essonne/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-evry/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-fontainebleau/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-hauts-de-seine/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-ile-de-france/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-issy-les-moulineaux/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-ivry-sur-seine/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-laon/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-massy/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-meaux/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-melun/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-nanterre/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-noisy-le-grand/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-orleans/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-palaiseau/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-paris/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-pontoise/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-rambouillet/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-reims/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-saint-denis/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-saint-maur-des-fosses/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-sarcelles/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-seine-et-marne/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-seine-saint-denis/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-soissons/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-val-de-marne/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-val-doise/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-versailles/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-vitry-sur-seine/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## panneaux-solaires-yvelines/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 - Script 3: FAQPage
 
 ## politique-de-confidentialite/index.html
-- Script 1: SolarEnergyContractor - SolarGlobe
+- Script 1: Organization - SolarGlobe
 
 ## produits/batteries-solaires/index.html
 - Script 1: FAQPage
@@ -317,7 +317,7 @@ Total: 182 scripts JSON-LD, 193 objets schema.org.
 - Script 1: ItemList - Produits SolarGlobe
 - Script 1: Service - Hub Produits – SolarGlobe
 - Script 1: FAQPage
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 
 ## produits/micro-onduleur-ou-onduleur-central/index.html
 - Script 1: WebPage - Micro-onduleur ou onduleur central : lequel choisir ?
@@ -343,5 +343,5 @@ Total: 182 scripts JSON-LD, 193 objets schema.org.
 
 ## seo/etude-solaire-gratuite/index.html
 - Script 1: BreadcrumbList
-- Script 2: SolarEnergyContractor - SolarGlobe
+- Script 2: Organization - SolarGlobe
 

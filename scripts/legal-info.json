@@ -1,0 +1,24 @@
+{
+  "company": {
+    "name": "SOLARGLOBE SAS",
+    "capital": "2 000 €",
+    "registeredAddress": "19 avenue Pierre Curie, 77500 Chelles",
+    "siren": "988 455 416",
+    "siret": "988 455 416 00012",
+    "rcs": "Meaux B 988 455 416",
+    "vat": "FR18988455416",
+    "phone": "01 72 99 47 53",
+    "phoneInternational": "+33 1 72 99 47 53",
+    "email": "contact@solarglobe.fr"
+  },
+  "legalPages": {
+    "versionDate": "26/08/2026",
+    "versionDateLong": "26 août 2026"
+  },
+  "consumerMediator": {
+    "name": "CM2C — Centre de la Médiation de la Consommation de Conciliateurs de Justice",
+    "address": "49 rue de Ponthieu, 75008 Paris",
+    "phone": "01 89 47 00 14",
+    "disputeUrl": "https://www.cm2c.net/declarer-un-litige.php"
+  }
+}

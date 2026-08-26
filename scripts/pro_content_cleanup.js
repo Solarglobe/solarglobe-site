@@ -42,13 +42,13 @@ const replacements = [
   ["economie.gouv.fr", "economie.gouv.fr"],
   ["Questions frequentes sur les panneaux solaires : cout, aides, rentabilite, installation, batteries et accompagnement SolarGlobe.", "Questions fréquentes sur les panneaux solaires : coût, aides, rentabilité, installation, batteries et accompagnement SolarGlobe."],
 
-  ["alt=\"Certification RGE QualiPV 36\"", "alt=\"Partenaires de pose externes RGE QualiPV\""],
-  ["alt=\"Certification RGE QualiPV\"", "alt=\"Partenaires de pose externes RGE QualiPV\""],
-  ["alt=\"Certification RGE QualiPV pour installations photovolta&iuml;ques\"", "alt=\"Partenaires externes RGE QualiPV pour la pose photovolta&iuml;que\""],
+  ["alt=\"Ancienne mention RGE obsolète\"", "alt=\"Installateurs RGE indépendants QualiPV\""],
+  ["alt=\"Certification RGE QualiPV\"", "alt=\"Installateurs RGE indépendants externes RGE QualiPV\""],
+  ["alt=\"Certification RGE QualiPV pour installations photovolta&iuml;ques\"", "alt=\"Installateurs RGE indépendants QualiPV pour la pose photovolta&iuml;que\""],
   ["&#10003; Certification RGE", "&#10003; Partenaires RGE"],
-  ["Projets r&eacute;alis&eacute;s avec des installateurs certifi&eacute;s RGE / QualiPV, audit&eacute;s pour garantir la conformit&eacute; et la performance.", "Pose confi&eacute;e &agrave; des partenaires externes RGE / QualiPV, v&eacute;rifi&eacute;s dossier par dossier pour la conformit&eacute; et la qualit&eacute; d'ex&eacute;cution."],
+  ["Projets r&eacute;alis&eacute;s avec des installateurs certifi&eacute;s RGE / QualiPV, audit&eacute;s pour garantir la conformit&eacute; et la performance.", "Pose confi&eacute;e &agrave; des installateurs RGE indépendants / QualiPV, v&eacute;rifi&eacute;s dossier par dossier pour la conformit&eacute; et la qualit&eacute; d'ex&eacute;cution."],
   ["Pose par des partenaires certifi&eacute;s RGE.", "Pose par des partenaires externes certifi&eacute;s RGE."],
-  ["installation par des partenaires RGE QualiPV et suivi", "pose par des partenaires externes RGE / QualiPV sélectionnés et suivi"],
+  ["installation par des partenaires RGE QualiPV et suivi", "pose par des installateurs RGE indépendants / QualiPV sélectionnés et suivi"],
 
   ["Les modèles installés par SolarGlobe respectent les normes en vigueur.", "Les modèles sélectionnés par SolarGlobe respectent les normes en vigueur ; la pose est réalisée par un professionnel RGE sélectionné."],
   ["Le dimensionnement se fait au cas par cas lors de l'étude.", "Le dimensionnement se fait au cas par cas lors de l'étude SolarGlobe."],

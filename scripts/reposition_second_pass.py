@@ -30,7 +30,7 @@ def insert_after_first_section(path: str, block: str, marker: str) -> None:
 def main() -> None:
     patch("index.html", {
         "Mat&eacute;riel haut de gamme, installation certifi&eacute;e RGE, garanties longues dur&eacute;es et accompagnement complet.":
-            "Matériel sélectionné, prix expliqué, pose par professionnels qualifiés et projet encadré par SolarGlobe.",
+            "Matériel sélectionné, prix expliqué, pose par professionnels qualifiés et dossier suivi commercialement et administrativement par SolarGlobe.",
         "<span class=\"font-bold text-gold\">Prix tout compris</span> : mat&eacute;riel premium, installation RGE, mise en service, garanties compl&egrave;tes et dossier d&rsquo;aides inclus. &Eacute;ligible &agrave; la Prime &agrave; l&rsquo;autoconsommation et aux aides locales. Transparence totale, aucun co&ucirc;t cach&eacute;.":
             "<span class=\"font-bold text-gold\">Prix lisible</span> : matériel, pose, mise en service, garanties et dossier d’aides sont expliqués avant engagement. L’étude vérifie ce qui est inclus, ce qui dépend de votre toiture et ce qui ne doit pas être vendu inutilement.",
         "<span class=\"produit-badge\">Premium</span>": "<span class=\"produit-badge\">Sélectionné</span>",
@@ -84,7 +84,7 @@ def main() -> None:
         "Équipements photovoltaïques premium : panneaux solaires, onduleurs, micro-onduleurs et batteries.":
             "Équipements photovoltaïques sélectionnés : panneaux solaires, onduleurs, micro-onduleurs et batteries utiles.",
         '"description": "Solarglobe installe des systèmes photovoltaïques haut de gamme en Île-de-France et départements limitrophes, avec accompagnement complet et garanties longues."':
-            '"description": "SolarGlobe sélectionne le matériel solaire adapté et sécurise les choix techniques avant installation."',
+            '"description": "SolarGlobe sélectionne le matériel solaire adapté et clarifie les choix prévisionnels avant validation technique par l’installateur."',
     })
 
     insert_after_first_section("produits/index.html", """
@@ -112,8 +112,8 @@ def main() -> None:
             "Nous sommes le cadre de confiance entre vous et le marché photovoltaïque : nous analysons, comparons, expliquons et sélectionnons avant que vous ne vous engagiez.",
         "✔ Installation par partenaires certifiés": "✔ Installateurs qualifiés sélectionnés",
         "Une méthode claire pour réussir votre projet solaire": "Une méthode claire pour réduire le risque",
-        "Chez Solarglobe, chaque installation suit une méthode précise et éprouvée :\n        analyse de votre toiture, dimensionnement technique, gestion complète des démarches\n        administratives et installation par des partenaires qualifiés.":
-            "Chez SolarGlobe, chaque projet suit une méthode précise : analyse de votre toiture, dimensionnement technique, vérification du prix, sélection du matériel, gestion des démarches et pose par partenaires qualifiés.",
+        "Chez Solarglobe, chaque installation suit une méthode précise et éprouvée :\n        analyse de votre toiture, dimensionnement prévisionnel, gestion complète des démarches\n        administratives et installation par des partenaires qualifiés.":
+            "Chez SolarGlobe, chaque projet suit une méthode précise : analyse de votre toiture, dimensionnement prévisionnel, vérification du prix, sélection du matériel, gestion des démarches et pose par partenaires qualifiés.",
         "Les 7 étapes d'un projet solaire maîtrisé": "Les 7 étapes d’un projet solaire sécurisé",
         "Installation des panneaux": "Pose par installateurs qualifiés",
         "Nos partenaires installateurs qualifiés réalisent la pose de votre\n        installation photovoltaïque dans le respect des normes techniques\n        et de sécurité. Chaque chantier est préparé pour garantir une\n        installation fiable et durable.":

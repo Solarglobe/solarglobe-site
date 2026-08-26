@@ -41,8 +41,93 @@
       prenom: '',
       email: '',
       telephone: ''
-    }
+    },
+    requestId: null,
+    leadId: null
   };
+
+  function makeId(prefix) {
+    if (window.crypto && typeof window.crypto.randomUUID === 'function') {
+      return prefix + '_' + window.crypto.randomUUID();
+    }
+    return prefix + '_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 10);
+  }
+
+  function getFrancePublicHolidays(year) {
+    const easter = getEasterDate(year);
+    const addDays = (date, days) => {
+      const copy = new Date(date.getTime());
+      copy.setDate(copy.getDate() + days);
+      return copy;
+    };
+    return new Set([
+      `${year}-01-01`,
+      `${year}-05-01`,
+      `${year}-05-08`,
+      `${year}-07-14`,
+      `${year}-08-15`,
+      `${year}-11-01`,
+      `${year}-11-11`,
+      `${year}-12-25`,
+      formatParisDate(addDays(easter, 1)),
+      formatParisDate(addDays(easter, 39)),
+      formatParisDate(addDays(easter, 50))
+    ]);
+  }
+
+  function getEasterDate(year) {
+    const a = year % 19;
+    const b = Math.floor(year / 100);
+    const c = year % 100;
+    const d = Math.floor(b / 4);
+    const e = b % 4;
+    const f = Math.floor((b + 8) / 25);
+    const g = Math.floor((b - f + 1) / 3);
+    const h = (19 * a + b - d - g + 15) % 30;
+    const i = Math.floor(c / 4);
+    const k = c % 4;
+    const l = (32 + 2 * e + 2 * i - h - k) % 7;
+    const m = Math.floor((a + 11 * h + 22 * l) / 451);
+    const month = Math.floor((h + l - 7 * m + 114) / 31);
+    const day = ((h + l - 7 * m + 114) % 31) + 1;
+    return new Date(Date.UTC(year, month - 1, day, 12, 0, 0));
+  }
+
+  function formatParisDate(date) {
+    return new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Europe/Paris',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    }).format(date);
+  }
+
+  function isBusinessDayParis(date) {
+    const weekday = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Paris', weekday: 'short' }).format(date);
+    if (weekday === 'Sun') return false;
+    const year = Number(formatParisDate(date).slice(0, 4));
+    return !getFrancePublicHolidays(year).has(formatParisDate(date));
+  }
+
+  function calculateCallbackDeadline(requestDate) {
+    const deadline = new Date(requestDate.getTime());
+    let counted = 0;
+    while (counted < 5) {
+      deadline.setDate(deadline.getDate() + 1);
+      if (isBusinessDayParis(deadline)) counted++;
+    }
+    deadline.setHours(20, 0, 0, 0);
+    return deadline.toISOString();
+  }
+
+  function hashProofSnapshot(text) {
+    let hash = 0x811c9dc5;
+    for (let i = 0; i < text.length; i++) {
+      hash ^= text.charCodeAt(i);
+      hash = Math.imul(hash, 0x01000193);
+    }
+    return 'fnv1a32_' + (hash >>> 0).toString(16).padStart(8, '0');
+  }
 
   function computeEstimation(s) {
     const surface = Math.max(10, Math.min(120, Number(s.surface) || 30));
@@ -313,11 +398,16 @@
               <input type="hidden" name="Obstacles" id="formObstacles" />
               <input type="hidden" name="Panneaux" id="formPanneaux" />
               <input type="hidden" name="request_timestamp" id="formRequestTimestamp" />
+              <input type="hidden" name="request_id" id="formRequestId" />
+              <input type="hidden" name="lead_id" id="formLeadId" />
               <input type="hidden" name="source_type" value="website_study_form" />
               <input type="hidden" name="source_url" value="https://www.solarglobe.fr/etude-gratuite/" />
               <input type="hidden" name="form_version" value="study-callback-request-2026-08-26" />
               <input type="hidden" name="exact_request_text" value="Je demande expressément à SolarGlobe de me rappeler au sujet de mon projet photovoltaïque et des services que j’ai sélectionnés." />
               <input type="hidden" name="requested_services" id="formRequestedServices" />
+              <input type="hidden" name="callback_deadline" id="formCallbackDeadline" />
+              <input type="hidden" name="proof_file_or_snapshot" id="formProofSnapshot" />
+              <input type="hidden" name="proof_hash" id="formProofHash" />
               <input type="hidden" name="evidence_status" value="callback_request_valid" />
               <div class="sim-result__submit-wrap">
                 <button type="submit" class="sim-result__submit" id="etude-form-submit" disabled>
@@ -338,6 +428,29 @@
   function syncFormFinal() {
     const form = root.querySelector('#etude-contact-form');
     if (!form) return;
+    if (!state.requestId) state.requestId = makeId('req');
+    if (!state.leadId) state.leadId = makeId('lead');
+    const requestTimestamp = new Date();
+    const requestedServices = ['étude photovoltaïque','panneaux photovoltaïques', state.panneaux === 'aiko' ? 'configuration AIKO' : 'configuration LONGi'].join(', ');
+    const proofSnapshot = JSON.stringify({
+      request_id: state.requestId,
+      lead_id: state.leadId,
+      source_type: 'website_study_form',
+      source_url: 'https://www.solarglobe.fr/etude-gratuite/',
+      form_version: 'study-callback-request-2026-08-26',
+      exact_request_text: 'Je demande expressément à SolarGlobe de me rappeler au sujet de mon projet photovoltaïque et des services que j’ai sélectionnés.',
+      requested_services: requestedServices,
+      project: {
+        address: state.address,
+        lat: state.lat,
+        lon: state.lon,
+        surface: state.surface,
+        orientation: state.orientation,
+        inclinaison: state.inclinaison,
+        obstacles: state.obstacles,
+        panneaux: state.panneaux
+      }
+    });
     const set = (id, val) => {
       const el = form.querySelector('#' + id);
       if (el) el.value = val !== null && val !== undefined ? String(val) : '';
@@ -350,8 +463,13 @@
     set('formInclinaison', state.inclinaison);
     set('formObstacles', state.obstacles);
     set('formPanneaux', state.panneaux);
-    set('formRequestTimestamp', new Date().toISOString());
-    set('formRequestedServices', ['étude photovoltaïque','panneaux photovoltaïques', state.panneaux === 'aiko' ? 'configuration AIKO' : 'configuration LONGi'].join(', '));
+    set('formRequestTimestamp', requestTimestamp.toISOString());
+    set('formRequestId', state.requestId);
+    set('formLeadId', state.leadId);
+    set('formRequestedServices', requestedServices);
+    set('formCallbackDeadline', calculateCallbackDeadline(requestTimestamp));
+    set('formProofSnapshot', proofSnapshot);
+    set('formProofHash', hashProofSnapshot(proofSnapshot));
   }
 
   function updateIllustration(stepIdx) {

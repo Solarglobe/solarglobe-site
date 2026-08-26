@@ -28,9 +28,9 @@ pages = [
     },
     {
         "slug": "installation-solaire",
-        "h1": "Installation solaire – Votre projet clé en main",
+        "h1": "Installation solaire – Étude, matériel et pose séparée",
         "mot_cle": "installation solaire",
-        "intro": "Confiez votre installation solaire à des experts. Étude gratuite, matériel premium et pose par des installateurs certifiés RGE QualiPV."
+        "intro": "SolarGlobe étudie votre projet, sélectionne le matériel et vous oriente vers un installateur RGE indépendant pour les travaux, dans le cadre d’un contrat séparé."
     },
     {
         "slug": "aides-panneaux-solaires",
