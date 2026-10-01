@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <script src="/assets/js/consent.js"></script>
   <script>if(/\/contact\.html$/.test(window.location.pathname))window.location.replace('/contact/');</script>
   <!-- Canonical -->
   <link rel="canonical" href="https://www.solarglobe.fr/contact/" />
@@ -12,18 +13,10 @@
   <meta name="robots" content="index, follow" />
 
   <!-- Consent Mode v2 par défaut AVANT GTM -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent','default',{ ad_storage:'denied', analytics_storage:'denied', wait_for_update:500 });
-  </script>
+
 
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-N2ZQKS6F');</script>
+
   <!-- End Google Tag Manager -->
 
   <!-- OpenGraph / Twitter (domaine unifié en www) -->
@@ -80,11 +73,7 @@
 <body class="min-h-screen flex flex-col surface">
 
   <!-- GTM noscript -->
-<noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2ZQKS6F"
-          height="0" width="0"
-          style="display:none;visibility:hidden"></iframe>
-</noscript>
+
 
 <div id="header-placeholder"></div>
 <script src="/assets/js/header.js"></script>
@@ -417,35 +406,8 @@
 
 
   <!-- Cookie banner + Consent Mode update -->
-  <div id="cookie-banner-solarglobe" style="display:none; position:fixed; left:0; right:0; bottom:0; z-index:9999; width:100vw;">
-    <div style="max-width:600px;width:94vw;margin:0 auto 2.5vw auto;background:#101010;border:2px solid #C39847;border-radius:1.5rem;box-shadow:0 0 32px #C39847bb;color:#fff;padding:2rem 1.4rem 1.4rem;display:flex;flex-direction:column;align-items:center;">
-      <span style="font-size:1.2rem;font-weight:700;color:#C39847;margin-bottom:0.6rem;">Votre vie privée, notre priorité.</span>
-      <span style="text-align:center;font-size:1rem;color:#fff;margin-bottom:1.2rem;">
-        Aucun cookie non essentiel sans votre accord.
-        <a href="/cookies/" style="color:#C39847;text-decoration:underline;" target="_blank" rel="noopener">En savoir plus</a>
-      </span>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
-        <button id="cookie-accept" type="button" style="background:#C39847;color:#101010;font-weight:700;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1rem;cursor:pointer;transition:.2s;">Tout accepter</button>
-        <button id="cookie-decline" type="button" style="background:#232323;color:#fff;font-weight:700;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1rem;cursor:pointer;transition:.2s;">Tout refuser</button>
-        <button id="cookie-settings" type="button" style="background:transparent;color:#C39847;font-weight:600;border:1px solid #C39847;border-radius:8px;padding:.7rem 1.4rem;font-size:1rem;cursor:pointer;transition:.2s;">Personnaliser</button>
-      </div>
-    </div>
-  </div>
-  <script>
-    const COOKIE_KEY="solarglobe_cookie_consent";
-    const banner=document.getElementById("cookie-banner-solarglobe");
-    function hideBanner(){banner.style.display="none";}
-    function showBanner(){banner.style.display="flex";}
-    function setConsent(v){
-      localStorage.setItem(COOKIE_KEY,v); hideBanner();
-      if(v==="accepted"){ gtag('consent','update',{ ad_storage:'granted', analytics_storage:'granted' }); }
-      else{ gtag('consent','update',{ ad_storage:'denied', analytics_storage:'denied' }); }
-    }
-    window.addEventListener("DOMContentLoaded",()=>{ if(!localStorage.getItem(COOKIE_KEY)) showBanner(); });
-    document.getElementById("cookie-accept").onclick=()=>setConsent("accepted");
-    document.getElementById("cookie-decline").onclick=()=>setConsent("declined");
-    document.getElementById("cookie-settings").onclick=()=>alert("Le panneau de personnalisation arrive bientôt !");
-  </script>
+
+
 
 <!-- Schema.org optimisé : LocalBusiness -->
 <script type="application/ld+json">

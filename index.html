@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <script src="/assets/js/consent.js"></script>
   <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i){
-      w[l]=w[l]||[];
-      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),
-          dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-N2ZQKS6F');
-  </script>
+
   <!-- End Google Tag Manager -->
 
   <meta charset="UTF-8" />
@@ -1206,11 +1196,7 @@
 <body class="bg-black">
 
 <!-- Google Tag Manager (noscript) -->
-<noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2ZQKS6F"
-          height="0" width="0"
-          style="display:none;visibility:hidden"></iframe>
-</noscript>
+
 <!-- End Google Tag Manager (noscript) -->
 
 <div id="header-placeholder"></div>
@@ -1370,7 +1356,7 @@
       <a href="https://maps.app.goo.gl/zPK1i92kwCHySPHp7" target="_blank" rel="noopener noreferrer" class="sg-encadre-premium no-underline block">
         <span class="text-gold text-sm uppercase tracking-widest">Avis Google</span>
         <strong class="block text-white text-2xl mt-2">5/5</strong>
-        <p class="text-neutral-300 text-sm leading-relaxed mt-2">12 avis publics consultables sur Google, sans citation inventée.</p>
+        <p class="text-neutral-300 text-sm leading-relaxed mt-2">Consultez les avis de nos clients sur Google.</p>
       </a>
       <a href="#bloc-realisations" class="sg-encadre-premium no-underline block">
         <span class="text-gold text-sm uppercase tracking-widest">Réalisations</span>
@@ -1865,7 +1851,7 @@
     </a>
 
     <!-- PRODUIT 2 -->
-    <div class="produit-card produit-img-contain-sm gsap-produits-card" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-produit-2" aria-expanded="false" data-modal="modal-produit-2">
+    <a class="produit-card produit-img-contain-sm gsap-produits-card" href="/produits/micro-onduleurs/">
       <img src="/assets/images/produits/micro-onduleur-atmoce-mi500.avif" alt="Micro-onduleur ATMOCE MI500" class="produit-img" loading="lazy" decoding="async" />
       <div class="produit-overlay"></div>
       <span class="produit-badge">Sélectionné</span>
@@ -1877,10 +1863,10 @@
           <span>&#10003; Garantie 25 ans</span>
         </div>
       </div>
-    </div>
+    </a>
 
     <!-- PRODUIT 3 -->
-    <div class="produit-card produit-img-contain gsap-produits-card" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-produit-3" aria-expanded="false" data-modal="modal-produit-3">
+    <a class="produit-card produit-img-contain gsap-produits-card" href="/produits/batteries-solaires/">
       <img src="/assets/images/produits/batterie-atmoce-7kwh.avif" alt="Batterie lithium ATMOCE 7 kWh" class="produit-img" loading="lazy" decoding="async" />
       <div class="produit-overlay"></div>
       <span class="produit-badge">Sélectionné</span>
@@ -1892,10 +1878,10 @@
           <span>&#10003; Fiabilit&eacute; 25 ans</span>
         </div>
       </div>
-    </div>
+    </a>
 
     <!-- PRODUIT 4 -->
-    <div class="produit-card produit-img-contain gsap-produits-card" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="modal-produit-4" aria-expanded="false" data-modal="modal-produit-4">
+    <a class="produit-card produit-img-contain gsap-produits-card" href="/assets/pdf/atmoce-m-combiner.pdf">
       <img src="/assets/images/produits/m-combiner-atmoce.avif" alt="Coffret M-Combiner ATMOCE" class="produit-img" loading="lazy" decoding="async" />
       <div class="produit-overlay"></div>
       <span class="produit-badge">Sélectionné</span>
@@ -1907,7 +1893,7 @@
           <span>&#10003; Connexion intelligente</span>
         </div>
       </div>
-    </div>
+    </a>
   </div>
 
   <!-- CTA -->
@@ -1926,50 +1912,7 @@
 
 <div class="sg-divider" aria-hidden="true"></div>
 
-<script>
-  // Accessibilité modales + clavier + scroll lock
-  (function() {
-    const overlay = document.getElementById('modal-overlay');
-    const openers = document.querySelectorAll('.produit-card[data-modal]');
-    const modals = document.querySelectorAll('.modal-fiche-tech');
-    let lastFocused = null;
 
-    function lockScroll(lock) {
-      document.documentElement.style.overflow = lock ? 'hidden' : '';
-      document.body.style.overflow = lock ? 'hidden' : '';
-    }
-
-    function openModal(id, openerEl) {
-      lastFocused = openerEl || document.activeElement;
-      const m = document.getElementById(id);
-      if (!m) return;
-      overlay.classList.remove('hidden'); requestAnimationFrame(()=>overlay.classList.add('opacity-100'));
-      m.classList.remove('hidden');
-      m.querySelector('.close-modal')?.focus();
-      lockScroll(true);
-      openerEl?.setAttribute('aria-expanded', 'true');
-    }
-
-    function closeAll() {
-      modals.forEach(m => m.classList.add('hidden'));
-      overlay.classList.add('hidden'); overlay.classList.remove('opacity-100');
-      lockScroll(false);
-      openers.forEach(o => o.setAttribute('aria-expanded','false'));
-      if (lastFocused) lastFocused.focus();
-    }
-
-    openers.forEach(card => {
-      card.addEventListener('click', () => openModal(card.dataset.modal, card));
-      card.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card.dataset.modal, card); }
-      });
-    });
-
-    overlay.addEventListener('click', closeAll);
-    modals.forEach(m => m.querySelector('.close-modal')?.addEventListener('click', closeAll));
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
-  })();
-</script>
 
 <!-- BLOC 6 : Partenaires techniques -->
 <section id="bloc-partenaires" class="sg-section relative overflow-hidden gsap-bloc5">
@@ -2128,7 +2071,7 @@
             </div>
           </div>
           <p class="sg-realisation-note">
-            Données disponibles&nbsp;: puissance, matériel, architecture et photos. Le besoin client détaillé pourra être ajouté ultérieurement sans inventer d’informations.
+            Découvrez la puissance, le matériel et les photos de cette installation.
           </p>
         </div>
       </article>
@@ -2169,15 +2112,13 @@
             </div>
           </div>
           <p class="sg-realisation-note">
-            Données disponibles&nbsp;: puissance, matériel, protections et photos. Le besoin client détaillé pourra être ajouté ultérieurement sans inventer d’informations.
+            Découvrez la puissance, le matériel et les photos de cette installation.
           </p>
         </div>
       </article>
     </div>
 
-    <p class="sg-realisations-footer">
-      Un t&eacute;moignage d&eacute;di&eacute; pourra &ecirc;tre ajout&eacute; sous chaque chantier d&egrave;s qu'il est valid&eacute; par le client.
-    </p>
+
   </div>
 </section>
 
@@ -2728,27 +2669,6 @@
 
     } // fin if (!prefersReducedMotion) — GSAP / ScrollTrigger
 
-    // ---------------------- MODALES PRODUITS ----------------------
-    document.querySelectorAll('.produit-card').forEach(card => {
-      card.addEventListener('click', () => {
-        document.getElementById('modal-overlay').classList.remove('hidden');
-        document.getElementById(card.dataset.modal).classList.remove('hidden');
-      });
-    });
-
-    document.querySelectorAll('.close-modal').forEach(btn => {
-      btn.addEventListener('click', closeAllModals);
-    });
-
-    if(document.getElementById('modal-overlay')){
-      document.getElementById('modal-overlay').addEventListener('click', closeAllModals);
-    }
-
-    function closeAllModals() {
-      document.getElementById('modal-overlay').classList.add('hidden');
-      document.querySelectorAll('.modal-fiche-tech').forEach(m => m.classList.add('hidden'));
-    }
-
   }); // FIN DOMContentLoaded
 </script>
 
@@ -2853,85 +2773,10 @@
 </script>
 
 <!-- BANDEAU COOKIES SOLARGLOBE PREMIUM -->
-<div id="cookie-banner-solarglobe" style="display:none; position:fixed; left:0; right:0; bottom:0; z-index:9999; width:auto; box-sizing:border-box;">
-  <div style="
-    max-width:600px;
-    width:calc(100% - 32px);
-    box-sizing:border-box;
-    margin: 0 auto 2.5vw auto;
-    background:#101010;
-    border:2px solid #C39847;
-    border-radius:1.5rem;
-    box-shadow:0 0 32px #C39847bb;
-    color:#fff;
-    padding:2rem 1.4rem 1.4rem 1.4rem;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    pointer-events:auto;
-  ">
-<span style="display:block; max-width:260px; text-align:center; font-size:1rem; line-height:1.35; font-weight:700; color:#C39847; margin-bottom:0.6rem; white-space:normal;">
-  Cookies &amp; vie priv&eacute;e&nbsp;: notre priorit&eacute;.
-</span>
-
-<span style="display:block; max-width:240px; text-align:center; font-size:0.95rem; line-height:1.55; color:#fff; margin-bottom:1.2rem; white-space:normal;">
-  Chez SolarGlobe, aucun cookie non essentiel ne sera d&eacute;pos&eacute; sans votre accord.<br>
-  Vous pouvez tout accepter, tout refuser ou personnaliser vos choix &agrave; tout moment.<br>
-  <a href="/cookies/" style="color:#C39847; text-decoration:underline;" target="_blank">
-    En savoir plus
-  </a>
-</span>
-
-<div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
-  <button id="cookie-accept"
-          style="background:#C39847; color:#101010; font-weight:700; border:none; border-radius:8px; padding:0.7rem 1.4rem; font-size:1rem; cursor:pointer; transition:0.2s;">
-    Tout accepter
-  </button>
-
-  <button id="cookie-decline"
-          style="background:#232323; color:#fff; font-weight:700; border:none; border-radius:8px; padding:0.7rem 1.4rem; font-size:1rem; cursor:pointer; transition:0.2s;">
-    Tout refuser
-  </button>
 
 </div>
 
 
-    </div>
-  </div>
-</div>
-
-<script>
-  // Utilise localStorage pour retenir le choix
-  const COOKIE_KEY = "solarglobe_cookie_consent";
-  const banner = document.getElementById("cookie-banner-solarglobe");
-
-  function hideBanner() {
-    banner.style.display = "none";
-  }
-
-  function showBanner() {
-    banner.style.display = "flex"; // Permet au bandeau de prendre toute la largeur si besoin
-  }
-
-  function setConsent(value) {
-    localStorage.setItem(COOKIE_KEY, value);
-    hideBanner();
-    // --> ici, tu peux lancer ou non tes scripts (Google Analytics etc.)
-    if(value === "accepted") {
-      // initAnalytics(); // <-- décommente pour lancer GA uniquement après consentement
-    }
-  }
-
-  // Affichage au chargement si pas déjà choisi
-  window.addEventListener("DOMContentLoaded", function() {
-    const consent = localStorage.getItem(COOKIE_KEY);
-    if(!consent) showBanner();
-  });
-
-  // Actions boutons
-  document.getElementById("cookie-accept").onclick = function() { setConsent("accepted"); }
-  document.getElementById("cookie-decline").onclick = function() { setConsent("declined"); }
-</script>
 
 <!-- Schema.org : Page d’accueil SolarGlobe -->
 <script type="application/ld+json">

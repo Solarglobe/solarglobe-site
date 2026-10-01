@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const root = path.resolve(__dirname, "..");
-const ignoredDirs = new Set([".git", "node_modules"]);
+const ignoredDirs = new Set([".git", ".vercel", ".phase1-backup", "node_modules", "dist", "output", "tmp"]);
 const scriptRe =
   /<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
 

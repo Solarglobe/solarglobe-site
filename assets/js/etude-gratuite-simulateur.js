@@ -148,7 +148,8 @@
     };
     const coefOrientation = orientMap[s.orientation] ?? 1.0;
 
-    const incl = Number(s.inclinaison) || 30;
+    const angle = Number(s.inclinaison);
+    const incl = Number.isFinite(angle) ? angle : 30;
     let coefInclinaison = 0.75;
     if (incl >= 20 && incl <= 40) coefInclinaison = 1.0;
     else if ((incl >= 10 && incl < 20) || (incl > 40 && incl <= 50)) coefInclinaison = 0.9;
@@ -294,7 +295,7 @@
         return `
         <div id="etude-result-block" class="sim-result">
           <div class="sim-result__header">
-            <h3 class="sim-result__title">Votre étude solaire est prête</h3>
+            <h3 class="sim-result__title">Votre première estimation solaire est prête</h3>
             <p class="sim-result__subtitle">Voici une estimation indicative basée sur votre toiture et votre configuration. Elle sera affinée avec SolarGlobe selon votre consommation et vos usages.</p>
           </div>
           <p class="sim-result__hook">Production annuelle estimée : <strong>${est.production.toLocaleString('fr-FR')} kWh</strong></p>
@@ -305,7 +306,7 @@
                 <li><span class="sim-result__label">Surface utilisée</span> <span class="sim-result__value">${state.surface} m²</span></li>
                 <li><span class="sim-result__label">Orientation</span> <span class="sim-result__value">${orient}</span></li>
                 <li><span class="sim-result__label">Inclinaison</span> <span class="sim-result__value">${incl}</span></li>
-                <li><span class="sim-result__label">Ensoleillement</span> <span class="sim-result__value">${ombres}</span></li>
+                <li><span class="sim-result__label">Ombrage</span> <span class="sim-result__value">${ombres}</span></li>
               </ul>
             </div>
             <div class="sim-result__projection">
@@ -372,7 +373,7 @@
                   <span class="sim-form-error" id="err-tel" role="alert"></span>
                 </div>
               </div>
-              
+
               <div class="sim-field sim-field--consent">
                 <label class="sim-result__form-rgpd" style="display:flex;gap:.65rem;align-items:flex-start">
                   <input id="form-callback-consent" type="checkbox" name="callback_consent" required style="margin-top:.25rem" />
@@ -472,7 +473,9 @@
     set('formProofHash', hashProofSnapshot(proofSnapshot));
   }
 
+  let illustrationVersion = 0;
   function updateIllustration(stepIdx) {
+    const version = ++illustrationVersion;
     const videoEl = root.querySelector('#etude-sim-video');
     const fallbackEl = root.querySelector('#etude-sim-fallback');
     if (!videoEl) return;
@@ -484,8 +487,13 @@
       videoEl.style.display = 'none';
       if (fallbackEl) fallbackEl.style.display = 'flex';
     };
-    videoEl.load().catch(function () {});
-    videoEl.play().catch(function () {});
+    videoEl.load();
+    const playback = videoEl.play();
+    if (playback && typeof playback.catch === "function") playback.catch(function () {
+      if (version !== illustrationVersion) return;
+      videoEl.style.display = "none";
+      if (fallbackEl) fallbackEl.style.display = "flex";
+    });
   }
 
   function renderStep() {
@@ -518,7 +526,7 @@
         <div class="sim-step-ui">
           <div class="sim-step-header">
             <h3 class="sim-step-title">Vos coordonnées</h3>
-            <p class="sim-step-sub">Votre étude est prête. Remplissez le formulaire ci-dessous pour recevoir votre étude personnalisée.</p>
+            <p class="sim-step-sub">Votre première estimation est disponible. Renseignez vos coordonnées pour demander une étude personnalisée.</p>
           </div>
         </div>
       `;
@@ -557,6 +565,13 @@
     if (window.dataLayer) {
       window.dataLayer.push({
         event: 'simulateur_step_view',
+        step_index: currentStep + 1,
+        step_label: STEP_LABELS[currentStep]
+      });
+    }
+    if (document.documentElement.getAttribute('data-sg-analytics') === 'true' && window.gtag) {
+      window.gtag('event', 'simulateur_step_view', {
+        send_to: 'G-V9BGEJKQKZ',
         step_index: currentStep + 1,
         step_label: STEP_LABELS[currentStep]
       });
@@ -851,7 +866,7 @@
       <video id="etude-sim-video" autoplay muted loop playsinline preload="metadata"
         style="max-height:340px;">
       </video>
-      <div id="etude-sim-fallback" class="etude-sim__media-fallback" style="display:none;">Illustration</div>
+      <div id="etude-sim-fallback" class="etude-sim__media-fallback" style="display:none;"><img src="/assets/images/parcours/etape1-simulation.webp" alt="Préparer votre projet solaire" width="1440" height="960" style="max-width:100%;max-height:340px;object-fit:contain;" /></div>
     `;
 
     currentStep = 0;

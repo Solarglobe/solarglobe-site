@@ -4,3 +4,9 @@ node_modules
 output
 tmp
 .phase1-backup
+
+dist
+*.md
+*.docx
+docs
+python

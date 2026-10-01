@@ -1,6 +1,7 @@
 # Redirections permanentes (301) - URLs officielles SolarGlobe
 RewriteEngine On
 RewriteBase /
+RewriteRule ^assets/images/logo/FredericFRANCOIS-Etude2-SansBatterie\.pdf$ - [G,L]
 
 # Consolidation SEO lot 1 — panneaux + rentabilité (/seo/ → pages gagnantes)
 RewriteRule ^seo/panneaux-solaires/?$ /produits/panneaux-solaires/ [R=301,L]

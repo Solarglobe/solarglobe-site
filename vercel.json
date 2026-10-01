@@ -631,8 +631,14 @@
   ],
   "rewrites": [
     {
+      "source": "/assets/images/logo/FredericFRANCOIS-Etude2-SansBatterie.pdf",
+      "destination": "/api/gone-document"
+    },
+    {
       "source": "/assets/guide-parcours-solarglobe.pdf",
       "destination": "/api/gone-guide"
     }
-  ]
+  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
 }

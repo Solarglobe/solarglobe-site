@@ -5,7 +5,9 @@
     "build:tailwind": "tailwindcss -i ./assets/css/tailwind.input.css -o ./assets/css/tailwind.css --minify",
     "test:jsonld": "node scripts/validate-jsonld.js",
     "watch:tailwind": "tailwindcss -i ./assets/css/tailwind.input.css -o ./assets/css/tailwind.css --watch",
-    "test:public-compliance": "node scripts/check-public-compliance.js"
+    "test:public-compliance": "node scripts/check-public-compliance.js",
+    "build": "node scripts/build-public.js",
+    "test:lot1": "node --test scripts/lot1.test.js"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"

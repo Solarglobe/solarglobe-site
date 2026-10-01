@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const root = process.cwd();
-const ignored = new Set(["node_modules", ".git", "output", "tmp"]);
+const ignored = new Set(["node_modules", ".git", ".vercel", ".phase1-backup", "dist", "output", "tmp"]);
 const forbidden = [
   /guide-parcours-solarglobe\.pdf/i,
   /Pose par nos équipes/i,
